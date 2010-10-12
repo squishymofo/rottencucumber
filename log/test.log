@@ -1,0 +1,15 @@
+  Processing by GroupsController#show as HTML
+Rendered groups/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 7ms (Views: 6.8ms | ActiveRecord: 0.0ms)
+  Processing by GroupsController#new as HTML
+Completed 200 OK in 9ms (Views: 8.9ms | ActiveRecord: 0.0ms)
+  Processing by GroupsController#create as HTML
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+  Processing by LandingController#index as HTML
+Completed 200 OK in 7ms (Views: 6.8ms | ActiveRecord: 0.0ms)
+  Processing by TasksController#index as HTML
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+  Processing by TasksController#new as HTML
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+  Processing by TasksController#create as HTML
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms)
