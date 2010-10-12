@@ -1,0 +1,58 @@
+/* line 1, ../../app/stylesheets/style.sass */
+.move-header-down {
+  margin-top: 5em;
+}
+
+/* line 4, ../../app/stylesheets/style.sass */
+.main_nav {
+  list-style: none;
+  display: inline;
+  margin-right: 1em;
+  margin-bottom: 3em;
+}
+/* line 9, ../../app/stylesheets/style.sass */
+.main_nav a {
+  text-decoration: none;
+}
+
+/* line 12, ../../app/stylesheets/style.sass */
+.logged-in-as {
+  float: right;
+}
+
+/* line 15, ../../app/stylesheets/style.sass */
+.secondary_nav {
+  list-style: none;
+  margin-right: 1em;
+  display: inline;
+}
+/* line 19, ../../app/stylesheets/style.sass */
+.secondary_nav a {
+  text-decoration: none;
+}
+
+/* line 22, ../../app/stylesheets/style.sass */
+.bord-me {
+  border-top: 1px solid black;
+}
+
+/* line 25, ../../app/stylesheets/style.sass */
+.section-header {
+  font-size: 2em;
+}
+
+/* line 28, ../../app/stylesheets/style.sass */
+.field-lable {
+  padding-top: 0.5em;
+}
+
+/* line 31, ../../app/stylesheets/style.sass */
+.group-index-partial {
+  border: 1px solid black;
+  margin-top: 1em;
+}
+
+/* line 35, ../../app/stylesheets/style.sass */
+.list-group-members {
+  border: 1px solid black;
+}

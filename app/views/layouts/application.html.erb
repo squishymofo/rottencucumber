@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rottencucumber</title>
+  <%#= stylesheet_link_tag :all %>
+  <%= stylesheet_link_tag 'screen.css' %>
+  <%= stylesheet_link_tag 'style.css' %>
+  <%= javascript_include_tag :defaults %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+
+<div class="container move-header-down">
+  <%= render :partial => 'layouts/header' %>
+</div>
+
+<div class="container">
+  <%= yield %>
+</div>
+
+</body>
+</html>

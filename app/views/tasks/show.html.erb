@@ -1,0 +1,15 @@
+<span class="section-header"> Task Progress</span>
+
+<hr />
+<br />
+<div class="span-24"> Project name </div>
+<div class="span-24 prepend-top"> Progress bar </div> 
+
+<div class="span-24 prepend-top"> Milestones </div>
+<div id="milestones" class= "span-24">
+<% (1..10).each do %>
+  <%=render :partial => 'milestone' %>
+<% end %>
+</div>
+
+<%= button_to "back to tasks", tasks_path, :class => "clear span-3 prepend-top", :method => 'get'%>

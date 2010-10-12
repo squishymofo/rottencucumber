@@ -1,0 +1,30 @@
+<span class="span-24 section-header"> Create a new task </span>
+<hr />
+
+<%= form_tag tasks_path do %>
+  <span class="span-4 field-lable"> Task name: </span>
+  <%= text_field_tag :name, nil, :class => "span-14 last" %>
+
+  <span class="span-4 field-lable clear"> Description: </span>
+  <%= text_area_tag :description, nil, :class => "span-14 last" %>
+
+  <span class="span-4 field-lable clear"> Due date: </span>
+  <%= text_field_tag :due_date, nil, :class => "span-8 last" %>
+
+  <span class="span-4 field-lable clear"> Group involved: </span>
+  <%= text_field_tag :due_date, nil, :class => "span-6 last" %>
+
+  <span class="span-4 field-lable clear"> Mile stones: </span>
+  <%= text_field_tag :due_date, nil, :class => "span-6 last" %>
+
+  <%= link_to "+ add new milestone", root_url, :class => "clear push-2 span-21 lst"%>
+
+  <br />
+  <%= submit_tag "Create task", :class => "span-3 clear"  %>
+  <%= button_to "Cancel", root_url, :method => 'GET', :class => "prepend-top span-3 clear" %>
+ 
+<% end %>
+<br />
+<br />
+<br />
+<br />

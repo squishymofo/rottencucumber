@@ -1,0 +1,29 @@
+<span class="section-header span-24"> Create a new group -- we'll write some js here... </span>
+<div class="span-8 clear list-group-members">
+  <% (1..4).each do %>
+    Some available person
+    <br />
+  <% end %>
+</div>
+<div class="span-6 prepend-1">
+  <div class="span-4"> Move member over arrow </div>
+  <br />
+  <br />
+  <div class="span-4 last clear"> Move member back arrow </div>
+</div>
+<div class="last span-7 list-group-members">
+  <% (1..4).each do %>
+    Some chosen person
+    <br />
+  <% end %>
+</div>
+<div class="prepend-15 span-9 prepend-top">
+  <%= form_for groups_path do %>
+    <br />
+    <%= label_tag "Enter group name " %>
+    <%= text_field_tag :group_name %>
+    <br />
+    <%= submit_tag "create", :class => 'span-3' %>
+  <% end %>
+  <%= button_to "cancel", root_url, :method => 'GET', :class => 'span-3' %>
+</div>

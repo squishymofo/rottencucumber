@@ -1,0 +1,14 @@
+<span class="span-18 section-header">Tasks</span>
+<span class="span-6 last"> <%= link_to "create a new task", new_task_path, :class => 'secondary_nav' %></span>
+<span class="span-18"> <%= render_navigation :level => 2 %> </span>
+<span class="span-6 last"> The sort by </span>
+<div id="task-list" class="span-20 prepend-1">
+  <% (1..30).each do  %>
+    <%= render :partial => 'indiv_task' %>
+  <% end %>
+</div>
+
+
+
+
+
