@@ -5279,3 +5279,287 @@ Completed 200 OK in 99ms (Views: 97.9ms | ActiveRecord: 0.0ms)
 [0m
   [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
   [1m[36mSQL (75.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('0')[0m
+
+
+Started GET "/" for 127.0.0.1 at 2010-10-12 14:02:05 -0700
+  Processing by LandingController#index as HTML
+Rendered layouts/_header.html.erb (5.6ms)
+Rendered landing/index.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 17ms (Views: 16.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-10-12 14:02:09 -0700
+  Processing by LandingController#index as HTML
+Rendered layouts/_header.html.erb (5.4ms)
+Rendered landing/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 15ms (Views: 14.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-10-12 14:02:10 -0700
+  Processing by LandingController#index as HTML
+Rendered layouts/_header.html.erb (5.5ms)
+Rendered landing/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 14ms (Views: 14.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/groups" for 127.0.0.1 at 2010-10-12 14:02:12 -0700
+  Processing by GroupsController#index as HTML
+Rendered groups/_group_partial.html.erb (0.9ms)
+Rendered groups/_group_partial.html.erb (0.8ms)
+Rendered groups/_group_partial.html.erb (0.9ms)
+Rendered groups/_group_partial.html.erb (0.9ms)
+Rendered groups/_group_partial.html.erb (0.9ms)
+Rendered groups/_group_partial.html.erb (0.8ms)
+Rendered groups/_group_partial.html.erb (0.7ms)
+Rendered groups/_group_partial.html.erb (0.7ms)
+Rendered groups/_group_partial.html.erb (0.8ms)
+Rendered groups/_group_partial.html.erb (0.7ms)
+Rendered layouts/_header.html.erb (5.9ms)
+Rendered groups/index.html.erb within layouts/application (31.9ms)
+Completed 200 OK in 38ms (Views: 37.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2010-10-12 14:02:26 -0700
+  Processing by TasksController#index as HTML
+Rendered tasks/_indiv_task.html.erb (0.7ms)
+Rendered tasks/_indiv_task.html.erb (0.6ms)
+Rendered tasks/_indiv_task.html.erb (0.6ms)
+Rendered tasks/_indiv_task.html.erb (0.6ms)
+Rendered tasks/_indiv_task.html.erb (0.6ms)
+Rendered tasks/_indiv_task.html.erb (0.7ms)
+Rendered tasks/_indiv_task.html.erb (0.6ms)
+Rendered tasks/_indiv_task.html.erb (0.6ms)
+Rendered tasks/_indiv_task.html.erb (0.6ms)
+Rendered tasks/_indiv_task.html.erb (0.6ms)
+Rendered tasks/_indiv_task.html.erb (0.6ms)
+Rendered tasks/_indiv_task.html.erb (0.6ms)
+Rendered tasks/_indiv_task.html.erb (0.6ms)
+Rendered tasks/_indiv_task.html.erb (0.6ms)
+Rendered tasks/_indiv_task.html.erb (0.6ms)
+Rendered tasks/_indiv_task.html.erb (0.6ms)
+Rendered tasks/_indiv_task.html.erb (0.6ms)
+Rendered tasks/_indiv_task.html.erb (0.6ms)
+Rendered tasks/_indiv_task.html.erb (0.6ms)
+Rendered tasks/_indiv_task.html.erb (0.6ms)
+Rendered tasks/_indiv_task.html.erb (0.6ms)
+Rendered tasks/_indiv_task.html.erb (0.6ms)
+Rendered tasks/_indiv_task.html.erb (0.6ms)
+Rendered tasks/_indiv_task.html.erb (0.6ms)
+Rendered tasks/_indiv_task.html.erb (0.6ms)
+Rendered tasks/_indiv_task.html.erb (0.6ms)
+Rendered tasks/_indiv_task.html.erb (0.6ms)
+Rendered tasks/_indiv_task.html.erb (0.6ms)
+Rendered tasks/_indiv_task.html.erb (0.6ms)
+Rendered tasks/_indiv_task.html.erb (0.6ms)
+Rendered layouts/_header.html.erb (48.2ms)
+Rendered tasks/index.html.erb within layouts/application (112.1ms)
+Completed 200 OK in 118ms (Views: 117.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks?show_in_progress=1" for 127.0.0.1 at 2010-10-12 14:02:32 -0700
+  Processing by TasksController#index as HTML
+  Parameters: {"show_in_progress"=>"1"}
+Rendered tasks/_indiv_task.html.erb (0.7ms)
+Rendered tasks/_indiv_task.html.erb (0.6ms)
+Rendered tasks/_indiv_task.html.erb (0.5ms)
+Rendered tasks/_indiv_task.html.erb (0.6ms)
+Rendered tasks/_indiv_task.html.erb (0.5ms)
+Rendered tasks/_indiv_task.html.erb (0.5ms)
+Rendered tasks/_indiv_task.html.erb (0.5ms)
+Rendered tasks/_indiv_task.html.erb (0.5ms)
+Rendered tasks/_indiv_task.html.erb (0.6ms)
+Rendered tasks/_indiv_task.html.erb (0.6ms)
+Rendered tasks/_indiv_task.html.erb (0.6ms)
+Rendered tasks/_indiv_task.html.erb (0.6ms)
+Rendered tasks/_indiv_task.html.erb (0.6ms)
+Rendered tasks/_indiv_task.html.erb (0.6ms)
+Rendered tasks/_indiv_task.html.erb (0.5ms)
+Rendered tasks/_indiv_task.html.erb (0.5ms)
+Rendered tasks/_indiv_task.html.erb (0.5ms)
+Rendered tasks/_indiv_task.html.erb (0.5ms)
+Rendered tasks/_indiv_task.html.erb (0.5ms)
+Rendered tasks/_indiv_task.html.erb (0.5ms)
+Rendered tasks/_indiv_task.html.erb (0.5ms)
+Rendered tasks/_indiv_task.html.erb (0.5ms)
+Rendered tasks/_indiv_task.html.erb (0.5ms)
+Rendered tasks/_indiv_task.html.erb (0.5ms)
+Rendered tasks/_indiv_task.html.erb (0.5ms)
+Rendered tasks/_indiv_task.html.erb (0.5ms)
+Rendered tasks/_indiv_task.html.erb (0.5ms)
+Rendered tasks/_indiv_task.html.erb (0.7ms)
+Rendered tasks/_indiv_task.html.erb (0.7ms)
+Rendered tasks/_indiv_task.html.erb (0.5ms)
+Rendered layouts/_header.html.erb (5.8ms)
+Rendered tasks/index.html.erb within layouts/application (67.8ms)
+Completed 200 OK in 73ms (Views: 73.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks?show_completed=1" for 127.0.0.1 at 2010-10-12 14:02:34 -0700
+  Processing by TasksController#index as HTML
+  Parameters: {"show_completed"=>"1"}
+Rendered tasks/_indiv_task.html.erb (0.7ms)
+Rendered tasks/_indiv_task.html.erb (0.5ms)
+Rendered tasks/_indiv_task.html.erb (0.5ms)
+Rendered tasks/_indiv_task.html.erb (0.6ms)
+Rendered tasks/_indiv_task.html.erb (0.5ms)
+Rendered tasks/_indiv_task.html.erb (0.5ms)
+Rendered tasks/_indiv_task.html.erb (0.5ms)
+Rendered tasks/_indiv_task.html.erb (0.5ms)
+Rendered tasks/_indiv_task.html.erb (0.5ms)
+Rendered tasks/_indiv_task.html.erb (0.5ms)
+Rendered tasks/_indiv_task.html.erb (0.5ms)
+Rendered tasks/_indiv_task.html.erb (0.5ms)
+Rendered tasks/_indiv_task.html.erb (0.5ms)
+Rendered tasks/_indiv_task.html.erb (0.5ms)
+Rendered tasks/_indiv_task.html.erb (0.5ms)
+Rendered tasks/_indiv_task.html.erb (0.7ms)
+Rendered tasks/_indiv_task.html.erb (0.8ms)
+Rendered tasks/_indiv_task.html.erb (0.6ms)
+Rendered tasks/_indiv_task.html.erb (0.6ms)
+Rendered tasks/_indiv_task.html.erb (0.5ms)
+Rendered tasks/_indiv_task.html.erb (0.5ms)
+Rendered tasks/_indiv_task.html.erb (0.5ms)
+Rendered tasks/_indiv_task.html.erb (0.6ms)
+Rendered tasks/_indiv_task.html.erb (0.6ms)
+Rendered tasks/_indiv_task.html.erb (0.5ms)
+Rendered tasks/_indiv_task.html.erb (0.5ms)
+Rendered tasks/_indiv_task.html.erb (0.5ms)
+Rendered tasks/_indiv_task.html.erb (0.5ms)
+Rendered tasks/_indiv_task.html.erb (0.5ms)
+Rendered tasks/_indiv_task.html.erb (0.7ms)
+Rendered layouts/_header.html.erb (5.5ms)
+Rendered tasks/index.html.erb within layouts/application (68.5ms)
+Completed 200 OK in 74ms (Views: 73.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-10-12 14:02:36 -0700
+  Processing by LandingController#index as HTML
+Rendered layouts/_header.html.erb (6.0ms)
+Rendered landing/index.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 15ms (Views: 14.9ms | ActiveRecord: 0.0ms)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (2.9ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (1.5ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (1.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('0')[0m
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (1.6ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (1.4ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('0')[0m
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (1.6ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (1.7ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (1.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('0')[0m
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (2.7ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (1.6ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('0')[0m
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (1.5ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (1.3ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (1.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('0')[0m
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (2.5ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (2.2ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (1.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('0')[0m
