@@ -1,0 +1,27 @@
+<%= form_for @user_session, :url => signin_user_path do |form| %>
+  <label class="span-3 push-down" for="email">Email</label>
+  <%= form.text_field :email, :size => 30, :class => "span-4 text ui-widget-content ui-corner-all" %>
+  <label class="clear span-3 push-down" for="email">Password</label>
+  <%= form.password_field :password, :size => 30, :class => "span-4 text ui-widget-content ui-corner-all" %>
+  <br />
+  <%= form.submit "Sign in", :id => 'signin_button', :class => "prepend-top span-4 clear" %>
+<% end %>
+
+&nbsp;
+
+<%= form_for @user_session, :url => signin_user_path, :html => { :method => :post, :class => "authentication_form clear" } do |f| %>
+  <%#= oauth_login_hidden_input %>
+  <fieldset>
+    <legend> Or Click your Oauth provider </legend>
+    <ul id="oauth_providers">
+      <li class="oauth_provider">
+        <%= image_tag "/images/facebook.png" %>
+        <%= radio_button_tag :oauth_provider, "facebook" %>
+      </li>
+      <li class="oauth_provider">
+        <%= image_tag "/images/twitter.png" %>
+        <%= radio_button_tag :oauth_provider, "twitter" %>
+      </li>
+    </ul>
+  </fieldset>
+<% end %>

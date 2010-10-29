@@ -1,0 +1,27 @@
+<%= form_tag sign_me_up_path do %>
+  <br />
+  <%= label_tag :email, "Email", :class => "span-2 push-down"  %>
+  <%= text_field_tag :email, nil, :title => "Never shared or displayed", :class => "text ui-widget-content ui-corner-all span-5" %>
+  <span class="push-down prepend-1 span-3"><%= submit_tag "Sign up", :id => "sign-up", :class => 'ui-state-default ui-priority-primary ui-corner-all hide-dia' %></span>
+<% end %>
+
+<br />
+&nbsp;
+
+<%= form_for @user, :url => sign_me_up_path, :html => { :method => :post, :class => "authentication_form" } do |f| %>
+  <%#= oauth_register_hidden_input %>
+  <br />
+  <fieldset>
+    <legend> Or Click your Oauth provider </legend>
+    <ul id="oauth_providers">
+      <li class="oauth_provider">
+        <%= image_tag "/images/facebook.png" %>
+        <%= radio_button_tag :oauth_provider, "facebook" %>
+      </li>
+      <li class="oauth_provider">
+        <%= image_tag "/images/twitter.png" %>
+        <%= radio_button_tag :oauth_provider, "twitter" %>
+      </li>
+    </ul>
+  </fieldset>
+<% end %>

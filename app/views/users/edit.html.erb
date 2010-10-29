@@ -1,0 +1,55 @@
+<div class="span-24">
+<% if @user.admin %>
+Create a new user:
+  <%= form_for @new_user, :url => create_new_user_path do |f|%>
+    <%= f.label'First name' %>
+    <%= f.text_field :first_name %>
+    <br />
+    <%= f.label'Last name' %>
+    <%= f.text_field :last_name %>
+    <br />
+    <%= f.label'Email' %>
+    <%= f.text_field :email %>
+    <br />
+    <%= f.label'password' %>
+    <%= f.text_field :password%>
+    <br />
+    <%= f.label'Password confirmation' %>
+    <%= f.text_field :password_confirmation%>
+    <br />
+    <%= f.label 'Admin?'%>
+    <%= f.check_box :admin %>
+    <br />
+    <%= submit_tag 'create' %>
+  <% end %>
+<% end %>
+<br />
+Edit yourself:
+<%= form_for @user, :method => 'PUT' do |f| %>
+  <%= f.label'First name' %>
+  <%= f.text_field :first_name %>
+    <br />
+  <%= f.label'Last name' %>
+  <%= f.text_field :last_name %>
+    <br />
+  <%= f.label'Email' %>
+  <%= f.text_field :email %>
+    <br />
+  <%= submit_tag 'Update' %>
+<% end %>
+
+ <br />
+ <br />
+ Users invited: <%= "none" unless @current_user.invited_users.any? %>
+ <%= @current_user.invited_users.to_sentence %>
+
+ <br />
+Invited by: <%= "no one" unless @current_user.invited_users.any? %>
+ <%= @current_user.invited_by %>
+ <br />
+ hb points: <%= "none" unless @current_user.hb_points > 0 %>
+ <%= @current_user.hb_points%>
+ <br />
+ adventures bought: <%= "none" %>
+</div>
+

@@ -5,9 +5,38 @@
   <%#= stylesheet_link_tag :all %>
   <%= stylesheet_link_tag 'screen.css' %>
   <%= stylesheet_link_tag 'style.css' %>
-  <%= javascript_include_tag :defaults %>
+  <%= javascript_include_tag 'jquery.js' %>
+  <%= javascript_include_tag 'jquery_hints.js' %>
+  <%= javascript_include_tag 'rails' %>
+  <%#= javascript_include_tag :defaults %>
+  <%= javascript_include_tag 'jquery-ui-1.8.4.custom.min.js' %>
+  <%= stylesheet_link_tag 'custom-theme/jquery-ui-1.8.4.custom.css' %>
   <%= csrf_meta_tag %>
 </head>
+      <script type="text/javascript" charset="utf-8">
+
+        <%= yield :script %>
+
+        $(document).ready ( function () {
+          $('.hide-dia').click(function() {
+          $('#dialog-form').dialog('close');
+          $('#dialog-form-new').dialog('close');
+        });
+        });
+        $('#invite-friends-add').click(function() {
+          $.get("/email_invites/new");
+        });
+        $(function(){ 
+          // find all the input elements with title attributes
+          $('input[title!=""]').hint();
+          $('#optional_message_box').hint();
+        });
+        $('form').submit(function(){
+          // On submit disable its submit button
+          $('input[type=submit]', this).attr('disabled', 'disabled');
+        });
+
+      </script>
 <body>
 
 <div class="container move-header-down">

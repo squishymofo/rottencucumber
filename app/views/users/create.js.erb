@@ -1,0 +1,15 @@
+$("#dialog-form").html("<%= escape_javascript(render :partial => 'check_email') %>");
+$(function () {
+  $("#dialog-form").dialog({
+    resizable: false,
+    draggable: false,
+    position: "center",
+    dialogClass: 'some-class',
+    modal: true,
+    buttons: {
+      "Ok": function() {
+        $(this).dialog('close');
+      }
+    }
+  });
+});
