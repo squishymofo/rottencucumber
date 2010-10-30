@@ -6,6 +6,7 @@ class ApplicationController < ActionController::Base
   #layout 'application'
   helper :all # include all helpers, all the time
   protect_from_forgery
+  before_filter :record_actions
 
   #include SslRequirement
   helper_method :current_user
@@ -16,6 +17,10 @@ class ApplicationController < ActionController::Base
     return @current_user_session if defined?(@current_user_session)
     @current_user_session = UserSession.find
   end
+
+    def record_actions
+      UserAction.create(:ip => request.remote_ip, :url => request.request_uri)
+    end
 
   def store_location
     #session[:return_to] = request.request_uri
