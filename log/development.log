@@ -7440,3 +7440,36 @@ Rendered landing/_new_unknown_user.html.erb (5.6ms)
 Rendered layouts/_header.html.erb (8.8ms)
 Rendered landing/index.html.erb within layouts/application (181.7ms)
 Completed 200 OK in 434ms (Views: 200.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Oct 29 22:30:03 -0700 2010
+  Processing by LandingController#index as HTML
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /home/james/school/se/project-dir/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-10-30 05:30:03.284340', '127.0.0.1', '2010-10-30 05:30:03.284340', '/')
+Rendered landing/_new_unknown_user.html.erb (2.0ms)
+Rendered layouts/_header.html.erb (5.8ms)
+Rendered landing/index.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 369ms (Views: 22.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Oct 29 22:30:17 -0700 2010
+  Processing by LandingController#index as HTML
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /home/james/school/se/project-dir/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-10-30 05:30:17.616328', '127.0.0.1', '2010-10-30 05:30:17.616328', '/')[0m
+Rendered landing/_new_unknown_user.html.erb (2.4ms)
+Rendered layouts/_header.html.erb (6.4ms)
+Rendered landing/index.html.erb within layouts/application (19.7ms)
+Completed 200 OK in 222ms (Views: 30.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at Fri Oct 29 22:30:22 -0700 2010
+  Processing by UsersController#new as JS
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /home/james/school/se/project-dir/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-10-30 05:30:22.515054', '127.0.0.1', '2010-10-30 05:30:22.515054', '/users/new')
+Rendered users/_new_user.html.erb (14.8ms)
+Rendered users/new.js.erb (17.7ms)
+Completed 200 OK in 181ms (Views: 20.9ms | ActiveRecord: 0.3ms)
