@@ -2,6 +2,10 @@ Hello,
 
 Go here to confirm your email:
 
-<%= "http://rottencucumber.heroku.com" + register_url(@user.perishable_token).split("http://localhost:3000").last %>
+<% if Rails.env == "production" %>
+  <%= "http://rottencucumber.heroku.com" + register_url(@user.perishable_token).split("http://localhost:3000").last %>
+<% else %>
+  <%= register_url(@user.perishable_token) %>
+<% end %>
 
 If the above URL does not work, try copying and pasting it into your browser. If you continue to have problems, please feel free to contact us.
