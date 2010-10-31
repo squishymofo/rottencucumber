@@ -34,7 +34,7 @@ class UsersController < ApplicationController
         @user.deliver_activation_instructions!
         redirect_to root_url(:check_email => 1)
       else
-        redirect_to root_url
+        redirect_to root_url # should show errors here and redirect them to the 
       end
     end
   end

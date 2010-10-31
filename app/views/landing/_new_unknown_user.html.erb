@@ -9,11 +9,20 @@
       modal: true
     });
   });
-    $(function() {
-       $('#login_button').button();
-       $('#skip_it_button').button();
-       $('#signup_button').button();
+
+  $(function() {
+     $('#login_button').button();
+     $('#skip_it_button').button();
+     $('#signup_button').button();
+  });
+
+    $(function () {
+      $('.hide-dia').click(function() {
+        $('#dialog-form').dialog('close');
+        $('#dialog-form-new').dialog('close');
+      });
     });
+
 
 <% end %>
 <div id="dialog-form-new" title="Hello unrecognized user" style="display:none;">

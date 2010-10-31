@@ -37,8 +37,13 @@ SimpleNavigation::Configuration.run do |navigation|
       secondary.item :in_progress, "in progress", tasks_path(:show_in_progress => 1), :class => 'secondary_nav'
       secondary.item :completed, "completed", tasks_path(:show_completed=> 1), :class => 'secondary_nav'
     end
-    primary.item :logout, "Logout", logout_path, :class => 'main_nav logged-in-as' if @current_user
-    primary.item :profile, "#{@current_user.first_name}", root_url, :class => 'main_nav logged-in-as' if @current_user
+    if @current_user
+      primary.item :logout, "Logout", logout_path, :class => 'main_nav logged-in-as'
+      primary.item :profile, "#{@current_user.first_name}", root_url, :class => 'main_nav logged-in-as'
+    else
+      #primary.item :login, "Login", new_user_session_path, :class => 'main_nav logged-in-as', :data_remote => true
+      #primary.item :sign_up, "Sign up", new_user_path, :class => 'main_nav logged-in-as', :data_remote => true
+    end
   end # end F
 
     

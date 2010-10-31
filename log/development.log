@@ -7473,3 +7473,565 @@ DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (ca
 Rendered users/_new_user.html.erb (14.8ms)
 Rendered users/new.js.erb (17.7ms)
 Completed 200 OK in 181ms (Views: 20.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Oct 29 22:31:50 -0700 2010
+  Processing by LandingController#index as HTML
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /home/james/school/se/project-dir/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[36mSQL (15.1ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-10-30 05:31:50.172992', '127.0.0.1', '2010-10-30 05:31:50.172992', '/')[0m
+Rendered landing/_new_unknown_user.html.erb (2.1ms)
+Rendered layouts/_header.html.erb (5.3ms)
+Rendered landing/index.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 407ms (Views: 28.0ms | ActiveRecord: 15.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Oct 29 22:32:17 -0700 2010
+  Processing by LandingController#index as HTML
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /home/james/school/se/project-dir/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-10-30 05:32:17.838063', '127.0.0.1', '2010-10-30 05:32:17.838063', '/')
+Rendered landing/_new_unknown_user.html.erb (4.2ms)
+Rendered layouts/_header.html.erb (5.4ms)
+Rendered landing/index.html.erb within layouts/application (17.4ms)
+Completed 200 OK in 378ms (Views: 25.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Oct 29 22:46:38 -0700 2010
+  Processing by LandingController#index as HTML
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /home/james/school/se/project-dir/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-10-30 05:46:38.804737', '127.0.0.1', '2010-10-30 05:46:38.804737', '/')[0m
+Rendered landing/_new_unknown_user.html.erb (2.7ms)
+Rendered layouts/_header.html.erb (13.6ms)
+Rendered landing/index.html.erb within layouts/application (173.9ms)
+Completed 200 OK in 459ms (Views: 180.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/user_sessions/new" for 127.0.0.1 at Fri Oct 29 22:46:42 -0700 2010
+  Processing by UserSessionsController#new as JS
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /home/james/school/se/project-dir/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-10-30 05:46:42.863801', '127.0.0.1', '2010-10-30 05:46:42.863801', '/user_sessions/new')
+Rendered user_sessions/_signin.html.erb (6.4ms)
+Rendered user_sessions/new.js.erb (23.8ms)
+Completed 200 OK in 289ms (Views: 42.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Oct 29 22:48:48 -0700 2010
+  Processing by LandingController#index as HTML
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /home/james/school/se/project-dir/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-10-30 05:48:48.653439', '127.0.0.1', '2010-10-30 05:48:48.653439', '/')[0m
+Rendered landing/_new_unknown_user.html.erb (2.0ms)
+Rendered layouts/_header.html.erb (8.0ms)
+Rendered landing/index.html.erb within layouts/application (17.9ms)
+Completed 200 OK in 308ms (Views: 24.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at Fri Oct 29 22:48:52 -0700 2010
+  Processing by UsersController#new as JS
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /home/james/school/se/project-dir/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-10-30 05:48:52.322616', '127.0.0.1', '2010-10-30 05:48:52.322616', '/users/new')
+Rendered users/_new_user.html.erb (17.3ms)
+Rendered users/new.js.erb (20.5ms)
+Completed 200 OK in 362ms (Views: 24.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Oct 29 22:49:23 -0700 2010
+  Processing by LandingController#index as HTML
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /home/james/school/se/project-dir/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-10-30 05:49:23.289701', '127.0.0.1', '2010-10-30 05:49:23.289701', '/')[0m
+Rendered landing/_new_unknown_user.html.erb (3.5ms)
+Rendered layouts/_header.html.erb (6.4ms)
+Rendered landing/index.html.erb within layouts/application (21.5ms)
+Completed 200 OK in 219ms (Views: 31.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/user_sessions/new" for 127.0.0.1 at Fri Oct 29 22:49:26 -0700 2010
+  Processing by UserSessionsController#new as JS
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /home/james/school/se/project-dir/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-10-30 05:49:26.344255', '127.0.0.1', '2010-10-30 05:49:26.344255', '/user_sessions/new')
+Rendered user_sessions/_signin.html.erb (6.1ms)
+Rendered user_sessions/new.js.erb (9.9ms)
+Completed 200 OK in 295ms (Views: 16.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Oct 31 14:40:53 -0700 2010
+  Processing by LandingController#index as HTML
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /home/james/school/se/project-dir/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-10-31 21:40:53.978184', '127.0.0.1', '2010-10-31 21:40:53.978184', '/')
+Rendered landing/_new_unknown_user.html.erb (5.5ms)
+Rendered layouts/_header.html.erb (19.1ms)
+Rendered landing/index.html.erb within layouts/application (93.5ms)
+Completed 200 OK in 819ms (Views: 172.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/user_sessions/new" for 127.0.0.1 at Sun Oct 31 14:41:05 -0700 2010
+  Processing by UserSessionsController#new as JS
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /home/james/school/se/project-dir/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-10-31 21:41:05.187608', '127.0.0.1', '2010-10-31 21:41:05.187608', '/user_sessions/new')[0m
+Rendered user_sessions/_signin.html.erb (24.0ms)
+Rendered user_sessions/new.js.erb (41.4ms)
+Completed 200 OK in 220ms (Views: 65.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at Sun Oct 31 14:45:06 -0700 2010
+  Processing by UsersController#new as JS
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /home/james/school/se/project-dir/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-10-31 21:45:06.479769', '127.0.0.1', '2010-10-31 21:45:06.479769', '/users/new')
+Rendered users/_new_user.html.erb (12.4ms)
+Rendered users/new.js.erb (29.9ms)
+Completed 200 OK in 400ms (Views: 46.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Oct 31 14:47:28 -0700 2010
+  Processing by LandingController#index as HTML
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /home/james/school/se/project-dir/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[36mSQL (1.8ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-10-31 21:47:28.180112', '127.0.0.1', '2010-10-31 21:47:28.180112', '/')[0m
+Rendered landing/_new_unknown_user.html.erb (2.6ms)
+Rendered layouts/_header.html.erb (6.2ms)
+Rendered landing/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 290ms (Views: 22.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at Sun Oct 31 14:47:35 -0700 2010
+  Processing by UsersController#new as HTML
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /home/james/school/se/project-dir/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-10-31 21:47:35.338311', '127.0.0.1', '2010-10-31 21:47:35.338311', '/users/new')
+Completed   in 250ms
+
+ActionView::MissingTemplate (Missing template users/new with {:handlers=>[:builder, :rjs, :rhtml, :rxml, :erb], :formats=>[:html], :locale=>[:en, :en]} in view paths "/home/james/school/se/project-dir/rottencucumber/app/views"):
+  app/controllers/users_controller.rb:5:in `new'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (2.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Oct 31 14:48:36 -0700 2010
+  Processing by LandingController#index as HTML
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /home/james/school/se/project-dir/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-10-31 21:48:36.864327', '127.0.0.1', '2010-10-31 21:48:36.864327', '/')[0m
+Rendered landing/_new_unknown_user.html.erb (2.8ms)
+Rendered layouts/_header.html.erb (7.7ms)
+Rendered landing/index.html.erb within layouts/application (17.8ms)
+Completed 200 OK in 504ms (Views: 24.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/user_sessions/new" for 127.0.0.1 at Sun Oct 31 14:48:40 -0700 2010
+  Processing by UserSessionsController#new as HTML
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /home/james/school/se/project-dir/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-10-31 21:48:40.906852', '127.0.0.1', '2010-10-31 21:48:40.906852', '/user_sessions/new')
+Completed   in 350ms
+
+ActionView::MissingTemplate (Missing template user_sessions/new with {:handlers=>[:builder, :rjs, :rhtml, :rxml, :erb], :formats=>[:html], :locale=>[:en, :en]} in view paths "/home/james/school/se/project-dir/rottencucumber/app/views"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Oct 31 14:51:08 -0700 2010
+  Processing by LandingController#index as HTML
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /home/james/school/se/project-dir/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-10-31 21:51:08.771067', '127.0.0.1', '2010-10-31 21:51:08.771067', '/')[0m
+Rendered landing/_new_unknown_user.html.erb (5.1ms)
+Rendered layouts/_header.html.erb (8.0ms)
+Rendered landing/index.html.erb within layouts/application (21.9ms)
+Completed 200 OK in 210ms (Views: 28.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Oct 31 14:51:12 -0700 2010
+  Processing by LandingController#index as HTML
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /home/james/school/se/project-dir/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-10-31 21:51:12.558181', '127.0.0.1', '2010-10-31 21:51:12.558181', '/')
+Rendered landing/_new_unknown_user.html.erb (2.3ms)
+Rendered layouts/_header.html.erb (7.4ms)
+Rendered landing/index.html.erb within layouts/application (22.7ms)
+Completed 200 OK in 205ms (Views: 29.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Oct 31 14:51:33 -0700 2010
+  Processing by LandingController#index as HTML
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /home/james/school/se/project-dir/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-10-31 21:51:33.707128', '127.0.0.1', '2010-10-31 21:51:33.707128', '/')[0m
+Rendered landing/_new_unknown_user.html.erb (2.8ms)
+Rendered layouts/_header.html.erb (6.5ms)
+Rendered landing/index.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 328ms (Views: 27.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Oct 31 14:51:49 -0700 2010
+  Processing by LandingController#index as HTML
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /home/james/school/se/project-dir/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-10-31 21:51:49.580349', '127.0.0.1', '2010-10-31 21:51:49.580349', '/')
+Rendered landing/_new_unknown_user.html.erb (2.4ms)
+Rendered layouts/_header.html.erb (9.2ms)
+Rendered landing/index.html.erb within layouts/application (19.5ms)
+Completed 200 OK in 448ms (Views: 25.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at Sun Oct 31 14:51:53 -0700 2010
+  Processing by UsersController#new as HTML
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /home/james/school/se/project-dir/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-10-31 21:51:53.908125', '127.0.0.1', '2010-10-31 21:51:53.908125', '/users/new')[0m
+Completed   in 171ms
+
+ActionView::MissingTemplate (Missing template users/new with {:handlers=>[:builder, :rjs, :rhtml, :rxml, :erb], :formats=>[:html], :locale=>[:en, :en]} in view paths "/home/james/school/se/project-dir/rottencucumber/app/views"):
+  app/controllers/users_controller.rb:5:in `new'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Oct 31 14:59:37 -0700 2010
+  Processing by LandingController#index as HTML
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /home/james/school/se/project-dir/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-10-31 21:59:37.789632', '127.0.0.1', '2010-10-31 21:59:37.789632', '/')
+Rendered landing/_new_unknown_user.html.erb (2.4ms)
+Rendered layouts/_header.html.erb (7.3ms)
+Rendered landing/index.html.erb within layouts/application (18.9ms)
+Completed 200 OK in 218ms (Views: 26.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Oct 31 15:02:41 -0700 2010
+  Processing by LandingController#index as HTML
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /home/james/school/se/project-dir/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-10-31 22:02:41.518581', '127.0.0.1', '2010-10-31 22:02:41.518581', '/')[0m
+Rendered landing/_new_unknown_user.html.erb (2.1ms)
+Rendered layouts/_header.html.erb (7.0ms)
+Rendered landing/index.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 282ms (Views: 34.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/user_sessions/new" for 127.0.0.1 at Sun Oct 31 15:02:49 -0700 2010
+  Processing by UserSessionsController#new as HTML
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /home/james/school/se/project-dir/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-10-31 22:02:49.602486', '127.0.0.1', '2010-10-31 22:02:49.602486', '/user_sessions/new')
+Completed   in 395ms
+
+ActionView::MissingTemplate (Missing template user_sessions/new with {:handlers=>[:builder, :rjs, :rhtml, :rxml, :erb], :formats=>[:html], :locale=>[:en, :en]} in view paths "/home/james/school/se/project-dir/rottencucumber/app/views"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.9ms)
+
+
+Started GET "/user_sessions/new" for 127.0.0.1 at Sun Oct 31 15:03:02 -0700 2010
+  Processing by UserSessionsController#new as HTML
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /home/james/school/se/project-dir/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-10-31 22:03:02.453205', '127.0.0.1', '2010-10-31 22:03:02.453205', '/user_sessions/new')[0m
+Completed   in 183ms
+
+ActionView::MissingTemplate (Missing template user_sessions/new with {:handlers=>[:builder, :rjs, :rhtml, :rxml, :erb], :formats=>[:html], :locale=>[:en, :en]} in view paths "/home/james/school/se/project-dir/rottencucumber/app/views"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Oct 31 15:03:38 -0700 2010
+  Processing by LandingController#index as HTML
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /home/james/school/se/project-dir/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-10-31 22:03:38.388444', '127.0.0.1', '2010-10-31 22:03:38.388444', '/')
+Rendered landing/_new_unknown_user.html.erb (2.7ms)
+Rendered layouts/_header.html.erb (6.9ms)
+Rendered landing/index.html.erb within layouts/application (17.8ms)
+Completed 200 OK in 354ms (Views: 24.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/user_sessions/new" for 127.0.0.1 at Sun Oct 31 15:03:43 -0700 2010
+  Processing by UserSessionsController#new as HTML
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /home/james/school/se/project-dir/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-10-31 22:03:43.540384', '127.0.0.1', '2010-10-31 22:03:43.540384', '/user_sessions/new')[0m
+Completed   in 472ms
+
+ActionView::MissingTemplate (Missing template user_sessions/new with {:handlers=>[:builder, :rjs, :rhtml, :rxml, :erb], :formats=>[:html], :locale=>[:en, :en]} in view paths "/home/james/school/se/project-dir/rottencucumber/app/views"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (5.0ms)
+
+
+Started GET "/user_sessions/new" for 127.0.0.1 at Sun Oct 31 15:03:59 -0700 2010
+  Processing by UserSessionsController#new as HTML
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /home/james/school/se/project-dir/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-10-31 22:03:59.179996', '127.0.0.1', '2010-10-31 22:03:59.179996', '/user_sessions/new')
+Completed   in 222ms
+
+ActionView::MissingTemplate (Missing template user_sessions/new with {:handlers=>[:builder, :rjs, :rhtml, :rxml, :erb], :formats=>[:html], :locale=>[:en, :en]} in view paths "/home/james/school/se/project-dir/rottencucumber/app/views"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Oct 31 15:04:03 -0700 2010
+  Processing by LandingController#index as HTML
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /home/james/school/se/project-dir/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-10-31 22:04:03.762872', '127.0.0.1', '2010-10-31 22:04:03.762872', '/')[0m
+Rendered landing/_new_unknown_user.html.erb (5.6ms)
+Rendered layouts/_header.html.erb (6.9ms)
+Rendered landing/index.html.erb within layouts/application (20.6ms)
+Completed 200 OK in 461ms (Views: 28.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/user_sessions/new" for 127.0.0.1 at Sun Oct 31 15:04:07 -0700 2010
+  Processing by UserSessionsController#new as JS
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /home/james/school/se/project-dir/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-10-31 22:04:07.948218', '127.0.0.1', '2010-10-31 22:04:07.948218', '/user_sessions/new')
+Rendered user_sessions/_signin.html.erb (7.3ms)
+Rendered user_sessions/new.js.erb (10.2ms)
+Completed 200 OK in 390ms (Views: 17.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Oct 31 15:04:51 -0700 2010
+  Processing by LandingController#index as HTML
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /home/james/school/se/project-dir/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-10-31 22:04:51.929348', '127.0.0.1', '2010-10-31 22:04:51.929348', '/')[0m
+Rendered landing/_new_unknown_user.html.erb (2.2ms)
+Rendered layouts/_header.html.erb (6.9ms)
+Rendered landing/index.html.erb within layouts/application (19.6ms)
+Completed 200 OK in 212ms (Views: 26.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Oct 31 15:09:35 -0700 2010
+  Processing by LandingController#index as HTML
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /home/james/school/se/project-dir/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-10-31 22:09:35.885313', '127.0.0.1', '2010-10-31 22:09:35.885313', '/')
+Rendered landing/_new_unknown_user.html.erb (2.3ms)
+ERROR: compiling _app_views_layouts__header_html_erb___916341222__616545908_264336 RAISED compile error
+/home/james/school/se/project-dir/rottencucumber/app/views/layouts/_header.html.erb:4: syntax error, unexpected ')', expecting kTHEN or ':' or '\n' or ';'
+...pend= ( unless @current_user );@output_buffer.safe_concat('
+                              ^
+/home/james/school/se/project-dir/rottencucumber/app/views/layouts/_header.html.erb:7: syntax error, unexpected kEND, expecting ')'
+');  end 
+        ^
+/home/james/school/se/project-dir/rottencucumber/app/views/layouts/_header.html.erb:11: syntax error, unexpected kENSURE, expecting ')'
+/home/james/school/se/project-dir/rottencucumber/app/views/layouts/_header.html.erb:13: syntax error, unexpected kEND, expecting ')'
+Function body:           def _app_views_layouts__header_html_erb___916341222__616545908_264336(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "layouts/_header";_old_output_buffer = @output_buffer;header = local_assigns[:header];;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.safe_concat('<span class="span-24 last"> LOGO </span>
+<div class="span-20 last">
+ ');@output_buffer.append= ( render_navigation :level => 1 );@output_buffer.safe_concat('
+');@output_buffer.safe_concat(' ');@output_buffer.append= ( unless @current_user );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('   <li class="main_nav logged-in-as">');@output_buffer.append= ( link_to "Login", new_user_session_path, :remote => true );@output_buffer.safe_concat(' </li>
+   <li class="main_nav logged-in-as">');@output_buffer.append= ( link_to "Sign up", new_user_path, :remote => true );@output_buffer.safe_concat(' </li>
+');  end 
+@output_buffer.safe_concat('</div>
+
+');@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /home/james/school/se/project-dir/rottencucumber/app/views/layouts/_header.html.erb:13:in `compile'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_view/template.rb:134:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.0/lib/active_support/notifications.rb:54:in `instrument'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_view/template.rb:127:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_view/render/partials.rb:294:in `render_partial'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_view/render/partials.rb:223:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.0/lib/active_support/notifications.rb:52:in `instrument'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.0/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.0/lib/active_support/notifications.rb:52:in `instrument'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_view/render/partials.rb:221:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_view/render/partials.rb:334:in `_render_partial'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_view/render/rendering.rb:22:in `render'
+/home/james/school/se/project-dir/rottencucumber/app/views/layouts/application.html.erb:43:in `_app_views_layouts_application_html_erb__149215875__616501328_0'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_view/template.rb:135:in `send'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_view/template.rb:135:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.0/lib/active_support/notifications.rb:54:in `instrument'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_view/template.rb:127:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_view/render/layouts.rb:80:in `_render_layout'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_view/render/rendering.rb:62:in `_render_template'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.0/lib/active_support/notifications.rb:52:in `instrument'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.0/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.0/lib/active_support/notifications.rb:52:in `instrument'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_view/render/rendering.rb:56:in `_render_template'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_view/render/rendering.rb:26:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:114:in `_render_template'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:108:in `render_to_body'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:101:in `render_to_string'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:92:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_controller/metal/rendering.rb:17:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.0/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/usr/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.0/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/usr/local/lib/ruby/gems/1.8/gems/activerecord-3.0.0/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/abstract_controller/base.rb:150:in `process_action'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/abstract_controller/callbacks.rb:18:in `process_action'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:450:in `_run__580282845__process_action__199225275__callbacks'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:409:in `send'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:409:in `_run_process_action_callbacks'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:93:in `send'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:93:in `run_callbacks'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.0/lib/active_support/notifications.rb:52:in `instrument'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.0/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.0/lib/active_support/notifications.rb:52:in `instrument'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/abstract_controller/base.rb:119:in `process'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:40:in `process'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_controller/metal.rb:133:in `dispatch'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_controller/metal.rb:173
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:148:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:93:in `recognize'
+/usr/local/lib/ruby/gems/1.8/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:68:in `optimized_each'
+/usr/local/lib/ruby/gems/1.8/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:92:in `recognize'
+/usr/local/lib/ruby/gems/1.8/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:139:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/routing/route_set.rb:492:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/head.rb:14:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/methodoverride.rb:24:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/cookies.rb:287:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/activerecord-3.0.0/lib/active_record/query_cache.rb:32:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/activerecord-3.0.0/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/usr/local/lib/ruby/gems/1.8/gems/activerecord-3.0.0/lib/active_record/query_cache.rb:12:in `cache'
+/usr/local/lib/ruby/gems/1.8/gems/activerecord-3.0.0/lib/active_record/query_cache.rb:31:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/activerecord-3.0.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:355:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/callbacks.rb:46:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/sendfile.rb:107:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/show_exceptions.rb:46:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/railties-3.0.0/lib/rails/rack/logger.rb:13:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/runtime.rb:17:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-3.0.0/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/lock.rb:11:in `synchronize'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/static.rb:30:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/railties-3.0.0/lib/rails/application.rb:168:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/railties-3.0.0/lib/rails/application.rb:77:in `send'
+/usr/local/lib/ruby/gems/1.8/gems/railties-3.0.0/lib/rails/application.rb:77:in `method_missing'
+/usr/local/lib/ruby/gems/1.8/gems/railties-3.0.0/lib/rails/rack/log_tailer.rb:14:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/content_length.rb:13:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/handler/webrick.rb:52:in `service'
+/usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/handler/webrick.rb:13:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/server.rb:213:in `start'
+/usr/local/lib/ruby/gems/1.8/gems/railties-3.0.0/lib/rails/commands/server.rb:65:in `start'
+/usr/local/lib/ruby/gems/1.8/gems/railties-3.0.0/lib/rails/commands.rb:30
+/usr/local/lib/ruby/gems/1.8/gems/railties-3.0.0/lib/rails/commands.rb:27:in `tap'
+/usr/local/lib/ruby/gems/1.8/gems/railties-3.0.0/lib/rails/commands.rb:27
+script/rails:6:in `require'
+script/rails:6
+Rendered layouts/_header.html.erb (1.4ms)
+Rendered landing/index.html.erb within layouts/application (15.5ms)
+Completed   in 209ms
+
+ActionView::Template::Error (compile error
+/home/james/school/se/project-dir/rottencucumber/app/views/layouts/_header.html.erb:4: syntax error, unexpected ')', expecting kTHEN or ':' or '\n' or ';'
+...pend= ( unless @current_user );@output_buffer.safe_concat('
+                              ^
+/home/james/school/se/project-dir/rottencucumber/app/views/layouts/_header.html.erb:7: syntax error, unexpected kEND, expecting ')'
+');  end 
+        ^
+/home/james/school/se/project-dir/rottencucumber/app/views/layouts/_header.html.erb:11: syntax error, unexpected kENSURE, expecting ')'
+/home/james/school/se/project-dir/rottencucumber/app/views/layouts/_header.html.erb:13: syntax error, unexpected kEND, expecting ')'):
+    1: <span class="span-24 last"> LOGO </span>
+    2: <div class="span-20 last">
+    3:  <%= render_navigation :level => 1 %>
+    4:  <%= unless @current_user %>
+    5:    <li class="main_nav logged-in-as"><%= link_to "Login", new_user_session_path, :remote => true %> </li>
+    6:    <li class="main_nav logged-in-as"><%= link_to "Sign up", new_user_path, :remote => true %> </li>
+    7:  <% end %>
+  app/views/layouts/_header.html.erb:13:in `compile'
+  app/views/layouts/application.html.erb:43:in `_app_views_layouts_application_html_erb__149215875__616501328_0'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.6ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (11.4ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (27.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Oct 31 15:09:51 -0700 2010
+  Processing by LandingController#index as HTML
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /home/james/school/se/project-dir/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-10-31 22:09:51.623647', '127.0.0.1', '2010-10-31 22:09:51.623647', '/')[0m
+Rendered landing/_new_unknown_user.html.erb (2.8ms)
+Rendered layouts/_header.html.erb (8.0ms)
+Rendered landing/index.html.erb within layouts/application (19.1ms)
+Completed 200 OK in 452ms (Views: 28.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/user_sessions/new" for 127.0.0.1 at Sun Oct 31 15:09:58 -0700 2010
+  Processing by UserSessionsController#new as JS
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /home/james/school/se/project-dir/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-10-31 22:09:58.801149', '127.0.0.1', '2010-10-31 22:09:58.801149', '/user_sessions/new')
+Rendered user_sessions/_signin.html.erb (163.7ms)
+Rendered user_sessions/new.js.erb (170.0ms)
+Completed 200 OK in 340ms (Views: 178.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at Sun Oct 31 15:10:01 -0700 2010
+  Processing by UsersController#new as JS
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /home/james/school/se/project-dir/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-10-31 22:10:01.663588', '127.0.0.1', '2010-10-31 22:10:01.663588', '/users/new')[0m
+Rendered users/_new_user.html.erb (28.7ms)
+Rendered users/new.js.erb (34.8ms)
+Completed 200 OK in 240ms (Views: 42.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Oct 31 15:10:21 -0700 2010
+  Processing by LandingController#index as HTML
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /home/james/school/se/project-dir/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-10-31 22:10:21.770277', '127.0.0.1', '2010-10-31 22:10:21.770277', '/')
+Rendered landing/_new_unknown_user.html.erb (2.2ms)
+Rendered layouts/_header.html.erb (161.2ms)
+Rendered landing/index.html.erb within layouts/application (171.6ms)
+Completed 200 OK in 360ms (Views: 180.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at Sun Oct 31 15:10:26 -0700 2010
+  Processing by UsersController#new as JS
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /home/james/school/se/project-dir/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-10-31 22:10:26.385564', '127.0.0.1', '2010-10-31 22:10:26.385564', '/users/new')[0m
+Rendered users/_new_user.html.erb (19.0ms)
+Rendered users/new.js.erb (24.0ms)
+Completed 200 OK in 249ms (Views: 32.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/user_sessions/new" for 127.0.0.1 at Sun Oct 31 15:10:29 -0700 2010
+  Processing by UserSessionsController#new as JS
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /home/james/school/se/project-dir/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-10-31 22:10:29.572027', '127.0.0.1', '2010-10-31 22:10:29.572027', '/user_sessions/new')
+Rendered user_sessions/_signin.html.erb (16.8ms)
+Rendered user_sessions/new.js.erb (23.7ms)
+Completed 200 OK in 273ms (Views: 40.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/user_sessions/new" for 127.0.0.1 at Sun Oct 31 15:10:31 -0700 2010
+  Processing by UserSessionsController#new as JS
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /home/james/school/se/project-dir/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-10-31 22:10:31.796932', '127.0.0.1', '2010-10-31 22:10:31.796932', '/user_sessions/new')[0m
+Rendered user_sessions/_signin.html.erb (37.7ms)
+Rendered user_sessions/new.js.erb (47.2ms)
+Completed 200 OK in 319ms (Views: 69.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Oct 31 15:10:32 -0700 2010
+  Processing by LandingController#index as HTML
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /home/james/school/se/project-dir/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-10-31 22:10:32.992058', '127.0.0.1', '2010-10-31 22:10:32.992058', '/')
+Rendered landing/_new_unknown_user.html.erb (3.1ms)
+Rendered layouts/_header.html.erb (6.4ms)
+Rendered landing/index.html.erb within layouts/application (19.5ms)
+Completed 200 OK in 460ms (Views: 25.8ms | ActiveRecord: 0.3ms)
