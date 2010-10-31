@@ -1,0 +1,105 @@
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (2.6ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (2.3ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (1.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('0')[0m
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (1.7ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (2.3ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (2.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('0')[0m
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (1.4ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (1.3ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (2.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('0')[0m
+
+
+Started GET "/" for 127.0.0.1 at Sun Oct 31 16:29:57 -0700 2010
+  Processing by LandingController#index as HTML
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-10-31 23:29:57.696442', '127.0.0.1', '2010-10-31 23:29:57.696442', '/')
+Rendered landing/_new_unknown_user.html.erb (1.3ms)
+Rendered layouts/_header.html.erb (4.2ms)
+Rendered landing/index.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 384ms (Views: 16.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/user_sessions/new" for 127.0.0.1 at Sun Oct 31 16:30:09 -0700 2010
+  Processing by UserSessionsController#new as JS
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-10-31 23:30:09.921484', '127.0.0.1', '2010-10-31 23:30:09.921484', '/user_sessions/new')[0m
+Rendered user_sessions/_signin.html.erb (3.9ms)
+Rendered user_sessions/new.js.erb (6.2ms)
+Completed 200 OK in 49ms (Views: 12.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Oct 31 16:30:24 -0700 2010
+  Processing by LandingController#index as HTML
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-10-31 23:30:24.557080', '127.0.0.1', '2010-10-31 23:30:24.557080', '/')
+Rendered landing/_new_unknown_user.html.erb (1.4ms)
+Rendered layouts/_header.html.erb (4.3ms)
+Rendered landing/index.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 168ms (Views: 15.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at Sun Oct 31 16:30:26 -0700 2010
+  Processing by UsersController#new as JS
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-10-31 23:30:26.802278', '127.0.0.1', '2010-10-31 23:30:26.802278', '/users/new')[0m
+Rendered users/_new_user.html.erb (7.9ms)
+Rendered users/new.js.erb (10.0ms)
+Completed 200 OK in 47ms (Views: 12.7ms | ActiveRecord: 0.3ms)

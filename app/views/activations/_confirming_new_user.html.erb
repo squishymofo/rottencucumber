@@ -1,0 +1,43 @@
+<% content_for :script do %>
+  $(function () {
+    $("#dialog-form-new").dialog({
+      width: "33em",
+      dialogClass: 'some-class',
+      resizable: false,
+      draggable: false,
+      modal: true
+    });
+  });
+
+  $(function() {
+    $('#save-profile').button();
+  });
+<% end %>
+<div id="dialog-form-new" title="So glad you've made it" style="display:none;">
+  <div>
+  <br />
+  <br />
+  <%= form_tag activate_path(@user.id) do %>
+    <label class="span-6 push-down" for="password"><b>Set</b> your password </label>
+    <%= password_field_tag :password, nil, :size => 14, :class => "span-4 text ui-widget-content ui-corner-all" %>
+    <br />
+    <label class="span-6 clear push-down" for="password"><b>Confirm</b> your password </label>
+    <%= password_field_tag :password_confirmation, nil, :size => 14, :class => "text ui-widget-content ui-corner-all span-4" %>
+    <br />
+    <br />
+    <br />
+    <br />
+    <b>Complete</b> your profile
+    <br />
+    <br />
+    <%= label_tag :first_name, "First name" %>
+    <%= text_field_tag :first_name, nil, :size => 10, :class => "text ui-widget-content ui-corner-all" %>
+    <br />
+    <%= label_tag :last_name, "Last name" %>
+    <%= text_field_tag :last_name, nil, :size => 10, :class => "text ui-widget-content ui-corner-all" %>
+    <br />
+    <br />
+    <%= submit_tag "Big save button", :id => "save-profile", :class => 'hide-dia ui-state-default ui-priority-primary ui-corner-all' %>
+  <% end %>
+</div>
+</div>

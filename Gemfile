@@ -21,6 +21,8 @@ gem 'heroku'
 
 gem 'simple-navigation'
 gem 'compass'
+gem "authlogic", :git => 'git://github.com/odorcicd/authlogic.git', :branch => "rails3"
+gem 'ruby-debug'
 
 # Use unicorn as the web server
 # gem 'unicorn'

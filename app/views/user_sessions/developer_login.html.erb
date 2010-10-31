@@ -1,0 +1,44 @@
+<% content_for :script do %>
+//$("#dialog-form").html("<%= escape_javascript(render :partial => 'signin') %>");
+$(function () {
+   $("#dialog-form").dialog({
+     resizable: false,
+     width: "25em",
+     title: "Welcome back",
+     draggable: false,
+     position: "center",
+     dialogClass: 'some-class',
+     modal: true
+   });
+});
+
+$(function () {
+    $("#signin_button").button();
+    $('input[title!=""]').hint();
+});
+
+$(document).ready(function() {
+  $form = $(".authentication_form");
+    
+  // progressively enhance buttons
+  $("li.oauth_provider").each(function(index, element) {
+  var li = $(element);
+  var input = $("input", li);
+  input.css("display", "none");
+  li.css("cursor", "pointer");
+  li.data("oauth", input);
+  li.click(function(event) {
+    event.preventDefault();
+    li.data("oauth").attr("checked", "checked");
+    $form.submit();
+    $form.find('input[name=submit]').click();
+    return false;
+  });
+  });
+});
+<% end %>
+
+<div id="dialog-form" style="display:none;">
+  <%= render :partial => 'signin' %>
+</div>
+<div id="dialog-form-new"></div>

@@ -1,5 +1,9 @@
 <span class="span-24 last"> LOGO </span>
 <div class="span-20 last">
  <%= render_navigation :level => 1 %>
+ <% unless @current_user %>
+   <li class="main_nav logged-in-as"><%= link_to "Login", new_user_session_path, :remote => true %> </li>
+   <li class="main_nav logged-in-as"><%= link_to "Sign up", new_user_path, :remote => true %> </li>
+ <% end %>
 </div>
 

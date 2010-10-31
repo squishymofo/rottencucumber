@@ -1,0 +1,24 @@
+$("#dialog-form").html("<%= escape_javascript(render :partial => 'thanks_reging') %>");
+$(function () {
+   $("#new-dialog-form").dialog({
+     resizable: false,
+     width: "30em",
+     title: "Reg complete",
+     draggable: false,
+     position: "center",
+     dialogClass: 'some-class',
+     modal: true,
+     buttons: {
+       "Explore!": function() {
+         $(this).dialog('close');
+       }
+     }
+   });
+});
+
+$(function () {
+    $("#invite_friends_button").button();
+});
+$('.hide-dia').click(function() {
+  $('#new-dialog-form').dialog('close');
+});

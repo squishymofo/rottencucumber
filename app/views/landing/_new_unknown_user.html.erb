@@ -1,0 +1,34 @@
+<% content_for :script do %>
+  $(document).ready(function () {
+    $("#dialog-form-new").dialog({
+      dialogClass: 'some-class',
+      width: "auto",
+      title: "Hello unrecognized user",
+      resizable: false,
+      draggable: false,
+      modal: true
+    });
+  });
+
+  $(function() {
+     $('#login_button').button();
+     $('#skip_it_button').button();
+     $('#signup_button').button();
+  });
+
+    $(function () {
+      $('.hide-dia').click(function() {
+        $('#dialog-form').dialog('close');
+        $('#dialog-form-new').dialog('close');
+      });
+    });
+
+
+<% end %>
+<div id="dialog-form-new" title="Hello unrecognized user" style="display:none;">
+<br />
+<br />
+  <%= button_to 'I am a member', new_user_session_path, :remote => true, :id => 'login_button', :class => "hide-dia text ui-widget-content ui-corner-all", :method => 'get'  %>
+  <%= button_to 'Become a member', new_user_path, :remote => true, :class => "hide-dia text ui-widget-content ui-corner-all", :id => 'signup_button', :method => 'get' %>
+    <%#= button_to 'Skip it!', skip_it_path, :remote => true, :class => "hide-dia text ui-widget-content ui-corner-all", :id => 'skip_it_button', :method => 'get' %>
+</div>

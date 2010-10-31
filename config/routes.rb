@@ -1,5 +1,13 @@
 Rottencucumber::Application.routes.draw do
 
+  get "users/index"
+
+  get "users/new"
+
+  get "users/create"
+
+  get "users/show"
+
   resources :tasks
   resources :groups
 
@@ -58,6 +66,13 @@ Rottencucumber::Application.routes.draw do
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
+  resources :user_sessions
+  resources :users
+  match 'sign_me_up' => 'users#create', :as => :sign_me_up
+  match 'signin_user' => 'user_sessions#create', :as => :signin_user
+  match 'register/:activation_code', :to => 'activations#new', :as => :register
+  match 'activate/:id' => 'activations#create', :as => :activate
+  match 'logout' => 'user_sessions#destroy', :as => :logout
   root :to => 'landing#index'
   match ':controller(/:action(/:id(.:format)))'
   

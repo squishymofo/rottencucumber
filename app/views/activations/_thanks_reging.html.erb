@@ -1,0 +1,33 @@
+<% content_for :script do %>
+$(function () {
+   $("#new-dialog-form").dialog({
+     resizable: false,
+     width: "30em",
+     title: "Good to go",
+     draggable: false,
+     position: "center",
+     dialogClass: 'some-class',
+     modal: true,
+     buttons: {
+       "Explore!": function() {
+         $(this).dialog('close');
+       }
+     }
+   });
+});
+
+$(function () {
+    $("#invite_friends_button").button();
+});
+$('.hide-dia').click(function() {
+  $('#.some-class').dialog('close');
+  $('#new-dialog-form').dialog('close');
+});
+<% end %>
+<div id="new-dialog-form" style="display:none;">
+  <b>Thanks <%= @user.first_name %>!</b>
+  <br />
+  <br />
+  <span class="hide-dia"><%#= button_to "Invite friends. Earn $25", invite_friends_path, :remote => true, :method => :get, :id => "invite_friends_button", :class => "hide-dia" %></span>
+</div>
+
