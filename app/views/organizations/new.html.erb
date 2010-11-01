@@ -1,0 +1,8 @@
+<h1>Create a New Organization</h1>
+<% form_for :organization, @organization, :url => {:action => :create } do |f| %>
+	<%= f.label "Name" %>
+	<%= f.text_field :name %><br/> 
+	<%= f.label "Description" %>
+	<%= f.text_area :description, :size => "60x12" %> <br/>
+	<%= submit_tag "Create" %> 
+<% end %> 
