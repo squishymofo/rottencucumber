@@ -3963,3 +3963,18 @@ DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (ca
 Rendered layouts/_header.html.erb (4.2ms)
 Rendered projects/index.html.erb within layouts/application (12.4ms)
 Completed 200 OK in 213ms (Views: 17.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/projects/2" for 127.0.0.1 at Mon Nov 01 12:10:30 -0700 2010
+  Processing by ProjectsController#index as HTML
+  Parameters: {"org_id"=>"2"}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-01 19:10:30', '127.0.0.1', '2010-11-01 19:10:30', '/projects/2')
+  [1m[36mSQL (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+  [1m[35mProject Load (0.3ms)[0m  SELECT `projects`.* FROM `projects` WHERE (organization_id = '2')
+Rendered layouts/_header.html.erb (4.3ms)
+Rendered projects/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 225ms (Views: 13.2ms | ActiveRecord: 0.9ms)
