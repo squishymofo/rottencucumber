@@ -26,8 +26,8 @@ Rottencucumber::Application.routes.draw do
   
   match 'projects/create' => "projects#create"
   match 'projects/:org_id' => "projects#index"
+  match 'projects/manage/:id' => "projects#manage"
   match 'projects/show/:id' => "projects#show"
-  match 'projects/manage/:id' => "projects#show"
   match 'projects/new/:org_id' => "projects#new"
 
   

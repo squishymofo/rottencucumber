@@ -3978,3 +3978,1504 @@ DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (ca
 Rendered layouts/_header.html.erb (4.3ms)
 Rendered projects/index.html.erb within layouts/application (8.6ms)
 Completed 200 OK in 225ms (Views: 13.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/projects/2" for 127.0.0.1 at Mon Nov 01 12:53:20 -0700 2010
+  Processing by ProjectsController#index as HTML
+  Parameters: {"org_id"=>"2"}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[36mSQL (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-01 19:53:20', '127.0.0.1', '2010-11-01 19:53:20', '/projects/2')
+  [1m[36mSQL (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+  [1m[35mProject Load (0.3ms)[0m  SELECT `projects`.* FROM `projects` WHERE (organization_id = '2')
+Rendered layouts/_header.html.erb (6.4ms)
+Rendered projects/index.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 99ms (Views: 16.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/projects/projects/manage/1" for 127.0.0.1 at Mon Nov 01 12:53:22 -0700 2010
+
+ActionController::RoutingError (No route matches "/projects/projects/manage/1"):
+  
+
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/projects/projects/manage/1" for 127.0.0.1 at Mon Nov 01 12:53:47 -0700 2010
+
+ActionController::RoutingError (No route matches "/projects/projects/manage/1"):
+  
+
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/projects/2" for 127.0.0.1 at Mon Nov 01 12:53:53 -0700 2010
+  Processing by ProjectsController#index as HTML
+  Parameters: {"org_id"=>"2"}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-01 19:53:53', '127.0.0.1', '2010-11-01 19:53:53', '/projects/2')
+  [1m[36mSQL (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+  [1m[35mProject Load (1.6ms)[0m  SELECT `projects`.* FROM `projects` WHERE (organization_id = '2')
+Rendered layouts/_header.html.erb (4.8ms)
+Rendered projects/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 97ms (Views: 14.7ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/projects/manage/1" for 127.0.0.1 at Mon Nov 01 12:53:54 -0700 2010
+  Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-01 19:53:54', '127.0.0.1', '2010-11-01 19:53:54', '/projects/manage/1')
+  [1m[36mSQL (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+Rendered layouts/_header.html.erb (4.2ms)
+Rendered projects/show.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 198ms (Views: 14.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/projects/manage/1" for 127.0.0.1 at Mon Nov 01 12:54:57 -0700 2010
+  Processing by ProjectsController#manage as HTML
+  Parameters: {"id"=>"1"}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-01 19:54:58', '127.0.0.1', '2010-11-01 19:54:58', '/projects/manage/1')[0m
+  [1m[35mSQL (0.1ms)[0m  COMMIT
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1
+  [1m[36mProject Load (0.8ms)[0m  [1mSELECT `projects`.* FROM `projects` WHERE (`projects`.`id` = 1) LIMIT 1[0m
+Completed   in 214ms
+
+NoMethodError (undefined method `groups' for #<Project:0x106d91de8>):
+  app/controllers/projects_controller.rb:44:in `manage'
+
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.1ms)
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.4ms)
+
+
+Started GET "/projects/manage/1" for 127.0.0.1 at Mon Nov 01 12:55:29 -0700 2010
+  Processing by ProjectsController#manage as HTML
+  Parameters: {"id"=>"1"}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-01 19:55:29', '127.0.0.1', '2010-11-01 19:55:29', '/projects/manage/1')[0m
+  [1m[35mSQL (0.1ms)[0m  COMMIT
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1
+  [1m[36mProject Load (0.6ms)[0m  [1mSELECT `projects`.* FROM `projects` WHERE (`projects`.`id` = 1) LIMIT 1[0m
+Rendered layouts/_header.html.erb (6.9ms)
+Rendered projects/manage.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 230ms (Views: 25.9ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/projects/manage/1" for 127.0.0.1 at Mon Nov 01 12:55:52 -0700 2010
+  Processing by ProjectsController#manage as HTML
+  Parameters: {"id"=>"1"}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-01 19:55:53', '127.0.0.1', '2010-11-01 19:55:53', '/projects/manage/1')[0m
+  [1m[35mSQL (0.1ms)[0m  COMMIT
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1
+  [1m[36mProject Load (0.5ms)[0m  [1mSELECT `projects`.* FROM `projects` WHERE (`projects`.`id` = 1) LIMIT 1[0m
+Rendered layouts/_header.html.erb (4.5ms)
+Rendered projects/manage.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 103ms (Views: 12.7ms | ActiveRecord: 1.1ms)
+  [1m[36mProject Load (0.4ms)[0m  [1mSELECT `projects`.* FROM `projects` LIMIT 1[0m
+  [1m[35mOrganization Load (0.4ms)[0m  SELECT `organizations`.* FROM `organizations` WHERE (`organizations`.`id` = 2) LIMIT 1
+
+
+Started GET "/projects/manage/1" for 127.0.0.1 at Mon Nov 01 13:17:29 -0700 2010
+  Processing by ProjectsController#manage as HTML
+  Parameters: {"id"=>"1"}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-01 20:17:30', '127.0.0.1', '2010-11-01 20:17:30', '/projects/manage/1')[0m
+  [1m[35mSQL (1.2ms)[0m  COMMIT
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1
+Completed   in 74ms
+
+ActiveRecord::RecordNotFound (Couldn't find Project without an ID):
+  app/controllers/projects_controller.rb:39:in `manage'
+
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.5ms)
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.9ms)
+
+
+Started GET "/projects/manage/1" for 127.0.0.1 at Mon Nov 01 13:17:52 -0700 2010
+  Processing by ProjectsController#manage as HTML
+  Parameters: {"id"=>"1"}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-01 20:17:52', '127.0.0.1', '2010-11-01 20:17:52', '/projects/manage/1')
+  [1m[36mSQL (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+Completed   in 69ms
+
+ActiveRecord::RecordNotFound (Couldn't find Project without an ID):
+  app/controllers/projects_controller.rb:39:in `manage'
+
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.4ms)
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.0ms)
+
+
+Started GET "/projects/manage/1" for 127.0.0.1 at Mon Nov 01 13:18:12 -0700 2010
+  Processing by ProjectsController#manage as HTML
+  Parameters: {"id"=>"1"}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-01 20:18:12', '127.0.0.1', '2010-11-01 20:18:12', '/projects/manage/1')[0m
+  [1m[35mSQL (0.1ms)[0m  COMMIT
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1
+  [1m[36mProject Load (0.6ms)[0m  [1mSELECT `projects`.* FROM `projects` WHERE (`projects`.`id` = 1) LIMIT 1[0m
+  [1m[35mOrganization Load (0.2ms)[0m  SELECT `organizations`.* FROM `organizations` WHERE (`organizations`.`id` = 2) LIMIT 1
+  [1m[36mSQL (14.7ms)[0m  [1mSHOW TABLES[0m
+Rendered projects/manage.html.erb within layouts/application (45.4ms)
+Completed   in 292ms
+
+ActionView::Template::Error (undefined method `empty' for #<Class:0x106d7e7e8>):
+    5: 
+    6: <p>Tasks</p>
+    7: 
+    8: <% if @tasks.empty %>
+    9: 	There is no task assigned to this project right now<br/>
+    10: <% else %>
+    11: 	<% @tasks.each do |task| %>
+  app/views/projects/manage.html.erb:8:in `_app_views_projects_manage_html_erb__374683377_2204762080_0'
+
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  [1m[35mTask Load (0.2ms)[0m  SELECT `tasks`.* FROM `tasks` WHERE (`tasks`.project_id = 1)
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (7.5ms)
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.9ms)
+
+
+Started GET "/projects/manage/1" for 127.0.0.1 at Mon Nov 01 13:18:58 -0700 2010
+  Processing by ProjectsController#manage as HTML
+  Parameters: {"id"=>"1"}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.5ms)[0m  describe `user_actions`
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-01 20:18:58', '127.0.0.1', '2010-11-01 20:18:58', '/projects/manage/1')[0m
+  [1m[35mSQL (0.1ms)[0m  COMMIT
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1
+  [1m[36mProject Load (0.7ms)[0m  [1mSELECT `projects`.* FROM `projects` WHERE (`projects`.`id` = 1) LIMIT 1[0m
+  [1m[35mOrganization Load (0.2ms)[0m  SELECT `organizations`.* FROM `organizations` WHERE (`organizations`.`id` = 2) LIMIT 1
+  [1m[36mTask Load (0.3ms)[0m  [1mSELECT `tasks`.* FROM `tasks` WHERE (`tasks`.project_id = 1)[0m
+Rendered layouts/_header.html.erb (4.3ms)
+Rendered projects/manage.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 256ms (Views: 17.1ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/projects/manage/1" for 127.0.0.1 at Mon Nov 01 13:19:07 -0700 2010
+  Processing by ProjectsController#manage as HTML
+  Parameters: {"id"=>"1"}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-01 20:19:07', '127.0.0.1', '2010-11-01 20:19:07', '/projects/manage/1')[0m
+  [1m[35mSQL (0.1ms)[0m  COMMIT
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT `projects`.* FROM `projects` WHERE (`projects`.`id` = 1) LIMIT 1[0m
+  [1m[35mOrganization Load (0.2ms)[0m  SELECT `organizations`.* FROM `organizations` WHERE (`organizations`.`id` = 2) LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+Rendered projects/manage.html.erb within layouts/application (6.3ms)
+Completed   in 244ms
+
+ActionView::Template::Error (undefined method `empty' for #<Class:0x106eab670>):
+    4: 
+    5: 
+    6: <p>Tasks</p>
+    7: <%= debug(@tasks.empty)%>
+    8: <% if false %>
+    9: 	There is no task assigned to this project right now<br/>
+    10: <% else %>
+  app/views/projects/manage.html.erb:7:in `_app_views_projects_manage_html_erb__374683377_2205341780_0'
+
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  [1m[35mTask Load (0.2ms)[0m  SELECT `tasks`.* FROM `tasks` WHERE (`tasks`.project_id = 1)
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (7.8ms)
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (13.8ms)
+
+
+Started GET "/projects/manage/1" for 127.0.0.1 at Mon Nov 01 13:19:12 -0700 2010
+  Processing by ProjectsController#manage as HTML
+  Parameters: {"id"=>"1"}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-01 20:19:12', '127.0.0.1', '2010-11-01 20:19:12', '/projects/manage/1')
+  [1m[36mSQL (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+  [1m[35mProject Load (1.3ms)[0m  SELECT `projects`.* FROM `projects` WHERE (`projects`.`id` = 1) LIMIT 1
+  [1m[36mOrganization Load (1.0ms)[0m  [1mSELECT `organizations`.* FROM `organizations` WHERE (`organizations`.`id` = 2) LIMIT 1[0m
+  [1m[35mSQL (51.4ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM `tasks` WHERE (`tasks`.project_id = 1)) AS subquery
+Rendered layouts/_header.html.erb (4.9ms)
+Rendered projects/manage.html.erb within layouts/application (66.7ms)
+Completed 200 OK in 182ms (Views: 19.9ms | ActiveRecord: 55.3ms)
+
+
+Started GET "/projects/manage/1" for 127.0.0.1 at Mon Nov 01 13:19:25 -0700 2010
+  Processing by ProjectsController#manage as HTML
+  Parameters: {"id"=>"1"}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-01 20:19:25', '127.0.0.1', '2010-11-01 20:19:25', '/projects/manage/1')
+  [1m[36mSQL (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+  [1m[35mProject Load (0.7ms)[0m  SELECT `projects`.* FROM `projects` WHERE (`projects`.`id` = 1) LIMIT 1
+  [1m[36mOrganization Load (0.7ms)[0m  [1mSELECT `organizations`.* FROM `organizations` WHERE (`organizations`.`id` = 2) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM `tasks` WHERE (`tasks`.project_id = 1)) AS subquery
+Rendered layouts/_header.html.erb (7.7ms)
+Rendered projects/manage.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 133ms (Views: 22.6ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/projects/manage/1" for 127.0.0.1 at Mon Nov 01 13:19:47 -0700 2010
+  Processing by ProjectsController#manage as HTML
+  Parameters: {"id"=>"1"}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-01 20:19:47', '127.0.0.1', '2010-11-01 20:19:47', '/projects/manage/1')
+  [1m[36mSQL (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+  [1m[35mProject Load (0.8ms)[0m  SELECT `projects`.* FROM `projects` WHERE (`projects`.`id` = 1) LIMIT 1
+  [1m[36mOrganization Load (0.8ms)[0m  [1mSELECT `organizations`.* FROM `organizations` WHERE (`organizations`.`id` = 2) LIMIT 1[0m
+  [1m[35mSQL (0.7ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM `tasks` WHERE (`tasks`.project_id = 1)) AS subquery
+Rendered layouts/_header.html.erb (5.1ms)
+Rendered projects/manage.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 128ms (Views: 18.3ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/projects/manage/1" for 127.0.0.1 at Mon Nov 01 13:19:57 -0700 2010
+  Processing by ProjectsController#manage as HTML
+  Parameters: {"id"=>"1"}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-01 20:19:57', '127.0.0.1', '2010-11-01 20:19:57', '/projects/manage/1')
+  [1m[36mSQL (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+  [1m[35mProject Load (0.2ms)[0m  SELECT `projects`.* FROM `projects` WHERE (`projects`.`id` = 1) LIMIT 1
+  [1m[36mOrganization Load (0.3ms)[0m  [1mSELECT `organizations`.* FROM `organizations` WHERE (`organizations`.`id` = 2) LIMIT 1[0m
+  [1m[35mSQL (0.8ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM `tasks` WHERE (`tasks`.project_id = 1)) AS subquery
+Rendered layouts/_header.html.erb (4.2ms)
+Rendered projects/manage.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 129ms (Views: 18.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/projects/manage/1" for 127.0.0.1 at Mon Nov 01 13:20:04 -0700 2010
+  Processing by ProjectsController#manage as HTML
+  Parameters: {"id"=>"1"}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-01 20:20:04', '127.0.0.1', '2010-11-01 20:20:04', '/projects/manage/1')
+  [1m[36mSQL (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+  [1m[35mProject Load (0.7ms)[0m  SELECT `projects`.* FROM `projects` WHERE (`projects`.`id` = 1) LIMIT 1
+  [1m[36mOrganization Load (0.6ms)[0m  [1mSELECT `organizations`.* FROM `organizations` WHERE (`organizations`.`id` = 2) LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM `tasks` WHERE (`tasks`.project_id = 1)) AS subquery
+Rendered layouts/_header.html.erb (5.2ms)
+Rendered projects/manage.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 257ms (Views: 19.3ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/projects/manage/1" for 127.0.0.1 at Mon Nov 01 13:20:18 -0700 2010
+  Processing by ProjectsController#manage as HTML
+  Parameters: {"id"=>"1"}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-01 20:20:18', '127.0.0.1', '2010-11-01 20:20:18', '/projects/manage/1')
+  [1m[36mSQL (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+  [1m[35mProject Load (0.2ms)[0m  SELECT `projects`.* FROM `projects` WHERE (`projects`.`id` = 1) LIMIT 1
+  [1m[36mOrganization Load (0.2ms)[0m  [1mSELECT `organizations`.* FROM `organizations` WHERE (`organizations`.`id` = 2) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM `tasks` WHERE (`tasks`.project_id = 1)) AS subquery
+Rendered layouts/_header.html.erb (4.5ms)
+Rendered projects/manage.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 257ms (Views: 18.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/projects/manage/1" for 127.0.0.1 at Mon Nov 01 13:20:24 -0700 2010
+  Processing by ProjectsController#manage as HTML
+  Parameters: {"id"=>"1"}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-01 20:20:24', '127.0.0.1', '2010-11-01 20:20:24', '/projects/manage/1')
+  [1m[36mSQL (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+  [1m[35mProject Load (1.2ms)[0m  SELECT `projects`.* FROM `projects` WHERE (`projects`.`id` = 1) LIMIT 1
+  [1m[36mOrganization Load (0.2ms)[0m  [1mSELECT `organizations`.* FROM `organizations` WHERE (`organizations`.`id` = 2) LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM `tasks` WHERE (`tasks`.project_id = 1)) AS subquery
+Rendered layouts/_header.html.erb (4.3ms)
+Rendered projects/manage.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 255ms (Views: 17.6ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/projects/manage/1" for 127.0.0.1 at Mon Nov 01 13:20:35 -0700 2010
+  Processing by ProjectsController#manage as HTML
+  Parameters: {"id"=>"1"}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-01 20:20:35', '127.0.0.1', '2010-11-01 20:20:35', '/projects/manage/1')
+  [1m[36mSQL (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+  [1m[35mProject Load (0.2ms)[0m  SELECT `projects`.* FROM `projects` WHERE (`projects`.`id` = 1) LIMIT 1
+  [1m[36mOrganization Load (0.2ms)[0m  [1mSELECT `organizations`.* FROM `organizations` WHERE (`organizations`.`id` = 2) LIMIT 1[0m
+  [1m[35mSQL (1.1ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM `tasks` WHERE (`tasks`.project_id = 1)) AS subquery
+Rendered layouts/_header.html.erb (4.5ms)
+Rendered projects/manage.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 271ms (Views: 17.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/projects/manage/1" for 127.0.0.1 at Mon Nov 01 13:20:42 -0700 2010
+  Processing by ProjectsController#manage as HTML
+  Parameters: {"id"=>"1"}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-01 20:20:42', '127.0.0.1', '2010-11-01 20:20:42', '/projects/manage/1')
+  [1m[36mSQL (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+  [1m[35mProject Load (0.2ms)[0m  SELECT `projects`.* FROM `projects` WHERE (`projects`.`id` = 1) LIMIT 1
+  [1m[36mOrganization Load (0.2ms)[0m  [1mSELECT `organizations`.* FROM `organizations` WHERE (`organizations`.`id` = 2) LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM `tasks` WHERE (`tasks`.project_id = 1)) AS subquery
+Rendered layouts/_header.html.erb (4.8ms)
+Rendered projects/manage.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 262ms (Views: 19.3ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/projects/manage/1" for 127.0.0.1 at Mon Nov 01 13:21:24 -0700 2010
+  Processing by ProjectsController#manage as HTML
+  Parameters: {"id"=>"1"}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-01 20:21:24', '127.0.0.1', '2010-11-01 20:21:24', '/projects/manage/1')
+  [1m[36mSQL (0.9ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+  [1m[35mProject Load (0.6ms)[0m  SELECT `projects`.* FROM `projects` WHERE (`projects`.`id` = 1) LIMIT 1
+  [1m[36mOrganization Load (0.2ms)[0m  [1mSELECT `organizations`.* FROM `organizations` WHERE (`organizations`.`id` = 2) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM `tasks` WHERE (`tasks`.project_id = 1)) AS subquery
+Rendered layouts/_header.html.erb (4.5ms)
+Rendered projects/manage.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 292ms (Views: 18.0ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/projects/manage/1" for 127.0.0.1 at Mon Nov 01 13:30:21 -0700 2010
+  Processing by ProjectsController#manage as HTML
+  Parameters: {"id"=>"1"}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[36mSQL (0.8ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-01 20:30:21', '127.0.0.1', '2010-11-01 20:30:21', '/projects/manage/1')
+  [1m[36mSQL (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+  [1m[35mProject Load (0.2ms)[0m  SELECT `projects`.* FROM `projects` WHERE (`projects`.`id` = 1) LIMIT 1
+  [1m[36mOrganization Load (0.7ms)[0m  [1mSELECT `organizations`.* FROM `organizations` WHERE (`organizations`.`id` = 2) LIMIT 1[0m
+ERROR: compiling _app_views_projects_manage_html_erb__374683377_2205173620_0 RAISED compile error
+/Users/denniss/Sites/rottencucumber/app/views/projects/manage.html.erb:35: syntax error, unexpected kENSURE, expecting $end
+Function body:           def _app_views_projects_manage_html_erb__374683377_2205173620_0(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "projects/manage";_old_output_buffer = @output_buffer;;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.safe_concat('<h1>');@output_buffer.append= ( @project.name );@output_buffer.safe_concat('</h1>
+
+<b>Project description</b><br> 
+');@output_buffer.append= ( @project.description );@output_buffer.safe_concat('<br/><br/>
+
+
+<b>Tasks</b><br/>
+'); if @tasks.empty? 
+@output_buffer.safe_concat('	There is no task assigned to this project right now<br/>
+'); else 
+@output_buffer.append_if_string= 	 @tasks.each do |task| 
+@output_buffer.safe_concat('		');@output_buffer.append= ( task.name );@output_buffer.safe_concat(' <br/>
+');	 end 
+ end
+@output_buffer.safe_concat('
+');@output_buffer.append= ( form_for :task, @task, :url => 'projects/manage');@output_buffer.safe_concat('
+');@output_buffer.safe_concat('			');@output_buffer.append= ( f.label "Name:" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('			');@output_buffer.append= ( f.text_field :name );@output_buffer.safe_concat('<br/> 
+			');@output_buffer.append= ( f.label "Description:" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('			');@output_buffer.append= ( f.text_area :description, :size => "60x12" );@output_buffer.safe_concat(' <br/>
+			');@output_buffer.append= ( f.label "Assign to group:" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('
+');			 groups_array = @groups.map { |group| [group.name, group.id ]}
+@output_buffer.safe_concat('			
+			');@output_buffer.append= ( hidden_field(:org, :id) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('			
+');			 if !groups_array.empty? 
+@output_buffer.safe_concat('				');@output_buffer.append= ( options_for_select(groups_array) );@output_buffer.safe_concat(' <br/>
+');			 else 
+@output_buffer.safe_concat('				');@output_buffer.append= ( "You have not created any group yet.");@output_buffer.safe_concat(' <br/>
+');			 end 
+@output_buffer.safe_concat('			
+			');@output_buffer.append= ( submit_tag "Add Task to This Project" );@output_buffer.safe_concat(' 
+'); 	end ;@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /Users/denniss/Sites/rottencucumber/app/views/projects/manage.html.erb:35:in `compile'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_view/template.rb:134:in `render'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-3.0.0/lib/active_support/notifications.rb:54:in `instrument'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_view/template.rb:127:in `render'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_view/render/rendering.rb:59:in `_render_template'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-3.0.0/lib/active_support/notifications.rb:52:in `instrument'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-3.0.0/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-3.0.0/lib/active_support/notifications.rb:52:in `instrument'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_view/render/rendering.rb:56:in `_render_template'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_view/render/rendering.rb:26:in `render'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:114:in `_render_template'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:108:in `render_to_body'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:101:in `render_to_string'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:92:in `render'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_controller/metal/rendering.rb:17:in `render'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-3.0.0/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/Users/denniss/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-3.0.0/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activerecord-3.0.0/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/abstract_controller/base.rb:150:in `process_action'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/abstract_controller/callbacks.rb:18:in `process_action'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:450:in `_run__46567664__process_action__1584038780__callbacks'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:409:in `send'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:409:in `_run_process_action_callbacks'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:93:in `send'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:93:in `run_callbacks'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-3.0.0/lib/active_support/notifications.rb:52:in `instrument'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-3.0.0/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-3.0.0/lib/active_support/notifications.rb:52:in `instrument'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/abstract_controller/base.rb:119:in `process'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:40:in `process'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_controller/metal.rb:133:in `dispatch'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_controller/metal.rb:173:in `action'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:148:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:93:in `recognize'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:75:in `optimized_each'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:92:in `recognize'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:139:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/routing/route_set.rb:492:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/head.rb:14:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.2.1/lib/rack/methodoverride.rb:24:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/cookies.rb:287:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activerecord-3.0.0/lib/active_record/query_cache.rb:32:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activerecord-3.0.0/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activerecord-3.0.0/lib/active_record/query_cache.rb:12:in `cache'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activerecord-3.0.0/lib/active_record/query_cache.rb:31:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activerecord-3.0.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:355:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/callbacks.rb:46:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.2.1/lib/rack/sendfile.rb:107:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/show_exceptions.rb:46:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/railties-3.0.0/lib/rails/rack/logger.rb:13:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.2.1/lib/rack/runtime.rb:17:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-3.0.0/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.2.1/lib/rack/lock.rb:11:in `synchronize'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/static.rb:30:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/railties-3.0.0/lib/rails/application.rb:168:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/railties-3.0.0/lib/rails/application.rb:77:in `send'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/railties-3.0.0/lib/rails/application.rb:77:in `method_missing'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/railties-3.0.0/lib/rails/rack/log_tailer.rb:14:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.2.1/lib/rack/content_length.rb:13:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.2.1/lib/rack/handler/webrick.rb:52:in `service'
+/Users/denniss/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/Users/denniss/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/Users/denniss/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/Users/denniss/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/Users/denniss/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/Users/denniss/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/Users/denniss/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/Users/denniss/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/Users/denniss/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/Users/denniss/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.2.1/lib/rack/handler/webrick.rb:13:in `run'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.2.1/lib/rack/server.rb:213:in `start'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/railties-3.0.0/lib/rails/commands/server.rb:65:in `start'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/railties-3.0.0/lib/rails/commands.rb:30
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/railties-3.0.0/lib/rails/commands.rb:27:in `tap'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/railties-3.0.0/lib/rails/commands.rb:27
+script/rails:6:in `require'
+script/rails:6
+Rendered projects/manage.html.erb within layouts/application (1.9ms)
+Completed   in 264ms
+
+ActionView::Template::Error (compile error
+/Users/denniss/Sites/rottencucumber/app/views/projects/manage.html.erb:35: syntax error, unexpected kENSURE, expecting $end):
+    32: 			
+    33: 			<%= submit_tag "Add Task to This Project" %> 
+    34: <% 	end %>
+  app/views/projects/manage.html.erb:35:in `compile'
+
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  [1m[35mTask Load (0.3ms)[0m  SELECT `tasks`.* FROM `tasks` WHERE (`tasks`.project_id = 1)
+  [1m[36mGroup Load (0.3ms)[0m  [1mSELECT `groups`.* FROM `groups` WHERE (`groups`.organization_id = 2)[0m
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (14.3ms)
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (19.9ms)
+
+
+Started GET "/projects/manage/1" for 127.0.0.1 at Mon Nov 01 13:30:50 -0700 2010
+  Processing by ProjectsController#manage as HTML
+  Parameters: {"id"=>"1"}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (3.4ms)[0m  [1mINSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-01 20:30:50', '127.0.0.1', '2010-11-01 20:30:50', '/projects/manage/1')[0m
+  [1m[35mSQL (0.2ms)[0m  COMMIT
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT `projects`.* FROM `projects` WHERE (`projects`.`id` = 1) LIMIT 1[0m
+  [1m[35mOrganization Load (0.2ms)[0m  SELECT `organizations`.* FROM `organizations` WHERE (`organizations`.`id` = 2) LIMIT 1
+ERROR: compiling _app_views_projects_manage_html_erb__374683377_2205497140_0 RAISED compile error
+/Users/denniss/Sites/rottencucumber/app/views/projects/manage.html.erb:35: syntax error, unexpected kENSURE, expecting $end
+Function body:           def _app_views_projects_manage_html_erb__374683377_2205497140_0(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "projects/manage";_old_output_buffer = @output_buffer;;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.safe_concat('<h1>');@output_buffer.append= ( @project.name );@output_buffer.safe_concat('</h1>
+
+<b>Project description</b><br> 
+');@output_buffer.append= ( @project.description );@output_buffer.safe_concat('<br/><br/>
+
+
+<b>Tasks</b><br/>
+'); if @tasks.empty? 
+@output_buffer.safe_concat('	There is no task assigned to this project right now<br/>
+'); else 
+@output_buffer.append_if_string= 	 @tasks.each do |task| 
+@output_buffer.safe_concat('		');@output_buffer.append= ( task.name );@output_buffer.safe_concat(' <br/>
+');	 end 
+ end
+@output_buffer.safe_concat('
+'); form_for :task, @task, :url => 'projects/manage'
+@output_buffer.safe_concat('			');@output_buffer.append= ( f.label "Name:" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('			');@output_buffer.append= ( f.text_field :name );@output_buffer.safe_concat('<br/> 
+			');@output_buffer.append= ( f.label "Description:" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('			');@output_buffer.append= ( f.text_area :description, :size => "60x12" );@output_buffer.safe_concat(' <br/>
+			');@output_buffer.append= ( f.label "Assign to group:" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('
+');			 groups_array = @groups.map { |group| [group.name, group.id ]}
+@output_buffer.safe_concat('			
+			');@output_buffer.append= ( hidden_field(:org, :id) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('			
+');			 if !groups_array.empty? 
+@output_buffer.safe_concat('				');@output_buffer.append= ( options_for_select(groups_array) );@output_buffer.safe_concat(' <br/>
+');			 else 
+@output_buffer.safe_concat('				');@output_buffer.append= ( "You have not created any group yet.");@output_buffer.safe_concat(' <br/>
+');			 end 
+@output_buffer.safe_concat('			
+			');@output_buffer.append= ( submit_tag "Add Task to This Project" );@output_buffer.safe_concat(' 
+'); 	end ;@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /Users/denniss/Sites/rottencucumber/app/views/projects/manage.html.erb:35:in `compile'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_view/template.rb:134:in `render'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-3.0.0/lib/active_support/notifications.rb:54:in `instrument'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_view/template.rb:127:in `render'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_view/render/rendering.rb:59:in `_render_template'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-3.0.0/lib/active_support/notifications.rb:52:in `instrument'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-3.0.0/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-3.0.0/lib/active_support/notifications.rb:52:in `instrument'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_view/render/rendering.rb:56:in `_render_template'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_view/render/rendering.rb:26:in `render'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:114:in `_render_template'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:108:in `render_to_body'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:101:in `render_to_string'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:92:in `render'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_controller/metal/rendering.rb:17:in `render'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-3.0.0/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/Users/denniss/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-3.0.0/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activerecord-3.0.0/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/abstract_controller/base.rb:150:in `process_action'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/abstract_controller/callbacks.rb:18:in `process_action'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:450:in `_run__46567664__process_action__1584038780__callbacks'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:409:in `send'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:409:in `_run_process_action_callbacks'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:93:in `send'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:93:in `run_callbacks'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-3.0.0/lib/active_support/notifications.rb:52:in `instrument'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-3.0.0/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-3.0.0/lib/active_support/notifications.rb:52:in `instrument'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/abstract_controller/base.rb:119:in `process'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:40:in `process'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_controller/metal.rb:133:in `dispatch'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_controller/metal.rb:173:in `action'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:148:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:93:in `recognize'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:75:in `optimized_each'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:92:in `recognize'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:139:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/routing/route_set.rb:492:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/head.rb:14:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.2.1/lib/rack/methodoverride.rb:24:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/cookies.rb:287:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activerecord-3.0.0/lib/active_record/query_cache.rb:32:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activerecord-3.0.0/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activerecord-3.0.0/lib/active_record/query_cache.rb:12:in `cache'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activerecord-3.0.0/lib/active_record/query_cache.rb:31:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activerecord-3.0.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:355:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/callbacks.rb:46:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.2.1/lib/rack/sendfile.rb:107:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/show_exceptions.rb:46:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/railties-3.0.0/lib/rails/rack/logger.rb:13:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.2.1/lib/rack/runtime.rb:17:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-3.0.0/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.2.1/lib/rack/lock.rb:11:in `synchronize'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/static.rb:30:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/railties-3.0.0/lib/rails/application.rb:168:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/railties-3.0.0/lib/rails/application.rb:77:in `send'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/railties-3.0.0/lib/rails/application.rb:77:in `method_missing'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/railties-3.0.0/lib/rails/rack/log_tailer.rb:14:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.2.1/lib/rack/content_length.rb:13:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.2.1/lib/rack/handler/webrick.rb:52:in `service'
+/Users/denniss/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/Users/denniss/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/Users/denniss/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/Users/denniss/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/Users/denniss/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/Users/denniss/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/Users/denniss/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/Users/denniss/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/Users/denniss/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/Users/denniss/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.2.1/lib/rack/handler/webrick.rb:13:in `run'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.2.1/lib/rack/server.rb:213:in `start'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/railties-3.0.0/lib/rails/commands/server.rb:65:in `start'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/railties-3.0.0/lib/rails/commands.rb:30
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/railties-3.0.0/lib/rails/commands.rb:27:in `tap'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/railties-3.0.0/lib/rails/commands.rb:27
+script/rails:6:in `require'
+script/rails:6
+Rendered projects/manage.html.erb within layouts/application (1.3ms)
+Completed   in 266ms
+
+ActionView::Template::Error (compile error
+/Users/denniss/Sites/rottencucumber/app/views/projects/manage.html.erb:35: syntax error, unexpected kENSURE, expecting $end):
+    32: 			
+    33: 			<%= submit_tag "Add Task to This Project" %> 
+    34: <% 	end %>
+  app/views/projects/manage.html.erb:35:in `compile'
+
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  [1m[36mTask Load (0.3ms)[0m  [1mSELECT `tasks`.* FROM `tasks` WHERE (`tasks`.project_id = 1)[0m
+  [1m[35mGroup Load (0.2ms)[0m  SELECT `groups`.* FROM `groups` WHERE (`groups`.organization_id = 2)
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (13.1ms)
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (18.6ms)
+
+
+Started GET "/projects/manage/1" for 127.0.0.1 at Mon Nov 01 13:31:57 -0700 2010
+  Processing by ProjectsController#manage as HTML
+  Parameters: {"id"=>"1"}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-01 20:31:58', '127.0.0.1', '2010-11-01 20:31:58', '/projects/manage/1')
+  [1m[36mSQL (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+  [1m[35mProject Load (0.2ms)[0m  SELECT `projects`.* FROM `projects` WHERE (`projects`.`id` = 1) LIMIT 1
+  [1m[36mOrganization Load (0.6ms)[0m  [1mSELECT `organizations`.* FROM `organizations` WHERE (`organizations`.`id` = 2) LIMIT 1[0m
+ERROR: compiling _app_views_projects_manage_html_erb__374683377_2202641320_0 RAISED compile error
+/Users/denniss/Sites/rottencucumber/app/views/projects/manage.html.erb:35: syntax error, unexpected kENSURE, expecting $end
+Function body:           def _app_views_projects_manage_html_erb__374683377_2202641320_0(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "projects/manage";_old_output_buffer = @output_buffer;;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.safe_concat('<h1>');@output_buffer.append= ( @project.name );@output_buffer.safe_concat('</h1>
+
+<b>Project description</b><br> 
+');@output_buffer.append= ( @project.description );@output_buffer.safe_concat('<br/><br/>
+
+
+<b>Tasks</b><br/>
+'); if @tasks.empty? 
+@output_buffer.safe_concat('	There is no task assigned to this project right now<br/>
+'); else 
+@output_buffer.append_if_string= 	 @tasks.each do |task| 
+@output_buffer.safe_concat('		');@output_buffer.append= ( task.name );@output_buffer.safe_concat(' <br/>
+');	 end 
+ end
+@output_buffer.safe_concat('
+'); form_for :task, @task, :url => 'projects/manage'
+@output_buffer.safe_concat('			');@output_buffer.append= ( f.label "Name:" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('			');@output_buffer.append= ( f.text_field :name );@output_buffer.safe_concat('<br/> 
+			');@output_buffer.append= ( f.label "Description:" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('			');@output_buffer.append= ( f.text_area :description, :size => "60x12" );@output_buffer.safe_concat(' <br/>
+			');@output_buffer.append= ( f.label "Assign to group:" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('
+');			 groups_array = @groups.map { |group| [group.name, group.id ]} 
+@output_buffer.safe_concat('			
+			');@output_buffer.append= ( hidden_field(:org, :id) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('			
+');			 if !groups_array.empty? 
+@output_buffer.safe_concat('				');@output_buffer.append= ( options_for_select(groups_array) );@output_buffer.safe_concat(' <br/>
+');			 else 
+@output_buffer.safe_concat('				');@output_buffer.append= ( "You have not created any group yet.");@output_buffer.safe_concat(' <br/>
+');			 end 
+@output_buffer.safe_concat('			
+			');@output_buffer.append= ( submit_tag "Add Task to This Project" );@output_buffer.safe_concat(' 
+'); 	end ;@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /Users/denniss/Sites/rottencucumber/app/views/projects/manage.html.erb:35:in `compile'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_view/template.rb:134:in `render'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-3.0.0/lib/active_support/notifications.rb:54:in `instrument'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_view/template.rb:127:in `render'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_view/render/rendering.rb:59:in `_render_template'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-3.0.0/lib/active_support/notifications.rb:52:in `instrument'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-3.0.0/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-3.0.0/lib/active_support/notifications.rb:52:in `instrument'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_view/render/rendering.rb:56:in `_render_template'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_view/render/rendering.rb:26:in `render'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:114:in `_render_template'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:108:in `render_to_body'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:101:in `render_to_string'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:92:in `render'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_controller/metal/rendering.rb:17:in `render'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-3.0.0/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/Users/denniss/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-3.0.0/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activerecord-3.0.0/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/abstract_controller/base.rb:150:in `process_action'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/abstract_controller/callbacks.rb:18:in `process_action'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:450:in `_run__46567664__process_action__1584038780__callbacks'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:409:in `send'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:409:in `_run_process_action_callbacks'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:93:in `send'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:93:in `run_callbacks'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-3.0.0/lib/active_support/notifications.rb:52:in `instrument'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-3.0.0/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-3.0.0/lib/active_support/notifications.rb:52:in `instrument'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/abstract_controller/base.rb:119:in `process'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:40:in `process'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_controller/metal.rb:133:in `dispatch'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_controller/metal.rb:173:in `action'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:148:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:93:in `recognize'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:75:in `optimized_each'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:92:in `recognize'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:139:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/routing/route_set.rb:492:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/head.rb:14:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.2.1/lib/rack/methodoverride.rb:24:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/cookies.rb:287:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activerecord-3.0.0/lib/active_record/query_cache.rb:32:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activerecord-3.0.0/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activerecord-3.0.0/lib/active_record/query_cache.rb:12:in `cache'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activerecord-3.0.0/lib/active_record/query_cache.rb:31:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activerecord-3.0.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:355:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/callbacks.rb:46:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.2.1/lib/rack/sendfile.rb:107:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/show_exceptions.rb:46:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/railties-3.0.0/lib/rails/rack/logger.rb:13:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.2.1/lib/rack/runtime.rb:17:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-3.0.0/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.2.1/lib/rack/lock.rb:11:in `synchronize'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/static.rb:30:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/railties-3.0.0/lib/rails/application.rb:168:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/railties-3.0.0/lib/rails/application.rb:77:in `send'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/railties-3.0.0/lib/rails/application.rb:77:in `method_missing'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/railties-3.0.0/lib/rails/rack/log_tailer.rb:14:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.2.1/lib/rack/content_length.rb:13:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.2.1/lib/rack/handler/webrick.rb:52:in `service'
+/Users/denniss/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/Users/denniss/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/Users/denniss/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/Users/denniss/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/Users/denniss/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/Users/denniss/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/Users/denniss/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/Users/denniss/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/Users/denniss/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/Users/denniss/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.2.1/lib/rack/handler/webrick.rb:13:in `run'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.2.1/lib/rack/server.rb:213:in `start'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/railties-3.0.0/lib/rails/commands/server.rb:65:in `start'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/railties-3.0.0/lib/rails/commands.rb:30
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/railties-3.0.0/lib/rails/commands.rb:27:in `tap'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/railties-3.0.0/lib/rails/commands.rb:27
+script/rails:6:in `require'
+script/rails:6
+Rendered projects/manage.html.erb within layouts/application (1.3ms)
+Completed   in 128ms
+
+ActionView::Template::Error (compile error
+/Users/denniss/Sites/rottencucumber/app/views/projects/manage.html.erb:35: syntax error, unexpected kENSURE, expecting $end):
+    32: 			
+    33: 			<%= submit_tag "Add Task to This Project" %> 
+    34: <% 	end %>
+  app/views/projects/manage.html.erb:35:in `compile'
+
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  [1m[35mTask Load (0.3ms)[0m  SELECT `tasks`.* FROM `tasks` WHERE (`tasks`.project_id = 1)
+  [1m[36mGroup Load (0.2ms)[0m  [1mSELECT `groups`.* FROM `groups` WHERE (`groups`.organization_id = 2)[0m
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (13.9ms)
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (20.6ms)
+
+
+Started GET "/projects/manage/1" for 127.0.0.1 at Mon Nov 01 13:32:00 -0700 2010
+  Processing by ProjectsController#manage as HTML
+  Parameters: {"id"=>"1"}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[35mSQL (0.9ms)[0m  BEGIN
+  [1m[36mSQL (1.5ms)[0m  [1mINSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-01 20:32:00', '127.0.0.1', '2010-11-01 20:32:00', '/projects/manage/1')[0m
+  [1m[35mSQL (0.1ms)[0m  COMMIT
+  [1m[36mUser Load (1.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1
+  [1m[36mProject Load (1.1ms)[0m  [1mSELECT `projects`.* FROM `projects` WHERE (`projects`.`id` = 1) LIMIT 1[0m
+  [1m[35mOrganization Load (0.6ms)[0m  SELECT `organizations`.* FROM `organizations` WHERE (`organizations`.`id` = 2) LIMIT 1
+ERROR: compiling _app_views_projects_manage_html_erb__374683377_2203162820_0 RAISED compile error
+/Users/denniss/Sites/rottencucumber/app/views/projects/manage.html.erb:35: syntax error, unexpected kENSURE, expecting $end
+Function body:           def _app_views_projects_manage_html_erb__374683377_2203162820_0(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "projects/manage";_old_output_buffer = @output_buffer;;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.safe_concat('<h1>');@output_buffer.append= ( @project.name );@output_buffer.safe_concat('</h1>
+
+<b>Project description</b><br> 
+');@output_buffer.append= ( @project.description );@output_buffer.safe_concat('<br/><br/>
+
+
+<b>Tasks</b><br/>
+'); if @tasks.empty? 
+@output_buffer.safe_concat('	There is no task assigned to this project right now<br/>
+'); else 
+@output_buffer.append_if_string= 	 @tasks.each do |task| 
+@output_buffer.safe_concat('		');@output_buffer.append= ( task.name );@output_buffer.safe_concat(' <br/>
+');	 end 
+ end
+@output_buffer.safe_concat('
+'); form_for :task, @task, :url => 'projects/manage'
+@output_buffer.safe_concat('			');@output_buffer.append= ( f.label "Name:" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('			');@output_buffer.append= ( f.text_field :name );@output_buffer.safe_concat('<br/> 
+			');@output_buffer.append= ( f.label "Description:" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('			');@output_buffer.append= ( f.text_area :description, :size => "60x12" );@output_buffer.safe_concat(' <br/>
+			');@output_buffer.append= ( f.label "Assign to group:" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('
+');			 groups_array = @groups.map { |group| [group.name, group.id ]} 
+@output_buffer.safe_concat('			
+			');@output_buffer.append= ( hidden_field(:org, :id) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('			
+');			 if !groups_array.empty? 
+@output_buffer.safe_concat('				');@output_buffer.append= ( options_for_select(groups_array) );@output_buffer.safe_concat(' <br/>
+');			 else 
+@output_buffer.safe_concat('				');@output_buffer.append= ( "You have not created any group yet.");@output_buffer.safe_concat(' <br/>
+');			 end 
+@output_buffer.safe_concat('			
+			');@output_buffer.append= ( submit_tag "Add Task to This Project" );@output_buffer.safe_concat(' 
+'); 	end ;@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /Users/denniss/Sites/rottencucumber/app/views/projects/manage.html.erb:35:in `compile'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_view/template.rb:134:in `render'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-3.0.0/lib/active_support/notifications.rb:54:in `instrument'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_view/template.rb:127:in `render'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_view/render/rendering.rb:59:in `_render_template'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-3.0.0/lib/active_support/notifications.rb:52:in `instrument'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-3.0.0/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-3.0.0/lib/active_support/notifications.rb:52:in `instrument'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_view/render/rendering.rb:56:in `_render_template'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_view/render/rendering.rb:26:in `render'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:114:in `_render_template'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:108:in `render_to_body'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:101:in `render_to_string'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:92:in `render'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_controller/metal/rendering.rb:17:in `render'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-3.0.0/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/Users/denniss/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-3.0.0/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activerecord-3.0.0/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/abstract_controller/base.rb:150:in `process_action'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/abstract_controller/callbacks.rb:18:in `process_action'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:450:in `_run__46567664__process_action__1584038780__callbacks'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:409:in `send'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:409:in `_run_process_action_callbacks'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:93:in `send'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:93:in `run_callbacks'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-3.0.0/lib/active_support/notifications.rb:52:in `instrument'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-3.0.0/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-3.0.0/lib/active_support/notifications.rb:52:in `instrument'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/abstract_controller/base.rb:119:in `process'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:40:in `process'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_controller/metal.rb:133:in `dispatch'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_controller/metal.rb:173:in `action'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:148:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:93:in `recognize'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:75:in `optimized_each'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:92:in `recognize'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:139:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/routing/route_set.rb:492:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/head.rb:14:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.2.1/lib/rack/methodoverride.rb:24:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/cookies.rb:287:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activerecord-3.0.0/lib/active_record/query_cache.rb:32:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activerecord-3.0.0/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activerecord-3.0.0/lib/active_record/query_cache.rb:12:in `cache'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activerecord-3.0.0/lib/active_record/query_cache.rb:31:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activerecord-3.0.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:355:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/callbacks.rb:46:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.2.1/lib/rack/sendfile.rb:107:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/show_exceptions.rb:46:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/railties-3.0.0/lib/rails/rack/logger.rb:13:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.2.1/lib/rack/runtime.rb:17:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-3.0.0/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.2.1/lib/rack/lock.rb:11:in `synchronize'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/static.rb:30:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/railties-3.0.0/lib/rails/application.rb:168:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/railties-3.0.0/lib/rails/application.rb:77:in `send'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/railties-3.0.0/lib/rails/application.rb:77:in `method_missing'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/railties-3.0.0/lib/rails/rack/log_tailer.rb:14:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.2.1/lib/rack/content_length.rb:13:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.2.1/lib/rack/handler/webrick.rb:52:in `service'
+/Users/denniss/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/Users/denniss/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/Users/denniss/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/Users/denniss/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/Users/denniss/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/Users/denniss/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/Users/denniss/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/Users/denniss/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/Users/denniss/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/Users/denniss/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.2.1/lib/rack/handler/webrick.rb:13:in `run'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.2.1/lib/rack/server.rb:213:in `start'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/railties-3.0.0/lib/rails/commands/server.rb:65:in `start'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/railties-3.0.0/lib/rails/commands.rb:30
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/railties-3.0.0/lib/rails/commands.rb:27:in `tap'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/railties-3.0.0/lib/rails/commands.rb:27
+script/rails:6:in `require'
+script/rails:6
+Rendered projects/manage.html.erb within layouts/application (1.5ms)
+Completed   in 151ms
+
+ActionView::Template::Error (compile error
+/Users/denniss/Sites/rottencucumber/app/views/projects/manage.html.erb:35: syntax error, unexpected kENSURE, expecting $end):
+    32: 			
+    33: 			<%= submit_tag "Add Task to This Project" %> 
+    34: <% 	end %>
+  app/views/projects/manage.html.erb:35:in `compile'
+
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  [1m[36mTask Load (0.3ms)[0m  [1mSELECT `tasks`.* FROM `tasks` WHERE (`tasks`.project_id = 1)[0m
+  [1m[35mGroup Load (0.2ms)[0m  SELECT `groups`.* FROM `groups` WHERE (`groups`.organization_id = 2)
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (14.2ms)
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (20.2ms)
+
+
+Started GET "/projects/manage/1" for 127.0.0.1 at Mon Nov 01 13:32:21 -0700 2010
+  Processing by ProjectsController#manage as HTML
+  Parameters: {"id"=>"1"}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-01 20:32:21', '127.0.0.1', '2010-11-01 20:32:21', '/projects/manage/1')
+  [1m[36mSQL (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+  [1m[35mProject Load (0.2ms)[0m  SELECT `projects`.* FROM `projects` WHERE (`projects`.`id` = 1) LIMIT 1
+  [1m[36mOrganization Load (0.7ms)[0m  [1mSELECT `organizations`.* FROM `organizations` WHERE (`organizations`.`id` = 2) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM `tasks` WHERE (`tasks`.project_id = 1)) AS subquery
+DEPRECATION WARNING: Using form_for(:name, @resource) is deprecated. Please use form_for(@resource, :as => :name) instead. (called from _app_views_projects_manage_html_erb__374683377_2203462600_0 at /Users/denniss/Sites/rottencucumber/app/views/projects/manage.html.erb:16)
+  [1m[36mGroup Load (0.3ms)[0m  [1mSELECT `groups`.* FROM `groups` WHERE (`groups`.organization_id = 2)[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_projects_manage_html_erb__374683377_2203462600_0 at /Users/denniss/Sites/rottencucumber/app/views/projects/manage.html.erb:16)
+Rendered layouts/_header.html.erb (4.5ms)
+Rendered projects/manage.html.erb within layouts/application (22.0ms)
+Completed 200 OK in 150ms (Views: 26.1ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/projects/manage/1" for 127.0.0.1 at Mon Nov 01 13:32:50 -0700 2010
+  Processing by ProjectsController#manage as HTML
+  Parameters: {"id"=>"1"}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-01 20:32:50', '127.0.0.1', '2010-11-01 20:32:50', '/projects/manage/1')[0m
+  [1m[35mSQL (0.1ms)[0m  COMMIT
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT `projects`.* FROM `projects` WHERE (`projects`.`id` = 1) LIMIT 1[0m
+  [1m[35mOrganization Load (0.8ms)[0m  SELECT `organizations`.* FROM `organizations` WHERE (`organizations`.`id` = 2) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM `tasks` WHERE (`tasks`.project_id = 1)) AS subquery[0m
+DEPRECATION WARNING: Using form_for(:name, @resource) is deprecated. Please use form_for(@resource, :as => :name) instead. (called from _app_views_projects_manage_html_erb__374683377_2203552040_0 at /Users/denniss/Sites/rottencucumber/app/views/projects/manage.html.erb:17)
+  [1m[35mGroup Load (0.3ms)[0m  SELECT `groups`.* FROM `groups` WHERE (`groups`.organization_id = 2)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_projects_manage_html_erb__374683377_2203552040_0 at /Users/denniss/Sites/rottencucumber/app/views/projects/manage.html.erb:17)
+Rendered layouts/_header.html.erb (4.2ms)
+Rendered projects/manage.html.erb within layouts/application (21.3ms)
+Completed 200 OK in 157ms (Views: 25.5ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/projects/manage/1" for 127.0.0.1 at Mon Nov 01 13:33:12 -0700 2010
+  Processing by ProjectsController#manage as HTML
+  Parameters: {"id"=>"1"}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[36mSQL (222.9ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-01 20:33:12', '127.0.0.1', '2010-11-01 20:33:12', '/projects/manage/1')
+  [1m[36mSQL (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+  [1m[35mProject Load (0.2ms)[0m  SELECT `projects`.* FROM `projects` WHERE (`projects`.`id` = 1) LIMIT 1
+  [1m[36mOrganization Load (211.9ms)[0m  [1mSELECT `organizations`.* FROM `organizations` WHERE (`organizations`.`id` = 2) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM `tasks` WHERE (`tasks`.project_id = 1)) AS subquery
+DEPRECATION WARNING: Using form_for(:name, @resource) is deprecated. Please use form_for(@resource, :as => :name) instead. (called from _app_views_projects_manage_html_erb__374683377_2203443440_0 at /Users/denniss/Sites/rottencucumber/app/views/projects/manage.html.erb:18)
+  [1m[36mGroup Load (0.3ms)[0m  [1mSELECT `groups`.* FROM `groups` WHERE (`groups`.organization_id = 2)[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_projects_manage_html_erb__374683377_2203443440_0 at /Users/denniss/Sites/rottencucumber/app/views/projects/manage.html.erb:18)
+Rendered layouts/_header.html.erb (4.9ms)
+Rendered projects/manage.html.erb within layouts/application (23.0ms)
+Completed 200 OK in 584ms (Views: 27.1ms | ActiveRecord: 436.3ms)
+
+
+Started GET "/projects/manage/1" for 127.0.0.1 at Mon Nov 01 13:33:34 -0700 2010
+  Processing by ProjectsController#manage as HTML
+  Parameters: {"id"=>"1"}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-01 20:33:35', '127.0.0.1', '2010-11-01 20:33:35', '/projects/manage/1')[0m
+  [1m[35mSQL (0.1ms)[0m  COMMIT
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT `projects`.* FROM `projects` WHERE (`projects`.`id` = 1) LIMIT 1[0m
+  [1m[35mOrganization Load (0.3ms)[0m  SELECT `organizations`.* FROM `organizations` WHERE (`organizations`.`id` = 2) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM `tasks` WHERE (`tasks`.project_id = 1)) AS subquery[0m
+DEPRECATION WARNING: Using form_for(:name, @resource) is deprecated. Please use form_for(@resource, :as => :name) instead. (called from _app_views_projects_manage_html_erb__374683377_2203115320_0 at /Users/denniss/Sites/rottencucumber/app/views/projects/manage.html.erb:18)
+  [1m[35mGroup Load (0.3ms)[0m  SELECT `groups`.* FROM `groups` WHERE (`groups`.organization_id = 2)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_projects_manage_html_erb__374683377_2203115320_0 at /Users/denniss/Sites/rottencucumber/app/views/projects/manage.html.erb:18)
+Rendered layouts/_header.html.erb (4.3ms)
+Rendered projects/manage.html.erb within layouts/application (21.2ms)
+Completed 200 OK in 566ms (Views: 25.8ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/projects/manage/1" for 127.0.0.1 at Mon Nov 01 13:33:38 -0700 2010
+  Processing by ProjectsController#manage as HTML
+  Parameters: {"id"=>"1"}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-01 20:33:38', '127.0.0.1', '2010-11-01 20:33:38', '/projects/manage/1')
+  [1m[36mSQL (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+  [1m[35mProject Load (0.2ms)[0m  SELECT `projects`.* FROM `projects` WHERE (`projects`.`id` = 1) LIMIT 1
+  [1m[36mOrganization Load (224.0ms)[0m  [1mSELECT `organizations`.* FROM `organizations` WHERE (`organizations`.`id` = 2) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM `tasks` WHERE (`tasks`.project_id = 1)) AS subquery
+DEPRECATION WARNING: Using form_for(:name, @resource) is deprecated. Please use form_for(@resource, :as => :name) instead. (called from _app_views_projects_manage_html_erb__374683377_2203150120_0 at /Users/denniss/Sites/rottencucumber/app/views/projects/manage.html.erb:18)
+  [1m[36mGroup Load (0.3ms)[0m  [1mSELECT `groups`.* FROM `groups` WHERE (`groups`.organization_id = 2)[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_projects_manage_html_erb__374683377_2203150120_0 at /Users/denniss/Sites/rottencucumber/app/views/projects/manage.html.erb:18)
+Rendered layouts/_header.html.erb (127.7ms)
+Rendered projects/manage.html.erb within layouts/application (144.6ms)
+Completed 200 OK in 779ms (Views: 148.9ms | ActiveRecord: 225.4ms)
+
+
+Started GET "/projects/manage/1" for 127.0.0.1 at Mon Nov 01 13:33:44 -0700 2010
+  Processing by ProjectsController#manage as HTML
+  Parameters: {"id"=>"1"}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-01 20:33:45', '127.0.0.1', '2010-11-01 20:33:45', '/projects/manage/1')[0m
+  [1m[35mSQL (0.1ms)[0m  COMMIT
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT `projects`.* FROM `projects` WHERE (`projects`.`id` = 1) LIMIT 1[0m
+  [1m[35mOrganization Load (0.8ms)[0m  SELECT `organizations`.* FROM `organizations` WHERE (`organizations`.`id` = 2) LIMIT 1
+  [1m[36mSQL (192.0ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM `tasks` WHERE (`tasks`.project_id = 1)) AS subquery[0m
+DEPRECATION WARNING: Using form_for(:name, @resource) is deprecated. Please use form_for(@resource, :as => :name) instead. (called from _app_views_projects_manage_html_erb__374683377_2203061880_0 at /Users/denniss/Sites/rottencucumber/app/views/projects/manage.html.erb:18)
+  [1m[35mGroup Load (0.2ms)[0m  SELECT `groups`.* FROM `groups` WHERE (`groups`.organization_id = 2)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_projects_manage_html_erb__374683377_2203061880_0 at /Users/denniss/Sites/rottencucumber/app/views/projects/manage.html.erb:18)
+Rendered layouts/_header.html.erb (5.3ms)
+Rendered projects/manage.html.erb within layouts/application (342.5ms)
+Completed 200 OK in 688ms (Views: 154.8ms | ActiveRecord: 194.3ms)
+
+
+Started GET "/projects/manage/1" for 127.0.0.1 at Mon Nov 01 13:34:02 -0700 2010
+  Processing by ProjectsController#manage as HTML
+  Parameters: {"id"=>"1"}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-01 20:34:02', '127.0.0.1', '2010-11-01 20:34:02', '/projects/manage/1')
+  [1m[36mSQL (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+  [1m[35mProject Load (0.2ms)[0m  SELECT `projects`.* FROM `projects` WHERE (`projects`.`id` = 1) LIMIT 1
+  [1m[36mOrganization Load (0.6ms)[0m  [1mSELECT `organizations`.* FROM `organizations` WHERE (`organizations`.`id` = 2) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM `tasks` WHERE (`tasks`.project_id = 1)) AS subquery
+DEPRECATION WARNING: Using form_for(:name, @resource) is deprecated. Please use form_for(@resource, :as => :name) instead. (called from _app_views_projects_manage_html_erb__374683377_2202986100_0 at /Users/denniss/Sites/rottencucumber/app/views/projects/manage.html.erb:18)
+  [1m[36mGroup Load (0.3ms)[0m  [1mSELECT `groups`.* FROM `groups` WHERE (`groups`.organization_id = 2)[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_projects_manage_html_erb__374683377_2202986100_0 at /Users/denniss/Sites/rottencucumber/app/views/projects/manage.html.erb:18)
+Rendered layouts/_header.html.erb (4.9ms)
+Rendered projects/manage.html.erb within layouts/application (136.8ms)
+Completed 200 OK in 261ms (Views: 141.7ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/projects/manage/1" for 127.0.0.1 at Mon Nov 01 13:34:17 -0700 2010
+  Processing by ProjectsController#manage as HTML
+  Parameters: {"id"=>"1"}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-01 20:34:18', '127.0.0.1', '2010-11-01 20:34:18', '/projects/manage/1')[0m
+  [1m[35mSQL (0.1ms)[0m  COMMIT
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT `projects`.* FROM `projects` WHERE (`projects`.`id` = 1) LIMIT 1[0m
+  [1m[35mOrganization Load (0.4ms)[0m  SELECT `organizations`.* FROM `organizations` WHERE (`organizations`.`id` = 2) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM `tasks` WHERE (`tasks`.project_id = 1)) AS subquery[0m
+DEPRECATION WARNING: Using form_for(:name, @resource) is deprecated. Please use form_for(@resource, :as => :name) instead. (called from _app_views_projects_manage_html_erb__374683377_2205619140_0 at /Users/denniss/Sites/rottencucumber/app/views/projects/manage.html.erb:18)
+  [1m[35mGroup Load (0.3ms)[0m  SELECT `groups`.* FROM `groups` WHERE (`groups`.organization_id = 2)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_projects_manage_html_erb__374683377_2205619140_0 at /Users/denniss/Sites/rottencucumber/app/views/projects/manage.html.erb:18)
+Rendered layouts/_header.html.erb (4.8ms)
+Rendered projects/manage.html.erb within layouts/application (23.8ms)
+Completed 200 OK in 281ms (Views: 27.8ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/projects/manage/1" for 127.0.0.1 at Mon Nov 01 13:56:27 -0700 2010
+  Processing by ProjectsController#manage as HTML
+  Parameters: {"id"=>"1"}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-01 20:56:27', '127.0.0.1', '2010-11-01 20:56:27', '/projects/manage/1')
+  [1m[36mSQL (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+  [1m[35mProject Load (0.2ms)[0m  SELECT `projects`.* FROM `projects` WHERE (`projects`.`id` = 1) LIMIT 1
+  [1m[36mOrganization Load (1.2ms)[0m  [1mSELECT `organizations`.* FROM `organizations` WHERE (`organizations`.`id` = 2) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM `tasks` WHERE (`tasks`.project_id = 1)) AS subquery
+DEPRECATION WARNING: Using form_for(:name, @resource) is deprecated. Please use form_for(@resource, :as => :name) instead. (called from _app_views_projects_manage_html_erb__374683377_2205535160_0 at /Users/denniss/Sites/rottencucumber/app/views/projects/manage.html.erb:18)
+  [1m[36mGroup Load (0.3ms)[0m  [1mSELECT `groups`.* FROM `groups` WHERE (`groups`.organization_id = 2)[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_projects_manage_html_erb__374683377_2205535160_0 at /Users/denniss/Sites/rottencucumber/app/views/projects/manage.html.erb:18)
+Rendered layouts/_header.html.erb (19.8ms)
+Rendered projects/manage.html.erb within layouts/application (39.9ms)
+Completed 200 OK in 406ms (Views: 83.5ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/projects/manage/1" for 127.0.0.1 at Mon Nov 01 14:02:19 -0700 2010
+  Processing by ProjectsController#manage as HTML
+  Parameters: {"id"=>"1"}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[35mSQL (1.3ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-01 21:02:19', '127.0.0.1', '2010-11-01 21:02:19', '/projects/manage/1')[0m
+  [1m[35mSQL (0.1ms)[0m  COMMIT
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT `projects`.* FROM `projects` WHERE (`projects`.`id` = 1) LIMIT 1[0m
+  [1m[35mOrganization Load (0.2ms)[0m  SELECT `organizations`.* FROM `organizations` WHERE (`organizations`.`id` = 2) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM `tasks` WHERE (`tasks`.project_id = 1)) AS subquery[0m
+DEPRECATION WARNING: Using form_for(:name, @resource) is deprecated. Please use form_for(@resource, :as => :name) instead. (called from _app_views_projects_manage_html_erb__374683377_2205457800_0 at /Users/denniss/Sites/rottencucumber/app/views/projects/manage.html.erb:18)
+  [1m[35mGroup Load (0.3ms)[0m  SELECT `groups`.* FROM `groups` WHERE (`groups`.organization_id = 2)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_projects_manage_html_erb__374683377_2205457800_0 at /Users/denniss/Sites/rottencucumber/app/views/projects/manage.html.erb:18)
+Rendered layouts/_header.html.erb (5.3ms)
+Rendered projects/manage.html.erb within layouts/application (27.4ms)
+Completed 200 OK in 290ms (Views: 31.5ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/projects/manage/1" for 127.0.0.1 at Mon Nov 01 14:04:17 -0700 2010
+  Processing by ProjectsController#manage as HTML
+  Parameters: {"id"=>"1"}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (215.7ms)[0m  INSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-01 21:04:17', '127.0.0.1', '2010-11-01 21:04:17', '/projects/manage/1')
+  [1m[36mSQL (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+  [1m[35mProject Load (0.2ms)[0m  SELECT `projects`.* FROM `projects` WHERE (`projects`.`id` = 1) LIMIT 1
+  [1m[36mOrganization Load (0.3ms)[0m  [1mSELECT `organizations`.* FROM `organizations` WHERE (`organizations`.`id` = 2) LIMIT 1[0m
+  [1m[35mSQL (201.5ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM `tasks` WHERE (`tasks`.project_id = 1)) AS subquery
+DEPRECATION WARNING: Using form_for(:name, @resource) is deprecated. Please use form_for(@resource, :as => :name) instead. (called from _app_views_projects_manage_html_erb__374683377_2205232740_0 at /Users/denniss/Sites/rottencucumber/app/views/projects/manage.html.erb:18)
+  [1m[36mGroup Load (0.3ms)[0m  [1mSELECT `groups`.* FROM `groups` WHERE (`groups`.organization_id = 2)[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_projects_manage_html_erb__374683377_2205232740_0 at /Users/denniss/Sites/rottencucumber/app/views/projects/manage.html.erb:18)
+Rendered layouts/_header.html.erb (4.4ms)
+Rendered projects/manage.html.erb within layouts/application (229.9ms)
+Completed 200 OK in 698ms (Views: 32.6ms | ActiveRecord: 418.6ms)
+
+
+Started POST "/projects/manage/projects/manage" for 127.0.0.1 at Mon Nov 01 14:05:47 -0700 2010
+
+ActionController::RoutingError (No route matches "/projects/manage/projects/manage"):
+  
+
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started POST "/projects/manage/projects/manage" for 127.0.0.1 at Mon Nov 01 14:06:12 -0700 2010
+
+ActionController::RoutingError (No route matches "/projects/manage/projects/manage"):
+  
+
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/projects/manage/1" for 127.0.0.1 at Mon Nov 01 14:06:46 -0700 2010
+  Processing by ProjectsController#manage as HTML
+  Parameters: {"id"=>"1"}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-01 21:06:46', '127.0.0.1', '2010-11-01 21:06:46', '/projects/manage/1')[0m
+  [1m[35mSQL (0.1ms)[0m  COMMIT
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1
+  [1m[36mProject Load (0.3ms)[0m  [1mSELECT `projects`.* FROM `projects` WHERE (`projects`.`id` = 1) LIMIT 1[0m
+  [1m[35mOrganization Load (0.3ms)[0m  SELECT `organizations`.* FROM `organizations` WHERE (`organizations`.`id` = 2) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM `tasks` WHERE (`tasks`.project_id = 1)) AS subquery[0m
+DEPRECATION WARNING: Using form_for(:name, @resource) is deprecated. Please use form_for(@resource, :as => :name) instead. (called from _app_views_projects_manage_html_erb__374683377_2204970540_0 at /Users/denniss/Sites/rottencucumber/app/views/projects/manage.html.erb:18)
+  [1m[35mGroup Load (0.2ms)[0m  SELECT `groups`.* FROM `groups` WHERE (`groups`.organization_id = 2)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_projects_manage_html_erb__374683377_2204970540_0 at /Users/denniss/Sites/rottencucumber/app/views/projects/manage.html.erb:18)
+Rendered layouts/_header.html.erb (4.5ms)
+Rendered projects/manage.html.erb within layouts/application (26.8ms)
+Completed 200 OK in 294ms (Views: 30.8ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/projects/manage/1" for 127.0.0.1 at Mon Nov 01 14:06:48 -0700 2010
+  Processing by ProjectsController#manage as HTML
+  Parameters: {"start_date"=>{"month"=>"3", "day"=>"1", "year"=>"2006"}, "commit"=>"Add Task to This Project", "org"=>{"id"=>"2"}, "authenticity_token"=>"On8LUrceZSjxwTHsERUUcXyWDhbolUK9gNzjfVy904U=", "utf8"=>"\342\234\223", "id"=>"1", "task"=>{"name"=>"Buy seed", "point"=>"1", "description"=>"Buy seed at the closest Luckys"}}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-01 21:06:48', '127.0.0.1', '2010-11-01 21:06:48', '/projects/manage/1')
+  [1m[36mSQL (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+  [1m[35mProject Load (0.9ms)[0m  SELECT `projects`.* FROM `projects` WHERE (`projects`.`id` = 1) LIMIT 1
+  [1m[36mOrganization Load (0.2ms)[0m  [1mSELECT `organizations`.* FROM `organizations` WHERE (`organizations`.`id` = 2) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM `tasks` WHERE (`tasks`.project_id = 1)) AS subquery
+DEPRECATION WARNING: Using form_for(:name, @resource) is deprecated. Please use form_for(@resource, :as => :name) instead. (called from _app_views_projects_manage_html_erb__374683377_2204877440_0 at /Users/denniss/Sites/rottencucumber/app/views/projects/manage.html.erb:18)
+  [1m[36mGroup Load (0.3ms)[0m  [1mSELECT `groups`.* FROM `groups` WHERE (`groups`.organization_id = 2)[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_projects_manage_html_erb__374683377_2204877440_0 at /Users/denniss/Sites/rottencucumber/app/views/projects/manage.html.erb:18)
+Rendered layouts/_header.html.erb (4.3ms)
+Rendered projects/manage.html.erb within layouts/application (24.8ms)
+Completed 200 OK in 291ms (Views: 28.9ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/projects/manage/1" for 127.0.0.1 at Mon Nov 01 14:22:35 -0700 2010
+  Processing by ProjectsController#manage as HTML
+  Parameters: {"start_date"=>{"month"=>"3", "day"=>"1", "year"=>"2006"}, "commit"=>"Add Task to This Project", "org"=>{"id"=>"2"}, "authenticity_token"=>"On8LUrceZSjxwTHsERUUcXyWDhbolUK9gNzjfVy904U=", "utf8"=>"\342\234\223", "id"=>"1", "task"=>{"name"=>"Buy seed", "point"=>"1", "description"=>"Buy seed at the closest Luckys"}}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (21.2ms)[0m  [1mINSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-01 21:22:35', '127.0.0.1', '2010-11-01 21:22:35', '/projects/manage/1')[0m
+  [1m[35mSQL (0.2ms)[0m  COMMIT
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT `projects`.* FROM `projects` WHERE (`projects`.`id` = 1) LIMIT 1[0m
+  [1m[35mOrganization Load (0.7ms)[0m  SELECT `organizations`.* FROM `organizations` WHERE (`organizations`.`id` = 2) LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM `tasks` WHERE (`tasks`.project_id = 1)) AS subquery[0m
+DEPRECATION WARNING: Using form_for(:name, @resource) is deprecated. Please use form_for(@resource, :as => :name) instead. (called from _app_views_projects_manage_html_erb__374683377_2204809800_0 at /Users/denniss/Sites/rottencucumber/app/views/projects/manage.html.erb:18)
+  [1m[35mGroup Load (0.3ms)[0m  SELECT `groups`.* FROM `groups` WHERE (`groups`.organization_id = 2)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_projects_manage_html_erb__374683377_2204809800_0 at /Users/denniss/Sites/rottencucumber/app/views/projects/manage.html.erb:18)
+Rendered layouts/_header.html.erb (7.0ms)
+Rendered projects/manage.html.erb within layouts/application (29.4ms)
+Completed 200 OK in 374ms (Views: 47.3ms | ActiveRecord: 24.3ms)
+
+
+Started POST "/projects/manage/1" for 127.0.0.1 at Mon Nov 01 14:23:05 -0700 2010
+  Processing by ProjectsController#manage as HTML
+  Parameters: {"start_date"=>{"month"=>"11", "day"=>"12", "year"=>"2010"}, "commit"=>"Add Task to This Project", "org"=>{"id"=>"2"}, "authenticity_token"=>"On8LUrceZSjxwTHsERUUcXyWDhbolUK9gNzjfVy904U=", "utf8"=>"\342\234\223", "id"=>"1", "task"=>{"name"=>"Buy Banana seed", "point"=>"1", "description"=>"Buy the cheapest seed available"}}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-01 21:23:05', '127.0.0.1', '2010-11-01 21:23:05', '/projects/manage/1')
+  [1m[36mSQL (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+  [1m[35mProject Load (0.2ms)[0m  SELECT `projects`.* FROM `projects` WHERE (`projects`.`id` = 1) LIMIT 1
+  [1m[36mOrganization Load (0.2ms)[0m  [1mSELECT `organizations`.* FROM `organizations` WHERE (`organizations`.`id` = 2) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM `tasks` WHERE (`tasks`.project_id = 1)) AS subquery
+DEPRECATION WARNING: Using form_for(:name, @resource) is deprecated. Please use form_for(@resource, :as => :name) instead. (called from _app_views_projects_manage_html_erb__374683377_2204592080_0 at /Users/denniss/Sites/rottencucumber/app/views/projects/manage.html.erb:18)
+  [1m[36mGroup Load (0.3ms)[0m  [1mSELECT `groups`.* FROM `groups` WHERE (`groups`.organization_id = 2)[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_projects_manage_html_erb__374683377_2204592080_0 at /Users/denniss/Sites/rottencucumber/app/views/projects/manage.html.erb:18)
+Rendered layouts/_header.html.erb (4.4ms)
+Rendered projects/manage.html.erb within layouts/application (26.5ms)
+Completed 200 OK in 278ms (Views: 30.6ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/projects/manage/1" for 127.0.0.1 at Mon Nov 01 14:23:50 -0700 2010
+  Processing by ProjectsController#manage as HTML
+  Parameters: {"start_date"=>{"month"=>"11", "day"=>"12", "year"=>"2010"}, "commit"=>"Add Task to This Project", "org"=>{"id"=>"2"}, "authenticity_token"=>"On8LUrceZSjxwTHsERUUcXyWDhbolUK9gNzjfVy904U=", "utf8"=>"\342\234\223", "id"=>"1", "task"=>{"name"=>"Buy Banana seed", "point"=>"1", "description"=>"Buy the cheapest seed available"}}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[35mSQL (1.0ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-01 21:23:50', '127.0.0.1', '2010-11-01 21:23:50', '/projects/manage/1')[0m
+  [1m[35mSQL (0.1ms)[0m  COMMIT
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT `projects`.* FROM `projects` WHERE (`projects`.`id` = 1) LIMIT 1[0m
+  [1m[35mOrganization Load (0.2ms)[0m  SELECT `organizations`.* FROM `organizations` WHERE (`organizations`.`id` = 2) LIMIT 1
+Completed   in 358ms
+
+ArgumentError (comparison of String with 0 failed):
+  app/controllers/projects_controller.rb:51:in `manage'
+
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  [1m[36mGroup Load (0.3ms)[0m  [1mSELECT `groups`.* FROM `groups` WHERE (`groups`.organization_id = 2)[0m
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (13.0ms)
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (18.4ms)
+
+
+Started POST "/projects/manage/1" for 127.0.0.1 at Mon Nov 01 14:24:25 -0700 2010
+  Processing by ProjectsController#manage as HTML
+  Parameters: {"start_date"=>{"month"=>"11", "day"=>"12", "year"=>"2010"}, "commit"=>"Add Task to This Project", "org"=>{"id"=>"2"}, "authenticity_token"=>"On8LUrceZSjxwTHsERUUcXyWDhbolUK9gNzjfVy904U=", "utf8"=>"\342\234\223", "id"=>"1", "task"=>{"name"=>"Buy Banana seed", "point"=>"1", "description"=>"Buy the cheapest seed available"}}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-01 21:24:25', '127.0.0.1', '2010-11-01 21:24:25', '/projects/manage/1')[0m
+  [1m[35mSQL (0.1ms)[0m  COMMIT
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT `projects`.* FROM `projects` WHERE (`projects`.`id` = 1) LIMIT 1[0m
+  [1m[35mOrganization Load (0.2ms)[0m  SELECT `organizations`.* FROM `organizations` WHERE (`organizations`.`id` = 2) LIMIT 1
+Completed   in 242ms
+
+NoMethodError (undefined method `due_date=' for #<Task:0x106d80a98>):
+  app/controllers/projects_controller.rb:51:in `manage'
+
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  [1m[36mGroup Load (0.2ms)[0m  [1mSELECT `groups`.* FROM `groups` WHERE (`groups`.organization_id = 2)[0m
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (12.8ms)
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (18.0ms)
+
+
+Started POST "/projects/manage/1" for 127.0.0.1 at Mon Nov 01 14:24:40 -0700 2010
+  Processing by ProjectsController#manage as HTML
+  Parameters: {"start_date"=>{"month"=>"11", "day"=>"12", "year"=>"2010"}, "commit"=>"Add Task to This Project", "org"=>{"id"=>"2"}, "authenticity_token"=>"On8LUrceZSjxwTHsERUUcXyWDhbolUK9gNzjfVy904U=", "utf8"=>"\342\234\223", "id"=>"1", "task"=>{"name"=>"Buy Banana seed", "point"=>"1", "description"=>"Buy the cheapest seed available"}}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-01 21:24:40', '127.0.0.1', '2010-11-01 21:24:40', '/projects/manage/1')[0m
+  [1m[35mSQL (0.1ms)[0m  COMMIT
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1
+  [1m[36mProject Load (0.9ms)[0m  [1mSELECT `projects`.* FROM `projects` WHERE (`projects`.`id` = 1) LIMIT 1[0m
+  [1m[35mOrganization Load (1.0ms)[0m  SELECT `organizations`.* FROM `organizations` WHERE (`organizations`.`id` = 2) LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (2.4ms)[0m  describe `tasks`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `tasks` (`created_at`, `description`, `due`, `group_id`, `name`, `point`, `project_id`, `updated_at`) VALUES ('2010-11-01 21:24:41', 'Buy the cheapest seed available', '2010-11-12 08:00:00', NULL, 'Buy Banana seed', 1, 1, '2010-11-01 21:24:41')[0m
+  [1m[35mSQL (0.1ms)[0m  COMMIT
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM `tasks` WHERE (`tasks`.project_id = 1)) AS subquery[0m
+  [1m[35mTask Load (0.2ms)[0m  SELECT `tasks`.* FROM `tasks` WHERE (`tasks`.project_id = 1)
+DEPRECATION WARNING: Using form_for(:name, @resource) is deprecated. Please use form_for(@resource, :as => :name) instead. (called from _app_views_projects_manage_html_erb__374683377_2204833540_0 at /Users/denniss/Sites/rottencucumber/app/views/projects/manage.html.erb:18)
+  [1m[36mGroup Load (0.3ms)[0m  [1mSELECT `groups`.* FROM `groups` WHERE (`groups`.organization_id = 2)[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_projects_manage_html_erb__374683377_2204833540_0 at /Users/denniss/Sites/rottencucumber/app/views/projects/manage.html.erb:18)
+Rendered layouts/_header.html.erb (4.2ms)
+Rendered projects/manage.html.erb within layouts/application (20.3ms)
+Completed 200 OK in 645ms (Views: 24.5ms | ActiveRecord: 8.3ms)
+
+
+Started POST "/projects/manage/1" for 127.0.0.1 at Mon Nov 01 14:25:32 -0700 2010
+  Processing by ProjectsController#manage as HTML
+  Parameters: {"start_date"=>{"month"=>"11", "day"=>"28", "year"=>"2010"}, "commit"=>"Add Task to This Project", "org"=>{"id"=>"2"}, "authenticity_token"=>"On8LUrceZSjxwTHsERUUcXyWDhbolUK9gNzjfVy904U=", "utf8"=>"\342\234\223", "id"=>"1", "task"=>{"name"=>"Plant Banana seed", "point"=>"2", "description"=>"Plant the seed and set it next to my house"}}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-01 21:25:32', '127.0.0.1', '2010-11-01 21:25:32', '/projects/manage/1')[0m
+  [1m[35mSQL (0.2ms)[0m  COMMIT
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT `projects`.* FROM `projects` WHERE (`projects`.`id` = 1) LIMIT 1[0m
+  [1m[35mOrganization Load (0.2ms)[0m  SELECT `organizations`.* FROM `organizations` WHERE (`organizations`.`id` = 2) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `tasks` (`created_at`, `description`, `due`, `group_id`, `name`, `point`, `project_id`, `updated_at`) VALUES ('2010-11-01 21:25:32', 'Plant the seed and set it next to my house', '2010-11-28 08:00:00', NULL, 'Plant Banana seed', 2, 1, '2010-11-01 21:25:32')
+  [1m[36mSQL (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mSQL (1.1ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM `tasks` WHERE (`tasks`.project_id = 1)) AS subquery
+  [1m[36mTask Load (0.3ms)[0m  [1mSELECT `tasks`.* FROM `tasks` WHERE (`tasks`.project_id = 1)[0m
+DEPRECATION WARNING: Using form_for(:name, @resource) is deprecated. Please use form_for(@resource, :as => :name) instead. (called from _app_views_projects_manage_html_erb__374683377_2204724020_0 at /Users/denniss/Sites/rottencucumber/app/views/projects/manage.html.erb:18)
+  [1m[35mGroup Load (0.3ms)[0m  SELECT `groups`.* FROM `groups` WHERE (`groups`.organization_id = 2)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_projects_manage_html_erb__374683377_2204724020_0 at /Users/denniss/Sites/rottencucumber/app/views/projects/manage.html.erb:18)
+Rendered layouts/_header.html.erb (4.3ms)
+Rendered projects/manage.html.erb within layouts/application (23.9ms)
+Completed 200 OK in 294ms (Views: 28.4ms | ActiveRecord: 3.4ms)

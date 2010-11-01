@@ -6,15 +6,7 @@
 	<%= f.text_field :name %><br/> 
 	<%= f.label "Description:" %>
 	<%= f.text_area :description, :size => "60x12" %> <br/>
-	<%= f.label "Assign to group:" %>
-	
-	<% groups_array = @groups.map { |group| [group.name, group.id ]}%>
-	<%= hidden_field(:org, :id) %>
-	<% if !groups_array.empty? %>
-		<%= options_for_select(groups_array) %> <br/>
-	<% else %>
-		<%= "You have not created any group yet."%> <br/>
-	<% end %>
+
 	
 	<% #Ideally we should have a field that pops up everytime add task is pressed %>
 	<%= submit_tag "Create Project" %> 

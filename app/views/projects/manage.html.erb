@@ -1,0 +1,41 @@
+<h1><%= @project.name %></h1>
+
+<b>Project description</b><br> 
+<%= @project.description %><br/><br/>
+
+
+<b>Tasks</b><br/>
+<% if @tasks.empty? %>
+	There is no task assigned to this project right now<br/><br/>
+<% else %>
+	<% @tasks.each do |task| %>
+		<%= task.name %><br/>
+	<% end %>
+	<br/>
+<% end%>
+
+<b>Create a New Task</b><br/>
+<% form_for :task, @task, :controller => :projects, :action => :manage, :id => @id do |f| %>
+			<%= f.label "Name:" %>
+			<%= f.text_field :name %><br/> 
+			<%= f.label "Description:" %>
+			<%= f.text_field :description %> <br/>
+			<%= f.label "Allocate Point:" %>
+			<%= f.text_field :point %> <br/>
+			<%= f.label "Due Date:" %>
+			<%= select_date Date.today, :prefix => :start_date %>  <br/>
+			
+			<%= f.label "Assign to group:" %>
+
+			<% groups_array = @groups.map { |group| [group.name, group.id ]} %>
+			
+			<%= hidden_field(:org, :id) %>
+			
+			<% if !groups_array.empty? %>
+				<%= options_for_select(groups_array) %> <br/>
+			<% else %>
+				<%= "You have not created any group yet."%> <br/>
+			<% end %>
+			<br/>
+			<%= submit_tag "Add Task to This Project" %> 
+<% 	end %>
