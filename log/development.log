@@ -103,3 +103,506 @@ DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (ca
 Rendered users/_new_user.html.erb (7.9ms)
 Rendered users/new.js.erb (10.0ms)
 Completed 200 OK in 47ms (Views: 12.7ms | ActiveRecord: 0.3ms)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateUsers (20101029194241)
+Migrating to AddFirstNameLastNameToUser (20101029221616)
+Migrating to CreateUserActions (20101030013352)
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("user_actions")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (136.7ms)[0m  CREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB
+  [1m[36mSQL (30.6ms)[0m  [1mSHOW KEYS FROM `schema_migrations`[0m
+  [1m[35mSQL (203.7ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.6ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateUsers (20101029194241)
+  [1m[35mSQL (139.1ms)[0m  CREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `email` varchar(255), `crypted_password` varchar(255), `password_salt` varchar(255), `persistence_token` varchar(255), `active` tinyint(1), `perishable_token` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (1.1ms)[0m  [1mdescribe `schema_migrations`[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20101029194241')
+Migrating to AddFirstNameLastNameToUser (20101029221616)
+  [1m[36mSQL (124.3ms)[0m  [1mALTER TABLE `users` ADD `first_name` varchar(255)[0m
+  [1m[35mSQL (132.1ms)[0m  ALTER TABLE `users` ADD `last_name` varchar(255)
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20101029221616')[0m
+Migrating to CreateUserActions (20101030013352)
+  [1m[35mSQL (80.4ms)[0m  CREATE TABLE `user_actions` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `ip` varchar(255), `url` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20101030013352')[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (1.0ms)[0m  [1mdescribe `user_actions`[0m
+  [1m[35mSQL (0.2ms)[0m  SHOW KEYS FROM `user_actions`
+  [1m[36mSQL (1.7ms)[0m  [1mdescribe `users`[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW KEYS FROM `users`
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateUsers (20101029194241)
+Migrating to AddFirstNameLastNameToUser (20101029221616)
+Migrating to CreateUserActions (20101030013352)
+Migrating to CreateGroups (20101031235354)
+  [1m[35mSQL (60.5ms)[0m  CREATE TABLE `groups` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (1.8ms)[0m  [1mdescribe `schema_migrations`[0m
+  [1m[35mSQL (1.8ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20101031235354')
+Migrating to CreateOrganizations (20101031235423)
+  [1m[36mSQL (170.8ms)[0m  [1mCREATE TABLE `organizations` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20101031235423')
+Migrating to CreateTasks (20101031235503)
+  [1m[36mSQL (160.6ms)[0m  [1mCREATE TABLE `tasks` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` text, `due` datetime, `point` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20101031235503')
+Migrating to CreateProjects (20101101001621)
+  [1m[36mSQL (191.4ms)[0m  [1mCREATE TABLE `projects` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20101101001621')
+Migrating to CreateProjectTasks (20101101001915)
+  [1m[36mSQL (104.8ms)[0m  [1mCREATE TABLE `project_tasks` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `project_id` int(11), `task_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20101101001915')
+Migrating to CreateTaskGroups (20101101002139)
+  [1m[36mSQL (170.6ms)[0m  [1mCREATE TABLE `task_groups` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `group_id` int(11), `task_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20101101002139')
+Migrating to CreateUserGroups (20101101002314)
+  [1m[36mSQL (94.9ms)[0m  [1mCREATE TABLE `user_groups` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11), `group_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20101101002314')
+Migrating to CreateUserOrganizations (20101101003722)
+  [1m[36mSQL (136.6ms)[0m  [1mCREATE TABLE `user_organizations` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `organization_id` int(11), `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20101101003722')
+Migrating to CreateOrganizationProjects (20101101003733)
+  [1m[36mSQL (104.1ms)[0m  [1mCREATE TABLE `organization_projects` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `organization_id` int(11), `project_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20101101003733')
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations`
+  [1m[36mSQL (27.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (1.4ms)[0m  describe `groups`
+  [1m[36mSQL (0.2ms)[0m  [1mSHOW KEYS FROM `groups`[0m
+  [1m[35mSQL (1.6ms)[0m  describe `organization_projects`
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW KEYS FROM `organization_projects`[0m
+  [1m[35mSQL (1.4ms)[0m  describe `organizations`
+  [1m[36mSQL (0.7ms)[0m  [1mSHOW KEYS FROM `organizations`[0m
+  [1m[35mSQL (1.6ms)[0m  describe `project_tasks`
+  [1m[36mSQL (0.2ms)[0m  [1mSHOW KEYS FROM `project_tasks`[0m
+  [1m[35mSQL (1.5ms)[0m  describe `projects`
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW KEYS FROM `projects`[0m
+  [1m[35mSQL (1.5ms)[0m  describe `task_groups`
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW KEYS FROM `task_groups`[0m
+  [1m[35mSQL (134.7ms)[0m  describe `tasks`
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW KEYS FROM `tasks`[0m
+  [1m[35mSQL (1.3ms)[0m  describe `user_actions`
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW KEYS FROM `user_actions`[0m
+  [1m[35mSQL (1.5ms)[0m  describe `user_groups`
+  [1m[36mSQL (0.8ms)[0m  [1mSHOW KEYS FROM `user_groups`[0m
+  [1m[35mSQL (1.6ms)[0m  describe `user_organizations`
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW KEYS FROM `user_organizations`[0m
+  [1m[35mSQL (1.8ms)[0m  describe `users`
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW KEYS FROM `users`[0m
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.9ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (34.1ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateOrganizationProjects (20101101003733)
+  [1m[35mSQL (19.7ms)[0m  DROP TABLE `organization_projects`
+  [1m[36mSQL (6.2ms)[0m  [1mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20101101003733'[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (1.5ms)[0m  [1mdescribe `groups`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW KEYS FROM `groups`
+  [1m[36mSQL (1.6ms)[0m  [1mdescribe `organizations`[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW KEYS FROM `organizations`
+  [1m[36mSQL (1.6ms)[0m  [1mdescribe `project_tasks`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW KEYS FROM `project_tasks`
+  [1m[36mSQL (1.3ms)[0m  [1mdescribe `projects`[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW KEYS FROM `projects`
+  [1m[36mSQL (1.5ms)[0m  [1mdescribe `task_groups`[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW KEYS FROM `task_groups`
+  [1m[36mSQL (1.6ms)[0m  [1mdescribe `tasks`[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW KEYS FROM `tasks`
+  [1m[36mSQL (1.3ms)[0m  [1mdescribe `user_actions`[0m
+  [1m[35mSQL (0.7ms)[0m  SHOW KEYS FROM `user_actions`
+  [1m[36mSQL (1.4ms)[0m  [1mdescribe `user_groups`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW KEYS FROM `user_groups`
+  [1m[36mSQL (1.4ms)[0m  [1mdescribe `user_organizations`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW KEYS FROM `user_organizations`
+  [1m[36mSQL (1.8ms)[0m  [1mdescribe `users`[0m
+  [1m[35mSQL (1.4ms)[0m  SHOW KEYS FROM `users`
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.8ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateUserOrganizations (20101101003722)
+  [1m[35mSQL (1.0ms)[0m  DROP TABLE `user_organizations`
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20101101003722'[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.8ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (1.6ms)[0m  [1mdescribe `groups`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW KEYS FROM `groups`
+  [1m[36mSQL (1.2ms)[0m  [1mdescribe `organizations`[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW KEYS FROM `organizations`
+  [1m[36mSQL (1.5ms)[0m  [1mdescribe `project_tasks`[0m
+  [1m[35mSQL (0.7ms)[0m  SHOW KEYS FROM `project_tasks`
+  [1m[36mSQL (2.7ms)[0m  [1mdescribe `projects`[0m
+  [1m[35mSQL (1.5ms)[0m  SHOW KEYS FROM `projects`
+  [1m[36mSQL (2.0ms)[0m  [1mdescribe `task_groups`[0m
+  [1m[35mSQL (0.8ms)[0m  SHOW KEYS FROM `task_groups`
+  [1m[36mSQL (2.0ms)[0m  [1mdescribe `tasks`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW KEYS FROM `tasks`
+  [1m[36mSQL (1.1ms)[0m  [1mdescribe `user_actions`[0m
+  [1m[35mSQL (0.2ms)[0m  SHOW KEYS FROM `user_actions`
+  [1m[36mSQL (1.6ms)[0m  [1mdescribe `user_groups`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW KEYS FROM `user_groups`
+  [1m[36mSQL (1.8ms)[0m  [1mdescribe `users`[0m
+  [1m[35mSQL (0.2ms)[0m  SHOW KEYS FROM `users`
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateUserGroups (20101101002314)
+  [1m[35mSQL (0.7ms)[0m  DROP TABLE `user_groups`
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20101101002314'[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (1.5ms)[0m  [1mdescribe `groups`[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW KEYS FROM `groups`
+  [1m[36mSQL (1.8ms)[0m  [1mdescribe `organizations`[0m
+  [1m[35mSQL (0.7ms)[0m  SHOW KEYS FROM `organizations`
+  [1m[36mSQL (1.4ms)[0m  [1mdescribe `project_tasks`[0m
+  [1m[35mSQL (0.8ms)[0m  SHOW KEYS FROM `project_tasks`
+  [1m[36mSQL (3.9ms)[0m  [1mdescribe `projects`[0m
+  [1m[35mSQL (0.8ms)[0m  SHOW KEYS FROM `projects`
+  [1m[36mSQL (1.3ms)[0m  [1mdescribe `task_groups`[0m
+  [1m[35mSQL (0.8ms)[0m  SHOW KEYS FROM `task_groups`
+  [1m[36mSQL (2.3ms)[0m  [1mdescribe `tasks`[0m
+  [1m[35mSQL (0.7ms)[0m  SHOW KEYS FROM `tasks`
+  [1m[36mSQL (1.5ms)[0m  [1mdescribe `user_actions`[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW KEYS FROM `user_actions`
+  [1m[36mSQL (1.9ms)[0m  [1mdescribe `users`[0m
+  [1m[35mSQL (0.2ms)[0m  SHOW KEYS FROM `users`
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (1.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateTaskGroups (20101101002139)
+  [1m[35mSQL (1.1ms)[0m  DROP TABLE `task_groups`
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20101101002139'[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (1.5ms)[0m  [1mdescribe `groups`[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW KEYS FROM `groups`
+  [1m[36mSQL (1.7ms)[0m  [1mdescribe `organizations`[0m
+  [1m[35mSQL (0.2ms)[0m  SHOW KEYS FROM `organizations`
+  [1m[36mSQL (1.7ms)[0m  [1mdescribe `project_tasks`[0m
+  [1m[35mSQL (0.2ms)[0m  SHOW KEYS FROM `project_tasks`
+  [1m[36mSQL (1.3ms)[0m  [1mdescribe `projects`[0m
+  [1m[35mSQL (2.6ms)[0m  SHOW KEYS FROM `projects`
+  [1m[36mSQL (1.4ms)[0m  [1mdescribe `tasks`[0m
+  [1m[35mSQL (0.9ms)[0m  SHOW KEYS FROM `tasks`
+  [1m[36mSQL (1.6ms)[0m  [1mdescribe `user_actions`[0m
+  [1m[35mSQL (2.2ms)[0m  SHOW KEYS FROM `user_actions`
+  [1m[36mSQL (1.7ms)[0m  [1mdescribe `users`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW KEYS FROM `users`
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.9ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateProjectTasks (20101101001915)
+  [1m[35mSQL (1.6ms)[0m  DROP TABLE `project_tasks`
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20101101001915'[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (1.5ms)[0m  [1mdescribe `groups`[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW KEYS FROM `groups`
+  [1m[36mSQL (1.6ms)[0m  [1mdescribe `organizations`[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW KEYS FROM `organizations`
+  [1m[36mSQL (1.6ms)[0m  [1mdescribe `projects`[0m
+  [1m[35mSQL (0.8ms)[0m  SHOW KEYS FROM `projects`
+  [1m[36mSQL (1.8ms)[0m  [1mdescribe `tasks`[0m
+  [1m[35mSQL (0.8ms)[0m  SHOW KEYS FROM `tasks`
+  [1m[36mSQL (1.4ms)[0m  [1mdescribe `user_actions`[0m
+  [1m[35mSQL (0.8ms)[0m  SHOW KEYS FROM `user_actions`
+  [1m[36mSQL (1.5ms)[0m  [1mdescribe `users`[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW KEYS FROM `users`
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.9ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateProjects (20101101001621)
+  [1m[35mSQL (0.5ms)[0m  DROP TABLE `projects`
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20101101001621'[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.7ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (1.5ms)[0m  [1mdescribe `groups`[0m
+  [1m[35mSQL (0.2ms)[0m  SHOW KEYS FROM `groups`
+  [1m[36mSQL (1.9ms)[0m  [1mdescribe `organizations`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW KEYS FROM `organizations`
+  [1m[36mSQL (1.7ms)[0m  [1mdescribe `tasks`[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW KEYS FROM `tasks`
+  [1m[36mSQL (3.0ms)[0m  [1mdescribe `user_actions`[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW KEYS FROM `user_actions`
+  [1m[36mSQL (1.6ms)[0m  [1mdescribe `users`[0m
+  [1m[35mSQL (1.3ms)[0m  SHOW KEYS FROM `users`
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.6ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.8ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateTasks (20101031235503)
+  [1m[35mSQL (0.5ms)[0m  DROP TABLE `tasks`
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20101031235503'[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (1.5ms)[0m  [1mdescribe `groups`[0m
+  [1m[35mSQL (0.2ms)[0m  SHOW KEYS FROM `groups`
+  [1m[36mSQL (2.0ms)[0m  [1mdescribe `organizations`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW KEYS FROM `organizations`
+  [1m[36mSQL (1.5ms)[0m  [1mdescribe `user_actions`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW KEYS FROM `user_actions`
+  [1m[36mSQL (1.5ms)[0m  [1mdescribe `users`[0m
+  [1m[35mSQL (2.1ms)[0m  SHOW KEYS FROM `users`
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.6ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.6ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateOrganizations (20101031235423)
+  [1m[35mSQL (120.5ms)[0m  DROP TABLE `organizations`
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20101031235423'[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (1.5ms)[0m  [1mdescribe `groups`[0m
+  [1m[35mSQL (0.2ms)[0m  SHOW KEYS FROM `groups`
+  [1m[36mSQL (1.7ms)[0m  [1mdescribe `user_actions`[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW KEYS FROM `user_actions`
+  [1m[36mSQL (1.8ms)[0m  [1mdescribe `users`[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW KEYS FROM `users`
+  [1m[36mSQL (0.7ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.5ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateGroups (20101031235354)
+  [1m[35mSQL (17.5ms)[0m  DROP TABLE `groups`
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20101031235354'[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.6ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (2.0ms)[0m  [1mdescribe `user_actions`[0m
+  [1m[35mSQL (1.8ms)[0m  SHOW KEYS FROM `user_actions`
+  [1m[36mSQL (1.7ms)[0m  [1mdescribe `users`[0m
+  [1m[35mSQL (0.7ms)[0m  SHOW KEYS FROM `users`
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.9ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateUsers (20101029194241)
+Migrating to AddFirstNameLastNameToUser (20101029221616)
+Migrating to CreateUserActions (20101030013352)
+Migrating to CreateGroups (20101031235354)
+  [1m[35mSQL (62.6ms)[0m  CREATE TABLE `groups` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (0.9ms)[0m  [1mdescribe `schema_migrations`[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20101031235354')
+Migrating to CreateOrganizations (20101031235423)
+  [1m[36mSQL (154.1ms)[0m  [1mCREATE TABLE `organizations` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20101031235423')
+Migrating to CreateTasks (20101031235503)
+  [1m[36mSQL (113.5ms)[0m  [1mCREATE TABLE `tasks` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` text, `due` datetime, `point` int(11), `group_id` int(11), `project_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20101031235503')
+Migrating to CreateProjects (20101101001621)
+  [1m[36mSQL (105.8ms)[0m  [1mCREATE TABLE `projects` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` varchar(255), `organization_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20101101001621')
+Migrating to CreateUserGroups (20101101002314)
+  [1m[36mSQL (104.9ms)[0m  [1mCREATE TABLE `user_groups` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11), `group_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (1.8ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20101101002314')
+Migrating to CreateUserOrganizations (20101101003722)
+  [1m[36mSQL (110.4ms)[0m  [1mCREATE TABLE `user_organizations` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `organization_id` int(11), `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20101101003722')
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (1.0ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations`
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (1.5ms)[0m  describe `groups`
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW KEYS FROM `groups`[0m
+  [1m[35mSQL (1.6ms)[0m  describe `organizations`
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW KEYS FROM `organizations`[0m
+  [1m[35mSQL (1.6ms)[0m  describe `projects`
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW KEYS FROM `projects`[0m
+  [1m[35mSQL (1.6ms)[0m  describe `tasks`
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW KEYS FROM `tasks`[0m
+  [1m[35mSQL (1.5ms)[0m  describe `user_actions`
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW KEYS FROM `user_actions`[0m
+  [1m[35mSQL (1.4ms)[0m  describe `user_groups`
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW KEYS FROM `user_groups`[0m
+  [1m[35mSQL (1.9ms)[0m  describe `user_organizations`
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW KEYS FROM `user_organizations`[0m
+  [1m[35mSQL (1.7ms)[0m  describe `users`
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW KEYS FROM `users`[0m
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.9ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateUserOrganizations (20101101003722)
+  [1m[35mSQL (0.5ms)[0m  DROP TABLE `user_organizations`
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20101101003722'[0m
+  [1m[35mSQL (0.9ms)[0m  SHOW TABLES
+  [1m[36mSQL (1.0ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (1.7ms)[0m  [1mdescribe `groups`[0m
+  [1m[35mSQL (0.2ms)[0m  SHOW KEYS FROM `groups`
+  [1m[36mSQL (1.8ms)[0m  [1mdescribe `organizations`[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW KEYS FROM `organizations`
+  [1m[36mSQL (2.2ms)[0m  [1mdescribe `projects`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW KEYS FROM `projects`
+  [1m[36mSQL (2.0ms)[0m  [1mdescribe `tasks`[0m
+  [1m[35mSQL (1.8ms)[0m  SHOW KEYS FROM `tasks`
+  [1m[36mSQL (2.1ms)[0m  [1mdescribe `user_actions`[0m
+  [1m[35mSQL (0.8ms)[0m  SHOW KEYS FROM `user_actions`
+  [1m[36mSQL (1.5ms)[0m  [1mdescribe `user_groups`[0m
+  [1m[35mSQL (0.9ms)[0m  SHOW KEYS FROM `user_groups`
+  [1m[36mSQL (1.7ms)[0m  [1mdescribe `users`[0m
+  [1m[35mSQL (1.3ms)[0m  SHOW KEYS FROM `users`
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.9ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateUsers (20101029194241)
+Migrating to AddFirstNameLastNameToUser (20101029221616)
+Migrating to CreateUserActions (20101030013352)
+Migrating to CreateGroups (20101031235354)
+Migrating to CreateOrganizations (20101031235423)
+Migrating to CreateTasks (20101031235503)
+Migrating to CreateProjects (20101101001621)
+Migrating to CreateUserGroups (20101101002314)
+Migrating to CreateUserOrganizations (20101101003722)
+  [1m[35mSQL (57.2ms)[0m  CREATE TABLE `user_organizations` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `organization_id` int(11), `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (1.8ms)[0m  [1mdescribe `schema_migrations`[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20101101003722')
+  [1m[36mSQL (0.7ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.6ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations`
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (1.6ms)[0m  describe `groups`
+  [1m[36mSQL (1.0ms)[0m  [1mSHOW KEYS FROM `groups`[0m
+  [1m[35mSQL (1.5ms)[0m  describe `organizations`
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW KEYS FROM `organizations`[0m
+  [1m[35mSQL (1.1ms)[0m  describe `projects`
+  [1m[36mSQL (0.2ms)[0m  [1mSHOW KEYS FROM `projects`[0m
+  [1m[35mSQL (3.4ms)[0m  describe `tasks`
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW KEYS FROM `tasks`[0m
+  [1m[35mSQL (1.8ms)[0m  describe `user_actions`
+  [1m[36mSQL (0.9ms)[0m  [1mSHOW KEYS FROM `user_actions`[0m
+  [1m[35mSQL (2.5ms)[0m  describe `user_groups`
+  [1m[36mSQL (1.0ms)[0m  [1mSHOW KEYS FROM `user_groups`[0m
+  [1m[35mSQL (1.3ms)[0m  describe `user_organizations`
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW KEYS FROM `user_organizations`[0m
+  [1m[35mSQL (2.7ms)[0m  describe `users`
+  [1m[36mSQL (0.2ms)[0m  [1mSHOW KEYS FROM `users`[0m
+
+
+Started GET "/stores/terrellowens" for 127.0.0.1 at Sun Oct 31 18:37:58 -0700 2010
+
+ActionController::RoutingError (No route matches "/stores/terrellowens"):
+  
+
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Oct 31 18:38:03 -0700 2010
+  Processing by LandingController#index as HTML
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW TABLES
+  [1m[36mSQL (1.0ms)[0m  [1mdescribe `user_actions`[0m
+  [1m[35mSQL (29.1ms)[0m  INSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-01 01:38:03', '127.0.0.1', '2010-11-01 01:38:03', '/')
+  [1m[36mSQL (0.1ms)[0m  [1mCOMMIT[0m
+Rendered landing/_new_unknown_user.html.erb (1.3ms)
+Rendered layouts/_header.html.erb (4.1ms)
+Rendered landing/index.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 309ms (Views: 16.1ms | ActiveRecord: 30.9ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at Sun Oct 31 18:38:09 -0700 2010
+  Processing by UsersController#new as JS
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-01 01:38:09', '127.0.0.1', '2010-11-01 01:38:09', '/users/new')[0m
+  [1m[35mSQL (0.1ms)[0m  COMMIT
+Rendered users/_new_user.html.erb (9.3ms)
+Rendered users/new.js.erb (11.8ms)
+Completed 200 OK in 66ms (Views: 17.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/sign_me_up" for 127.0.0.1 at Sun Oct 31 18:38:14 -0700 2010
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Sign up", "authenticity_token"=>"AYL8FFJ2U4LPpIAD2P8lMDqoRl5m5aC3AjADaYa2pfI=", "utf8"=>"\342\234\223", "email"=>"supersonic_297@berkeley.edu"}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[36mSQL (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-01 01:38:14', '127.0.0.1', '2010-11-01 01:38:14', '/sign_me_up')
+  [1m[36mSQL (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('supersonic_297@berkeley.edu')) LIMIT 1[0m
+  [1m[35mUser Load (40.2ms)[0m  SELECT `users`.`id` FROM `users` WHERE (`users`.`persistence_token` = BINARY 'e023824d18ec46258de497a91f638ed14e5af4e5088b3c46d80ed6477d64caa0d40c408b8f0073cac921b3389eefc3bee17e038b1e23c5e28f33d8bc747e694a') LIMIT 1
+  [1m[36mSQL (1.4ms)[0m  [1mdescribe `users`[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `users` (`active`, `created_at`, `crypted_password`, `email`, `first_name`, `last_name`, `password_salt`, `perishable_token`, `persistence_token`, `updated_at`) VALUES (NULL, '2010-11-01 01:38:15', NULL, 'supersonic_297@berkeley.edu', NULL, NULL, NULL, 'CRs90fIiPBq2KhEqYQLX', 'e023824d18ec46258de497a91f638ed14e5af4e5088b3c46d80ed6477d64caa0d40c408b8f0073cac921b3389eefc3bee17e038b1e23c5e28f33d8bc747e694a', '2010-11-01 01:38:15')
+  [1m[36mSQL (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE `users` SET `perishable_token` = 'XTLHHSThXViUvV2qf6Ev', `updated_at` = '2010-11-01 01:38:15' WHERE (`users`.`id` = 1)[0m
+  [1m[35mSQL (0.1ms)[0m  COMMIT
+Rendered user_mailer/activation_instructions.text.erb (0.7ms)
+
+Sent mail to supersonic_297@berkeley.edu (4220ms)
+Date: Sun, 31 Oct 2010 18:38:15 -0700
+From: NitrousDomus@gmail.com
+To: supersonic_297@berkeley.edu
+Message-ID: <4cce1a072ce98_428a81e3eb04165e2@Dennis-Suratnas-MacBook-Pro.local.mail>
+Subject: Activation Instructions
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hello,
+
+Go here to confirm your email:
+
+  http://localhost:3000/register/XTLHHSThXViUvV2qf6Ev
+
+If the above URL does not work, try copying and pasting it into your browser. If you continue to have problems, please feel free to contact us.
+Redirected to http://localhost:3000/?check_email=1
+Completed 302 Found in 4441ms
+
+
+Started GET "/?check_email=1" for 127.0.0.1 at Sun Oct 31 18:38:19 -0700 2010
+  Processing by LandingController#index as HTML
+  Parameters: {"check_email"=>"1"}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-01 01:38:19', '127.0.0.1', '2010-11-01 01:38:19', '/?check_email=1')
+  [1m[36mSQL (0.1ms)[0m  [1mCOMMIT[0m
+Rendered users/_check_email.html.erb (0.3ms)
+Rendered layouts/_header.html.erb (125.5ms)
+Rendered landing/index.html.erb within layouts/application (132.0ms)
+Completed 200 OK in 199ms (Views: 137.7ms | ActiveRecord: 1.0ms)
