@@ -9,7 +9,7 @@
 	There is no task assigned to this project right now<br/><br/>
 <% else %>
 	<% @tasks.each do |task| %>
-		<%= task.name %><br/>
+		<%= task.name %> (Point: <%= task.point %> )<br/>
 	<% end %>
 	<br/>
 <% end%>

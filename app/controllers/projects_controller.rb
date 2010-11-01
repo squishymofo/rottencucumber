@@ -51,6 +51,7 @@ class ProjectsController < ApplicationController
         @task.due = Date.new(params[:start_date][:year].to_i, params[:start_date][:month].to_i , params[:start_date][:day].to_i)
         @task.project_id = @id
         if @task.save
+          params[:task] = nil
           flash[:notice] = "Task successfully created"
         else
           flash[:error] = "Failed to create new task"
