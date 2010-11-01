@@ -1,2 +1,16 @@
-<h1>Projects#new</h1>
-<p>Find me in app/views/projects/new.html.erb</p>
+<h1>Create A New Project for <%= @org.name %></h1>
+
+<%= flash[:error] %>
+<% form_for :project, @project, :url => {:action => :create } do |f| %>
+	<%= f.label "Name:" %>
+	<%= f.text_field :name %><br/> 
+	<%= f.label "Description:" %>
+	<%= f.text_area :description, :size => "60x12" %> <br/>
+	<%= f.label "Assign to group:" %>
+	
+	<% groups_array = @groups.map { |group| [group.name, group.id ]}%>
+	<%= options_for_select(groups_array) %> <br/>
+	<% #Ideally we should have a field that pops up everytime add task is pressed %>
+	<%= submit_tag "Add Task" %><br/>
+	<%= submit_tag "Create" %> 
+<% end %>

@@ -84,7 +84,7 @@ Rottencucumber::Application.routes.draw do
   # Note: This route will make all actions in every controller accessible via GET requests.
   match 'projects/:org_id' => "projects#index"
   match 'projects/show/:org_id/:id' => "projects#show"
-  match 'projects/new/:org_id' => "projects#show"
+  match 'projects/new/:org_id' => "projects#new"
   match 'projects/create' => "projects#create"
   
   resources :organizations

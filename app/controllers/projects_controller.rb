@@ -7,7 +7,9 @@ class ProjectsController < ApplicationController
   end
 
   def new
-    
+    @project = Project.new
+    @org = Organization.find(params[:org_id])
+    @groups = @org.groups
   end
 
   def show
