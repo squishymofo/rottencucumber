@@ -1071,3 +1071,493 @@ DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (ca
 Rendered layouts/_header.html.erb (4.3ms)
 Rendered organizations/index.html.erb within layouts/application (12.6ms)
 Completed 200 OK in 97ms (Views: 17.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/organizations" for 127.0.0.1 at Mon Nov 01 01:28:47 -0700 2010
+  Processing by OrganizationsController#index as HTML
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-01 08:28:47', '127.0.0.1', '2010-11-01 08:28:47', '/organizations')
+  [1m[36mSQL (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [1m[35mOrganization Load (0.2ms)[0m  SELECT `organizations`.* FROM `organizations` WHERE (`organizations`.`creator_id` = 2) LIMIT 1
+Rendered layouts/_header.html.erb (4.4ms)
+Rendered organizations/index.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 273ms (Views: 18.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/organizations" for 127.0.0.1 at Mon Nov 01 01:28:48 -0700 2010
+  Processing by OrganizationsController#index as HTML
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-01 08:28:48', '127.0.0.1', '2010-11-01 08:28:48', '/organizations')
+  [1m[36mSQL (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [1m[35mOrganization Load (0.2ms)[0m  SELECT `organizations`.* FROM `organizations` WHERE (`organizations`.`creator_id` = 2) LIMIT 1
+Rendered layouts/_header.html.erb (4.2ms)
+Rendered organizations/index.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 220ms (Views: 17.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/organizations" for 127.0.0.1 at Mon Nov 01 01:29:32 -0700 2010
+  Processing by OrganizationsController#index as HTML
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-01 08:29:33', '127.0.0.1', '2010-11-01 08:29:33', '/organizations')
+  [1m[36mSQL (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [1m[35mOrganization Load (0.2ms)[0m  SELECT `organizations`.* FROM `organizations` WHERE (`organizations`.`creator_id` = 2) LIMIT 1
+  [1m[36mOrganization Load (20.6ms)[0m  [1mSELECT `organizations`.* FROM `organizations` INNER JOIN `user_organizations` ON `organizations`.id = `user_organizations`.organization_id WHERE ((`user_organizations`.user_id = 2))[0m
+Rendered layouts/_header.html.erb (5.4ms)
+Rendered organizations/index.html.erb within layouts/application (39.9ms)
+Completed 200 OK in 251ms (Views: 23.8ms | ActiveRecord: 21.9ms)
+
+
+Started GET "/organizations" for 127.0.0.1 at Mon Nov 01 01:30:59 -0700 2010
+  Processing by OrganizationsController#index as HTML
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-01 08:30:59', '127.0.0.1', '2010-11-01 08:30:59', '/organizations')[0m
+  [1m[35mSQL (0.1ms)[0m  COMMIT
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1
+  [1m[36mOrganization Load (0.2ms)[0m  [1mSELECT `organizations`.* FROM `organizations` WHERE (`organizations`.`creator_id` = 2) LIMIT 1[0m
+  [1m[35mOrganization Load (0.3ms)[0m  SELECT `organizations`.* FROM `organizations` INNER JOIN `user_organizations` ON `organizations`.id = `user_organizations`.organization_id WHERE ((`user_organizations`.user_id = 2))
+Rendered layouts/_header.html.erb (4.5ms)
+Rendered organizations/index.html.erb within layouts/application (18.4ms)
+Completed 200 OK in 233ms (Views: 149.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/organizations/show/2" for 127.0.0.1 at Mon Nov 01 01:31:23 -0700 2010
+  Processing by OrganizationsController#show as HTML
+  Parameters: {"id"=>"2"}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-01 08:31:23', '127.0.0.1', '2010-11-01 08:31:23', '/organizations/show/2')
+  [1m[36mSQL (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [1m[35mOrganization Load (0.8ms)[0m  SELECT `organizations`.* FROM `organizations` WHERE (`organizations`.`id` = 2) LIMIT 1
+Completed   in 78ms
+
+ActiveRecord::RecordNotFound (Couldn't find Organization with ID=2):
+  app/controllers/organizations_controller.rb:29:in `show'
+
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.3ms)
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.6ms)
+
+
+Started GET "/organizations/show/1" for 127.0.0.1 at Mon Nov 01 01:31:29 -0700 2010
+  Processing by OrganizationsController#show as HTML
+  Parameters: {"id"=>"1"}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-01 08:31:30', '127.0.0.1', '2010-11-01 08:31:30', '/organizations/show/1')
+  [1m[36mSQL (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [1m[35mOrganization Load (0.2ms)[0m  SELECT `organizations`.* FROM `organizations` WHERE (`organizations`.`id` = 1) LIMIT 1
+Rendered layouts/_header.html.erb (4.5ms)
+Rendered organizations/show.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 215ms (Views: 13.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/organizations/show/1" for 127.0.0.1 at Mon Nov 01 01:32:41 -0700 2010
+  Processing by OrganizationsController#show as HTML
+  Parameters: {"id"=>"1"}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-01 08:32:41', '127.0.0.1', '2010-11-01 08:32:41', '/organizations/show/1')
+  [1m[36mSQL (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [1m[35mOrganization Load (0.3ms)[0m  SELECT `organizations`.* FROM `organizations` WHERE (`organizations`.`id` = 1) LIMIT 1
+Rendered layouts/_header.html.erb (4.3ms)
+Rendered organizations/show.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 225ms (Views: 17.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/organizations/show/1" for 127.0.0.1 at Mon Nov 01 01:32:57 -0700 2010
+  Processing by OrganizationsController#show as HTML
+  Parameters: {"id"=>"1"}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-01 08:32:57', '127.0.0.1', '2010-11-01 08:32:57', '/organizations/show/1')
+  [1m[36mSQL (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (25.9ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [1m[35mOrganization Load (0.2ms)[0m  SELECT `organizations`.* FROM `organizations` WHERE (`organizations`.`id` = 1) LIMIT 1
+Rendered layouts/_header.html.erb (5.0ms)
+Rendered organizations/show.html.erb within layouts/application (35.8ms)
+Completed 200 OK in 161ms (Views: 40.4ms | ActiveRecord: 26.8ms)
+
+
+Started GET "/organizations/show/1" for 127.0.0.1 at Mon Nov 01 01:33:52 -0700 2010
+  Processing by OrganizationsController#show as HTML
+  Parameters: {"id"=>"1"}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-01 08:33:52', '127.0.0.1', '2010-11-01 08:33:52', '/organizations/show/1')
+  [1m[36mSQL (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [1m[35mOrganization Load (0.4ms)[0m  SELECT `organizations`.* FROM `organizations` WHERE (`organizations`.`id` = 1) LIMIT 1
+Rendered layouts/_header.html.erb (4.3ms)
+Rendered organizations/show.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 94ms (Views: 17.4ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/organizations" for 127.0.0.1 at Mon Nov 01 01:33:57 -0700 2010
+  Processing by OrganizationsController#index as HTML
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-01 08:33:57', '127.0.0.1', '2010-11-01 08:33:57', '/organizations')
+  [1m[36mSQL (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [1m[35mOrganization Load (0.2ms)[0m  SELECT `organizations`.* FROM `organizations` WHERE (`organizations`.`creator_id` = 2) LIMIT 1
+  [1m[36mOrganization Load (0.3ms)[0m  [1mSELECT `organizations`.* FROM `organizations` INNER JOIN `user_organizations` ON `organizations`.id = `user_organizations`.organization_id WHERE ((`user_organizations`.user_id = 2))[0m
+Rendered layouts/_header.html.erb (4.4ms)
+Rendered organizations/index.html.erb within layouts/application (17.2ms)
+Completed 200 OK in 231ms (Views: 21.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/organizations/index" for 127.0.0.1 at Mon Nov 01 01:34:02 -0700 2010
+  Processing by OrganizationsController#show as HTML
+  Parameters: {"id"=>"index"}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-01 08:34:02', '127.0.0.1', '2010-11-01 08:34:02', '/organizations/index')[0m
+  [1m[35mSQL (1.4ms)[0m  COMMIT
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1
+  [1m[36mOrganization Load (0.2ms)[0m  [1mSELECT `organizations`.* FROM `organizations` WHERE (`organizations`.`id` = 0) LIMIT 1[0m
+Completed   in 190ms
+
+ActiveRecord::RecordNotFound (Couldn't find Organization with ID=index):
+  app/controllers/organizations_controller.rb:29:in `show'
+
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.0ms)
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.2ms)
+
+
+Started GET "/organizations/new" for 127.0.0.1 at Mon Nov 01 01:34:07 -0700 2010
+  Processing by OrganizationsController#new as HTML
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-01 08:34:07', '127.0.0.1', '2010-11-01 08:34:07', '/organizations/new')[0m
+  [1m[35mSQL (0.1ms)[0m  COMMIT
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1
+DEPRECATION WARNING: Using form_for(:name, @resource) is deprecated. Please use form_for(@resource, :as => :name) instead. (called from _app_views_organizations_new_html_erb___658349834_2203066860_0 at /Users/denniss/Sites/rottencucumber/app/views/organizations/new.html.erb:3)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_organizations_new_html_erb___658349834_2203066860_0 at /Users/denniss/Sites/rottencucumber/app/views/organizations/new.html.erb:3)
+Rendered layouts/_header.html.erb (4.3ms)
+Rendered organizations/new.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 94ms (Views: 18.6ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/organizations" for 127.0.0.1 at Mon Nov 01 01:34:14 -0700 2010
+  Processing by OrganizationsController#create as HTML
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"w0ORxCI0KRbeH/pLuQ7YGoUcS26M95krJoiCzmMGtn8=", "utf8"=>"\342\234\223", "organization"=>{"name"=>"", "description"=>""}}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-01 08:34:14', '127.0.0.1', '2010-11-01 08:34:14', '/organizations')
+  [1m[36mSQL (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Completed   in 76ms
+
+NoMethodError (undefined method `save' for nil:NilClass):
+  app/controllers/organizations_controller.rb:14:in `create'
+
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (7.0ms)
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.1ms)
+
+
+Started POST "/organizations" for 127.0.0.1 at Mon Nov 01 01:34:24 -0700 2010
+  Processing by OrganizationsController#create as HTML
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"w0ORxCI0KRbeH/pLuQ7YGoUcS26M95krJoiCzmMGtn8=", "utf8"=>"\342\234\223", "organization"=>{"name"=>"dfdfd", "description"=>""}}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-01 08:34:24', '127.0.0.1', '2010-11-01 08:34:24', '/organizations')[0m
+  [1m[35mSQL (0.4ms)[0m  COMMIT
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1
+Completed   in 201ms
+
+NoMethodError (undefined method `save' for nil:NilClass):
+  app/controllers/organizations_controller.rb:14:in `create'
+
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (7.7ms)
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.1ms)
+
+
+Started POST "/organizations" for 127.0.0.1 at Mon Nov 01 01:34:40 -0700 2010
+  Processing by OrganizationsController#create as HTML
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"w0ORxCI0KRbeH/pLuQ7YGoUcS26M95krJoiCzmMGtn8=", "utf8"=>"\342\234\223", "organization"=>{"name"=>"dfdfd", "description"=>""}}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-01 08:34:40', '127.0.0.1', '2010-11-01 08:34:40', '/organizations')
+  [1m[36mSQL (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+Redirected to http://localhost:3000/organizations/new
+Completed 302 Found in 85ms
+
+
+Started GET "/organizations/new" for 127.0.0.1 at Mon Nov 01 01:34:40 -0700 2010
+  Processing by OrganizationsController#new as HTML
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (2.6ms)[0m  [1mINSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-01 08:34:40', '127.0.0.1', '2010-11-01 08:34:40', '/organizations/new')[0m
+  [1m[35mSQL (0.2ms)[0m  COMMIT
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1
+DEPRECATION WARNING: Using form_for(:name, @resource) is deprecated. Please use form_for(@resource, :as => :name) instead. (called from _app_views_organizations_new_html_erb___658349834_2205185920_0 at /Users/denniss/Sites/rottencucumber/app/views/organizations/new.html.erb:3)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_organizations_new_html_erb___658349834_2205185920_0 at /Users/denniss/Sites/rottencucumber/app/views/organizations/new.html.erb:3)
+Rendered layouts/_header.html.erb (4.2ms)
+Rendered organizations/new.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 246ms (Views: 19.3ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/organizations/new" for 127.0.0.1 at Mon Nov 01 01:35:51 -0700 2010
+  Processing by OrganizationsController#new as HTML
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-01 08:35:51', '127.0.0.1', '2010-11-01 08:35:51', '/organizations/new')
+  [1m[36mSQL (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+DEPRECATION WARNING: Using form_for(:name, @resource) is deprecated. Please use form_for(@resource, :as => :name) instead. (called from _app_views_organizations_new_html_erb___658349834_2205772900_0 at /Users/denniss/Sites/rottencucumber/app/views/organizations/new.html.erb:3)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_organizations_new_html_erb___658349834_2205772900_0 at /Users/denniss/Sites/rottencucumber/app/views/organizations/new.html.erb:3)
+Rendered layouts/_header.html.erb (4.5ms)
+Rendered organizations/new.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 225ms (Views: 19.6ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/organizations" for 127.0.0.1 at Mon Nov 01 01:35:55 -0700 2010
+  Processing by OrganizationsController#create as HTML
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"w0ORxCI0KRbeH/pLuQ7YGoUcS26M95krJoiCzmMGtn8=", "utf8"=>"\342\234\223", "organization"=>{"name"=>"asdf", "description"=>""}}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-01 08:35:55', '127.0.0.1', '2010-11-01 08:35:55', '/organizations')[0m
+  [1m[35mSQL (0.1ms)[0m  COMMIT
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+Redirected to http://localhost:3000/organizations/new
+Completed 302 Found in 79ms
+
+
+Started GET "/organizations/new" for 127.0.0.1 at Mon Nov 01 01:35:55 -0700 2010
+  Processing by OrganizationsController#new as HTML
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-01 08:35:55', '127.0.0.1', '2010-11-01 08:35:55', '/organizations/new')
+  [1m[36mSQL (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.9ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+DEPRECATION WARNING: Using form_for(:name, @resource) is deprecated. Please use form_for(@resource, :as => :name) instead. (called from _app_views_organizations_new_html_erb___658349834_2204581040_0 at /Users/denniss/Sites/rottencucumber/app/views/organizations/new.html.erb:3)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_organizations_new_html_erb___658349834_2204581040_0 at /Users/denniss/Sites/rottencucumber/app/views/organizations/new.html.erb:3)
+Rendered layouts/_header.html.erb (4.3ms)
+Rendered organizations/new.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 94ms (Views: 18.4ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/organizations" for 127.0.0.1 at Mon Nov 01 01:36:10 -0700 2010
+  Processing by OrganizationsController#create as HTML
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"w0ORxCI0KRbeH/pLuQ7YGoUcS26M95krJoiCzmMGtn8=", "utf8"=>"\342\234\223", "organization"=>{"name"=>"", "description"=>""}}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[35mSQL (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-01 08:36:10', '127.0.0.1', '2010-11-01 08:36:10', '/organizations')[0m
+  [1m[35mSQL (0.2ms)[0m  COMMIT
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+Redirected to http://localhost:3000/organizations/new
+Completed 302 Found in 208ms
+
+
+Started GET "/organizations/new" for 127.0.0.1 at Mon Nov 01 01:36:10 -0700 2010
+  Processing by OrganizationsController#new as HTML
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-01 08:36:10', '127.0.0.1', '2010-11-01 08:36:10', '/organizations/new')
+  [1m[36mSQL (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+DEPRECATION WARNING: Using form_for(:name, @resource) is deprecated. Please use form_for(@resource, :as => :name) instead. (called from _app_views_organizations_new_html_erb___658349834_2203528040_0 at /Users/denniss/Sites/rottencucumber/app/views/organizations/new.html.erb:3)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_organizations_new_html_erb___658349834_2203528040_0 at /Users/denniss/Sites/rottencucumber/app/views/organizations/new.html.erb:3)
+Rendered layouts/_header.html.erb (4.2ms)
+Rendered organizations/new.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 94ms (Views: 18.6ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/organizations/new" for 127.0.0.1 at Mon Nov 01 01:37:22 -0700 2010
+  Processing by OrganizationsController#new as HTML
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-01 08:37:22', '127.0.0.1', '2010-11-01 08:37:22', '/organizations/new')[0m
+  [1m[35mSQL (0.3ms)[0m  COMMIT
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1
+DEPRECATION WARNING: Using form_for(:name, @resource) is deprecated. Please use form_for(@resource, :as => :name) instead. (called from _app_views_organizations_new_html_erb___658349834_2204235960_0 at /Users/denniss/Sites/rottencucumber/app/views/organizations/new.html.erb:3)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_organizations_new_html_erb___658349834_2204235960_0 at /Users/denniss/Sites/rottencucumber/app/views/organizations/new.html.erb:3)
+Rendered layouts/_header.html.erb (4.3ms)
+Rendered organizations/new.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 95ms (Views: 20.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/organizations/new" for 127.0.0.1 at Mon Nov 01 01:37:23 -0700 2010
+  Processing by OrganizationsController#new as HTML
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-01 08:37:23', '127.0.0.1', '2010-11-01 08:37:23', '/organizations/new')
+  [1m[36mSQL (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+DEPRECATION WARNING: Using form_for(:name, @resource) is deprecated. Please use form_for(@resource, :as => :name) instead. (called from _app_views_organizations_new_html_erb___658349834_2205491800_0 at /Users/denniss/Sites/rottencucumber/app/views/organizations/new.html.erb:3)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_organizations_new_html_erb___658349834_2205491800_0 at /Users/denniss/Sites/rottencucumber/app/views/organizations/new.html.erb:3)
+Rendered layouts/_header.html.erb (4.2ms)
+Rendered organizations/new.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 233ms (Views: 18.9ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/organizations" for 127.0.0.1 at Mon Nov 01 01:37:27 -0700 2010
+  Processing by OrganizationsController#create as HTML
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"w0ORxCI0KRbeH/pLuQ7YGoUcS26M95krJoiCzmMGtn8=", "utf8"=>"\342\234\223", "organization"=>{"name"=>"asdf", "description"=>""}}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-01 08:37:27', '127.0.0.1', '2010-11-01 08:37:27', '/organizations')[0m
+  [1m[35mSQL (0.1ms)[0m  COMMIT
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+Redirected to http://localhost:3000/organizations/new
+Completed 302 Found in 199ms
+
+
+Started GET "/organizations/new" for 127.0.0.1 at Mon Nov 01 01:37:27 -0700 2010
+  Processing by OrganizationsController#new as HTML
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-01 08:37:27', '127.0.0.1', '2010-11-01 08:37:27', '/organizations/new')
+  [1m[36mSQL (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+DEPRECATION WARNING: Using form_for(:name, @resource) is deprecated. Please use form_for(@resource, :as => :name) instead. (called from _app_views_organizations_new_html_erb___658349834_2204161160_0 at /Users/denniss/Sites/rottencucumber/app/views/organizations/new.html.erb:3)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_organizations_new_html_erb___658349834_2204161160_0 at /Users/denniss/Sites/rottencucumber/app/views/organizations/new.html.erb:3)
+Rendered layouts/_header.html.erb (4.1ms)
+Rendered organizations/new.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 93ms (Views: 18.7ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/organizations" for 127.0.0.1 at Mon Nov 01 01:37:34 -0700 2010
+  Processing by OrganizationsController#create as HTML
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"w0ORxCI0KRbeH/pLuQ7YGoUcS26M95krJoiCzmMGtn8=", "utf8"=>"\342\234\223", "organization"=>{"name"=>"", "description"=>"adf"}}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-01 08:37:34', '127.0.0.1', '2010-11-01 08:37:34', '/organizations')[0m
+  [1m[35mSQL (0.1ms)[0m  COMMIT
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+Redirected to http://localhost:3000/organizations/new
+Completed 302 Found in 197ms
+
+
+Started GET "/organizations/new" for 127.0.0.1 at Mon Nov 01 01:37:35 -0700 2010
+  Processing by OrganizationsController#new as HTML
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-01 08:37:35', '127.0.0.1', '2010-11-01 08:37:35', '/organizations/new')
+  [1m[36mSQL (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+DEPRECATION WARNING: Using form_for(:name, @resource) is deprecated. Please use form_for(@resource, :as => :name) instead. (called from _app_views_organizations_new_html_erb___658349834_2203108080_0 at /Users/denniss/Sites/rottencucumber/app/views/organizations/new.html.erb:3)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_organizations_new_html_erb___658349834_2203108080_0 at /Users/denniss/Sites/rottencucumber/app/views/organizations/new.html.erb:3)
+Rendered layouts/_header.html.erb (4.3ms)
+Rendered organizations/new.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 95ms (Views: 19.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/organizations/new" for 127.0.0.1 at Mon Nov 01 01:38:47 -0700 2010
+  Processing by OrganizationsController#new as HTML
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-01 08:38:47', '127.0.0.1', '2010-11-01 08:38:47', '/organizations/new')[0m
+  [1m[35mSQL (0.3ms)[0m  COMMIT
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1
+Rendered organizations/new.html.erb within layouts/application (13.8ms)
+Completed   in 99ms
+
+ActionView::Template::Error (undefined local variable or method `flas' for #<#<Class:0x106c10640>:0x106c0e430>):
+    1: <h1>Create a New Organization</h1>
+    2: <%= flas[:error] %>
+    3: <% form_for :organization, @org, :url => {:action => :create } do |f| %>
+    4: 	<%= f.label "Name" %>
+    5: 	<%= f.text_field :name %><br/> 
+  app/views/organizations/new.html.erb:2:in `_app_views_organizations_new_html_erb___658349834_2204132460_0'
+
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.2ms)
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (13.5ms)
+
+
+Started GET "/organizations/new" for 127.0.0.1 at Mon Nov 01 01:38:53 -0700 2010
+  Processing by OrganizationsController#new as HTML
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-01 08:38:53', '127.0.0.1', '2010-11-01 08:38:53', '/organizations/new')
+  [1m[36mSQL (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+DEPRECATION WARNING: Using form_for(:name, @resource) is deprecated. Please use form_for(@resource, :as => :name) instead. (called from _app_views_organizations_new_html_erb___658349834_2205436420_0 at /Users/denniss/Sites/rottencucumber/app/views/organizations/new.html.erb:3)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_organizations_new_html_erb___658349834_2205436420_0 at /Users/denniss/Sites/rottencucumber/app/views/organizations/new.html.erb:3)
+Rendered layouts/_header.html.erb (4.2ms)
+Rendered organizations/new.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 235ms (Views: 18.1ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/organizations" for 127.0.0.1 at Mon Nov 01 01:38:56 -0700 2010
+  Processing by OrganizationsController#create as HTML
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"w0ORxCI0KRbeH/pLuQ7YGoUcS26M95krJoiCzmMGtn8=", "utf8"=>"\342\234\223", "organization"=>{"name"=>"adfdsf", "description"=>""}}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-01 08:38:56', '127.0.0.1', '2010-11-01 08:38:56', '/organizations')[0m
+  [1m[35mSQL (0.1ms)[0m  COMMIT
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+Redirected to http://localhost:3000/organizations/new
+Completed 302 Found in 194ms
+
+
+Started GET "/organizations/new" for 127.0.0.1 at Mon Nov 01 01:38:56 -0700 2010
+  Processing by OrganizationsController#new as HTML
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-01 08:38:56', '127.0.0.1', '2010-11-01 08:38:56', '/organizations/new')
+  [1m[36mSQL (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+DEPRECATION WARNING: Using form_for(:name, @resource) is deprecated. Please use form_for(@resource, :as => :name) instead. (called from _app_views_organizations_new_html_erb___658349834_2203881640_0 at /Users/denniss/Sites/rottencucumber/app/views/organizations/new.html.erb:3)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_organizations_new_html_erb___658349834_2203881640_0 at /Users/denniss/Sites/rottencucumber/app/views/organizations/new.html.erb:3)
+Rendered layouts/_header.html.erb (4.0ms)
+Rendered organizations/new.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 91ms (Views: 18.2ms | ActiveRecord: 1.1ms)

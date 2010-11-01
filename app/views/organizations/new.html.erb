@@ -1,5 +1,6 @@
 <h1>Create a New Organization</h1>
-<% form_for :organization, @organization, :url => {:action => :create } do |f| %>
+<%= flash[:error] %>
+<% form_for :organization, @org, :url => {:action => :create } do |f| %>
 	<%= f.label "Name" %>
 	<%= f.text_field :name %><br/> 
 	<%= f.label "Description" %>
