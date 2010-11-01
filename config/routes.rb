@@ -1,5 +1,13 @@
 Rottencucumber::Application.routes.draw do
 
+  get "projects/index"
+
+  get "projects/new"
+
+  get "projects/show"
+
+  get "projects/create"
+
   get "organization/new"
 
   get "organization/create"
@@ -74,6 +82,11 @@ Rottencucumber::Application.routes.draw do
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
+  match 'projects/:org_id' => "projects#index"
+  match 'projects/show/:org_id/:id' => "projects#show"
+  match 'projects/new/:org_id' => "projects#show"
+  match 'projects/create' => "projects#create"
+  
   resources :organizations
   resources :user_sessions
   resources :users
