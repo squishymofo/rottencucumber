@@ -11,7 +11,7 @@ class UserSessionsController < ApplicationController
         redirect_to root_url
       else
         flash[:error] = "login incorrect"
-        render :action => 'new'
+        redirect_to root_url
       end
     end
   end

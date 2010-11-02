@@ -6,6 +6,7 @@ class UsersController < ApplicationController
   end
 
   def create
+    # need to make this not-ajax..
     @user = User.new(params[:user])
     if (params[:oauth_provider] || params[:code] || params[:oauth_token])
       @user.save do |result|
@@ -32,9 +33,11 @@ class UsersController < ApplicationController
     else
       if @user.signup!(params)
         @user.deliver_activation_instructions!
+        @check_email = true
         redirect_to root_url(:check_email => 1)
       else
-        redirect_to root_url # should show errors here and redirect them to the 
+        @signup_problems = true
+        render :template => 'landing/index' # should show errors here and redirect them to the 
       end
     end
   end

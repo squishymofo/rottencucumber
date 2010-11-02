@@ -157,6 +157,7 @@ DEPENDENCIES
   cucumber
   cucumber-rails
   database_cleaner
+  gherkin (= 2.2.8)
   heroku
   launchy
   mysql (= 2.8.1)

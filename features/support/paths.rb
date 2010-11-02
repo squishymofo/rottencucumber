@@ -10,7 +10,16 @@ module NavigationHelpers
 
     when /the home\s?page/
       '/'
+      
+    when /the organization creation page/
+      '/organizations/new'
+    
+    when /the project creation page/
+      '/projects/new/1'
 
+    when /the finish registration page for user with email "spitfire67@berkeley.edu"/
+      "/register/#{User.find_by_email("spitfire67@berkeley.edu").perishable_token}"
+      
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #

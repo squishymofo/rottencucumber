@@ -1,0 +1,19 @@
+# Logfile created on Mon Nov 01 20:58:30 -0700 2010 by logger.rb
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+REQUESTING PAGE: GET /user_sessions/new with {} and HTTP headers {"HTTP_REFERER"=>"/"}
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+REQUESTING PAGE: GET /user_sessions/new with {} and HTTP headers {"HTTP_REFERER"=>"/"}
+REQUESTING PAGE: GET /projects/new/2 with {} and HTTP headers {}
+REQUESTING PAGE: GET /projects/new/2 with {} and HTTP headers {}
+REQUESTING PAGE: GET projects/new/4 with {} and HTTP headers {}
+REQUESTING PAGE: GET projects/new/4 with {} and HTTP headers {}
+REQUESTING PAGE: GET projects/new/4 with {} and HTTP headers {}
+REQUESTING PAGE: GET projects/new/4 with {} and HTTP headers {}
+REQUESTING PAGE: GET projects/new/4 with {} and HTTP headers {}
+REQUESTING PAGE: GET /projects/new/4 with {} and HTTP headers {}
+REQUESTING PAGE: GET /projects/new/4 with {} and HTTP headers {}
+REQUESTING PAGE: GET /projects/4 with {} and HTTP headers {}
+REQUESTING PAGE: GET /projects/4 with {} and HTTP headers {}
+REQUESTING PAGE: GET /projects/new/4 with {} and HTTP headers {}
+REQUESTING PAGE: GET /projects/new/4 with {} and HTTP headers {}

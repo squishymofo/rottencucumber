@@ -10,7 +10,7 @@ class ProjectsController < ApplicationController
   def new
     @org = Organization.find(params[:org_id])
     
-    if @org.creator_id == @current_user.id 
+    if @org.creator_id == @current_user.id #only allows the creator of this organization to create a new project
       @project = Project.new
       @groups = @org.groups
     else
@@ -18,12 +18,7 @@ class ProjectsController < ApplicationController
     end
   end
 
-  def show
-    
-  end
-
   def create
-    puts "IS THIS THING WORKING"
     @org_id = params[:org][:id]
     @project = Project.new
     @project.name = params[:project][:name]
@@ -31,11 +26,9 @@ class ProjectsController < ApplicationController
     @project.organization_id = @org_id
     
     if @project.save
-      puts "-----------------Saving project-------------------"
       flash[:notice] = "#{params[:project][:name]} has been created"
-      redirect_to "projects/#{@org_id}"
+      redirect_to "/projects/#{@org_id}" 
     else
-      puts "-----------------Failed saving project-------------------"
       flash[:error] = "Failed creating a new project"
       redirect_to :action => :new
     end
@@ -43,10 +36,32 @@ class ProjectsController < ApplicationController
   end
   
   def manage
+    @task = Task.new
     @id = params[:id]
     @project = Project.find(@id)
-    @groups = @project.groups
-    @tasks = @project.tasks
+    @org = @project.organization
+    @groups = @org.groups
+    
+    if @org.creator_id == @current_user.id #only allows the creator of this organization to create a new project
+      if params[:commit]
+        @task = Task.new
+        @task.name = params[:task][:name]
+        @task.description = params[:task][:description]
+        @task.point = params[:task][:point]
+        @task.due = Date.new(params[:start_date][:year].to_i, params[:start_date][:month].to_i , params[:start_date][:day].to_i)
+        @task.project_id = @id
+        if @task.save
+          params[:task] = nil
+          flash[:notice] = "Task successfully created"
+        else
+          flash[:error] = "Failed to create new task"
+        end
+      end
+      
+      @tasks = @project.tasks
+    else
+      render 'projects/access_denied'
+    end
   end
 
 end
