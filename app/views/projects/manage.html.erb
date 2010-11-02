@@ -9,7 +9,12 @@
 	There is no task assigned to this project right now<br/><br/>
 <% else %>
 	<% @tasks.each do |task| %>
-		<%= task.name %> (Point: <%= task.point %> )<br/>
+	<% if task.status == 0 %>
+		<div class ='incomplete_task'>
+	<% else %>
+		<div class ='complete_task'>
+	<% end %>
+		<%= task.name %> </div> (Point: <%= task.point %> ) <%= link_to 'Delete' , :action => :delete, :id => task.id %> <br/>
 	<% end %>
 	<br/>
 <% end%>
