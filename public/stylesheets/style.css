@@ -59,10 +59,17 @@
 
 /* line 38, ../../app/stylesheets/style.sass */
 .complete_task {
+  float: left;
   color: green;
 }
 
-/* line 41, ../../app/stylesheets/style.sass */
+/* line 42, ../../app/stylesheets/style.sass */
 .incomplete_task {
+  float: left;
   color: red;
+}
+
+/* line 46, ../../app/stylesheets/style.sass */
+.task_nav {
+  float: right;
 }

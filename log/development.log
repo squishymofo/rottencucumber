@@ -5900,3 +5900,129 @@ DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>
 Rendered layouts/_header.html.erb (134.0ms)
 Rendered projects/manage.html.erb within layouts/application (158.1ms)
 Completed 200 OK in 284ms (Views: 161.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/projects/manage/1" for 127.0.0.1 at Mon Nov 01 17:33:59 -0700 2010
+  Processing by ProjectsController#manage as HTML
+  Parameters: {"id"=>"1"}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-02 00:33:59', '127.0.0.1', '2010-11-02 00:33:59', '/projects/manage/1')[0m
+  [1m[35mSQL (0.1ms)[0m  COMMIT
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT `projects`.* FROM `projects` WHERE (`projects`.`id` = 1) LIMIT 1[0m
+  [1m[35mOrganization Load (0.2ms)[0m  SELECT `organizations`.* FROM `organizations` WHERE (`organizations`.`id` = 2) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM `tasks` WHERE (`tasks`.project_id = 1)) AS subquery[0m
+  [1m[35mTask Load (0.4ms)[0m  SELECT `tasks`.* FROM `tasks` WHERE (`tasks`.project_id = 1)
+DEPRECATION WARNING: Using form_for(:name, @resource) is deprecated. Please use form_for(@resource, :as => :name) instead. (called from _app_views_projects_manage_html_erb__374683377_2203227700_0 at /Users/denniss/Sites/rottencucumber/app/views/projects/manage.html.erb:23)
+  [1m[36mGroup Load (0.3ms)[0m  [1mSELECT `groups`.* FROM `groups` WHERE (`groups`.organization_id = 2)[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_projects_manage_html_erb__374683377_2203227700_0 at /Users/denniss/Sites/rottencucumber/app/views/projects/manage.html.erb:23)
+Rendered layouts/_header.html.erb (4.9ms)
+Rendered projects/manage.html.erb within layouts/application (145.3ms)
+Completed 200 OK in 448ms (Views: 149.2ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/projects/manage/1" for 127.0.0.1 at Mon Nov 01 17:35:25 -0700 2010
+  Processing by ProjectsController#manage as HTML
+  Parameters: {"id"=>"1"}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-02 00:35:25', '127.0.0.1', '2010-11-02 00:35:25', '/projects/manage/1')[0m
+  [1m[35mSQL (0.3ms)[0m  COMMIT
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT `projects`.* FROM `projects` WHERE (`projects`.`id` = 1) LIMIT 1[0m
+  [1m[35mOrganization Load (0.5ms)[0m  SELECT `organizations`.* FROM `organizations` WHERE (`organizations`.`id` = 2) LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM `tasks` WHERE (`tasks`.project_id = 1)) AS subquery[0m
+  [1m[35mTask Load (0.2ms)[0m  SELECT `tasks`.* FROM `tasks` WHERE (`tasks`.project_id = 1)
+DEPRECATION WARNING: Using form_for(:name, @resource) is deprecated. Please use form_for(@resource, :as => :name) instead. (called from _app_views_projects_manage_html_erb__374683377_2205596960_0 at /Users/denniss/Sites/rottencucumber/app/views/projects/manage.html.erb:23)
+  [1m[36mGroup Load (1.1ms)[0m  [1mSELECT `groups`.* FROM `groups` WHERE (`groups`.organization_id = 2)[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_projects_manage_html_erb__374683377_2205596960_0 at /Users/denniss/Sites/rottencucumber/app/views/projects/manage.html.erb:23)
+Rendered layouts/_header.html.erb (4.6ms)
+Rendered projects/manage.html.erb within layouts/application (31.1ms)
+Completed 200 OK in 282ms (Views: 34.2ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/projects/manage/1" for 127.0.0.1 at Mon Nov 01 17:37:30 -0700 2010
+  Processing by ProjectsController#manage as HTML
+  Parameters: {"id"=>"1"}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[35mSQL (0.8ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-02 00:37:30', '127.0.0.1', '2010-11-02 00:37:30', '/projects/manage/1')[0m
+  [1m[35mSQL (0.1ms)[0m  COMMIT
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1
+  [1m[36mProject Load (1.0ms)[0m  [1mSELECT `projects`.* FROM `projects` WHERE (`projects`.`id` = 1) LIMIT 1[0m
+  [1m[35mOrganization Load (0.2ms)[0m  SELECT `organizations`.* FROM `organizations` WHERE (`organizations`.`id` = 2) LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM `tasks` WHERE (`tasks`.project_id = 1)) AS subquery[0m
+  [1m[35mTask Load (0.2ms)[0m  SELECT `tasks`.* FROM `tasks` WHERE (`tasks`.project_id = 1)
+DEPRECATION WARNING: Using form_for(:name, @resource) is deprecated. Please use form_for(@resource, :as => :name) instead. (called from _app_views_projects_manage_html_erb__374683377_2205397720_0 at /Users/denniss/Sites/rottencucumber/app/views/projects/manage.html.erb:23)
+  [1m[36mGroup Load (0.3ms)[0m  [1mSELECT `groups`.* FROM `groups` WHERE (`groups`.organization_id = 2)[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_projects_manage_html_erb__374683377_2205397720_0 at /Users/denniss/Sites/rottencucumber/app/views/projects/manage.html.erb:23)
+Rendered layouts/_header.html.erb (4.6ms)
+Rendered projects/manage.html.erb within layouts/application (30.1ms)
+Completed 200 OK in 287ms (Views: 33.8ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/projects/manage/1" for 127.0.0.1 at Mon Nov 01 17:37:41 -0700 2010
+  Processing by ProjectsController#manage as HTML
+  Parameters: {"id"=>"1"}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-02 00:37:41', '127.0.0.1', '2010-11-02 00:37:41', '/projects/manage/1')[0m
+  [1m[35mSQL (0.1ms)[0m  COMMIT
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT `projects`.* FROM `projects` WHERE (`projects`.`id` = 1) LIMIT 1[0m
+  [1m[35mOrganization Load (0.2ms)[0m  SELECT `organizations`.* FROM `organizations` WHERE (`organizations`.`id` = 2) LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM `tasks` WHERE (`tasks`.project_id = 1)) AS subquery[0m
+  [1m[35mTask Load (0.2ms)[0m  SELECT `tasks`.* FROM `tasks` WHERE (`tasks`.project_id = 1)
+DEPRECATION WARNING: Using form_for(:name, @resource) is deprecated. Please use form_for(@resource, :as => :name) instead. (called from _app_views_projects_manage_html_erb__374683377_2205190040_0 at /Users/denniss/Sites/rottencucumber/app/views/projects/manage.html.erb:23)
+  [1m[36mGroup Load (0.5ms)[0m  [1mSELECT `groups`.* FROM `groups` WHERE (`groups`.organization_id = 2)[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_projects_manage_html_erb__374683377_2205190040_0 at /Users/denniss/Sites/rottencucumber/app/views/projects/manage.html.erb:23)
+Rendered layouts/_header.html.erb (4.3ms)
+Rendered projects/manage.html.erb within layouts/application (29.3ms)
+Completed 200 OK in 309ms (Views: 32.8ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/projects/manage/1" for 127.0.0.1 at Mon Nov 01 17:38:15 -0700 2010
+  Processing by ProjectsController#manage as HTML
+  Parameters: {"id"=>"1"}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (2.2ms)[0m  [1mINSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-02 00:38:15', '127.0.0.1', '2010-11-02 00:38:15', '/projects/manage/1')[0m
+  [1m[35mSQL (0.2ms)[0m  COMMIT
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1
+  [1m[36mProject Load (0.7ms)[0m  [1mSELECT `projects`.* FROM `projects` WHERE (`projects`.`id` = 1) LIMIT 1[0m
+  [1m[35mOrganization Load (0.2ms)[0m  SELECT `organizations`.* FROM `organizations` WHERE (`organizations`.`id` = 2) LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM `tasks` WHERE (`tasks`.project_id = 1)) AS subquery[0m
+  [1m[35mTask Load (0.3ms)[0m  SELECT `tasks`.* FROM `tasks` WHERE (`tasks`.project_id = 1)
+DEPRECATION WARNING: Using form_for(:name, @resource) is deprecated. Please use form_for(@resource, :as => :name) instead. (called from _app_views_projects_manage_html_erb__374683377_2205052360_0 at /Users/denniss/Sites/rottencucumber/app/views/projects/manage.html.erb:23)
+  [1m[36mGroup Load (0.3ms)[0m  [1mSELECT `groups`.* FROM `groups` WHERE (`groups`.organization_id = 2)[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_projects_manage_html_erb__374683377_2205052360_0 at /Users/denniss/Sites/rottencucumber/app/views/projects/manage.html.erb:23)
+Rendered layouts/_header.html.erb (4.3ms)
+Rendered projects/manage.html.erb within layouts/application (29.4ms)
+Completed 200 OK in 288ms (Views: 33.1ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/projects/manage/1" for 127.0.0.1 at Mon Nov 01 17:39:13 -0700 2010
+  Processing by ProjectsController#manage as HTML
+  Parameters: {"id"=>"1"}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /Users/denniss/Sites/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-02 00:39:13', '127.0.0.1', '2010-11-02 00:39:13', '/projects/manage/1')[0m
+  [1m[35mSQL (0.1ms)[0m  COMMIT
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1
+  [1m[36mProject Load (1.0ms)[0m  [1mSELECT `projects`.* FROM `projects` WHERE (`projects`.`id` = 1) LIMIT 1[0m
+  [1m[35mOrganization Load (0.2ms)[0m  SELECT `organizations`.* FROM `organizations` WHERE (`organizations`.`id` = 2) LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM `tasks` WHERE (`tasks`.project_id = 1)) AS subquery[0m
+  [1m[35mTask Load (0.2ms)[0m  SELECT `tasks`.* FROM `tasks` WHERE (`tasks`.project_id = 1)
+DEPRECATION WARNING: Using form_for(:name, @resource) is deprecated. Please use form_for(@resource, :as => :name) instead. (called from _app_views_projects_manage_html_erb__374683377_2204882180_0 at /Users/denniss/Sites/rottencucumber/app/views/projects/manage.html.erb:23)
+  [1m[36mGroup Load (0.3ms)[0m  [1mSELECT `groups`.* FROM `groups` WHERE (`groups`.organization_id = 2)[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_projects_manage_html_erb__374683377_2204882180_0 at /Users/denniss/Sites/rottencucumber/app/views/projects/manage.html.erb:23)
+Rendered layouts/_header.html.erb (4.5ms)
+Rendered projects/manage.html.erb within layouts/application (30.8ms)
+Completed 200 OK in 284ms (Views: 35.2ms | ActiveRecord: 2.8ms)

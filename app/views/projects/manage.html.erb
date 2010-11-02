@@ -11,10 +11,17 @@
 	<% @tasks.each do |task| %>
 	<% if task.status == 0 %>
 		<div class ='incomplete_task'>
-	<% else %>
+	<% elsif task.status == 1 %>
 		<div class ='complete_task'>
 	<% end %>
-		<%= task.name %> </div> (Point: <%= task.point %> ) <%= link_to 'Delete' , :action => :delete, :id => task.id %> <br/>
+	
+		<%= task.name %> </div> <div class='task_nav'>(Point: <%= task.point %> ) <%= link_to 'Delete' , :controller => :tasks, :action => :delete, :id => task.id %> 
+		<% if task.status == 0 %>
+		<%= link_to 'Complete' , :controller => :tasks, :action => :complete, :id => task.id %> </div> <br/>
+		<% elsif task.status == 1 %>
+		<%= link_to 'Incomplete' , :controller => :tasks, :action => :incomplete, :id => task.id %> </div> <br/>
+		<% end%>
+		
 	<% end %>
 	<br/>
 <% end%>
