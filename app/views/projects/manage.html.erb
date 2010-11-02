@@ -15,7 +15,7 @@
 		<div class ='complete_task'>
 	<% end %>
 	
-		<%= task.name %> </div> <div class='task_nav'>(Point: <%= task.point %> ) <%= link_to 'Delete' , :controller => :tasks, :action => :delete, :id => task.id %> 
+		<%= task.name %> </div> <div class='task_nav'>(Point: <%= task.point %> ) <%= link_to 'Delete' , :controller => :tasks, :action => :delete, :id => task.id %> |
 		<% if task.status == 0 %>
 		<%= link_to 'Complete' , :controller => :tasks, :action => :complete, :id => task.id %> </div> <br/>
 		<% elsif task.status == 1 %>
