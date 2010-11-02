@@ -1,6 +1,10 @@
 <span class="section-header span-18"> Groups </span>
 <span class="span-6 last"> <%= link_to "+ create new group", new_group_path %> </span>
 
-<% (1..10).each do %>
-  <%= render :partial => 'group_partial' %>
+<% @groups.each do |group| %>
+  <%= render :partial => 'group_partial',
+ 			 :locals => {
+				:group => group
+			 }
+  %>
 <% end %>
