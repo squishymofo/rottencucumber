@@ -14358,3 +14358,120 @@ Completed 200 OK in 333ms (Views: 23.2ms | ActiveRecord: 39.0ms)
   [1m[36mSQL (44.4ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20101030013352')[0m
   [1m[35mSQL (44.4ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20101101003722')
   [1m[36mSQL (44.4ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20101101075247')[0m
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (482.8ms)[0m  DROP DATABASE IF EXISTS `rottencucumber_test`
+  [1m[36mSQL (0.7ms)[0m  [1mCREATE DATABASE `rottencucumber_test` DEFAULT CHARACTER SET `utf8`[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW TABLES
+  [1m[36mSQL (129.9ms)[0m  [1mCREATE TABLE `groups` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime, `organization_id` int(11)) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.7ms)[0m  SHOW TABLES
+  [1m[36mSQL (131.0ms)[0m  [1mCREATE TABLE `organizations` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` text, `created_at` datetime, `updated_at` datetime, `creator_id` int(11)) ENGINE=InnoDB[0m
+  [1m[35mSQL (1.2ms)[0m  SHOW TABLES
+  [1m[36mSQL (120.1ms)[0m  [1mCREATE TABLE `projects` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` varchar(255), `organization_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.8ms)[0m  SHOW TABLES
+  [1m[36mSQL (119.0ms)[0m  [1mCREATE TABLE `tasks` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` text, `due` datetime, `point` int(11), `group_id` int(11), `project_id` int(11), `created_at` datetime, `updated_at` datetime, `status` int(11) DEFAULT 0) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.9ms)[0m  SHOW TABLES
+  [1m[36mSQL (119.7ms)[0m  [1mCREATE TABLE `user_actions` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `ip` varchar(255), `url` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (1.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (88.3ms)[0m  [1mCREATE TABLE `user_groups` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11), `group_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (1.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (98.1ms)[0m  [1mCREATE TABLE `user_organizations` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `organization_id` int(11), `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (1.2ms)[0m  SHOW TABLES
+  [1m[36mSQL (97.2ms)[0m  [1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `email` varchar(255), `crypted_password` varchar(255), `password_salt` varchar(255), `persistence_token` varchar(255), `active` tinyint(1), `perishable_token` varchar(255), `created_at` datetime, `updated_at` datetime, `first_name` varchar(255), `last_name` varchar(255)) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.9ms)[0m  SHOW TABLES
+  [1m[36mSQL (110.0ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35mSQL (1.0ms)[0m  SHOW KEYS FROM `schema_migrations`
+  [1m[36mSQL (235.2ms)[0m  [1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [1m[35mSQL (1.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.8ms)[0m  [1mSELECT version FROM `schema_migrations`[0m
+  [1m[35mSQL (40.2ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20101102001912')
+  [1m[36mSQL (44.3ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20101029221616')[0m
+  [1m[35mSQL (44.4ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20101101001621')
+  [1m[36mSQL (56.8ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20101101093918')[0m
+  [1m[35mSQL (44.5ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20101029194241')
+  [1m[36mSQL (44.3ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20101101002314')[0m
+  [1m[35mSQL (44.3ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20101031235423')
+  [1m[36mSQL (44.4ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20101031235503')[0m
+  [1m[35mSQL (44.3ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20101031235354')
+  [1m[36mSQL (44.1ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20101030013352')[0m
+  [1m[35mSQL (44.4ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20101101003722')
+  [1m[36mSQL (44.3ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20101101075247')[0m
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (456.2ms)[0m  DROP DATABASE IF EXISTS `rottencucumber_test`
+  [1m[36mSQL (0.5ms)[0m  [1mCREATE DATABASE `rottencucumber_test` DEFAULT CHARACTER SET `utf8`[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW TABLES
+  [1m[36mSQL (135.9ms)[0m  [1mCREATE TABLE `groups` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime, `organization_id` int(11)) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.8ms)[0m  SHOW TABLES
+  [1m[36mSQL (109.5ms)[0m  [1mCREATE TABLE `organizations` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` text, `created_at` datetime, `updated_at` datetime, `creator_id` int(11)) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.8ms)[0m  SHOW TABLES
+  [1m[36mSQL (120.4ms)[0m  [1mCREATE TABLE `projects` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` varchar(255), `organization_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (2.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (105.9ms)[0m  [1mCREATE TABLE `tasks` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` text, `due` datetime, `point` int(11), `group_id` int(11), `project_id` int(11), `created_at` datetime, `updated_at` datetime, `status` int(11) DEFAULT 0) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.9ms)[0m  SHOW TABLES
+  [1m[36mSQL (98.0ms)[0m  [1mCREATE TABLE `user_actions` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `ip` varchar(255), `url` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.9ms)[0m  SHOW TABLES
+  [1m[36mSQL (87.9ms)[0m  [1mCREATE TABLE `user_groups` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11), `group_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.9ms)[0m  SHOW TABLES
+  [1m[36mSQL (98.1ms)[0m  [1mCREATE TABLE `user_organizations` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `organization_id` int(11), `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.9ms)[0m  SHOW TABLES
+  [1m[36mSQL (108.7ms)[0m  [1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `email` varchar(255), `crypted_password` varchar(255), `password_salt` varchar(255), `persistence_token` varchar(255), `active` tinyint(1), `perishable_token` varchar(255), `created_at` datetime, `updated_at` datetime, `first_name` varchar(255), `last_name` varchar(255)) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.9ms)[0m  SHOW TABLES
+  [1m[36mSQL (99.2ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.9ms)[0m  SHOW KEYS FROM `schema_migrations`
+  [1m[36mSQL (246.7ms)[0m  [1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [1m[35mSQL (0.9ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.8ms)[0m  [1mSELECT version FROM `schema_migrations`[0m
+  [1m[35mSQL (40.2ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20101102001912')
+  [1m[36mSQL (44.3ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20101029221616')[0m
+  [1m[35mSQL (44.4ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20101101001621')
+  [1m[36mSQL (45.8ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20101101093918')[0m
+  [1m[35mSQL (44.3ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20101029194241')
+  [1m[36mSQL (44.2ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20101101002314')[0m
+  [1m[35mSQL (44.4ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20101031235423')
+  [1m[36mSQL (44.4ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20101031235503')[0m
+  [1m[35mSQL (44.4ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20101031235354')
+  [1m[36mSQL (33.3ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20101030013352')[0m
+  [1m[35mSQL (43.3ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20101101003722')
+  [1m[36mSQL (44.4ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20101101075247')[0m
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (464.0ms)[0m  DROP DATABASE IF EXISTS `rottencucumber_test`
+  [1m[36mSQL (0.5ms)[0m  [1mCREATE DATABASE `rottencucumber_test` DEFAULT CHARACTER SET `utf8`[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW TABLES
+  [1m[36mSQL (119.1ms)[0m  [1mCREATE TABLE `groups` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime, `organization_id` int(11)) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.8ms)[0m  SHOW TABLES
+  [1m[36mSQL (108.7ms)[0m  [1mCREATE TABLE `organizations` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` text, `created_at` datetime, `updated_at` datetime, `creator_id` int(11)) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.8ms)[0m  SHOW TABLES
+  [1m[36mSQL (97.2ms)[0m  [1mCREATE TABLE `projects` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` varchar(255), `organization_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.8ms)[0m  SHOW TABLES
+  [1m[36mSQL (103.0ms)[0m  [1mCREATE TABLE `tasks` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` text, `due` datetime, `point` int(11), `group_id` int(11), `project_id` int(11), `created_at` datetime, `updated_at` datetime, `status` int(11) DEFAULT 0) ENGINE=InnoDB[0m
+  [1m[35mSQL (1.1ms)[0m  SHOW TABLES
+  [1m[36mSQL (86.6ms)[0m  [1mCREATE TABLE `user_actions` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `ip` varchar(255), `url` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.9ms)[0m  SHOW TABLES
+  [1m[36mSQL (99.7ms)[0m  [1mCREATE TABLE `user_groups` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11), `group_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.9ms)[0m  SHOW TABLES
+  [1m[36mSQL (253.3ms)[0m  [1mCREATE TABLE `user_organizations` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `organization_id` int(11), `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (1.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (107.7ms)[0m  [1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `email` varchar(255), `crypted_password` varchar(255), `password_salt` varchar(255), `persistence_token` varchar(255), `active` tinyint(1), `perishable_token` varchar(255), `created_at` datetime, `updated_at` datetime, `first_name` varchar(255), `last_name` varchar(255)) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.9ms)[0m  SHOW TABLES
+  [1m[36mSQL (88.0ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35mSQL (1.0ms)[0m  SHOW KEYS FROM `schema_migrations`
+  [1m[36mSQL (234.8ms)[0m  [1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [1m[35mSQL (1.9ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.8ms)[0m  [1mSELECT version FROM `schema_migrations`[0m
+  [1m[35mSQL (39.0ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20101102001912')
+  [1m[36mSQL (45.8ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20101029221616')[0m
+  [1m[35mSQL (44.2ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20101101001621')
+  [1m[36mSQL (44.4ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20101101093918')[0m
+  [1m[35mSQL (44.4ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20101029194241')
+  [1m[36mSQL (44.3ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20101101002314')[0m
+  [1m[35mSQL (44.3ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20101031235423')
+  [1m[36mSQL (44.4ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20101031235503')[0m
+  [1m[35mSQL (44.3ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20101031235354')
+  [1m[36mSQL (44.3ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20101030013352')[0m
+  [1m[35mSQL (44.6ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20101101003722')
+  [1m[36mSQL (44.1ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20101101075247')[0m
