@@ -13844,3 +13844,517 @@ Completed 200 OK in 254ms (Views: 19.2ms | ActiveRecord: 1.3ms)
   [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20101101003722')[0m
   [1m[35mSQL (0.1ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20101101075247')
   [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20101101093918')[0m
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (488.5ms)[0m  DROP DATABASE IF EXISTS `rottencucumber_test`
+  [1m[36mSQL (0.5ms)[0m  [1mCREATE DATABASE `rottencucumber_test` DEFAULT CHARACTER SET `utf8`[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW TABLES
+  [1m[36mSQL (118.2ms)[0m  [1mCREATE TABLE `groups` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime, `organization_id` int(11)) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.8ms)[0m  SHOW TABLES
+  [1m[36mSQL (97.8ms)[0m  [1mCREATE TABLE `organizations` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` text, `created_at` datetime, `updated_at` datetime, `creator_id` int(11)) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.8ms)[0m  SHOW TABLES
+  [1m[36mSQL (109.2ms)[0m  [1mCREATE TABLE `projects` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` varchar(255), `organization_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (1.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (96.5ms)[0m  [1mCREATE TABLE `tasks` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` text, `due` datetime, `point` int(11), `group_id` int(11), `project_id` int(11), `created_at` datetime, `updated_at` datetime, `status` int(11) DEFAULT 0) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.9ms)[0m  SHOW TABLES
+  [1m[36mSQL (87.8ms)[0m  [1mCREATE TABLE `user_actions` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `ip` varchar(255), `url` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.9ms)[0m  SHOW TABLES
+  [1m[36mSQL (98.6ms)[0m  [1mCREATE TABLE `user_groups` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11), `group_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.9ms)[0m  SHOW TABLES
+  [1m[36mSQL (93.8ms)[0m  [1mCREATE TABLE `user_organizations` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `organization_id` int(11), `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (1.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (100.9ms)[0m  [1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `email` varchar(255), `crypted_password` varchar(255), `password_salt` varchar(255), `persistence_token` varchar(255), `active` tinyint(1), `perishable_token` varchar(255), `created_at` datetime, `updated_at` datetime, `first_name` varchar(255), `last_name` varchar(255)) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.9ms)[0m  SHOW TABLES
+  [1m[36mSQL (99.1ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.9ms)[0m  SHOW KEYS FROM `schema_migrations`
+  [1m[36mSQL (247.9ms)[0m  [1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [1m[35mSQL (1.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.7ms)[0m  [1mSELECT version FROM `schema_migrations`[0m
+  [1m[35mSQL (51.3ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20101102001912')
+  [1m[36mSQL (44.4ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20101029221616')[0m
+  [1m[35mSQL (44.3ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20101101001621')
+  [1m[36mSQL (44.3ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20101101093918')[0m
+  [1m[35mSQL (44.4ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20101029194241')
+  [1m[36mSQL (44.4ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20101101002314')[0m
+  [1m[35mSQL (44.3ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20101031235423')
+  [1m[36mSQL (44.8ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20101031235503')[0m
+  [1m[35mSQL (44.0ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20101031235354')
+  [1m[36mSQL (44.4ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20101030013352')[0m
+  [1m[35mSQL (66.3ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20101101003722')
+  [1m[36mSQL (44.4ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20101101075247')[0m
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (484.0ms)[0m  DROP DATABASE IF EXISTS `rottencucumber_test`
+  [1m[36mSQL (0.5ms)[0m  [1mCREATE DATABASE `rottencucumber_test` DEFAULT CHARACTER SET `utf8`[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW TABLES
+  [1m[36mSQL (115.0ms)[0m  [1mCREATE TABLE `groups` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime, `organization_id` int(11)) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.8ms)[0m  SHOW TABLES
+  [1m[36mSQL (108.4ms)[0m  [1mCREATE TABLE `organizations` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` text, `created_at` datetime, `updated_at` datetime, `creator_id` int(11)) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.8ms)[0m  SHOW TABLES
+  [1m[36mSQL (120.8ms)[0m  [1mCREATE TABLE `projects` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` varchar(255), `organization_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.8ms)[0m  SHOW TABLES
+  [1m[36mSQL (126.8ms)[0m  [1mCREATE TABLE `tasks` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` text, `due` datetime, `point` int(11), `group_id` int(11), `project_id` int(11), `created_at` datetime, `updated_at` datetime, `status` int(11) DEFAULT 0) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.9ms)[0m  SHOW TABLES
+  [1m[36mSQL (120.1ms)[0m  [1mCREATE TABLE `user_actions` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `ip` varchar(255), `url` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (1.1ms)[0m  SHOW TABLES
+  [1m[36mSQL (109.2ms)[0m  [1mCREATE TABLE `user_groups` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11), `group_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (1.2ms)[0m  SHOW TABLES
+  [1m[36mSQL (120.2ms)[0m  [1mCREATE TABLE `user_organizations` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `organization_id` int(11), `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (1.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (108.5ms)[0m  [1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `email` varchar(255), `crypted_password` varchar(255), `password_salt` varchar(255), `persistence_token` varchar(255), `active` tinyint(1), `perishable_token` varchar(255), `created_at` datetime, `updated_at` datetime, `first_name` varchar(255), `last_name` varchar(255)) ENGINE=InnoDB[0m
+  [1m[35mSQL (1.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (122.1ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.9ms)[0m  SHOW KEYS FROM `schema_migrations`
+  [1m[36mSQL (246.5ms)[0m  [1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [1m[35mSQL (1.1ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.8ms)[0m  [1mSELECT version FROM `schema_migrations`[0m
+  [1m[35mSQL (62.3ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20101102001912')
+  [1m[36mSQL (55.4ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20101029221616')[0m
+  [1m[35mSQL (55.4ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20101101001621')
+  [1m[36mSQL (55.4ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20101101093918')[0m
+  [1m[35mSQL (55.8ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20101029194241')
+  [1m[36mSQL (55.1ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20101101002314')[0m
+  [1m[35mSQL (44.6ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20101031235423')
+  [1m[36mSQL (44.1ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20101031235503')[0m
+  [1m[35mSQL (44.4ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20101031235354')
+  [1m[36mSQL (44.2ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20101030013352')[0m
+  [1m[35mSQL (44.4ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20101101003722')
+  [1m[36mSQL (43.8ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20101101075247')[0m
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (20.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (438.1ms)[0m  DROP DATABASE IF EXISTS `rottencucumber_test`
+  [1m[36mSQL (0.5ms)[0m  [1mCREATE DATABASE `rottencucumber_test` DEFAULT CHARACTER SET `utf8`[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW TABLES
+  [1m[36mSQL (124.8ms)[0m  [1mCREATE TABLE `groups` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime, `organization_id` int(11)) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.7ms)[0m  SHOW TABLES
+  [1m[36mSQL (120.5ms)[0m  [1mCREATE TABLE `organizations` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` text, `created_at` datetime, `updated_at` datetime, `creator_id` int(11)) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.8ms)[0m  SHOW TABLES
+  [1m[36mSQL (120.7ms)[0m  [1mCREATE TABLE `projects` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` varchar(255), `organization_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.8ms)[0m  SHOW TABLES
+  [1m[36mSQL (120.3ms)[0m  [1mCREATE TABLE `tasks` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` text, `due` datetime, `point` int(11), `group_id` int(11), `project_id` int(11), `created_at` datetime, `updated_at` datetime, `status` int(11) DEFAULT 0) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.9ms)[0m  SHOW TABLES
+  [1m[36mSQL (109.8ms)[0m  [1mCREATE TABLE `user_actions` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `ip` varchar(255), `url` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.9ms)[0m  SHOW TABLES
+  [1m[36mSQL (120.6ms)[0m  [1mCREATE TABLE `user_groups` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11), `group_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.9ms)[0m  SHOW TABLES
+  [1m[36mSQL (120.6ms)[0m  [1mCREATE TABLE `user_organizations` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `organization_id` int(11), `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.9ms)[0m  SHOW TABLES
+  [1m[36mSQL (119.8ms)[0m  [1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `email` varchar(255), `crypted_password` varchar(255), `password_salt` varchar(255), `persistence_token` varchar(255), `active` tinyint(1), `perishable_token` varchar(255), `created_at` datetime, `updated_at` datetime, `first_name` varchar(255), `last_name` varchar(255)) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.9ms)[0m  SHOW TABLES
+  [1m[36mSQL (124.0ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35mSQL (1.3ms)[0m  SHOW KEYS FROM `schema_migrations`
+  [1m[36mSQL (233.9ms)[0m  [1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [1m[35mSQL (1.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.7ms)[0m  [1mSELECT version FROM `schema_migrations`[0m
+  [1m[35mSQL (62.5ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20101102001912')
+  [1m[36mSQL (66.5ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20101029221616')[0m
+  [1m[35mSQL (66.6ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20101101001621')
+  [1m[36mSQL (44.3ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20101101093918')[0m
+  [1m[35mSQL (44.4ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20101029194241')
+  [1m[36mSQL (44.3ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20101101002314')[0m
+  [1m[35mSQL (44.6ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20101031235423')
+  [1m[36mSQL (44.3ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20101031235503')[0m
+  [1m[35mSQL (44.4ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20101031235354')
+  [1m[36mSQL (44.4ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20101030013352')[0m
+  [1m[35mSQL (44.3ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20101101003722')
+  [1m[36mSQL (44.4ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20101101075247')[0m
+  [1m[36mSQL (32.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (1.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (457.2ms)[0m  DROP DATABASE IF EXISTS `rottencucumber_test`
+  [1m[36mSQL (0.5ms)[0m  [1mCREATE DATABASE `rottencucumber_test` DEFAULT CHARACTER SET `utf8`[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW TABLES
+  [1m[36mSQL (133.8ms)[0m  [1mCREATE TABLE `groups` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime, `organization_id` int(11)) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.8ms)[0m  SHOW TABLES
+  [1m[36mSQL (109.2ms)[0m  [1mCREATE TABLE `organizations` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` text, `created_at` datetime, `updated_at` datetime, `creator_id` int(11)) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.8ms)[0m  SHOW TABLES
+  [1m[36mSQL (131.6ms)[0m  [1mCREATE TABLE `projects` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` varchar(255), `organization_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.9ms)[0m  SHOW TABLES
+  [1m[36mSQL (122.0ms)[0m  [1mCREATE TABLE `tasks` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` text, `due` datetime, `point` int(11), `group_id` int(11), `project_id` int(11), `created_at` datetime, `updated_at` datetime, `status` int(11) DEFAULT 0) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.9ms)[0m  SHOW TABLES
+  [1m[36mSQL (131.3ms)[0m  [1mCREATE TABLE `user_actions` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `ip` varchar(255), `url` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.9ms)[0m  SHOW TABLES
+  [1m[36mSQL (122.0ms)[0m  [1mCREATE TABLE `user_groups` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11), `group_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.9ms)[0m  SHOW TABLES
+  [1m[36mSQL (109.4ms)[0m  [1mCREATE TABLE `user_organizations` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `organization_id` int(11), `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (1.2ms)[0m  SHOW TABLES
+  [1m[36mSQL (119.6ms)[0m  [1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `email` varchar(255), `crypted_password` varchar(255), `password_salt` varchar(255), `persistence_token` varchar(255), `active` tinyint(1), `perishable_token` varchar(255), `created_at` datetime, `updated_at` datetime, `first_name` varchar(255), `last_name` varchar(255)) ENGINE=InnoDB[0m
+  [1m[35mSQL (1.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (108.2ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.9ms)[0m  SHOW KEYS FROM `schema_migrations`
+  [1m[36mSQL (257.2ms)[0m  [1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [1m[35mSQL (1.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.7ms)[0m  [1mSELECT version FROM `schema_migrations`[0m
+  [1m[35mSQL (51.3ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20101102001912')
+  [1m[36mSQL (44.4ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20101029221616')[0m
+  [1m[35mSQL (44.3ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20101101001621')
+  [1m[36mSQL (45.8ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20101101093918')[0m
+  [1m[35mSQL (33.2ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20101029194241')
+  [1m[36mSQL (44.3ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20101101002314')[0m
+  [1m[35mSQL (44.2ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20101031235423')
+  [1m[36mSQL (44.5ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20101031235503')[0m
+  [1m[35mSQL (44.3ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20101031235354')
+  [1m[36mSQL (44.3ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20101030013352')[0m
+  [1m[35mSQL (44.4ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20101101003722')
+  [1m[36mSQL (44.3ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20101101075247')[0m
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (455.1ms)[0m  DROP DATABASE IF EXISTS `rottencucumber_test`
+  [1m[36mSQL (0.5ms)[0m  [1mCREATE DATABASE `rottencucumber_test` DEFAULT CHARACTER SET `utf8`[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW TABLES
+  [1m[36mSQL (110.6ms)[0m  [1mCREATE TABLE `groups` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime, `organization_id` int(11)) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.7ms)[0m  SHOW TABLES
+  [1m[36mSQL (131.7ms)[0m  [1mCREATE TABLE `organizations` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` text, `created_at` datetime, `updated_at` datetime, `creator_id` int(11)) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.8ms)[0m  SHOW TABLES
+  [1m[36mSQL (120.1ms)[0m  [1mCREATE TABLE `projects` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` varchar(255), `organization_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.8ms)[0m  SHOW TABLES
+  [1m[36mSQL (133.0ms)[0m  [1mCREATE TABLE `tasks` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` text, `due` datetime, `point` int(11), `group_id` int(11), `project_id` int(11), `created_at` datetime, `updated_at` datetime, `status` int(11) DEFAULT 0) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.9ms)[0m  SHOW TABLES
+  [1m[36mSQL (121.4ms)[0m  [1mCREATE TABLE `user_actions` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `ip` varchar(255), `url` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.9ms)[0m  SHOW TABLES
+  [1m[36mSQL (131.6ms)[0m  [1mCREATE TABLE `user_groups` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11), `group_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.9ms)[0m  SHOW TABLES
+  [1m[36mSQL (98.3ms)[0m  [1mCREATE TABLE `user_organizations` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `organization_id` int(11), `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (1.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (119.9ms)[0m  [1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `email` varchar(255), `crypted_password` varchar(255), `password_salt` varchar(255), `persistence_token` varchar(255), `active` tinyint(1), `perishable_token` varchar(255), `created_at` datetime, `updated_at` datetime, `first_name` varchar(255), `last_name` varchar(255)) ENGINE=InnoDB[0m
+  [1m[35mSQL (1.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (121.4ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35mSQL (1.0ms)[0m  SHOW KEYS FROM `schema_migrations`
+  [1m[36mSQL (224.4ms)[0m  [1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [1m[35mSQL (1.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.9ms)[0m  [1mSELECT version FROM `schema_migrations`[0m
+  [1m[35mSQL (52.6ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20101102001912')
+  [1m[36mSQL (44.3ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20101029221616')[0m
+  [1m[35mSQL (44.4ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20101101001621')
+  [1m[36mSQL (44.5ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20101101093918')[0m
+  [1m[35mSQL (33.2ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20101029194241')
+  [1m[36mSQL (33.2ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20101101002314')[0m
+  [1m[35mSQL (44.5ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20101031235423')
+  [1m[36mSQL (44.4ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20101031235503')[0m
+  [1m[35mSQL (44.3ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20101031235354')
+  [1m[36mSQL (44.5ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20101030013352')[0m
+  [1m[35mSQL (44.4ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20101101003722')
+  [1m[36mSQL (44.5ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20101101075247')[0m
+
+
+Started GET "/" for 127.0.0.1 at Tue Nov 02 12:52:08 -0700 2010
+  Processing by LandingController#index as HTML
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /home/james/school/se/project-dir/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (4.4ms)[0m  [1mdescribe `user_actions`[0m
+  [1m[35mSQL (4.4ms)[0m  INSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-02 19:52:08', '127.0.0.1', '2010-11-02 19:52:08', '/')
+  [1m[36mSQL (55.0ms)[0m  [1mCOMMIT[0m
+Rendered landing/_new_unknown_user.html.erb (2.0ms)
+Rendered layouts/_header.html.erb (10.1ms)
+Rendered landing/index.html.erb within layouts/application (32.1ms)
+Completed 200 OK in 628ms (Views: 41.5ms | ActiveRecord: 64.4ms)
+
+
+Started GET "/user_sessions/new" for 127.0.0.1 at Tue Nov 02 12:52:12 -0700 2010
+  Processing by UserSessionsController#new as JS
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /home/james/school/se/project-dir/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-02 19:52:12', '127.0.0.1', '2010-11-02 19:52:12', '/user_sessions/new')[0m
+  [1m[35mSQL (64.1ms)[0m  COMMIT
+Rendered user_sessions/_signin.html.erb (5.7ms)
+Rendered user_sessions/new.js.erb (8.5ms)
+Completed 200 OK in 307ms (Views: 14.8ms | ActiveRecord: 64.5ms)
+
+
+Started POST "/signin_user" for 127.0.0.1 at Tue Nov 02 12:52:17 -0700 2010
+  Processing by UserSessionsController#create as HTML
+  Parameters: {"commit"=>"Sign in", "user_session"=>{"password"=>"[FILTERED]", "email"=>"spitfire67@berkeley.edu"}, "authenticity_token"=>"zhkW88UYdbHlI2vjL8R1KTqHbcl2a04W8u1Lnsvx5hA=", "utf8"=>"\342\234\223"}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /home/james/school/se/project-dir/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-02 19:52:17', '127.0.0.1', '2010-11-02 19:52:17', '/signin_user')
+  [1m[36mSQL (55.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE (LOWER(`users`.email) = 'spitfire67@berkeley.edu') LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 442ms
+
+
+Started GET "/" for 127.0.0.1 at Tue Nov 02 12:52:18 -0700 2010
+  Processing by LandingController#index as HTML
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /home/james/school/se/project-dir/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-02 19:52:18', '127.0.0.1', '2010-11-02 19:52:18', '/')
+  [1m[36mSQL (47.9ms)[0m  [1mCOMMIT[0m
+Rendered landing/_new_unknown_user.html.erb (2.4ms)
+Rendered layouts/_header.html.erb (148.0ms)
+Rendered landing/index.html.erb within layouts/application (159.1ms)
+Completed 200 OK in 288ms (Views: 168.0ms | ActiveRecord: 48.3ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at Tue Nov 02 12:52:21 -0700 2010
+  Processing by UsersController#new as JS
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /home/james/school/se/project-dir/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-02 19:52:21', '127.0.0.1', '2010-11-02 19:52:21', '/users/new')[0m
+  [1m[35mSQL (53.1ms)[0m  COMMIT
+Rendered shared/_error_messages.html.erb (0.8ms)
+Rendered users/_new_user.html.erb (15.7ms)
+Rendered users/new.js.erb (18.5ms)
+Completed 200 OK in 136ms (Views: 21.5ms | ActiveRecord: 110.0ms)
+
+
+Started POST "/sign_me_up" for 127.0.0.1 at Tue Nov 02 12:52:26 -0700 2010
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Sign up", "authenticity_token"=>"zhkW88UYdbHlI2vjL8R1KTqHbcl2a04W8u1Lnsvx5hA=", "utf8"=>"\342\234\223", "email"=>"spitfire67@berkeley.edu"}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /home/james/school/se/project-dir/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-02 19:52:26', '127.0.0.1', '2010-11-02 19:52:26', '/sign_me_up')
+  [1m[36mSQL (45.7ms)[0m  [1mCOMMIT[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('spitfire67@berkeley.edu')) LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.`id` FROM `users` WHERE (`users`.`persistence_token` = BINARY 'f6f7d1bf94cd3a2f318ef8e0d508cf66650fecd2310fd446b8981a5dd47ebeaf1574d1e3428e0c08db957370f482b3c0f26274a08ec1cb156355685ab30eb730') LIMIT 1
+  [1m[36mSQL (1.4ms)[0m  [1mdescribe `users`[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `users` (`active`, `created_at`, `crypted_password`, `email`, `first_name`, `last_name`, `password_salt`, `perishable_token`, `persistence_token`, `updated_at`) VALUES (NULL, '2010-11-02 19:52:26', NULL, 'spitfire67@berkeley.edu', NULL, NULL, NULL, '4izXJgI6NXXM01zMr9JE', 'f6f7d1bf94cd3a2f318ef8e0d508cf66650fecd2310fd446b8981a5dd47ebeaf1574d1e3428e0c08db957370f482b3c0f26274a08ec1cb156355685ab30eb730', '2010-11-02 19:52:26')
+  [1m[36mSQL (42.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE `users` SET `perishable_token` = 'wWNvS6bz5PdAR00nLdFM', `updated_at` = '2010-11-02 19:52:26' WHERE (`users`.`id` = 1)[0m
+  [1m[35mSQL (41.3ms)[0m  COMMIT
+Rendered user_mailer/activation_instructions.text.erb (7.3ms)
+
+Sent mail to spitfire67@berkeley.edu (4456ms)
+Date: Tue, 02 Nov 2010 12:52:27 -0700
+From: NitrousDomus@gmail.com
+To: spitfire67@berkeley.edu
+Message-ID: <4cd06bfb5c16_a2e24caac9e545a4@james-laptop.mail>
+Subject: Activation Instructions
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hello,
+
+Go here to confirm your email:
+
+  http://localhost:3000/register/wWNvS6bz5PdAR00nLdFM
+
+If the above URL does not work, try copying and pasting it into your browser. If you continue to have problems, please feel free to contact us.
+Redirected to http://localhost:3000/?check_email=1
+Completed 302 Found in 4966ms
+
+
+Started GET "/?check_email=1" for 127.0.0.1 at Tue Nov 02 12:52:31 -0700 2010
+  Processing by LandingController#index as HTML
+  Parameters: {"check_email"=>"1"}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /home/james/school/se/project-dir/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-02 19:52:31', '127.0.0.1', '2010-11-02 19:52:31', '/?check_email=1')
+  [1m[36mSQL (49.2ms)[0m  [1mCOMMIT[0m
+Rendered users/_check_email.html.erb (0.4ms)
+Rendered layouts/_header.html.erb (6.2ms)
+Rendered landing/index.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 403ms (Views: 22.6ms | ActiveRecord: 50.0ms)
+
+
+Started GET "/register/wWNvS6bz5PdAR00nLdFM" for 127.0.0.1 at Tue Nov 02 12:53:03 -0700 2010
+  Processing by ActivationsController#new as HTML
+  Parameters: {"activation_code"=>"wWNvS6bz5PdAR00nLdFM"}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /home/james/school/se/project-dir/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-02 19:53:03', '127.0.0.1', '2010-11-02 19:53:03', '/register/wWNvS6bz5PdAR00nLdFM')[0m
+  [1m[35mSQL (57.1ms)[0m  COMMIT
+DEPRECATION WARNING: Setting the active navigation in the controllers has been deprecated. Please use the new :highlights_on option in the config file for explicit highlighting. (called from new at /home/james/school/se/project-dir/rottencucumber/app/controllers/activations_controller.rb:4)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (perishable_token = 'wWNvS6bz5PdAR00nLdFM' and updated_at > '2010-10-26 19:53:04') LIMIT 1[0m
+Rendered activations/_confirming_new_user.html.erb (3.2ms)
+Rendered layouts/_header.html.erb (194.7ms)
+Rendered landing/index.html.erb within layouts/application (205.6ms)
+Completed 200 OK in 356ms (Views: 212.1ms | ActiveRecord: 58.0ms)
+
+
+Started POST "/activate/1" for 127.0.0.1 at Tue Nov 02 12:53:17 -0700 2010
+  Processing by ActivationsController#create as HTML
+  Parameters: {"commit"=>"Big save button", "password_confirmation"=>"[FILTERED]", "authenticity_token"=>"zhkW88UYdbHlI2vjL8R1KTqHbcl2a04W8u1Lnsvx5hA=", "utf8"=>"\342\234\223", "id"=>"1", "last_name"=>"Butkovic", "password"=>"[FILTERED]", "first_name"=>"James"}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /home/james/school/se/project-dir/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-02 19:53:18', '127.0.0.1', '2010-11-02 19:53:18', '/activate/1')[0m
+  [1m[35mSQL (65.3ms)[0m  COMMIT
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (`users`.`persistence_token` = BINARY 'cf47c8a657065cb579a6f096019a011df75d7ffceaf26feb5476ac3547a713e11ce0fdb873aa04d79b686df05f1b0cad1202de5202523c9f36c060a3fe22c707') AND (`users`.id <> 1) LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE `users` SET `active` = 1, `crypted_password` = '8b5ad6e8391704d2df7c2a79be53df54415dc98305bc051e7c836d6d90bed2b70f3c2f22eeeacca3702955370f1790077d33150ffc0f0cf991ca4165e0a15517', `password_salt` = 'mMoVm11OocNVgzsGrze0', `perishable_token` = 'Qqb9JNNt5ASA2rSx4h7I', `persistence_token` = 'cf47c8a657065cb579a6f096019a011df75d7ffceaf26feb5476ac3547a713e11ce0fdb873aa04d79b686df05f1b0cad1202de5202523c9f36c060a3fe22c707', `updated_at` = '2010-11-02 19:53:18' WHERE (`users`.`id` = 1)
+  [1m[36mSQL (59.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE `users` SET `first_name` = 'James', `last_name` = 'Butkovic', `perishable_token` = '3Jjh_WnBrpG2XMNrO-c3', `updated_at` = '2010-11-02 19:53:18' WHERE (`users`.`id` = 1)[0m
+  [1m[35mSQL (37.2ms)[0m  COMMIT
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE `users` SET `perishable_token` = 'mQj6sbc6vGMWs9ldn4Qx', `updated_at` = '2010-11-02 19:53:18' WHERE (`users`.`id` = 1)
+  [1m[36mSQL (41.5ms)[0m  [1mCOMMIT[0m
+Rendered user_mailer/activation_confirmation.text.erb (0.9ms)
+
+Sent mail to spitfire67@berkeley.edu (3240ms)
+Date: Tue, 02 Nov 2010 12:53:18 -0700
+From: NitrousDomus@gmail.com
+To: spitfire67@berkeley.edu
+Message-ID: <4cd06c2e65d3f_a2e24beca1e5464e@james-laptop.mail>
+Subject: Activation Complete
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hello James,
+
+Your email has been verified and you account has been activated.
+
+some other stuff..
+  [1m[35mUser Load (0.9ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendered layouts/_header.html.erb (20.3ms)
+Rendered landing/index.html.erb within layouts/application (32.8ms)
+Completed 200 OK in 3713ms (Views: 51.2ms | ActiveRecord: 207.6ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at Tue Nov 02 12:53:25 -0700 2010
+  Processing by TasksController#index as HTML
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /home/james/school/se/project-dir/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-02 19:53:25', '127.0.0.1', '2010-11-02 19:53:25', '/tasks')[0m
+  [1m[35mSQL (72.7ms)[0m  COMMIT
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+Rendered tasks/_indiv_task.html.erb (1.2ms)
+Rendered tasks/_indiv_task.html.erb (1.1ms)
+Rendered tasks/_indiv_task.html.erb (1.1ms)
+Rendered tasks/_indiv_task.html.erb (1.1ms)
+Rendered tasks/_indiv_task.html.erb (1.1ms)
+Rendered tasks/_indiv_task.html.erb (2.7ms)
+Rendered tasks/_indiv_task.html.erb (1.7ms)
+Rendered tasks/_indiv_task.html.erb (1.0ms)
+Rendered tasks/_indiv_task.html.erb (1.1ms)
+Rendered tasks/_indiv_task.html.erb (1.0ms)
+Rendered tasks/_indiv_task.html.erb (1.0ms)
+Rendered tasks/_indiv_task.html.erb (1.0ms)
+Rendered tasks/_indiv_task.html.erb (2.5ms)
+Rendered tasks/_indiv_task.html.erb (3.7ms)
+Rendered tasks/_indiv_task.html.erb (1.0ms)
+Rendered tasks/_indiv_task.html.erb (1.0ms)
+Rendered tasks/_indiv_task.html.erb (1.0ms)
+Rendered tasks/_indiv_task.html.erb (1.0ms)
+Rendered tasks/_indiv_task.html.erb (1.0ms)
+Rendered tasks/_indiv_task.html.erb (1.0ms)
+Rendered tasks/_indiv_task.html.erb (1.4ms)
+Rendered tasks/_indiv_task.html.erb (1.0ms)
+Rendered tasks/_indiv_task.html.erb (1.0ms)
+Rendered tasks/_indiv_task.html.erb (1.0ms)
+Rendered tasks/_indiv_task.html.erb (1.0ms)
+Rendered tasks/_indiv_task.html.erb (1.0ms)
+Rendered tasks/_indiv_task.html.erb (1.1ms)
+Rendered tasks/_indiv_task.html.erb (1.0ms)
+Rendered tasks/_indiv_task.html.erb (1.0ms)
+Rendered tasks/_indiv_task.html.erb (1.0ms)
+Rendered layouts/_header.html.erb (5.8ms)
+Rendered tasks/index.html.erb within layouts/application (276.5ms)
+Completed 200 OK in 504ms (Views: 282.6ms | ActiveRecord: 73.3ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at Tue Nov 02 12:53:29 -0700 2010
+  Processing by TasksController#new as HTML
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /home/james/school/se/project-dir/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-02 19:53:29', '127.0.0.1', '2010-11-02 19:53:29', '/tasks/new')
+  [1m[36mSQL (63.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (2.2ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendered layouts/_header.html.erb (8.4ms)
+Rendered tasks/new.html.erb within layouts/application (21.1ms)
+Completed 200 OK in 362ms (Views: 27.0ms | ActiveRecord: 66.1ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at Tue Nov 02 12:53:34 -0700 2010
+  Processing by TasksController#new as HTML
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from record_actions at /home/james/school/se/project-dir/rottencucumber/app/controllers/application_controller.rb:22)
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-02 19:53:34', '127.0.0.1', '2010-11-02 19:53:34', '/tasks/new')[0m
+  [1m[35mSQL (38.4ms)[0m  COMMIT
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+Rendered layouts/_header.html.erb (8.8ms)
+Rendered tasks/new.html.erb within layouts/application (17.3ms)
+Completed 200 OK in 333ms (Views: 23.2ms | ActiveRecord: 39.0ms)
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (447.4ms)[0m  DROP DATABASE IF EXISTS `rottencucumber_test`
+  [1m[36mSQL (0.5ms)[0m  [1mCREATE DATABASE `rottencucumber_test` DEFAULT CHARACTER SET `utf8`[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW TABLES
+  [1m[36mSQL (121.7ms)[0m  [1mCREATE TABLE `groups` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime, `organization_id` int(11)) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.8ms)[0m  SHOW TABLES
+  [1m[36mSQL (131.7ms)[0m  [1mCREATE TABLE `organizations` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` text, `created_at` datetime, `updated_at` datetime, `creator_id` int(11)) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.8ms)[0m  SHOW TABLES
+  [1m[36mSQL (120.6ms)[0m  [1mCREATE TABLE `projects` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` varchar(255), `organization_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (1.1ms)[0m  SHOW TABLES
+  [1m[36mSQL (133.3ms)[0m  [1mCREATE TABLE `tasks` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` text, `due` datetime, `point` int(11), `group_id` int(11), `project_id` int(11), `created_at` datetime, `updated_at` datetime, `status` int(11) DEFAULT 0) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.9ms)[0m  SHOW TABLES
+  [1m[36mSQL (120.1ms)[0m  [1mCREATE TABLE `user_actions` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `ip` varchar(255), `url` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.9ms)[0m  SHOW TABLES
+  [1m[36mSQL (133.1ms)[0m  [1mCREATE TABLE `user_groups` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11), `group_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (1.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (131.7ms)[0m  [1mCREATE TABLE `user_organizations` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `organization_id` int(11), `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (1.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (108.8ms)[0m  [1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `email` varchar(255), `crypted_password` varchar(255), `password_salt` varchar(255), `persistence_token` varchar(255), `active` tinyint(1), `perishable_token` varchar(255), `created_at` datetime, `updated_at` datetime, `first_name` varchar(255), `last_name` varchar(255)) ENGINE=InnoDB[0m
+  [1m[35mSQL (1.2ms)[0m  SHOW TABLES
+  [1m[36mSQL (98.8ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35mSQL (1.2ms)[0m  SHOW KEYS FROM `schema_migrations`
+  [1m[36mSQL (212.9ms)[0m  [1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [1m[35mSQL (1.1ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.8ms)[0m  [1mSELECT version FROM `schema_migrations`[0m
+  [1m[35mSQL (144.7ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20101102001912')
+  [1m[36mSQL (46.4ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20101029221616')[0m
+  [1m[35mSQL (43.7ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20101101001621')
+  [1m[36mSQL (44.3ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20101101093918')[0m
+  [1m[35mSQL (44.3ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20101029194241')
+  [1m[36mSQL (44.3ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20101101002314')[0m
+  [1m[35mSQL (44.3ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20101031235423')
+  [1m[36mSQL (44.4ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20101031235503')[0m
+  [1m[35mSQL (44.3ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20101031235354')
+  [1m[36mSQL (44.4ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20101030013352')[0m
+  [1m[35mSQL (44.4ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20101101003722')
+  [1m[36mSQL (44.4ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20101101075247')[0m
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (475.4ms)[0m  DROP DATABASE IF EXISTS `rottencucumber_test`
+  [1m[36mSQL (0.5ms)[0m  [1mCREATE DATABASE `rottencucumber_test` DEFAULT CHARACTER SET `utf8`[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW TABLES
+  [1m[36mSQL (122.1ms)[0m  [1mCREATE TABLE `groups` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime, `organization_id` int(11)) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.7ms)[0m  SHOW TABLES
+  [1m[36mSQL (120.6ms)[0m  [1mCREATE TABLE `organizations` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` text, `created_at` datetime, `updated_at` datetime, `creator_id` int(11)) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.8ms)[0m  SHOW TABLES
+  [1m[36mSQL (109.5ms)[0m  [1mCREATE TABLE `projects` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` varchar(255), `organization_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.8ms)[0m  SHOW TABLES
+  [1m[36mSQL (131.7ms)[0m  [1mCREATE TABLE `tasks` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` text, `due` datetime, `point` int(11), `group_id` int(11), `project_id` int(11), `created_at` datetime, `updated_at` datetime, `status` int(11) DEFAULT 0) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.9ms)[0m  SHOW TABLES
+  [1m[36mSQL (120.3ms)[0m  [1mCREATE TABLE `user_actions` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `ip` varchar(255), `url` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.9ms)[0m  SHOW TABLES
+  [1m[36mSQL (142.7ms)[0m  [1mCREATE TABLE `user_groups` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11), `group_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.9ms)[0m  SHOW TABLES
+  [1m[36mSQL (99.7ms)[0m  [1mCREATE TABLE `user_organizations` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `organization_id` int(11), `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (1.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (97.7ms)[0m  [1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `email` varchar(255), `crypted_password` varchar(255), `password_salt` varchar(255), `persistence_token` varchar(255), `active` tinyint(1), `perishable_token` varchar(255), `created_at` datetime, `updated_at` datetime, `first_name` varchar(255), `last_name` varchar(255)) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.9ms)[0m  SHOW TABLES
+  [1m[36mSQL (99.2ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35mSQL (1.0ms)[0m  SHOW KEYS FROM `schema_migrations`
+  [1m[36mSQL (224.4ms)[0m  [1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [1m[35mSQL (1.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.8ms)[0m  [1mSELECT version FROM `schema_migrations`[0m
+  [1m[35mSQL (51.3ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20101102001912')
+  [1m[36mSQL (44.2ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20101029221616')[0m
+  [1m[35mSQL (44.5ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20101101001621')
+  [1m[36mSQL (44.3ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20101101093918')[0m
+  [1m[35mSQL (34.8ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20101029194241')
+  [1m[36mSQL (44.4ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20101101002314')[0m
+  [1m[35mSQL (55.4ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20101031235423')
+  [1m[36mSQL (44.3ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20101031235503')[0m
+  [1m[35mSQL (44.5ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20101031235354')
+  [1m[36mSQL (44.4ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20101030013352')[0m
+  [1m[35mSQL (44.4ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20101101003722')
+  [1m[36mSQL (44.4ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20101101075247')[0m
