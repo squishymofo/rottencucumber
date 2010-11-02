@@ -4,7 +4,7 @@ Given /^I'm logged in as a leader$/ do
 end
 
 Given /^there is a user with email "([^"]*)"$/ do |arg1|
-    !User.where(:email => arg1).nil? || User.create!(:email => arg1, :password => "password", :password_confirmation => "password")
+    User.create!(:email => arg1, :password => "password", :password_confirmation => "password")
 end
 
 Given /^that a user with email "([^"]*)" and password "([^"]*)" and first name "([^"]*)" exists and is valid$/ do |email, password, first_name|
