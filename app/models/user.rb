@@ -18,15 +18,9 @@ class User < ActiveRecord::Base
   
   has_many :invited_users, :class_name => "User", :foreign_key => "invited_by_id"
   belongs_to :invited_by, :class_name => "User", :foreign_key => "invited_by_id"
-<<<<<<< HEAD
 
   validates :email, :format => { :with => /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i }
-=======
   
-  has_many :tickets
-  has_many :time_slots, :through => :tickets
->>>>>>> 9e0a3a14349ad4a124384bb120596e520eca765b
-
     # !!!! willl need to change back once fb connect etc
   def has_no_credentials?
     # self.crypted_password.blank? && AccessToken.find_by_user_id(id).nil?
