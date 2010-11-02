@@ -13,6 +13,7 @@ Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.0ms)
 Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms)
   Processing by TasksController#create as HTML
 Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+<<<<<<< HEAD
 
 
 Started GET "/" for 127.0.0.1 at Mon Nov 01 14:29:52 -0700 2010
@@ -5225,3 +5226,20 @@ Completed 200 OK in 185ms (Views: 30.0ms | ActiveRecord: 0.8ms)
  WHERE type = 'table' AND NOT name = 'sqlite_sequence'
   [1m[36mSQL (85.6ms)[0m  [1mDELETE FROM "user_actions";[0m
   [1m[35mSQL (55.3ms)[0m  DELETE FROM "users";
+=======
+  Processing by GroupsController#show as HTML
+Rendered groups/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.0ms)
+  Processing by GroupsController#new as HTML
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+  Processing by GroupsController#create as HTML
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.0ms)
+  Processing by LandingController#index as HTML
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+  Processing by TasksController#index as HTML
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+  Processing by TasksController#new as HTML
+Completed 200 OK in 2ms (Views: 2.1ms | ActiveRecord: 0.0ms)
+  Processing by TasksController#create as HTML
+Completed 200 OK in 2ms (Views: 2.1ms | ActiveRecord: 0.0ms)
+>>>>>>> 9e0a3a14349ad4a124384bb120596e520eca765b

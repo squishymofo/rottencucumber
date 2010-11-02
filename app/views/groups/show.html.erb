@@ -1,2 +1,13 @@
-<h1>Groups#show</h1>
-<p>Find me in app/views/groups/show.html.erb</p>
+Group name: 
+<%= @group.name %>
+<br />
+
+Belongs to organization: 
+<%= @group.organization.name %>
+<br />
+
+Members: 
+<% usrs = @group.users %>
+<% usrs.each do |usr| %>
+	<%= usr.first_name + " " + usr.last_name + " (" + usr.email + "), " %>
+<% end %>

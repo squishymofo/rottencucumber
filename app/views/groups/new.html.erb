@@ -1,9 +1,20 @@
 <span class="section-header span-24"> Create a new group -- we'll write some js here... </span>
+
 <div class="span-8 clear list-group-members">
-  <% (1..4).each do %>
-    Some available person
-    <br />
-  <% end %>
+	<!-- @joined_orgs is an list of Organizations that the current user is part of -->
+	<% @joined_orgs.each do |joined_org| %>
+		<% usrs = joined_org.users %>
+		<% usrs.each do |usr| %>
+			<%= usr.first_name + " " + usr.last_name + " " + joined_org.name %>
+			<br/ >
+		<% end %>
+	<% end %>
+	<!--
+  	<% (1..4).each do %>
+    	Some available person
+    	<br />
+  		<% end %>
+	-->
 </div>
 <div class="span-6 prepend-1">
   <div class="span-4"> Move member over arrow </div>
@@ -20,9 +31,17 @@
 <div class="prepend-15 span-9 prepend-top">
   <%= form_for groups_path do %>
     <br />
-    <%= label_tag "Enter group name " %>
+    <%= label_tag "Enter group name: " %>
     <%= text_field_tag :group_name %>
     <br />
+	<%= label_tag "Assign to organization: " %>
+	<% orgs_array = @joined_orgs.map { |org| [org.name, org.id] } %>
+	<% if !orgs_array.empty? %>
+		<%= select_tag :selected_org, options_for_select(orgs_array) %> <br/>
+	<% else %>
+		<%= "You have not created any organizations yet."%> <br/>
+	<% end %>
+	<br />
     <%= submit_tag "create", :class => 'span-3' %>
   <% end %>
   <%= button_to "cancel", root_url, :method => 'GET', :class => 'span-3' %>

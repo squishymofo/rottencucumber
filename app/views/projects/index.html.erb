@@ -1,0 +1,4 @@
+
+<% @projects.each do | project | %>
+	<%= link_to project.name, :action => :manage, :id => project.id %> <br/>
+<% end %>

@@ -56,3 +56,20 @@
 .list-group-members {
   border: 1px solid black;
 }
+
+/* line 38, ../../app/stylesheets/style.sass */
+.complete_task {
+  float: left;
+  color: green;
+}
+
+/* line 42, ../../app/stylesheets/style.sass */
+.incomplete_task {
+  float: left;
+  color: red;
+}
+
+/* line 46, ../../app/stylesheets/style.sass */
+.task_nav {
+  float: right;
+}

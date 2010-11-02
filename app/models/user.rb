@@ -1,7 +1,12 @@
 class User < ActiveRecord::Base
   attr_accessible :username, :email, :password, :password_confirmation
-
-
+  
+  has_many :user_organizations
+  has_many :organizations, :through => :user_organizations
+  
+  has_many :user_groups
+  has_many :groups, :through => :user_groups
+  
   acts_as_authentic do |c|
     c.login_field = 'email'
     c.validates_length_of_password_field_options = {:on => :update, :minimum => 4, :if => :has_no_credentials?}
@@ -10,20 +15,26 @@ class User < ActiveRecord::Base
     #c.validate_login_field    = false
     #c.validate_password_field = false
   end
-
+  
   has_many :invited_users, :class_name => "User", :foreign_key => "invited_by_id"
   belongs_to :invited_by, :class_name => "User", :foreign_key => "invited_by_id"
+<<<<<<< HEAD
 
   validates :email, :format => { :with => /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i }
+=======
+  
+  has_many :tickets
+  has_many :time_slots, :through => :tickets
+>>>>>>> 9e0a3a14349ad4a124384bb120596e520eca765b
 
     # !!!! willl need to change back once fb connect etc
   def has_no_credentials?
     # self.crypted_password.blank? && AccessToken.find_by_user_id(id).nil?
     self.crypted_password.blank?
   end
-
+  
   has_one :access_token
-
+  
   def active?
     active
   end
