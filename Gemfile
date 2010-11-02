@@ -8,7 +8,7 @@ gem 'rails', '3.0.0'
 gem 'sqlite3-ruby', :require => 'sqlite3'
 
 # Cuke stuff
-gem 'capybara' # decide on this or webrat
+gem 'capybara'
 gem 'webrat'
 gem 'database_cleaner'
 gem 'cucumber-rails'
