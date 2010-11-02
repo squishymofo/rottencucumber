@@ -1,9 +1,21 @@
-Feature: assertion of completion
-	As a group member
-	I want to be able to tell a leader that I have completed a task
-
-	Scenario: assertion of completion
-		Given I’m logged in as a group member
-		And I’m in the task progress page for a specific task
-		When I click the “I’m done!” button
-		Then I should see a notification page saying that the task completion is waiting for the leader’s approval
+Feature: Marking Task Completion As A Leader
+	In order to keep track of progress
+	As an organization leader
+	I want to be able to create a project
+	I want to also be able to add task to a newly created project
+	
+	@javascript
+	Scenario: Project Creation
+		Given I am on the homepage
+		When I press "I am a member"
+		And I fill in my password and login
+		And I press "Sign in"
+		When I go to the project creation page
+		And I fill in "Name" with "Grow More Cucumbers"
+		And I fill in "Description" with "All of our cucumbers are rotten"
+		And I press "Create Project"
+		Then I should see "Grow More Cucumbers"
+		
+		
+		
+		

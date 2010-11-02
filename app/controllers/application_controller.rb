@@ -34,8 +34,7 @@ class ApplicationController < ActionController::Base
   def require_user
     unless current_user
       store_location
-      #redirect_to new_user_session_url
-      redirect_to developer_login_path
+      redirect_to new_user_session_url
       return false
     end
   end
