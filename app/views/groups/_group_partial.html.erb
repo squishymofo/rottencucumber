@@ -1,4 +1,27 @@
 <div class="span-12 group-index-partial">
+  <!-- NOTE: group is a local variable passed in through the index view -->
+  <span class="span-8 colborder"><%= group.name %></span> <!-- display the organization name too? -->
+  <span class="span-3 last"> <%= link_to 'edit_group', group_path(group) %> </span>
+  <hr />
+  <span class="span-11">
+  	<% usrs = group.users %>
+	<% usrs.each do |usr| %>
+		<%= usr.first_name + " " + usr.last_name + ", " %>
+	<% end %>
+  </span>
+  <hr />
+  Tasks
+  <% tasks = group.tasks %>
+  <% tasks.each do |task| %>
+	<%= link_to task.name, task_path(task) %>
+	<br />
+  <% end %>
+  <br />
+  <%= link_to "+ Add a task", new_task_path %>
+</div>
+
+<!--Previous version
+<div class="span-12 group-index-partial">
   <span class="span-8 colborder"> The rotten cukumbers </span>
   <span class="span-3 last"> <%= link_to 'edit_group', groups_path %> </span>
   <hr />
@@ -11,5 +34,5 @@
   Tasks 2
   <br />
   <%= link_to "+ Add a task", new_task_path %>
-
 </div>
+-->
