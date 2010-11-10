@@ -6,6 +6,7 @@ $(function () {
     position: "center",
     dialogClass: 'some-class',
     modal: true,
+    close: function(event, ui) {  $("body").prepend("<%= escape_javascript(render :partial => 'shared/new_dialog_div') %>")},
     buttons: {
       "Ok": function() {
         $(this).dialog('close');

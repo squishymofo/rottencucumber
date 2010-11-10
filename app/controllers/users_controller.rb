@@ -6,26 +6,20 @@ class UsersController < ApplicationController
   end
 
   def create
-    # need to make this not-ajax..
     @user = User.new(params[:user])
-    if (params[:oauth_provider] || params[:code] || params[:oauth_token])
+    oath = params[:oauth_provider] || params[:code] || params[:oauth_token]
+    if oath
       @user.save do |result|
         if result
           if @user.access_token.type == "FacebookToken"
-            profile = JSON.parse(@user.access_token.get("/me"))
-            @user.email = profile["email"]
-            @user.first_name = profile["first_name"]
-            @user.last_name = profile["last_name"]
-            @user.active = true
+            @user.signup_with_facebook 
             @user.deliver_activation_confirmation!
-            @user.save
             UserSession.create(@user)
           elsif @user.access_token.type == "TwitterToken"
             profile = JSON.parse(@user.access_token.get("/me"))
             @user.email = profile["email"]
           end
           current_user
-          @thank_user = true
           redirect_to root_url(:check_email => 1)
         else
         end

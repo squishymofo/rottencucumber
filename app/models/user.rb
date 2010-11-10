@@ -66,4 +66,13 @@ class User < ActiveRecord::Base
     UserMailer.activation_confirmation(self).deliver
   end
 
+  def signup_with_facebook
+    profile = JSON.parse(@user.access_token.get("/me"))
+    email = profile["email"]
+    first_name = profile["first_name"]
+    last_name = profile["last_name"]
+    active = true
+    save
+  end
+
 end
