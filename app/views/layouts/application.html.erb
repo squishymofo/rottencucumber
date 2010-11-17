@@ -21,7 +21,7 @@
           $('.hide-dia').click(function() {
             $('#dialog-form-new').dialog('close');
             $('#dialog-form').dialog('close');
-        });
+          });
         });
         $('#invite-friends-add').click(function() {
           $.get("/email_invites/new");
@@ -37,15 +37,10 @@
         });
 
       </script>
-<body>
-
-<div class="container move-header-down">
-  <%= render :partial => 'layouts/header' %>
-</div>
-
-<div class="container">
-  <%= yield %>
-</div>
-
-</body>
+    <body>
+      <div id="content" class="container move-header-down">
+        <%= render :partial => 'layouts/header' %>
+        <%= yield %>
+      </div>
+    </body>
 </html>

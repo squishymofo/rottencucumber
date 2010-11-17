@@ -26,7 +26,7 @@
 And /^I fill in my password and login$/ do
   puts page.to_s
   within("#new_user_session") do
-    fill_in 'Email', :with => 'varlain@hotmail.com'
-    fill_in 'Password', :with => 'Monkeypatch'
+    fill_in 'user_session_email', :with => 'varlain@hotmail.com'
+    fill_in 'user_session_password', :with => 'Monkeypatch'
   end
 end

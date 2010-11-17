@@ -9,6 +9,7 @@
       dialogClass: 'some-class',
       title: 'Become a member',
       modal: true,
+      close: function(event, ui) {  $("body").prepend("<%= escape_javascript(render :partial => 'shared/new_dialog_div') %>")}
     });
   });
   $('#sign-up').button();

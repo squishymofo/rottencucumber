@@ -1,10 +1,5 @@
-<% unless @current_user %>
-  <%= render(:partial => 'new_unknown_user') if @unknown_user %>
-  <%= render(:partial => 'users/check_email') if @check_email%>
-  <%= render(:partial => 'activations/confirming_new_user') if @confirming_new_user %>
-  <%= render(:partial => 'activations/thanks_reging') if @thank_user %>
-  <%= render(:partial => 'users/signup_problems') if @signup_problems %>
-<% end %>
+<%= render(:partial => 'landing/incomplete_user') unless @current_user %>
 
+<div class="span-24">
+</div>
 <div id="dialog-form"> </div>
-<%#= "Logged in as #{@current_user.first_name}" if @current_user %>

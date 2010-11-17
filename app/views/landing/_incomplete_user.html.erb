@@ -1,0 +1,5 @@
+<%= render(:partial => 'new_unknown_user') if @unknown_user %>
+<%= render(:partial => 'users/check_email') if @check_email%>
+<%= render(:partial => 'activations/confirming_new_user') if @confirming_new_user %>
+<%= render(:partial => 'activations/thanks_reging') if @thank_user %>
+<%= render(:partial => 'users/signup_problems') if @signup_problems %>
