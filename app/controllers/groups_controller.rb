@@ -1,5 +1,6 @@
 class GroupsController < ApplicationController
   before_filter :current_user
+  before_filter :require_user
   
   def index
     @groups = Group.find(:all)
@@ -11,10 +12,12 @@ class GroupsController < ApplicationController
 
   def new
     @group = Group.new
-    @joined_orgs = @current_user.organizations #organizations that the current user is a part of
+    @joined_orgs = @current_user.organizations 
+    #organizations that the current user is a part of
   end
 
   def create
+    debugger
     @group = Group.new
     @group.name = params[:group][:name]
     @group.organization_id = params[:group][:selected_org]    

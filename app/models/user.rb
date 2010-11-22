@@ -17,9 +17,6 @@ class User < ActiveRecord::Base
     #c.validate_password_field = false
   end
   
-  has_many :invited_users, :class_name => "User", :foreign_key => "invited_by_id"
-  belongs_to :invited_by, :class_name => "User", :foreign_key => "invited_by_id"
-
   validates :email, :format => { :with => /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i }
   validates :phone_number, :valid_phone_number => true
   
