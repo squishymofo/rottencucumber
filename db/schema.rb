@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101102001912) do
+ActiveRecord::Schema.define(:version => 20101122071736) do
 
   create_table "groups", :force => true do |t|
     t.string   "name"
@@ -79,6 +79,10 @@ ActiveRecord::Schema.define(:version => 20101102001912) do
     t.datetime "updated_at"
     t.string   "first_name"
     t.string   "last_name"
+    t.boolean  "sms_enabled",       :default => false
+    t.string   "phone_number"
   end
+
+  add_index "users", ["phone_number"], :name => "index_users_on_phone_number"
 
 end

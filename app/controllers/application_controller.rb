@@ -7,6 +7,7 @@ class ApplicationController < ActionController::Base
   helper :all # include all helpers, all the time
   protect_from_forgery
   before_filter :record_actions
+  before_filter :current_user
 
   #include SslRequirement
   helper_method :current_user
@@ -19,7 +20,7 @@ class ApplicationController < ActionController::Base
   end
 
     def record_actions
-      UserAction.create(:ip => request.remote_ip, :url => request.request_uri)
+      UserAction.create(:ip => request.remote_ip, :url => request.fullpath)
     end
 
   def store_location
