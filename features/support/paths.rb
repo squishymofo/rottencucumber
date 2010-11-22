@@ -13,6 +13,9 @@ module NavigationHelpers
       
     when /the organization creation page/
       '/organizations/new'
+
+    when /the user preferences page/
+      edit_user_path(User.find_by_email("spitfire67@berkeley.edu"))
     
     when /the project creation page/
       '/projects/new/1'

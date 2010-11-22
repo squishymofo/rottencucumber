@@ -12,6 +12,9 @@ require 'cucumber/rails/rspec'
 require 'cucumber/rails/world'
 require 'cucumber/rails/active_record'
 require 'cucumber/web/tableish'
+#require "authlogic/test_case"
+#include Authlogic::TestCase
+#Authlogic::Session::Base.controller = Authlogic::ControllerAdapters::RailsAdapter.new(self)
 
 require 'capybara/rails'
 require 'capybara/cucumber'

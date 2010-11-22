@@ -37,12 +37,7 @@ class UsersController < ApplicationController
   end
 
   def edit
-    unless params[:other_user_id]
-      if @current_user.admin
-        @new_user = User.new
-      end
-      @user = @current_user
-    end
+    @user = @current_user
   end
 
   def create_new_user # for admin / testing
@@ -57,10 +52,17 @@ class UsersController < ApplicationController
   end
 
   def update
-    @current_user.first_name = params[:user][:first_name]
-    @current_user.last_name = params[:user][:last_name]
-    @current_user.save(false)
-    redirect_to edit_user_path @current_user
+    if params[:user][:sms_enabled] == "1"
+      @current_user.sms_enabled = true
+    end
+    @current_user.phone_number = params[:user][:phone_number]
+    @current_user.save
+    if @current_user.errors.any?
+      @user = @current_user
+      render :edit
+    else
+      redirect_to edit_user_path(@current_user)
+    end
   end
 
 end

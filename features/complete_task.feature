@@ -10,7 +10,7 @@ Feature: Marking Task Completion As A Leader
 		When I press "I am a member"
 		And I fill in my password and login
 		And I press "Sign in"
-		And I fillin "user_session_email" with "spitfire67@berkeley.edu"
+		And I fill in "user_session_email" with "spitfire67@berkeley.edu"
 		And I fill in "user_session_password" with "password"
 		And I press "Sign in"
 		And I go to the project creation page

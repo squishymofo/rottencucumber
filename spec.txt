@@ -1,0 +1,152 @@
+(in /home/james/school/se/project-dir/rottencucumber)
+*******************FFF.F.F.FF.....**************
+
+Pending:
+  users/index.html.erb add some examples to (or delete) /home/james/school/se/project-dir/rottencucumber/spec/views/users/index.html.erb_spec.rb
+    # Not Yet Implemented
+    # ./spec/views/users/index.html.erb_spec.rb:4
+  users/show.html.erb add some examples to (or delete) /home/james/school/se/project-dir/rottencucumber/spec/views/users/show.html.erb_spec.rb
+    # Not Yet Implemented
+    # ./spec/views/users/show.html.erb_spec.rb:4
+  users/new.html.erb add some examples to (or delete) /home/james/school/se/project-dir/rottencucumber/spec/views/users/new.html.erb_spec.rb
+    # Not Yet Implemented
+    # ./spec/views/users/new.html.erb_spec.rb:4
+  users/create.html.erb add some examples to (or delete) /home/james/school/se/project-dir/rottencucumber/spec/views/users/create.html.erb_spec.rb
+    # Not Yet Implemented
+    # ./spec/views/users/create.html.erb_spec.rb:4
+  projects/index.html.erb add some examples to (or delete) /home/james/school/se/project-dir/rottencucumber/spec/views/projects/index.html.erb_spec.rb
+    # Not Yet Implemented
+    # ./spec/views/projects/index.html.erb_spec.rb:4
+  projects/show.html.erb add some examples to (or delete) /home/james/school/se/project-dir/rottencucumber/spec/views/projects/show.html.erb_spec.rb
+    # Not Yet Implemented
+    # ./spec/views/projects/show.html.erb_spec.rb:4
+  projects/new.html.erb add some examples to (or delete) /home/james/school/se/project-dir/rottencucumber/spec/views/projects/new.html.erb_spec.rb
+    # Not Yet Implemented
+    # ./spec/views/projects/new.html.erb_spec.rb:4
+  projects/create.html.erb add some examples to (or delete) /home/james/school/se/project-dir/rottencucumber/spec/views/projects/create.html.erb_spec.rb
+    # Not Yet Implemented
+    # ./spec/views/projects/create.html.erb_spec.rb:4
+  tasks/index.html.erb add some examples to (or delete) /home/james/school/se/project-dir/rottencucumber/spec/views/tasks/index.html.erb_spec.rb
+    # Not Yet Implemented
+    # ./spec/views/tasks/index.html.erb_spec.rb:4
+  tasks/new.html.erb add some examples to (or delete) /home/james/school/se/project-dir/rottencucumber/spec/views/tasks/new.html.erb_spec.rb
+    # Not Yet Implemented
+    # ./spec/views/tasks/new.html.erb_spec.rb:4
+  tasks/create.html.erb add some examples to (or delete) /home/james/school/se/project-dir/rottencucumber/spec/views/tasks/create.html.erb_spec.rb
+    # Not Yet Implemented
+    # ./spec/views/tasks/create.html.erb_spec.rb:4
+  groups/show.html.erb add some examples to (or delete) /home/james/school/se/project-dir/rottencucumber/spec/views/groups/show.html.erb_spec.rb
+    # Not Yet Implemented
+    # ./spec/views/groups/show.html.erb_spec.rb:4
+  groups/new.html.erb add some examples to (or delete) /home/james/school/se/project-dir/rottencucumber/spec/views/groups/new.html.erb_spec.rb
+    # Not Yet Implemented
+    # ./spec/views/groups/new.html.erb_spec.rb:4
+  groups/create.html.erb add some examples to (or delete) /home/james/school/se/project-dir/rottencucumber/spec/views/groups/create.html.erb_spec.rb
+    # Not Yet Implemented
+    # ./spec/views/groups/create.html.erb_spec.rb:4
+  landing/index.html.erb add some examples to (or delete) /home/james/school/se/project-dir/rottencucumber/spec/views/landing/index.html.erb_spec.rb
+    # Not Yet Implemented
+    # ./spec/views/landing/index.html.erb_spec.rb:4
+  organization/index.html.erb add some examples to (or delete) /home/james/school/se/project-dir/rottencucumber/spec/views/organization/index.html.erb_spec.rb
+    # Not Yet Implemented
+    # ./spec/views/organization/index.html.erb_spec.rb:4
+  organization/show.html.erb add some examples to (or delete) /home/james/school/se/project-dir/rottencucumber/spec/views/organization/show.html.erb_spec.rb
+    # Not Yet Implemented
+    # ./spec/views/organization/show.html.erb_spec.rb:4
+  organization/new.html.erb add some examples to (or delete) /home/james/school/se/project-dir/rottencucumber/spec/views/organization/new.html.erb_spec.rb
+    # Not Yet Implemented
+    # ./spec/views/organization/new.html.erb_spec.rb:4
+  organization/create.html.erb add some examples to (or delete) /home/james/school/se/project-dir/rottencucumber/spec/views/organization/create.html.erb_spec.rb
+    # Not Yet Implemented
+    # ./spec/views/organization/create.html.erb_spec.rb:4
+  UsersHelper add some examples to (or delete) /home/james/school/se/project-dir/rottencucumber/spec/helpers/users_helper_spec.rb
+    # Not Yet Implemented
+    # ./spec/helpers/users_helper_spec.rb:14
+  TasksHelper add some examples to (or delete) /home/james/school/se/project-dir/rottencucumber/spec/helpers/tasks_helper_spec.rb
+    # Not Yet Implemented
+    # ./spec/helpers/tasks_helper_spec.rb:14
+  ProjectsHelper add some examples to (or delete) /home/james/school/se/project-dir/rottencucumber/spec/helpers/projects_helper_spec.rb
+    # Not Yet Implemented
+    # ./spec/helpers/projects_helper_spec.rb:14
+  OrganizationsHelper add some examples to (or delete) /home/james/school/se/project-dir/rottencucumber/spec/helpers/organizations_helper_spec.rb
+    # Not Yet Implemented
+    # ./spec/helpers/organizations_helper_spec.rb:14
+  GroupsHelper add some examples to (or delete) /home/james/school/se/project-dir/rottencucumber/spec/helpers/groups_helper_spec.rb
+    # Not Yet Implemented
+    # ./spec/helpers/groups_helper_spec.rb:14
+  LandingHelper add some examples to (or delete) /home/james/school/se/project-dir/rottencucumber/spec/helpers/landing_helper_spec.rb
+    # Not Yet Implemented
+    # ./spec/helpers/landing_helper_spec.rb:14
+  Project add some examples to (or delete) /home/james/school/se/project-dir/rottencucumber/spec/models/project_spec.rb
+    # Not Yet Implemented
+    # ./spec/models/project_spec.rb:4
+  UserAction add some examples to (or delete) /home/james/school/se/project-dir/rottencucumber/spec/models/user_action_spec.rb
+    # Not Yet Implemented
+    # ./spec/models/user_action_spec.rb:4
+  Task add some examples to (or delete) /home/james/school/se/project-dir/rottencucumber/spec/models/task_spec.rb
+    # Not Yet Implemented
+    # ./spec/models/task_spec.rb:4
+  Organization add some examples to (or delete) /home/james/school/se/project-dir/rottencucumber/spec/models/organization_spec.rb
+    # Not Yet Implemented
+    # ./spec/models/organization_spec.rb:4
+  UserOrganization add some examples to (or delete) /home/james/school/se/project-dir/rottencucumber/spec/models/user_organization_spec.rb
+    # Not Yet Implemented
+    # ./spec/models/user_organization_spec.rb:4
+  UserGroup add some examples to (or delete) /home/james/school/se/project-dir/rottencucumber/spec/models/user_group_spec.rb
+    # Not Yet Implemented
+    # ./spec/models/user_group_spec.rb:4
+  User add some examples to (or delete) /home/james/school/se/project-dir/rottencucumber/spec/models/user_spec.rb
+    # Not Yet Implemented
+    # ./spec/models/user_spec.rb:4
+  Group add some examples to (or delete) /home/james/school/se/project-dir/rottencucumber/spec/models/group_spec.rb
+    # Not Yet Implemented
+    # ./spec/models/group_spec.rb:4
+
+Failures:
+  1) GroupsController GET 'show' should be successful
+     Failure/Error: get 'show'
+     Couldn't find Group without an ID
+     # ./app/controllers/groups_controller.rb:9:in `show'
+     # ./spec/controllers/groups_controller_spec.rb:7
+
+  2) GroupsController GET 'new' should be successful
+     Failure/Error: get 'new'
+     undefined method `organizations' for nil:NilClass
+     # ./app/controllers/groups_controller.rb:14:in `new'
+     # ./spec/controllers/groups_controller_spec.rb:14
+
+  3) GroupsController GET 'create' should be successful
+     Failure/Error: get 'create'
+     You have a nil object when you didn't expect it!
+     You might have expected an instance of Array.
+     The error occurred while evaluating nil.[]
+     # ./app/controllers/groups_controller.rb:19:in `create'
+     # ./spec/controllers/groups_controller_spec.rb:21
+
+  4) ProjectsController GET 'new' should be successful
+     Failure/Error: get 'new'
+     Couldn't find Organization without an ID
+     # ./app/controllers/projects_controller.rb:11:in `new'
+     # ./spec/controllers/projects_controller_spec.rb:14
+
+  5) ProjectsController GET 'create' should be successful
+     Failure/Error: get 'create'
+     You have a nil object when you didn't expect it!
+     You might have expected an instance of Array.
+     The error occurred while evaluating nil.[]
+     # ./app/controllers/projects_controller.rb:22:in `create'
+     # ./spec/controllers/projects_controller_spec.rb:28
+
+  6) UsersController GET 'index' should be successful
+     Failure/Error: get 'index'
+     The action 'index' could not be found for UsersController
+     # ./spec/controllers/users_controller_spec.rb:7
+
+  7) UsersController GET 'new' should be successful
+     Failure/Error: get 'new'
+     Missing template users/new with {:formats=>[:html], :handlers=>[:rjs, :erb, :rhtml, :rxml, :builder], :locale=>[:en, :en]} in view paths "#<RSpec::Rails::ViewRendering::PathSetDelegatorResolver:0xb634c8d8>"
+     # ./app/controllers/users_controller.rb:5:in `new'
+     # ./spec/controllers/users_controller_spec.rb:14
+
+Finished in 1.46 seconds
+48 examples, 7 failures, 33 pending

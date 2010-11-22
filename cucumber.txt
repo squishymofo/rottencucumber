@@ -1,0 +1,23 @@
+(in /home/james/school/se/project-dir/rottencucumber)
+Using the default profile...
+PP--------PP------................................................PP---------..#<Capybara::Session:0xb657e390>
+..U-------
+
+(::) pending steps (::)
+
+features/create_task.feature:6:in `Given I'm logged in as a leader'
+
+features/manage_task.feature:6:in `Given I’m logged in as a leader'
+
+features/create_group.feature:5:in `Given I’m logged in as a leader'
+
+14 scenarios (3 skipped, 1 undefined, 3 pending, 7 passed)
+86 steps (30 skipped, 1 undefined, 3 pending, 52 passed)
+0m48.947s
+
+You can implement step definitions for undefined steps with these snippets:
+
+When /^I fillin "([^"]*)" with "([^"]*)"$/ do |arg1, arg2|
+  pending # express the regexp above with the code you wish you had
+end
+

@@ -3,3 +3,6 @@
 <div class="span-24">
 </div>
 <div id="dialog-form"> </div>
+<% if @current_user %>
+  <%= link_to("enable SMS", "#{edit_user_path(@current_user)}#sms_preferences")  unless @current_user.sms_enabled %>
+<% end %>

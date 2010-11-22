@@ -24,6 +24,8 @@ gem 'simple-navigation'
 gem 'compass'
 gem "authlogic", :git => 'git://github.com/odorcicd/authlogic.git', :branch => "rails3"
 gem 'ruby-debug'
+gem 'factory_girl_rails'
+
 
 # Use unicorn as the web server
 # gem 'unicorn'

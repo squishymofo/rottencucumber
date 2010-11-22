@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  require 'lib/valid_phone_number_validator'
   attr_accessible :username, :email, :password, :password_confirmation
   
   has_many :user_organizations
@@ -9,8 +10,8 @@ class User < ActiveRecord::Base
   
   acts_as_authentic do |c|
     c.login_field = 'email'
-    c.validates_length_of_password_field_options = {:on => :update, :minimum => 4, :if => :has_no_credentials?}
-    c.validates_length_of_password_confirmation_field_options = {:on => :update, :minimum => 4, :if => :has_no_credentials?}
+    #c.validates_length_of_password_field_options = {:on => :update, :minimum => 4, :if => :has_no_credentials?}
+    #c.validates_length_of_password_confirmation_field_options = {:on => :update, :minimum => 4, :if => :has_no_credentials?}
     c.validate_email_field    = false
     #c.validate_login_field    = false
     #c.validate_password_field = false
@@ -20,6 +21,7 @@ class User < ActiveRecord::Base
   belongs_to :invited_by, :class_name => "User", :foreign_key => "invited_by_id"
 
   validates :email, :format => { :with => /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i }
+  validates :phone_number, :valid_phone_number => true
   
     # !!!! willl need to change back once fb connect etc
   def has_no_credentials?
@@ -51,7 +53,7 @@ class User < ActiveRecord::Base
 
   def activate!(params)
     self.active = true
-    self.password = params[:password]
+    self.password = params[:password] 
     self.password_confirmation = params[:password_confirmation]
     save
   end
