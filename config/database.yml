@@ -12,10 +12,8 @@ test:
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 development:
-  adapter: mysql
-  database: rottencucumber_dev
-  username: root
-  password:
+  adapter: sqlite3
+  database: db/development.sqlite3
   pool: 5
   timeout: 5000
 
