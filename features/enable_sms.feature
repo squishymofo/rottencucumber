@@ -1,5 +1,6 @@
 Feature: enable SMS capabilities.
 	
+	@wip
 	@javascript
 	Scenario: a user successfully enables SMS capabilities
 		Given I am on the home page
