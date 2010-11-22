@@ -16,10 +16,6 @@ gem 'cucumber'
 gem 'rspec-rails'
 gem 'spork'
 gem 'launchy'    # So you can do Then show me the page
-<<<<<<< HEAD
-=======
-
->>>>>>> 71ea4e86df9c8115c974abd2c5da9d2e05765cf2
 gem 'heroku'
 gem 'gherkin', '2.2.8'
 
