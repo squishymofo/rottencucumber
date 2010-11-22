@@ -42,12 +42,6 @@ Given /^I am a logged in user$/ do
     Then "I should see \"James\""
 end
 
-def user
-  @user ||= Factory :user
-end
-
-
-
 
 Given /^that a new user with email "([^"]*)" has been created and sent an email confirmation email$/ do |arg1|
   u = User.new
