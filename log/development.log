@@ -13844,6 +13844,47 @@ Completed 200 OK in 254ms (Views: 19.2ms | ActiveRecord: 1.3ms)
   [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20101101003722')[0m
   [1m[35mSQL (0.1ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20101101075247')
   [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20101101093918')[0m
+<<<<<<< HEAD
+  [1m[36mSQL (12.7ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (121.6ms)[0m  DROP DATABASE IF EXISTS `rottencucumber_test`
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE DATABASE `rottencucumber_test` DEFAULT CHARACTER SET `utf8`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (275.6ms)[0m  [1mCREATE TABLE `groups` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime, `organization_id` int(11)) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (187.4ms)[0m  [1mCREATE TABLE `organizations` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` text, `created_at` datetime, `updated_at` datetime, `creator_id` int(11)) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (243.4ms)[0m  [1mCREATE TABLE `projects` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` varchar(255), `organization_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.9ms)[0m  SHOW TABLES
+  [1m[36mSQL (103.7ms)[0m  [1mCREATE TABLE `tasks` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` text, `due` datetime, `point` int(11), `group_id` int(11), `project_id` int(11), `created_at` datetime, `updated_at` datetime, `status` int(11) DEFAULT 0) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW TABLES
+  [1m[36mSQL (109.8ms)[0m  [1mCREATE TABLE `user_actions` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `ip` varchar(255), `url` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (110.3ms)[0m  [1mCREATE TABLE `user_groups` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11), `group_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (98.6ms)[0m  [1mCREATE TABLE `user_organizations` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `organization_id` int(11), `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (98.9ms)[0m  [1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `email` varchar(255), `crypted_password` varchar(255), `password_salt` varchar(255), `persistence_token` varchar(255), `active` tinyint(1), `perishable_token` varchar(255), `created_at` datetime, `updated_at` datetime, `first_name` varchar(255), `last_name` varchar(255)) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (100.0ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW KEYS FROM `schema_migrations`
+  [1m[36mSQL (101.0ms)[0m  [1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT version FROM `schema_migrations`[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20101102001912')
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20101029194241')[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20101029221616')
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20101030013352')[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20101031235354')
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20101031235423')[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20101031235503')
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20101101001621')[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20101101002314')
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20101101003722')[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20101101075247')
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20101101093918')[0m
+=======
   [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
   [1m[35mSQL (0.5ms)[0m  SHOW TABLES
   [1m[36mSQL (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
@@ -18006,6 +18047,9 @@ DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (ca
 Rendered layouts/_header.html.erb (10.5ms)
 Rendered landing/index.html.erb within layouts/application (27.5ms)
 Completed 200 OK in 514ms (Views: 36.8ms | ActiveRecord: 59.6ms)
+<<<<<<< HEAD
+>>>>>>> 5a9f70f0ecaf489327bb69a742219197f02bd34e
+=======
 
 
 Started GET "/groups" for 127.0.0.1 at Wed Nov 10 14:48:10 -0800 2010
@@ -22920,6 +22964,9 @@ Completed 200 OK in 22917ms (Views: 406.3ms | ActiveRecord: 56.4ms)
   [1m[35mSQL (44.3ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20101102001912')
   [1m[36mSQL (44.3ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20101101003722')[0m
   [1m[35mSQL (43.2ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20101101075247')
+<<<<<<< HEAD
+>>>>>>> 4d5ea8c11387bc6c88ba36f5fc7b5a40883e447c
+=======
 
 
 Started GET "/groups/new" for 127.0.0.1 at Mon Nov 22 13:46:59 -0800 2010
@@ -25056,15 +25103,49 @@ Migrating to CreateSmsSessions (20101122232107)
 [0m
   [1m[35mSQL (1.7ms)[0m  INSERT INTO "sms_sessions" ("created_at", "more", "phone_number", "updated_at", "where") VALUES ('2010-11-23 01:46:51.584765', '', '4405548235', '2010-11-23 01:46:51.584765', '')
   [1m[36mSmsSession Load (4.6ms)[0m  [1mSELECT "sms_sessions".* FROM "sms_sessions" ORDER BY sms_sessions.id DESC LIMIT 1[0m
+<<<<<<< HEAD
 
 
 Started GET "/" for 127.0.0.1 at Mon Nov 22 19:00:15 -0800 2010
   Processing by LandingController#index as HTML
 Completed   in 47ms
+=======
+>>>>>>> 51c10f457f1deb106a208d4428eab8acc756a42f
+
+
+Started GET "/user_sessions/new" for 127.0.0.1 at Mon Nov 22 19:11:02 -0800 2010
+  Processing by UserSessionsController#new as JS
+Completed   in 6ms
 
 ActiveRecord::StatementInvalid (Could not find table 'user_actions'):
   app/controllers/application_controller.rb:23:in `record_actions'
 
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.7ms)
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.5ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at Mon Nov 22 19:11:05 -0800 2010
+  Processing by UsersController#new as JS
+Completed   in 4ms
+
+ActiveRecord::StatementInvalid (Could not find table 'user_actions'):
+  app/controllers/application_controller.rb:23:in `record_actions'
+
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.0ms)
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.4ms)
+
+
+Started GET "/" for 127.0.0.1 at Mon Nov 22 19:11:11 -0800 2010
+  Processing by LandingController#index as HTML
+Completed   in 4ms
+>>>>>>> 9d6aa5b3cdd297e589f0a35eed6106743731435f
+
+ActiveRecord::StatementInvalid (Could not find table 'user_actions'):
+  app/controllers/application_controller.rb:23:in `record_actions'
+
+<<<<<<< HEAD
 Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
 Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (19.0ms)
 Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (35.2ms)
@@ -25073,22 +25154,46 @@ Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/
 Started GET "/" for 127.0.0.1 at Mon Nov 22 19:00:18 -0800 2010
   Processing by LandingController#index as HTML
 Completed   in 22ms
+=======
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.5ms)
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Mon Nov 22 19:11:30 -0800 2010
+  Processing by LandingController#index as HTML
+Completed   in 5ms
+>>>>>>> 9d6aa5b3cdd297e589f0a35eed6106743731435f
 
 ActiveRecord::StatementInvalid (Could not find table 'user_actions'):
   app/controllers/application_controller.rb:23:in `record_actions'
 
+<<<<<<< HEAD
 Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
 Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (12.9ms)
 Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (35.0ms)
   [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+=======
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.5ms)
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.0ms)
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+>>>>>>> 9d6aa5b3cdd297e589f0a35eed6106743731435f
  FROM sqlite_master
  WHERE type = 'table' AND NOT name = 'sqlite_sequence'
 [0m
   [1m[35mSQL (0.2ms)[0m  select sqlite_version(*)
+<<<<<<< HEAD
   [1m[36mSQL (264.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
   [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("schema_migrations")
   [1m[36mSQL (206.6ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
   [1m[35mSQL (0.2ms)[0m   SELECT name
+=======
+  [1m[36mSQL (1.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36mSQL (28.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+>>>>>>> 9d6aa5b3cdd297e589f0a35eed6106743731435f
  FROM sqlite_master
  WHERE type = 'table' AND NOT name = 'sqlite_sequence'
   [1m[36mSQL (0.2ms)[0m  [1m SELECT name
@@ -25097,6 +25202,7 @@ Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/
 [0m
   [1m[35mSQL (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
 Migrating to CreateUsers (20101029194241)
+<<<<<<< HEAD
   [1m[36mSQL (0.8ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255), "crypted_password" varchar(255), "password_salt" varchar(255), "persistence_token" varchar(255), "active" boolean, "perishable_token" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
   [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20101029194241')
 Migrating to AddFirstNameLastNameToUser (20101029221616)
@@ -25106,10 +25212,22 @@ Migrating to AddFirstNameLastNameToUser (20101029221616)
 Migrating to CreateUserActions (20101030013352)
   [1m[35mSQL (0.5ms)[0m  CREATE TABLE "user_actions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "ip" varchar(255), "url" varchar(255), "created_at" datetime, "updated_at" datetime) 
   [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20101030013352')[0m
+=======
+  [1m[36mSQL (0.6ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255), "crypted_password" varchar(255), "password_salt" varchar(255), "persistence_token" varchar(255), "active" boolean, "perishable_token" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20101029194241')
+Migrating to AddFirstNameLastNameToUser (20101029221616)
+  [1m[36mSQL (0.9ms)[0m  [1mALTER TABLE "users" ADD "first_name" varchar(255)[0m
+  [1m[35mSQL (0.2ms)[0m  ALTER TABLE "users" ADD "last_name" varchar(255)
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20101029221616')[0m
+Migrating to CreateUserActions (20101030013352)
+  [1m[35mSQL (0.4ms)[0m  CREATE TABLE "user_actions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "ip" varchar(255), "url" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20101030013352')[0m
+>>>>>>> 9d6aa5b3cdd297e589f0a35eed6106743731435f
 Migrating to CreateGroups (20101031235354)
   [1m[35mSQL (0.5ms)[0m  CREATE TABLE "groups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) 
   [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20101031235354')[0m
 Migrating to CreateOrganizations (20101031235423)
+<<<<<<< HEAD
   [1m[35mSQL (0.5ms)[0m  CREATE TABLE "organizations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "created_at" datetime, "updated_at" datetime) 
   [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20101031235423')[0m
 Migrating to CreateTasks (20101031235503)
@@ -25123,6 +25241,21 @@ Migrating to CreateUserGroups (20101101002314)
   [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20101101002314')[0m
 Migrating to CreateUserOrganizations (20101101003722)
   [1m[35mSQL (0.5ms)[0m  CREATE TABLE "user_organizations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "organization_id" integer, "user_id" integer, "created_at" datetime, "updated_at" datetime) 
+=======
+  [1m[35mSQL (0.4ms)[0m  CREATE TABLE "organizations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20101031235423')[0m
+Migrating to CreateTasks (20101031235503)
+  [1m[35mSQL (0.4ms)[0m  CREATE TABLE "tasks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "due" datetime, "point" integer, "group_id" integer, "project_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20101031235503')[0m
+Migrating to CreateProjects (20101101001621)
+  [1m[35mSQL (0.4ms)[0m  CREATE TABLE "projects" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" varchar(255), "organization_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20101101001621')[0m
+Migrating to CreateUserGroups (20101101002314)
+  [1m[35mSQL (0.4ms)[0m  CREATE TABLE "user_groups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "group_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20101101002314')[0m
+Migrating to CreateUserOrganizations (20101101003722)
+  [1m[35mSQL (0.6ms)[0m  CREATE TABLE "user_organizations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "organization_id" integer, "user_id" integer, "created_at" datetime, "updated_at" datetime) 
+>>>>>>> 9d6aa5b3cdd297e589f0a35eed6106743731435f
   [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20101101003722')[0m
 Migrating to AddCreatorToOrganization (20101101075247)
   [1m[35mSQL (0.5ms)[0m  ALTER TABLE "organizations" ADD "creator_id" integer
@@ -25131,6 +25264,7 @@ Migrating to AddOrganizationIdToGroup (20101101093918)
   [1m[35mSQL (0.5ms)[0m  ALTER TABLE "groups" ADD "organization_id" integer
   [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20101101093918')[0m
 Migrating to AddStatusToTasks (20101102001912)
+<<<<<<< HEAD
   [1m[35mSQL (4.1ms)[0m  ALTER TABLE "tasks" ADD "status" integer DEFAULT 0
   [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20101102001912')[0m
 Migrating to AddSmsStuffToUser (20101122071736)
@@ -25150,10 +25284,27 @@ Migrating to CreateSmsSessions (20101122232107)
 [0m
   [1m[35mSQL (0.4ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
   [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+=======
+  [1m[35mSQL (0.5ms)[0m  ALTER TABLE "tasks" ADD "status" integer DEFAULT 0
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20101102001912')[0m
+Migrating to AddSmsStuffToUser (20101122071736)
+  [1m[35mSQL (0.5ms)[0m  ALTER TABLE "users" ADD "sms_enabled" boolean DEFAULT 'f'
+  [1m[36mSQL (0.2ms)[0m  [1mALTER TABLE "users" ADD "phone_number" varchar(255)[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.1ms)[0m  [1mCREATE INDEX "index_users_on_phone_number" ON "users" ("phone_number")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20101122071736')
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+>>>>>>> 9d6aa5b3cdd297e589f0a35eed6106743731435f
  FROM sqlite_master
  WHERE type = 'table' AND NOT name = 'sqlite_sequence'
 [0m
   [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("groups")
+<<<<<<< HEAD
   [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("organizations")[0m
   [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("projects")
   [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("sms_sessions")[0m
@@ -25162,10 +25313,19 @@ Migrating to CreateSmsSessions (20101122232107)
   [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("user_actions")
   [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("user_groups")[0m
   [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("user_organizations")
+=======
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("organizations")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("projects")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("tasks")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("user_actions")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("user_groups")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("user_organizations")
+>>>>>>> 9d6aa5b3cdd297e589f0a35eed6106743731435f
   [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("users")[0m
   [1m[35mSQL (0.1ms)[0m  PRAGMA index_info('index_users_on_phone_number')
 
 
+<<<<<<< HEAD
 Started GET "/" for 127.0.0.1 at Mon Nov 22 19:02:03 -0800 2010
   Processing by LandingController#index as HTML
   [1m[36mSQL (6.7ms)[0m  [1m SELECT name
@@ -25205,6 +25365,47 @@ Date: Mon, 22 Nov 2010 19:02:19 -0800
 From: NitrousDomus@gmail.com
 To: spitfire67@berkeley.edu
 Message-ID: <4ceb2ebb55fd6_146224c7a1487422b@james-laptop.mail>
+=======
+Started GET "/" for 127.0.0.1 at Mon Nov 22 19:11:58 -0800 2010
+  Processing by LandingController#index as HTML
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 03:11:58.210934', '127.0.0.1', '2010-11-23 03:11:58.210934', '/')
+Rendered landing/_new_unknown_user.html.erb (1.6ms)
+Rendered landing/_incomplete_user.html.erb (21.7ms)
+Rendered layouts/_header.html.erb (4.0ms)
+Rendered landing/index.html.erb within layouts/application (32.3ms)
+Completed 200 OK in 625ms (Views: 37.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at Mon Nov 22 19:12:03 -0800 2010
+  Processing by UsersController#new as JS
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 03:12:03.981777', '127.0.0.1', '2010-11-23 03:12:03.981777', '/users/new')[0m
+Rendered shared/_error_messages.html.erb (0.6ms)
+Rendered users/_new_user.html.erb (12.5ms)
+Rendered shared/_new_dialog_div.html.erb (0.4ms)
+Rendered users/new.js.erb (16.8ms)
+Completed 200 OK in 69ms (Views: 21.0ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/sign_me_up" for 127.0.0.1 at Mon Nov 22 19:12:08 -0800 2010
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Sign up", "authenticity_token"=>"BvC2a3cLFnNO+Uc0SUBs/8rfGxuXlWVgLUipBHcZioU=", "utf8"=>"\342\234\223", "email"=>"denniss@berkeley.edu"}
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 03:12:08.383545', '127.0.0.1', '2010-11-23 03:12:08.383545', '/sign_me_up')
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('denniss@berkeley.edu')) LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users"."id" FROM "users" WHERE ("users"."persistence_token" = '432ab70bd998f86d36d423e641f49dac0b69dc50d4a1ccd2532eb3b0c45d5761f6f46261c9e15845ec6b3ad78c33d9298793604f6e60e4d6f9c7c1671762f2f3') LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("active", "created_at", "crypted_password", "email", "first_name", "last_name", "password_salt", "perishable_token", "persistence_token", "phone_number", "sms_enabled", "updated_at") VALUES (NULL, '2010-11-23 03:12:08.447652', NULL, 'denniss@berkeley.edu', NULL, NULL, NULL, '7yDrCxAkW-UpapTVV_Hy', '432ab70bd998f86d36d423e641f49dac0b69dc50d4a1ccd2532eb3b0c45d5761f6f46261c9e15845ec6b3ad78c33d9298793604f6e60e4d6f9c7c1671762f2f3', NULL, 'f', '2010-11-23 03:12:08.447652')[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "perishable_token" = 'h27uQ7IRxzLzAmJv9wEk', "updated_at" = '2010-11-23 03:12:08.699028' WHERE ("users"."id" = 1)
+Rendered user_mailer/activation_instructions.text.erb (0.9ms)
+
+Sent mail to denniss@berkeley.edu (5023ms)
+Date: Mon, 22 Nov 2010 19:12:08 -0800
+From: NitrousDomus@gmail.com
+To: denniss@berkeley.edu
+Message-ID: <4ceb3108cf4ac_143ea83a045c876274@Dennis-Suratnas-MacBook-Pro.local.mail>
+>>>>>>> 9d6aa5b3cdd297e589f0a35eed6106743731435f
 Subject: Activation Instructions
 Mime-Version: 1.0
 Content-Type: text/plain;
@@ -25215,6 +25416,7 @@ Hello,
 
 Go here to confirm your email:
 
+<<<<<<< HEAD
   http://localhost:3000/register/alW62sEuB9O0_oaWZQY2
 
 If the above URL does not work, try copying and pasting it into your browser. If you continue to have problems, please feel free to contact us.
@@ -28244,10 +28446,1712 @@ DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => fa
  WHERE type = 'table' AND NOT name = 'sqlite_sequence'
 [0m
   [1m[35mSQL (99.2ms)[0m  CREATE TABLE "projects" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" varchar(255), "organization_id" integer, "created_at" datetime, "updated_at" datetime) 
+=======
+  http://localhost:3000/register/h27uQ7IRxzLzAmJv9wEk
+
+If the above URL does not work, try copying and pasting it into your browser. If you continue to have problems, please feel free to contact us.
+Redirected to http://localhost:3000/?check_email=1
+Completed 302 Found in 5488ms
+
+
+Started GET "/?check_email=1" for 127.0.0.1 at Mon Nov 22 19:12:14 -0800 2010
+  Processing by LandingController#index as HTML
+  Parameters: {"check_email"=>"1"}
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 03:12:14.273303', '127.0.0.1', '2010-11-23 03:12:14.273303', '/?check_email=1')[0m
+Rendered users/_check_email.html.erb (0.3ms)
+Rendered landing/_incomplete_user.html.erb (2.2ms)
+Rendered layouts/_header.html.erb (4.6ms)
+Rendered landing/index.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 69ms (Views: 16.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/register/h27uQ7IRxzLzAmJv9wEk" for 127.0.0.1 at Mon Nov 22 19:13:04 -0800 2010
+  Processing by ActivationsController#new as HTML
+  Parameters: {"activation_code"=>"h27uQ7IRxzLzAmJv9wEk"}
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 03:13:04.430745', '127.0.0.1', '2010-11-23 03:13:04.430745', '/register/h27uQ7IRxzLzAmJv9wEk')
+DEPRECATION WARNING: Setting the active navigation in the controllers has been deprecated. Please use the new :highlights_on option in the config file for explicit highlighting. (called from new at /Users/denniss/Sites/rottencucumber/app/controllers/activations_controller.rb:4)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE (perishable_token = 'h27uQ7IRxzLzAmJv9wEk' and updated_at > '2010-11-16 03:13:04.468939') LIMIT 1[0m
+Rendered activations/_confirming_new_user.html.erb (2.3ms)
+Rendered landing/_incomplete_user.html.erb (19.8ms)
+Rendered layouts/_header.html.erb (4.4ms)
+Rendered landing/index.html.erb within layouts/application (29.1ms)
+Completed 200 OK in 144ms (Views: 34.3ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/activate/1" for 127.0.0.1 at Mon Nov 22 19:13:18 -0800 2010
+  Processing by ActivationsController#create as HTML
+  Parameters: {"commit"=>"Big save button", "password_confirmation"=>"[FILTERED]", "authenticity_token"=>"BvC2a3cLFnNO+Uc0SUBs/8rfGxuXlWVgLUipBHcZioU=", "utf8"=>"\342\234\223", "id"=>"1", "last_name"=>"suratna", "password"=>"[FILTERED]", "first_name"=>"dennis"}
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 03:13:19.021508', '127.0.0.1', '2010-11-23 03:13:19.021508', '/activate/1')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users"."id" FROM "users" WHERE ("users"."persistence_token" = '9049c8d5766e24ea84b838ea4fcf4ecba096aeca4473794eb9d2ae7c8da9c3ded78f144948b7190ac7e4b7cb801c4471548bb4acabf3b67ee5bc734799e57f2c') AND ("users".id <> 1) LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mUPDATE "users" SET "active" = 't', "crypted_password" = 'bcdc2c1a6a97db19fb274c3109e33a66d61b8a8542f22c8fbedc4f2ebd6221b64a4ba068f02f004c640ad89d5ff18ab6f49391de56f43fd8e089a9f961bb778a', "password_salt" = 'ivWeK5vfviiKRN0GC4uv', "perishable_token" = '56lG73fIW1hn2jOMauuZ', "persistence_token" = '9049c8d5766e24ea84b838ea4fcf4ecba096aeca4473794eb9d2ae7c8da9c3ded78f144948b7190ac7e4b7cb801c4471548bb4acabf3b67ee5bc734799e57f2c', "updated_at" = '2010-11-23 03:13:19.374679' WHERE ("users"."id" = 1)[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "first_name" = 'dennis', "last_name" = 'suratna', "perishable_token" = '1zwXr2h83Rnsta33XN3V', "updated_at" = '2010-11-23 03:13:19.379825' WHERE ("users"."id" = 1)
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "perishable_token" = '6yE5E_hhYFVA_fRvBlwd', "updated_at" = '2010-11-23 03:13:19.383769' WHERE ("users"."id" = 1)[0m
+Rendered user_mailer/activation_confirmation.text.erb (0.3ms)
+
+Sent mail to denniss@berkeley.edu (3737ms)
+Date: Mon, 22 Nov 2010 19:13:19 -0800
+From: NitrousDomus@gmail.com
+To: denniss@berkeley.edu
+Message-ID: <4ceb314f692fa_143ea83aeb8d876352@Dennis-Suratnas-MacBook-Pro.local.mail>
+Subject: Activation Complete
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hello dennis,
+
+Your email has been verified and you account has been activated.
+
+some other stuff..
+Rendered activations/_thanks_reging.html.erb (0.5ms)
+Rendered landing/_incomplete_user.html.erb (2.8ms)
+Rendered layouts/_header.html.erb (6.6ms)
+Rendered landing/index.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 4173ms (Views: 19.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/user_sessions/new" for 127.0.0.1 at Mon Nov 22 19:13:29 -0800 2010
+  Processing by UserSessionsController#new as JS
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 03:13:29.262336', '127.0.0.1', '2010-11-23 03:13:29.262336', '/user_sessions/new')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered user_sessions/_signin.html.erb (2.2ms)
+Rendered shared/_new_dialog_div.html.erb (0.2ms)
+Rendered user_sessions/new.js.erb (15.1ms)
+Completed 200 OK in 111ms (Views: 35.5ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/signin_user" for 127.0.0.1 at Mon Nov 22 19:13:40 -0800 2010
+  Processing by UserSessionsController#create as HTML
+  Parameters: {"commit"=>"Sign in", "user_session"=>{"password"=>"[FILTERED]", "email"=>"denniss@berkeley.edu"}, "authenticity_token"=>"BvC2a3cLFnNO+Uc0SUBs/8rfGxuXlWVgLUipBHcZioU=", "utf8"=>"\342\234\223"}
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 03:13:40.964442', '127.0.0.1', '2010-11-23 03:13:40.964442', '/signin_user')[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE (LOWER("users".email) = 'denniss@berkeley.edu') LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 188ms
+
+
+Started GET "/" for 127.0.0.1 at Mon Nov 22 19:13:41 -0800 2010
+  Processing by LandingController#index as HTML
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 03:13:41.296482', '127.0.0.1', '2010-11-23 03:13:41.296482', '/')[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered layouts/_header.html.erb (5.0ms)
+Rendered landing/index.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 74ms (Views: 14.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at Mon Nov 22 19:13:46 -0800 2010
+  Processing by TasksController#index as HTML
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 03:13:46.886470', '127.0.0.1', '2010-11-23 03:13:46.886470', '/tasks')
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+Rendered tasks/_indiv_task.html.erb (0.0ms)
+Rendered layouts/_header.html.erb (6.6ms)
+Rendered tasks/index.html.erb within layouts/application (38.8ms)
+Completed 200 OK in 294ms (Views: 43.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/groups" for 127.0.0.1 at Mon Nov 22 19:13:50 -0800 2010
+  Processing by GroupsController#index as HTML
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 03:13:50.905589', '127.0.0.1', '2010-11-23 03:13:50.905589', '/groups')
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mGroup Load (0.2ms)[0m  [1mSELECT "groups".* FROM "groups"[0m
+Rendered groups/_group_partial.html.erb (0.0ms)
+Rendered layouts/_header.html.erb (4.7ms)
+Rendered groups/index.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 97ms (Views: 15.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at Mon Nov 22 19:15:04 -0800 2010
+  Processing by GroupsController#new as HTML
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 03:15:05.077902', '127.0.0.1', '2010-11-23 03:15:05.077902', '/groups/new')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mOrganization Load (0.2ms)[0m  [1mSELECT "organizations".* FROM "organizations" INNER JOIN "user_organizations" ON "organizations".id = "user_organizations".organization_id WHERE (("user_organizations".user_id = 1))[0m
+Rendered layouts/_header.html.erb (4.3ms)
+Rendered groups/new.html.erb within layouts/application (39.3ms)
+Completed 200 OK in 146ms (Views: 45.0ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/create_group" for 127.0.0.1 at Mon Nov 22 19:15:31 -0800 2010
+  Processing by GroupsController#create as HTML
+  Parameters: {"group_name"=>"Rotten Banana", "commit"=>"create", "authenticity_token"=>"BvC2a3cLFnNO+Uc0SUBs/8rfGxuXlWVgLUipBHcZioU=", "utf8"=>"\342\234\223"}
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 03:15:31.331594', '127.0.0.1', '2010-11-23 03:15:31.331594', '/create_group')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "groups" ("created_at", "name", "organization_id", "updated_at") VALUES ('2010-11-23 03:15:31.533869', 'Rotten Banana', NULL, '2010-11-23 03:15:31.533869')[0m
+Redirected to http://localhost:3000/groups
+Completed 302 Found in 219ms
+
+
+Started GET "/groups" for 127.0.0.1 at Mon Nov 22 19:15:31 -0800 2010
+  Processing by GroupsController#index as HTML
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 03:15:31.581306', '127.0.0.1', '2010-11-23 03:15:31.581306', '/groups')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mGroup Load (0.2ms)[0m  [1mSELECT "groups".* FROM "groups"[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" INNER JOIN "user_groups" ON "users".id = "user_groups".user_id WHERE (("user_groups".group_id = 1))
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE ("tasks".group_id = 1)[0m
+Rendered groups/_group_partial.html.erb (181.8ms)
+Rendered layouts/_header.html.erb (4.6ms)
+Rendered groups/index.html.erb within layouts/application (192.1ms)
+Completed 200 OK in 266ms (Views: 196.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at Mon Nov 22 19:15:36 -0800 2010
+  Processing by TasksController#new as HTML
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 03:15:36.555925', '127.0.0.1', '2010-11-23 03:15:36.555925', '/tasks/new')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered layouts/_header.html.erb (4.4ms)
+Rendered tasks/new.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 75ms (Views: 14.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at Mon Nov 22 19:16:08 -0800 2010
+  Processing by LandingController#index as HTML
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 03:16:08.121164', '127.0.0.1', '2010-11-23 03:16:08.121164', '/')[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered layouts/_header.html.erb (4.2ms)
+Rendered landing/index.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 226ms (Views: 12.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/groups" for 127.0.0.1 at Mon Nov 22 19:16:11 -0800 2010
+  Processing by GroupsController#index as HTML
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 03:16:11.437163', '127.0.0.1', '2010-11-23 03:16:11.437163', '/groups')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mGroup Load (0.2ms)[0m  [1mSELECT "groups".* FROM "groups"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" INNER JOIN "user_groups" ON "users".id = "user_groups".user_id WHERE (("user_groups".group_id = 1))
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE ("tasks".group_id = 1)[0m
+Rendered groups/_group_partial.html.erb (169.7ms)
+Rendered layouts/_header.html.erb (6.2ms)
+Rendered groups/index.html.erb within layouts/application (181.5ms)
+Completed 200 OK in 259ms (Views: 185.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at Mon Nov 22 19:16:22 -0800 2010
+  Processing by GroupsController#new as HTML
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 03:16:22.344554', '127.0.0.1', '2010-11-23 03:16:22.344554', '/groups/new')
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mOrganization Load (0.2ms)[0m  [1mSELECT "organizations".* FROM "organizations" INNER JOIN "user_organizations" ON "organizations".id = "user_organizations".organization_id WHERE (("user_organizations".user_id = 1))[0m
+Rendered layouts/_header.html.erb (5.0ms)
+Rendered groups/new.html.erb within layouts/application (174.1ms)
+Completed 200 OK in 257ms (Views: 178.2ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/create_group" for 127.0.0.1 at Mon Nov 22 19:16:30 -0800 2010
+  Processing by GroupsController#create as HTML
+  Parameters: {"group_name"=>"Rotten Apple", "commit"=>"create", "authenticity_token"=>"BvC2a3cLFnNO+Uc0SUBs/8rfGxuXlWVgLUipBHcZioU=", "utf8"=>"\342\234\223"}
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 03:16:30.640020', '127.0.0.1', '2010-11-23 03:16:30.640020', '/create_group')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "groups" ("created_at", "name", "organization_id", "updated_at") VALUES ('2010-11-23 03:16:30.703718', 'Rotten Apple', NULL, '2010-11-23 03:16:30.703718')[0m
+Redirected to http://localhost:3000/groups
+Completed 302 Found in 80ms
+
+
+Started GET "/groups" for 127.0.0.1 at Mon Nov 22 19:16:30 -0800 2010
+  Processing by GroupsController#index as HTML
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 03:16:30.747950', '127.0.0.1', '2010-11-23 03:16:30.747950', '/groups')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mGroup Load (0.3ms)[0m  [1mSELECT "groups".* FROM "groups"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" INNER JOIN "user_groups" ON "users".id = "user_groups".user_id WHERE (("user_groups".group_id = 1))
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE ("tasks".group_id = 1)[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" INNER JOIN "user_groups" ON "users".id = "user_groups".user_id WHERE (("user_groups".group_id = 2))
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE ("tasks".group_id = 2)[0m
+Rendered groups/_group_partial.html.erb (30.6ms)
+Rendered layouts/_header.html.erb (4.8ms)
+Rendered groups/index.html.erb within layouts/application (40.9ms)
+Completed 200 OK in 263ms (Views: 44.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at Mon Nov 22 19:16:38 -0800 2010
+  Processing by LandingController#index as HTML
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 03:16:38.356676', '127.0.0.1', '2010-11-23 03:16:38.356676', '/')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered layouts/_header.html.erb (4.7ms)
+Rendered landing/index.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 227ms (Views: 167.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at Mon Nov 22 19:16:41 -0800 2010
+  Processing by LandingController#index as HTML
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 03:16:41.563413', '127.0.0.1', '2010-11-23 03:16:41.563413', '/')[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered layouts/_header.html.erb (4.2ms)
+Rendered landing/index.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 73ms (Views: 13.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at Mon Nov 22 19:33:44 -0800 2010
+  Processing by LandingController#index as HTML
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 03:33:44.403163', '127.0.0.1', '2010-11-23 03:33:44.403163', '/')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered layouts/_header.html.erb (4.4ms)
+Rendered landing/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 225ms (Views: 13.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/groups" for 127.0.0.1 at Mon Nov 22 19:35:14 -0800 2010
+  Processing by GroupsController#index as HTML
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 03:35:14.116420', '127.0.0.1', '2010-11-23 03:35:14.116420', '/groups')[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mGroup Load (0.3ms)[0m  SELECT "groups".* FROM "groups"
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "user_groups" ON "users".id = "user_groups".user_id WHERE (("user_groups".group_id = 1))[0m
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks" WHERE ("tasks".group_id = 1)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "user_groups" ON "users".id = "user_groups".user_id WHERE (("user_groups".group_id = 2))[0m
+  [1m[35mTask Load (0.1ms)[0m  SELECT "tasks".* FROM "tasks" WHERE ("tasks".group_id = 2)
+Rendered groups/_group_partial.html.erb (167.0ms)
+Rendered layouts/_header.html.erb (4.9ms)
+Rendered groups/index.html.erb within layouts/application (177.3ms)
+Completed 200 OK in 254ms (Views: 181.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/organizations/" for 127.0.0.1 at Mon Nov 22 19:35:24 -0800 2010
+  Processing by OrganizationsController#index as HTML
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 03:35:24.377761', '127.0.0.1', '2010-11-23 03:35:24.377761', '/organizations')[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mOrganization Load (0.2ms)[0m  SELECT "organizations".* FROM "organizations" WHERE ("organizations"."creator_id" = 1) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "organizations" INNER JOIN "user_organizations" ON "organizations".id = "user_organizations".organization_id WHERE (("user_organizations".user_id = 1))[0m
+  [1m[35mOrganization Load (0.1ms)[0m  SELECT "organizations".* FROM "organizations" INNER JOIN "user_organizations" ON "organizations".id = "user_organizations".organization_id WHERE (("user_organizations".user_id = 1))
+Rendered organizations/_organization_partial.html.erb (0.9ms)
+Rendered layouts/_header.html.erb (4.2ms)
+Rendered organizations/index.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 106ms (Views: 19.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/organizations/" for 127.0.0.1 at Mon Nov 22 19:35:42 -0800 2010
+  Processing by OrganizationsController#index as HTML
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 03:35:42.477931', '127.0.0.1', '2010-11-23 03:35:42.477931', '/organizations')[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mOrganization Load (0.2ms)[0m  SELECT "organizations".* FROM "organizations" WHERE ("organizations"."creator_id" = 1) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "organizations" INNER JOIN "user_organizations" ON "organizations".id = "user_organizations".organization_id WHERE (("user_organizations".user_id = 1))[0m
+  [1m[35mOrganization Load (0.1ms)[0m  SELECT "organizations".* FROM "organizations" INNER JOIN "user_organizations" ON "organizations".id = "user_organizations".organization_id WHERE (("user_organizations".user_id = 1))
+Rendered organizations/_organization_partial.html.erb (1.1ms)
+Rendered layouts/_header.html.erb (4.6ms)
+Rendered organizations/index.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 100ms (Views: 19.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/organizations/" for 127.0.0.1 at Mon Nov 22 19:35:54 -0800 2010
+  Processing by OrganizationsController#index as HTML
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 03:35:54.367493', '127.0.0.1', '2010-11-23 03:35:54.367493', '/organizations')[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mOrganization Load (0.2ms)[0m  SELECT "organizations".* FROM "organizations" WHERE ("organizations"."creator_id" = 1) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "organizations" INNER JOIN "user_organizations" ON "organizations".id = "user_organizations".organization_id WHERE (("user_organizations".user_id = 1))[0m
+  [1m[35mOrganization Load (0.1ms)[0m  SELECT "organizations".* FROM "organizations" INNER JOIN "user_organizations" ON "organizations".id = "user_organizations".organization_id WHERE (("user_organizations".user_id = 1))
+Rendered organizations/_organization_partial.html.erb (1.1ms)
+Rendered layouts/_header.html.erb (5.9ms)
+Rendered organizations/index.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 102ms (Views: 21.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/organizations/new" for 127.0.0.1 at Mon Nov 22 19:36:40 -0800 2010
+  Processing by OrganizationsController#new as HTML
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 03:36:40.909199', '127.0.0.1', '2010-11-23 03:36:40.909199', '/organizations/new')[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+DEPRECATION WARNING: Using form_for(:name, @resource) is deprecated. Please use form_for(@resource, :as => :name) instead. (called from _app_views_organizations_new_html_erb___658349834_2208621280_0 at /Users/denniss/Sites/rottencucumber/app/views/organizations/new.html.erb:3)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_organizations_new_html_erb___658349834_2208621280_0 at /Users/denniss/Sites/rottencucumber/app/views/organizations/new.html.erb:3)
+Rendered layouts/_header.html.erb (4.5ms)
+Rendered organizations/new.html.erb within layouts/application (16.2ms)
+Completed 200 OK in 253ms (Views: 38.3ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/organizations" for 127.0.0.1 at Mon Nov 22 19:36:59 -0800 2010
+  Processing by OrganizationsController#create as HTML
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"BvC2a3cLFnNO+Uc0SUBs/8rfGxuXlWVgLUipBHcZioU=", "utf8"=>"\342\234\223", "organization"=>{"name"=>"Blue Organization", "description"=>"Blue Organization"}}
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 03:36:59.403998', '127.0.0.1', '2010-11-23 03:36:59.403998', '/organizations')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "organizations" ("created_at", "creator_id", "description", "name", "updated_at") VALUES ('2010-11-23 03:36:59.472667', 1, 'Blue Organization', 'Blue Organization', '2010-11-23 03:36:59.472667')[0m
+Redirected to http://localhost:3000/organizations
+Completed 302 Found in 86ms
+
+
+Started GET "/organizations" for 127.0.0.1 at Mon Nov 22 19:36:59 -0800 2010
+  Processing by OrganizationsController#index as HTML
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 03:36:59.651315', '127.0.0.1', '2010-11-23 03:36:59.651315', '/organizations')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mOrganization Load (0.2ms)[0m  [1mSELECT "organizations".* FROM "organizations" WHERE ("organizations"."creator_id" = 1) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM "organizations" INNER JOIN "user_organizations" ON "organizations".id = "user_organizations".organization_id WHERE (("user_organizations".user_id = 1))
+  [1m[36mOrganization Load (0.1ms)[0m  [1mSELECT "organizations".* FROM "organizations" INNER JOIN "user_organizations" ON "organizations".id = "user_organizations".organization_id WHERE (("user_organizations".user_id = 1))[0m
+Rendered organizations/_organization_partial.html.erb (1.1ms)
+Rendered layouts/_header.html.erb (4.7ms)
+Rendered organizations/index.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 245ms (Views: 25.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/organizations" for 127.0.0.1 at Mon Nov 22 19:37:45 -0800 2010
+  Processing by OrganizationsController#index as HTML
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 03:37:45.206625', '127.0.0.1', '2010-11-23 03:37:45.206625', '/organizations')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mOrganization Load (0.2ms)[0m  [1mSELECT "organizations".* FROM "organizations" WHERE ("organizations"."creator_id" = 1) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM "organizations" INNER JOIN "user_organizations" ON "organizations".id = "user_organizations".organization_id WHERE (("user_organizations".user_id = 1))
+  [1m[36mOrganization Load (0.2ms)[0m  [1mSELECT "organizations".* FROM "organizations" INNER JOIN "user_organizations" ON "organizations".id = "user_organizations".organization_id WHERE (("user_organizations".user_id = 1))[0m
+Rendered organizations/_organization_partial.html.erb (1.2ms)
+Rendered layouts/_header.html.erb (4.6ms)
+Rendered organizations/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 243ms (Views: 19.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/organizations" for 127.0.0.1 at Mon Nov 22 19:38:41 -0800 2010
+  Processing by OrganizationsController#index as HTML
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 03:38:41.953373', '127.0.0.1', '2010-11-23 03:38:41.953373', '/organizations')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mOrganization Load (0.2ms)[0m  [1mSELECT "organizations".* FROM "organizations" WHERE ("organizations"."creator_id" = 1) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM "organizations" INNER JOIN "user_organizations" ON "organizations".id = "user_organizations".organization_id WHERE (("user_organizations".user_id = 1))
+  [1m[36mOrganization Load (0.2ms)[0m  [1mSELECT "organizations".* FROM "organizations" INNER JOIN "user_organizations" ON "organizations".id = "user_organizations".organization_id WHERE (("user_organizations".user_id = 1))[0m
+Rendered organizations/_organization_partial.html.erb (1.2ms)
+Rendered organizations/index.html.erb within layouts/application (33.3ms)
+Completed   in 264ms
+
+ActionView::Template::Error (undefined method `each' for #<Organization:0x1075afd68>):
+    5: 
+    6: <br />
+    7: <h3>Created:</h3>
+    8: <% @my_orgs.each do |my_org| %>
+    9: 	<%= my_org.name %>
+    10: <% end %>
+    11: <br />
+  app/views/organizations/index.html.erb:8:in `_app_views_organizations_index_html_erb___1602100848_2209168480_0'
+
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.5ms)
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (13.0ms)
+  [1m[36mSQL (0.7ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Started GET "/organizations" for 127.0.0.1 at Mon Nov 22 19:39:55 -0800 2010
+  Processing by OrganizationsController#index as HTML
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 03:39:55.194372', '127.0.0.1', '2010-11-23 03:39:55.194372', '/organizations')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mOrganization Load (0.2ms)[0m  [1mSELECT "organizations".* FROM "organizations" WHERE ("organizations"."creator_id" = 1) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) AS count_id FROM "organizations" INNER JOIN "user_organizations" ON "organizations".id = "user_organizations".organization_id WHERE (("user_organizations".user_id = 1))
+  [1m[36mOrganization Load (0.2ms)[0m  [1mSELECT "organizations".* FROM "organizations" INNER JOIN "user_organizations" ON "organizations".id = "user_organizations".organization_id WHERE (("user_organizations".user_id = 1))[0m
+Rendered organizations/_organization_partial.html.erb (1.2ms)
+Rendered organizations/index.html.erb within layouts/application (10.4ms)
+Completed   in 102ms
+
+ActionView::Template::Error (undefined method `each' for #<Organization:0x106f21aa0>):
+    5: 
+    6: <br />
+    7: <h3>Created:</h3>
+    8: <% @my_orgs.each do |my_org| %>
+    9: 	<%= my_org.name %>
+    10: <% end %>
+    11: <br />
+  app/views/organizations/index.html.erb:8:in `_app_views_organizations_index_html_erb___1602100848_2205730480_0'
+
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.1ms)
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (13.5ms)
+
+
+Started GET "/organizations" for 127.0.0.1 at Mon Nov 22 19:43:04 -0800 2010
+  Processing by OrganizationsController#index as HTML
+  [1m[35mSQL (84.6ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 03:43:04.833989', '127.0.0.1', '2010-11-23 03:43:04.833989', '/organizations')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "organizations" INNER JOIN "user_organizations" ON "organizations".id = "user_organizations".organization_id WHERE (("user_organizations".user_id = 1))[0m
+  [1m[35mOrganization Load (0.2ms)[0m  SELECT "organizations".* FROM "organizations" INNER JOIN "user_organizations" ON "organizations".id = "user_organizations".organization_id WHERE (("user_organizations".user_id = 1))
+Rendered organizations/_organization_partial.html.erb (1.5ms)
+  [1m[36mOrganization Load (0.2ms)[0m  [1mSELECT "organizations".* FROM "organizations" WHERE (creator_id = 1)[0m
+Rendered layouts/_header.html.erb (5.1ms)
+Rendered organizations/index.html.erb within layouts/application (36.1ms)
+Completed 200 OK in 411ms (Views: 50.2ms | ActiveRecord: 85.5ms)
+
+
+Started GET "/organizations" for 127.0.0.1 at Mon Nov 22 19:44:57 -0800 2010
+  Processing by OrganizationsController#index as HTML
+  [1m[35mSQL (37.1ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 03:44:57.869869', '127.0.0.1', '2010-11-23 03:44:57.869869', '/organizations')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "organizations" INNER JOIN "user_organizations" ON "organizations".id = "user_organizations".organization_id WHERE (("user_organizations".user_id = 1))[0m
+  [1m[35mOrganization Load (0.2ms)[0m  SELECT "organizations".* FROM "organizations" INNER JOIN "user_organizations" ON "organizations".id = "user_organizations".organization_id WHERE (("user_organizations".user_id = 1))
+Rendered organizations/_organization_partial.html.erb (1.1ms)
+  [1m[36mOrganization Load (0.2ms)[0m  [1mSELECT "organizations".* FROM "organizations" WHERE (creator_id = 1)[0m
+Rendered organizations/index.html.erb within layouts/application (11.5ms)
+Completed   in 370ms
+
+ActionView::Template::Error (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each):
+    10: <% end %>
+    11: <br />
+    12: <h3>Joined:</h3>
+    13: <% @joined_args.each do |joined_org| %>
+    14: 	<%= joined_org.name %>
+    15: <% end %>
+  app/views/organizations/index.html.erb:13:in `_app_views_organizations_index_html_erb___1602100848_2208567400_0'
+
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.6ms)
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (19.6ms)
+
+
+Started GET "/organizations" for 127.0.0.1 at Mon Nov 22 19:45:07 -0800 2010
+  Processing by OrganizationsController#index as HTML
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 03:45:07.646525', '127.0.0.1', '2010-11-23 03:45:07.646525', '/organizations')
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "organizations" INNER JOIN "user_organizations" ON "organizations".id = "user_organizations".organization_id WHERE (("user_organizations".user_id = 1))[0m
+  [1m[35mOrganization Load (0.1ms)[0m  SELECT "organizations".* FROM "organizations" INNER JOIN "user_organizations" ON "organizations".id = "user_organizations".organization_id WHERE (("user_organizations".user_id = 1))
+Rendered organizations/_organization_partial.html.erb (1.0ms)
+  [1m[36mOrganization Load (0.1ms)[0m  [1mSELECT "organizations".* FROM "organizations" WHERE (creator_id = 1)[0m
+Rendered layouts/_header.html.erb (7.8ms)
+Rendered organizations/index.html.erb within layouts/application (21.7ms)
+Completed 200 OK in 102ms (Views: 25.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/organizations" for 127.0.0.1 at Mon Nov 22 19:45:28 -0800 2010
+  Processing by OrganizationsController#index as HTML
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 03:45:28.935422', '127.0.0.1', '2010-11-23 03:45:28.935422', '/organizations')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "organizations" INNER JOIN "user_organizations" ON "organizations".id = "user_organizations".organization_id WHERE (("user_organizations".user_id = 1))[0m
+  [1m[35mOrganization Load (0.2ms)[0m  SELECT "organizations".* FROM "organizations" INNER JOIN "user_organizations" ON "organizations".id = "user_organizations".organization_id WHERE (("user_organizations".user_id = 1))
+Rendered organizations/_organization_partial.html.erb (1.2ms)
+  [1m[36mOrganization Load (0.1ms)[0m  [1mSELECT "organizations".* FROM "organizations" WHERE (creator_id = 1)[0m
+Rendered layouts/_header.html.erb (4.4ms)
+Rendered organizations/index.html.erb within layouts/application (19.6ms)
+Completed 200 OK in 113ms (Views: 23.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/organizations" for 127.0.0.1 at Mon Nov 22 19:46:00 -0800 2010
+  Processing by OrganizationsController#index as HTML
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 03:46:01.141805', '127.0.0.1', '2010-11-23 03:46:01.141805', '/organizations')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "organizations" INNER JOIN "user_organizations" ON "organizations".id = "user_organizations".organization_id WHERE (("user_organizations".user_id = 1))[0m
+  [1m[35mOrganization Load (0.2ms)[0m  SELECT "organizations".* FROM "organizations" INNER JOIN "user_organizations" ON "organizations".id = "user_organizations".organization_id WHERE (("user_organizations".user_id = 1))
+Rendered organizations/_organization_partial.html.erb (1.4ms)
+  [1m[36mOrganization Load (0.2ms)[0m  [1mSELECT "organizations".* FROM "organizations" WHERE (creator_id = 1)[0m
+Rendered layouts/_header.html.erb (4.4ms)
+Rendered organizations/index.html.erb within layouts/application (19.3ms)
+Completed 200 OK in 111ms (Views: 23.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/organizations" for 127.0.0.1 at Mon Nov 22 19:46:17 -0800 2010
+  Processing by OrganizationsController#index as HTML
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 03:46:17.844973', '127.0.0.1', '2010-11-23 03:46:17.844973', '/organizations')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "organizations" INNER JOIN "user_organizations" ON "organizations".id = "user_organizations".organization_id WHERE (("user_organizations".user_id = 1))[0m
+  [1m[35mOrganization Load (0.1ms)[0m  SELECT "organizations".* FROM "organizations" INNER JOIN "user_organizations" ON "organizations".id = "user_organizations".organization_id WHERE (("user_organizations".user_id = 1))
+Rendered organizations/_organization_partial.html.erb (1.1ms)
+  [1m[36mOrganization Load (0.1ms)[0m  [1mSELECT "organizations".* FROM "organizations" WHERE (creator_id = 1)[0m
+Rendered layouts/_header.html.erb (4.6ms)
+Rendered organizations/index.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 253ms (Views: 23.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/organizations/new" for 127.0.0.1 at Mon Nov 22 19:46:23 -0800 2010
+  Processing by OrganizationsController#new as HTML
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 03:46:23.154280', '127.0.0.1', '2010-11-23 03:46:23.154280', '/organizations/new')
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+DEPRECATION WARNING: Using form_for(:name, @resource) is deprecated. Please use form_for(@resource, :as => :name) instead. (called from _app_views_organizations_new_html_erb___658349834_2205557500_0 at /Users/denniss/Sites/rottencucumber/app/views/organizations/new.html.erb:3)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_organizations_new_html_erb___658349834_2205557500_0 at /Users/denniss/Sites/rottencucumber/app/views/organizations/new.html.erb:3)
+Rendered layouts/_header.html.erb (4.9ms)
+Rendered organizations/new.html.erb within layouts/application (154.1ms)
+Completed 200 OK in 255ms (Views: 182.5ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/organizations" for 127.0.0.1 at Mon Nov 22 19:46:39 -0800 2010
+  Processing by OrganizationsController#create as HTML
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"BvC2a3cLFnNO+Uc0SUBs/8rfGxuXlWVgLUipBHcZioU=", "utf8"=>"\342\234\223", "organization"=>{"name"=>"Orange Organization", "description"=>"Orange Organization"}}
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 03:46:39.215266', '127.0.0.1', '2010-11-23 03:46:39.215266', '/organizations')[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "organizations" ("created_at", "creator_id", "description", "name", "updated_at") VALUES ('2010-11-23 03:46:39.281369', 1, 'Orange Organization', 'Orange Organization', '2010-11-23 03:46:39.281369')
+Redirected to http://localhost:3000/organizations
+Completed 302 Found in 84ms
+
+
+Started GET "/organizations" for 127.0.0.1 at Mon Nov 22 19:46:39 -0800 2010
+  Processing by OrganizationsController#index as HTML
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 03:46:39.328137', '127.0.0.1', '2010-11-23 03:46:39.328137', '/organizations')[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM "organizations" INNER JOIN "user_organizations" ON "organizations".id = "user_organizations".organization_id WHERE (("user_organizations".user_id = 1))
+  [1m[36mOrganization Load (0.1ms)[0m  [1mSELECT "organizations".* FROM "organizations" INNER JOIN "user_organizations" ON "organizations".id = "user_organizations".organization_id WHERE (("user_organizations".user_id = 1))[0m
+Rendered organizations/_organization_partial.html.erb (1.1ms)
+  [1m[35mOrganization Load (0.2ms)[0m  SELECT "organizations".* FROM "organizations" WHERE (creator_id = 1)
+Rendered layouts/_header.html.erb (4.6ms)
+Rendered organizations/index.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 250ms (Views: 23.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/organizations" for 127.0.0.1 at Mon Nov 22 19:46:41 -0800 2010
+  Processing by OrganizationsController#index as HTML
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 03:46:41.509586', '127.0.0.1', '2010-11-23 03:46:41.509586', '/organizations')[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) AS count_id FROM "organizations" INNER JOIN "user_organizations" ON "organizations".id = "user_organizations".organization_id WHERE (("user_organizations".user_id = 1))
+  [1m[36mOrganization Load (0.2ms)[0m  [1mSELECT "organizations".* FROM "organizations" INNER JOIN "user_organizations" ON "organizations".id = "user_organizations".organization_id WHERE (("user_organizations".user_id = 1))[0m
+Rendered organizations/_organization_partial.html.erb (1.7ms)
+  [1m[35mOrganization Load (0.2ms)[0m  SELECT "organizations".* FROM "organizations" WHERE (creator_id = 1)
+Rendered layouts/_header.html.erb (5.6ms)
+Rendered organizations/index.html.erb within layouts/application (26.0ms)
+Completed 200 OK in 265ms (Views: 30.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/organizations" for 127.0.0.1 at Mon Nov 22 19:47:15 -0800 2010
+  Processing by OrganizationsController#index as HTML
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 03:47:15.476342', '127.0.0.1', '2010-11-23 03:47:15.476342', '/organizations')[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) AS count_id FROM "organizations" INNER JOIN "user_organizations" ON "organizations".id = "user_organizations".organization_id WHERE (("user_organizations".user_id = 1))
+  [1m[36mOrganization Load (0.2ms)[0m  [1mSELECT "organizations".* FROM "organizations" INNER JOIN "user_organizations" ON "organizations".id = "user_organizations".organization_id WHERE (("user_organizations".user_id = 1))[0m
+Rendered organizations/_organization_partial.html.erb (1.4ms)
+  [1m[35mOrganization Load (0.2ms)[0m  SELECT "organizations".* FROM "organizations" WHERE (creator_id = 1)
+Rendered layouts/_header.html.erb (6.9ms)
+Rendered organizations/index.html.erb within layouts/application (22.3ms)
+Completed 200 OK in 107ms (Views: 26.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/organizations" for 127.0.0.1 at Mon Nov 22 19:47:31 -0800 2010
+  Processing by OrganizationsController#index as HTML
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 03:47:31.798298', '127.0.0.1', '2010-11-23 03:47:31.798298', '/organizations')[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM "organizations" INNER JOIN "user_organizations" ON "organizations".id = "user_organizations".organization_id WHERE (("user_organizations".user_id = 1))
+  [1m[36mOrganization Load (0.1ms)[0m  [1mSELECT "organizations".* FROM "organizations" INNER JOIN "user_organizations" ON "organizations".id = "user_organizations".organization_id WHERE (("user_organizations".user_id = 1))[0m
+Rendered organizations/_organization_partial.html.erb (1.1ms)
+  [1m[35mOrganization Load (0.2ms)[0m  SELECT "organizations".* FROM "organizations" WHERE (creator_id = 1)
+Rendered layouts/_header.html.erb (4.4ms)
+Rendered organizations/index.html.erb within layouts/application (18.7ms)
+Completed 200 OK in 103ms (Views: 22.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/organizations" for 127.0.0.1 at Mon Nov 22 19:47:33 -0800 2010
+  Processing by OrganizationsController#index as HTML
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 03:47:33.753292', '127.0.0.1', '2010-11-23 03:47:33.753292', '/organizations')[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM "organizations" INNER JOIN "user_organizations" ON "organizations".id = "user_organizations".organization_id WHERE (("user_organizations".user_id = 1))
+  [1m[36mOrganization Load (0.1ms)[0m  [1mSELECT "organizations".* FROM "organizations" INNER JOIN "user_organizations" ON "organizations".id = "user_organizations".organization_id WHERE (("user_organizations".user_id = 1))[0m
+Rendered organizations/_organization_partial.html.erb (1.1ms)
+  [1m[35mOrganization Load (0.2ms)[0m  SELECT "organizations".* FROM "organizations" WHERE (creator_id = 1)
+Rendered layouts/_header.html.erb (4.9ms)
+Rendered organizations/index.html.erb within layouts/application (19.5ms)
+Completed 200 OK in 245ms (Views: 23.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at Mon Nov 22 19:47:50 -0800 2010
+  Processing by LandingController#index as HTML
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 03:47:50.941984', '127.0.0.1', '2010-11-23 03:47:50.941984', '/')[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered layouts/_header.html.erb (4.7ms)
+Rendered landing/index.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 287ms (Views: 75.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at Mon Nov 22 19:47:53 -0800 2010
+  Processing by TasksController#index as HTML
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 03:47:53.728086', '127.0.0.1', '2010-11-23 03:47:53.728086', '/tasks')
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+Rendered tasks/_indiv_task.html.erb (0.0ms)
+Rendered layouts/_header.html.erb (4.2ms)
+Rendered tasks/index.html.erb within layouts/application (27.9ms)
+Completed 200 OK in 101ms (Views: 33.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at Mon Nov 22 19:49:59 -0800 2010
+  Processing by TasksController#index as HTML
+  [1m[35mSQL (16.3ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 03:50:00.195906', '127.0.0.1', '2010-11-23 03:50:00.195906', '/tasks')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+Rendered tasks/_indiv_task.html.erb (0.0ms)
+Rendered layouts/_header.html.erb (4.4ms)
+Rendered tasks/index.html.erb within layouts/application (29.8ms)
+Completed 200 OK in 170ms (Views: 34.7ms | ActiveRecord: 16.8ms)
+
+
+Started GET "/organizations" for 127.0.0.1 at Mon Nov 22 19:50:04 -0800 2010
+  Processing by OrganizationsController#index as HTML
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 03:50:05.034576', '127.0.0.1', '2010-11-23 03:50:05.034576', '/organizations')
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "organizations" INNER JOIN "user_organizations" ON "organizations".id = "user_organizations".organization_id WHERE (("user_organizations".user_id = 1))[0m
+  [1m[35mOrganization Load (0.2ms)[0m  SELECT "organizations".* FROM "organizations" INNER JOIN "user_organizations" ON "organizations".id = "user_organizations".organization_id WHERE (("user_organizations".user_id = 1))
+Rendered organizations/_organization_partial.html.erb (1.2ms)
+  [1m[36mOrganization Load (0.2ms)[0m  [1mSELECT "organizations".* FROM "organizations" WHERE (creator_id = 1)[0m
+Rendered layouts/_header.html.erb (4.5ms)
+Rendered organizations/index.html.erb within layouts/application (18.9ms)
+Completed 200 OK in 243ms (Views: 23.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/organizations" for 127.0.0.1 at Mon Nov 22 19:50:50 -0800 2010
+  Processing by OrganizationsController#index as HTML
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 03:50:50.878342', '127.0.0.1', '2010-11-23 03:50:50.878342', '/organizations')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "organizations" INNER JOIN "user_organizations" ON "organizations".id = "user_organizations".organization_id WHERE (("user_organizations".user_id = 1))[0m
+  [1m[35mOrganization Load (0.1ms)[0m  SELECT "organizations".* FROM "organizations" INNER JOIN "user_organizations" ON "organizations".id = "user_organizations".organization_id WHERE (("user_organizations".user_id = 1))
+Rendered organizations/_organization_partial.html.erb (0.9ms)
+  [1m[36mOrganization Load (0.2ms)[0m  [1mSELECT "organizations".* FROM "organizations" WHERE (creator_id = 1)[0m
+Rendered layouts/_header.html.erb (5.3ms)
+Rendered organizations/index.html.erb within layouts/application (157.7ms)
+Completed 200 OK in 244ms (Views: 161.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/organizations" for 127.0.0.1 at Mon Nov 22 19:51:00 -0800 2010
+  Processing by OrganizationsController#index as HTML
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 03:51:00.930375', '127.0.0.1', '2010-11-23 03:51:00.930375', '/organizations')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "organizations" INNER JOIN "user_organizations" ON "organizations".id = "user_organizations".organization_id WHERE (("user_organizations".user_id = 1))[0m
+  [1m[35mOrganization Load (0.2ms)[0m  SELECT "organizations".* FROM "organizations" INNER JOIN "user_organizations" ON "organizations".id = "user_organizations".organization_id WHERE (("user_organizations".user_id = 1))
+Rendered organizations/_organization_partial.html.erb (1.3ms)
+  [1m[36mOrganization Load (0.2ms)[0m  [1mSELECT "organizations".* FROM "organizations" WHERE (creator_id = 1)[0m
+Rendered layouts/_header.html.erb (4.3ms)
+Rendered organizations/index.html.erb within layouts/application (19.4ms)
+Completed 200 OK in 111ms (Views: 23.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/organizations" for 127.0.0.1 at Mon Nov 22 19:51:13 -0800 2010
+  Processing by OrganizationsController#index as HTML
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 03:51:13.423628', '127.0.0.1', '2010-11-23 03:51:13.423628', '/organizations')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+ERROR: compiling _app_views_organizations_index_html_erb___1602100848_2206734980_0 RAISED compile error
+/Users/denniss/Sites/rottencucumber/app/views/organizations/index.html.erb:8: syntax error, unexpected '<', expecting ')'
+<br />
+ ^
+/Users/denniss/Sites/rottencucumber/app/views/organizations/index.html.erb:10: unknown regexp option - h
+/Users/denniss/Sites/rottencucumber/app/views/organizations/index.html.erb:10: syntax error, unexpected tINTEGER, expecting ')'
+<h3>Created:</h3>
+                ^
+/Users/denniss/Sites/rottencucumber/app/views/organizations/index.html.erb:13: syntax error, unexpected '>'
+/Users/denniss/Sites/rottencucumber/app/views/organizations/index.html.erb:16: syntax error, unexpected '<', expecting ')'
+<br />
+ ^
+/Users/denniss/Sites/rottencucumber/app/views/organizations/index.html.erb:18: unknown regexp option - h
+/Users/denniss/Sites/rottencucumber/app/views/organizations/index.html.erb:18: syntax error, unexpected tINTEGER, expecting ')'
+<h3>Joined:</h3>
+               ^
+/Users/denniss/Sites/rottencucumber/app/views/organizations/index.html.erb:21: syntax error, unexpected '>'
+/Users/denniss/Sites/rottencucumber/app/views/organizations/index.html.erb:23: unterminated string meets end of file
+/Users/denniss/Sites/rottencucumber/app/views/organizations/index.html.erb:23: syntax error, unexpected tSTRING_END, expecting tSTRING_CONTENT or tREGEXP_END or tSTRING_DBEG or tSTRING_DVAR
+Function body:           def _app_views_organizations_index_html_erb___1602100848_2206734980_0(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "organizations/index";_old_output_buffer = @output_buffer;;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.safe_concat('<span class="section-header span-18"> Organizations </span>
+<br/>
+<span class="span-6 last"> ');@output_buffer.append= ( link_to "+ create new organization", new_organization_path );@output_buffer.safe_concat(' </span>
+<br/>
+
+');@output_buffer.append= ( #render :partial => 'organization_partial', :collection => @joined_orgs );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('
+<br />
+<div>
+<h3>Created:</h3>
+');@output_buffer.append_if_string=  @my_orgs.each do |my_org| 
+@output_buffer.safe_concat('	');@output_buffer.append= ( my_org.name );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('	<br/>
+'); end 
+@output_buffer.safe_concat('
+<br />
+
+<h3>Joined:</h3>
+');@output_buffer.append_if_string=  @joined_orgs.each do |joined_org| 
+@output_buffer.safe_concat('	');@output_buffer.append= ( joined_org.name );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('	<br/>
+'); end 
+@output_buffer.safe_concat('</div>
+
+');@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /Users/denniss/Sites/rottencucumber/app/views/organizations/index.html.erb:23:in `compile'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_view/template.rb:134:in `render'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-3.0.0/lib/active_support/notifications.rb:54:in `instrument'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_view/template.rb:127:in `render'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_view/render/rendering.rb:59:in `_render_template'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-3.0.0/lib/active_support/notifications.rb:52:in `instrument'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-3.0.0/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-3.0.0/lib/active_support/notifications.rb:52:in `instrument'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_view/render/rendering.rb:56:in `_render_template'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_view/render/rendering.rb:26:in `render'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:114:in `_render_template'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:108:in `render_to_body'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:101:in `render_to_string'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:92:in `render'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_controller/metal/rendering.rb:17:in `render'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-3.0.0/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/Users/denniss/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-3.0.0/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activerecord-3.0.0/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/abstract_controller/base.rb:150:in `process_action'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/abstract_controller/callbacks.rb:18:in `process_action'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:455:in `_run__1867835447__process_action__199225275__callbacks'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:409:in `send'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:409:in `_run_process_action_callbacks'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:93:in `send'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:93:in `run_callbacks'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-3.0.0/lib/active_support/notifications.rb:52:in `instrument'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-3.0.0/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-3.0.0/lib/active_support/notifications.rb:52:in `instrument'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/abstract_controller/base.rb:119:in `process'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:40:in `process'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_controller/metal.rb:133:in `dispatch'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_controller/metal.rb:173:in `action'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:148:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:93:in `recognize'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:68:in `optimized_each'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:92:in `recognize'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:139:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/routing/route_set.rb:492:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/head.rb:14:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.2.1/lib/rack/methodoverride.rb:24:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/cookies.rb:287:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activerecord-3.0.0/lib/active_record/query_cache.rb:32:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activerecord-3.0.0/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activerecord-3.0.0/lib/active_record/query_cache.rb:12:in `cache'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activerecord-3.0.0/lib/active_record/query_cache.rb:31:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activerecord-3.0.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:355:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/callbacks.rb:46:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.2.1/lib/rack/sendfile.rb:107:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/show_exceptions.rb:46:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/railties-3.0.0/lib/rails/rack/logger.rb:13:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.2.1/lib/rack/runtime.rb:17:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-3.0.0/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.2.1/lib/rack/lock.rb:11:in `synchronize'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/static.rb:30:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/railties-3.0.0/lib/rails/application.rb:168:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/railties-3.0.0/lib/rails/application.rb:77:in `send'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/railties-3.0.0/lib/rails/application.rb:77:in `method_missing'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/railties-3.0.0/lib/rails/rack/log_tailer.rb:14:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.2.1/lib/rack/content_length.rb:13:in `call'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.2.1/lib/rack/handler/webrick.rb:52:in `service'
+/Users/denniss/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/Users/denniss/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/Users/denniss/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/Users/denniss/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/Users/denniss/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/Users/denniss/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/Users/denniss/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/Users/denniss/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/Users/denniss/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/Users/denniss/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.2.1/lib/rack/handler/webrick.rb:13:in `run'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.2.1/lib/rack/server.rb:213:in `start'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/railties-3.0.0/lib/rails/commands/server.rb:65:in `start'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/railties-3.0.0/lib/rails/commands.rb:30
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/railties-3.0.0/lib/rails/commands.rb:27:in `tap'
+/Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/railties-3.0.0/lib/rails/commands.rb:27
+script/rails:6:in `require'
+script/rails:6
+Rendered organizations/index.html.erb within layouts/application (17.8ms)
+Completed   in 105ms
+
+ActionView::Template::Error (compile error
+/Users/denniss/Sites/rottencucumber/app/views/organizations/index.html.erb:8: syntax error, unexpected '<', expecting ')'
+<br />
+ ^
+/Users/denniss/Sites/rottencucumber/app/views/organizations/index.html.erb:10: unknown regexp option - h
+/Users/denniss/Sites/rottencucumber/app/views/organizations/index.html.erb:10: syntax error, unexpected tINTEGER, expecting ')'
+<h3>Created:</h3>
+                ^
+/Users/denniss/Sites/rottencucumber/app/views/organizations/index.html.erb:13: syntax error, unexpected '>'
+/Users/denniss/Sites/rottencucumber/app/views/organizations/index.html.erb:16: syntax error, unexpected '<', expecting ')'
+<br />
+ ^
+/Users/denniss/Sites/rottencucumber/app/views/organizations/index.html.erb:18: unknown regexp option - h
+/Users/denniss/Sites/rottencucumber/app/views/organizations/index.html.erb:18: syntax error, unexpected tINTEGER, expecting ')'
+<h3>Joined:</h3>
+               ^
+/Users/denniss/Sites/rottencucumber/app/views/organizations/index.html.erb:21: syntax error, unexpected '>'
+/Users/denniss/Sites/rottencucumber/app/views/organizations/index.html.erb:23: unterminated string meets end of file
+/Users/denniss/Sites/rottencucumber/app/views/organizations/index.html.erb:23: syntax error, unexpected tSTRING_END, expecting tSTRING_CONTENT or tREGEXP_END or tSTRING_DBEG or tSTRING_DVAR):
+    5: 
+    6: <%= #render :partial => 'organization_partial', :collection => @joined_orgs %>
+    7: 
+    8: <br />
+    9: <div>
+    10: <h3>Created:</h3>
+    11: <% @my_orgs.each do |my_org| %>
+  app/views/organizations/index.html.erb:23:in `compile'
+
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  [1m[36mOrganization Load (0.2ms)[0m  [1mSELECT "organizations".* FROM "organizations" INNER JOIN "user_organizations" ON "organizations".id = "user_organizations".organization_id WHERE (("user_organizations".user_id = 1))[0m
+  [1m[35mOrganization Load (0.2ms)[0m  SELECT "organizations".* FROM "organizations" WHERE (creator_id = 1)
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (50.2ms)
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (56.6ms)
+
+
+Started GET "/organizations" for 127.0.0.1 at Mon Nov 22 19:51:32 -0800 2010
+  Processing by OrganizationsController#index as HTML
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 03:51:32.734222', '127.0.0.1', '2010-11-23 03:51:32.734222', '/organizations')[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM "organizations" INNER JOIN "user_organizations" ON "organizations".id = "user_organizations".organization_id WHERE (("user_organizations".user_id = 1))
+  [1m[36mOrganization Load (0.1ms)[0m  [1mSELECT "organizations".* FROM "organizations" INNER JOIN "user_organizations" ON "organizations".id = "user_organizations".organization_id WHERE (("user_organizations".user_id = 1))[0m
+Rendered organizations/_organization_partial.html.erb (1.1ms)
+  [1m[35mOrganization Load (0.2ms)[0m  SELECT "organizations".* FROM "organizations" WHERE (creator_id = 1)
+Rendered layouts/_header.html.erb (4.6ms)
+Rendered organizations/index.html.erb within layouts/application (18.5ms)
+Completed 200 OK in 209ms (Views: 22.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/organizations" for 127.0.0.1 at Mon Nov 22 19:51:38 -0800 2010
+  Processing by OrganizationsController#index as HTML
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 03:51:38.066534', '127.0.0.1', '2010-11-23 03:51:38.066534', '/organizations')[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mOrganization Load (0.3ms)[0m  SELECT "organizations".* FROM "organizations" WHERE (creator_id = 1)
+  [1m[36mOrganization Load (0.2ms)[0m  [1mSELECT "organizations".* FROM "organizations" INNER JOIN "user_organizations" ON "organizations".id = "user_organizations".organization_id WHERE (("user_organizations".user_id = 1))[0m
+Rendered layouts/_header.html.erb (144.7ms)
+Rendered organizations/index.html.erb within layouts/application (155.8ms)
+Completed 200 OK in 242ms (Views: 159.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/organizations" for 127.0.0.1 at Mon Nov 22 19:51:40 -0800 2010
+  Processing by OrganizationsController#index as HTML
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 03:51:40.288901', '127.0.0.1', '2010-11-23 03:51:40.288901', '/organizations')
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mOrganization Load (0.5ms)[0m  [1mSELECT "organizations".* FROM "organizations" WHERE (creator_id = 1)[0m
+  [1m[35mOrganization Load (0.2ms)[0m  SELECT "organizations".* FROM "organizations" INNER JOIN "user_organizations" ON "organizations".id = "user_organizations".organization_id WHERE (("user_organizations".user_id = 1))
+Rendered layouts/_header.html.erb (5.3ms)
+Rendered organizations/index.html.erb within layouts/application (25.2ms)
+Completed 200 OK in 138ms (Views: 29.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/organizations" for 127.0.0.1 at Mon Nov 22 19:52:26 -0800 2010
+  Processing by OrganizationsController#index as HTML
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 03:52:26.506138', '127.0.0.1', '2010-11-23 03:52:26.506138', '/organizations')[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mOrganization Load (0.3ms)[0m  SELECT "organizations".* FROM "organizations" WHERE (creator_id = 1)
+  [1m[36mOrganization Load (0.2ms)[0m  [1mSELECT "organizations".* FROM "organizations" INNER JOIN "user_organizations" ON "organizations".id = "user_organizations".organization_id WHERE (("user_organizations".user_id = 1))[0m
+Rendered layouts/_header.html.erb (4.6ms)
+Rendered organizations/index.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 105ms (Views: 20.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/organizations" for 127.0.0.1 at Mon Nov 22 19:52:45 -0800 2010
+  Processing by OrganizationsController#index as HTML
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 03:52:45.919719', '127.0.0.1', '2010-11-23 03:52:45.919719', '/organizations')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mOrganization Load (0.3ms)[0m  [1mSELECT "organizations".* FROM "organizations" WHERE (creator_id = 1)[0m
+  [1m[35mOrganization Load (0.3ms)[0m  SELECT "organizations".* FROM "organizations" INNER JOIN "user_organizations" ON "organizations".id = "user_organizations".organization_id WHERE (("user_organizations".user_id = 1))
+Rendered layouts/_header.html.erb (5.0ms)
+Rendered organizations/index.html.erb within layouts/application (17.8ms)
+Completed 200 OK in 239ms (Views: 21.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/organizations" for 127.0.0.1 at Mon Nov 22 19:52:57 -0800 2010
+  Processing by OrganizationsController#index as HTML
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 03:52:57.692027', '127.0.0.1', '2010-11-23 03:52:57.692027', '/organizations')[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mOrganization Load (0.3ms)[0m  SELECT "organizations".* FROM "organizations" WHERE (creator_id = 1)
+  [1m[36mOrganization Load (0.2ms)[0m  [1mSELECT "organizations".* FROM "organizations" INNER JOIN "user_organizations" ON "organizations".id = "user_organizations".organization_id WHERE (("user_organizations".user_id = 1))[0m
+Rendered layouts/_header.html.erb (4.4ms)
+Rendered organizations/index.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 277ms (Views: 20.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/organizations" for 127.0.0.1 at Mon Nov 22 19:53:00 -0800 2010
+  Processing by OrganizationsController#index as HTML
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 03:53:00.473623', '127.0.0.1', '2010-11-23 03:53:00.473623', '/organizations')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mOrganization Load (0.3ms)[0m  [1mSELECT "organizations".* FROM "organizations" WHERE (creator_id = 1)[0m
+  [1m[35mOrganization Load (0.2ms)[0m  SELECT "organizations".* FROM "organizations" INNER JOIN "user_organizations" ON "organizations".id = "user_organizations".organization_id WHERE (("user_organizations".user_id = 1))
+Rendered layouts/_header.html.erb (4.2ms)
+Rendered organizations/index.html.erb within layouts/application (15.4ms)
+Completed 200 OK in 105ms (Views: 19.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/organizations" for 127.0.0.1 at Mon Nov 22 19:53:07 -0800 2010
+  Processing by OrganizationsController#index as HTML
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 03:53:07.244041', '127.0.0.1', '2010-11-23 03:53:07.244041', '/organizations')[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mOrganization Load (0.3ms)[0m  SELECT "organizations".* FROM "organizations" WHERE (creator_id = 1)
+  [1m[36mOrganization Load (0.2ms)[0m  [1mSELECT "organizations".* FROM "organizations" INNER JOIN "user_organizations" ON "organizations".id = "user_organizations".organization_id WHERE (("user_organizations".user_id = 1))[0m
+Rendered layouts/_header.html.erb (4.9ms)
+Rendered organizations/index.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 106ms (Views: 21.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/organizations" for 127.0.0.1 at Mon Nov 22 19:53:15 -0800 2010
+  Processing by OrganizationsController#index as HTML
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 03:53:15.564541', '127.0.0.1', '2010-11-23 03:53:15.564541', '/organizations')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mOrganization Load (0.3ms)[0m  [1mSELECT "organizations".* FROM "organizations" WHERE (creator_id = 1)[0m
+  [1m[35mOrganization Load (0.2ms)[0m  SELECT "organizations".* FROM "organizations" INNER JOIN "user_organizations" ON "organizations".id = "user_organizations".organization_id WHERE (("user_organizations".user_id = 1))
+Rendered layouts/_header.html.erb (4.4ms)
+Rendered organizations/index.html.erb within layouts/application (19.2ms)
+Completed 200 OK in 257ms (Views: 25.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/organizations" for 127.0.0.1 at Mon Nov 22 19:53:19 -0800 2010
+  Processing by OrganizationsController#index as HTML
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 03:53:19.653909', '127.0.0.1', '2010-11-23 03:53:19.653909', '/organizations')[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mOrganization Load (0.3ms)[0m  SELECT "organizations".* FROM "organizations" WHERE (creator_id = 1)
+  [1m[36mOrganization Load (0.2ms)[0m  [1mSELECT "organizations".* FROM "organizations" INNER JOIN "user_organizations" ON "organizations".id = "user_organizations".organization_id WHERE (("user_organizations".user_id = 1))[0m
+Rendered layouts/_header.html.erb (4.6ms)
+Rendered organizations/index.html.erb within layouts/application (16.5ms)
+Completed 200 OK in 233ms (Views: 20.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/organizations" for 127.0.0.1 at Mon Nov 22 19:53:24 -0800 2010
+  Processing by OrganizationsController#index as HTML
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 03:53:24.272270', '127.0.0.1', '2010-11-23 03:53:24.272270', '/organizations')
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mOrganization Load (0.3ms)[0m  [1mSELECT "organizations".* FROM "organizations" WHERE (creator_id = 1)[0m
+  [1m[35mOrganization Load (0.2ms)[0m  SELECT "organizations".* FROM "organizations" INNER JOIN "user_organizations" ON "organizations".id = "user_organizations".organization_id WHERE (("user_organizations".user_id = 1))
+Rendered layouts/_header.html.erb (4.7ms)
+Rendered organizations/index.html.erb within layouts/application (156.9ms)
+Completed 200 OK in 237ms (Views: 160.9ms | ActiveRecord: 1.2ms)
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mGroup Load (0.2ms)[0m  [1mSELECT "groups".* FROM "groups"[0m
+
+
+Started GET "/group/new" for 127.0.0.1 at Mon Nov 22 20:18:18 -0800 2010
+
+ActionController::RoutingError (No route matches "/group/new"):
+  
+
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at Mon Nov 22 20:18:26 -0800 2010
+  Processing by LandingController#index as HTML
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 04:18:26.465101', '127.0.0.1', '2010-11-23 04:18:26.465101', '/')[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered layouts/_header.html.erb (4.1ms)
+Rendered landing/index.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 71ms (Views: 13.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/logout" for 127.0.0.1 at Mon Nov 22 20:18:28 -0800 2010
+  Processing by UserSessionsController#destroy as HTML
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 04:18:28.983000', '127.0.0.1', '2010-11-23 04:18:28.983000', '/logout')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 67ms
+
+
+Started GET "/" for 127.0.0.1 at Mon Nov 22 20:18:29 -0800 2010
+  Processing by LandingController#index as HTML
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 04:18:29.086487', '127.0.0.1', '2010-11-23 04:18:29.086487', '/')[0m
+Rendered landing/_new_unknown_user.html.erb (1.5ms)
+Rendered landing/_incomplete_user.html.erb (30.2ms)
+Rendered layouts/_header.html.erb (4.3ms)
+Rendered landing/index.html.erb within layouts/application (41.2ms)
+Completed 200 OK in 87ms (Views: 45.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/user_sessions/new" for 127.0.0.1 at Mon Nov 22 20:18:44 -0800 2010
+  Processing by UserSessionsController#new as JS
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 04:18:44.344346', '127.0.0.1', '2010-11-23 04:18:44.344346', '/user_sessions/new')
+Rendered user_sessions/_signin.html.erb (2.5ms)
+Rendered shared/_new_dialog_div.html.erb (0.4ms)
+Rendered user_sessions/new.js.erb (32.9ms)
+Completed 200 OK in 104ms (Views: 54.0ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/signin_user" for 127.0.0.1 at Mon Nov 22 20:18:50 -0800 2010
+  Processing by UserSessionsController#create as HTML
+  Parameters: {"commit"=>"Sign in", "user_session"=>{"password"=>"[FILTERED]", "email"=>"denniss@berkeley.edu"}, "authenticity_token"=>"BvC2a3cLFnNO+Uc0SUBs/8rfGxuXlWVgLUipBHcZioU=", "utf8"=>"\342\234\223"}
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 04:18:50.094388', '127.0.0.1', '2010-11-23 04:18:50.094388', '/signin_user')[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE (LOWER("users".email) = 'denniss@berkeley.edu') LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 60ms
+
+
+Started GET "/" for 127.0.0.1 at Mon Nov 22 20:18:50 -0800 2010
+  Processing by LandingController#index as HTML
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 04:18:50.198846', '127.0.0.1', '2010-11-23 04:18:50.198846', '/')[0m
+Rendered landing/_new_unknown_user.html.erb (1.7ms)
+Rendered landing/_incomplete_user.html.erb (5.7ms)
+Rendered layouts/_header.html.erb (4.2ms)
+Rendered landing/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 218ms (Views: 21.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at Mon Nov 22 20:18:55 -0800 2010
+  Processing by UsersController#new as JS
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 04:18:55.667444', '127.0.0.1', '2010-11-23 04:18:55.667444', '/users/new')
+Rendered shared/_error_messages.html.erb (0.5ms)
+Rendered users/_new_user.html.erb (12.0ms)
+Rendered shared/_new_dialog_div.html.erb (0.3ms)
+Rendered users/new.js.erb (16.4ms)
+Completed 200 OK in 68ms (Views: 19.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at Mon Nov 22 20:19:03 -0800 2010
+  Processing by UsersController#new as JS
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 04:19:03.614264', '127.0.0.1', '2010-11-23 04:19:03.614264', '/users/new')[0m
+Rendered shared/_error_messages.html.erb (0.6ms)
+Rendered users/_new_user.html.erb (12.7ms)
+Rendered shared/_new_dialog_div.html.erb (0.3ms)
+Rendered users/new.js.erb (16.3ms)
+Completed 200 OK in 205ms (Views: 19.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/user_sessions/new" for 127.0.0.1 at Mon Nov 22 20:19:11 -0800 2010
+  Processing by UserSessionsController#new as JS
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 04:19:12.029246', '127.0.0.1', '2010-11-23 04:19:12.029246', '/user_sessions/new')
+Rendered user_sessions/_signin.html.erb (2.3ms)
+Rendered shared/_new_dialog_div.html.erb (0.3ms)
+Rendered user_sessions/new.js.erb (5.6ms)
+Completed 200 OK in 61ms (Views: 12.0ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/signin_user" for 127.0.0.1 at Mon Nov 22 20:19:19 -0800 2010
+  Processing by UserSessionsController#create as HTML
+  Parameters: {"commit"=>"Sign in", "user_session"=>{"password"=>"[FILTERED]", "email"=>"denniss@berkeley.edu"}, "authenticity_token"=>"BvC2a3cLFnNO+Uc0SUBs/8rfGxuXlWVgLUipBHcZioU=", "utf8"=>"\342\234\223"}
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 04:19:19.747225', '127.0.0.1', '2010-11-23 04:19:19.747225', '/signin_user')[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE (LOWER("users".email) = 'denniss@berkeley.edu') LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "perishable_token" = '-yaQLfHJ60KA1Xi3TTgn', "updated_at" = '2010-11-23 04:19:19.947373' WHERE ("users"."id" = 1)[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 214ms
+
+
+Started GET "/" for 127.0.0.1 at Mon Nov 22 20:19:19 -0800 2010
+  Processing by LandingController#index as HTML
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 04:19:19.995120', '127.0.0.1', '2010-11-23 04:19:19.995120', '/')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered layouts/_header.html.erb (4.3ms)
+Rendered landing/index.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 84ms (Views: 13.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at Mon Nov 22 20:19:28 -0800 2010
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 04:19:28.889673', '127.0.0.1', '2010-11-23 04:19:28.889673', '/users/1/edit')[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered shared/_error_messages.html.erb (0.6ms)
+Rendered layouts/_header.html.erb (5.4ms)
+Rendered users/edit.html.erb within layouts/application (15.4ms)
+Completed 200 OK in 278ms (Views: 70.2ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Mon Nov 22 20:19:35 -0800 2010
+  Processing by LandingController#index as HTML
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 04:19:35.338707', '127.0.0.1', '2010-11-23 04:19:35.338707', '/')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered layouts/_header.html.erb (4.1ms)
+Rendered landing/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 72ms (Views: 12.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at Mon Nov 22 20:19:45 -0800 2010
+  Processing by LandingController#index as HTML
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 04:19:45.425024', '127.0.0.1', '2010-11-23 04:19:45.425024', '/')[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered layouts/_header.html.erb (4.5ms)
+Rendered landing/index.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 223ms (Views: 14.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Mon Nov 22 20:19:47 -0800 2010
+  Processing by LandingController#index as HTML
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 04:19:47.525221', '127.0.0.1', '2010-11-23 04:19:47.525221', '/')
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered layouts/_header.html.erb (4.2ms)
+Rendered landing/index.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 71ms (Views: 12.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/groups" for 127.0.0.1 at Mon Nov 22 20:19:49 -0800 2010
+  Processing by GroupsController#index as HTML
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 04:19:49.640624', '127.0.0.1', '2010-11-23 04:19:49.640624', '/groups')[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mGroup Load (0.3ms)[0m  SELECT "groups".* FROM "groups"
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "user_groups" ON "users".id = "user_groups".user_id WHERE (("user_groups".group_id = 1))[0m
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks" WHERE ("tasks".group_id = 1)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "user_groups" ON "users".id = "user_groups".user_id WHERE (("user_groups".group_id = 2))[0m
+  [1m[35mTask Load (0.1ms)[0m  SELECT "tasks".* FROM "tasks" WHERE ("tasks".group_id = 2)
+Rendered groups/_group_partial.html.erb (29.9ms)
+Rendered layouts/_header.html.erb (4.5ms)
+Rendered groups/index.html.erb within layouts/application (40.0ms)
+Completed 200 OK in 120ms (Views: 44.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/groups/new/1" for 127.0.0.1 at Mon Nov 22 20:19:59 -0800 2010
+  Processing by ProjectsController#new as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 04:19:59.692679', '127.0.0.1', '2010-11-23 04:19:59.692679', '/groups/new/1')[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed   in 72ms
+
+ActiveRecord::RecordNotFound (Couldn't find Organization without an ID):
+  app/controllers/projects_controller.rb:11:in `new'
+
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.9ms)
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.3ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at Mon Nov 22 20:21:27 -0800 2010
+  Processing by GroupsController#new as HTML
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 04:21:27.816932', '127.0.0.1', '2010-11-23 04:21:27.816932', '/groups/new')
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered groups/new.html.erb within layouts/application (1.4ms)
+Completed   in 239ms
+
+ActionView::Template::Error (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each):
+    2: 
+    3: <div class="span-8 clear list-group-members">
+    4: 	<!-- @joined_orgs is an list of Organizations that the current user is part of -->
+    5: 	<% @joined_orgs.each do |joined_org| %>
+    6: 		<% usrs = joined_org.users %>
+    7: 		<% usrs.each do |usr| %>
+    8: 			<%= usr.first_name + " " + usr.last_name + " " + joined_org.name %>
+  app/views/groups/new.html.erb:5:in `_app_views_groups_new_html_erb__1874158119_2209376560_0'
+
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (7.3ms)
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (14.4ms)
+
+
+Started GET "/groups/" for 127.0.0.1 at Mon Nov 22 20:21:36 -0800 2010
+  Processing by GroupsController#index as HTML
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 04:21:36.244969', '127.0.0.1', '2010-11-23 04:21:36.244969', '/groups')[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mGroup Load (0.3ms)[0m  SELECT "groups".* FROM "groups"
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "user_groups" ON "users".id = "user_groups".user_id WHERE (("user_groups".group_id = 1))[0m
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks" WHERE ("tasks".group_id = 1)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "user_groups" ON "users".id = "user_groups".user_id WHERE (("user_groups".group_id = 2))[0m
+  [1m[35mTask Load (0.1ms)[0m  SELECT "tasks".* FROM "tasks" WHERE ("tasks".group_id = 2)
+Rendered groups/_group_partial.html.erb (28.6ms)
+Rendered layouts/_header.html.erb (4.7ms)
+Rendered groups/index.html.erb within layouts/application (38.4ms)
+Completed 200 OK in 116ms (Views: 42.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at Mon Nov 22 20:21:39 -0800 2010
+  Processing by GroupsController#new as HTML
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 04:21:39.142035', '127.0.0.1', '2010-11-23 04:21:39.142035', '/groups/new')[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered groups/new.html.erb within layouts/application (1.3ms)
+Completed   in 75ms
+
+ActionView::Template::Error (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each):
+    2: 
+    3: <div class="span-8 clear list-group-members">
+    4: 	<!-- @joined_orgs is an list of Organizations that the current user is part of -->
+    5: 	<% @joined_orgs.each do |joined_org| %>
+    6: 		<% usrs = joined_org.users %>
+    7: 		<% usrs.each do |usr| %>
+    8: 			<%= usr.first_name + " " + usr.last_name + " " + joined_org.name %>
+  app/views/groups/new.html.erb:5:in `_app_views_groups_new_html_erb__1874158119_2206825860_0'
+
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.1ms)
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.8ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at Mon Nov 22 20:21:50 -0800 2010
+  Processing by GroupsController#new as HTML
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 04:21:50.589269', '127.0.0.1', '2010-11-23 04:21:50.589269', '/groups/new')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mOrganization Load (0.2ms)[0m  [1mSELECT "organizations".* FROM "organizations" INNER JOIN "user_organizations" ON "organizations".id = "user_organizations".organization_id WHERE (("user_organizations".user_id = 1))[0m
+Rendered layouts/_header.html.erb (4.6ms)
+Rendered groups/new.html.erb within layouts/application (27.7ms)
+Completed 200 OK in 242ms (Views: 32.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at Mon Nov 22 20:22:51 -0800 2010
+  Processing by GroupsController#new as HTML
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 04:22:51.871986', '127.0.0.1', '2010-11-23 04:22:51.871986', '/groups/new')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mOrganization Load (0.2ms)[0m  [1mSELECT "organizations".* FROM "organizations" INNER JOIN "user_organizations" ON "organizations".id = "user_organizations".organization_id WHERE (("user_organizations".user_id = 1))[0m
+Rendered layouts/_header.html.erb (4.5ms)
+Rendered groups/new.html.erb within layouts/application (27.6ms)
+Completed 200 OK in 262ms (Views: 31.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at Mon Nov 22 20:23:24 -0800 2010
+  Processing by GroupsController#new as HTML
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 04:23:24.653681', '127.0.0.1', '2010-11-23 04:23:24.653681', '/groups/new')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mOrganization Load (0.2ms)[0m  [1mSELECT "organizations".* FROM "organizations" INNER JOIN "user_organizations" ON "organizations".id = "user_organizations".organization_id WHERE (("user_organizations".user_id = 1))[0m
+Rendered layouts/_header.html.erb (5.8ms)
+Rendered groups/new.html.erb within layouts/application (29.1ms)
+Completed 200 OK in 258ms (Views: 33.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at Mon Nov 22 20:24:51 -0800 2010
+  Processing by GroupsController#new as HTML
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 04:24:51.044122', '127.0.0.1', '2010-11-23 04:24:51.044122', '/groups/new')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mOrganization Load (0.2ms)[0m  [1mSELECT "organizations".* FROM "organizations" INNER JOIN "user_organizations" ON "organizations".id = "user_organizations".organization_id WHERE (("user_organizations".user_id = 1))[0m
+Rendered layouts/_header.html.erb (4.5ms)
+Rendered groups/new.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 249ms (Views: 18.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at Mon Nov 22 20:26:24 -0800 2010
+  Processing by GroupsController#new as HTML
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 04:26:24.221604', '127.0.0.1', '2010-11-23 04:26:24.221604', '/groups/new')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mOrganization Load (0.2ms)[0m  [1mSELECT "organizations".* FROM "organizations" INNER JOIN "user_organizations" ON "organizations".id = "user_organizations".organization_id WHERE (("user_organizations".user_id = 1))[0m
+  [1m[35mOrganization Load (0.2ms)[0m  SELECT "organizations".* FROM "organizations" WHERE (creator_id = 1)
+Rendered layouts/_header.html.erb (8.1ms)
+Rendered groups/new.html.erb within layouts/application (22.4ms)
+Completed 200 OK in 257ms (Views: 26.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/groups" for 127.0.0.1 at Mon Nov 22 20:27:07 -0800 2010
+  Processing by GroupsController#index as HTML
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 04:27:07.409063', '127.0.0.1', '2010-11-23 04:27:07.409063', '/groups')[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mGroup Load (0.3ms)[0m  SELECT "groups".* FROM "groups"
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "user_groups" ON "users".id = "user_groups".user_id WHERE (("user_groups".group_id = 1))[0m
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks" WHERE ("tasks".group_id = 1)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "user_groups" ON "users".id = "user_groups".user_id WHERE (("user_groups".group_id = 2))[0m
+  [1m[35mTask Load (0.1ms)[0m  SELECT "tasks".* FROM "tasks" WHERE ("tasks".group_id = 2)
+Rendered groups/_group_partial.html.erb (187.1ms)
+Rendered layouts/_header.html.erb (5.1ms)
+Rendered groups/index.html.erb within layouts/application (197.7ms)
+Completed 200 OK in 275ms (Views: 201.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at Mon Nov 22 20:30:06 -0800 2010
+  Processing by LandingController#index as HTML
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 04:30:06.645915', '127.0.0.1', '2010-11-23 04:30:06.645915', '/')[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered layouts/_header.html.erb (4.2ms)
+Rendered landing/index.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 75ms (Views: 13.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/groups" for 127.0.0.1 at Mon Nov 22 20:30:11 -0800 2010
+  Processing by GroupsController#index as HTML
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 04:30:11.332348', '127.0.0.1', '2010-11-23 04:30:11.332348', '/groups')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mGroup Load (0.3ms)[0m  [1mSELECT "groups".* FROM "groups"[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" INNER JOIN "user_groups" ON "users".id = "user_groups".user_id WHERE (("user_groups".group_id = 1))
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE ("tasks".group_id = 1)[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" INNER JOIN "user_groups" ON "users".id = "user_groups".user_id WHERE (("user_groups".group_id = 2))
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE ("tasks".group_id = 2)[0m
+Rendered groups/_group_partial.html.erb (33.7ms)
+Rendered layouts/_header.html.erb (4.5ms)
+Rendered groups/index.html.erb within layouts/application (44.1ms)
+Completed 200 OK in 278ms (Views: 48.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at Mon Nov 22 20:30:14 -0800 2010
+  Processing by GroupsController#new as HTML
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 04:30:14.088415', '127.0.0.1', '2010-11-23 04:30:14.088415', '/groups/new')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mOrganization Load (0.2ms)[0m  [1mSELECT "organizations".* FROM "organizations" INNER JOIN "user_organizations" ON "organizations".id = "user_organizations".organization_id WHERE (("user_organizations".user_id = 1))[0m
+  [1m[35mOrganization Load (0.2ms)[0m  SELECT "organizations".* FROM "organizations" WHERE (creator_id = 1)
+Rendered layouts/_header.html.erb (4.4ms)
+Rendered groups/new.html.erb within layouts/application (18.3ms)
+Completed 200 OK in 251ms (Views: 24.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at Mon Nov 22 20:31:29 -0800 2010
+  Processing by GroupsController#new as HTML
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 04:31:29.700177', '127.0.0.1', '2010-11-23 04:31:29.700177', '/groups/new')[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mOrganization Load (0.2ms)[0m  SELECT "organizations".* FROM "organizations" INNER JOIN "user_organizations" ON "organizations".id = "user_organizations".organization_id WHERE (("user_organizations".user_id = 1))
+  [1m[36mOrganization Load (0.2ms)[0m  [1mSELECT "organizations".* FROM "organizations" WHERE (creator_id = 1)[0m
+Rendered layouts/_header.html.erb (5.2ms)
+Rendered groups/new.html.erb within layouts/application (19.2ms)
+Completed 200 OK in 250ms (Views: 23.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at Mon Nov 22 20:31:36 -0800 2010
+  Processing by GroupsController#new as HTML
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 04:31:37.007120', '127.0.0.1', '2010-11-23 04:31:37.007120', '/groups/new')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mOrganization Load (0.2ms)[0m  [1mSELECT "organizations".* FROM "organizations" INNER JOIN "user_organizations" ON "organizations".id = "user_organizations".organization_id WHERE (("user_organizations".user_id = 1))[0m
+  [1m[35mOrganization Load (0.3ms)[0m  SELECT "organizations".* FROM "organizations" WHERE (creator_id = 1)
+Rendered layouts/_header.html.erb (4.4ms)
+Rendered groups/new.html.erb within layouts/application (18.5ms)
+Completed 200 OK in 269ms (Views: 22.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at Mon Nov 22 20:32:08 -0800 2010
+  Processing by GroupsController#new as HTML
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 04:32:08.317568', '127.0.0.1', '2010-11-23 04:32:08.317568', '/groups/new')[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mOrganization Load (0.3ms)[0m  SELECT "organizations".* FROM "organizations" INNER JOIN "user_organizations" ON "organizations".id = "user_organizations".organization_id WHERE (("user_organizations".user_id = 1))
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "organizations" WHERE (creator_id = 1)) AS subquery[0m
+  [1m[35mOrganization Load (0.2ms)[0m  SELECT "organizations".* FROM "organizations" WHERE (creator_id = 1)
+Rendered layouts/_header.html.erb (4.5ms)
+Rendered groups/new.html.erb within layouts/application (19.1ms)
+Completed 200 OK in 262ms (Views: 23.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at Mon Nov 22 20:32:14 -0800 2010
+  Processing by GroupsController#new as HTML
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 04:32:14.282798', '127.0.0.1', '2010-11-23 04:32:14.282798', '/groups/new')[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mOrganization Load (0.2ms)[0m  SELECT "organizations".* FROM "organizations" INNER JOIN "user_organizations" ON "organizations".id = "user_organizations".organization_id WHERE (("user_organizations".user_id = 1))
+Rendered groups/new.html.erb within layouts/application (4.9ms)
+Completed   in 98ms
+
+ActionView::Template::Error (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.empty?):
+    40: 	<% else %>
+    41: 		<% orgs_array = @my_orgs.map { |org| [org.name, org.id] } %>
+    42: 	<% end %>
+    43: 	<% if !orgs_array.empty? %>
+    44: 		<%= select_tag :selected_org, options_for_select(orgs_array) %> <br/>
+    45: 	<% else %>
+    46: 		<%= "You have not created any organizations yet."%> <br/>
+  app/views/groups/new.html.erb:43:in `_app_views_groups_new_html_erb__1874158119_2205733080_0'
+  app/views/groups/new.html.erb:32:in `_app_views_groups_new_html_erb__1874158119_2205733080_0'
+
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  [1m[36mOrganization Load (0.6ms)[0m  [1mSELECT "organizations".* FROM "organizations" WHERE (creator_id = 1)[0m
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (159.7ms)
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (183.6ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at Mon Nov 22 20:32:40 -0800 2010
+  Processing by GroupsController#new as HTML
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 04:32:40.070903', '127.0.0.1', '2010-11-23 04:32:40.070903', '/groups/new')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mOrganization Load (0.2ms)[0m  [1mSELECT "organizations".* FROM "organizations" INNER JOIN "user_organizations" ON "organizations".id = "user_organizations".organization_id WHERE (("user_organizations".user_id = 1))[0m
+Rendered groups/new.html.erb within layouts/application (5.1ms)
+Completed   in 104ms
+
+ActionView::Template::Error (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.empty?):
+    42: 		<% orgs_array = @my_orgs.map { |org| [org.name, org.id] } %>
+    43: 	<% end %>
+    44: 	
+    45: 	<% if !orgs_array.empty? %>
+    46: 		<%= select_tag :selected_org, options_for_select(orgs_array) %> <br/>
+    47: 	<% else %>
+    48: 		<%= "You have not created any organizations yet."%> <br/>
+  app/views/groups/new.html.erb:45:in `_app_views_groups_new_html_erb__1874158119_2206173220_0'
+  app/views/groups/new.html.erb:32:in `_app_views_groups_new_html_erb__1874158119_2206173220_0'
+
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  [1m[35mOrganization Load (0.5ms)[0m  SELECT "organizations".* FROM "organizations" WHERE (creator_id = 1)
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (9.8ms)
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (16.6ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at Mon Nov 22 20:32:41 -0800 2010
+  Processing by GroupsController#new as HTML
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 04:32:41.459095', '127.0.0.1', '2010-11-23 04:32:41.459095', '/groups/new')[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mOrganization Load (0.2ms)[0m  SELECT "organizations".* FROM "organizations" INNER JOIN "user_organizations" ON "organizations".id = "user_organizations".organization_id WHERE (("user_organizations".user_id = 1))
+Rendered groups/new.html.erb within layouts/application (5.3ms)
+Completed   in 247ms
+
+ActionView::Template::Error (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.empty?):
+    42: 		<% orgs_array = @my_orgs.map { |org| [org.name, org.id] } %>
+    43: 	<% end %>
+    44: 	
+    45: 	<% if !orgs_array.empty? %>
+    46: 		<%= select_tag :selected_org, options_for_select(orgs_array) %> <br/>
+    47: 	<% else %>
+    48: 		<%= "You have not created any organizations yet."%> <br/>
+  app/views/groups/new.html.erb:45:in `_app_views_groups_new_html_erb__1874158119_2207982580_0'
+  app/views/groups/new.html.erb:32:in `_app_views_groups_new_html_erb__1874158119_2207982580_0'
+
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  [1m[36mOrganization Load (0.5ms)[0m  [1mSELECT "organizations".* FROM "organizations" WHERE (creator_id = 1)[0m
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (10.1ms)
+Rendered /Users/denniss/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (15.7ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at Mon Nov 22 20:33:04 -0800 2010
+  Processing by GroupsController#new as HTML
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 04:33:04.648376', '127.0.0.1', '2010-11-23 04:33:04.648376', '/groups/new')
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mOrganization Load (0.2ms)[0m  [1mSELECT "organizations".* FROM "organizations" INNER JOIN "user_organizations" ON "organizations".id = "user_organizations".organization_id WHERE (("user_organizations".user_id = 1))[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "organizations" WHERE (creator_id = 1)) AS subquery
+  [1m[36mOrganization Load (0.2ms)[0m  [1mSELECT "organizations".* FROM "organizations" WHERE (creator_id = 1)[0m
+Rendered layouts/_header.html.erb (4.4ms)
+Rendered groups/new.html.erb within layouts/application (19.4ms)
+Completed 200 OK in 257ms (Views: 23.4ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/create_group" for 127.0.0.1 at Mon Nov 22 20:33:26 -0800 2010
+  Processing by GroupsController#create as HTML
+  Parameters: {"group_name"=>"Blue Rangers", "commit"=>"create", "selected_org"=>"1", "authenticity_token"=>"BvC2a3cLFnNO+Uc0SUBs/8rfGxuXlWVgLUipBHcZioU=", "utf8"=>"\342\234\223"}
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 04:33:26.872439', '127.0.0.1', '2010-11-23 04:33:26.872439', '/create_group')
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "groups" ("created_at", "name", "organization_id", "updated_at") VALUES ('2010-11-23 04:33:26.933198', 'Blue Rangers', 1, '2010-11-23 04:33:26.933198')[0m
+Redirected to http://localhost:3000/groups
+Completed 302 Found in 75ms
+
+
+Started GET "/groups" for 127.0.0.1 at Mon Nov 22 20:33:26 -0800 2010
+  Processing by GroupsController#index as HTML
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 04:33:27.127349', '127.0.0.1', '2010-11-23 04:33:27.127349', '/groups')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mGroup Load (0.3ms)[0m  [1mSELECT "groups".* FROM "groups"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" INNER JOIN "user_groups" ON "users".id = "user_groups".user_id WHERE (("user_groups".group_id = 1))
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE ("tasks".group_id = 1)[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" INNER JOIN "user_groups" ON "users".id = "user_groups".user_id WHERE (("user_groups".group_id = 2))
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE ("tasks".group_id = 2)[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" INNER JOIN "user_groups" ON "users".id = "user_groups".user_id WHERE (("user_groups".group_id = 3))
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE ("tasks".group_id = 3)[0m
+Rendered groups/_group_partial.html.erb (35.8ms)
+Rendered layouts/_header.html.erb (4.6ms)
+Rendered groups/index.html.erb within layouts/application (45.9ms)
+Completed 200 OK in 277ms (Views: 49.4ms | ActiveRecord: 1.9ms)
+  [1m[35mGroup Load (0.4ms)[0m  SELECT "groups".* FROM "groups"
+  [1m[36mGroup Load (0.4ms)[0m  [1mSELECT "groups".* FROM "groups"[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "groups" WHERE ("groups"."id" = 1)
+  [1m[36mSQL (2.7ms)[0m  [1mDELETE FROM "groups" WHERE ("groups"."id" = 2)[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "groups" WHERE ("groups"."id" = 3)
+
+
+Started GET "/groups" for 127.0.0.1 at Mon Nov 22 20:34:01 -0800 2010
+  Processing by GroupsController#index as HTML
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 04:34:01.862824', '127.0.0.1', '2010-11-23 04:34:01.862824', '/groups')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mGroup Load (0.2ms)[0m  [1mSELECT "groups".* FROM "groups"[0m
+Rendered groups/_group_partial.html.erb (0.0ms)
+Rendered layouts/_header.html.erb (4.4ms)
+Rendered groups/index.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 238ms (Views: 14.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/groups" for 127.0.0.1 at Mon Nov 22 20:34:05 -0800 2010
+  Processing by GroupsController#index as HTML
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 04:34:05.365561', '127.0.0.1', '2010-11-23 04:34:05.365561', '/groups')
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mGroup Load (0.2ms)[0m  [1mSELECT "groups".* FROM "groups"[0m
+Rendered groups/_group_partial.html.erb (0.0ms)
+Rendered layouts/_header.html.erb (148.1ms)
+Rendered groups/index.html.erb within layouts/application (153.6ms)
+Completed 200 OK in 227ms (Views: 158.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at Mon Nov 22 20:34:10 -0800 2010
+  Processing by GroupsController#new as HTML
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 04:34:10.874611', '127.0.0.1', '2010-11-23 04:34:10.874611', '/groups/new')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mOrganization Load (0.2ms)[0m  [1mSELECT "organizations".* FROM "organizations" INNER JOIN "user_organizations" ON "organizations".id = "user_organizations".organization_id WHERE (("user_organizations".user_id = 1))[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "organizations" WHERE (creator_id = 1)) AS subquery
+  [1m[36mOrganization Load (0.2ms)[0m  [1mSELECT "organizations".* FROM "organizations" WHERE (creator_id = 1)[0m
+Rendered layouts/_header.html.erb (4.3ms)
+Rendered groups/new.html.erb within layouts/application (18.3ms)
+Completed 200 OK in 115ms (Views: 22.4ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/create_group" for 127.0.0.1 at Mon Nov 22 20:34:19 -0800 2010
+  Processing by GroupsController#create as HTML
+  Parameters: {"group_name"=>"Blue Rangers", "commit"=>"create", "selected_org"=>"1", "authenticity_token"=>"BvC2a3cLFnNO+Uc0SUBs/8rfGxuXlWVgLUipBHcZioU=", "utf8"=>"\342\234\223"}
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 04:34:19.576704', '127.0.0.1', '2010-11-23 04:34:19.576704', '/create_group')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "groups" ("created_at", "name", "organization_id", "updated_at") VALUES ('2010-11-23 04:34:19.639530', 'Blue Rangers', 1, '2010-11-23 04:34:19.639530')[0m
+Redirected to http://localhost:3000/groups
+Completed 302 Found in 79ms
+
+
+Started GET "/groups" for 127.0.0.1 at Mon Nov 22 20:34:19 -0800 2010
+  Processing by GroupsController#index as HTML
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 04:34:19.697151', '127.0.0.1', '2010-11-23 04:34:19.697151', '/groups')
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mGroup Load (0.3ms)[0m  [1mSELECT "groups".* FROM "groups"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" INNER JOIN "user_groups" ON "users".id = "user_groups".user_id WHERE (("user_groups".group_id = 4))
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE ("tasks".group_id = 4)[0m
+Rendered groups/_group_partial.html.erb (30.0ms)
+Rendered layouts/_header.html.erb (4.5ms)
+Rendered groups/index.html.erb within layouts/application (40.4ms)
+Completed 200 OK in 255ms (Views: 47.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/groups/4" for 127.0.0.1 at Mon Nov 22 20:35:06 -0800 2010
+  Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 04:35:06.326918', '127.0.0.1', '2010-11-23 04:35:06.326918', '/groups/4')
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mGroup Load (0.2ms)[0m  [1mSELECT "groups".* FROM "groups" WHERE ("groups"."id" = 4) LIMIT 1[0m
+  [1m[35mOrganization Load (0.3ms)[0m  SELECT "organizations".* FROM "organizations" WHERE ("organizations"."id" = 1) LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "user_groups" ON "users".id = "user_groups".user_id WHERE (("user_groups".group_id = 4))[0m
+Rendered layouts/_header.html.erb (5.8ms)
+Rendered groups/show.html.erb within layouts/application (210.2ms)
+Completed 200 OK in 287ms (Views: 215.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/groups" for 127.0.0.1 at Mon Nov 22 20:35:12 -0800 2010
+  Processing by GroupsController#index as HTML
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 04:35:12.341922', '127.0.0.1', '2010-11-23 04:35:12.341922', '/groups')
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mGroup Load (0.2ms)[0m  [1mSELECT "groups".* FROM "groups"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" INNER JOIN "user_groups" ON "users".id = "user_groups".user_id WHERE (("user_groups".group_id = 4))
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE ("tasks".group_id = 4)[0m
+Rendered groups/_group_partial.html.erb (175.9ms)
+Rendered layouts/_header.html.erb (5.1ms)
+Rendered groups/index.html.erb within layouts/application (186.8ms)
+Completed 200 OK in 265ms (Views: 191.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at Mon Nov 22 20:41:34 -0800 2010
+  Processing by TasksController#index as HTML
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 04:41:34.893443', '127.0.0.1', '2010-11-23 04:41:34.893443', '/tasks')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+Rendered tasks/_indiv_task.html.erb (0.0ms)
+Rendered layouts/_header.html.erb (4.3ms)
+Rendered tasks/index.html.erb within layouts/application (35.8ms)
+Completed 200 OK in 106ms (Views: 41.0ms | ActiveRecord: 0.8ms)
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Started GET "/groups" for 127.0.0.1 at Mon Nov 22 22:53:09 -0800 2010
+  Processing by GroupsController#index as HTML
+  [1m[35mSQL (10.2ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 06:53:10.009509', '127.0.0.1', '2010-11-23 06:53:10.009509', '/groups')
+  [1m[36mUser Load (22.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mGroup Load (0.2ms)[0m  [1mSELECT "groups".* FROM "groups"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" INNER JOIN "user_groups" ON "users".id = "user_groups".user_id WHERE (("user_groups".group_id = 4))
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE ("tasks".group_id = 4)[0m
+Rendered groups/_group_partial.html.erb (44.4ms)
+Rendered layouts/_header.html.erb (4.4ms)
+Rendered groups/index.html.erb within layouts/application (64.6ms)
+Completed 200 OK in 212ms (Views: 68.8ms | ActiveRecord: 33.4ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at Mon Nov 22 22:53:12 -0800 2010
+  Processing by GroupsController#new as HTML
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 06:53:12.983179', '127.0.0.1', '2010-11-23 06:53:12.983179', '/groups/new')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mOrganization Load (0.2ms)[0m  [1mSELECT "organizations".* FROM "organizations" INNER JOIN "user_organizations" ON "organizations".id = "user_organizations".organization_id WHERE (("user_organizations".user_id = 1))[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "organizations" WHERE (creator_id = 1)) AS subquery
+  [1m[36mOrganization Load (0.2ms)[0m  [1mSELECT "organizations".* FROM "organizations" WHERE (creator_id = 1)[0m
+Rendered layouts/_header.html.erb (7.4ms)
+Rendered groups/new.html.erb within layouts/application (25.7ms)
+Completed 200 OK in 302ms (Views: 30.3ms | ActiveRecord: 1.4ms)
+>>>>>>> 9d6aa5b3cdd297e589f0a35eed6106743731435f
   [1m[36mSQL (0.9ms)[0m  [1m SELECT name
  FROM sqlite_master
  WHERE type = 'table' AND NOT name = 'sqlite_sequence'
 [0m
+<<<<<<< HEAD
   [1m[35mSQL (81.8ms)[0m  CREATE TABLE "sms_sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "phone_number" varchar(255), "more" varchar(255) DEFAULT '', "task_id" integer, "created_at" datetime, "updated_at" datetime) 
   [1m[36mSQL (0.2ms)[0m  [1mPRAGMA index_list("sms_sessions")[0m
   [1m[35mSQL (106.3ms)[0m  CREATE UNIQUE INDEX "index_sms_sessions_on_phone_number" ON "sms_sessions" ("phone_number")
@@ -28308,15 +30212,38 @@ DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => fa
  FROM sqlite_master
  WHERE type = 'table' AND NOT name = 'sqlite_sequence'
 [0m
+=======
+>>>>>>> 9d6aa5b3cdd297e589f0a35eed6106743731435f
   [1m[35mSQL (0.4ms)[0m   SELECT name
  FROM sqlite_master
  WHERE type = 'table' AND NOT name = 'sqlite_sequence'
   [1m[36mSQL (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+<<<<<<< HEAD
   [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+=======
+Migrating to CreateUsers (20101029194241)
+Migrating to AddFirstNameLastNameToUser (20101029221616)
+Migrating to CreateUserActions (20101030013352)
+Migrating to CreateGroups (20101031235354)
+Migrating to CreateOrganizations (20101031235423)
+Migrating to CreateTasks (20101031235503)
+Migrating to CreateProjects (20101101001621)
+Migrating to CreateUserGroups (20101101002314)
+Migrating to CreateUserOrganizations (20101101003722)
+Migrating to AddCreatorToOrganization (20101101075247)
+Migrating to AddOrganizationIdToGroup (20101101093918)
+Migrating to AddStatusToTasks (20101102001912)
+Migrating to AddSmsStuffToUser (20101122071736)
+Migrating to CreateGroupOrganizations (20101123040616)
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (48.7ms)[0m  [1mCREATE TABLE "group_organizations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "group_id" integer, "organization_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (24.8ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20101123040616')
+>>>>>>> 9d6aa5b3cdd297e589f0a35eed6106743731435f
   [1m[36mSQL (0.3ms)[0m  [1m SELECT name
  FROM sqlite_master
  WHERE type = 'table' AND NOT name = 'sqlite_sequence'
 [0m
+<<<<<<< HEAD
   [1m[35mSQL (155.6ms)[0m  CREATE TABLE "groups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime, "organization_id" integer) 
   [1m[36mSQL (0.3ms)[0m  [1m SELECT name
  FROM sqlite_master
@@ -28362,10 +30289,28 @@ DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => fa
   [1m[35mSQL (81.5ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255), "crypted_password" varchar(255), "password_salt" varchar(255), "persistence_token" varchar(255), "active" boolean, "perishable_token" varchar(255), "created_at" datetime, "updated_at" datetime, "first_name" varchar(255), "last_name" varchar(255), "sms_enabled" boolean DEFAULT 'f', "phone_number" varchar(255)) 
   [1m[36mSQL (0.2ms)[0m  [1mPRAGMA index_list("users")[0m
   [1m[35mSQL (87.3ms)[0m  CREATE INDEX "index_users_on_phone_number" ON "users" ("phone_number")
+=======
+  [1m[35mSQL (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("group_organizations")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("groups")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("organizations")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("projects")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("tasks")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("user_actions")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("user_groups")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("user_organizations")[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_info('index_users_on_phone_number')[0m
+>>>>>>> 9d6aa5b3cdd297e589f0a35eed6106743731435f
   [1m[36mSQL (1.2ms)[0m  [1m SELECT name
  FROM sqlite_master
  WHERE type = 'table' AND NOT name = 'sqlite_sequence'
 [0m
+<<<<<<< HEAD
   [1m[35mSQL (138.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
   [1m[36mSQL (0.2ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
   [1m[35mSQL (93.3ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
@@ -28481,10 +30426,25 @@ DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => fa
  WHERE type = 'table' AND NOT name = 'sqlite_sequence'
   [1m[36mSQL (0.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
   [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+=======
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateGroupOrganizations (20101123040616)
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (50.8ms)[0m  [1mDROP TABLE "group_organizations"[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20101123040616'
+>>>>>>> 9d6aa5b3cdd297e589f0a35eed6106743731435f
   [1m[36mSQL (0.3ms)[0m  [1m SELECT name
  FROM sqlite_master
  WHERE type = 'table' AND NOT name = 'sqlite_sequence'
 [0m
+<<<<<<< HEAD
   [1m[35mSQL (156.4ms)[0m  CREATE TABLE "groups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime, "organization_id" integer) 
   [1m[36mSQL (0.5ms)[0m  [1m SELECT name
  FROM sqlite_master
@@ -28649,10 +30609,14 @@ DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => fa
  WHERE type = 'table' AND NOT name = 'sqlite_sequence'
   [1m[36mSQL (0.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
   [1m[35mSQL (0.2ms)[0m  select sqlite_version(*)
+=======
+  [1m[35mSQL (0.3ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+>>>>>>> 9d6aa5b3cdd297e589f0a35eed6106743731435f
   [1m[36mSQL (0.2ms)[0m  [1m SELECT name
  FROM sqlite_master
  WHERE type = 'table' AND NOT name = 'sqlite_sequence'
 [0m
+<<<<<<< HEAD
   [1m[35mSQL (140.8ms)[0m  CREATE TABLE "groups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime, "organization_id" integer) 
   [1m[36mSQL (0.5ms)[0m  [1m SELECT name
  FROM sqlite_master
@@ -28724,3 +30688,14 @@ DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => fa
   [1m[35mSQL (66.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101102001912')
   [1m[36mSQL (77.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101101003722')[0m
   [1m[35mSQL (77.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101101075247')
+=======
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("groups")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("organizations")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("projects")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("tasks")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("user_actions")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("user_groups")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("user_organizations")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_info('index_users_on_phone_number')
+>>>>>>> 9d6aa5b3cdd297e589f0a35eed6106743731435f

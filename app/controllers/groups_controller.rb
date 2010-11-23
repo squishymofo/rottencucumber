@@ -12,12 +12,11 @@ class GroupsController < ApplicationController
 
   def new
     @group = Group.new
-    @joined_orgs = @current_user.organizations 
-    #organizations that the current user is a part of
+    @my_orgs = Organization.where("creator_id = ?", @current_user.id)
+    @joined_orgs = @current_user.organizations
   end
 
   def create
-    #debugger
     @group = Group.new
     @group.name = params[:group_name]
     @group.organization_id = params[:selected_org]    

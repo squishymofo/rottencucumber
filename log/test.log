@@ -13,7 +13,7 @@ Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.0ms)
 Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms)
   Processing by TasksController#create as HTML
 Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms)
-<<<<<<< HEAD
+
 
 
 Started GET "/" for 127.0.0.1 at Mon Nov 01 14:29:52 -0700 2010
@@ -5242,15 +5242,7 @@ Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms)
 Completed 200 OK in 2ms (Views: 2.1ms | ActiveRecord: 0.0ms)
   Processing by TasksController#create as HTML
 Completed 200 OK in 2ms (Views: 2.1ms | ActiveRecord: 0.0ms)
-<<<<<<< HEAD
-=======
->>>>>>> 9e0a3a14349ad4a124384bb120596e520eca765b
->>>>>>> 705ea12c694bb28fa9879a6afed4c895cd69e309
-  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
-  [1m[35mSQL (0.1ms)[0m  ROLLBACK
-  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
-  [1m[35mSQL (0.1ms)[0m  ROLLBACK
-<<<<<<< HEAD
+
   [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
   [1m[35mSQL (0.1ms)[0m  ROLLBACK
   [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
@@ -18177,6 +18169,209 @@ Completed 200 OK in 74ms (Views: 9.5ms | ActiveRecord: 2.8ms)
   [1m[36mSQL (0.4ms)[0m  [1mTRUNCATE TABLE `user_organizations`;[0m
   [1m[35mSQL (0.8ms)[0m  TRUNCATE TABLE `users`;
   [1m[36mSQL (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+<<<<<<< HEAD
+WARNING: Can't mass-assign protected attributes: first_name
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW TABLES
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('varlain@hotmail.com')) LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.`id` FROM `users` WHERE (`users`.`persistence_token` = BINARY 'c112cba4c3a2d9f7028f4d6fca8ef4678a125999660dba0b847bfd2cb99f17b5be56dd2205ac0dcdb3203040752f8cf782e3c6f534238982cd34023c24c1dc29') LIMIT 1
+  [1m[36mSQL (1.2ms)[0m  [1mdescribe `users`[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `users` (`active`, `created_at`, `crypted_password`, `email`, `first_name`, `last_name`, `password_salt`, `perishable_token`, `persistence_token`, `updated_at`) VALUES (NULL, '2010-11-02 20:55:31', '30754dd964592404c4cfdb609f0ef153699560b9ccbc290913707abdc520091fd11fc7142421d4572953d4b4928100b15ad9595ca58b758e718fa3976f5f17dd', 'varlain@hotmail.com', NULL, NULL, 'IrQdj7tBHByMH7IV6LWp', 'LYMs35kmg4WNF-vlhGc_', 'c112cba4c3a2d9f7028f4d6fca8ef4678a125999660dba0b847bfd2cb99f17b5be56dd2205ac0dcdb3203040752f8cf782e3c6f534238982cd34023c24c1dc29', '2010-11-02 20:55:31')
+  [1m[36mSQL (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mSQL (0.5ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE `users` SET `first_name` = 'Dennis', `perishable_token` = 'kyg5oR1Eae2pUdgih1DH', `updated_at` = '2010-11-02 20:55:31' WHERE (`users`.`id` = 1)[0m
+  [1m[35mSQL (0.1ms)[0m  COMMIT
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE `users` SET `active` = 1, `perishable_token` = 'tMK-9zs3JFPgCD2UdN_S', `updated_at` = '2010-11-02 20:55:31' WHERE (`users`.`id` = 1)
+  [1m[36mSQL (0.1ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/" for ::1 at Tue Nov 02 13:55:44 -0700 2010
+  Processing by LandingController#index as HTML
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (1.1ms)[0m  [1mdescribe `user_actions`[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-02 20:55:44', '::1', '2010-11-02 20:55:44', '/')
+  [1m[36mSQL (0.1ms)[0m  [1mCOMMIT[0m
+Rendered landing/_new_unknown_user.html.erb (3.1ms)
+Rendered layouts/_header.html.erb (29.0ms)
+Rendered landing/index.html.erb within layouts/application (41.2ms)
+Completed 200 OK in 69ms (Views: 46.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/user_sessions/new" for ::1 at Tue Nov 02 13:55:44 -0700 2010
+  Processing by UserSessionsController#new as JS
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-02 20:55:44', '::1', '2010-11-02 20:55:44', '/user_sessions/new')[0m
+  [1m[35mSQL (0.1ms)[0m  COMMIT
+Rendered user_sessions/_signin.html.erb (6.3ms)
+Rendered user_sessions/new.js.erb (9.4ms)
+Completed 200 OK in 24ms (Views: 17.6ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/signin_user" for ::1 at Tue Nov 02 13:55:46 -0700 2010
+  Processing by UserSessionsController#create as HTML
+  Parameters: {"commit"=>"Sign in", "user_session"=>{"password"=>"[FILTERED]", "email"=>"varlain@hotmail.com"}, "utf8"=>"\342\234\223"}
+  [1m[36mSQL (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-02 20:55:46', '::1', '2010-11-02 20:55:46', '/signin_user')
+  [1m[36mSQL (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE (LOWER(`users`.email) = 'varlain@hotmail.com') LIMIT 1
+Redirected to http://localhost:9887/
+Completed 302 Found in 242ms
+
+
+Started GET "/" for ::1 at Tue Nov 02 13:55:46 -0700 2010
+  Processing by LandingController#index as HTML
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-02 20:55:46', '::1', '2010-11-02 20:55:46', '/')
+  [1m[36mSQL (0.1ms)[0m  [1mCOMMIT[0m
+Rendered landing/_new_unknown_user.html.erb (1.1ms)
+Rendered layouts/_header.html.erb (4.9ms)
+Rendered landing/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 14ms (Views: 9.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/organizations/new" for ::1 at Tue Nov 02 13:55:46 -0700 2010
+  Processing by OrganizationsController#new as HTML
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-02 20:55:46', '::1', '2010-11-02 20:55:46', '/organizations/new')[0m
+  [1m[35mSQL (0.1ms)[0m  COMMIT
+Rendered layouts/_header.html.erb (6.0ms)
+Rendered organizations/new.html.erb within layouts/application (16.8ms)
+Completed 200 OK in 28ms (Views: 20.6ms | ActiveRecord: 0.4ms)
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  describe `organizations`
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `organizations` (`created_at`, `creator_id`, `description`, `name`, `updated_at`) VALUES ('2010-11-02 20:55:47', NULL, 'Organization Test', 'Organization Test', '2010-11-02 20:55:47')[0m
+  [1m[35mSQL (0.1ms)[0m  COMMIT
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35mSQL (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.5ms)[0m  TRUNCATE TABLE `groups`;
+  [1m[36mSQL (0.7ms)[0m  [1mTRUNCATE TABLE `organizations`;[0m
+  [1m[35mSQL (0.6ms)[0m  TRUNCATE TABLE `projects`;
+  [1m[36mSQL (0.5ms)[0m  [1mTRUNCATE TABLE `tasks`;[0m
+  [1m[35mSQL (0.7ms)[0m  TRUNCATE TABLE `user_actions`;
+  [1m[36mSQL (0.4ms)[0m  [1mTRUNCATE TABLE `user_groups`;[0m
+  [1m[35mSQL (0.5ms)[0m  TRUNCATE TABLE `user_organizations`;
+  [1m[36mSQL (0.6ms)[0m  [1mTRUNCATE TABLE `users`;[0m
+  [1m[35mSQL (1.4ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+WARNING: Can't mass-assign protected attributes: first_name
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.`id` FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('spitfire67@berkeley.edu')) LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (`users`.`persistence_token` = BINARY '055c38d66801c400918c85c2a708d0349e7844094b25c259adb49bf8023c27bff471b19e2eabd9a985465641cee0fbf9390e5ef571068e00f656aab51fe7ecf2') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `users` (`active`, `created_at`, `crypted_password`, `email`, `first_name`, `last_name`, `password_salt`, `perishable_token`, `persistence_token`, `updated_at`) VALUES (NULL, '2010-11-02 20:55:47', '68ad90be5f7ca9f91fec9d53a264977cad8bfcc4fb9a9c42281c0b557d41acab5fb0a615a0950b7c5506f9a1ec009ffc057a934b1cf0a6d89c058c5dade4693e', 'spitfire67@berkeley.edu', NULL, NULL, 'h05H4UWbJ438-0IhI3Xh', '0sM4c7M0c6TmZqMPk2SH', '055c38d66801c400918c85c2a708d0349e7844094b25c259adb49bf8023c27bff471b19e2eabd9a985465641cee0fbf9390e5ef571068e00f656aab51fe7ecf2', '2010-11-02 20:55:47')
+  [1m[36mSQL (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE `users` SET `first_name` = 'James', `perishable_token` = 'ZH0Co-OHrSKo5mTXwZ4t', `updated_at` = '2010-11-02 20:55:47' WHERE (`users`.`id` = 1)[0m
+  [1m[35mSQL (0.1ms)[0m  COMMIT
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE `users` SET `active` = 1, `perishable_token` = 'NiuaY0ghCriwu30z6x1-', `updated_at` = '2010-11-02 20:55:47' WHERE (`users`.`id` = 1)
+  [1m[36mSQL (0.1ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/" for ::1 at Tue Nov 02 13:55:47 -0700 2010
+  Processing by LandingController#index as HTML
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (5.0ms)[0m  [1mINSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-02 20:55:47', '::1', '2010-11-02 20:55:47', '/')[0m
+  [1m[35mSQL (0.1ms)[0m  COMMIT
+Rendered landing/_new_unknown_user.html.erb (1.2ms)
+Rendered layouts/_header.html.erb (5.7ms)
+Rendered landing/index.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 22ms (Views: 10.7ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/user_sessions/new" for ::1 at Tue Nov 02 13:55:48 -0700 2010
+  Processing by UserSessionsController#new as JS
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-02 20:55:48', '::1', '2010-11-02 20:55:48', '/user_sessions/new')
+  [1m[36mSQL (0.1ms)[0m  [1mCOMMIT[0m
+Rendered user_sessions/_signin.html.erb (4.4ms)
+Rendered user_sessions/new.js.erb (5.3ms)
+Completed 200 OK in 11ms (Views: 6.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/signin_user" for ::1 at Tue Nov 02 13:55:49 -0700 2010
+  Processing by UserSessionsController#create as HTML
+  Parameters: {"commit"=>"Sign in", "user_session"=>{"password"=>"[FILTERED]", "email"=>"spitfire67@berkeley.edu"}, "utf8"=>"\342\234\223"}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-02 20:55:49', '::1', '2010-11-02 20:55:49', '/signin_user')[0m
+  [1m[35mSQL (0.1ms)[0m  COMMIT
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (LOWER(`users`.email) = 'spitfire67@berkeley.edu') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE `users` SET `perishable_token` = 'r8K0vshTk0D-9mnxW757', `updated_at` = '2010-11-02 20:55:49' WHERE (`users`.`id` = 1)[0m
+  [1m[35mSQL (0.1ms)[0m  COMMIT
+Redirected to http://localhost:9887/
+Completed 302 Found in 15ms
+
+
+Started GET "/" for ::1 at Tue Nov 02 13:55:49 -0700 2010
+  Processing by LandingController#index as HTML
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-02 20:55:49', '::1', '2010-11-02 20:55:49', '/')
+  [1m[36mSQL (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendered layouts/_header.html.erb (5.4ms)
+Rendered landing/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 39ms (Views: 8.5ms | ActiveRecord: 0.7ms)
+  [1m[35mSQL (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36mSQL (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.4ms)[0m  [1mTRUNCATE TABLE `groups`;[0m
+  [1m[35mSQL (0.3ms)[0m  TRUNCATE TABLE `organizations`;
+  [1m[36mSQL (0.3ms)[0m  [1mTRUNCATE TABLE `projects`;[0m
+  [1m[35mSQL (0.3ms)[0m  TRUNCATE TABLE `tasks`;
+  [1m[36mSQL (1.3ms)[0m  [1mTRUNCATE TABLE `user_actions`;[0m
+  [1m[35mSQL (1.0ms)[0m  TRUNCATE TABLE `user_groups`;
+  [1m[36mSQL (0.4ms)[0m  [1mTRUNCATE TABLE `user_organizations`;[0m
+  [1m[35mSQL (0.8ms)[0m  TRUNCATE TABLE `users`;
+  [1m[36mSQL (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+
+
+Started GET "/" for ::1 at Tue Nov 02 13:55:49 -0700 2010
+  Processing by LandingController#index as HTML
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-02 20:55:49', '::1', '2010-11-02 20:55:49', '/')[0m
+  [1m[35mSQL (0.1ms)[0m  COMMIT
+Rendered landing/_new_unknown_user.html.erb (1.2ms)
+Rendered layouts/_header.html.erb (5.0ms)
+Rendered landing/index.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 15ms (Views: 9.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/new" for ::1 at Tue Nov 02 13:55:49 -0700 2010
+  Processing by UsersController#new as JS
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-02 20:55:49', '::1', '2010-11-02 20:55:49', '/users/new')
+  [1m[36mSQL (0.1ms)[0m  [1mCOMMIT[0m
+Rendered shared/_error_messages.html.erb (0.7ms)
+Rendered users/_new_user.html.erb (13.8ms)
+Rendered users/new.js.erb (47.8ms)
+Completed 200 OK in 57ms (Views: 52.0ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/sign_me_up" for ::1 at Tue Nov 02 13:55:50 -0700 2010
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Sign up", "utf8"=>"\342\234\223", "email"=>"someone@example.com"}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-02 20:55:50', '::1', '2010-11-02 20:55:50', '/sign_me_up')[0m
+  [1m[35mSQL (0.5ms)[0m  COMMIT
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.`id` FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('someone@example.com')) LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (`users`.`persistence_token` = BINARY '71dcd5df28b8d5053fda5531664fd460ef789347d88a196f0a151fda20270265e565b72efee1faca881e02f7423ac1f65b0d6cdb86a621412888298aaa4ce51b') LIMIT 1[0m
+  [1m[35mSQL (1.5ms)[0m  describe `users`
+  [1m[36mSQL (2.2ms)[0m  [1mINSERT INTO `users` (`active`, `created_at`, `crypted_password`, `email`, `first_name`, `last_name`, `password_salt`, `perishable_token`, `persistence_token`, `updated_at`) VALUES (NULL, '2010-11-02 20:55:50', NULL, 'someone@example.com', NULL, NULL, NULL, 'ydJ2zK8gcZBetxvuXpxl', '71dcd5df28b8d5053fda5531664fd460ef789347d88a196f0a151fda20270265e565b72efee1faca881e02f7423ac1f65b0d6cdb86a621412888298aaa4ce51b', '2010-11-02 20:55:50')[0m
+  [1m[35mSQL (0.1ms)[0m  COMMIT
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE `users` SET `perishable_token` = '0lyND5V4QV7EIZ7fX3SA', `updated_at` = '2010-11-02 20:55:50' WHERE (`users`.`id` = 1)
+  [1m[36mSQL (0.1ms)[0m  [1mCOMMIT[0m
+Rendered user_mailer/activation_instructions.text.erb (0.9ms)
+
+Sent mail to someone@example.com (26ms)
+Date: Tue, 02 Nov 2010 13:55:50 -0700
+From: NitrousDomus@gmail.com
+To: someone@example.com
+Message-ID: <4cd07ad6d301a_abd483617f8c415da@Dennis-Suratnas-MacBook-Pro.local.mail>
+=======
   [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
   [1m[35mSQL (0.1ms)[0m  ROLLBACK
   [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
@@ -26352,6 +26547,7 @@ Date: Wed, 10 Nov 2010 14:32:47 -0800
 From: NitrousDomus@gmail.com
 To: someone@example.com
 Message-ID: <4cdb1d8fb0218_117e24cc0d82252ae@james-laptop.mail>
+>>>>>>> 5a9f70f0ecaf489327bb69a742219197f02bd34e
 Subject: Activation Instructions
 Mime-Version: 1.0
 Content-Type: text/plain;
@@ -26362,6 +26558,200 @@ Hello,
 
 Go here to confirm your email:
 
+<<<<<<< HEAD
+  http://localhost:3000/register/0lyND5V4QV7EIZ7fX3SA
+
+If the above URL does not work, try copying and pasting it into your browser. If you continue to have problems, please feel free to contact us.
+Redirected to http://localhost:9887/?check_email=1
+Completed 302 Found in 142ms
+
+
+Started GET "/?check_email=1" for ::1 at Tue Nov 02 13:55:51 -0700 2010
+  Processing by LandingController#index as HTML
+  Parameters: {"check_email"=>"1"}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-02 20:55:51', '::1', '2010-11-02 20:55:51', '/?check_email=1')[0m
+  [1m[35mSQL (0.1ms)[0m  COMMIT
+Rendered users/_check_email.html.erb (0.5ms)
+Rendered layouts/_header.html.erb (7.1ms)
+Rendered landing/index.html.erb within layouts/application (49.5ms)
+Completed 200 OK in 56ms (Views: 50.4ms | ActiveRecord: 0.4ms)
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`email` = 'someone@example.com') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36mSQL (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.4ms)[0m  [1mTRUNCATE TABLE `groups`;[0m
+  [1m[35mSQL (1.1ms)[0m  TRUNCATE TABLE `organizations`;
+  [1m[36mSQL (0.6ms)[0m  [1mTRUNCATE TABLE `projects`;[0m
+  [1m[35mSQL (0.5ms)[0m  TRUNCATE TABLE `tasks`;
+  [1m[36mSQL (1.2ms)[0m  [1mTRUNCATE TABLE `user_actions`;[0m
+  [1m[35mSQL (2.2ms)[0m  TRUNCATE TABLE `user_groups`;
+  [1m[36mSQL (0.4ms)[0m  [1mTRUNCATE TABLE `user_organizations`;[0m
+  [1m[35mSQL (0.9ms)[0m  TRUNCATE TABLE `users`;
+  [1m[36mSQL (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+
+
+Started GET "/" for ::1 at Tue Nov 02 13:55:51 -0700 2010
+  Processing by LandingController#index as HTML
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-02 20:55:51', '::1', '2010-11-02 20:55:51', '/')[0m
+  [1m[35mSQL (0.1ms)[0m  COMMIT
+Rendered landing/_new_unknown_user.html.erb (1.2ms)
+Rendered layouts/_header.html.erb (6.2ms)
+Rendered landing/index.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 17ms (Views: 11.1ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/users/new" for ::1 at Tue Nov 02 13:55:51 -0700 2010
+  Processing by UsersController#new as JS
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-02 20:55:52', '::1', '2010-11-02 20:55:52', '/users/new')
+  [1m[36mSQL (0.1ms)[0m  [1mCOMMIT[0m
+Rendered shared/_error_messages.html.erb (0.1ms)
+Rendered users/_new_user.html.erb (3.7ms)
+Rendered users/new.js.erb (4.5ms)
+Completed 200 OK in 13ms (Views: 5.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/sign_me_up" for ::1 at Tue Nov 02 13:55:52 -0700 2010
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Sign up", "utf8"=>"\342\234\223", "email"=>"asflkj"}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-02 20:55:52', '::1', '2010-11-02 20:55:52', '/sign_me_up')[0m
+  [1m[35mSQL (0.1ms)[0m  COMMIT
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.`id` FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('asflkj')) LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (`users`.`persistence_token` = BINARY '28f549c261f53c823ceaee0d190b99044bc7f442b55c274bf36361054031e2daca497b684812d99e443ac93d1f63a149f6f1e189093e355ce83bbe6fcb0900e6') LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+Rendered shared/_error_messages.html.erb (2.0ms)
+Rendered users/_new_user.html.erb (6.9ms)
+Rendered shared/_error_messages.html.erb (1.4ms)
+Rendered users/_new_user.html.erb (4.2ms)
+Rendered users/_signup_problems.html.erb (13.9ms)
+Rendered layouts/_header.html.erb (5.7ms)
+Rendered landing/index.html.erb within layouts/application (23.5ms)
+Completed 200 OK in 37ms (Views: 25.4ms | ActiveRecord: 1.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`email` = 'asflkj') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36mSQL (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.4ms)[0m  [1mTRUNCATE TABLE `groups`;[0m
+  [1m[35mSQL (0.3ms)[0m  TRUNCATE TABLE `organizations`;
+  [1m[36mSQL (0.3ms)[0m  [1mTRUNCATE TABLE `projects`;[0m
+  [1m[35mSQL (0.4ms)[0m  TRUNCATE TABLE `tasks`;
+  [1m[36mSQL (0.9ms)[0m  [1mTRUNCATE TABLE `user_actions`;[0m
+  [1m[35mSQL (1.7ms)[0m  TRUNCATE TABLE `user_groups`;
+  [1m[36mSQL (0.4ms)[0m  [1mTRUNCATE TABLE `user_organizations`;[0m
+  [1m[35mSQL (0.4ms)[0m  TRUNCATE TABLE `users`;
+  [1m[36mSQL (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+
+
+Started GET "/" for ::1 at Tue Nov 02 13:55:53 -0700 2010
+  Processing by LandingController#index as HTML
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-02 20:55:53', '::1', '2010-11-02 20:55:53', '/')[0m
+  [1m[35mSQL (0.1ms)[0m  COMMIT
+Rendered landing/_new_unknown_user.html.erb (1.3ms)
+Rendered layouts/_header.html.erb (6.0ms)
+Rendered landing/index.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 17ms (Views: 11.0ms | ActiveRecord: 0.7ms)
+  [1m[36mSQL (0.8ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.`id` FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('someone@example.com')) LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (`users`.`persistence_token` = BINARY 'ab284e242f85706671f2995ffcf37e9e1a8908422331fcd6b6c52a5da286748585358471d3c6f7c05a16c0bb605e443a2cc2be00b9bb6ddde400e4dda16b51a9') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `users` (`active`, `created_at`, `crypted_password`, `email`, `first_name`, `last_name`, `password_salt`, `perishable_token`, `persistence_token`, `updated_at`) VALUES (NULL, '2010-11-02 20:55:53', '8f3e32e3008bf4ead7c738697a327c4ef3829ea08564679c0af8cdb3374798b2514d39c921571ac726bea93ea58ef71ed858c7ca908d12391ddbd4927f5f621e', 'someone@example.com', NULL, NULL, 'yc4Ku99Lax0ntCuFJhfP', 'S-NEbOsoIts4s3MiS-kv', 'ab284e242f85706671f2995ffcf37e9e1a8908422331fcd6b6c52a5da286748585358471d3c6f7c05a16c0bb605e443a2cc2be00b9bb6ddde400e4dda16b51a9', '2010-11-02 20:55:53')
+  [1m[36mSQL (0.1ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/users/new" for ::1 at Tue Nov 02 13:55:53 -0700 2010
+  Processing by UsersController#new as JS
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-02 20:55:53', '::1', '2010-11-02 20:55:53', '/users/new')[0m
+  [1m[35mSQL (0.1ms)[0m  COMMIT
+Rendered shared/_error_messages.html.erb (0.1ms)
+Rendered users/_new_user.html.erb (2.8ms)
+Rendered users/new.js.erb (3.6ms)
+Completed 200 OK in 8ms (Views: 4.3ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/sign_me_up" for ::1 at Tue Nov 02 13:55:54 -0700 2010
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Sign up", "utf8"=>"\342\234\223", "email"=>"someone@example.com"}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-02 20:55:54', '::1', '2010-11-02 20:55:54', '/sign_me_up')
+  [1m[36mSQL (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('someone@example.com')) LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.`id` FROM `users` WHERE (`users`.`persistence_token` = BINARY '32aeb59d25eeb8e0510ca5b52afae4dc1ccae9f15588e228e3ecdf25073acf7a02ad21411a61bc1809a7bb47fb77b2da568a12f789cea4112827fd44f13611a1') LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+Rendered shared/_error_messages.html.erb (1.4ms)
+Rendered users/_new_user.html.erb (4.2ms)
+Rendered shared/_error_messages.html.erb (1.3ms)
+Rendered users/_new_user.html.erb (3.9ms)
+Rendered users/_signup_problems.html.erb (9.1ms)
+Rendered layouts/_header.html.erb (5.1ms)
+Rendered landing/index.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 27ms (Views: 17.6ms | ActiveRecord: 1.1ms)
+  [1m[35mSQL (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36mSQL (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.4ms)[0m  [1mTRUNCATE TABLE `groups`;[0m
+  [1m[35mSQL (0.3ms)[0m  TRUNCATE TABLE `organizations`;
+  [1m[36mSQL (0.3ms)[0m  [1mTRUNCATE TABLE `projects`;[0m
+  [1m[35mSQL (0.3ms)[0m  TRUNCATE TABLE `tasks`;
+  [1m[36mSQL (0.8ms)[0m  [1mTRUNCATE TABLE `user_actions`;[0m
+  [1m[35mSQL (1.8ms)[0m  TRUNCATE TABLE `user_groups`;
+  [1m[36mSQL (0.4ms)[0m  [1mTRUNCATE TABLE `user_organizations`;[0m
+  [1m[35mSQL (0.8ms)[0m  TRUNCATE TABLE `users`;
+  [1m[36mSQL (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('spitfire67@berkeley.edu')) LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.`id` FROM `users` WHERE (`users`.`persistence_token` = BINARY 'f4fb5348eac6726f6a403850cc8010d5d80d1f6057455540785f22955e5c58873f95a34ea9e0e9c00b6960ac3ec69f755d30133f7ea6007295f5174a565d4755') LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `users` (`active`, `created_at`, `crypted_password`, `email`, `first_name`, `last_name`, `password_salt`, `perishable_token`, `persistence_token`, `updated_at`) VALUES (NULL, '2010-11-02 20:55:55', NULL, 'spitfire67@berkeley.edu', NULL, NULL, NULL, 'gOx4NKPnHGVCWlKGIsQn', 'f4fb5348eac6726f6a403850cc8010d5d80d1f6057455540785f22955e5c58873f95a34ea9e0e9c00b6960ac3ec69f755d30133f7ea6007295f5174a565d4755', '2010-11-02 20:55:55')[0m
+  [1m[35mSQL (0.1ms)[0m  COMMIT
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE `users` SET `perishable_token` = 'SoeGBuzYK1K9w29sIKh2', `updated_at` = '2010-11-02 20:55:55' WHERE (`users`.`id` = 1)
+  [1m[36mSQL (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`email` = 'spitfire67@berkeley.edu') LIMIT 1
+
+
+Started GET "/register/SoeGBuzYK1K9w29sIKh2" for ::1 at Tue Nov 02 13:55:55 -0700 2010
+  Processing by ActivationsController#new as HTML
+  Parameters: {"activation_code"=>"SoeGBuzYK1K9w29sIKh2"}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-02 20:55:55', '::1', '2010-11-02 20:55:55', '/register/SoeGBuzYK1K9w29sIKh2')
+  [1m[36mSQL (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE (perishable_token = 'SoeGBuzYK1K9w29sIKh2' and updated_at > '2010-10-26 20:55:55') LIMIT 1
+Rendered activations/_confirming_new_user.html.erb (2.9ms)
+Rendered layouts/_header.html.erb (7.3ms)
+Rendered landing/index.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 42ms (Views: 17.6ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/activate/1" for ::1 at Tue Nov 02 13:55:56 -0700 2010
+  Processing by ActivationsController#create as HTML
+  Parameters: {"commit"=>"Big save button", "password_confirmation"=>"[FILTERED]", "utf8"=>"\342\234\223", "id"=>"1", "last_name"=>"", "password"=>"[FILTERED]", "first_name"=>""}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-11-02 20:55:56', '::1', '2010-11-02 20:55:56', '/activate/1')
+  [1m[36mSQL (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.`id` FROM `users` WHERE (`users`.`persistence_token` = BINARY 'a5ee73f2a27b5b50bd833ec2e62042bd272cfc5f4e3202a13b2a7b34b74aaa6d3e3aa8ea8a70c3cfd6e3eb6cf78086b7f27efb9783c07c2d645e6418a7eb335c') AND (`users`.id <> 1) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE `users` SET `active` = 1, `crypted_password` = 'e9e3736d3b7fc27be12e201319eaadda44ec343db550709c7e32286d7fc176fdea90f7cb8a6959a408e144c76ae46d309791ffff39eafb737e8f7a61e4c96f88', `password_salt` = 'NkTlBrp-7ZFA4IX_30eH', `perishable_token` = 'wPy3mie6s24-EJnUWcsx', `persistence_token` = 'a5ee73f2a27b5b50bd833ec2e62042bd272cfc5f4e3202a13b2a7b34b74aaa6d3e3aa8ea8a70c3cfd6e3eb6cf78086b7f27efb9783c07c2d645e6418a7eb335c', `updated_at` = '2010-11-02 20:55:56' WHERE (`users`.`id` = 1)[0m
+  [1m[35mSQL (0.1ms)[0m  COMMIT
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE `users` SET `first_name` = '', `last_name` = '', `perishable_token` = 'xrxHzAzEhSE8GU-pf5tB', `updated_at` = '2010-11-02 20:55:56' WHERE (`users`.`id` = 1)
+  [1m[36mSQL (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE `users` SET `perishable_token` = '3wgcELwk0j-Slh-pLG_7', `updated_at` = '2010-11-02 20:55:56' WHERE (`users`.`id` = 1)[0m
+  [1m[35mSQL (0.1ms)[0m  COMMIT
+Rendered user_mailer/activation_confirmation.text.erb (0.4ms)
+
+Sent mail to spitfire67@berkeley.edu (10ms)
+Date: Tue, 02 Nov 2010 13:55:56 -0700
+From: NitrousDomus@gmail.com
+To: spitfire67@berkeley.edu
+Message-ID: <4cd07adcef828_abd483612fa0416b0@Dennis-Suratnas-MacBook-Pro.local.mail>
+=======
   http://localhost:3000/register/OlD-jSlw3LbIdb2tH3Os
 
 If the above URL does not work, try copying and pasting it into your browser. If you continue to have problems, please feel free to contact us.
@@ -26555,6 +26945,7 @@ Date: Wed, 10 Nov 2010 14:33:05 -0800
 From: NitrousDomus@gmail.com
 To: spitfire67@berkeley.edu
 Message-ID: <4cdb1da1a2035_117e24cb4e88253c6@james-laptop.mail>
+>>>>>>> 5a9f70f0ecaf489327bb69a742219197f02bd34e
 Subject: Activation Complete
 Mime-Version: 1.0
 Content-Type: text/plain;
@@ -26566,6 +26957,26 @@ Hello ,
 Your email has been verified and you account has been activated.
 
 some other stuff..
+<<<<<<< HEAD
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+Rendered layouts/_header.html.erb (6.0ms)
+Rendered landing/index.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 66ms (Views: 9.4ms | ActiveRecord: 2.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`email` = 'spitfire67@berkeley.edu') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36mSQL (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.5ms)[0m  [1mTRUNCATE TABLE `groups`;[0m
+  [1m[35mSQL (0.4ms)[0m  TRUNCATE TABLE `organizations`;
+  [1m[36mSQL (0.3ms)[0m  [1mTRUNCATE TABLE `projects`;[0m
+  [1m[35mSQL (0.3ms)[0m  TRUNCATE TABLE `tasks`;
+  [1m[36mSQL (0.9ms)[0m  [1mTRUNCATE TABLE `user_actions`;[0m
+  [1m[35mSQL (2.0ms)[0m  TRUNCATE TABLE `user_groups`;
+  [1m[36mSQL (0.4ms)[0m  [1mTRUNCATE TABLE `user_organizations`;[0m
+  [1m[35mSQL (0.8ms)[0m  TRUNCATE TABLE `users`;
+  [1m[36mSQL (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+=======
   [1m[35mUser Load (10.9ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
 Rendered layouts/_header.html.erb (20.8ms)
@@ -26766,6 +27177,9 @@ Completed 200 OK in 85ms (Views: 18.6ms | ActiveRecord: 58.8ms)
   [1m[35mSQL (55.2ms)[0m  TRUNCATE TABLE `user_organizations`;
   [1m[36mSQL (55.4ms)[0m  [1mTRUNCATE TABLE `users`;[0m
   [1m[35mSQL (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+<<<<<<< HEAD
+>>>>>>> 5a9f70f0ecaf489327bb69a742219197f02bd34e
+=======
   [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
   [1m[35mSQL (0.2ms)[0m  ROLLBACK
   [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
@@ -33211,6 +33625,9 @@ Completed 200 OK in 361ms (Views: 281.3ms | ActiveRecord: 50.1ms)
   [1m[35mSQL (88.1ms)[0m  TRUNCATE TABLE `user_organizations`;
   [1m[36mSQL (77.6ms)[0m  [1mTRUNCATE TABLE `users`;[0m
   [1m[35mSQL (3.2ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+<<<<<<< HEAD
+>>>>>>> 4d5ea8c11387bc6c88ba36f5fc7b5a40883e447c
+=======
 WARNING: Can't mass-assign protected attributes: last_name, first_name
   [1m[36mSQL (0.4ms)[0m  [1m SELECT name
  FROM sqlite_master
@@ -34710,6 +35127,7 @@ Completed 200 OK in 134ms (Views: 34.5ms | ActiveRecord: 0.7ms)
   [1m[36mSQL (88.2ms)[0m  [1mDELETE FROM "user_groups";[0m
   [1m[35mSQL (100.0ms)[0m  DELETE FROM "user_organizations";
   [1m[36mSQL (99.4ms)[0m  [1mDELETE FROM "users";[0m
+<<<<<<< HEAD
   [1m[36mSQL (0.4ms)[0m  [1m SELECT name
  FROM sqlite_master
  WHERE type = 'table' AND NOT name = 'sqlite_sequence'
@@ -36358,3 +36776,6 @@ Completed 200 OK in 35ms (Views: 14.9ms | ActiveRecord: 1.6ms)
   [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1
   [1m[36mGroup Load (0.4ms)[0m  [1mSELECT "groups".* FROM "groups" INNER JOIN "user_groups" ON "groups".id = "user_groups".group_id WHERE (("user_groups".user_id = 1))[0m
   [1m[35mTask Load (0.9ms)[0m  SELECT "tasks".* FROM "tasks" WHERE ("tasks"."status" = 0) AND ("tasks"."group_id" = 1)
+=======
+>>>>>>> 51c10f457f1deb106a208d4428eab8acc756a42f
+>>>>>>> 9d6aa5b3cdd297e589f0a35eed6106743731435f

@@ -21,12 +21,10 @@ class OrganizationsController < ApplicationController
       redirect_to :action => :new
     end
   end
-
+  
   def index
-    @id = @current_user.id
     @joined_orgs = @current_user.organizations #organizations that the current user is a part of
-    
-    @my_orgs = Organization.find_by_creator_id(@id) #organizations that the current user created
+    @my_orgs = Organization.where("creator_id = ?", @current_user.id) #organizations that the current user created
   end
 
   def show
