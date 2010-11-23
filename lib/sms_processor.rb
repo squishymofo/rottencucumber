@@ -1,9 +1,8 @@
 class SmsProcessor
-  attr_accessor :incoming_message_body, :sms_session, :excess, :response_message, :reply_options, :task_context, :general_help_menu_length, :general_help_menu
+  attr_accessor :incoming_message_body, :sms_session, :excess, :response_message, :reply_options, :task_context
   def initialize(sms_session, incoming_message_body)
     @incoming_message_body = incoming_message_body
     @sms_session = sms_session
-    @general_help_menu = general_help_menu
     @active_session = @sms_session.active?
     @user = @sms_session.user
   end
@@ -16,7 +15,6 @@ class SmsProcessor
     when /tasks/
       @response_message = process_tasks_msg
     when /^[0-9]+$/ #TODO: should return the description along with menu AND also set task context
-      #should 
       @response_message = process_describe_msg(message_a[1])
       set_task_context(message_a[1])
     when /describe/
