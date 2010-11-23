@@ -44,7 +44,7 @@ class SmsProcessor
   end
 
   def general_help_menu
-    return "general help menu"
+    return "Text 'tasks' to view active tasks assigned to you."
   end
 
   def tasks_help_menu

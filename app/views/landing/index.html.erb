@@ -4,5 +4,9 @@
 </div>
 <div id="dialog-form"> </div>
 <% if @current_user %>
-  <%= link_to("enable SMS", "#{edit_user_path(@current_user)}#sms_preferences")  unless @current_user.sms_enabled %>
+  <% if @current_user.sms_enabled %>
+    <%= link_to("enable SMS", "#{edit_user_path(@current_user)}#sms_preferences") %>
+  <% else %>
+    You have enabled SMS. Text 510-550-5258 'help' to get started.
+  <% end %>
 <% end %>
