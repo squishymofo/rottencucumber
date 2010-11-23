@@ -35,7 +35,6 @@ ActiveRecord::Schema.define(:version => 20101122071736) do
     t.datetime "updated_at"
   end
 
-<<<<<<< HEAD
   create_table "sms_sessions", :force => true do |t|
     t.string   "phone_number"
     t.string   "more",         :default => ""

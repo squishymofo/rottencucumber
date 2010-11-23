@@ -30699,3 +30699,8 @@ Migrating to CreateGroupOrganizations (20101123040616)
   [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("users")[0m
   [1m[35mSQL (0.1ms)[0m  PRAGMA index_info('index_users_on_phone_number')
 >>>>>>> 9d6aa5b3cdd297e589f0a35eed6106743731435f
+  [1m[36mSQL (0.8ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."phone_number" IS NULL) LIMIT 1
