@@ -1,6 +1,8 @@
 require 'spec_helper'
 
+
 describe SmsProcessor do
+  #TODO: it should not allow a phone number of a user who doesn't have sms enabled
   before(:each) do 
     @sms_session = SmsSession.create(:phone_number => "4405548235")
     @user = make_active_user_with_sms_enabled
@@ -42,8 +44,9 @@ describe SmsProcessor do
   it "should switch task context when texted a task number" do
     g = make_group_for_user(@user)
     t = make_task_for_group(g, "help")
-    @sms_processor = SmsProcessor.new(@sms_session, "help")
+    @sms_processor = SmsProcessor.new(@sms_session, t.id.to_s)
     @sms_processor.process_message
+    assert @sms_session.task_id == t.id
   end
 
 end

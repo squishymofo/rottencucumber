@@ -40075,3 +40075,446 @@ Completed 200 OK in 141ms (Views: 35.8ms | ActiveRecord: 0.7ms)
   [1m[35mSQL (99.3ms)[0m  DELETE FROM "user_groups";
   [1m[36mSQL (111.2ms)[0m  [1mDELETE FROM "user_organizations";[0m
   [1m[35mSQL (99.3ms)[0m  DELETE FROM "users";
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "sms_sessions" ("created_at", "more", "phone_number", "task_id", "updated_at") VALUES ('2010-11-23 21:59:45.543571', '', '4405548235', NULL, '2010-11-23 21:59:45.543571')[0m
+WARNING: Can't mass-assign protected attributes: first_name
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("active", "created_at", "crypted_password", "email", "first_name", "last_name", "password_salt", "perishable_token", "persistence_token", "phone_number", "sms_enabled", "updated_at") VALUES ('t', '2010-11-23 21:59:45.570156', '33e5abdcdc008d186fc57a736b4e8c1f200fe800eaa88d57fe970db5a2ba860b4c1fa726c67e0131c90273cd7ec5e7e35ed7c7116801069f82cad89430878f12', 'spitfire67@berkeley.edu', 'James', NULL, '_V_yiRdCxqaRDJisRtzE', 'ahVMRn40MPNnxQYmH9kE', '4b477b4e13a365b9b9674d60d194c78987528bd3ef7e25115f58b38eb8ce90036bd3f1671bddb5c7e81869347f6f3f07e85f9fc0b875fab8b054680cc615a43c', NULL, 'f', '2010-11-23 21:59:45.570156')
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "users" SET "perishable_token" = '7jJrOu5jLoD5xsoZRhD5', "updated_at" = '2010-11-23 21:59:45.576105' WHERE ("users"."id" = 1)[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "users" SET "perishable_token" = '1qtsNgECkSgEm9a5resc', "phone_number" = '4405548235', "sms_enabled" = 't', "updated_at" = '2010-11-23 21:59:45.580641' WHERE ("users"."id" = 1)[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "groups" ("created_at", "name", "organization_id", "updated_at") VALUES ('2010-11-23 21:59:45.596524', NULL, NULL, '2010-11-23 21:59:45.596524')
+  [1m[36mSQL (1.8ms)[0m  [1mINSERT INTO "user_groups" ("created_at", "group_id", "updated_at", "user_id") VALUES ('2010-11-23 21:59:45.620622', 1, '2010-11-23 21:59:45.620622', 1)[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "perishable_token" = 'akZaO7TN_8l7rmN2u9vn', "updated_at" = '2010-11-23 21:59:45.625988' WHERE ("users"."id" = 1)
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tasks" ("created_at", "description", "due", "group_id", "name", "organization_id", "point", "project_id", "status", "updated_at") VALUES ('2010-11-23 21:59:45.651857', NULL, NULL, 1, 'task 1', NULL, NULL, NULL, 0, '2010-11-23 21:59:45.651857')[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1
+  [1m[36mGroup Load (0.3ms)[0m  [1mSELECT "groups".* FROM "groups" INNER JOIN "user_groups" ON "groups".id = "user_groups".group_id WHERE (("user_groups".user_id = 1))[0m
+  [1m[35mTask Load (0.4ms)[0m  SELECT "tasks".* FROM "tasks" WHERE ("tasks"."group_id" IN (1)) AND ("tasks"."status" = 0) ORDER BY created_at DESC
+  [1m[36mSmsSession Load (0.2ms)[0m  [1mSELECT "sms_sessions".* FROM "sms_sessions"[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "sms_sessions" WHERE ("sms_sessions"."id" = 1)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "users" WHERE ("users"."id" = 1)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "sms_sessions" ("created_at", "more", "phone_number", "task_id", "updated_at") VALUES ('2010-11-23 21:59:45.674455', '', '4405548235', NULL, '2010-11-23 21:59:45.674455')
+WARNING: Can't mass-assign protected attributes: first_name
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("active", "created_at", "crypted_password", "email", "first_name", "last_name", "password_salt", "perishable_token", "persistence_token", "phone_number", "sms_enabled", "updated_at") VALUES ('t', '2010-11-23 21:59:45.678074', '9dcfb6e509d54408a069205b33f7f365adc00e9c839e0451a9f4573f9f0d6913813323cab38126aab596d0e65e17de1f0863e40228c9e06157fc91f891e866e8', 'spitfire67@berkeley.edu', 'James', NULL, 'TAfJ051zGL0O0zUNMznu', 'en6rEh8_d1GyliwuXlJK', '260e237f11a8d8ca84581e3709cf22c18844f42dc92bd4e790fc47ca84d5ec49998c73e2b17fb170ce7785775cc893c90155f1ad6489d0aa1c169e14aee1745a', NULL, 'f', '2010-11-23 21:59:45.678074')[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "perishable_token" = 'n7AVm4t5zhrg2oA9ILa3', "updated_at" = '2010-11-23 21:59:45.689442' WHERE ("users"."id" = 1)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1[0m
+  [1m[35mSQL (4.4ms)[0m  UPDATE "users" SET "perishable_token" = 'I8NlImpRtu9J76eiYmPS', "phone_number" = '4405548235', "sms_enabled" = 't', "updated_at" = '2010-11-23 21:59:45.695399' WHERE ("users"."id" = 1)
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "groups" ("created_at", "name", "organization_id", "updated_at") VALUES ('2010-11-23 21:59:45.702980', NULL, NULL, '2010-11-23 21:59:45.702980')[0m
+  [1m[35mSQL (1.6ms)[0m  INSERT INTO "user_groups" ("created_at", "group_id", "updated_at", "user_id") VALUES ('2010-11-23 21:59:45.708202', 1, '2010-11-23 21:59:45.708202', 1)
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "users" SET "perishable_token" = 'HmNJdLu0VSelwXPEFnk1', "updated_at" = '2010-11-23 21:59:45.713210' WHERE ("users"."id" = 1)[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1
+  [1m[36mSmsSession Load (0.2ms)[0m  [1mSELECT "sms_sessions".* FROM "sms_sessions"[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "sms_sessions" WHERE ("sms_sessions"."id" = 1)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "users" WHERE ("users"."id" = 1)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "sms_sessions" ("created_at", "more", "phone_number", "task_id", "updated_at") VALUES ('2010-11-23 21:59:45.724471', '', '4405548235', NULL, '2010-11-23 21:59:45.724471')
+WARNING: Can't mass-assign protected attributes: first_name
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("active", "created_at", "crypted_password", "email", "first_name", "last_name", "password_salt", "perishable_token", "persistence_token", "phone_number", "sms_enabled", "updated_at") VALUES ('t', '2010-11-23 21:59:45.728157', '3edb86dce05c7d97bdd41fef2623e9586c89180636f12c617571296c8e9608525f527b8caa7ef0365e599f9e99b9ed07667dc7d9e3035d2425987df2c81adf6a', 'spitfire67@berkeley.edu', 'James', NULL, 'zNt4T7rCBjxY4VFn901v', '-CBp-NDT-g1nro8orIMT', '1dd49caa7ddff580ad6b5542bc100a2513d6df1dbaa80e788d8380313c837644cd7838e01d4ed4f6b501c93ac4f09a0e3c0a2672c0ebfb67b661f7ceb66d0d31', NULL, 'f', '2010-11-23 21:59:45.728157')[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "perishable_token" = 'H26uL6LWKUEwnc68OGFG', "updated_at" = '2010-11-23 21:59:45.744853' WHERE ("users"."id" = 1)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "perishable_token" = 'LYt3c8EcWGV76Txqlbuo', "phone_number" = '4405548235', "sms_enabled" = 't', "updated_at" = '2010-11-23 21:59:45.751469' WHERE ("users"."id" = 1)
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "groups" ("created_at", "name", "organization_id", "updated_at") VALUES ('2010-11-23 21:59:45.754801', NULL, NULL, '2010-11-23 21:59:45.754801')[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "user_groups" ("created_at", "group_id", "updated_at", "user_id") VALUES ('2010-11-23 21:59:45.758487', 1, '2010-11-23 21:59:45.758487', 1)
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "users" SET "perishable_token" = 'zlN2PonXbH-UDLFNFpXT', "updated_at" = '2010-11-23 21:59:45.761374' WHERE ("users"."id" = 1)[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tasks" ("created_at", "description", "due", "group_id", "name", "organization_id", "point", "project_id", "status", "updated_at") VALUES ('2010-11-23 21:59:45.764383', NULL, NULL, 1, 'task 1', NULL, NULL, NULL, 0, '2010-11-23 21:59:45.764383')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1
+  [1m[36mSmsSession Load (0.2ms)[0m  [1mSELECT "sms_sessions".* FROM "sms_sessions"[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "sms_sessions" WHERE ("sms_sessions"."id" = 1)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "users" WHERE ("users"."id" = 1)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "sms_sessions" ("created_at", "more", "phone_number", "task_id", "updated_at") VALUES ('2010-11-23 21:59:45.788177', '', '4405548235', NULL, '2010-11-23 21:59:45.788177')
+WARNING: Can't mass-assign protected attributes: first_name
+  [1m[36mSQL (1.9ms)[0m  [1mINSERT INTO "users" ("active", "created_at", "crypted_password", "email", "first_name", "last_name", "password_salt", "perishable_token", "persistence_token", "phone_number", "sms_enabled", "updated_at") VALUES ('t', '2010-11-23 21:59:45.798249', '0f171b8b4020668b82e82f9945ce7cfed6b204a9a63a66ede1d66991f22752817f97a4a198bcad9214af2ab6b90da2aafd9b2d372a0df9b8321296d72178df98', 'spitfire67@berkeley.edu', 'James', NULL, '-mZ1iKP84L4D-L7W6B0V', 'RNN2KOImdpbQbkyAgFKe', 'dac601d6dde76072a4d54ab725ed2e0774d0694701cf596e8078c28e4e97409537055772b3cd050d0795ef2bed3c5f7f31e6938459435a4580d5e73d14bd3cd8', NULL, 'f', '2010-11-23 21:59:45.798249')[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "perishable_token" = 'oz87IJIiPUDk9MUJCrY1', "updated_at" = '2010-11-23 21:59:45.804808' WHERE ("users"."id" = 1)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "perishable_token" = '4AnmOgcKGYWxC29JelrY', "phone_number" = '4405548235', "sms_enabled" = 't', "updated_at" = '2010-11-23 21:59:45.808936' WHERE ("users"."id" = 1)
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "groups" ("created_at", "name", "organization_id", "updated_at") VALUES ('2010-11-23 21:59:45.811741', NULL, NULL, '2010-11-23 21:59:45.811741')[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "user_groups" ("created_at", "group_id", "updated_at", "user_id") VALUES ('2010-11-23 21:59:45.815321', 1, '2010-11-23 21:59:45.815321', 1)
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "users" SET "perishable_token" = 'ZqKkRYGcX3zMbprBv24a', "updated_at" = '2010-11-23 21:59:45.817886' WHERE ("users"."id" = 1)[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tasks" ("created_at", "description", "due", "group_id", "name", "organization_id", "point", "project_id", "status", "updated_at") VALUES ('2010-11-23 21:59:45.821030', NULL, NULL, 1, 'help', NULL, NULL, NULL, 0, '2010-11-23 21:59:45.821030')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1[0m
+  [1m[35mSmsSession Load (0.2ms)[0m  SELECT "sms_sessions".* FROM "sms_sessions"
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "sms_sessions" WHERE ("sms_sessions"."id" = 1)[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "users" WHERE ("users"."id" = 1)[0m
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "sms_sessions" ("created_at", "more", "phone_number", "task_id", "updated_at") VALUES ('2010-11-23 22:00:37.395927', '', '4405548235', NULL, '2010-11-23 22:00:37.395927')[0m
+WARNING: Can't mass-assign protected attributes: first_name
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("active", "created_at", "crypted_password", "email", "first_name", "last_name", "password_salt", "perishable_token", "persistence_token", "phone_number", "sms_enabled", "updated_at") VALUES ('t', '2010-11-23 22:00:37.422544', '166e889d685219cce24c9d016479fc973fb4f268b853d4c3708cb47c0bf28003a33dd0e45b80b79ba405cf883798e844541fde038a457d74481f7aacb256c6de', 'spitfire67@berkeley.edu', 'James', NULL, 'Uuvb4xGe9s3wom5t5q66', 'UPaWjBsOWgECTj0-pMzH', 'dfb663ae169057fc5c24388c9764a87967d14f2704a36d95da3c6ac1e2a6f77865985e1ea2789dadbed99f47a76b3a918ba7dab91ba3b844f880b6c79755d5d5', NULL, 'f', '2010-11-23 22:00:37.422544')
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "users" SET "perishable_token" = 'wMHvA39HSDcjop0mMITw', "updated_at" = '2010-11-23 22:00:37.428333' WHERE ("users"."id" = 1)[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "users" SET "perishable_token" = 'yLg9u5yyR4XDrEL7e8oS', "phone_number" = '4405548235', "sms_enabled" = 't', "updated_at" = '2010-11-23 22:00:37.432863' WHERE ("users"."id" = 1)[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "groups" ("created_at", "name", "organization_id", "updated_at") VALUES ('2010-11-23 22:00:37.440248', NULL, NULL, '2010-11-23 22:00:37.440248')
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "user_groups" ("created_at", "group_id", "updated_at", "user_id") VALUES ('2010-11-23 22:00:37.469534', 1, '2010-11-23 22:00:37.469534', 1)[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "perishable_token" = 'eYkzcqB4Q-Say9KGVHwu', "updated_at" = '2010-11-23 22:00:37.473416' WHERE ("users"."id" = 1)
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "tasks" ("created_at", "description", "due", "group_id", "name", "organization_id", "point", "project_id", "status", "updated_at") VALUES ('2010-11-23 22:00:37.492864', NULL, NULL, 1, 'task 1', NULL, NULL, NULL, 0, '2010-11-23 22:00:37.492864')[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1
+  [1m[36mGroup Load (0.3ms)[0m  [1mSELECT "groups".* FROM "groups" INNER JOIN "user_groups" ON "groups".id = "user_groups".group_id WHERE (("user_groups".user_id = 1))[0m
+  [1m[35mTask Load (0.4ms)[0m  SELECT "tasks".* FROM "tasks" WHERE ("tasks"."group_id" IN (1)) AND ("tasks"."status" = 0) ORDER BY created_at DESC
+  [1m[36mSmsSession Load (0.2ms)[0m  [1mSELECT "sms_sessions".* FROM "sms_sessions"[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "sms_sessions" WHERE ("sms_sessions"."id" = 1)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "users" WHERE ("users"."id" = 1)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "sms_sessions" ("created_at", "more", "phone_number", "task_id", "updated_at") VALUES ('2010-11-23 22:00:37.520133', '', '4405548235', NULL, '2010-11-23 22:00:37.520133')
+WARNING: Can't mass-assign protected attributes: first_name
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("active", "created_at", "crypted_password", "email", "first_name", "last_name", "password_salt", "perishable_token", "persistence_token", "phone_number", "sms_enabled", "updated_at") VALUES ('t', '2010-11-23 22:00:37.523696', '10715839b49be8e764d312005f1ef4e35e3b9c789f2d3a7b6ae22277d71d2430a234e503828a8f9cae1cc0d0af520c8340cdafc51aba8ad58ee9df0397fecbf5', 'spitfire67@berkeley.edu', 'James', NULL, 'F5yiwMmgdzXg4B8JNn6I', 'nVOjOxLMxGFQ9agk1d7c', '10d8565ae7851b345283fd0dcf9a6e575b5c46a6283056001e895ff6cb29c721497bdc31498a77c02c645ac164a4f68ccb5e6c7e53b9114eefc088f9f769e15f', NULL, 'f', '2010-11-23 22:00:37.523696')[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "perishable_token" = 'smXwaKpaYxlFTr1unoOX', "updated_at" = '2010-11-23 22:00:37.534288' WHERE ("users"."id" = 1)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "perishable_token" = 'mlFoiompdg52y0gM-7Uq', "phone_number" = '4405548235', "sms_enabled" = 't', "updated_at" = '2010-11-23 22:00:37.540015' WHERE ("users"."id" = 1)
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "groups" ("created_at", "name", "organization_id", "updated_at") VALUES ('2010-11-23 22:00:37.547280', NULL, NULL, '2010-11-23 22:00:37.547280')[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "user_groups" ("created_at", "group_id", "updated_at", "user_id") VALUES ('2010-11-23 22:00:37.552858', 1, '2010-11-23 22:00:37.552858', 1)
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "users" SET "perishable_token" = '7eA0lEX8Lx1vjGpS_48C', "updated_at" = '2010-11-23 22:00:37.557756' WHERE ("users"."id" = 1)[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1
+  [1m[36mSmsSession Load (0.2ms)[0m  [1mSELECT "sms_sessions".* FROM "sms_sessions"[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "sms_sessions" WHERE ("sms_sessions"."id" = 1)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "users" WHERE ("users"."id" = 1)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "sms_sessions" ("created_at", "more", "phone_number", "task_id", "updated_at") VALUES ('2010-11-23 22:00:37.569402', '', '4405548235', NULL, '2010-11-23 22:00:37.569402')
+WARNING: Can't mass-assign protected attributes: first_name
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("active", "created_at", "crypted_password", "email", "first_name", "last_name", "password_salt", "perishable_token", "persistence_token", "phone_number", "sms_enabled", "updated_at") VALUES ('t', '2010-11-23 22:00:37.573103', '16ead9d96a186ab89db09d783e8fcbeb0a194eb5891ee7d14ba87480ff19af1606f36a14315be3e0f67bfa5cd0c3d44d375cec52d725f27719c3b1d1d87011c2', 'spitfire67@berkeley.edu', 'James', NULL, 'IVj5D6GhE6FpI89gHaSo', 'VTBfZMm4YYpz0bf6zLGa', 'bbd767dc486868e8b577a347b66fff58791773379384acf3a352ed734cbe0ce42fb8bd53ae4daec25b3530edeb1c32db18cde15168899359abb167a48a5c7d43', NULL, 'f', '2010-11-23 22:00:37.573103')[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "perishable_token" = '4ozFn7287nlB-qZ33VSo', "updated_at" = '2010-11-23 22:00:37.588061' WHERE ("users"."id" = 1)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "perishable_token" = 'CrTTFl_9xYBRNaPymeQM', "phone_number" = '4405548235', "sms_enabled" = 't', "updated_at" = '2010-11-23 22:00:37.595187' WHERE ("users"."id" = 1)
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "groups" ("created_at", "name", "organization_id", "updated_at") VALUES ('2010-11-23 22:00:37.597991', NULL, NULL, '2010-11-23 22:00:37.597991')[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "user_groups" ("created_at", "group_id", "updated_at", "user_id") VALUES ('2010-11-23 22:00:37.601554', 1, '2010-11-23 22:00:37.601554', 1)
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "users" SET "perishable_token" = 'rHT-iaQ_eKwtCCpbO3js', "updated_at" = '2010-11-23 22:00:37.604297' WHERE ("users"."id" = 1)[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tasks" ("created_at", "description", "due", "group_id", "name", "organization_id", "point", "project_id", "status", "updated_at") VALUES ('2010-11-23 22:00:37.607425', NULL, NULL, 1, 'task 1', NULL, NULL, NULL, 0, '2010-11-23 22:00:37.607425')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1
+  [1m[36mSmsSession Load (0.2ms)[0m  [1mSELECT "sms_sessions".* FROM "sms_sessions"[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "sms_sessions" WHERE ("sms_sessions"."id" = 1)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "users" WHERE ("users"."id" = 1)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "sms_sessions" ("created_at", "more", "phone_number", "task_id", "updated_at") VALUES ('2010-11-23 22:00:37.633503', '', '4405548235', NULL, '2010-11-23 22:00:37.633503')
+WARNING: Can't mass-assign protected attributes: first_name
+  [1m[36mSQL (1.6ms)[0m  [1mINSERT INTO "users" ("active", "created_at", "crypted_password", "email", "first_name", "last_name", "password_salt", "perishable_token", "persistence_token", "phone_number", "sms_enabled", "updated_at") VALUES ('t', '2010-11-23 22:00:37.639060', 'e99a0edb0b745c5ffd7dbc197f6b0b56dd1bc676da53e0305dac9dfa562262a0f63bcf22d74880403a4bd0f118a262b66f620c47f9d819ab3cb6acbecdead728', 'spitfire67@berkeley.edu', 'James', NULL, '5ti18rs-kBOsfMPMEhs1', 'Bh9L_pr142ydWrR-bS6S', '8d518c2d21ac6aa05978ae198d70b85190a4ba7dc82e7bd511ca0fb8db0ee7c9eadaa868159825ce65054aadda9775205bce10a654a694827c98e2342a1598a1', NULL, 'f', '2010-11-23 22:00:37.639060')[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "perishable_token" = 'RIvUl-kDGy_7GZp4OInr', "updated_at" = '2010-11-23 22:00:37.645519' WHERE ("users"."id" = 1)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "perishable_token" = '2nSz0uBCV2JLdzpPinoe', "phone_number" = '4405548235', "sms_enabled" = 't', "updated_at" = '2010-11-23 22:00:37.649644' WHERE ("users"."id" = 1)
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "groups" ("created_at", "name", "organization_id", "updated_at") VALUES ('2010-11-23 22:00:37.652180', NULL, NULL, '2010-11-23 22:00:37.652180')[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "user_groups" ("created_at", "group_id", "updated_at", "user_id") VALUES ('2010-11-23 22:00:37.656446', 1, '2010-11-23 22:00:37.656446', 1)
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "users" SET "perishable_token" = 'qO0VyXKaGFFGx7YBfc5q', "updated_at" = '2010-11-23 22:00:37.659244' WHERE ("users"."id" = 1)[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "tasks" ("created_at", "description", "due", "group_id", "name", "organization_id", "point", "project_id", "status", "updated_at") VALUES ('2010-11-23 22:00:37.662400', NULL, NULL, 1, 'help', NULL, NULL, NULL, 0, '2010-11-23 22:00:37.662400')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1[0m
+  [1m[35mSmsSession Load (0.2ms)[0m  SELECT "sms_sessions".* FROM "sms_sessions"
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "sms_sessions" WHERE ("sms_sessions"."id" = 1)[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "users" WHERE ("users"."id" = 1)[0m
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "sms_sessions" ("created_at", "more", "phone_number", "task_id", "updated_at") VALUES ('2010-11-23 22:01:36.975211', '', '4405548235', NULL, '2010-11-23 22:01:36.975211')[0m
+WARNING: Can't mass-assign protected attributes: first_name
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("active", "created_at", "crypted_password", "email", "first_name", "last_name", "password_salt", "perishable_token", "persistence_token", "phone_number", "sms_enabled", "updated_at") VALUES ('t', '2010-11-23 22:01:37.003301', 'a93e1e4f8d4926419450db6eb4fa161260cd1534be3190e5b51357e6dda02f19cfde275330429612a717b023926f0d6fd1e875d812a6e559a81365922e9aa2d4', 'spitfire67@berkeley.edu', 'James', NULL, 'JIayYQEeogfNrOLbDEmD', 'wti79ym_t1nGco_ZEnsu', '624a10a730730752e102653e9ef684ff7a5f79809fd08344c6a7d43b44d75b9f50a72d6ba3d519585a4d694595b5265be08daefda549f2a88b668f953ddad898', NULL, 'f', '2010-11-23 22:01:37.003301')
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "users" SET "perishable_token" = 'PqIlND9yksM31-s2A1Lg', "updated_at" = '2010-11-23 22:01:37.009707' WHERE ("users"."id" = 1)[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "users" SET "perishable_token" = 'D7CyjME3P83yGRLmpdzC', "phone_number" = '4405548235', "sms_enabled" = 't', "updated_at" = '2010-11-23 22:01:37.014349' WHERE ("users"."id" = 1)[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "groups" ("created_at", "name", "organization_id", "updated_at") VALUES ('2010-11-23 22:01:37.021827', NULL, NULL, '2010-11-23 22:01:37.021827')
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "user_groups" ("created_at", "group_id", "updated_at", "user_id") VALUES ('2010-11-23 22:01:37.053133', 1, '2010-11-23 22:01:37.053133', 1)[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "perishable_token" = 'cT-1Dd0ylLB7A3zNqS1A', "updated_at" = '2010-11-23 22:01:37.056922' WHERE ("users"."id" = 1)
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tasks" ("created_at", "description", "due", "group_id", "name", "organization_id", "point", "project_id", "status", "updated_at") VALUES ('2010-11-23 22:01:37.082340', NULL, NULL, 1, 'task 1', NULL, NULL, NULL, 0, '2010-11-23 22:01:37.082340')[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1
+  [1m[36mGroup Load (0.3ms)[0m  [1mSELECT "groups".* FROM "groups" INNER JOIN "user_groups" ON "groups".id = "user_groups".group_id WHERE (("user_groups".user_id = 1))[0m
+  [1m[35mTask Load (0.4ms)[0m  SELECT "tasks".* FROM "tasks" WHERE ("tasks"."group_id" IN (1)) AND ("tasks"."status" = 0) ORDER BY created_at DESC
+  [1m[36mSmsSession Load (0.2ms)[0m  [1mSELECT "sms_sessions".* FROM "sms_sessions"[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "sms_sessions" WHERE ("sms_sessions"."id" = 1)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "users" WHERE ("users"."id" = 1)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "sms_sessions" ("created_at", "more", "phone_number", "task_id", "updated_at") VALUES ('2010-11-23 22:01:37.105314', '', '4405548235', NULL, '2010-11-23 22:01:37.105314')
+WARNING: Can't mass-assign protected attributes: first_name
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("active", "created_at", "crypted_password", "email", "first_name", "last_name", "password_salt", "perishable_token", "persistence_token", "phone_number", "sms_enabled", "updated_at") VALUES ('t', '2010-11-23 22:01:37.109079', '82bdff2c3aff1fb03dca30dba142eb65fe065405651f112094590dcd1efb9ad035bc8dc14b10f5613c3f2fcc500711d4bf71f4d23e8d9af1cabba34f848b7809', 'spitfire67@berkeley.edu', 'James', NULL, '79PNNbccJqewubF_FVb_', 'jw95fEwE-FpmGjLgQf2m', 'a8690dae96ad9925f329e936c5d44a8a7949e85eeb2e8d3a7d64b853dfd51f26b98e0efc0415d837a33a9f435cee02d9abd2f6e44777fe17bdb88a35305fa657', NULL, 'f', '2010-11-23 22:01:37.109079')[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "perishable_token" = 'Ow-IJ7InHBA-ogJqNCG8', "updated_at" = '2010-11-23 22:01:37.113503' WHERE ("users"."id" = 1)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "perishable_token" = 'cDG4KjeQ_4RkalPkVKn5', "phone_number" = '4405548235', "sms_enabled" = 't', "updated_at" = '2010-11-23 22:01:37.125782' WHERE ("users"."id" = 1)
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "groups" ("created_at", "name", "organization_id", "updated_at") VALUES ('2010-11-23 22:01:37.128463', NULL, NULL, '2010-11-23 22:01:37.128463')[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "user_groups" ("created_at", "group_id", "updated_at", "user_id") VALUES ('2010-11-23 22:01:37.137705', 1, '2010-11-23 22:01:37.137705', 1)
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "users" SET "perishable_token" = '2-HiwW1t2tESVRmwReHH', "updated_at" = '2010-11-23 22:01:37.143183' WHERE ("users"."id" = 1)[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1
+  [1m[36mSmsSession Load (0.2ms)[0m  [1mSELECT "sms_sessions".* FROM "sms_sessions"[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "sms_sessions" WHERE ("sms_sessions"."id" = 1)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "users" WHERE ("users"."id" = 1)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "sms_sessions" ("created_at", "more", "phone_number", "task_id", "updated_at") VALUES ('2010-11-23 22:01:37.155553', '', '4405548235', NULL, '2010-11-23 22:01:37.155553')
+WARNING: Can't mass-assign protected attributes: first_name
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("active", "created_at", "crypted_password", "email", "first_name", "last_name", "password_salt", "perishable_token", "persistence_token", "phone_number", "sms_enabled", "updated_at") VALUES ('t', '2010-11-23 22:01:37.159258', 'd5f14c7b6b89ef07ed3da04a0d05970a70dd666c6c0b085cf82d89485c19e0a03a69c1bcca8cfc9e1344d016e1d9f6a23bc1cf87f6d1f862d3af1a9626200f6b', 'spitfire67@berkeley.edu', 'James', NULL, 'CLMCRSJ8PtZmqAiGSa_W', 'xBSy93tp6jl79hurOHuI', '15323da202d36179014be026709bd2308807250172d132aa744c8413b98f15d7396d80f71426ce821a333962d284ac580d61c010ba33fc3a2d9570944e56a1f0', NULL, 'f', '2010-11-23 22:01:37.159258')[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "perishable_token" = 'VDTN5__aIDXSIVRXyqNc', "updated_at" = '2010-11-23 22:01:37.174886' WHERE ("users"."id" = 1)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1[0m
+  [1m[35mSQL (2.4ms)[0m  UPDATE "users" SET "perishable_token" = 'YjSDSvmG23E4ONL97XKY', "phone_number" = '4405548235', "sms_enabled" = 't', "updated_at" = '2010-11-23 22:01:37.179193' WHERE ("users"."id" = 1)
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "groups" ("created_at", "name", "organization_id", "updated_at") VALUES ('2010-11-23 22:01:37.184822', NULL, NULL, '2010-11-23 22:01:37.184822')[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "user_groups" ("created_at", "group_id", "updated_at", "user_id") VALUES ('2010-11-23 22:01:37.188938', 1, '2010-11-23 22:01:37.188938', 1)
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "users" SET "perishable_token" = 'K8dER9L54cC52FajAwjX', "updated_at" = '2010-11-23 22:01:37.191866' WHERE ("users"."id" = 1)[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tasks" ("created_at", "description", "due", "group_id", "name", "organization_id", "point", "project_id", "status", "updated_at") VALUES ('2010-11-23 22:01:37.195085', NULL, NULL, 1, 'task 1', NULL, NULL, NULL, 0, '2010-11-23 22:01:37.195085')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1
+  [1m[36mSmsSession Load (0.2ms)[0m  [1mSELECT "sms_sessions".* FROM "sms_sessions"[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "sms_sessions" WHERE ("sms_sessions"."id" = 1)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "users" WHERE ("users"."id" = 1)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "sms_sessions" ("created_at", "more", "phone_number", "task_id", "updated_at") VALUES ('2010-11-23 22:01:37.222587', '', '4405548235', NULL, '2010-11-23 22:01:37.222587')
+WARNING: Can't mass-assign protected attributes: first_name
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("active", "created_at", "crypted_password", "email", "first_name", "last_name", "password_salt", "perishable_token", "persistence_token", "phone_number", "sms_enabled", "updated_at") VALUES ('t', '2010-11-23 22:01:37.227492', 'e228a6c80bf2eb683f13656224b1e229d0509b117931d88d3779f6a38549978ea030f54f31c28863e6bb6602513b94b7fd9cd916ae0fa384864c750309469aa0', 'spitfire67@berkeley.edu', 'James', NULL, 'MuSrrnMFwROTDp4h0WhC', '-090WffiAKlM3P1zq6tV', 'e94bc9e2fcb736f95d7a8492259251c07196742c0b48865ca07d47173b296e6609beab0cd5716dac8d6c31278c119d773319a39b43566278ec99ae447b574f94', NULL, 'f', '2010-11-23 22:01:37.227492')[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "perishable_token" = '0NIwYYqgE_RDm31bP6Il', "updated_at" = '2010-11-23 22:01:37.234308' WHERE ("users"."id" = 1)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "perishable_token" = '7UkNlMchZ-1UOBRXwj7U', "phone_number" = '4405548235', "sms_enabled" = 't', "updated_at" = '2010-11-23 22:01:37.238411' WHERE ("users"."id" = 1)
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "groups" ("created_at", "name", "organization_id", "updated_at") VALUES ('2010-11-23 22:01:37.241114', NULL, NULL, '2010-11-23 22:01:37.241114')[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "user_groups" ("created_at", "group_id", "updated_at", "user_id") VALUES ('2010-11-23 22:01:37.244749', 1, '2010-11-23 22:01:37.244749', 1)
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "perishable_token" = 'HDrWtLkQmYRs3LpXXSyK', "updated_at" = '2010-11-23 22:01:37.247264' WHERE ("users"."id" = 1)[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tasks" ("created_at", "description", "due", "group_id", "name", "organization_id", "point", "project_id", "status", "updated_at") VALUES ('2010-11-23 22:01:37.253557', NULL, NULL, 1, 'help', NULL, NULL, NULL, 0, '2010-11-23 22:01:37.253557')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1[0m
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "sms_sessions" ("created_at", "more", "phone_number", "task_id", "updated_at") VALUES ('2010-11-23 22:03:18.675677', '', '4405548235', NULL, '2010-11-23 22:03:18.675677')[0m
+WARNING: Can't mass-assign protected attributes: first_name
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("active", "created_at", "crypted_password", "email", "first_name", "last_name", "password_salt", "perishable_token", "persistence_token", "phone_number", "sms_enabled", "updated_at") VALUES ('t', '2010-11-23 22:03:18.702564', '90ef6bce89a717cd52be9b0d9d5b6159b46e7167a0a3348cb47ff2bf91e8d85b1641142de2b377e6c5894ab186ede1e11c6c624af02d27ad5a984d391132dec4', 'spitfire67@berkeley.edu', 'James', NULL, 'XRlo6fVu3RsaE88QN6LU', 'EhZowxlKLi1IzMIlSlXt', 'b5ce439097a3160658e0fa4acb65954f89638aa3c4f624554dffe58363d84ffea237918b22f75c14af60643b0c991d308258517980f129575d565a32d8f1c0df', NULL, 'f', '2010-11-23 22:03:18.702564')
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "users" SET "perishable_token" = '1-0vcCL7iu1BffjWFV40', "updated_at" = '2010-11-23 22:03:18.708522' WHERE ("users"."id" = 1)[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "users" SET "perishable_token" = '2RYMT-UvhEfQGZ9TLA2Y', "phone_number" = '4405548235', "sms_enabled" = 't', "updated_at" = '2010-11-23 22:03:18.713438' WHERE ("users"."id" = 1)[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "groups" ("created_at", "name", "organization_id", "updated_at") VALUES ('2010-11-23 22:03:18.728326', NULL, NULL, '2010-11-23 22:03:18.728326')
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "user_groups" ("created_at", "group_id", "updated_at", "user_id") VALUES ('2010-11-23 22:03:18.751814', 1, '2010-11-23 22:03:18.751814', 1)[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "perishable_token" = 'ZuvL4vDyvxHvPp2ZHObQ', "updated_at" = '2010-11-23 22:03:18.755527' WHERE ("users"."id" = 1)
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tasks" ("created_at", "description", "due", "group_id", "name", "organization_id", "point", "project_id", "status", "updated_at") VALUES ('2010-11-23 22:03:18.776578', NULL, NULL, 1, 'task 1', NULL, NULL, NULL, 0, '2010-11-23 22:03:18.776578')[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1
+  [1m[36mGroup Load (0.3ms)[0m  [1mSELECT "groups".* FROM "groups" INNER JOIN "user_groups" ON "groups".id = "user_groups".group_id WHERE (("user_groups".user_id = 1))[0m
+  [1m[35mTask Load (0.4ms)[0m  SELECT "tasks".* FROM "tasks" WHERE ("tasks"."group_id" IN (1)) AND ("tasks"."status" = 0) ORDER BY created_at DESC
+  [1m[36mSmsSession Load (0.2ms)[0m  [1mSELECT "sms_sessions".* FROM "sms_sessions"[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "sms_sessions" WHERE ("sms_sessions"."id" = 1)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "users" WHERE ("users"."id" = 1)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "sms_sessions" ("created_at", "more", "phone_number", "task_id", "updated_at") VALUES ('2010-11-23 22:03:18.802607', '', '4405548235', NULL, '2010-11-23 22:03:18.802607')
+WARNING: Can't mass-assign protected attributes: first_name
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("active", "created_at", "crypted_password", "email", "first_name", "last_name", "password_salt", "perishable_token", "persistence_token", "phone_number", "sms_enabled", "updated_at") VALUES ('t', '2010-11-23 22:03:18.806201', '2cac18d544a6009e8f54a1167119fc5d289ec82ac1d343a171808b2ffcf24a9baf6cd10e7df3a319bfdb65cab06d231f8d3a68b7e8b08e83035cdab769150098', 'spitfire67@berkeley.edu', 'James', NULL, 'Ok0M6mgHfuClvM1aYGCB', 'L9EEkwm2ck--RFN5eByI', '31d3fba7646140757dd35d257973546bdc0b060b632e94bd073a71358da9f938db041dfae64a104a0e2ad2e8d6bf450ff8c486baa683d2c4d668feb6a73c3f37', NULL, 'f', '2010-11-23 22:03:18.806201')[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "perishable_token" = 't89aqSs4Fy-v7JARiysB', "updated_at" = '2010-11-23 22:03:18.816535' WHERE ("users"."id" = 1)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "perishable_token" = 'Lzvil-9WxzP0h1QriU0m', "phone_number" = '4405548235', "sms_enabled" = 't', "updated_at" = '2010-11-23 22:03:18.820650' WHERE ("users"."id" = 1)
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "groups" ("created_at", "name", "organization_id", "updated_at") VALUES ('2010-11-23 22:03:18.830384', NULL, NULL, '2010-11-23 22:03:18.830384')[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "user_groups" ("created_at", "group_id", "updated_at", "user_id") VALUES ('2010-11-23 22:03:18.835141', 1, '2010-11-23 22:03:18.835141', 1)
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "perishable_token" = '_YYLwtikpIkaTSvDY0r0', "updated_at" = '2010-11-23 22:03:18.837787' WHERE ("users"."id" = 1)[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1
+  [1m[36mSmsSession Load (0.2ms)[0m  [1mSELECT "sms_sessions".* FROM "sms_sessions"[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "sms_sessions" WHERE ("sms_sessions"."id" = 1)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "users" WHERE ("users"."id" = 1)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "sms_sessions" ("created_at", "more", "phone_number", "task_id", "updated_at") VALUES ('2010-11-23 22:03:18.852155', '', '4405548235', NULL, '2010-11-23 22:03:18.852155')
+WARNING: Can't mass-assign protected attributes: first_name
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("active", "created_at", "crypted_password", "email", "first_name", "last_name", "password_salt", "perishable_token", "persistence_token", "phone_number", "sms_enabled", "updated_at") VALUES ('t', '2010-11-23 22:03:18.855645', '2a5c1b70a9fa6c240aae5d27da1495f202fc59adfe723554a9987adb2ca3cbe16efe976ef0e43b848fc1965b2658f4afa358d90bc5c487bf497b97d1717664cb', 'spitfire67@berkeley.edu', 'James', NULL, 'Lj5qVCD9YDn8ARO3zLsf', 'lj6EkD5Xdj9WHY39nghb', '64e3b9486c36bf6874efeff0a4b0cab2ed87aa3be7db1ce6b3e2a2278592deef9c818a7b5a8eb6354e80d91c7daf41644f5a5ab55f6a09ae260db5b3d6b136bd', NULL, 'f', '2010-11-23 22:03:18.855645')[0m
+  [1m[35mSQL (2.0ms)[0m  UPDATE "users" SET "perishable_token" = 'MZmk6-QMZ-CWFksVcqnl', "updated_at" = '2010-11-23 22:03:18.871078' WHERE ("users"."id" = 1)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "perishable_token" = 'aCoAGy9NzixLBuVI3clD', "phone_number" = '4405548235', "sms_enabled" = 't', "updated_at" = '2010-11-23 22:03:18.878973' WHERE ("users"."id" = 1)
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "groups" ("created_at", "name", "organization_id", "updated_at") VALUES ('2010-11-23 22:03:18.882568', NULL, NULL, '2010-11-23 22:03:18.882568')[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "user_groups" ("created_at", "group_id", "updated_at", "user_id") VALUES ('2010-11-23 22:03:18.886525', 1, '2010-11-23 22:03:18.886525', 1)
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "users" SET "perishable_token" = 'Bn4DTT9WN4_3f5uXIFpD', "updated_at" = '2010-11-23 22:03:18.889359' WHERE ("users"."id" = 1)[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tasks" ("created_at", "description", "due", "group_id", "name", "organization_id", "point", "project_id", "status", "updated_at") VALUES ('2010-11-23 22:03:18.892334', NULL, NULL, 1, 'task 1', NULL, NULL, NULL, 0, '2010-11-23 22:03:18.892334')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1
+  [1m[36mSmsSession Load (0.2ms)[0m  [1mSELECT "sms_sessions".* FROM "sms_sessions"[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "sms_sessions" WHERE ("sms_sessions"."id" = 1)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "users" WHERE ("users"."id" = 1)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "sms_sessions" ("created_at", "more", "phone_number", "task_id", "updated_at") VALUES ('2010-11-23 22:03:18.914525', '', '4405548235', NULL, '2010-11-23 22:03:18.914525')
+WARNING: Can't mass-assign protected attributes: first_name
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "users" ("active", "created_at", "crypted_password", "email", "first_name", "last_name", "password_salt", "perishable_token", "persistence_token", "phone_number", "sms_enabled", "updated_at") VALUES ('t', '2010-11-23 22:03:18.922821', '01d546ada54e6a5790e5fa6deb2c45b1c63ba2ee468c0d7951dcee8de06f573100894803a1b3ea61b626f0263ab046bf53077d0ce3335a2add2d961c044ae2ee', 'spitfire67@berkeley.edu', 'James', NULL, 'SMut4-5e92kN23tc2B8Y', 'el3kY9FNRTq-b5IMft5-', '59f02309a525534274ce4d6cdf02735af5edb1fc8eb2f03136332205633868702cec05de3cd910ac61c02896ac1b79598df4c3ff46a3857760b158ff9f6a6537', NULL, 'f', '2010-11-23 22:03:18.922821')[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "users" SET "perishable_token" = 'Sp7heCU5k5x9s5ZKN2aM', "updated_at" = '2010-11-23 22:03:18.931319' WHERE ("users"."id" = 1)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "perishable_token" = '5b0TDwFT9_ahao08Dz0Q', "phone_number" = '4405548235', "sms_enabled" = 't', "updated_at" = '2010-11-23 22:03:18.936106' WHERE ("users"."id" = 1)
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "groups" ("created_at", "name", "organization_id", "updated_at") VALUES ('2010-11-23 22:03:18.938780', NULL, NULL, '2010-11-23 22:03:18.938780')[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "user_groups" ("created_at", "group_id", "updated_at", "user_id") VALUES ('2010-11-23 22:03:18.942306', 1, '2010-11-23 22:03:18.942306', 1)
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "users" SET "perishable_token" = '1ghsUX9IcSF8JBt8NcUR', "updated_at" = '2010-11-23 22:03:18.945007' WHERE ("users"."id" = 1)[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tasks" ("created_at", "description", "due", "group_id", "name", "organization_id", "point", "project_id", "status", "updated_at") VALUES ('2010-11-23 22:03:18.948000', NULL, NULL, 1, 'help', NULL, NULL, NULL, 0, '2010-11-23 22:03:18.948000')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1
+  [1m[36mSmsSession Load (0.5ms)[0m  [1mSELECT "sms_sessions".* FROM "sms_sessions"[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "sms_sessions" WHERE ("sms_sessions"."id" = 1)
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "users" WHERE ("users"."id" = 1)
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "sms_sessions" ("created_at", "more", "phone_number", "task_id", "updated_at") VALUES ('2010-11-23 22:03:48.709348', '', '4405548235', NULL, '2010-11-23 22:03:48.709348')[0m
+WARNING: Can't mass-assign protected attributes: first_name
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("active", "created_at", "crypted_password", "email", "first_name", "last_name", "password_salt", "perishable_token", "persistence_token", "phone_number", "sms_enabled", "updated_at") VALUES ('t', '2010-11-23 22:03:48.736097', '268db06ed4a9079caabe3ef3e8204276f5863e2a5b43fcf0273a59e3d04764bab59c45fc45ba16420b8716d3d84c0385838d0a0165bab5e952a337148f4bdff7', 'spitfire67@berkeley.edu', 'James', NULL, 'JJ1_sI3Yn1roY7oQeXRl', 'jNCKj7jQhsiC0OXd2Fvn', '61fe70b88babcd8a39f0d71c6fd8a6e87f7095b794f37195c758f16158037a0d28e78f5182e7b83f1b7dd960ba2f7f296c4144265bbbc7640ad301bf7ed05128', NULL, 'f', '2010-11-23 22:03:48.736097')
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "users" SET "perishable_token" = 'UwEJnIQnPvB4iMcSsZN6', "updated_at" = '2010-11-23 22:03:48.741933' WHERE ("users"."id" = 1)[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "users" SET "perishable_token" = 'hTEjuFvrv09m7Mrd5W0n', "phone_number" = '4405548235', "sms_enabled" = 't', "updated_at" = '2010-11-23 22:03:48.752539' WHERE ("users"."id" = 1)[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "groups" ("created_at", "name", "organization_id", "updated_at") VALUES ('2010-11-23 22:03:48.766627', NULL, NULL, '2010-11-23 22:03:48.766627')
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "user_groups" ("created_at", "group_id", "updated_at", "user_id") VALUES ('2010-11-23 22:03:48.785842', 1, '2010-11-23 22:03:48.785842', 1)[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "perishable_token" = 'Y27m0eIpCaNgJW3eJ12y', "updated_at" = '2010-11-23 22:03:48.789466' WHERE ("users"."id" = 1)
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tasks" ("created_at", "description", "due", "group_id", "name", "organization_id", "point", "project_id", "status", "updated_at") VALUES ('2010-11-23 22:03:48.814767', NULL, NULL, 1, 'task 1', NULL, NULL, NULL, 0, '2010-11-23 22:03:48.814767')[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1
+  [1m[36mGroup Load (0.3ms)[0m  [1mSELECT "groups".* FROM "groups" INNER JOIN "user_groups" ON "groups".id = "user_groups".group_id WHERE (("user_groups".user_id = 1))[0m
+  [1m[35mTask Load (0.4ms)[0m  SELECT "tasks".* FROM "tasks" WHERE ("tasks"."group_id" IN (1)) AND ("tasks"."status" = 0) ORDER BY created_at DESC
+  [1m[36mSmsSession Load (0.2ms)[0m  [1mSELECT "sms_sessions".* FROM "sms_sessions"[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "sms_sessions" WHERE ("sms_sessions"."id" = 1)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "users" WHERE ("users"."id" = 1)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "sms_sessions" ("created_at", "more", "phone_number", "task_id", "updated_at") VALUES ('2010-11-23 22:03:48.836373', '', '4405548235', NULL, '2010-11-23 22:03:48.836373')
+WARNING: Can't mass-assign protected attributes: first_name
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("active", "created_at", "crypted_password", "email", "first_name", "last_name", "password_salt", "perishable_token", "persistence_token", "phone_number", "sms_enabled", "updated_at") VALUES ('t', '2010-11-23 22:03:48.840115', '82efdcda88cd77a21c1d7cf83cfae480121789d82b02fd102fcec187b54ad2ae64a7a3dad775bc2453d10edcc962efd20ef80aa2b8190ddb2f960d3b1adfd6a0', 'spitfire67@berkeley.edu', 'James', NULL, 'PNLzUHgNke8kLOfISNQF', 'LcHnDD0dN3K4ev7JLpft', '56b49ee152af600e6ff73a0e0b40d517ca2b9b5fd9b256e4cf7848e5049d1805ee9a092cba2129b7823d07c202829ad5fe9c65424234e391ab5457c026021146', NULL, 'f', '2010-11-23 22:03:48.840115')[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "perishable_token" = 'rg5FeMJXhmN5TSEQ2U_R', "updated_at" = '2010-11-23 22:03:48.844425' WHERE ("users"."id" = 1)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "perishable_token" = 'laTEJEKL3hhfgOply5zK', "phone_number" = '4405548235', "sms_enabled" = 't', "updated_at" = '2010-11-23 22:03:48.854553' WHERE ("users"."id" = 1)
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "groups" ("created_at", "name", "organization_id", "updated_at") VALUES ('2010-11-23 22:03:48.859311', NULL, NULL, '2010-11-23 22:03:48.859311')[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "user_groups" ("created_at", "group_id", "updated_at", "user_id") VALUES ('2010-11-23 22:03:48.867545', 1, '2010-11-23 22:03:48.867545', 1)
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "users" SET "perishable_token" = 'CS6-Gs9oAk6dt5HxP6Bh', "updated_at" = '2010-11-23 22:03:48.871994' WHERE ("users"."id" = 1)[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1
+  [1m[36mSmsSession Load (0.3ms)[0m  [1mSELECT "sms_sessions".* FROM "sms_sessions"[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "sms_sessions" WHERE ("sms_sessions"."id" = 1)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "users" WHERE ("users"."id" = 1)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "sms_sessions" ("created_at", "more", "phone_number", "task_id", "updated_at") VALUES ('2010-11-23 22:03:48.886297', '', '4405548235', NULL, '2010-11-23 22:03:48.886297')
+WARNING: Can't mass-assign protected attributes: first_name
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("active", "created_at", "crypted_password", "email", "first_name", "last_name", "password_salt", "perishable_token", "persistence_token", "phone_number", "sms_enabled", "updated_at") VALUES ('t', '2010-11-23 22:03:48.889911', '0c30549665697f209018cd57177890511d5cb1f93e7d6d3d28eba23fdf942693903b4f917599828132ad3c9f15fec2b1ad51a41f3351426c50d6cdbecc3bbc3d', 'spitfire67@berkeley.edu', 'James', NULL, 'yiqxMU9ibs8sGur0f2a2', 'L3ZUzZa1j0vI0XLfe-JZ', '134796a736b2ea593c5471a6ac36b0208472d079face6ba8f07e0e49b81c2350f0cf4113ae5c95e68285fc807bc4b1ba868498652308f329792b2dd405a4e545', NULL, 'f', '2010-11-23 22:03:48.889911')[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "perishable_token" = 'p4aU9PXzXtluOnzHhG4c', "updated_at" = '2010-11-23 22:03:48.901700' WHERE ("users"."id" = 1)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "perishable_token" = 'ybPO3eaU_dXQGrQKbDR1', "phone_number" = '4405548235', "sms_enabled" = 't', "updated_at" = '2010-11-23 22:03:48.910090' WHERE ("users"."id" = 1)
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "groups" ("created_at", "name", "organization_id", "updated_at") VALUES ('2010-11-23 22:03:48.912620', NULL, NULL, '2010-11-23 22:03:48.912620')[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "user_groups" ("created_at", "group_id", "updated_at", "user_id") VALUES ('2010-11-23 22:03:48.919009', 1, '2010-11-23 22:03:48.919009', 1)
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "users" SET "perishable_token" = 'ul6s7fOG-q0dPpz-7kHn', "updated_at" = '2010-11-23 22:03:48.921944' WHERE ("users"."id" = 1)[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tasks" ("created_at", "description", "due", "group_id", "name", "organization_id", "point", "project_id", "status", "updated_at") VALUES ('2010-11-23 22:03:48.934397', NULL, NULL, 1, 'task 1', NULL, NULL, NULL, 0, '2010-11-23 22:03:48.934397')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1
+  [1m[36mSmsSession Load (0.3ms)[0m  [1mSELECT "sms_sessions".* FROM "sms_sessions"[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "sms_sessions" WHERE ("sms_sessions"."id" = 1)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "users" WHERE ("users"."id" = 1)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "sms_sessions" ("created_at", "more", "phone_number", "task_id", "updated_at") VALUES ('2010-11-23 22:03:48.955633', '', '4405548235', NULL, '2010-11-23 22:03:48.955633')
+WARNING: Can't mass-assign protected attributes: first_name
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("active", "created_at", "crypted_password", "email", "first_name", "last_name", "password_salt", "perishable_token", "persistence_token", "phone_number", "sms_enabled", "updated_at") VALUES ('t', '2010-11-23 22:03:48.959118', '2cb36fdb026290cbd6c2452896ec3c971fbc1cf32f74a4b30c5541e073d240ea15fba31800d35d81a21662f2a565844bd8a552d111844640c86507fb8f8a54e6', 'spitfire67@berkeley.edu', 'James', NULL, 'DGV61SiMh2PyPnRiHHxr', 'YJ9aFQeLXbkRoCN3ESUP', '817902d0bfc76240df8cd698d6a86c5ac63a9ae3d00257f3723cbded0f8945a7990b054922c03b6e6528171782c529985fc811b3b8cef61c02c44553f15661bd', NULL, 'f', '2010-11-23 22:03:48.959118')[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "perishable_token" = '_b2RBWmz9_LIaj7N3evD', "updated_at" = '2010-11-23 22:03:48.964634' WHERE ("users"."id" = 1)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "perishable_token" = 'LhpCkK-aU7bwN7l6BEbm', "phone_number" = '4405548235', "sms_enabled" = 't', "updated_at" = '2010-11-23 22:03:48.968603' WHERE ("users"."id" = 1)
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "groups" ("created_at", "name", "organization_id", "updated_at") VALUES ('2010-11-23 22:03:48.971176', NULL, NULL, '2010-11-23 22:03:48.971176')[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "user_groups" ("created_at", "group_id", "updated_at", "user_id") VALUES ('2010-11-23 22:03:48.974801', 1, '2010-11-23 22:03:48.974801', 1)
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "users" SET "perishable_token" = 'mpf9xzX5uzVnOKT09Qli', "updated_at" = '2010-11-23 22:03:48.977342' WHERE ("users"."id" = 1)[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tasks" ("created_at", "description", "due", "group_id", "name", "organization_id", "point", "project_id", "status", "updated_at") VALUES ('2010-11-23 22:03:48.980262', NULL, NULL, 1, 'help', NULL, NULL, NULL, 0, '2010-11-23 22:03:48.980262')
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1[0m
+  [1m[35mUser Load (4.7ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1
+  [1m[36mSQL (0.9ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "sms_sessions" ("created_at", "more", "phone_number", "task_id", "updated_at") VALUES ('2010-11-23 22:05:53.407998', '', '4405548235', NULL, '2010-11-23 22:05:53.407998')[0m
+WARNING: Can't mass-assign protected attributes: first_name
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("active", "created_at", "crypted_password", "email", "first_name", "last_name", "password_salt", "perishable_token", "persistence_token", "phone_number", "sms_enabled", "updated_at") VALUES ('t', '2010-11-23 22:05:53.489004', '8ce76d42d89d1a270915fa982c6983f3478809fd5717ca488d1eaf345b1a3f219781afb615de330c845de805ecb37b03a5f2f7c22bcb3beae93396a79d010eb3', 'spitfire67@berkeley.edu', 'James', NULL, 'oYNy5eL36YAozEMI2sJc', 'IOE4MUSvkgqwU1aYjjRl', '464ae999c00734aa4a0d8383902317aa7978e5e33aa563532ea05af44cd714f60640140031fddf9bc7f01849a9b6d78a92532950dd1797e467bd55a2754b2220', NULL, 'f', '2010-11-23 22:05:53.489004')
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "perishable_token" = 'tII4SNjWLN47YWZKMdaV', "updated_at" = '2010-11-23 22:05:53.503785' WHERE ("users"."id" = 1)[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "perishable_token" = 'hkyYRL55cPqP0Xx_fyFN', "phone_number" = '4405548235', "sms_enabled" = 't', "updated_at" = '2010-11-23 22:05:53.534614' WHERE ("users"."id" = 1)[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "groups" ("created_at", "name", "organization_id", "updated_at") VALUES ('2010-11-23 22:05:53.560318', NULL, NULL, '2010-11-23 22:05:53.560318')
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "user_groups" ("created_at", "group_id", "updated_at", "user_id") VALUES ('2010-11-23 22:05:53.594077', 1, '2010-11-23 22:05:53.594077', 1)[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE "users" SET "perishable_token" = 'nXGY5a2iPJIn0phTy3Sm', "updated_at" = '2010-11-23 22:05:53.601693' WHERE ("users"."id" = 1)
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "tasks" ("created_at", "description", "due", "group_id", "name", "organization_id", "point", "project_id", "status", "updated_at") VALUES ('2010-11-23 22:05:53.651556', NULL, NULL, 1, 'task 1', NULL, NULL, NULL, 0, '2010-11-23 22:05:53.651556')[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1
+  [1m[36mGroup Load (0.5ms)[0m  [1mSELECT "groups".* FROM "groups" INNER JOIN "user_groups" ON "groups".id = "user_groups".group_id WHERE (("user_groups".user_id = 1))[0m
+  [1m[35mTask Load (0.8ms)[0m  SELECT "tasks".* FROM "tasks" WHERE ("tasks"."group_id" IN (1)) AND ("tasks"."status" = 0) ORDER BY created_at DESC
+  [1m[36mSmsSession Load (0.4ms)[0m  [1mSELECT "sms_sessions".* FROM "sms_sessions"[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "sms_sessions" WHERE ("sms_sessions"."id" = 1)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "users" WHERE ("users"."id" = 1)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "sms_sessions" ("created_at", "more", "phone_number", "task_id", "updated_at") VALUES ('2010-11-23 22:05:53.747462', '', '4405548235', NULL, '2010-11-23 22:05:53.747462')
+WARNING: Can't mass-assign protected attributes: first_name
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "users" ("active", "created_at", "crypted_password", "email", "first_name", "last_name", "password_salt", "perishable_token", "persistence_token", "phone_number", "sms_enabled", "updated_at") VALUES ('t', '2010-11-23 22:05:53.755703', '419a30ee1a43159f4974ad6214b3f4e13f02ac73cc49f217f65a74579ed7de1e96dab508ae22bd0965845b841cded2d04d629c558144774d236a4ed4548e40e3', 'spitfire67@berkeley.edu', 'James', NULL, 'S1Dhu0PFDYgnPfyhK0Zu', 'I9lLMkZwcmZnr_hjp_3k', '5b35dbdf6dae2f9ed77d05ba479a5d4aace9572a01a7504f0495a97198c6c3902494d0771f8701e70f52ee874670d12fcb98c6d6579b747ff460f9fe0c2eeac7', NULL, 'f', '2010-11-23 22:05:53.755703')[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "perishable_token" = 'XPS5HWGdJuln8q5cqs2g', "updated_at" = '2010-11-23 22:05:53.769054' WHERE ("users"."id" = 1)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1[0m
+  [1m[35mSQL (4.1ms)[0m  UPDATE "users" SET "perishable_token" = 'qkpNjsIC4xMUlPXKRKba', "phone_number" = '4405548235', "sms_enabled" = 't', "updated_at" = '2010-11-23 22:05:53.794871' WHERE ("users"."id" = 1)
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "groups" ("created_at", "name", "organization_id", "updated_at") VALUES ('2010-11-23 22:05:53.807100', NULL, NULL, '2010-11-23 22:05:53.807100')[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "user_groups" ("created_at", "group_id", "updated_at", "user_id") VALUES ('2010-11-23 22:05:53.820189', 1, '2010-11-23 22:05:53.820189', 1)
+  [1m[36mSQL (0.9ms)[0m  [1mUPDATE "users" SET "perishable_token" = 'Amoar4BnmFNp9cgvvsqk', "updated_at" = '2010-11-23 22:05:53.825785' WHERE ("users"."id" = 1)[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1
+  [1m[36mSmsSession Load (0.4ms)[0m  [1mSELECT "sms_sessions".* FROM "sms_sessions"[0m
+  [1m[35mSQL (6.9ms)[0m  DELETE FROM "sms_sessions" WHERE ("sms_sessions"."id" = 1)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mSQL (8.8ms)[0m  DELETE FROM "users" WHERE ("users"."id" = 1)
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1[0m
+  [1m[35mSQL (5.4ms)[0m  INSERT INTO "sms_sessions" ("created_at", "more", "phone_number", "task_id", "updated_at") VALUES ('2010-11-23 22:05:53.884311', '', '4405548235', NULL, '2010-11-23 22:05:53.884311')
+WARNING: Can't mass-assign protected attributes: first_name
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("active", "created_at", "crypted_password", "email", "first_name", "last_name", "password_salt", "perishable_token", "persistence_token", "phone_number", "sms_enabled", "updated_at") VALUES ('t', '2010-11-23 22:05:53.900264', '63b3deb76310925a00204bda412146fd5a9e8aebb8ee8449af4bc9eab48ede3f86773017d173d7eba9f30d8a7713d932378b4468ca21364528e1aa78cc26d9a5', 'spitfire67@berkeley.edu', 'James', NULL, 'SYTmCFy4NIa09B6zj3dT', '87lXKEsc2mCIMQRahB0E', '13082d3ba931118a809d2cab235f8299e4bf1337a3bea4cb73eaffe5fe88ce9da1e5db40f08183be0ab7974631f1e3f894f499f0bdaec4ca14dbdfe7eaed2edc', NULL, 'f', '2010-11-23 22:05:53.900264')[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "perishable_token" = 'JhO_58VTeZunBb6P0Wzu', "updated_at" = '2010-11-23 22:05:53.910392' WHERE ("users"."id" = 1)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "perishable_token" = 'DfyuE3udM4hVNABcppgk', "phone_number" = '4405548235', "sms_enabled" = 't', "updated_at" = '2010-11-23 22:05:53.914485' WHERE ("users"."id" = 1)
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "groups" ("created_at", "name", "organization_id", "updated_at") VALUES ('2010-11-23 22:05:53.925251', NULL, NULL, '2010-11-23 22:05:53.925251')[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "user_groups" ("created_at", "group_id", "updated_at", "user_id") VALUES ('2010-11-23 22:05:53.932337', 1, '2010-11-23 22:05:53.932337', 1)
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "users" SET "perishable_token" = 'HovPZWwVD80CXxU1A930', "updated_at" = '2010-11-23 22:05:53.938421' WHERE ("users"."id" = 1)[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tasks" ("created_at", "description", "due", "group_id", "name", "organization_id", "point", "project_id", "status", "updated_at") VALUES ('2010-11-23 22:05:53.941850', NULL, NULL, 1, 'task 1', NULL, NULL, NULL, 0, '2010-11-23 22:05:53.941850')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1
+  [1m[36mSmsSession Load (0.2ms)[0m  [1mSELECT "sms_sessions".* FROM "sms_sessions"[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "sms_sessions" WHERE ("sms_sessions"."id" = 1)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "users" WHERE ("users"."id" = 1)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "sms_sessions" ("created_at", "more", "phone_number", "task_id", "updated_at") VALUES ('2010-11-23 22:05:53.970758', '', '4405548235', NULL, '2010-11-23 22:05:53.970758')
+WARNING: Can't mass-assign protected attributes: first_name
+  [1m[36mSQL (8.5ms)[0m  [1mINSERT INTO "users" ("active", "created_at", "crypted_password", "email", "first_name", "last_name", "password_salt", "perishable_token", "persistence_token", "phone_number", "sms_enabled", "updated_at") VALUES ('t', '2010-11-23 22:05:53.974463', '8ce06c51d5312cec6da9c90c056912ac0efca59515dc8f68b47ef1b0b746bb2170d2a1e8444371f13bc94966b9fe36bfc23380172837fc863d0cef80d85558c1', 'spitfire67@berkeley.edu', 'James', NULL, 'Xb4IO6QYT5p4lmp410hB', 'olOmee1m7v-PddYp9jwq', 'cc2c73d31483a18d1ae64b8c8083daef3db70fa47d82c32b6308eb629bfb2957c198c2087fae1230db164fa04830e487846b48dbec65a06ca7ae0923ea478697', NULL, 'f', '2010-11-23 22:05:53.974463')[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "perishable_token" = 'natipqdkh5sc-Zn9YzYk', "updated_at" = '2010-11-23 22:05:53.987404' WHERE ("users"."id" = 1)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "perishable_token" = '5dt_MJw2FvSIZhr5UM9E', "phone_number" = '4405548235', "sms_enabled" = 't', "updated_at" = '2010-11-23 22:05:53.996535' WHERE ("users"."id" = 1)
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "groups" ("created_at", "name", "organization_id", "updated_at") VALUES ('2010-11-23 22:05:53.999845', NULL, NULL, '2010-11-23 22:05:53.999845')[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "user_groups" ("created_at", "group_id", "updated_at", "user_id") VALUES ('2010-11-23 22:05:54.003792', 1, '2010-11-23 22:05:54.003792', 1)
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "perishable_token" = 'y-wiN0tQIrAgUkLUQLgy', "updated_at" = '2010-11-23 22:05:54.006429' WHERE ("users"."id" = 1)[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "tasks" ("created_at", "description", "due", "group_id", "name", "organization_id", "point", "project_id", "status", "updated_at") VALUES ('2010-11-23 22:05:54.020004', NULL, NULL, 1, 'help', NULL, NULL, NULL, 0, '2010-11-23 22:05:54.020004')
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1
+  [1m[36mSmsSession Load (0.3ms)[0m  [1mSELECT "sms_sessions".* FROM "sms_sessions"[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "sms_sessions" WHERE ("sms_sessions"."id" = 1)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "users" WHERE ("users"."id" = 1)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."phone_number" = '2343') LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+WARNING: Can't mass-assign protected attributes: last_name, first_name
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('spitfire67@berkeley.edu')) LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE ("users"."persistence_token" = '2c31774020d34095f1071a375d070fd89d73adbcf67e7ec102d94b46af0f6d5f86c4e70badfd197e4922e588b738a6ffa94b39b1e695d931bf339e7759933344') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("active", "created_at", "crypted_password", "email", "first_name", "last_name", "password_salt", "perishable_token", "persistence_token", "phone_number", "sms_enabled", "updated_at") VALUES (NULL, '2010-11-23 22:05:54.074269', '1b255a3b1e540a4f41e61645929a4e6187aed4db36119c6afd166ae58a086e28e7a5e538a682fc77fcd1c172e624c20e16605aa77b886a2cafcaf0cdba3a7df5', 'spitfire67@berkeley.edu', NULL, NULL, 'YMVq4jAmDg4_kLNPedNO', 'PvTFpRsmfsLoyb8D-KN8', '2c31774020d34095f1071a375d070fd89d73adbcf67e7ec102d94b46af0f6d5f86c4e70badfd197e4922e588b738a6ffa94b39b1e695d931bf339e7759933344', NULL, 'f', '2010-11-23 22:05:54.074269')
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."phone_number" = '123') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "users" WHERE ("users"."id" = 1)[0m
+WARNING: Can't mass-assign protected attributes: last_name, first_name
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('spitfire67@berkeley.edu')) LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE ("users"."persistence_token" = '5918988dcd79e3cd7f29817db36ab2690bf1d5be9ea732f582d68c90135f5e40146637631c6cd219588fe8a4396d5f1e7b6bbf8a1d269d1642acab9471cc36f9') LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+WARNING: Can't mass-assign protected attributes: last_name, first_name
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('spitfire67@berkeley.edu')) LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users"."id" FROM "users" WHERE ("users"."persistence_token" = 'c32d8350ce5f305c81ea35e94bc9569b26d3f9fa9feb0ffe1a5e1ab8f67cc97218bb0c7bfafd0f6cbb15c914c764ce5dc0851ef31f6c528cdc36b5f4801ca632') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('spitfire67@berkeley.edu')) LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE ("users"."persistence_token" = 'c32d8350ce5f305c81ea35e94bc9569b26d3f9fa9feb0ffe1a5e1ab8f67cc97218bb0c7bfafd0f6cbb15c914c764ce5dc0851ef31f6c528cdc36b5f4801ca632') LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("active", "created_at", "crypted_password", "email", "first_name", "last_name", "password_salt", "perishable_token", "persistence_token", "phone_number", "sms_enabled", "updated_at") VALUES (NULL, '2010-11-23 22:05:54.102346', 'cc153b17be00371c5322ff4d6def15970f55b5164149baf9aa2399559eaf3148a1e22b0045c6403154be0e1667250dc2929fee0b547524633d6b0feedd22236e', 'spitfire67@berkeley.edu', NULL, NULL, '2ihHXb0fpkHs-wBnH3H_', 'ELv1tx-pxVr7ycJbiuID', 'c32d8350ce5f305c81ea35e94bc9569b26d3f9fa9feb0ffe1a5e1ab8f67cc97218bb0c7bfafd0f6cbb15c914c764ce5dc0851ef31f6c528cdc36b5f4801ca632', '4405548235', 'f', '2010-11-23 22:05:54.102346')[0m
+WARNING: Can't mass-assign protected attributes: last_name, first_name
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('someone@example.com')) LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE ("users"."persistence_token" = '62b82261cefa7a566f4ce5bb40d30e91176c0e11972f75878cedf82ba38cb55583251ca1b8c4458e6723b0b9773bef1bb4a1e7a1d043fc7addcaf3ac6e20e99d') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "users" WHERE ("users"."id" = 1)

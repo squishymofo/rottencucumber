@@ -15,8 +15,8 @@ class SmsProcessor
     when /tasks/
       @response_message = process_tasks_msg
     when /^[0-9]+$/ #TODO: should return the description along with menu AND also set task context
-      @response_message = process_describe_msg(message_a[1])
-      set_task_context(message_a[1])
+      @response_message = process_describe_msg(cmd)
+      set_task_context(cmd)
     when /describe/
       @response_message = process_describe_msg(message_a[1]) #TODO: EDIT: if no number in message_a[1], should look for context and describe that task #TODO: where should simply be an integer which is the task_id
       set_task_context(message_a[1])
@@ -91,7 +91,8 @@ class SmsProcessor
   end
 
   def set_task_context(task_id)
-   #TODO 
+    @sms_session.task_id = task_id
+    @sms_session.save
   end
 
 end
