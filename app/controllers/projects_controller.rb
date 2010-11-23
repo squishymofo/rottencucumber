@@ -4,7 +4,6 @@ class ProjectsController < ApplicationController
   def index
     @org_id = params[:org_id]
     @projects = Project.where(["organization_id = ?", @org_id])
-    puts @projects
   end
 
   def new
@@ -47,8 +46,9 @@ class ProjectsController < ApplicationController
         @task = Task.new
         @task.name = params[:task][:name]
         @task.description = params[:task][:description]
-        @task.point = params[:task][:point]
+        @task.point = params[:point]
         @task.due = Date.new(params[:start_date][:year].to_i, params[:start_date][:month].to_i , params[:start_date][:day].to_i)
+        @task.organization_id = @org.id
         @task.project_id = @id
         if @task.save
           params[:task] = nil

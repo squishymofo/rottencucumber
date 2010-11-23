@@ -33,7 +33,7 @@
 			<%= f.label "Description:" %>
 			<%= f.text_field :description %> <br/>
 			<%= f.label "Allocate Point:" %>
-			<%= f.text_field :point %> <br/>
+			<%= select_tag :point, options_for_select([['1',1],['2',2],['3',3]]) %> <br/>
 			<%= f.label "Due Date:" %>
 			<%= select_date Date.today, :prefix => :start_date %>  <br/>
 			

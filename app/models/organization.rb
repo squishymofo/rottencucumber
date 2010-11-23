@@ -3,5 +3,6 @@ class Organization < ActiveRecord::Base
   has_many :users, :through => :user_organizations
   has_many :projects
   has_many :groups
+  has_many :tasks
   validates_presence_of :name, :description
 end
