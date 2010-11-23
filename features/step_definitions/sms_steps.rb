@@ -18,7 +18,14 @@ When /^I text in "([^"]*)"$/ do |inbound_sms_message|
   @sms_processor.process_message
 end
 
+When /^I subsequently text in "([^"]*)"$/ do |inbound_sms_message|
+  sms_session = SmsSession.where(:phone_number => "4405548235")
+  @sms_processor = SmsProcessor.new(sms_session, inbound_sms_message)
+  @sms_processor.process_message
+
 Then /^I should be texted a numbered list of names of active tasks that are assigned to me$/ do
+
+  debugger
   assert @sms_processor.response_message.split("1.").size > 1
 end
 
@@ -26,6 +33,7 @@ Given /^I have texted in "([^"]*)"$/ do |arg1|
   When "I text in \"#{arg1}\""
 end
 
-Then /^I should be texted a description of task "([^"]*)" assigned to be$/ do |arg1|
-    pending # express the regexp above with the code you wish you had
+Then /^I should be texted a description of task "([^"]*)"$/ do |arg1|
+  debugger
+  assert @sms_processor.response_message.split("Description")[1] != nil
 end

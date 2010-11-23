@@ -34479,3 +34479,1259 @@ Migrating to AddOrganizationIdToTask (20101123080028)
   [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("user_organizations")
   [1m[36mSQL (0.2ms)[0m  [1mPRAGMA index_list("users")[0m
   [1m[35mSQL (0.2ms)[0m  PRAGMA index_info('index_users_on_phone_number')
+  [1m[36mSQL (1.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (3.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.5ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+WARNING: Can't mass-assign protected attributes: first_name
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from /home/james/school/se/project-dir/rottencucumber/db/seeds.rb:8)
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("active", "created_at", "crypted_password", "email", "first_name", "last_name", "password_salt", "perishable_token", "persistence_token", "phone_number", "sms_enabled", "updated_at") VALUES ('t', '2010-11-23 12:12:43.189749', 'f53ac26d0b16ef342808e4933148025c03ffe54237e55439ac4b44e80b4f51ca85839226280926ad64a89e0ac5edf93879df024dd60df8a58f36f35e6e9c068d', 'spitfire67@berkeley.edu', 'James', NULL, '-fqhLnClQOUC3kd1s0cf', 'G3osOd7ZB0yh_hI67xdz', '9928e775b78db6e8c7f877e1807e1105bbf5fc73df13e4f5b4cd1ec6095243ae35b888860678a5769a81d3a62549b96ee0aca4e9787ba1bafbe1c43b11622a46', NULL, 'f', '2010-11-23 12:12:43.189749')
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "perishable_token" = 'I9c3ubSy59D9-8ftZ5cq', "updated_at" = '2010-11-23 12:12:43.540748' WHERE ("users"."id" = 1)[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "perishable_token" = '9kg1sFTF62Vpig78XCSz', "phone_number" = '4405548235', "sms_enabled" = 't', "updated_at" = '2010-11-23 12:12:43.741283' WHERE ("users"."id" = 1)[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "groups" ("created_at", "name", "organization_id", "updated_at") VALUES ('2010-11-23 12:12:44.049762', 'test groups', NULL, '2010-11-23 12:12:44.049762')
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "user_groups" ("created_at", "group_id", "updated_at", "user_id") VALUES ('2010-11-23 12:12:44.212432', 1, '2010-11-23 12:12:44.212432', 1)
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tasks" ("created_at", "description", "due", "group_id", "name", "organization_id", "point", "project_id", "status", "updated_at") VALUES ('2010-11-23 12:12:44.452313', 'Description of task 1', NULL, 1, 'Thing 1', NULL, NULL, NULL, 0, '2010-11-23 12:12:44.452313')[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "tasks" ("created_at", "description", "due", "group_id", "name", "organization_id", "point", "project_id", "status", "updated_at") VALUES ('2010-11-23 12:12:44.564089', 'Description of task 2', NULL, 1, 'Thing 2', NULL, NULL, NULL, 0, '2010-11-23 12:12:44.564089')
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mGroup Load (0.6ms)[0m  SELECT "groups".* FROM "groups" INNER JOIN "user_groups" ON "groups".id = "user_groups".group_id WHERE (("user_groups".user_id = 1))
+  [1m[36mTask Load (0.4ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE ("tasks"."status" = 0) AND ("tasks"."group_id" = 1)[0m
+  [1m[35mUser Load (4.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1
+  [1m[36mGroup Load (0.6ms)[0m  [1mSELECT "groups".* FROM "groups" INNER JOIN "user_groups" ON "groups".id = "user_groups".group_id WHERE (("user_groups".user_id = 1))[0m
+  [1m[35mTask Load (0.9ms)[0m  SELECT "tasks".* FROM "tasks" WHERE ("tasks"."status" = 0) AND ("tasks"."group_id" = 1)
+  [1m[36mGroup Load (2.5ms)[0m  [1mSELECT "groups".* FROM "groups" INNER JOIN "user_groups" ON "groups".id = "user_groups".group_id WHERE (("user_groups".user_id = 1))[0m
+  [1m[35mTask Load (0.8ms)[0m  SELECT "tasks".* FROM "tasks" WHERE ("tasks"."status" = 0) AND ("tasks"."group_id" = 1)
+  [1m[36mSQL (0.8ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1
+  [1m[36mSmsSession Load (0.7ms)[0m  [1mSELECT "sms_sessions".* FROM "sms_sessions" WHERE ("sms_sessions"."phone_number" = '4405548235') LIMIT 1[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1
+  [1m[36mSmsSession Load (0.4ms)[0m  [1mSELECT "sms_sessions".* FROM "sms_sessions" WHERE ("sms_sessions"."phone_number" = '4405548235') LIMIT 1[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1[0m
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1
+  [1m[36mSmsSession Load (0.2ms)[0m  [1mSELECT "sms_sessions".* FROM "sms_sessions" WHERE ("sms_sessions"."phone_number" = '4405548235') LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1[0m
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1
+  [1m[36mSmsSession Load (0.4ms)[0m  [1mSELECT "sms_sessions".* FROM "sms_sessions" WHERE ("sms_sessions"."phone_number" = '4405548235') LIMIT 1[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1
+  [1m[36mSmsSession Load (0.4ms)[0m  [1mSELECT "sms_sessions".* FROM "sms_sessions" WHERE ("sms_sessions"."phone_number" = '4405548235') LIMIT 1[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1[0m
+  [1m[35mGroup Load (1.7ms)[0m  SELECT "groups".* FROM "groups" INNER JOIN "user_groups" ON "groups".id = "user_groups".group_id WHERE (("user_groups".user_id = 1))
+  [1m[36mTask Load (1.0ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE ("tasks"."status" = 0) AND ("tasks"."group_id" = 1)[0m
+  [1m[36mSQL (1.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (156.8ms)[0m  CREATE TABLE "groups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime, "organization_id" integer) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (106.8ms)[0m  CREATE TABLE "organizations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "created_at" datetime, "updated_at" datetime, "creator_id" integer) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (137.0ms)[0m  CREATE TABLE "projects" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" varchar(255), "organization_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (125.4ms)[0m  CREATE TABLE "sms_sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "phone_number" varchar(255), "more" varchar(255) DEFAULT '', "task_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("sms_sessions")[0m
+  [1m[35mSQL (141.9ms)[0m  CREATE UNIQUE INDEX "index_sms_sessions_on_phone_number" ON "sms_sessions" ("phone_number")
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (127.8ms)[0m  CREATE TABLE "tasks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "due" datetime, "point" integer, "group_id" integer, "project_id" integer, "created_at" datetime, "updated_at" datetime, "status" integer DEFAULT 0, "organization_id" integer) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (109.1ms)[0m  CREATE TABLE "user_actions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "ip" varchar(255), "url" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (109.8ms)[0m  CREATE TABLE "user_groups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "group_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (137.2ms)[0m  CREATE TABLE "user_organizations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "organization_id" integer, "user_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.7ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (112.4ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255), "crypted_password" varchar(255), "password_salt" varchar(255), "persistence_token" varchar(255), "active" boolean, "perishable_token" varchar(255), "created_at" datetime, "updated_at" datetime, "first_name" varchar(255), "last_name" varchar(255), "sms_enabled" boolean DEFAULT 'f', "phone_number" varchar(255)) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35mSQL (88.0ms)[0m  CREATE INDEX "index_users_on_phone_number" ON "users" ("phone_number")
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (122.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (111.7ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (85.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101123080028')[0m
+  [1m[35mSQL (77.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101029221616')
+  [1m[36mSQL (77.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101101001621')[0m
+  [1m[35mSQL (77.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101122071736')
+  [1m[36mSQL (77.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101122232107')[0m
+  [1m[35mSQL (77.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101101093918')
+  [1m[36mSQL (88.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101029194241')[0m
+  [1m[35mSQL (77.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101101002314')
+  [1m[36mSQL (78.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101031235423')[0m
+  [1m[35mSQL (76.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101031235503')
+  [1m[36mSQL (77.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101031235354')[0m
+  [1m[35mSQL (77.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101030013352')
+  [1m[36mSQL (78.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101102001912')[0m
+  [1m[35mSQL (99.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101101003722')
+  [1m[36mSQL (88.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101101075247')[0m
+  [1m[36mSQL (7.8ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.5ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (142.1ms)[0m  CREATE TABLE "groups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime, "organization_id" integer) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (89.8ms)[0m  CREATE TABLE "organizations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "created_at" datetime, "updated_at" datetime, "creator_id" integer) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (108.8ms)[0m  CREATE TABLE "projects" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" varchar(255), "organization_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (97.4ms)[0m  CREATE TABLE "sms_sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "phone_number" varchar(255), "more" varchar(255) DEFAULT '', "task_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("sms_sessions")[0m
+  [1m[35mSQL (115.9ms)[0m  CREATE UNIQUE INDEX "index_sms_sessions_on_phone_number" ON "sms_sessions" ("phone_number")
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (91.6ms)[0m  CREATE TABLE "tasks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "due" datetime, "point" integer, "group_id" integer, "project_id" integer, "created_at" datetime, "updated_at" datetime, "status" integer DEFAULT 0, "organization_id" integer) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (165.5ms)[0m  CREATE TABLE "user_actions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "ip" varchar(255), "url" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (231.3ms)[0m  CREATE TABLE "user_groups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "group_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (220.8ms)[0m  CREATE TABLE "user_organizations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "organization_id" integer, "user_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (184.3ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255), "crypted_password" varchar(255), "password_salt" varchar(255), "persistence_token" varchar(255), "active" boolean, "perishable_token" varchar(255), "created_at" datetime, "updated_at" datetime, "first_name" varchar(255), "last_name" varchar(255), "sms_enabled" boolean DEFAULT 'f', "phone_number" varchar(255)) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35mSQL (176.8ms)[0m  CREATE INDEX "index_users_on_phone_number" ON "users" ("phone_number")
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (118.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (93.7ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (93.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101123080028')[0m
+  [1m[35mSQL (77.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101029221616')
+  [1m[36mSQL (88.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101101001621')[0m
+  [1m[35mSQL (77.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101122071736')
+  [1m[36mSQL (77.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101122232107')[0m
+  [1m[35mSQL (77.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101101093918')
+  [1m[36mSQL (77.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101029194241')[0m
+  [1m[35mSQL (77.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101101002314')
+  [1m[36mSQL (77.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101031235423')[0m
+  [1m[35mSQL (77.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101031235503')
+  [1m[36mSQL (88.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101031235354')[0m
+  [1m[35mSQL (77.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101030013352')
+  [1m[36mSQL (77.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101102001912')[0m
+  [1m[35mSQL (113.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101101003722')
+  [1m[36mSQL (75.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101101075247')[0m
+  [1m[36mSQL (1.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.5ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (145.6ms)[0m  CREATE TABLE "groups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime, "organization_id" integer) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (84.4ms)[0m  CREATE TABLE "organizations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "created_at" datetime, "updated_at" datetime, "creator_id" integer) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (115.9ms)[0m  CREATE TABLE "projects" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" varchar(255), "organization_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (102.0ms)[0m  CREATE TABLE "sms_sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "phone_number" varchar(255), "more" varchar(255) DEFAULT '', "task_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("sms_sessions")[0m
+  [1m[35mSQL (120.3ms)[0m  CREATE UNIQUE INDEX "index_sms_sessions_on_phone_number" ON "sms_sessions" ("phone_number")
+  [1m[36mSQL (3.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (95.4ms)[0m  CREATE TABLE "tasks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "due" datetime, "point" integer, "group_id" integer, "project_id" integer, "created_at" datetime, "updated_at" datetime, "status" integer DEFAULT 0, "organization_id" integer) 
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (98.1ms)[0m  CREATE TABLE "user_actions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "ip" varchar(255), "url" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (98.0ms)[0m  CREATE TABLE "user_groups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "group_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (126.3ms)[0m  CREATE TABLE "user_organizations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "organization_id" integer, "user_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.7ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (111.7ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255), "crypted_password" varchar(255), "password_salt" varchar(255), "persistence_token" varchar(255), "active" boolean, "perishable_token" varchar(255), "created_at" datetime, "updated_at" datetime, "first_name" varchar(255), "last_name" varchar(255), "sms_enabled" boolean DEFAULT 'f', "phone_number" varchar(255)) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35mSQL (76.9ms)[0m  CREATE INDEX "index_users_on_phone_number" ON "users" ("phone_number")
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (99.5ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (78.4ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (74.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101123080028')[0m
+  [1m[35mSQL (66.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101029221616')
+  [1m[36mSQL (68.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101101001621')[0m
+  [1m[35mSQL (86.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101122071736')
+  [1m[36mSQL (66.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101122232107')[0m
+  [1m[35mSQL (66.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101101093918')
+  [1m[36mSQL (66.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101029194241')[0m
+  [1m[35mSQL (77.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101101002314')
+  [1m[36mSQL (77.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101031235423')[0m
+  [1m[35mSQL (66.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101031235503')
+  [1m[36mSQL (77.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101031235354')[0m
+  [1m[35mSQL (77.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101030013352')
+  [1m[36mSQL (66.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101102001912')[0m
+  [1m[35mSQL (66.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101101003722')
+  [1m[36mSQL (66.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101101075247')[0m
+  [1m[36mSQL (1.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.5ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (133.5ms)[0m  CREATE TABLE "groups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime, "organization_id" integer) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (85.9ms)[0m  CREATE TABLE "organizations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "created_at" datetime, "updated_at" datetime, "creator_id" integer) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (135.2ms)[0m  CREATE TABLE "projects" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" varchar(255), "organization_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (115.3ms)[0m  CREATE TABLE "sms_sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "phone_number" varchar(255), "more" varchar(255) DEFAULT '', "task_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("sms_sessions")[0m
+  [1m[35mSQL (107.2ms)[0m  CREATE UNIQUE INDEX "index_sms_sessions_on_phone_number" ON "sms_sessions" ("phone_number")
+  [1m[36mSQL (1.7ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (79.6ms)[0m  CREATE TABLE "tasks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "due" datetime, "point" integer, "group_id" integer, "project_id" integer, "created_at" datetime, "updated_at" datetime, "status" integer DEFAULT 0, "organization_id" integer) 
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (75.5ms)[0m  CREATE TABLE "user_actions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "ip" varchar(255), "url" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (76.2ms)[0m  CREATE TABLE "user_groups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "group_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (99.8ms)[0m  CREATE TABLE "user_organizations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "organization_id" integer, "user_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (76.7ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255), "crypted_password" varchar(255), "password_salt" varchar(255), "persistence_token" varchar(255), "active" boolean, "perishable_token" varchar(255), "created_at" datetime, "updated_at" datetime, "first_name" varchar(255), "last_name" varchar(255), "sms_enabled" boolean DEFAULT 'f', "phone_number" varchar(255)) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35mSQL (88.1ms)[0m  CREATE INDEX "index_users_on_phone_number" ON "users" ("phone_number")
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (108.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (91.8ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (74.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101123080028')[0m
+  [1m[35mSQL (66.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101029221616')
+  [1m[36mSQL (66.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101101001621')[0m
+  [1m[35mSQL (77.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101122071736')
+  [1m[36mSQL (77.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101122232107')[0m
+  [1m[35mSQL (66.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101101093918')
+  [1m[36mSQL (66.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101029194241')[0m
+  [1m[35mSQL (65.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101101002314')
+  [1m[36mSQL (66.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101031235423')[0m
+  [1m[35mSQL (65.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101031235503')
+  [1m[36mSQL (66.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101031235354')[0m
+  [1m[35mSQL (188.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101030013352')
+  [1m[36mSQL (110.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101102001912')[0m
+  [1m[35mSQL (99.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101101003722')
+  [1m[36mSQL (66.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101101075247')[0m
+  [1m[36mSQL (1.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (177.2ms)[0m  CREATE TABLE "groups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime, "organization_id" integer) 
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (98.4ms)[0m  CREATE TABLE "organizations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "created_at" datetime, "updated_at" datetime, "creator_id" integer) 
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (102.3ms)[0m  CREATE TABLE "projects" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" varchar(255), "organization_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (95.4ms)[0m  CREATE TABLE "sms_sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "phone_number" varchar(255), "more" varchar(255) DEFAULT '', "task_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1mPRAGMA index_list("sms_sessions")[0m
+  [1m[35mSQL (146.1ms)[0m  CREATE UNIQUE INDEX "index_sms_sessions_on_phone_number" ON "sms_sessions" ("phone_number")
+  [1m[36mSQL (6.7ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (126.6ms)[0m  CREATE TABLE "tasks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "due" datetime, "point" integer, "group_id" integer, "project_id" integer, "created_at" datetime, "updated_at" datetime, "status" integer DEFAULT 0, "organization_id" integer) 
+  [1m[36mSQL (3.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (92.5ms)[0m  CREATE TABLE "user_actions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "ip" varchar(255), "url" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (1.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (96.1ms)[0m  CREATE TABLE "user_groups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "group_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.8ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (106.6ms)[0m  CREATE TABLE "user_organizations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "organization_id" integer, "user_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.7ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (92.3ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255), "crypted_password" varchar(255), "password_salt" varchar(255), "persistence_token" varchar(255), "active" boolean, "perishable_token" varchar(255), "created_at" datetime, "updated_at" datetime, "first_name" varchar(255), "last_name" varchar(255), "sms_enabled" boolean DEFAULT 'f', "phone_number" varchar(255)) 
+  [1m[36mSQL (0.2ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35mSQL (75.7ms)[0m  CREATE INDEX "index_users_on_phone_number" ON "users" ("phone_number")
+  [1m[36mSQL (0.7ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (103.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (84.5ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.9ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (88.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101123080028')[0m
+  [1m[35mSQL (165.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101029221616')
+  [1m[36mSQL (66.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101101001621')[0m
+  [1m[35mSQL (66.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101122071736')
+  [1m[36mSQL (66.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101122232107')[0m
+  [1m[35mSQL (66.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101101093918')
+  [1m[36mSQL (77.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101029194241')[0m
+  [1m[35mSQL (77.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101101002314')
+  [1m[36mSQL (77.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101031235423')[0m
+  [1m[35mSQL (65.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101031235503')
+  [1m[36mSQL (78.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101031235354')[0m
+  [1m[35mSQL (65.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101030013352')
+  [1m[36mSQL (66.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101102001912')[0m
+  [1m[35mSQL (66.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101101003722')
+  [1m[36mSQL (77.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101101075247')[0m
+  [1m[36mSQL (1.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (127.4ms)[0m  CREATE TABLE "groups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime, "organization_id" integer) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (91.3ms)[0m  CREATE TABLE "organizations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "created_at" datetime, "updated_at" datetime, "creator_id" integer) 
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (114.8ms)[0m  CREATE TABLE "projects" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" varchar(255), "organization_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (81.1ms)[0m  CREATE TABLE "sms_sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "phone_number" varchar(255), "more" varchar(255) DEFAULT '', "task_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1mPRAGMA index_list("sms_sessions")[0m
+  [1m[35mSQL (102.5ms)[0m  CREATE UNIQUE INDEX "index_sms_sessions_on_phone_number" ON "sms_sessions" ("phone_number")
+  [1m[36mSQL (0.7ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (89.4ms)[0m  CREATE TABLE "tasks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "due" datetime, "point" integer, "group_id" integer, "project_id" integer, "created_at" datetime, "updated_at" datetime, "status" integer DEFAULT 0, "organization_id" integer) 
+  [1m[36mSQL (0.8ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (84.7ms)[0m  CREATE TABLE "user_actions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "ip" varchar(255), "url" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.7ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (91.1ms)[0m  CREATE TABLE "user_groups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "group_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.7ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (95.6ms)[0m  CREATE TABLE "user_organizations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "organization_id" integer, "user_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.7ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (84.5ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255), "crypted_password" varchar(255), "password_salt" varchar(255), "persistence_token" varchar(255), "active" boolean, "perishable_token" varchar(255), "created_at" datetime, "updated_at" datetime, "first_name" varchar(255), "last_name" varchar(255), "sms_enabled" boolean DEFAULT 'f', "phone_number" varchar(255)) 
+  [1m[36mSQL (0.2ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35mSQL (75.0ms)[0m  CREATE INDEX "index_users_on_phone_number" ON "users" ("phone_number")
+  [1m[36mSQL (0.7ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (103.6ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (96.1ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.8ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (82.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101123080028')[0m
+  [1m[35mSQL (77.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101029221616')
+  [1m[36mSQL (77.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101101001621')[0m
+  [1m[35mSQL (77.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101122071736')
+  [1m[36mSQL (99.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101122232107')[0m
+  [1m[35mSQL (66.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101101093918')
+  [1m[36mSQL (77.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101029194241')[0m
+  [1m[35mSQL (77.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101101002314')
+  [1m[36mSQL (77.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101031235423')[0m
+  [1m[35mSQL (77.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101031235503')
+  [1m[36mSQL (77.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101031235354')[0m
+  [1m[35mSQL (65.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101030013352')
+  [1m[36mSQL (66.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101102001912')[0m
+  [1m[35mSQL (66.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101101003722')
+  [1m[36mSQL (66.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101101075247')[0m
+  [1m[36mSQL (1.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.7ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (134.1ms)[0m  CREATE TABLE "groups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime, "organization_id" integer) 
+  [1m[36mSQL (3.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (89.2ms)[0m  CREATE TABLE "organizations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "created_at" datetime, "updated_at" datetime, "creator_id" integer) 
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (126.4ms)[0m  CREATE TABLE "projects" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" varchar(255), "organization_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (98.0ms)[0m  CREATE TABLE "sms_sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "phone_number" varchar(255), "more" varchar(255) DEFAULT '', "task_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1mPRAGMA index_list("sms_sessions")[0m
+  [1m[35mSQL (110.3ms)[0m  CREATE UNIQUE INDEX "index_sms_sessions_on_phone_number" ON "sms_sessions" ("phone_number")
+  [1m[36mSQL (0.7ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (155.2ms)[0m  CREATE TABLE "tasks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "due" datetime, "point" integer, "group_id" integer, "project_id" integer, "created_at" datetime, "updated_at" datetime, "status" integer DEFAULT 0, "organization_id" integer) 
+  [1m[36mSQL (0.7ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (105.0ms)[0m  CREATE TABLE "user_actions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "ip" varchar(255), "url" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.7ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (105.7ms)[0m  CREATE TABLE "user_groups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "group_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.7ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (116.3ms)[0m  CREATE TABLE "user_organizations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "organization_id" integer, "user_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.8ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (83.5ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255), "crypted_password" varchar(255), "password_salt" varchar(255), "persistence_token" varchar(255), "active" boolean, "perishable_token" varchar(255), "created_at" datetime, "updated_at" datetime, "first_name" varchar(255), "last_name" varchar(255), "sms_enabled" boolean DEFAULT 'f', "phone_number" varchar(255)) 
+  [1m[36mSQL (0.2ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35mSQL (76.1ms)[0m  CREATE INDEX "index_users_on_phone_number" ON "users" ("phone_number")
+  [1m[36mSQL (1.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (194.1ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (95.7ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.8ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (94.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101123080028')[0m
+  [1m[35mSQL (88.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101029221616')
+  [1m[36mSQL (77.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101101001621')[0m
+  [1m[35mSQL (77.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101122071736')
+  [1m[36mSQL (66.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101122232107')[0m
+  [1m[35mSQL (77.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101101093918')
+  [1m[36mSQL (88.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101029194241')[0m
+  [1m[35mSQL (77.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101101002314')
+  [1m[36mSQL (77.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101031235423')[0m
+  [1m[35mSQL (132.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101031235503')
+  [1m[36mSQL (66.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101031235354')[0m
+  [1m[35mSQL (76.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101030013352')
+  [1m[36mSQL (77.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101102001912')[0m
+  [1m[35mSQL (77.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101101003722')
+  [1m[36mSQL (77.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101101075247')[0m
+  [1m[36mSQL (1.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.6ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (159.9ms)[0m  CREATE TABLE "groups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime, "organization_id" integer) 
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (84.8ms)[0m  CREATE TABLE "organizations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "created_at" datetime, "updated_at" datetime, "creator_id" integer) 
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (114.1ms)[0m  CREATE TABLE "projects" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" varchar(255), "organization_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (99.2ms)[0m  CREATE TABLE "sms_sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "phone_number" varchar(255), "more" varchar(255) DEFAULT '', "task_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1mPRAGMA index_list("sms_sessions")[0m
+  [1m[35mSQL (116.5ms)[0m  CREATE UNIQUE INDEX "index_sms_sessions_on_phone_number" ON "sms_sessions" ("phone_number")
+  [1m[36mSQL (7.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (90.7ms)[0m  CREATE TABLE "tasks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "due" datetime, "point" integer, "group_id" integer, "project_id" integer, "created_at" datetime, "updated_at" datetime, "status" integer DEFAULT 0, "organization_id" integer) 
+  [1m[36mSQL (5.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (79.9ms)[0m  CREATE TABLE "user_actions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "ip" varchar(255), "url" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.7ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (74.3ms)[0m  CREATE TABLE "user_groups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "group_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.7ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (99.2ms)[0m  CREATE TABLE "user_organizations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "organization_id" integer, "user_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.8ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (89.6ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255), "crypted_password" varchar(255), "password_salt" varchar(255), "persistence_token" varchar(255), "active" boolean, "perishable_token" varchar(255), "created_at" datetime, "updated_at" datetime, "first_name" varchar(255), "last_name" varchar(255), "sms_enabled" boolean DEFAULT 'f', "phone_number" varchar(255)) 
+  [1m[36mSQL (0.2ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35mSQL (87.4ms)[0m  CREATE INDEX "index_users_on_phone_number" ON "users" ("phone_number")
+  [1m[36mSQL (0.8ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (117.6ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (91.5ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.8ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (71.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101123080028')[0m
+  [1m[35mSQL (79.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101029221616')
+  [1m[36mSQL (85.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101101001621')[0m
+  [1m[35mSQL (77.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101122071736')
+  [1m[36mSQL (88.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101122232107')[0m
+  [1m[35mSQL (77.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101101093918')
+  [1m[36mSQL (76.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101029194241')[0m
+  [1m[35mSQL (66.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101101002314')
+  [1m[36mSQL (66.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101031235423')[0m
+  [1m[35mSQL (77.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101031235503')
+  [1m[36mSQL (77.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101031235354')[0m
+  [1m[35mSQL (77.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101030013352')
+  [1m[36mSQL (77.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101102001912')[0m
+  [1m[35mSQL (88.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101101003722')
+  [1m[36mSQL (66.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101101075247')[0m
+  [1m[36mSQL (2.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (135.9ms)[0m  CREATE TABLE "groups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime, "organization_id" integer) 
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (95.9ms)[0m  CREATE TABLE "organizations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "created_at" datetime, "updated_at" datetime, "creator_id" integer) 
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (115.3ms)[0m  CREATE TABLE "projects" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" varchar(255), "organization_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (94.6ms)[0m  CREATE TABLE "sms_sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "phone_number" varchar(255), "more" varchar(255) DEFAULT '', "task_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.5ms)[0m  [1mPRAGMA index_list("sms_sessions")[0m
+  [1m[35mSQL (109.4ms)[0m  CREATE UNIQUE INDEX "index_sms_sessions_on_phone_number" ON "sms_sessions" ("phone_number")
+  [1m[36mSQL (0.7ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (105.2ms)[0m  CREATE TABLE "tasks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "due" datetime, "point" integer, "group_id" integer, "project_id" integer, "created_at" datetime, "updated_at" datetime, "status" integer DEFAULT 0, "organization_id" integer) 
+  [1m[36mSQL (0.7ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (104.0ms)[0m  CREATE TABLE "user_actions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "ip" varchar(255), "url" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.7ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (95.8ms)[0m  CREATE TABLE "user_groups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "group_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.7ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (115.9ms)[0m  CREATE TABLE "user_organizations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "organization_id" integer, "user_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.8ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (84.3ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255), "crypted_password" varchar(255), "password_salt" varchar(255), "persistence_token" varchar(255), "active" boolean, "perishable_token" varchar(255), "created_at" datetime, "updated_at" datetime, "first_name" varchar(255), "last_name" varchar(255), "sms_enabled" boolean DEFAULT 'f', "phone_number" varchar(255)) 
+  [1m[36mSQL (0.2ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35mSQL (97.7ms)[0m  CREATE INDEX "index_users_on_phone_number" ON "users" ("phone_number")
+  [1m[36mSQL (0.7ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (114.1ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (95.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.8ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (83.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101123080028')[0m
+  [1m[35mSQL (88.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101029221616')
+  [1m[36mSQL (88.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101101001621')[0m
+  [1m[35mSQL (77.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101122071736')
+  [1m[36mSQL (77.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101122232107')[0m
+  [1m[35mSQL (87.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101101093918')
+  [1m[36mSQL (77.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101029194241')[0m
+  [1m[35mSQL (88.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101101002314')
+  [1m[36mSQL (77.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101031235423')[0m
+  [1m[35mSQL (88.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101031235503')
+  [1m[36mSQL (65.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101031235354')[0m
+  [1m[35mSQL (66.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101030013352')
+  [1m[36mSQL (77.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101102001912')[0m
+  [1m[35mSQL (77.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101101003722')
+  [1m[36mSQL (77.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101101075247')[0m
+  [1m[36mSQL (1.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (131.7ms)[0m  CREATE TABLE "groups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime, "organization_id" integer) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (85.4ms)[0m  CREATE TABLE "organizations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "created_at" datetime, "updated_at" datetime, "creator_id" integer) 
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (107.5ms)[0m  CREATE TABLE "projects" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" varchar(255), "organization_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (87.6ms)[0m  CREATE TABLE "sms_sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "phone_number" varchar(255), "more" varchar(255) DEFAULT '', "task_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1mPRAGMA index_list("sms_sessions")[0m
+  [1m[35mSQL (119.3ms)[0m  CREATE UNIQUE INDEX "index_sms_sessions_on_phone_number" ON "sms_sessions" ("phone_number")
+  [1m[36mSQL (0.7ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (81.1ms)[0m  CREATE TABLE "tasks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "due" datetime, "point" integer, "group_id" integer, "project_id" integer, "created_at" datetime, "updated_at" datetime, "status" integer DEFAULT 0, "organization_id" integer) 
+  [1m[36mSQL (0.7ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (73.6ms)[0m  CREATE TABLE "user_actions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "ip" varchar(255), "url" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.7ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (85.5ms)[0m  CREATE TABLE "user_groups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "group_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (1.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (111.9ms)[0m  CREATE TABLE "user_organizations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "organization_id" integer, "user_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.9ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (92.6ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255), "crypted_password" varchar(255), "password_salt" varchar(255), "persistence_token" varchar(255), "active" boolean, "perishable_token" varchar(255), "created_at" datetime, "updated_at" datetime, "first_name" varchar(255), "last_name" varchar(255), "sms_enabled" boolean DEFAULT 'f', "phone_number" varchar(255)) 
+  [1m[36mSQL (0.2ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35mSQL (87.1ms)[0m  CREATE INDEX "index_users_on_phone_number" ON "users" ("phone_number")
+  [1m[36mSQL (1.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (98.4ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (77.3ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.8ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (72.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101123080028')[0m
+  [1m[35mSQL (99.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101029221616')
+  [1m[36mSQL (88.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101101001621')[0m
+  [1m[35mSQL (88.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101122071736')
+  [1m[36mSQL (66.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101122232107')[0m
+  [1m[35mSQL (66.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101101093918')
+  [1m[36mSQL (77.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101029194241')[0m
+  [1m[35mSQL (76.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101101002314')
+  [1m[36mSQL (77.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101031235423')[0m
+  [1m[35mSQL (76.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101031235503')
+  [1m[36mSQL (77.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101031235354')[0m
+  [1m[35mSQL (77.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101030013352')
+  [1m[36mSQL (66.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101102001912')[0m
+  [1m[35mSQL (66.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101101003722')
+  [1m[36mSQL (66.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101101075247')[0m
+  [1m[36mSQL (1.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (130.1ms)[0m  CREATE TABLE "groups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime, "organization_id" integer) 
+  [1m[36mSQL (5.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (89.3ms)[0m  CREATE TABLE "organizations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "created_at" datetime, "updated_at" datetime, "creator_id" integer) 
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (134.1ms)[0m  CREATE TABLE "projects" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" varchar(255), "organization_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (98.0ms)[0m  CREATE TABLE "sms_sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "phone_number" varchar(255), "more" varchar(255) DEFAULT '', "task_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1mPRAGMA index_list("sms_sessions")[0m
+  [1m[35mSQL (107.5ms)[0m  CREATE UNIQUE INDEX "index_sms_sessions_on_phone_number" ON "sms_sessions" ("phone_number")
+  [1m[36mSQL (0.7ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (117.4ms)[0m  CREATE TABLE "tasks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "due" datetime, "point" integer, "group_id" integer, "project_id" integer, "created_at" datetime, "updated_at" datetime, "status" integer DEFAULT 0, "organization_id" integer) 
+  [1m[36mSQL (5.9ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (118.2ms)[0m  CREATE TABLE "user_actions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "ip" varchar(255), "url" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.7ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (141.4ms)[0m  CREATE TABLE "user_groups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "group_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.7ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (109.5ms)[0m  CREATE TABLE "user_organizations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "organization_id" integer, "user_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.8ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (97.4ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255), "crypted_password" varchar(255), "password_salt" varchar(255), "persistence_token" varchar(255), "active" boolean, "perishable_token" varchar(255), "created_at" datetime, "updated_at" datetime, "first_name" varchar(255), "last_name" varchar(255), "sms_enabled" boolean DEFAULT 'f', "phone_number" varchar(255)) 
+  [1m[36mSQL (0.2ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35mSQL (85.1ms)[0m  CREATE INDEX "index_users_on_phone_number" ON "users" ("phone_number")
+  [1m[36mSQL (0.7ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (100.1ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (85.1ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.8ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (83.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101123080028')[0m
+  [1m[35mSQL (90.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101029221616')
+  [1m[36mSQL (86.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101101001621')[0m
+  [1m[35mSQL (77.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101122071736')
+  [1m[36mSQL (110.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101122232107')[0m
+  [1m[35mSQL (66.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101101093918')
+  [1m[36mSQL (66.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101029194241')[0m
+  [1m[35mSQL (87.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101101002314')
+  [1m[36mSQL (77.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101031235423')[0m
+  [1m[35mSQL (77.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101031235503')
+  [1m[36mSQL (77.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101031235354')[0m
+  [1m[35mSQL (77.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101030013352')
+  [1m[36mSQL (66.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101102001912')[0m
+  [1m[35mSQL (66.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101101003722')
+  [1m[36mSQL (77.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101101075247')[0m
+  [1m[36mSQL (4.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.6ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (120.5ms)[0m  CREATE TABLE "groups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime, "organization_id" integer) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (96.9ms)[0m  CREATE TABLE "organizations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "created_at" datetime, "updated_at" datetime, "creator_id" integer) 
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (111.3ms)[0m  CREATE TABLE "projects" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" varchar(255), "organization_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (97.9ms)[0m  CREATE TABLE "sms_sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "phone_number" varchar(255), "more" varchar(255) DEFAULT '', "task_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1mPRAGMA index_list("sms_sessions")[0m
+  [1m[35mSQL (119.1ms)[0m  CREATE UNIQUE INDEX "index_sms_sessions_on_phone_number" ON "sms_sessions" ("phone_number")
+  [1m[36mSQL (0.7ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (81.4ms)[0m  CREATE TABLE "tasks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "due" datetime, "point" integer, "group_id" integer, "project_id" integer, "created_at" datetime, "updated_at" datetime, "status" integer DEFAULT 0, "organization_id" integer) 
+  [1m[36mSQL (0.7ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (72.7ms)[0m  CREATE TABLE "user_actions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "ip" varchar(255), "url" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.8ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (83.2ms)[0m  CREATE TABLE "user_groups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "group_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.7ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (116.8ms)[0m  CREATE TABLE "user_organizations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "organization_id" integer, "user_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.8ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (97.9ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255), "crypted_password" varchar(255), "password_salt" varchar(255), "persistence_token" varchar(255), "active" boolean, "perishable_token" varchar(255), "created_at" datetime, "updated_at" datetime, "first_name" varchar(255), "last_name" varchar(255), "sms_enabled" boolean DEFAULT 'f', "phone_number" varchar(255)) 
+  [1m[36mSQL (0.2ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35mSQL (86.9ms)[0m  CREATE INDEX "index_users_on_phone_number" ON "users" ("phone_number")
+  [1m[36mSQL (0.7ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (110.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (87.3ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.8ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (72.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101123080028')[0m
+  [1m[35mSQL (88.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101029221616')
+  [1m[36mSQL (88.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101101001621')[0m
+  [1m[35mSQL (88.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101122071736')
+  [1m[36mSQL (88.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101122232107')[0m
+  [1m[35mSQL (77.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101101093918')
+  [1m[36mSQL (66.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101029194241')[0m
+  [1m[35mSQL (66.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101101002314')
+  [1m[36mSQL (77.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101031235423')[0m
+  [1m[35mSQL (77.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101031235503')
+  [1m[36mSQL (77.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101031235354')[0m
+  [1m[35mSQL (77.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101030013352')
+  [1m[36mSQL (77.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101102001912')[0m
+  [1m[35mSQL (66.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101101003722')
+  [1m[36mSQL (66.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101101075247')[0m
+  [1m[36mSQL (1.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (181.6ms)[0m  CREATE TABLE "groups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime, "organization_id" integer) 
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (97.3ms)[0m  CREATE TABLE "organizations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "created_at" datetime, "updated_at" datetime, "creator_id" integer) 
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (125.0ms)[0m  CREATE TABLE "projects" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" varchar(255), "organization_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (108.5ms)[0m  CREATE TABLE "sms_sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "phone_number" varchar(255), "more" varchar(255) DEFAULT '', "task_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1mPRAGMA index_list("sms_sessions")[0m
+  [1m[35mSQL (121.0ms)[0m  CREATE UNIQUE INDEX "index_sms_sessions_on_phone_number" ON "sms_sessions" ("phone_number")
+  [1m[36mSQL (0.7ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (106.1ms)[0m  CREATE TABLE "tasks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "due" datetime, "point" integer, "group_id" integer, "project_id" integer, "created_at" datetime, "updated_at" datetime, "status" integer DEFAULT 0, "organization_id" integer) 
+  [1m[36mSQL (0.7ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (140.3ms)[0m  CREATE TABLE "user_actions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "ip" varchar(255), "url" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.7ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (96.5ms)[0m  CREATE TABLE "user_groups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "group_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.7ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (104.8ms)[0m  CREATE TABLE "user_organizations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "organization_id" integer, "user_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.8ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (82.4ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255), "crypted_password" varchar(255), "password_salt" varchar(255), "persistence_token" varchar(255), "active" boolean, "perishable_token" varchar(255), "created_at" datetime, "updated_at" datetime, "first_name" varchar(255), "last_name" varchar(255), "sms_enabled" boolean DEFAULT 'f', "phone_number" varchar(255)) 
+  [1m[36mSQL (0.2ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35mSQL (77.4ms)[0m  CREATE INDEX "index_users_on_phone_number" ON "users" ("phone_number")
+  [1m[36mSQL (0.7ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (98.8ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (86.6ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.8ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (80.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101123080028')[0m
+  [1m[35mSQL (88.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101029221616')
+  [1m[36mSQL (88.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101101001621')[0m
+  [1m[35mSQL (77.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101122071736')
+  [1m[36mSQL (88.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101122232107')[0m
+  [1m[35mSQL (66.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101101093918')
+  [1m[36mSQL (66.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101029194241')[0m
+  [1m[35mSQL (87.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101101002314')
+  [1m[36mSQL (77.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101031235423')[0m
+  [1m[35mSQL (81.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101031235503')
+  [1m[36mSQL (73.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101031235354')[0m
+  [1m[35mSQL (66.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101030013352')
+  [1m[36mSQL (66.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101102001912')[0m
+  [1m[35mSQL (66.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101101003722')
+  [1m[36mSQL (77.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101101075247')[0m
+  [1m[36mSQL (1.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (186.6ms)[0m  CREATE TABLE "groups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime, "organization_id" integer) 
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (112.7ms)[0m  CREATE TABLE "organizations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "created_at" datetime, "updated_at" datetime, "creator_id" integer) 
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (103.0ms)[0m  CREATE TABLE "projects" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" varchar(255), "organization_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (83.9ms)[0m  CREATE TABLE "sms_sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "phone_number" varchar(255), "more" varchar(255) DEFAULT '', "task_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1mPRAGMA index_list("sms_sessions")[0m
+  [1m[35mSQL (102.1ms)[0m  CREATE UNIQUE INDEX "index_sms_sessions_on_phone_number" ON "sms_sessions" ("phone_number")
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (84.1ms)[0m  CREATE TABLE "tasks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "due" datetime, "point" integer, "group_id" integer, "project_id" integer, "created_at" datetime, "updated_at" datetime, "status" integer DEFAULT 0, "organization_id" integer) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (87.0ms)[0m  CREATE TABLE "user_actions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "ip" varchar(255), "url" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.7ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (81.6ms)[0m  CREATE TABLE "user_groups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "group_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (10.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (104.2ms)[0m  CREATE TABLE "user_organizations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "organization_id" integer, "user_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.9ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (75.7ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255), "crypted_password" varchar(255), "password_salt" varchar(255), "persistence_token" varchar(255), "active" boolean, "perishable_token" varchar(255), "created_at" datetime, "updated_at" datetime, "first_name" varchar(255), "last_name" varchar(255), "sms_enabled" boolean DEFAULT 'f', "phone_number" varchar(255)) 
+  [1m[36mSQL (0.2ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35mSQL (131.7ms)[0m  CREATE INDEX "index_users_on_phone_number" ON "users" ("phone_number")
+  [1m[36mSQL (0.7ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (149.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (95.5ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.8ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (78.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101123080028')[0m
+  [1m[35mSQL (77.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101029221616')
+  [1m[36mSQL (76.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101101001621')[0m
+  [1m[35mSQL (66.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101122071736')
+  [1m[36mSQL (66.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101122232107')[0m
+  [1m[35mSQL (66.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101101093918')
+  [1m[36mSQL (77.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101029194241')[0m
+  [1m[35mSQL (77.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101101002314')
+  [1m[36mSQL (77.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101031235423')[0m
+  [1m[35mSQL (177.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101031235503')
+  [1m[36mSQL (66.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101031235354')[0m
+  [1m[35mSQL (66.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101030013352')
+  [1m[36mSQL (77.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101102001912')[0m
+  [1m[35mSQL (77.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101101003722')
+  [1m[36mSQL (77.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101101075247')[0m
