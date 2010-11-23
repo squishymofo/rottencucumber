@@ -7,6 +7,7 @@ class SmsController < ApplicationController
     logger.info("hello")
     logger.info(params[:Body])
     @sms_processor = SmsProcessor.new(SmsSession.get_sms_session(@user.phone_number), message_body)
+    @sms_processor.process_message
     account = Twilio::RestAccount.new(ACCOUNT_SID, ACCOUNT_TOKEN)
     logger.info(@sms_processor.response_message)
     h = {:From => "510-550-5285", :To => "440-554-8235", :Body => @sms_processor.response_message}
