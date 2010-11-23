@@ -91,6 +91,7 @@ class SmsProcessor
   end
 
   def process_describe_msg(task_number) # should set the task context to the 
+    #TODO: need to make sure that the task belongs to the user
     description = Task.find(task_number).description
     if description
       @response_message = description
