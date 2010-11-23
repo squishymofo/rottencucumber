@@ -5,7 +5,7 @@ Feature: view tasks over SMS
 		And I have "4" active tasks assigned to me
 
 	@wip
-	Scenario: User texts "tasks" to get a numbered of active tasks assigned to the user
+	Scenario: User texts "tasks" to get a numbered list of active tasks assigned to the user
 		And I have no sms session
 		When I text in "tasks"
 		Then I should be texted a numbered list of names of active tasks that are assigned to me
