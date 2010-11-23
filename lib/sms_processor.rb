@@ -82,12 +82,21 @@ class SmsProcessor
     end
   end
 
+  def shorten_message(full_response, instructions)
+  end
+
   def save_excess
     @sms_session.more = @excess
     @sms_session.save
   end
 
   def process_describe_msg(task_number) # should set the task context to the 
+    description = Task.find(task_number).description
+    if description
+      @response_message = description
+    else
+      @response_message = "This task doesn't have a description"
+    end
   end
 
   def set_task_context(task_id)

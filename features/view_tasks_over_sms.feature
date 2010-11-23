@@ -9,7 +9,6 @@ Feature: view tasks over SMS
 		When I text in "tasks"
 		Then I should be texted a numbered list of names of active tasks that are assigned to me
 	
-	@wip
 	Scenario: User who has previously texted "tasks" texts in a task number to get the task description
 		And I have texted in "tasks"
 		When I subsequently text in "1"

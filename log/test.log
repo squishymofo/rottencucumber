@@ -40518,3 +40518,398 @@ WARNING: Can't mass-assign protected attributes: last_name, first_name
   [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1
   [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
   [1m[35mSQL (0.1ms)[0m  DELETE FROM "users" WHERE ("users"."id" = 1)
+  [1m[36mSmsSession Load (0.3ms)[0m  [1mSELECT "sms_sessions".* FROM "sms_sessions"[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "sms_sessions" WHERE ("sms_sessions"."id" = 1)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mSQL (15.2ms)[0m  DELETE FROM "users" WHERE ("users"."id" = 1)
+WARNING: Can't mass-assign protected attributes: first_name
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (12.0ms)[0m  INSERT INTO "users" ("active", "created_at", "crypted_password", "email", "first_name", "last_name", "password_salt", "perishable_token", "persistence_token", "phone_number", "sms_enabled", "updated_at") VALUES ('t', '2010-11-23 22:37:52.353687', '05839eed2223f18c3f8e83096e1c961d99e87148fb0e4a56cf3175539e980dafd3f543f67f327264860c2932db04b8b7ed9aa5ea0d6994272e6e7e987e9ca856', 'spitfire67@berkeley.edu', 'James', NULL, 'H3CjsH8nWFBKeGiMin_m', 'yRIB3CGZICLIcCI-XCiG', '92e0e9acaf9b6918ff31d7f9ebda9e09459d810f8e0efc700ae2467e24cec8aab33ce7ab2bfb73293442ccc2878770c09496caa73164955d7cd06cfd025debc3', NULL, 'f', '2010-11-23 22:37:52.353687')
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "users" SET "perishable_token" = 'AfKfwiHjeCZWcEFHV3HX', "updated_at" = '2010-11-23 22:37:52.444842' WHERE ("users"."id" = 1)[0m
+WARNING: Can't mass-assign protected attributes: first_name
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("active", "created_at", "crypted_password", "email", "first_name", "last_name", "password_salt", "perishable_token", "persistence_token", "phone_number", "sms_enabled", "updated_at") VALUES ('t', '2010-11-23 22:37:52.451739', '782e936d9205489e714439e1669d78cbd4262fa1f8a9856a820bdb9e02380121d8556359b4fae66957dafb9dea2279beacf75e544cfd3b295568c5650afabfec', 'spitfire67@berkeley.edu', 'James', NULL, 'Oj4diLhY9uubtzkb640H', 'RclonlzcIz_wVtQSOkhW', '802bd443d0164d0de225e6755e8f028401b4e40f3adffca50f087a9ef16337303b2cd7872eb3eece105892e5b9bb20f1fda12d6de2a6fd8684b091337a2687cc', NULL, 'f', '2010-11-23 22:37:52.451739')
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "users" SET "perishable_token" = 'wU_kiq9pploVwrYnbghx', "updated_at" = '2010-11-23 22:37:52.458214' WHERE ("users"."id" = 2)[0m
+
+
+Started GET "/" for 127.0.0.1 at Tue Nov 23 14:37:52 -0800 2010
+  Processing by LandingController#index as HTML
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 22:37:52.529030', '127.0.0.1', '2010-11-23 22:37:52.529030', '/')
+Rendered landing/_new_unknown_user.html.erb (5.9ms)
+Rendered landing/_incomplete_user.html.erb (24.3ms)
+Rendered layouts/_header.html.erb (32.3ms)
+Rendered landing/index.html.erb within layouts/application (91.3ms)
+Completed 200 OK in 150ms (Views: 115.3ms | ActiveRecord: 13.3ms)
+
+
+Started GET "/user_sessions/new" for 127.0.0.1 at Tue Nov 23 14:37:52 -0800 2010
+  Processing by UserSessionsController#new as HTML
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 22:37:52.717663', '127.0.0.1', '2010-11-23 22:37:52.717663', '/user_sessions/new')[0m
+Rendered user_sessions/_signin.html.erb (8.0ms)
+Rendered layouts/_header.html.erb (15.1ms)
+Rendered user_sessions/new.html.erb within layouts/application (45.7ms)
+Completed 200 OK in 79ms (Views: 66.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/signin_user" for 127.0.0.1 at Tue Nov 23 14:37:52 -0800 2010
+  Processing by UserSessionsController#create as HTML
+  Parameters: {"commit"=>"Sign in", "user_session"=>{"password"=>"[FILTERED]", "email"=>"spitfire67@berkeley.edu"}, "utf8"=>"\342\234\223"}
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 22:37:52.830216', '127.0.0.1', '2010-11-23 22:37:52.830216', '/signin_user')
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE (LOWER("users".email) = 'spitfire67@berkeley.edu') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "perishable_token" = 'X2J-8ceDDn5nzmh000X3', "updated_at" = '2010-11-23 22:37:53.260895' WHERE ("users"."id" = 1)
+Redirected to http://www.example.com/
+Completed 302 Found in 439ms
+
+
+Started GET "/" for 127.0.0.1 at Tue Nov 23 14:37:53 -0800 2010
+  Processing by LandingController#index as HTML
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 22:37:53.276629', '127.0.0.1', '2010-11-23 22:37:53.276629', '/')[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered layouts/_header.html.erb (7.9ms)
+Rendered landing/index.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 37ms (Views: 13.0ms | ActiveRecord: 1.5ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."email" = 'spitfire67@berkeley.edu') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "perishable_token" = 'ornOcqt3du4LNhSd70Wg', "phone_number" = '4405548235', "sms_enabled" = 't', "updated_at" = '2010-11-23 22:37:53.320638' WHERE ("users"."id" = 1)
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "groups" ("created_at", "name", "organization_id", "updated_at") VALUES ('2010-11-23 22:37:53.342469', 'test groups', NULL, '2010-11-23 22:37:53.342469')[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "user_groups" ("created_at", "group_id", "updated_at", "user_id") VALUES ('2010-11-23 22:37:53.360325', 1, '2010-11-23 22:37:53.360325', 1)[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tasks" ("created_at", "description", "due", "group_id", "name", "organization_id", "point", "project_id", "status", "updated_at") VALUES ('2010-11-23 22:37:53.386748', 'Description of task 1', NULL, 1, 'Thing 1', NULL, NULL, NULL, 0, '2010-11-23 22:37:53.386748')
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tasks" ("created_at", "description", "due", "group_id", "name", "organization_id", "point", "project_id", "status", "updated_at") VALUES ('2010-11-23 22:37:53.394985', 'Description of task 2', NULL, 1, 'Thing 2', NULL, NULL, NULL, 0, '2010-11-23 22:37:53.394985')[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tasks" ("created_at", "description", "due", "group_id", "name", "organization_id", "point", "project_id", "status", "updated_at") VALUES ('2010-11-23 22:37:53.399637', 'Description of task 3', NULL, 1, 'Thing 3', NULL, NULL, NULL, 0, '2010-11-23 22:37:53.399637')
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tasks" ("created_at", "description", "due", "group_id", "name", "organization_id", "point", "project_id", "status", "updated_at") VALUES ('2010-11-23 22:37:53.404218', 'Description of task 4', NULL, 1, 'Thing 4', NULL, NULL, NULL, 0, '2010-11-23 22:37:53.404218')[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1[0m
+  [1m[35mGroup Load (0.4ms)[0m  SELECT "groups".* FROM "groups" INNER JOIN "user_groups" ON "groups".id = "user_groups".group_id WHERE (("user_groups".user_id = 1))
+  [1m[36mTask Load (0.9ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE ("tasks"."group_id" IN (1)) AND ("tasks"."status" = 0) ORDER BY created_at DESC[0m
+  [1m[35mSmsSession Load (0.2ms)[0m  SELECT "sms_sessions".* FROM "sms_sessions" WHERE ("sms_sessions"."phone_number" = '4405548235')
+WARNING: Can't mass-assign protected attributes: first_name
+  [1m[36mSQL (0.7ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("active", "created_at", "crypted_password", "email", "first_name", "last_name", "password_salt", "perishable_token", "persistence_token", "phone_number", "sms_enabled", "updated_at") VALUES ('t', '2010-11-23 22:40:23.008863', 'a36fab965cd4488df53c600152d2e685cfccf7afe9a1bde8903fa527ebda9e140fc6208768c28e06b1576efcfff4e477d3be56ff54692e23e012c20493f73913', 'spitfire67@berkeley.edu', 'James', NULL, 'KQtbqeWLvfHCxnk-2aAP', 'x9AQy_MbCK8eZpB3mwMQ', 'c27dbe4214367ca45ae8dc3ada9acf5ee46d5436a469b755e4641a7e0a445ef59087a9a757721ae96f17bd4e39aefef793a7a286d3fa5a770f7e3d936e3b7b00', NULL, 'f', '2010-11-23 22:40:23.008863')
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "users" SET "perishable_token" = 'OQ5b8l5joSC5uwWojaPm', "updated_at" = '2010-11-23 22:40:23.071927' WHERE ("users"."id" = 1)[0m
+WARNING: Can't mass-assign protected attributes: first_name
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("active", "created_at", "crypted_password", "email", "first_name", "last_name", "password_salt", "perishable_token", "persistence_token", "phone_number", "sms_enabled", "updated_at") VALUES ('t', '2010-11-23 22:40:23.077384', 'e4089043e08079e259ba3bba357abfd874dc421bdd74e70708991d42df432f1ed54a226c74d448fb942e987ef073eb01d85769aa97e4761dc72e2e10ba0fbaf0', 'spitfire67@berkeley.edu', 'James', NULL, 'yBc9tZDs-QsN-cocuSZL', 'uMgf2VQxWNZxwfgJ5ZAl', '1b9267d78ae55bda0817f4accfa4ab13671ace37b34d98ee016e34622b27ce6be06e6108e260ad4222270fd941c1308ab58590a9980dbf4ed50d0c22a2360ae5', NULL, 'f', '2010-11-23 22:40:23.077384')
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "perishable_token" = 'lDf6L-wJRSRHYh_Xo0Re', "updated_at" = '2010-11-23 22:40:23.083125' WHERE ("users"."id" = 2)[0m
+
+
+Started GET "/" for 127.0.0.1 at Tue Nov 23 14:40:23 -0800 2010
+  Processing by LandingController#index as HTML
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 22:40:23.128493', '127.0.0.1', '2010-11-23 22:40:23.128493', '/')
+Rendered landing/_new_unknown_user.html.erb (2.6ms)
+Rendered landing/_incomplete_user.html.erb (5.2ms)
+Rendered layouts/_header.html.erb (8.3ms)
+Rendered landing/index.html.erb within layouts/application (21.4ms)
+Completed 200 OK in 45ms (Views: 26.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/user_sessions/new" for 127.0.0.1 at Tue Nov 23 14:40:23 -0800 2010
+  Processing by UserSessionsController#new as HTML
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 22:40:23.182284', '127.0.0.1', '2010-11-23 22:40:23.182284', '/user_sessions/new')[0m
+Rendered user_sessions/_signin.html.erb (3.7ms)
+Rendered layouts/_header.html.erb (7.4ms)
+Rendered user_sessions/new.html.erb within layouts/application (16.5ms)
+Completed 200 OK in 26ms (Views: 20.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/signin_user" for 127.0.0.1 at Tue Nov 23 14:40:23 -0800 2010
+  Processing by UserSessionsController#create as HTML
+  Parameters: {"commit"=>"Sign in", "user_session"=>{"password"=>"[FILTERED]", "email"=>"spitfire67@berkeley.edu"}, "utf8"=>"\342\234\223"}
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 22:40:23.229469', '127.0.0.1', '2010-11-23 22:40:23.229469', '/signin_user')
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE (LOWER("users".email) = 'spitfire67@berkeley.edu') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "perishable_token" = '7DbPSiG4DrTIDFeiv5R8', "updated_at" = '2010-11-23 22:40:23.530190' WHERE ("users"."id" = 1)
+Redirected to http://www.example.com/
+Completed 302 Found in 306ms
+
+
+Started GET "/" for 127.0.0.1 at Tue Nov 23 14:40:23 -0800 2010
+  Processing by LandingController#index as HTML
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 22:40:23.544123', '127.0.0.1', '2010-11-23 22:40:23.544123', '/')[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered layouts/_header.html.erb (7.6ms)
+Rendered landing/index.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 30ms (Views: 13.5ms | ActiveRecord: 1.3ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."email" = 'spitfire67@berkeley.edu') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "perishable_token" = 'obM6BcsFyjwkedpLYgko', "phone_number" = '4405548235', "sms_enabled" = 't', "updated_at" = '2010-11-23 22:40:23.581152' WHERE ("users"."id" = 1)
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "groups" ("created_at", "name", "organization_id", "updated_at") VALUES ('2010-11-23 22:40:23.615538', 'test groups', NULL, '2010-11-23 22:40:23.615538')[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "user_groups" ("created_at", "group_id", "updated_at", "user_id") VALUES ('2010-11-23 22:40:23.631665', 1, '2010-11-23 22:40:23.631665', 1)[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tasks" ("created_at", "description", "due", "group_id", "name", "organization_id", "point", "project_id", "status", "updated_at") VALUES ('2010-11-23 22:40:23.657157', 'Description of task 1', NULL, 1, 'Thing 1', NULL, NULL, NULL, 0, '2010-11-23 22:40:23.657157')
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tasks" ("created_at", "description", "due", "group_id", "name", "organization_id", "point", "project_id", "status", "updated_at") VALUES ('2010-11-23 22:40:23.673822', 'Description of task 2', NULL, 1, 'Thing 2', NULL, NULL, NULL, 0, '2010-11-23 22:40:23.673822')[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tasks" ("created_at", "description", "due", "group_id", "name", "organization_id", "point", "project_id", "status", "updated_at") VALUES ('2010-11-23 22:40:23.686538', 'Description of task 3', NULL, 1, 'Thing 3', NULL, NULL, NULL, 0, '2010-11-23 22:40:23.686538')
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tasks" ("created_at", "description", "due", "group_id", "name", "organization_id", "point", "project_id", "status", "updated_at") VALUES ('2010-11-23 22:40:23.695220', 'Description of task 4', NULL, 1, 'Thing 4', NULL, NULL, NULL, 0, '2010-11-23 22:40:23.695220')[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1[0m
+  [1m[35mGroup Load (0.3ms)[0m  SELECT "groups".* FROM "groups" INNER JOIN "user_groups" ON "groups".id = "user_groups".group_id WHERE (("user_groups".user_id = 1))
+  [1m[36mTask Load (0.7ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE ("tasks"."group_id" IN (1)) AND ("tasks"."status" = 0) ORDER BY created_at DESC[0m
+  [1m[35mSmsSession Load (0.2ms)[0m  SELECT "sms_sessions".* FROM "sms_sessions" WHERE ("sms_sessions"."phone_number" = '4405548235') LIMIT 1
+WARNING: Can't mass-assign protected attributes: first_name
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("active", "created_at", "crypted_password", "email", "first_name", "last_name", "password_salt", "perishable_token", "persistence_token", "phone_number", "sms_enabled", "updated_at") VALUES ('t', '2010-11-23 22:44:17.761386', '9b5e1a03a46eab34328de55e2df24c88f62a56eacf46ac0475acff2a68505b7cb73a3de98c008fe3cf13f4b021a72ae7fd45128699ac61e73b7230588fea29f1', 'spitfire67@berkeley.edu', 'James', NULL, 'w-JkxM3T_r9j_-Qymza3', 'VQjF5k2JIy4vgYRhhPfF', '36058754ecfb4fe4b6ffaa4421ff7640e2a771d6a0a1c4f250e2e6cf49d800f294a3a47e1d08e4e250f7c636269f9beabec66efefa23a1fe82867ef4c1e4ee08', NULL, 'f', '2010-11-23 22:44:17.761386')
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "users" SET "perishable_token" = '9h4WMCa5hoUsYmvwQdru', "updated_at" = '2010-11-23 22:44:17.825754' WHERE ("users"."id" = 1)[0m
+WARNING: Can't mass-assign protected attributes: first_name
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("active", "created_at", "crypted_password", "email", "first_name", "last_name", "password_salt", "perishable_token", "persistence_token", "phone_number", "sms_enabled", "updated_at") VALUES ('t', '2010-11-23 22:44:17.831077', 'a142e2dd1322cc798a349b0ab58940f03144c0450efca616fb63db5b40207e19d909d0d383ade043f5e00883424bd45ccba9a539c99828ee8712662bd6db497b', 'spitfire67@berkeley.edu', 'James', NULL, 'PgaTv0SAJU50kUQ0_aoH', 'mKbVZ7FS-csQfWdqH0vQ', '15f2d17f252c2874009bda97e6515f43457d6554f31b846c3939d9a9f7518e070881c8ed8cffb01fa8c3dfe432ac288044fa5f027ca86930c3880d985e907676', NULL, 'f', '2010-11-23 22:44:17.831077')
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "users" SET "perishable_token" = 'MDLn1QbAhJfH-C3KZudC', "updated_at" = '2010-11-23 22:44:17.836777' WHERE ("users"."id" = 2)[0m
+
+
+Started GET "/" for 127.0.0.1 at Tue Nov 23 14:44:17 -0800 2010
+  Processing by LandingController#index as HTML
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 22:44:17.881360', '127.0.0.1', '2010-11-23 22:44:17.881360', '/')
+Rendered landing/_new_unknown_user.html.erb (2.6ms)
+Rendered landing/_incomplete_user.html.erb (6.9ms)
+Rendered layouts/_header.html.erb (7.5ms)
+Rendered landing/index.html.erb within layouts/application (22.1ms)
+Completed 200 OK in 45ms (Views: 27.4ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/user_sessions/new" for 127.0.0.1 at Tue Nov 23 14:44:17 -0800 2010
+  Processing by UserSessionsController#new as HTML
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 22:44:17.935260', '127.0.0.1', '2010-11-23 22:44:17.935260', '/user_sessions/new')[0m
+Rendered user_sessions/_signin.html.erb (3.7ms)
+Rendered layouts/_header.html.erb (7.2ms)
+Rendered user_sessions/new.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 26ms (Views: 20.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/signin_user" for 127.0.0.1 at Tue Nov 23 14:44:17 -0800 2010
+  Processing by UserSessionsController#create as HTML
+  Parameters: {"commit"=>"Sign in", "user_session"=>{"password"=>"[FILTERED]", "email"=>"spitfire67@berkeley.edu"}, "utf8"=>"\342\234\223"}
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 22:44:17.976610', '127.0.0.1', '2010-11-23 22:44:17.976610', '/signin_user')
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE (LOWER("users".email) = 'spitfire67@berkeley.edu') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "perishable_token" = 'ALaCx5G4FCiOcXX5Q5NR', "updated_at" = '2010-11-23 22:44:18.274510' WHERE ("users"."id" = 1)
+Redirected to http://www.example.com/
+Completed 302 Found in 303ms
+
+
+Started GET "/" for 127.0.0.1 at Tue Nov 23 14:44:18 -0800 2010
+  Processing by LandingController#index as HTML
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 22:44:18.288550', '127.0.0.1', '2010-11-23 22:44:18.288550', '/')[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered layouts/_header.html.erb (7.7ms)
+Rendered landing/index.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 30ms (Views: 12.7ms | ActiveRecord: 1.3ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."email" = 'spitfire67@berkeley.edu') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "perishable_token" = 'QZfhB8fAnx1z1dR6wPhO', "phone_number" = '4405548235', "sms_enabled" = 't', "updated_at" = '2010-11-23 22:44:18.325263' WHERE ("users"."id" = 1)
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "groups" ("created_at", "name", "organization_id", "updated_at") VALUES ('2010-11-23 22:44:18.369464', 'test groups', NULL, '2010-11-23 22:44:18.369464')[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "user_groups" ("created_at", "group_id", "updated_at", "user_id") VALUES ('2010-11-23 22:44:18.382575', 1, '2010-11-23 22:44:18.382575', 1)[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tasks" ("created_at", "description", "due", "group_id", "name", "organization_id", "point", "project_id", "status", "updated_at") VALUES ('2010-11-23 22:44:18.410222', 'Description of task 1', NULL, 1, 'Thing 1', NULL, NULL, NULL, 0, '2010-11-23 22:44:18.410222')
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tasks" ("created_at", "description", "due", "group_id", "name", "organization_id", "point", "project_id", "status", "updated_at") VALUES ('2010-11-23 22:44:18.418472', 'Description of task 2', NULL, 1, 'Thing 2', NULL, NULL, NULL, 0, '2010-11-23 22:44:18.418472')[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tasks" ("created_at", "description", "due", "group_id", "name", "organization_id", "point", "project_id", "status", "updated_at") VALUES ('2010-11-23 22:44:18.423279', 'Description of task 3', NULL, 1, 'Thing 3', NULL, NULL, NULL, 0, '2010-11-23 22:44:18.423279')
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tasks" ("created_at", "description", "due", "group_id", "name", "organization_id", "point", "project_id", "status", "updated_at") VALUES ('2010-11-23 22:44:18.427844', 'Description of task 4', NULL, 1, 'Thing 4', NULL, NULL, NULL, 0, '2010-11-23 22:44:18.427844')[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1
+  [1m[36mSmsSession Load (0.6ms)[0m  [1mSELECT "sms_sessions".* FROM "sms_sessions"[0m
+WARNING: Can't mass-assign protected attributes: first_name
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("active", "created_at", "crypted_password", "email", "first_name", "last_name", "password_salt", "perishable_token", "persistence_token", "phone_number", "sms_enabled", "updated_at") VALUES ('t', '2010-11-23 22:47:58.981196', '19874e0e2e1d6687704a2ed992777e107226248c9d58e9fbd8bcea5c78f601458484a8ff1c7dcdbdad5c4c381e4d75ee31808374655c0b8d9769c0096f25aad8', 'spitfire67@berkeley.edu', 'James', NULL, 'o1Uzw4RasSf5RWduWjgy', 'xyHcm5GfUULXp4ynsjo3', '69f7b9c7051a634e33182bd84566d5443156fb7ca8bf59c2384caba0f872a66caa9954a0235a7934a860ab0944cb6238db1acba2393785e62dd8fbb026ab2ad8', NULL, 'f', '2010-11-23 22:47:58.981196')
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "users" SET "perishable_token" = 'wdTAEtwmIJTOn80S5BoO', "updated_at" = '2010-11-23 22:47:59.062861' WHERE ("users"."id" = 1)[0m
+WARNING: Can't mass-assign protected attributes: first_name
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("active", "created_at", "crypted_password", "email", "first_name", "last_name", "password_salt", "perishable_token", "persistence_token", "phone_number", "sms_enabled", "updated_at") VALUES ('t', '2010-11-23 22:47:59.068758', '8b825d7ac7a498445ec1fdbaccb8306e4ca54f7e1e854810fdc8d74e1234eadd221fe006ba2545f44f06709efbaa02438d5ed04ceb209c9a6a5d224f9b672a49', 'spitfire67@berkeley.edu', 'James', NULL, 'kuL4kwVoGuGJz3dyeml6', 'NjGoHFwkouyjM2Wlpdx7', '0d7d2677e4de463b55fbecbbec81134a2c306bc44166bee1f2898cbe6221955bada714d1dc9f9b10330e3ae7ed20965028e01081c1605527e0860dce1b2b0641', NULL, 'f', '2010-11-23 22:47:59.068758')
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "users" SET "perishable_token" = 'TUKnZRH4vJYI70Eo1L3M', "updated_at" = '2010-11-23 22:47:59.074948' WHERE ("users"."id" = 2)[0m
+
+
+Started GET "/" for 127.0.0.1 at Tue Nov 23 14:47:59 -0800 2010
+  Processing by LandingController#index as HTML
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 22:47:59.150872', '127.0.0.1', '2010-11-23 22:47:59.150872', '/')
+Rendered landing/_new_unknown_user.html.erb (6.7ms)
+Rendered landing/_incomplete_user.html.erb (9.6ms)
+Rendered layouts/_header.html.erb (17.0ms)
+Rendered landing/index.html.erb within layouts/application (47.4ms)
+Completed 200 OK in 102ms (Views: 65.4ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/user_sessions/new" for 127.0.0.1 at Tue Nov 23 14:47:59 -0800 2010
+  Processing by UserSessionsController#new as HTML
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 22:47:59.269352', '127.0.0.1', '2010-11-23 22:47:59.269352', '/user_sessions/new')[0m
+Rendered user_sessions/_signin.html.erb (9.5ms)
+Rendered layouts/_header.html.erb (14.6ms)
+Rendered user_sessions/new.html.erb within layouts/application (41.3ms)
+Completed 200 OK in 67ms (Views: 50.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/signin_user" for 127.0.0.1 at Tue Nov 23 14:47:59 -0800 2010
+  Processing by UserSessionsController#create as HTML
+  Parameters: {"commit"=>"Sign in", "user_session"=>{"password"=>"[FILTERED]", "email"=>"spitfire67@berkeley.edu"}, "utf8"=>"\342\234\223"}
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 22:47:59.388869', '127.0.0.1', '2010-11-23 22:47:59.388869', '/signin_user')
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE (LOWER("users".email) = 'spitfire67@berkeley.edu') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "perishable_token" = 'itH-8gX0sALNvKeGUtcn', "updated_at" = '2010-11-23 22:47:59.902769' WHERE ("users"."id" = 1)
+Redirected to http://www.example.com/
+Completed 302 Found in 529ms
+
+
+Started GET "/" for 127.0.0.1 at Tue Nov 23 14:47:59 -0800 2010
+  Processing by LandingController#index as HTML
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 22:47:59.921113', '127.0.0.1', '2010-11-23 22:47:59.921113', '/')[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered layouts/_header.html.erb (9.9ms)
+Rendered landing/index.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 37ms (Views: 15.4ms | ActiveRecord: 1.3ms)
+  [1m[35mUser Load (2.7ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."email" = 'spitfire67@berkeley.edu') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "perishable_token" = 'K5AHFqo_PVs5XKqTA_f1', "phone_number" = '4405548235', "sms_enabled" = 't', "updated_at" = '2010-11-23 22:47:59.967687' WHERE ("users"."id" = 1)
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "groups" ("created_at", "name", "organization_id", "updated_at") VALUES ('2010-11-23 22:48:00.017432', 'test groups', NULL, '2010-11-23 22:48:00.017432')[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "user_groups" ("created_at", "group_id", "updated_at", "user_id") VALUES ('2010-11-23 22:48:00.037649', 1, '2010-11-23 22:48:00.037649', 1)[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tasks" ("created_at", "description", "due", "group_id", "name", "organization_id", "point", "project_id", "status", "updated_at") VALUES ('2010-11-23 22:48:00.068267', 'Description of task 1', NULL, 1, 'Thing 1', NULL, NULL, NULL, 0, '2010-11-23 22:48:00.068267')
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tasks" ("created_at", "description", "due", "group_id", "name", "organization_id", "point", "project_id", "status", "updated_at") VALUES ('2010-11-23 22:48:00.078397', 'Description of task 2', NULL, 1, 'Thing 2', NULL, NULL, NULL, 0, '2010-11-23 22:48:00.078397')[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tasks" ("created_at", "description", "due", "group_id", "name", "organization_id", "point", "project_id", "status", "updated_at") VALUES ('2010-11-23 22:48:00.083263', 'Description of task 3', NULL, 1, 'Thing 3', NULL, NULL, NULL, 0, '2010-11-23 22:48:00.083263')
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tasks" ("created_at", "description", "due", "group_id", "name", "organization_id", "point", "project_id", "status", "updated_at") VALUES ('2010-11-23 22:48:00.088403', 'Description of task 4', NULL, 1, 'Thing 4', NULL, NULL, NULL, 0, '2010-11-23 22:48:00.088403')[0m
+  [1m[35mSmsSession Load (0.2ms)[0m  SELECT "sms_sessions".* FROM "sms_sessions" WHERE ("sms_sessions"."phone_number" = '4405548235') LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "sms_sessions" ("created_at", "more", "phone_number", "task_id", "updated_at") VALUES ('2010-11-23 22:48:00.112784', '', '4405548235', NULL, '2010-11-23 22:48:00.112784')[0m
+  [1m[35mUser Load (2.5ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1
+  [1m[36mGroup Load (0.6ms)[0m  [1mSELECT "groups".* FROM "groups" INNER JOIN "user_groups" ON "groups".id = "user_groups".group_id WHERE (("user_groups".user_id = 1))[0m
+  [1m[35mTask Load (1.4ms)[0m  SELECT "tasks".* FROM "tasks" WHERE ("tasks"."group_id" IN (1)) AND ("tasks"."status" = 0) ORDER BY created_at DESC
+  [1m[36mSmsSession Load (0.5ms)[0m  [1mSELECT "sms_sessions".* FROM "sms_sessions" WHERE ("sms_sessions"."phone_number" = '4405548235') LIMIT 1[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1
+  [1m[36mSmsSession Load (0.5ms)[0m  [1mSELECT "sms_sessions".* FROM "sms_sessions" WHERE ("sms_sessions"."phone_number" = '4405548235') LIMIT 1[0m
+WARNING: Can't mass-assign protected attributes: first_name
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("active", "created_at", "crypted_password", "email", "first_name", "last_name", "password_salt", "perishable_token", "persistence_token", "phone_number", "sms_enabled", "updated_at") VALUES ('t', '2010-11-23 22:51:10.309272', 'a8234af3b4eec11f5c48b66b4beaef524fe2a13a5cb1aaa94f5083bf37e3946c688006c3b5a717f5b9938492b5819bd2b714f08a0631e5bcc282185adaed6a8d', 'spitfire67@berkeley.edu', 'James', NULL, 'kBmxQ_rvM0pXuB-G6E3A', '-Tx1TOauWjzfqYku9ZYW', '2ef53814a141cb405cf3439aa07aad8b399c0f99e44e95f90e9a3a592f96ae6c754f805c7cb13cad8ef5e21f1984b8889cfadc26334b7b908f885be1531f1a8a', NULL, 'f', '2010-11-23 22:51:10.309272')
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "users" SET "perishable_token" = '_WmZbkB2gB72WJcFXUYn', "updated_at" = '2010-11-23 22:51:10.376629' WHERE ("users"."id" = 1)[0m
+WARNING: Can't mass-assign protected attributes: first_name
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("active", "created_at", "crypted_password", "email", "first_name", "last_name", "password_salt", "perishable_token", "persistence_token", "phone_number", "sms_enabled", "updated_at") VALUES ('t', '2010-11-23 22:51:10.382079', '37231ca0e59d7447329250cdb89a7a60fb08045e9e2530875a75be34c0f9d1bfdfe41783ef61d86de03dfee03512bd39c8f687844f442ae93ec7cca89852e61c', 'spitfire67@berkeley.edu', 'James', NULL, 'iUrpU1A-RPCMK8LYNobs', 'Ye21WgYvZSlVz0GAD7QZ', 'a37d119c814401274620a2afc426aff2e4872cfcfcf73b3d6f6d54b180788fd30c6ec69967bf0a031d7a4c64211c8d0efd0ffe3245a0fea9893c425621b804e1', NULL, 'f', '2010-11-23 22:51:10.382079')
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "users" SET "perishable_token" = 'A6o5rFxvXaNeAAANbmad', "updated_at" = '2010-11-23 22:51:10.387930' WHERE ("users"."id" = 2)[0m
+
+
+Started GET "/" for 127.0.0.1 at Tue Nov 23 14:51:10 -0800 2010
+  Processing by LandingController#index as HTML
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 22:51:10.435435', '127.0.0.1', '2010-11-23 22:51:10.435435', '/')
+Rendered landing/_new_unknown_user.html.erb (2.6ms)
+Rendered landing/_incomplete_user.html.erb (5.3ms)
+Rendered layouts/_header.html.erb (7.8ms)
+Rendered landing/index.html.erb within layouts/application (20.9ms)
+Completed 200 OK in 44ms (Views: 26.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/user_sessions/new" for 127.0.0.1 at Tue Nov 23 14:51:10 -0800 2010
+  Processing by UserSessionsController#new as HTML
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 22:51:10.488979', '127.0.0.1', '2010-11-23 22:51:10.488979', '/user_sessions/new')[0m
+Rendered user_sessions/_signin.html.erb (3.8ms)
+Rendered layouts/_header.html.erb (7.2ms)
+Rendered user_sessions/new.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 26ms (Views: 20.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/signin_user" for 127.0.0.1 at Tue Nov 23 14:51:10 -0800 2010
+  Processing by UserSessionsController#create as HTML
+  Parameters: {"commit"=>"Sign in", "user_session"=>{"password"=>"[FILTERED]", "email"=>"spitfire67@berkeley.edu"}, "utf8"=>"\342\234\223"}
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 22:51:10.531891', '127.0.0.1', '2010-11-23 22:51:10.531891', '/signin_user')
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE (LOWER("users".email) = 'spitfire67@berkeley.edu') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "perishable_token" = 'eeWhO6PKaqbwwqDck1qy', "updated_at" = '2010-11-23 22:51:10.841113' WHERE ("users"."id" = 1)
+Redirected to http://www.example.com/
+Completed 302 Found in 315ms
+
+
+Started GET "/" for 127.0.0.1 at Tue Nov 23 14:51:10 -0800 2010
+  Processing by LandingController#index as HTML
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 22:51:10.855479', '127.0.0.1', '2010-11-23 22:51:10.855479', '/')[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered layouts/_header.html.erb (7.9ms)
+Rendered landing/index.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 30ms (Views: 13.0ms | ActiveRecord: 1.3ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."email" = 'spitfire67@berkeley.edu') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "perishable_token" = 'kLkRotF61c5rQwVOYxwk', "phone_number" = '4405548235', "sms_enabled" = 't', "updated_at" = '2010-11-23 22:51:10.893095' WHERE ("users"."id" = 1)
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "groups" ("created_at", "name", "organization_id", "updated_at") VALUES ('2010-11-23 22:51:10.927375', 'test groups', NULL, '2010-11-23 22:51:10.927375')[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "user_groups" ("created_at", "group_id", "updated_at", "user_id") VALUES ('2010-11-23 22:51:10.945632', 1, '2010-11-23 22:51:10.945632', 1)[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tasks" ("created_at", "description", "due", "group_id", "name", "organization_id", "point", "project_id", "status", "updated_at") VALUES ('2010-11-23 22:51:10.973107', 'Description of task 1', NULL, 1, 'Thing 1', NULL, NULL, NULL, 0, '2010-11-23 22:51:10.973107')
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tasks" ("created_at", "description", "due", "group_id", "name", "organization_id", "point", "project_id", "status", "updated_at") VALUES ('2010-11-23 22:51:10.981557', 'Description of task 2', NULL, 1, 'Thing 2', NULL, NULL, NULL, 0, '2010-11-23 22:51:10.981557')[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tasks" ("created_at", "description", "due", "group_id", "name", "organization_id", "point", "project_id", "status", "updated_at") VALUES ('2010-11-23 22:51:10.986158', 'Description of task 3', NULL, 1, 'Thing 3', NULL, NULL, NULL, 0, '2010-11-23 22:51:10.986158')
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tasks" ("created_at", "description", "due", "group_id", "name", "organization_id", "point", "project_id", "status", "updated_at") VALUES ('2010-11-23 22:51:10.990751', 'Description of task 4', NULL, 1, 'Thing 4', NULL, NULL, NULL, 0, '2010-11-23 22:51:10.990751')[0m
+  [1m[35mSmsSession Load (0.2ms)[0m  SELECT "sms_sessions".* FROM "sms_sessions" WHERE ("sms_sessions"."phone_number" = '4405548235') LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "sms_sessions" ("created_at", "more", "phone_number", "task_id", "updated_at") VALUES ('2010-11-23 22:51:11.014463', '', '4405548235', NULL, '2010-11-23 22:51:11.014463')[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1
+  [1m[36mGroup Load (0.3ms)[0m  [1mSELECT "groups".* FROM "groups" INNER JOIN "user_groups" ON "groups".id = "user_groups".group_id WHERE (("user_groups".user_id = 1))[0m
+  [1m[35mTask Load (0.7ms)[0m  SELECT "tasks".* FROM "tasks" WHERE ("tasks"."group_id" IN (1)) AND ("tasks"."status" = 0) ORDER BY created_at DESC
+  [1m[36mSmsSession Load (0.3ms)[0m  [1mSELECT "sms_sessions".* FROM "sms_sessions" WHERE ("sms_sessions"."phone_number" = '4405548235') LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1
+  [1m[36mSmsSession Load (1.7ms)[0m  [1mSELECT "sms_sessions".* FROM "sms_sessions" WHERE ("sms_sessions"."phone_number" = '4405548235') LIMIT 1[0m
+WARNING: Can't mass-assign protected attributes: first_name
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("active", "created_at", "crypted_password", "email", "first_name", "last_name", "password_salt", "perishable_token", "persistence_token", "phone_number", "sms_enabled", "updated_at") VALUES ('t', '2010-11-23 22:57:42.103630', '8ae07c38665bcef541eb70d6352ee257b20d13162be85cfec2c37c9c78611825e1d5830fe811b07ca35773a4c77b3ee72aff908c4696c9ea6fa35fe628c1ace6', 'spitfire67@berkeley.edu', 'James', NULL, 'Smpu7LAppFArmc8l5GHP', 'ePlurvA812nniQEKQYh6', '9fdf705086b4f15da57feec635b5083b382bbfc553f799371f6a6b5639ee11579479369dc2e0b60d5f805df53d905415287970aacc54a03481a84022720a2d5f', NULL, 'f', '2010-11-23 22:57:42.103630')
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "users" SET "perishable_token" = '4f-_TtVKdYNUaVggypVq', "updated_at" = '2010-11-23 22:57:42.165507' WHERE ("users"."id" = 1)[0m
+WARNING: Can't mass-assign protected attributes: first_name
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("active", "created_at", "crypted_password", "email", "first_name", "last_name", "password_salt", "perishable_token", "persistence_token", "phone_number", "sms_enabled", "updated_at") VALUES ('t', '2010-11-23 22:57:42.171154', '49759d225880861c34a10c66c3bc80b39bfd8f98a4fe0f587d2bbc5234a63c896b42d8c2ddf69c31a4ff17e953505f13c8674f940fe557439981bd88c3281287', 'spitfire67@berkeley.edu', 'James', NULL, 'XB5DzRyELRdnrBxlddju', '2ittZYdKCwIumgyoTJ1e', 'e50e32f717872c79c8b5c4da420720ff65f88f9e7674f9b918980fcc796f0382a0375e06299a50b5b0270ac7b27bea4bbafa6bfb63526aba1c7778d0b5f4a553', NULL, 'f', '2010-11-23 22:57:42.171154')
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "users" SET "perishable_token" = 'KS9JR_vgDP3S2o4fBNfF', "updated_at" = '2010-11-23 22:57:42.176937' WHERE ("users"."id" = 2)[0m
+
+
+Started GET "/" for 127.0.0.1 at Tue Nov 23 14:57:42 -0800 2010
+  Processing by LandingController#index as HTML
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 22:57:42.224396', '127.0.0.1', '2010-11-23 22:57:42.224396', '/')
+Rendered landing/_new_unknown_user.html.erb (2.6ms)
+Rendered landing/_incomplete_user.html.erb (5.2ms)
+Rendered layouts/_header.html.erb (7.7ms)
+Rendered landing/index.html.erb within layouts/application (20.5ms)
+Completed 200 OK in 44ms (Views: 25.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/user_sessions/new" for 127.0.0.1 at Tue Nov 23 14:57:42 -0800 2010
+  Processing by UserSessionsController#new as HTML
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 22:57:42.277263', '127.0.0.1', '2010-11-23 22:57:42.277263', '/user_sessions/new')[0m
+Rendered user_sessions/_signin.html.erb (3.7ms)
+Rendered layouts/_header.html.erb (7.1ms)
+Rendered user_sessions/new.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 27ms (Views: 21.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/signin_user" for 127.0.0.1 at Tue Nov 23 14:57:42 -0800 2010
+  Processing by UserSessionsController#create as HTML
+  Parameters: {"commit"=>"Sign in", "user_session"=>{"password"=>"[FILTERED]", "email"=>"spitfire67@berkeley.edu"}, "utf8"=>"\342\234\223"}
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 22:57:42.322682', '127.0.0.1', '2010-11-23 22:57:42.322682', '/signin_user')
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE (LOWER("users".email) = 'spitfire67@berkeley.edu') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "perishable_token" = '1TxH2cTNgW-c6fkEZhxP', "updated_at" = '2010-11-23 22:57:42.622643' WHERE ("users"."id" = 1)
+Redirected to http://www.example.com/
+Completed 302 Found in 305ms
+
+
+Started GET "/" for 127.0.0.1 at Tue Nov 23 14:57:42 -0800 2010
+  Processing by LandingController#index as HTML
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-23 22:57:42.636662', '127.0.0.1', '2010-11-23 22:57:42.636662', '/')[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered layouts/_header.html.erb (7.6ms)
+Rendered landing/index.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 30ms (Views: 12.7ms | ActiveRecord: 1.3ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."email" = 'spitfire67@berkeley.edu') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "perishable_token" = 'n1q2Kyv6Mv-FfvBxyGHY', "phone_number" = '4405548235', "sms_enabled" = 't', "updated_at" = '2010-11-23 22:57:42.673288' WHERE ("users"."id" = 1)
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "groups" ("created_at", "name", "organization_id", "updated_at") VALUES ('2010-11-23 22:57:42.708142', 'test groups', NULL, '2010-11-23 22:57:42.708142')[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "user_groups" ("created_at", "group_id", "updated_at", "user_id") VALUES ('2010-11-23 22:57:42.735488', 1, '2010-11-23 22:57:42.735488', 1)[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tasks" ("created_at", "description", "due", "group_id", "name", "organization_id", "point", "project_id", "status", "updated_at") VALUES ('2010-11-23 22:57:42.761831', 'Description of task 1', NULL, 1, 'Thing 1', NULL, NULL, NULL, 0, '2010-11-23 22:57:42.761831')
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tasks" ("created_at", "description", "due", "group_id", "name", "organization_id", "point", "project_id", "status", "updated_at") VALUES ('2010-11-23 22:57:42.770267', 'Description of task 2', NULL, 1, 'Thing 2', NULL, NULL, NULL, 0, '2010-11-23 22:57:42.770267')[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tasks" ("created_at", "description", "due", "group_id", "name", "organization_id", "point", "project_id", "status", "updated_at") VALUES ('2010-11-23 22:57:42.774847', 'Description of task 3', NULL, 1, 'Thing 3', NULL, NULL, NULL, 0, '2010-11-23 22:57:42.774847')
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tasks" ("created_at", "description", "due", "group_id", "name", "organization_id", "point", "project_id", "status", "updated_at") VALUES ('2010-11-23 22:57:42.779398', 'Description of task 4', NULL, 1, 'Thing 4', NULL, NULL, NULL, 0, '2010-11-23 22:57:42.779398')[0m
+  [1m[35mSmsSession Load (0.2ms)[0m  SELECT "sms_sessions".* FROM "sms_sessions" WHERE ("sms_sessions"."phone_number" = '4405548235') LIMIT 1
+  [1m[36mSQL (2.4ms)[0m  [1mINSERT INTO "sms_sessions" ("created_at", "more", "phone_number", "task_id", "updated_at") VALUES ('2010-11-23 22:57:42.803689', '', '4405548235', NULL, '2010-11-23 22:57:42.803689')[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1
+  [1m[36mGroup Load (0.3ms)[0m  [1mSELECT "groups".* FROM "groups" INNER JOIN "user_groups" ON "groups".id = "user_groups".group_id WHERE (("user_groups".user_id = 1))[0m
+  [1m[35mTask Load (0.7ms)[0m  SELECT "tasks".* FROM "tasks" WHERE ("tasks"."group_id" IN (1)) AND ("tasks"."status" = 0) ORDER BY created_at DESC
+  [1m[36mSmsSession Load (0.3ms)[0m  [1mSELECT "sms_sessions".* FROM "sms_sessions" WHERE ("sms_sessions"."phone_number" = '4405548235') LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1
+  [1m[36mTask Load (0.7ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE ("tasks"."id" = 1) LIMIT 1[0m
+  [1m[35mSmsSession Load (0.6ms)[0m  SELECT "sms_sessions".* FROM "sms_sessions" WHERE ("sms_sessions"."phone_number" = '4405548235') LIMIT 1
