@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101122232107) do
+ActiveRecord::Schema.define(:version => 20101122071736) do
 
   create_table "groups", :force => true do |t|
     t.string   "name"
@@ -34,16 +34,6 @@ ActiveRecord::Schema.define(:version => 20101122232107) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-
-  create_table "sms_sessions", :force => true do |t|
-    t.string   "phone_number"
-    t.string   "more",         :default => ""
-    t.string   "where",        :default => ""
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "sms_sessions", ["phone_number"], :name => "index_sms_sessions_on_phone_number", :unique => true
 
   create_table "tasks", :force => true do |t|
     t.string   "name"
