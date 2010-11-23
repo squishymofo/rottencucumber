@@ -86,7 +86,7 @@ class SmsProcessor
   def process_describe_msg(task_number) # should set the task context to the 
   end
 
-  def set_task_context
+  def set_task_context(task_id)
    #TODO 
   end
 
