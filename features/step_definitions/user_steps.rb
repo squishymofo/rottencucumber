@@ -79,7 +79,6 @@ Then /^user with email "([^"]*)" should be activated$/ do |arg1|
     assert User.find_by_email(arg1).active
 end
 
-
 Then /^I should have SMS enabled$/ do
     assert User.find_by_email("spitfire67@berkeley.edu").sms_enabled
 end
@@ -99,4 +98,3 @@ end
 Then /^my phone number should not be "([^"]*)"$/ do |arg1|
       !(User.last.phone_number == arg1)
 end
-
