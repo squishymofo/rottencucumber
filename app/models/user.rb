@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
   has_many :user_groups
   has_many :groups, :through => :user_groups do
     def active_tasks
-      @tasks ||=Task.where(:group_id => map(&:id)).order('created_at DESC').where(:status => 0)
+      @tasks ||=Task.where(:group_id => map(&:id)).order('created_at ASC').where(:status => 0)
     end
   end
   
@@ -76,10 +76,6 @@ class User < ActiveRecord::Base
     last_name = profile["last_name"]
     active = true
     save
-  end
-
-  def all_tasks # returns an array or all tasks belonging to user, same order every time
-    raise Exception
   end
 
   def active_tasks
