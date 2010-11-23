@@ -6,7 +6,7 @@ class SmsController < ApplicationController
     message_body = params[:Body].strip
     @sms_processor = SmsProcessor.new(SmsSession.get_sms_session(@user.phone_number), message_body)
     account = Twilio::RestAccount.new(ACCOUNT_SID, ACCOUNT_TOKEN)
-    h = {:From => "415-599-2671", :To => params[:from], :Body => @sms_processor.response_message}
+    h = {:From => "415-599-2671", :To => "440-554-8235", :Body => @sms_processor.response_message}
     resp = account.request("/#{API_VERSION}/Accounts/#{ACCOUNT_SID}/SMS/Messages", 'POST', h)
     render :nothing => true
   end
