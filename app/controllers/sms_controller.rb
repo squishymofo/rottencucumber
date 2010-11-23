@@ -3,7 +3,9 @@ class SmsController < ApplicationController
   def inbound_sms
     #TODO: clean up
     @user = User.find_by_phone_number(params[:From].scan(/[0-9]+/).first[1..100]) #remove the +1...
-    message_body = params[:Body].strip
+    message_body = params[:Body]
+    logger.info("hello")
+    logger.info(params[:Body])
     @sms_processor = SmsProcessor.new(SmsSession.get_sms_session(@user.phone_number), message_body)
     account = Twilio::RestAccount.new(ACCOUNT_SID, ACCOUNT_TOKEN)
     logger.info(@sms_processor.response_message)
