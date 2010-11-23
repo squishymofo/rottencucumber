@@ -15,7 +15,7 @@ org = Organization.create(:name => "my org") # create an org
 g = Group.create(:name => "test groups", :organization_id => org.id) # create a group within the org
 UserGroup.create(:user_id => User.find_by_phone_number("4405548235").id, :group_id => g.id) # add the me to the group
 p = Project.create(:name => "do work", :organization_id => org.id) # create a project to add some tasks to
-arg1 = "4"
-(1..arg1.to_i).each do |i| #now add some tasks to the project
+num_tasks = "2"
+(1..num_tasks.to_i).each do |i| #now add some tasks to the project
   Task.create!(:name => "Thing #{i}", :description => "Description of task #{i}", :group_id => g.id, :project_id => p.id, :status => 0)
 end
