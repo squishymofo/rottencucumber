@@ -1,9 +1,16 @@
+<div id="milestones" class= "span-24">
+
 Group name: 
 <%= @group.name %>
 <br />
 
-Belongs to organization: 
-<%= @group.organization.name %>
+Organization: 
+<% if @group.organization %>
+  <%= @group.organization.name %>
+<% else %>
+  <%= 'No organization currently assigned.' %>
+<% end %>
+
 <br />
 
 Members: 
@@ -11,3 +18,5 @@ Members:
 <% usrs.each do |usr| %>
 	<%= usr.first_name + " " + usr.last_name + " (" + usr.email + "), " %>
 <% end %>
+
+</div>

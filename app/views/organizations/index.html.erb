@@ -1,4 +1,12 @@
-<h1>Organization#index</h1>
+<span class="section-header span-18"> Organizations </span>
+<span class="span-6 last"> <%= link_to "+ create new organization", new_organization_path %> </span>
 
+<%= render :partial => 'organization_partial', :collection => @joined_orgs %>
+
+
+<h1>MyOrganizations</h1>
 <%= debug(@my_orgs) %>
+<br />
+<h1>Joined Organizations</h1>
 <%= debug(@joined_orgs) %>
+

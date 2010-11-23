@@ -1,0 +1,15 @@
+<div class="span-12 group-index-partial">
+  <!-- NOTE: group is a local variable passed in through the index view -->
+  <span class="span-8 colborder"><%= organization_partial.name %></span> <!-- display the organization name too? -->
+  <span class="span-3 last"> <%= link_to 'Edit organization', organization_path(organization_partial) %> </span>
+  <hr />
+  <span class="span-11">
+  	<% usrs = organization_partial.users %>
+	<% usrs.each do |usr| %>
+		<%= usr.first_name + " " + usr.last_name + ", " %>
+	<% end %>
+  </span>
+  <hr />
+
+  
+</div>

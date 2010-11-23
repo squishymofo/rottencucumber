@@ -3,7 +3,7 @@ class TasksController < ApplicationController
   before_filter :current_user
   
   def index
-    
+    @tasks = Task.find(:all)
   end
 
   def new
