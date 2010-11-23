@@ -29,7 +29,7 @@
   <% end %>
 </div>
 <div class="prepend-15 span-9 prepend-top">
-  <%= form_for groups_path do %>
+  <%= form_tag create_group_path do %>
     <br />
     <%= label_tag "Enter group name: " %>
     <%= text_field_tag :group_name %>

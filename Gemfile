@@ -16,7 +16,6 @@ gem 'cucumber'
 gem 'rspec-rails'
 gem 'spork'
 gem 'launchy'    # So you can do Then show me the page
-gem 'mysql', '2.8.1'
 gem 'heroku'
 gem 'gherkin', '2.2.8'
 

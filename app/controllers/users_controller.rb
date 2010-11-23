@@ -55,6 +55,9 @@ class UsersController < ApplicationController
     if params[:user][:sms_enabled] == "1"
       @current_user.sms_enabled = true
     end
+    if params[:user][:sms_enabled] == "0"
+      @current_user.sms_enabled = false
+    end
     @current_user.phone_number = params[:user][:phone_number]
     @current_user.save
     if @current_user.errors.any?

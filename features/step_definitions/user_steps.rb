@@ -23,6 +23,14 @@ Given /^I am a logged in user who has enabled SMS capabilities with phone number
     u.save
 end
 
+Given /^there is a user who has enabled SMS capabilities with phone number "([^"]*)"$/ do |phone_number|
+    Given "that a user with email \"someone@example.com\" and password \"password\" and first name \"Jeanine\" exists and is valid"
+    u = User.find_by_email "someone@example.com"
+    u.phone_number = phone_number
+    u.sms_enabled = true
+    u.save
+end
+
 Given /^I'm logged in as a leader$/ do
 
     pending # express the regexp above with the code you wish you had
@@ -41,12 +49,6 @@ Given /^I am a logged in user$/ do
     And "I press \"Sign in\""
     Then "I should see \"James\""
 end
-
-def user
-  @user ||= Factory :user
-end
-
-
 
 
 Given /^that a new user with email "([^"]*)" has been created and sent an email confirmation email$/ do |arg1|

@@ -1,5 +1,6 @@
 class GroupsController < ApplicationController
   before_filter :current_user
+  before_filter :require_user
   
   def index
     @groups = Group.find(:all)
@@ -11,15 +12,17 @@ class GroupsController < ApplicationController
 
   def new
     @group = Group.new
-    @joined_orgs = @current_user.organizations #organizations that the current user is a part of
+    @joined_orgs = @current_user.organizations 
+    #organizations that the current user is a part of
   end
 
   def create
+    #debugger
     @group = Group.new
-    @group.name = params[:group][:name]
-    @group.organization_id = params[:group][:selected_org]    
+    @group.name = params[:group_name]
+    @group.organization_id = params[:selected_org]    
     if @group.save
-      flash[:notice] = "#{params[:group][:name]} has been created"
+      flash[:notice] = "The group #{params[:group_name]} has been created and assigned to organization #{params[:selected_org]}"
       redirect_to :action => :index
     else
       flash[:error] = "Failed creating a new group"
