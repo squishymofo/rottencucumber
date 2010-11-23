@@ -1,15 +1,25 @@
-<span class="section-header"> Task Progress</span>
+<br/><br/><br/><br/>
+<h2>Task Detail</h2>
+<br/>
+<b>Task name:</b><br/>
+<%= @task.name %>
 
-<hr />
-<br />
-<div class="span-24"> Project name </div>
-<div class="span-24 prepend-top"> Progress bar </div> 
+<br/><br/>
 
-<div class="span-24 prepend-top"> Milestones </div>
-<div id="milestones" class= "span-24">
-<% (1..10).each do %>
-  <%=render :partial => 'milestone' %>
-<% end %>
-</div>
+<b>Organization: </b><br/>
+<%= Organization.find(@task.organization_id).name %><br/><br/>
 
-<%= button_to "back to tasks", tasks_path, :class => "clear span-3 prepend-top", :method => 'get'%>
+<b>Group In Charge: </b><br/>
+
+
+<% if @task.group_id.nil? %>
+	No group is in charge of this task
+	<% else %>
+	<% group = Group.find(@task.group_id) %>
+	<%= group.name %>
+<% end%>
+
+<br/><br/>
+
+<b>Description:</b><br/>
+<%= @task.description %>

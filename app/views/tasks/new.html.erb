@@ -1,30 +1,21 @@
 <span class="span-24 section-header"> Create a new task </span>
 <hr />
 
-<%= form_tag tasks_path do %>
-  <span class="span-4 field-lable"> Task name: </span>
-  <%= text_field_tag :name, nil, :class => "span-14 last" %>
-
-  <span class="span-4 field-lable clear"> Description: </span>
-  <%= text_area_tag :description, nil, :class => "span-14 last" %>
-
-  <span class="span-4 field-lable clear"> Due date: </span>
-  <%= text_field_tag :due_date, nil, :class => "span-8 last" %>
-
-  <span class="span-4 field-lable clear"> Group involved: </span>
-  <%= text_field_tag :group_involved, nil, :class => "span-6 last" %>
-
-  <span class="span-4 field-lable clear"> Milestones: </span>
-  <%= text_field_tag :milestones, nil, :class => "span-6 last" %>
-
-  <%= link_to "+ add new milestone", root_url, :class => "clear push-2 span-21 lst"%>
-
-  <br />
-  <%= submit_tag "Create task", :class => "span-3 clear"  %>
-  <%= button_to "Cancel", root_url, :method => 'GET', :class => "prepend-top span-3 clear" %>
- 
+<% form_for :task, @task, :url => {:action => :create } do |f| %>
+	<%= f.label "Task name: " %>
+	<%= f.text_field :name %><br/>
+	
+	<%= f.label "For Organization: " %>
+	
+	<%= select_tag :organization_id, options_for_select(@orgs_array)%> <br/>
+	
+	<%= f.label "Description: " %>
+	<%= f.text_field :description %><br/>
+	<%= f.label "Task Points: " %>
+	<%= select_tag :point, options_for_select ([['1',1],['2',2],['3',3]]) %> <br/>
+	<%= f.label "Expected Due Date: "%>
+	<%= select_date Date.today, :prefix => :due_date %><br/>
+	<%= f.submit "Create Task" %> 
 <% end %>
 <br />
-<br />
-<br />
-<br />
+
