@@ -8,13 +8,7 @@ Rottencucumber::Application.routes.draw do
   # 
   #   get "projects/show"
 
-  get "organization/new"
-
-  get "organization/create"
-
-  get "organization/index"
-
-  get "organization/show"
+  
 
   get "users/index"
 

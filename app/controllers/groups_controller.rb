@@ -17,12 +17,12 @@ class GroupsController < ApplicationController
   end
 
   def create
-    debugger
+    #debugger
     @group = Group.new
-    @group.name = params[:group][:name]
-    @group.organization_id = params[:group][:selected_org]    
+    @group.name = params[:group_name]
+    @group.organization_id = params[:selected_org]    
     if @group.save
-      flash[:notice] = "#{params[:group][:name]} has been created"
+      flash[:notice] = "The group #{params[:group_name]} has been created and assigned to organization #{params[:selected_org]}"
       redirect_to :action => :index
     else
       flash[:error] = "Failed creating a new group"
