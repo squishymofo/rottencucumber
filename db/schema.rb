@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(:version => 20101122232107) do
   create_table "sms_sessions", :force => true do |t|
     t.string   "phone_number"
     t.string   "more",         :default => ""
-    t.string   "where",        :default => ""
+    t.integer  "task_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

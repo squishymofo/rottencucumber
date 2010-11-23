@@ -74,4 +74,15 @@ class User < ActiveRecord::Base
     save
   end
 
+  def all_tasks # returns an array or all tasks belonging to user, same order every time
+    raise Exception
+  end
+
+    #OPTIMIZE
+  def active_tasks
+    users_tasks = [ ]
+    groups.all.each {|g| users_tasks += Task.where(:group_id => g.id, :status => 0) }
+    users_tasks
+  end
+
 end

@@ -91,6 +91,7 @@ Rottencucumber::Application.routes.draw do
   match 'sign_me_up' => 'users#create', :as => :sign_me_up
   match 'create_group' => 'groups#create', :as => :create_group
   match 'edit_user' => 'users#edit', :as => :edit_user_path
+  match 'inbound_sms' => 'sms#inbound_sms', :as => :inbound_sms
   match 'signin_user' => 'user_sessions#create', :as => :signin_user
   match 'register/:activation_code', :to => 'activations#new', :as => :register
   match 'activate/:id' => 'activations#create', :as => :activate
