@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   # before_filter :require_user, :except => [:developer_login]
   #layout 'application'
   helper :all # include all helpers, all the time
-  protect_from_forgery
+  protect_from_forgery :except => [:inbound_sms]
   before_filter :record_actions
   before_filter :current_user
 
