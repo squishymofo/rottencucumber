@@ -6,7 +6,11 @@ class User < ActiveRecord::Base
   has_many :organizations, :through => :user_organizations
   
   has_many :user_groups
-  has_many :groups, :through => :user_groups
+  has_many :groups, :through => :user_groups do
+    def active_tasks
+      @tasks ||=Task.where(:group_id => map(&:id)).order('created_at DESC').where(:status => 0)
+    end
+  end
   
   acts_as_authentic do |c|
     c.login_field = 'email'
@@ -78,11 +82,8 @@ class User < ActiveRecord::Base
     raise Exception
   end
 
-    #OPTIMIZE
   def active_tasks
-    users_tasks = [ ]
-    groups.all.each {|g| users_tasks += Task.where(:group_id => g.id, :status => 0) }
-    users_tasks
+    groups.active_tasks
   end
 
 end
