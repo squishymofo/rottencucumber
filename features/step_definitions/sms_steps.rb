@@ -22,10 +22,9 @@ When /^I subsequently text in "([^"]*)"$/ do |inbound_sms_message|
   sms_session = SmsSession.where(:phone_number => "4405548235")
   @sms_processor = SmsProcessor.new(sms_session, inbound_sms_message)
   @sms_processor.process_message
+end
 
 Then /^I should be texted a numbered list of names of active tasks that are assigned to me$/ do
-
-  debugger
   assert @sms_processor.response_message.split("1.").size > 1
 end
 
@@ -34,6 +33,5 @@ Given /^I have texted in "([^"]*)"$/ do |arg1|
 end
 
 Then /^I should be texted a description of task "([^"]*)"$/ do |arg1|
-  debugger
   assert @sms_processor.response_message.split("Description")[1] != nil
 end
