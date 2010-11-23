@@ -21,7 +21,7 @@ class SmsProcessor
       @response_message = process_describe_msg(message_a[1]) #TODO: EDIT: if no number in message_a[1], should look for context and describe that task #TODO: where should simply be an integer which is the task_id
       set_task_context(message_a[1])
     when /more/
-      process_more_msg
+      @response_message = process_more_msg
     #when //
     #when /complete/
     #when /notes/ #get the comments (assumes a task context)
@@ -29,6 +29,10 @@ class SmsProcessor
       @response_message = process_help_msg
     end
     save_excess if @excess
+  end
+
+  def process_more_msg
+    "more stuff.."
   end
 
   def process_help_msg
