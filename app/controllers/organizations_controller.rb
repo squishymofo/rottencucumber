@@ -28,7 +28,7 @@ class OrganizationsController < ApplicationController
   end
 
   def show
-    @org = Organization.find(params[:id])
+    @task = Task.find params[:id]
   end
   
 end

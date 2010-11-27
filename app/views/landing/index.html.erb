@@ -3,11 +3,12 @@
 <div class="span-24">
 </div>
 <div id="dialog-form"> </div>
+<p class="span-24 last">Super simple project management for non-technical, informal organizations.</p>
 <% if @current_user %>
   <% if @current_user.sms_enabled %>
-    You have enabled SMS. Text 'help' to 510-550-5258 to get started.
+    <p class="span-24 last"> You have enabled SMS. Text 'help' to 510-550-5258 to get started.</p>
   <% else %>
     <%= link_to("enable SMS", "#{edit_user_path(@current_user)}#sms_preferences") %>
   <% end %>
 <% end %>
-Super simple project management for non-technical, informal organizations.
+<br />

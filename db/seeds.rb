@@ -17,5 +17,5 @@ UserGroup.create(:user_id => User.find_by_phone_number("4405548235").id, :group_
 p = Project.create(:name => "do work", :organization_id => org.id) # create a project to add some tasks to
 num_tasks = "2"
 (1..num_tasks.to_i).each do |i| #now add some tasks to the project
-  Task.create!(:name => "Thing #{i}", :description => "Description of task #{i}", :group_id => g.id, :project_id => p.id, :status => 0)
+  Task.create(:name => "Thing #{i}", :description => "Description of task #{i}", :group_id => g.id, :project_id => p.id, :status => 0, :organization_id => User.find_by_email("spitfire67@berkeley.edu").most_active_organization.id)
 end

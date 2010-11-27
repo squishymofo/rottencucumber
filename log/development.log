@@ -38533,3 +38533,1329 @@ Started GET "/tasks" for 127.0.0.1 at Fri Nov 26 23:09:59 -0800 2010
 Rendered layouts/_header.html.erb (10.0ms)
 Rendered tasks/index.html.erb within layouts/application (30.7ms)
 Completed 200 OK in 517ms (Views: 36.4ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/tasks/1" for 127.0.0.1 at Fri Nov 26 23:19:52 -0800 2010
+  Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-27 07:19:52.721053', '127.0.0.1', '2010-11-27 07:19:52.721053', '/tasks/1')[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mTask Load (0.4ms)[0m  SELECT "tasks".* FROM "tasks" WHERE ("tasks"."id" = 1) LIMIT 1
+Rendered tasks/show.html.erb within layouts/application (44.4ms)
+Completed   in 537ms
+
+ActionView::Template::Error (Couldn't find Organization without an ID):
+    7: <br/><br/>
+    8: 
+    9: <b>Organization: </b><br/>
+    10: <%= Organization.find(@task.organization_id).name %><br/><br/>
+    11: 
+    12: <b>Group In Charge: </b><br/>
+    13: 
+  app/views/tasks/show.html.erb:10:in `_app_views_tasks_show_html_erb__822322466__617639158_0'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (13.1ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (21.2ms)
+
+
+Started GET "/tasks/1" for 127.0.0.1 at Fri Nov 26 23:31:43 -0800 2010
+  Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-27 07:31:43.456952', '127.0.0.1', '2010-11-27 07:31:43.456952', '/tasks/1')[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mTask Load (0.3ms)[0m  SELECT "tasks".* FROM "tasks" WHERE ("tasks"."id" = 1) LIMIT 1
+Rendered tasks/show.html.erb within layouts/application (41.5ms)
+Completed   in 524ms
+
+ActionView::Template::Error (Couldn't find Organization without an ID):
+    7: <br/><br/>
+    8: 
+    9: <b>Organization: </b><br/>
+    10: <%= Organization.find(@task.organization_id).name %><br/><br/>
+    11: 
+    12: <b>Group In Charge: </b><br/>
+    13: 
+  app/views/tasks/show.html.erb:10:in `_app_views_tasks_show_html_erb__822322466__618054618_0'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (12.1ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (22.9ms)
+
+
+Started GET "/tasks/1" for 127.0.0.1 at Fri Nov 26 23:32:27 -0800 2010
+  Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-27 07:32:27.556003', '127.0.0.1', '2010-11-27 07:32:27.556003', '/tasks/1')[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mTask Load (0.5ms)[0m  SELECT "tasks".* FROM "tasks" WHERE ("tasks"."id" = 1) LIMIT 1
+Rendered tasks/show.html.erb within layouts/application (46.6ms)
+Completed   in 569ms
+
+ActionView::Template::Error (Couldn't find Organization without an ID):
+    7: <br/><br/>
+    8: 
+    9: <b>Organization: </b><br/>
+    10: <%= Organization.find(@task.organization_id).name %><br/><br/>
+    11: 
+    12: <b>Group In Charge: </b><br/>
+    13: 
+  app/views/tasks/show.html.erb:10:in `_app_views_tasks_show_html_erb__822322466__618205418_0'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (11.9ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (23.4ms)
+
+
+Started GET "/tasks/1" for 127.0.0.1 at Fri Nov 26 23:32:58 -0800 2010
+  Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-27 07:32:58.613284', '127.0.0.1', '2010-11-27 07:32:58.613284', '/tasks/1')[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mTask Load (0.4ms)[0m  SELECT "tasks".* FROM "tasks" WHERE ("tasks"."id" = 1) LIMIT 1
+Rendered tasks/show.html.erb within layouts/application (42.2ms)
+Completed   in 357ms
+
+ActionView::Template::Error (Couldn't find Organization without an ID):
+    7: <br/><br/>
+    8: 
+    9: <b>Organization: </b><br/>
+    10: <%= Organization.find(@task.organization_id).name %><br/><br/>
+    11: 
+    12: <b>Group In Charge: </b><br/>
+    13: 
+  app/views/tasks/show.html.erb:10:in `_app_views_tasks_show_html_erb__822322466__618426348_0'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (11.5ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (167.1ms)
+
+
+Started GET "/tasks/1" for 127.0.0.1 at Fri Nov 26 23:33:47 -0800 2010
+  Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (2.3ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-27 07:33:47.219602', '127.0.0.1', '2010-11-27 07:33:47.219602', '/tasks/1')
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mTask Load (0.4ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE ("tasks"."id" = 1) LIMIT 1[0m
+Rendered tasks/show.html.erb within layouts/application (62.0ms)
+Completed   in 651ms
+
+ActionView::Template::Error (Couldn't find Organization without an ID):
+    7: <br/><br/>
+    8: 
+    9: <b>Organization: </b><br/>
+    10: <%= Organization.find(@task.organization_id).name %><br/><br/>
+    11: 
+    12: <b>Group In Charge: </b><br/>
+    13: 
+  app/views/tasks/show.html.erb:10:in `_app_views_tasks_show_html_erb__822322466__617706578_0'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (149.9ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (159.5ms)
+
+
+Started GET "/tasks/1" for 127.0.0.1 at Fri Nov 26 23:34:20 -0800 2010
+  Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-27 07:34:20.775334', '127.0.0.1', '2010-11-27 07:34:20.775334', '/tasks/1')
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mTask Load (0.4ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE ("tasks"."id" = 1) LIMIT 1[0m
+Rendered tasks/show.html.erb within layouts/application (214.8ms)
+Completed   in 471ms
+
+ActionView::Template::Error (Couldn't find Organization without an ID):
+    7: <br/><br/>
+    8: 
+    9: <b>Organization: </b><br/>
+    10: <%= Organization.find(@task.organization_id).name %><br/><br/>
+    11: 
+    12: <b>Group In Charge: </b><br/>
+    13: 
+  app/views/tasks/show.html.erb:10:in `_app_views_tasks_show_html_erb__822322466__618138838_0'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (14.8ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (26.9ms)
+
+
+Started GET "/tasks/1" for 127.0.0.1 at Fri Nov 26 23:36:22 -0800 2010
+  Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-27 07:36:22.686146', '127.0.0.1', '2010-11-27 07:36:22.686146', '/tasks/1')
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mTask Load (0.4ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE ("tasks"."id" = 1) LIMIT 1[0m
+Rendered tasks/show.html.erb within layouts/application (196.5ms)
+Completed   in 448ms
+
+ActionView::Template::Error (Couldn't find Organization without an ID):
+    7: <br/><br/>
+    8: 
+    9: <b>Organization: </b><br/>
+    10: <%= Organization.find(@task.organization_id).name %><br/><br/>
+    11: 
+    12: <b>Group In Charge: </b><br/>
+    13: 
+  app/views/tasks/show.html.erb:10:in `_app_views_tasks_show_html_erb__822322466__618541008_0'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.4ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (14.1ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (23.5ms)
+
+
+Started GET "/tasks/1" for 127.0.0.1 at Fri Nov 26 23:36:25 -0800 2010
+  Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-27 07:36:25.578796', '127.0.0.1', '2010-11-27 07:36:25.578796', '/tasks/1')
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mTask Load (0.4ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE ("tasks"."id" = 1) LIMIT 1[0m
+Rendered tasks/show.html.erb within layouts/application (54.3ms)
+Completed   in 570ms
+
+ActionView::Template::Error (Couldn't find Organization without an ID):
+    7: <br/><br/>
+    8: 
+    9: <b>Organization: </b><br/>
+    10: <%= Organization.find(@task.organization_id).name %><br/><br/>
+    11: 
+    12: <b>Group In Charge: </b><br/>
+    13: 
+  app/views/tasks/show.html.erb:10:in `_app_views_tasks_show_html_erb__822322466__616253048_0'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.5ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (16.3ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (25.4ms)
+
+
+Started GET "/tasks/1" for 127.0.0.1 at Fri Nov 26 23:37:46 -0800 2010
+  Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-27 07:37:46.966764', '127.0.0.1', '2010-11-27 07:37:46.966764', '/tasks/1')
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mTask Load (0.4ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE ("tasks"."id" = 1) LIMIT 1[0m
+Rendered tasks/show.html.erb within layouts/application (46.7ms)
+Completed   in 605ms
+
+ActionView::Template::Error (Couldn't find Organization without an ID):
+    7: <br/><br/>
+    8: 
+    9: <b>Organization: </b><br/>
+    10: <%= Organization.find(@task.organization_id).name %><br/><br/>
+    11: 
+    12: <b>Group In Charge: </b><br/>
+    13: 
+  app/views/tasks/show.html.erb:10:in `_app_views_tasks_show_html_erb__822322466__616956128_0'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.3ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (15.8ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (24.4ms)
+
+
+Started GET "/tasks/1" for 127.0.0.1 at Fri Nov 26 23:38:20 -0800 2010
+  Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-27 07:38:20.656378', '127.0.0.1', '2010-11-27 07:38:20.656378', '/tasks/1')
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mTask Load (0.4ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE ("tasks"."id" = 1) LIMIT 1[0m
+Rendered tasks/show.html.erb within layouts/application (47.7ms)
+Completed   in 449ms
+
+ActionView::Template::Error (Couldn't find Organization without an ID):
+    7: <br/><br/>
+    8: 
+    9: <b>Organization: </b><br/>
+    10: <%= Organization.find(@task.organization_id).name %><br/><br/>
+    11: 
+    12: <b>Group In Charge: </b><br/>
+    13: 
+  app/views/tasks/show.html.erb:10:in `_app_views_tasks_show_html_erb__822322466__617597448_0'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.3ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (16.1ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (24.7ms)
+
+
+Started GET "/tasks/1" for 127.0.0.1 at Fri Nov 26 23:38:54 -0800 2010
+  Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-27 07:38:55.017290', '127.0.0.1', '2010-11-27 07:38:55.017290', '/tasks/1')
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mTask Load (0.4ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE ("tasks"."id" = 1) LIMIT 1[0m
+Rendered tasks/show.html.erb within layouts/application (47.5ms)
+Completed   in 501ms
+
+ActionView::Template::Error (Couldn't find Organization without an ID):
+    7: <br/><br/>
+    8: 
+    9: <b>Organization: </b><br/>
+    10: <%= Organization.find(@task.organization_id).name %><br/><br/>
+    11: 
+    12: <b>Group In Charge: </b><br/>
+    13: 
+  app/views/tasks/show.html.erb:10:in `_app_views_tasks_show_html_erb__822322466__617838368_0'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (20.5ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (29.1ms)
+
+
+Started GET "/tasks/1" for 127.0.0.1 at Fri Nov 26 23:40:50 -0800 2010
+  Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (2.1ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-27 07:40:50.382070', '127.0.0.1', '2010-11-27 07:40:50.382070', '/tasks/1')
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mTask Load (0.3ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE ("tasks"."id" = 1) LIMIT 1[0m
+Rendered tasks/show.html.erb within layouts/application (51.7ms)
+Completed   in 639ms
+
+ActionView::Template::Error (Couldn't find Organization without an ID):
+    7: <br/><br/>
+    8: 
+    9: <b>Organization: </b><br/>
+    10: <%= Organization.find(@task.organization_id).name %><br/><br/>
+    11: 
+    12: <b>Group In Charge: </b><br/>
+    13: 
+  app/views/tasks/show.html.erb:10:in `_app_views_tasks_show_html_erb__822322466__616961238_0'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (147.6ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (159.2ms)
+
+
+Started GET "/tasks/1" for 127.0.0.1 at Fri Nov 26 23:41:42 -0800 2010
+  Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-27 07:41:42.217367', '127.0.0.1', '2010-11-27 07:41:42.217367', '/tasks/1')
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mTask Load (1.2ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  [1m[35mTask Load (2.6ms)[0m  SELECT "tasks".* FROM "tasks" WHERE ("tasks"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (141.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36mSQL (96.8ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mSQL (0.5ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.3ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (161.8ms)[0m  [1mCREATE TABLE "groups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime, "organization_id" integer) [0m
+  [1m[35mSQL (0.5ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (127.9ms)[0m  [1mCREATE TABLE "organizations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "created_at" datetime, "updated_at" datetime, "creator_id" integer) [0m
+  [1m[35mSQL (1.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (156.0ms)[0m  [1mCREATE TABLE "projects" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" varchar(255), "organization_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.6ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (134.0ms)[0m  [1mCREATE TABLE "sms_sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "phone_number" varchar(255), "more" varchar(255) DEFAULT '', "task_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  PRAGMA index_list("sms_sessions")
+  [1m[36mSQL (142.4ms)[0m  [1mCREATE UNIQUE INDEX "index_sms_sessions_on_phone_number" ON "sms_sessions" ("phone_number")[0m
+  [1m[35mSQL (2.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (88.0ms)[0m  [1mCREATE TABLE "tasks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "due" datetime, "point" integer, "group_id" integer, "project_id" integer, "created_at" datetime, "updated_at" datetime, "status" integer DEFAULT 0, "organization_id" integer) [0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (286.8ms)[0m  [1mCREATE TABLE "user_actions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "ip" varchar(255), "url" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (1.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (173.2ms)[0m  [1mCREATE TABLE "user_groups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "group_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.8ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (170.1ms)[0m  [1mCREATE TABLE "user_organizations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "organization_id" integer, "user_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.8ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (138.7ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255), "crypted_password" varchar(255), "password_salt" varchar(255), "persistence_token" varchar(255), "active" boolean, "perishable_token" varchar(255), "created_at" datetime, "updated_at" datetime, "first_name" varchar(255), "last_name" varchar(255), "sms_enabled" boolean DEFAULT 'f', "phone_number" varchar(255)) [0m
+  [1m[35mSQL (0.2ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (142.6ms)[0m  [1mCREATE INDEX "index_users_on_phone_number" ON "users" ("phone_number")[0m
+  [1m[35mSQL (0.8ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (158.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36mSQL (95.8ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mSQL (0.8ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (2.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (133.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101123080028')
+  [1m[36mSQL (88.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101029221616')[0m
+  [1m[35mSQL (77.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101101001621')
+  [1m[36mSQL (66.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101122071736')[0m
+  [1m[35mSQL (66.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101122232107')
+  [1m[36mSQL (77.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101101093918')[0m
+  [1m[35mSQL (77.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101029194241')
+  [1m[36mSQL (77.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101101002314')[0m
+  [1m[35mSQL (77.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101031235423')
+  [1m[36mSQL (77.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101031235503')[0m
+  [1m[35mSQL (66.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101031235354')
+  [1m[36mSQL (66.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101030013352')[0m
+  [1m[35mSQL (77.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101102001912')
+  [1m[36mSQL (77.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101101003722')[0m
+  [1m[35mSQL (77.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101101075247')
+  [1m[36mSQL (1.7ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.9ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (1.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[36mSQL (0.3ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (345.7ms)[0m  [1mCREATE TABLE "groups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime, "organization_id" integer) [0m
+  [1m[35mSQL (0.5ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (126.1ms)[0m  [1mCREATE TABLE "organizations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "created_at" datetime, "updated_at" datetime, "creator_id" integer) [0m
+  [1m[35mSQL (0.6ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (157.2ms)[0m  [1mCREATE TABLE "projects" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" varchar(255), "organization_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.6ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (143.3ms)[0m  [1mCREATE TABLE "sms_sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "phone_number" varchar(255), "more" varchar(255) DEFAULT '', "task_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  PRAGMA index_list("sms_sessions")
+  [1m[36mSQL (155.0ms)[0m  [1mCREATE UNIQUE INDEX "index_sms_sessions_on_phone_number" ON "sms_sessions" ("phone_number")[0m
+  [1m[35mSQL (1.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (116.7ms)[0m  [1mCREATE TABLE "tasks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "due" datetime, "point" integer, "group_id" integer, "project_id" integer, "created_at" datetime, "updated_at" datetime, "status" integer DEFAULT 0, "organization_id" integer) [0m
+  [1m[35mSQL (0.7ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (115.7ms)[0m  [1mCREATE TABLE "user_actions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "ip" varchar(255), "url" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.7ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (117.6ms)[0m  [1mCREATE TABLE "user_groups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "group_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.7ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (149.3ms)[0m  [1mCREATE TABLE "user_organizations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "organization_id" integer, "user_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.8ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (126.0ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255), "crypted_password" varchar(255), "password_salt" varchar(255), "persistence_token" varchar(255), "active" boolean, "perishable_token" varchar(255), "created_at" datetime, "updated_at" datetime, "first_name" varchar(255), "last_name" varchar(255), "sms_enabled" boolean DEFAULT 'f', "phone_number" varchar(255)) [0m
+  [1m[35mSQL (0.2ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (120.6ms)[0m  [1mCREATE INDEX "index_users_on_phone_number" ON "users" ("phone_number")[0m
+  [1m[35mSQL (0.8ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (148.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36mSQL (94.8ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mSQL (0.9ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.9ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (114.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101123080028')
+  [1m[36mSQL (88.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101029221616')[0m
+  [1m[35mSQL (88.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101101001621')
+  [1m[36mSQL (77.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101122071736')[0m
+  [1m[35mSQL (77.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101122232107')
+  [1m[36mSQL (77.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101101093918')[0m
+  [1m[35mSQL (77.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101029194241')
+  [1m[36mSQL (77.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101101002314')[0m
+  [1m[35mSQL (77.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101031235423')
+  [1m[36mSQL (77.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101031235503')[0m
+  [1m[35mSQL (66.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101031235354')
+  [1m[36mSQL (77.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101030013352')[0m
+  [1m[35mSQL (88.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101102001912')
+  [1m[36mSQL (77.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101101003722')[0m
+  [1m[35mSQL (77.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101101075247')
+  [1m[36mSQL (0.8ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.8ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.9ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+WARNING: Can't mass-assign protected attributes: first_name
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from /home/james/school/se/project-dir/rottencucumber/db/seeds.rb:8)
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("active", "created_at", "crypted_password", "email", "first_name", "last_name", "password_salt", "perishable_token", "persistence_token", "phone_number", "sms_enabled", "updated_at") VALUES ('t', '2010-11-27 08:10:29.525360', '7276da021b33ebbf244f8dcb5ea740c531ea7312d0d30880acc988709769b33189b360b2427b2e8c06722d0206551b56aa5de1870eb2f0f15ba965357f52aa0c', 'spitfire67@berkeley.edu', 'James', NULL, 'o2T6_32xz_2gNdL7-OL5', 'ayCWpGLRR132Q_OxJqd0', 'ec7a557c05b9fb194beede77f4e383b3b7c8548629968af4c8c5fb061dfc6bbadb37eb04c893350d6cc2ded0f9f523fe2e4dee502dee9c10afccd81615b41bd6', NULL, 'f', '2010-11-27 08:10:29.525360')
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "perishable_token" = '2zwPnXC91MiIo0uFBVK3', "updated_at" = '2010-11-27 08:10:29.671946' WHERE ("users"."id" = 1)[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1
+  [1m[36mSQL (1.3ms)[0m  [1mUPDATE "users" SET "perishable_token" = 'tYZ7XITL6P_E8Fil7a-q', "phone_number" = '4405548235', "sms_enabled" = 't', "updated_at" = '2010-11-27 08:10:29.767011' WHERE ("users"."id" = 1)[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "groups" ("created_at", "name", "organization_id", "updated_at") VALUES ('2010-11-27 08:10:29.946681', 'test groups', NULL, '2010-11-27 08:10:29.946681')
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "user_groups" ("created_at", "group_id", "updated_at", "user_id") VALUES ('2010-11-27 08:10:30.065736', 1, '2010-11-27 08:10:30.065736', 1)
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."email" = 'spitfire67@berkeley.edu') LIMIT 1[0m
+  [1m[36mSQL (0.8ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (178.6ms)[0m  [1mCREATE TABLE "groups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime, "organization_id" integer) [0m
+  [1m[35mSQL (0.5ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (114.2ms)[0m  [1mCREATE TABLE "organizations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "created_at" datetime, "updated_at" datetime, "creator_id" integer) [0m
+  [1m[35mSQL (0.6ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (147.0ms)[0m  [1mCREATE TABLE "projects" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" varchar(255), "organization_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.6ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (132.4ms)[0m  [1mCREATE TABLE "sms_sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "phone_number" varchar(255), "more" varchar(255) DEFAULT '', "task_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  PRAGMA index_list("sms_sessions")
+  [1m[36mSQL (143.1ms)[0m  [1mCREATE UNIQUE INDEX "index_sms_sessions_on_phone_number" ON "sms_sessions" ("phone_number")[0m
+  [1m[35mSQL (1.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (99.0ms)[0m  [1mCREATE TABLE "tasks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "due" datetime, "point" integer, "group_id" integer, "project_id" integer, "created_at" datetime, "updated_at" datetime, "status" integer DEFAULT 0, "organization_id" integer) [0m
+  [1m[35mSQL (1.9ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (116.2ms)[0m  [1mCREATE TABLE "user_actions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "ip" varchar(255), "url" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (1.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (117.6ms)[0m  [1mCREATE TABLE "user_groups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "group_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.8ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (136.0ms)[0m  [1mCREATE TABLE "user_organizations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "organization_id" integer, "user_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.8ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (116.7ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255), "crypted_password" varchar(255), "password_salt" varchar(255), "persistence_token" varchar(255), "active" boolean, "perishable_token" varchar(255), "created_at" datetime, "updated_at" datetime, "first_name" varchar(255), "last_name" varchar(255), "sms_enabled" boolean DEFAULT 'f', "phone_number" varchar(255)) [0m
+  [1m[35mSQL (0.2ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (108.8ms)[0m  [1mCREATE INDEX "index_users_on_phone_number" ON "users" ("phone_number")[0m
+  [1m[35mSQL (0.9ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (148.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36mSQL (94.7ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mSQL (0.8ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (105.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101123080028')
+  [1m[36mSQL (88.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101029221616')[0m
+  [1m[35mSQL (88.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101101001621')
+  [1m[36mSQL (77.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101122071736')[0m
+  [1m[35mSQL (66.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101122232107')
+  [1m[36mSQL (77.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101101093918')[0m
+  [1m[35mSQL (77.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101029194241')
+  [1m[36mSQL (77.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101101002314')[0m
+  [1m[35mSQL (77.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101031235423')
+  [1m[36mSQL (77.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101031235503')[0m
+  [1m[35mSQL (66.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101031235354')
+  [1m[36mSQL (66.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101030013352')[0m
+  [1m[35mSQL (77.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101102001912')
+  [1m[36mSQL (77.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101101003722')[0m
+  [1m[35mSQL (77.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101101075247')
+  [1m[36mSQL (0.9ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.8ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (7.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+WARNING: Can't mass-assign protected attributes: first_name
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from /home/james/school/se/project-dir/rottencucumber/db/seeds.rb:8)
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("active", "created_at", "crypted_password", "email", "first_name", "last_name", "password_salt", "perishable_token", "persistence_token", "phone_number", "sms_enabled", "updated_at") VALUES ('t', '2010-11-27 08:11:06.926356', 'ffc62bec07dbd99b638dd80cd44c9671192b1ff2eab40ac581d238d6301f4b515e3b85fb73676a63f0a4f5037b00377d77f8704d283362b892d772caa4f9ebdc', 'spitfire67@berkeley.edu', 'James', NULL, 'qosti7eMhxB0a5SUxm4y', 'fOQBmW3cFwjXNgjOgXhP', '3ba136c7605c6f8926def989ee15c8ba5cc4f784d6c6e67fe367b2bc69fa8fe4c12c9afc43c96369b9b7dbad7bd0e5428ae59e7323aeac61fca181646715a334', NULL, 'f', '2010-11-27 08:11:06.926356')
+  [1m[36mSQL (0.7ms)[0m  [1mUPDATE "users" SET "perishable_token" = '9WnhlKK3UkRpg5BnfS0f', "updated_at" = '2010-11-27 08:11:07.066362' WHERE ("users"."id" = 1)[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "users" SET "perishable_token" = 'hVt7PyuvGgm8GS15JE4n', "phone_number" = '4405548235', "sms_enabled" = 't', "updated_at" = '2010-11-27 08:11:07.164285' WHERE ("users"."id" = 1)[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "groups" ("created_at", "name", "organization_id", "updated_at") VALUES ('2010-11-27 08:11:07.352091', 'test groups', NULL, '2010-11-27 08:11:07.352091')
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "user_groups" ("created_at", "group_id", "updated_at", "user_id") VALUES ('2010-11-27 08:11:07.454353', 1, '2010-11-27 08:11:07.454353', 1)
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."email" = 'spitfire67@berkeley.edu') LIMIT 1[0m
+  [1m[36mSQL (0.3ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (195.4ms)[0m  [1mCREATE TABLE "groups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime, "organization_id" integer) [0m
+  [1m[35mSQL (0.5ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (131.1ms)[0m  [1mCREATE TABLE "organizations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "created_at" datetime, "updated_at" datetime, "creator_id" integer) [0m
+  [1m[35mSQL (0.6ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (158.8ms)[0m  [1mCREATE TABLE "projects" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" varchar(255), "organization_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.6ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (149.0ms)[0m  [1mCREATE TABLE "sms_sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "phone_number" varchar(255), "more" varchar(255) DEFAULT '', "task_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  PRAGMA index_list("sms_sessions")
+  [1m[36mSQL (170.9ms)[0m  [1mCREATE UNIQUE INDEX "index_sms_sessions_on_phone_number" ON "sms_sessions" ("phone_number")[0m
+  [1m[35mSQL (0.7ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (114.2ms)[0m  [1mCREATE TABLE "tasks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "due" datetime, "point" integer, "group_id" integer, "project_id" integer, "created_at" datetime, "updated_at" datetime, "status" integer DEFAULT 0, "organization_id" integer) [0m
+  [1m[35mSQL (0.7ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (116.9ms)[0m  [1mCREATE TABLE "user_actions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "ip" varchar(255), "url" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.7ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (103.5ms)[0m  [1mCREATE TABLE "user_groups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "group_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.7ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (155.6ms)[0m  [1mCREATE TABLE "user_organizations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "organization_id" integer, "user_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.8ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (132.4ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255), "crypted_password" varchar(255), "password_salt" varchar(255), "persistence_token" varchar(255), "active" boolean, "perishable_token" varchar(255), "created_at" datetime, "updated_at" datetime, "first_name" varchar(255), "last_name" varchar(255), "sms_enabled" boolean DEFAULT 'f', "phone_number" varchar(255)) [0m
+  [1m[35mSQL (0.2ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (131.6ms)[0m  [1mCREATE INDEX "index_users_on_phone_number" ON "users" ("phone_number")[0m
+  [1m[35mSQL (0.8ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (152.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35mSQL (0.3ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36mSQL (90.6ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mSQL (0.8ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (114.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101123080028')
+  [1m[36mSQL (77.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101029221616')[0m
+  [1m[35mSQL (78.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101101001621')
+  [1m[36mSQL (87.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101122071736')[0m
+  [1m[35mSQL (77.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101122232107')
+  [1m[36mSQL (77.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101101093918')[0m
+  [1m[35mSQL (77.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101029194241')
+  [1m[36mSQL (66.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101101002314')[0m
+  [1m[35mSQL (66.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101031235423')
+  [1m[36mSQL (77.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101031235503')[0m
+  [1m[35mSQL (102.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101031235354')
+  [1m[36mSQL (96.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101030013352')[0m
+  [1m[35mSQL (77.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101102001912')
+  [1m[36mSQL (77.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101101003722')[0m
+  [1m[35mSQL (66.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101101075247')
+  [1m[36mSQL (1.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.8ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (1.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+WARNING: Can't mass-assign protected attributes: first_name
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from /home/james/school/se/project-dir/rottencucumber/db/seeds.rb:8)
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("active", "created_at", "crypted_password", "email", "first_name", "last_name", "password_salt", "perishable_token", "persistence_token", "phone_number", "sms_enabled", "updated_at") VALUES ('t', '2010-11-27 08:11:41.584220', '1ffd340e84539a07abd1884727fd38a361c888f2c1aa1aaab2ea20e7e09f880a2830a4cfce203a3297eb4735c15d454d151438f328a6e379398f61078537a486', 'spitfire67@berkeley.edu', 'James', NULL, 'HW5iQNOMMOS03ij2rG6J', 'QvbH3PTlgjCZkxHomfPh', '703d90992d7da19324bcef4ed90a3e8740cb427b9821534e52585857cb9c9a807152f61f60fb55fed52d7adfbffacc983ee7d5f24335e0d420f7d847eba66011', NULL, 'f', '2010-11-27 08:11:41.584220')
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "perishable_token" = 'qV-eDHrpnzvm0P6BQXDY', "updated_at" = '2010-11-27 08:11:41.732912' WHERE ("users"."id" = 1)[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mUPDATE "users" SET "perishable_token" = 'dmG_AafHzw6xbxA4eaC-', "phone_number" = '4405548235', "sms_enabled" = 't', "updated_at" = '2010-11-27 08:11:41.832253' WHERE ("users"."id" = 1)[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "groups" ("created_at", "name", "organization_id", "updated_at") VALUES ('2010-11-27 08:11:42.023239', 'test groups', NULL, '2010-11-27 08:11:42.023239')
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "user_groups" ("created_at", "group_id", "updated_at", "user_id") VALUES ('2010-11-27 08:11:42.142200', 1, '2010-11-27 08:11:42.142200', 1)
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."email" = 'spitfire67@berkeley.edu') LIMIT 1[0m
+  [1m[36mSQL (0.3ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (161.9ms)[0m  [1mCREATE TABLE "groups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime, "organization_id" integer) [0m
+  [1m[35mSQL (0.6ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (125.7ms)[0m  [1mCREATE TABLE "organizations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "created_at" datetime, "updated_at" datetime, "creator_id" integer) [0m
+  [1m[35mSQL (0.6ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (145.7ms)[0m  [1mCREATE TABLE "projects" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" varchar(255), "organization_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (1.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (122.1ms)[0m  [1mCREATE TABLE "sms_sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "phone_number" varchar(255), "more" varchar(255) DEFAULT '', "task_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  PRAGMA index_list("sms_sessions")
+  [1m[36mSQL (176.6ms)[0m  [1mCREATE UNIQUE INDEX "index_sms_sessions_on_phone_number" ON "sms_sessions" ("phone_number")[0m
+  [1m[35mSQL (0.7ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (100.5ms)[0m  [1mCREATE TABLE "tasks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "due" datetime, "point" integer, "group_id" integer, "project_id" integer, "created_at" datetime, "updated_at" datetime, "status" integer DEFAULT 0, "organization_id" integer) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (108.8ms)[0m  [1mCREATE TABLE "user_actions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "ip" varchar(255), "url" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (120.9ms)[0m  [1mCREATE TABLE "user_groups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "group_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.9ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (138.1ms)[0m  [1mCREATE TABLE "user_organizations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "organization_id" integer, "user_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.8ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (112.0ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255), "crypted_password" varchar(255), "password_salt" varchar(255), "persistence_token" varchar(255), "active" boolean, "perishable_token" varchar(255), "created_at" datetime, "updated_at" datetime, "first_name" varchar(255), "last_name" varchar(255), "sms_enabled" boolean DEFAULT 'f', "phone_number" varchar(255)) [0m
+  [1m[35mSQL (0.2ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (96.8ms)[0m  [1mCREATE INDEX "index_users_on_phone_number" ON "users" ("phone_number")[0m
+  [1m[35mSQL (0.8ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (135.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36mSQL (95.7ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mSQL (0.8ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (115.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101123080028')
+  [1m[36mSQL (77.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101029221616')[0m
+  [1m[35mSQL (76.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101101001621')
+  [1m[36mSQL (66.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101122071736')[0m
+Interrupt: : INSERT INTO "schema_migrations" (version) VALUES ('20101122071736')
+  [1m[36mSQL (0.3ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (186.8ms)[0m  [1mCREATE TABLE "groups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime, "organization_id" integer) [0m
+  [1m[35mSQL (1.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (131.2ms)[0m  [1mCREATE TABLE "organizations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "created_at" datetime, "updated_at" datetime, "creator_id" integer) [0m
+  [1m[35mSQL (0.6ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (152.1ms)[0m  [1mCREATE TABLE "projects" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" varchar(255), "organization_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (1.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (126.3ms)[0m  [1mCREATE TABLE "sms_sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "phone_number" varchar(255), "more" varchar(255) DEFAULT '', "task_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  PRAGMA index_list("sms_sessions")
+  [1m[36mSQL (159.4ms)[0m  [1mCREATE UNIQUE INDEX "index_sms_sessions_on_phone_number" ON "sms_sessions" ("phone_number")[0m
+  [1m[35mSQL (0.7ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (105.5ms)[0m  [1mCREATE TABLE "tasks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "due" datetime, "point" integer, "group_id" integer, "project_id" integer, "created_at" datetime, "updated_at" datetime, "status" integer DEFAULT 0, "organization_id" integer) [0m
+  [1m[35mSQL (0.7ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (127.9ms)[0m  [1mCREATE TABLE "user_actions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "ip" varchar(255), "url" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (1.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (106.0ms)[0m  [1mCREATE TABLE "user_groups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "group_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.7ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (143.5ms)[0m  [1mCREATE TABLE "user_organizations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "organization_id" integer, "user_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.8ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (133.6ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255), "crypted_password" varchar(255), "password_salt" varchar(255), "persistence_token" varchar(255), "active" boolean, "perishable_token" varchar(255), "created_at" datetime, "updated_at" datetime, "first_name" varchar(255), "last_name" varchar(255), "sms_enabled" boolean DEFAULT 'f', "phone_number" varchar(255)) [0m
+  [1m[35mSQL (0.2ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (131.5ms)[0m  [1mCREATE INDEX "index_users_on_phone_number" ON "users" ("phone_number")[0m
+  [1m[35mSQL (0.8ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (153.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36mSQL (78.4ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mSQL (0.8ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (94.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101123080028')
+  [1m[36mSQL (88.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101029221616')[0m
+  [1m[35mSQL (88.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101101001621')
+  [1m[36mSQL (77.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101122071736')[0m
+  [1m[35mSQL (77.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101122232107')
+  [1m[36mSQL (77.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101101093918')[0m
+  [1m[35mSQL (66.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101029194241')
+  [1m[36mSQL (66.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101101002314')[0m
+  [1m[35mSQL (77.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101031235423')
+  [1m[36mSQL (77.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101031235503')[0m
+  [1m[35mSQL (77.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101031235354')
+  [1m[36mSQL (77.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101030013352')[0m
+  [1m[35mSQL (77.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101102001912')
+  [1m[36mSQL (66.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101101003722')[0m
+  [1m[35mSQL (66.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101101075247')
+  [1m[36mSQL (0.8ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.9ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.8ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+WARNING: Can't mass-assign protected attributes: first_name
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from /home/james/school/se/project-dir/rottencucumber/db/seeds.rb:8)
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("active", "created_at", "crypted_password", "email", "first_name", "last_name", "password_salt", "perishable_token", "persistence_token", "phone_number", "sms_enabled", "updated_at") VALUES ('t', '2010-11-27 08:12:45.190359', '2aa2e569a86b560741903c48c8d335faf9180e72d5970c4f04d786191eeaa4d6eb1141e7c70008c385ba8bce2181f0341dfada85010a025c45054971df3e2dfd', 'spitfire67@berkeley.edu', 'James', NULL, 'IwyfYQ8pSMClWkFUflsG', '7kkFaUrsMpdqJD2PtjwS', 'e3f0af08ed0939e277c81cfa95feed3339c3f1025edcee8670cdb9d08fd50c22689f9b0e527d9a9560904e771180e923ceb6a1a8b37ea261fb230b9fd6479829', NULL, 'f', '2010-11-27 08:12:45.190359')
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "perishable_token" = 'ZPN3p6zwvJzcpo_krqru', "updated_at" = '2010-11-27 08:12:45.334118' WHERE ("users"."id" = 1)[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mUPDATE "users" SET "perishable_token" = 'GepMeQvlfM6MVM08X3LK', "phone_number" = '4405548235', "sms_enabled" = 't', "updated_at" = '2010-11-27 08:12:45.421435' WHERE ("users"."id" = 1)[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "groups" ("created_at", "name", "organization_id", "updated_at") VALUES ('2010-11-27 08:12:45.613008', 'test groups', NULL, '2010-11-27 08:12:45.613008')
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "user_groups" ("created_at", "group_id", "updated_at", "user_id") VALUES ('2010-11-27 08:12:45.731303', 1, '2010-11-27 08:12:45.731303', 1)
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."email" = 'spitfire67@berkeley.edu') LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "tasks" ("created_at", "description", "due", "group_id", "name", "organization_id", "point", "project_id", "status", "updated_at") VALUES ('2010-11-27 08:12:45.908213', 'Description of task 1', NULL, 1, 'Thing 1', NULL, NULL, NULL, 0, '2010-11-27 08:12:45.908213')
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."email" = 'spitfire67@berkeley.edu') LIMIT 1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "tasks" ("created_at", "description", "due", "group_id", "name", "organization_id", "point", "project_id", "status", "updated_at") VALUES ('2010-11-27 08:12:46.017207', 'Description of task 2', NULL, 1, 'Thing 2', NULL, NULL, NULL, 0, '2010-11-27 08:12:46.017207')
+
+
+Started GET "/" for 127.0.0.1 at Sat Nov 27 00:14:35 -0800 2010
+  Processing by LandingController#index as HTML
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-27 08:14:35.370454', '127.0.0.1', '2010-11-27 08:14:35.370454', '/')
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered landing/_new_unknown_user.html.erb (2.1ms)
+Rendered landing/_incomplete_user.html.erb (7.4ms)
+Rendered layouts/_header.html.erb (5.7ms)
+Rendered landing/index.html.erb within layouts/application (20.3ms)
+Completed 200 OK in 672ms (Views: 26.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/user_sessions/new" for 127.0.0.1 at Sat Nov 27 00:14:39 -0800 2010
+  Processing by UserSessionsController#new as JS
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-27 08:14:40.283588', '127.0.0.1', '2010-11-27 08:14:40.283588', '/user_sessions/new')[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered user_sessions/_signin.html.erb (8.3ms)
+Rendered shared/_new_dialog_div.html.erb (6.2ms)
+Rendered user_sessions/new.js.erb (18.7ms)
+Completed 200 OK in 347ms (Views: 33.2ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/signin_user" for 127.0.0.1 at Sat Nov 27 00:14:51 -0800 2010
+  Processing by UserSessionsController#create as HTML
+  Parameters: {"commit"=>"Sign in", "user_session"=>{"password"=>"[FILTERED]", "email"=>"spitfire67@berkeley.edu"}, "authenticity_token"=>"L2/MkAeaNpeh0+ImeWsMnl620UdI7WsdT13SRbdzrdQ=", "utf8"=>"\342\234\223"}
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-27 08:14:51.439477', '127.0.0.1', '2010-11-27 08:14:51.439477', '/signin_user')
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE (LOWER("users".email) = 'spitfire67@berkeley.edu') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "perishable_token" = 'VjPEGW6clKVmTbQTxBZF', "updated_at" = '2010-11-27 08:14:52.082151' WHERE ("users"."id" = 1)
+Redirected to http://localhost:3000/
+Completed 302 Found in 772ms
+
+
+Started GET "/" for 127.0.0.1 at Sat Nov 27 00:14:52 -0800 2010
+  Processing by LandingController#index as HTML
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-27 08:14:52.451662', '127.0.0.1', '2010-11-27 08:14:52.451662', '/')[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered layouts/_header.html.erb (7.1ms)
+Rendered landing/index.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 292ms (Views: 22.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Nov 27 00:15:49 -0800 2010
+  Processing by LandingController#index as HTML
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-27 08:15:50.056521', '127.0.0.1', '2010-11-27 08:15:50.056521', '/')
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered layouts/_header.html.erb (6.5ms)
+Rendered landing/index.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 384ms (Views: 20.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Nov 27 00:15:56 -0800 2010
+  Processing by LandingController#index as HTML
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-27 08:15:56.859718', '127.0.0.1', '2010-11-27 08:15:56.859718', '/')[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered layouts/_header.html.erb (9.4ms)
+Rendered landing/index.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 379ms (Views: 21.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Nov 27 00:16:26 -0800 2010
+  Processing by LandingController#index as HTML
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-27 08:16:26.942469', '127.0.0.1', '2010-11-27 08:16:26.942469', '/')
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered layouts/_header.html.erb (6.9ms)
+Rendered landing/index.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 412ms (Views: 19.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Nov 27 00:16:36 -0800 2010
+  Processing by LandingController#index as HTML
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-27 08:16:36.923433', '127.0.0.1', '2010-11-27 08:16:36.923433', '/')[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered layouts/_header.html.erb (6.9ms)
+Rendered landing/index.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 382ms (Views: 19.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Nov 27 00:16:57 -0800 2010
+  Processing by LandingController#index as HTML
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-27 08:16:57.746705', '127.0.0.1', '2010-11-27 08:16:57.746705', '/')
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered layouts/_header.html.erb (7.2ms)
+Rendered landing/index.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 511ms (Views: 20.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Nov 27 00:17:26 -0800 2010
+  Processing by LandingController#index as HTML
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-27 08:17:27.029861', '127.0.0.1', '2010-11-27 08:17:27.029861', '/')[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered layouts/_header.html.erb (166.6ms)
+Rendered landing/index.html.erb within layouts/application (171.9ms)
+Completed 200 OK in 493ms (Views: 184.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Nov 27 00:17:57 -0800 2010
+  Processing by LandingController#index as HTML
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-27 08:17:57.239694', '127.0.0.1', '2010-11-27 08:17:57.239694', '/')
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered layouts/_header.html.erb (6.4ms)
+Rendered landing/index.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 273ms (Views: 21.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at Sat Nov 27 00:21:09 -0800 2010
+
+SyntaxError (/home/james/school/se/project-dir/rottencucumber/app/controllers/tasks_controller.rb:39: syntax error, unexpected tIDENTIFIER, expecting ')'
+    @task = Task.find(params[:id]_)
+                                  ^
+/home/james/school/se/project-dir/rottencucumber/app/controllers/tasks_controller.rb:87: syntax error, unexpected $end, expecting kEND):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.3ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (12.8ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (47.7ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at Sat Nov 27 00:32:00 -0800 2010
+  Processing by TasksController#index as HTML
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-27 08:32:00.226661', '127.0.0.1', '2010-11-27 08:32:00.226661', '/tasks')[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mGroup Load (0.4ms)[0m  SELECT "groups".* FROM "groups" INNER JOIN "user_groups" ON "groups".id = "user_groups".group_id WHERE (("user_groups".user_id = 1))
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "tasks" WHERE ("tasks"."group_id" IN (1)) AND ("tasks"."status" = 0)) AS subquery[0m
+  [1m[35mTask Load (0.5ms)[0m  SELECT "tasks".* FROM "tasks" WHERE ("tasks"."group_id" IN (1)) AND ("tasks"."status" = 0) ORDER BY created_at ASC
+Rendered layouts/_header.html.erb (7.1ms)
+Rendered tasks/index.html.erb within layouts/application (29.1ms)
+Completed 200 OK in 491ms (Views: 34.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/tasks/1" for 127.0.0.1 at Sat Nov 27 00:32:07 -0800 2010
+  Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-27 08:32:07.495951', '127.0.0.1', '2010-11-27 08:32:07.495951', '/tasks/1')[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mTask Load (3.5ms)[0m  SELECT "tasks".* FROM "tasks" WHERE ("tasks"."id" = 1) LIMIT 1
+Rendered tasks/show.html.erb within layouts/application (103.6ms)
+Completed   in 10644ms
+
+ActionView::Template::Error (Couldn't find Organization without an ID):
+    7: <br/><br/>
+    8: 
+    9: <b>Organization: </b><br/>
+    10: <%= Organization.find(@task.organization_id).name %><br/><br/>
+    11: 
+    12: <b>Group In Charge: </b><br/>
+    13: 
+  app/views/tasks/show.html.erb:10:in `_app_views_tasks_show_html_erb__822322466__617369048_0'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.3ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (21.1ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (40.7ms)
+
+
+Started GET "/tasks/2" for 127.0.0.1 at Sat Nov 27 00:32:31 -0800 2010
+  Processing by TasksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-27 08:32:31.506323', '127.0.0.1', '2010-11-27 08:32:31.506323', '/tasks/2')[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mTask Load (0.8ms)[0m  SELECT "tasks".* FROM "tasks" WHERE ("tasks"."id" = 2) LIMIT 1
+Rendered tasks/show.html.erb within layouts/application (54.9ms)
+Completed   in 19174ms
+
+ActionView::Template::Error (Couldn't find Organization without an ID):
+    7: <br/><br/>
+    8: 
+    9: <b>Organization: </b><br/>
+    10: <%= Organization.find(@task.organization_id).name %><br/><br/>
+    11: 
+    12: <b>Group In Charge: </b><br/>
+    13: 
+  app/views/tasks/show.html.erb:10:in `_app_views_tasks_show_html_erb__822322466__617729258_0'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (15.9ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (172.5ms)
+
+
+Started GET "/tasks/2" for 127.0.0.1 at Sat Nov 27 00:32:52 -0800 2010
+  Processing by TasksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-27 08:32:52.525836', '127.0.0.1', '2010-11-27 08:32:52.525836', '/tasks/2')[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mTask Load (0.4ms)[0m  SELECT "tasks".* FROM "tasks" WHERE ("tasks"."id" = 2) LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (127.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36mSQL (97.8ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.7ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+Migrating to CreateUsers (20101029194241)
+  [1m[36mSQL (0.6ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255), "crypted_password" varchar(255), "password_salt" varchar(255), "persistence_token" varchar(255), "active" boolean, "perishable_token" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20101029194241')
+Migrating to AddFirstNameLastNameToUser (20101029221616)
+  [1m[36mSQL (1.7ms)[0m  [1mALTER TABLE "users" ADD "first_name" varchar(255)[0m
+  [1m[35mSQL (1.0ms)[0m  ALTER TABLE "users" ADD "last_name" varchar(255)
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20101029221616')[0m
+Migrating to CreateUserActions (20101030013352)
+  [1m[35mSQL (1.1ms)[0m  CREATE TABLE "user_actions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "ip" varchar(255), "url" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20101030013352')[0m
+Migrating to CreateGroups (20101031235354)
+  [1m[35mSQL (1.0ms)[0m  CREATE TABLE "groups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20101031235354')[0m
+Migrating to CreateOrganizations (20101031235423)
+  [1m[35mSQL (1.0ms)[0m  CREATE TABLE "organizations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20101031235423')[0m
+Migrating to CreateTasks (20101031235503)
+  [1m[35mSQL (1.1ms)[0m  CREATE TABLE "tasks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "due" datetime, "point" integer, "group_id" integer, "project_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20101031235503')[0m
+Migrating to CreateProjects (20101101001621)
+  [1m[35mSQL (1.5ms)[0m  CREATE TABLE "projects" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" varchar(255), "organization_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20101101001621')[0m
+Migrating to CreateUserGroups (20101101002314)
+  [1m[35mSQL (1.1ms)[0m  CREATE TABLE "user_groups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "group_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20101101002314')[0m
+Migrating to CreateUserOrganizations (20101101003722)
+  [1m[35mSQL (1.3ms)[0m  CREATE TABLE "user_organizations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "organization_id" integer, "user_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20101101003722')[0m
+Migrating to AddCreatorToOrganization (20101101075247)
+  [1m[35mSQL (1.5ms)[0m  ALTER TABLE "organizations" ADD "creator_id" integer
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20101101075247')[0m
+Migrating to AddOrganizationIdToGroup (20101101093918)
+  [1m[35mSQL (1.0ms)[0m  ALTER TABLE "groups" ADD "organization_id" integer
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20101101093918')[0m
+Migrating to AddStatusToTasks (20101102001912)
+  [1m[35mSQL (1.3ms)[0m  ALTER TABLE "tasks" ADD "status" integer DEFAULT 0
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20101102001912')[0m
+Migrating to AddSmsStuffToUser (20101122071736)
+  [1m[35mSQL (1.3ms)[0m  ALTER TABLE "users" ADD "sms_enabled" boolean DEFAULT 'f'
+  [1m[36mSQL (1.0ms)[0m  [1mALTER TABLE "users" ADD "phone_number" varchar(255)[0m
+  [1m[35mSQL (0.2ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.5ms)[0m  [1mCREATE INDEX "index_users_on_phone_number" ON "users" ("phone_number")[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20101122071736')
+Migrating to CreateSmsSessions (20101122232107)
+  [1m[36mSQL (1.1ms)[0m  [1mCREATE TABLE "sms_sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "phone_number" varchar(255), "more" varchar(255) DEFAULT '', "task_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  PRAGMA index_list("sms_sessions")
+  [1m[36mSQL (21.4ms)[0m  [1mCREATE UNIQUE INDEX "index_sms_sessions_on_phone_number" ON "sms_sessions" ("phone_number")[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20101122232107')
+Migrating to AddOrganizationIdToTask (20101123080028)
+  [1m[36mSQL (1.4ms)[0m  [1mALTER TABLE "tasks" ADD "organization_id" integer[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20101123080028')
+  [1m[36mSQL (0.8ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.8ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (6.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("groups")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("organizations")[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("projects")
+  [1m[36mSQL (0.2ms)[0m  [1mPRAGMA index_list("sms_sessions")[0m
+  [1m[35mSQL (0.2ms)[0m  PRAGMA index_info('index_sms_sessions_on_phone_number')
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("tasks")[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("user_actions")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("user_groups")[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("user_organizations")
+  [1m[36mSQL (0.3ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35mSQL (0.2ms)[0m  PRAGMA index_info('index_users_on_phone_number')
+Rendered tasks/show.html.erb within layouts/application (131.6ms)
+Completed   in 76089ms
+
+ActionView::Template::Error (Couldn't find Organization without an ID):
+    7: <br/><br/>
+    8: 
+    9: <b>Organization: </b><br/>
+    10: <%= Organization.find(@task.organization_id).name %><br/><br/>
+    11: 
+    12: <b>Group In Charge: </b><br/>
+    13: 
+  app/views/tasks/show.html.erb:10:in `_app_views_tasks_show_html_erb__822322466__618054758_0'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.8ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (13.9ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (184.2ms)
+
+
+Started GET "/tasks/2" for 127.0.0.1 at Sat Nov 27 00:34:11 -0800 2010
+  Processing by TasksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-27 08:34:11.165746', '127.0.0.1', '2010-11-27 08:34:11.165746', '/tasks/2')[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks" WHERE ("tasks"."id" = 2) LIMIT 1
+Completed   in 373ms
+
+ActiveRecord::RecordNotFound (Couldn't find Task with ID=2):
+  app/controllers/tasks_controller.rb:38:in `show'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (10.8ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.2ms)
+
+
+Started GET "/tasks/2" for 127.0.0.1 at Sat Nov 27 00:37:06 -0800 2010
+  Processing by TasksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-27 08:37:06.934066', '127.0.0.1', '2010-11-27 08:37:06.934066', '/tasks/2')[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mTask Load (0.9ms)[0m  SELECT "tasks".* FROM "tasks" WHERE ("tasks"."id" = 2) LIMIT 1
+  [1m[36mTask Load (0.4ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  [1m[36mSQL (0.3ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (1.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (111.5ms)[0m  [1mDROP TABLE "groups"[0m
+  [1m[35mSQL (88.3ms)[0m  CREATE TABLE "groups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime, "organization_id" integer) 
+  [1m[36mSQL (0.9ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (94.7ms)[0m  DROP TABLE "organizations"
+  [1m[36mSQL (77.6ms)[0m  [1mCREATE TABLE "organizations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "created_at" datetime, "updated_at" datetime, "creator_id" integer) [0m
+  [1m[35mSQL (1.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (72.0ms)[0m  [1mDROP TABLE "projects"[0m
+  [1m[35mSQL (80.1ms)[0m  CREATE TABLE "projects" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" varchar(255), "organization_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.9ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (82.9ms)[0m  DROP TABLE "sms_sessions"
+  [1m[36mSQL (87.5ms)[0m  [1mCREATE TABLE "sms_sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "phone_number" varchar(255), "more" varchar(255) DEFAULT '', "task_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  PRAGMA index_list("sms_sessions")
+  [1m[36mSQL (99.3ms)[0m  [1mCREATE UNIQUE INDEX "index_sms_sessions_on_phone_number" ON "sms_sessions" ("phone_number")[0m
+  [1m[35mSQL (13.7ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (85.2ms)[0m  [1mDROP TABLE "tasks"[0m
+  [1m[35mSQL (86.2ms)[0m  CREATE TABLE "tasks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "due" datetime, "point" integer, "group_id" integer, "project_id" integer, "created_at" datetime, "updated_at" datetime, "status" integer DEFAULT 0, "organization_id" integer) 
+  [1m[36mSQL (10.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (97.1ms)[0m  DROP TABLE "user_actions"
+  [1m[36mSQL (87.6ms)[0m  [1mCREATE TABLE "user_actions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "ip" varchar(255), "url" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.6ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (98.6ms)[0m  [1mDROP TABLE "user_groups"[0m
+  [1m[35mSQL (89.6ms)[0m  CREATE TABLE "user_groups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "group_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (1.8ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (94.4ms)[0m  DROP TABLE "user_organizations"
+  [1m[36mSQL (77.8ms)[0m  [1mCREATE TABLE "user_organizations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "organization_id" integer, "user_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (1.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (93.5ms)[0m  [1mDROP TABLE "users"[0m
+  [1m[35mSQL (87.8ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255), "crypted_password" varchar(255), "password_salt" varchar(255), "persistence_token" varchar(255), "active" boolean, "perishable_token" varchar(255), "created_at" datetime, "updated_at" datetime, "first_name" varchar(255), "last_name" varchar(255), "sms_enabled" boolean DEFAULT 'f', "phone_number" varchar(255)) 
+  [1m[36mSQL (0.2ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35mSQL (98.4ms)[0m  CREATE INDEX "index_users_on_phone_number" ON "users" ("phone_number")
+  [1m[36mSQL (0.8ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.8ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.8ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.8ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.9ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+WARNING: Can't mass-assign protected attributes: first_name
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from /home/james/school/se/project-dir/rottencucumber/db/seeds.rb:8)
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("active", "created_at", "crypted_password", "email", "first_name", "last_name", "password_salt", "perishable_token", "persistence_token", "phone_number", "sms_enabled", "updated_at") VALUES ('t', '2010-11-27 08:38:15.455386', '52b6ce97c9991234b8fba2bcec2eac4daf52eb245eefdc134e9ca7b6a7fef01e742ba873e976d06a7c360418df8c3c196bea8ca53599f958cc59cfd6da578fc7', 'spitfire67@berkeley.edu', 'James', NULL, 'sr7wMvoas5BzsEntCMy7', '5A_9XaklZwo0xhplj9HX', 'd9329d60a296a8f81d71cf88ec55bc2cc07e5a860ba57826a647ac653a6d0d25440dadd2c820194b63770c22827fb2faf1d513bfee5b9c2b965f8e7e215bba62', NULL, 'f', '2010-11-27 08:38:15.455386')
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "perishable_token" = 'F8boq_SjpyPQYGsgDuzc', "updated_at" = '2010-11-27 08:38:15.598642' WHERE ("users"."id" = 1)[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "perishable_token" = 'fADQYviFWzrSkyKQubcS', "phone_number" = '4405548235', "sms_enabled" = 't', "updated_at" = '2010-11-27 08:38:15.680116' WHERE ("users"."id" = 1)[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "groups" ("created_at", "name", "organization_id", "updated_at") VALUES ('2010-11-27 08:38:15.897098', 'test groups', NULL, '2010-11-27 08:38:15.897098')
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "user_groups" ("created_at", "group_id", "updated_at", "user_id") VALUES ('2010-11-27 08:38:16.004982', 1, '2010-11-27 08:38:16.004982', 1)
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."email" = 'spitfire67@berkeley.edu') LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "tasks".* FROM "tasks" WHERE ("tasks"."id" = 2) LIMIT 1
+Completed   in 3942724ms
+
+ActiveRecord::RecordNotFound (Couldn't find Task with ID=2):
+  app/controllers/tasks_controller.rb:39:in `show'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.1ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (33.2ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (60.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Nov 27 01:42:49 -0800 2010
+  Processing by LandingController#index as HTML
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-27 09:42:50.102870', '127.0.0.1', '2010-11-27 09:42:50.102870', '/')[0m
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered landing/_new_unknown_user.html.erb (3.4ms)
+Rendered landing/_incomplete_user.html.erb (6.0ms)
+Rendered layouts/_header.html.erb (7.5ms)
+Rendered landing/index.html.erb within layouts/application (21.6ms)
+Completed 200 OK in 542ms (Views: 28.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/user_sessions/new" for 127.0.0.1 at Sat Nov 27 01:42:54 -0800 2010
+  Processing by UserSessionsController#new as JS
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-27 09:42:54.877967', '127.0.0.1', '2010-11-27 09:42:54.877967', '/user_sessions/new')
+  [1m[36mUser Load (8.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered user_sessions/_signin.html.erb (12.2ms)
+Rendered shared/_new_dialog_div.html.erb (0.4ms)
+Rendered user_sessions/new.js.erb (17.1ms)
+Completed 200 OK in 641ms (Views: 31.9ms | ActiveRecord: 8.9ms)
+
+
+Started POST "/signin_user" for 127.0.0.1 at Sat Nov 27 01:43:00 -0800 2010
+  Processing by UserSessionsController#create as HTML
+  Parameters: {"commit"=>"Sign in", "user_session"=>{"password"=>"[FILTERED]", "email"=>"spitfire67@berkeley.edu"}, "authenticity_token"=>"L2/MkAeaNpeh0+ImeWsMnl620UdI7WsdT13SRbdzrdQ=", "utf8"=>"\342\234\223"}
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-27 09:43:00.706112', '127.0.0.1', '2010-11-27 09:43:00.706112', '/signin_user')[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE (LOWER("users".email) = 'spitfire67@berkeley.edu') LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "perishable_token" = 'JgXQLelh4AxGaz0jSItQ', "updated_at" = '2010-11-27 09:43:01.074764' WHERE ("users"."id" = 1)[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 466ms
+
+
+Started GET "/" for 127.0.0.1 at Sat Nov 27 01:43:01 -0800 2010
+  Processing by LandingController#index as HTML
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-27 09:43:01.263077', '127.0.0.1', '2010-11-27 09:43:01.263077', '/')
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered layouts/_header.html.erb (7.7ms)
+Rendered landing/index.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 310ms (Views: 25.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at Sat Nov 27 01:43:12 -0800 2010
+  Processing by TasksController#index as HTML
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-27 09:43:12.486647', '127.0.0.1', '2010-11-27 09:43:12.486647', '/tasks')[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mGroup Load (0.4ms)[0m  SELECT "groups".* FROM "groups" INNER JOIN "user_groups" ON "groups".id = "user_groups".group_id WHERE (("user_groups".user_id = 1))
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "tasks" WHERE ("tasks"."group_id" IN (1)) AND ("tasks"."status" = 0)) AS subquery[0m
+Rendered layouts/_header.html.erb (8.0ms)
+Rendered tasks/index.html.erb within layouts/application (22.9ms)
+Completed 200 OK in 312ms (Views: 29.8ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/groups" for 127.0.0.1 at Sat Nov 27 01:43:17 -0800 2010
+  Processing by GroupsController#index as HTML
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-27 09:43:17.360655', '127.0.0.1', '2010-11-27 09:43:17.360655', '/groups')
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mGroup Load (0.4ms)[0m  [1mSELECT "groups".* FROM "groups" INNER JOIN "user_groups" ON "groups".id = "user_groups".group_id WHERE (("user_groups".user_id = 1))[0m
+  [1m[35mGroup Load (0.3ms)[0m  SELECT "groups".* FROM "groups"
+  [1m[36mTask Load (0.3ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE ("tasks"."group_id" IN (1)) AND ("tasks"."status" = 0) ORDER BY created_at ASC[0m
+Rendered groups/_group_partial.html.erb (4.5ms)
+Rendered layouts/_header.html.erb (9.7ms)
+Rendered groups/index.html.erb within layouts/application (28.5ms)
+Completed 200 OK in 495ms (Views: 40.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Nov 27 01:43:20 -0800 2010
+  Processing by LandingController#index as HTML
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-27 09:43:20.249028', '127.0.0.1', '2010-11-27 09:43:20.249028', '/')
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered layouts/_header.html.erb (10.9ms)
+Rendered landing/index.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 494ms (Views: 24.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Nov 27 01:43:22 -0800 2010
+  Processing by LandingController#index as HTML
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-27 09:43:22.319948', '127.0.0.1', '2010-11-27 09:43:22.319948', '/')[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered layouts/_header.html.erb (8.4ms)
+Rendered landing/index.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 387ms (Views: 24.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at Sat Nov 27 01:43:25 -0800 2010
+  Processing by TasksController#index as HTML
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-27 09:43:25.660690', '127.0.0.1', '2010-11-27 09:43:25.660690', '/tasks')
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mGroup Load (0.4ms)[0m  [1mSELECT "groups".* FROM "groups" INNER JOIN "user_groups" ON "groups".id = "user_groups".group_id WHERE (("user_groups".user_id = 1))[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "tasks" WHERE ("tasks"."group_id" IN (1)) AND ("tasks"."status" = 0)) AS subquery
+Rendered layouts/_header.html.erb (7.9ms)
+Rendered tasks/index.html.erb within layouts/application (21.1ms)
+Completed 200 OK in 468ms (Views: 27.3ms | ActiveRecord: 1.5ms)

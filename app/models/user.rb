@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
   has_many :organizations, :through => :user_organizations
   
   has_many :user_groups
+  #TODO: optimize !!
   has_many :groups, :through => :user_groups do
     def active_tasks
       @tasks ||=Task.where(:group_id => map(&:id)).order('created_at ASC').where(:status => 0)
@@ -89,6 +90,9 @@ class User < ActiveRecord::Base
   
   def get_users_in_groups_with_me
     self.groups.users_in_groups_with_me
+  end
+
+  def most_active_organization
   end
 
 end
