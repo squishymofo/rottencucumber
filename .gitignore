@@ -19,3 +19,4 @@ capybara-*.html
 /spec/tmp/*
 **.orig
 config/*.yml
+log/development.log

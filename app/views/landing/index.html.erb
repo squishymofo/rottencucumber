@@ -5,8 +5,9 @@
 <div id="dialog-form"> </div>
 <% if @current_user %>
   <% if @current_user.sms_enabled %>
-    You have enabled SMS. Text 510-550-5258 'help' to get started.
+    You have enabled SMS. Text 'help' to 510-550-5258 to get started.
   <% else %>
     <%= link_to("enable SMS", "#{edit_user_path(@current_user)}#sms_preferences") %>
   <% end %>
 <% end %>
+Super simple project management for non-technical, informal organizations.
