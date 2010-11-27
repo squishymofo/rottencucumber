@@ -10,9 +10,10 @@ class User < ActiveRecord::Base
     def active_tasks
       @tasks ||=Task.where(:group_id => map(&:id)).order('created_at ASC').where(:status => 0)
     end
-    def users_in_group_with_me
-      @user_in_group = []
-      User.groups.each {|group|  @user_in_group += group.users }
+    def users_in_groups_with_me
+      @users_in_group_with_me = []
+      @users_in_group_with_me.each {|group|  @users_in_group += group.users }
+      @users_in_group_with_me
     end
   end
   
@@ -84,6 +85,10 @@ class User < ActiveRecord::Base
 
   def active_tasks
     groups.active_tasks
+  end
+  
+  def get_users_in_groups_with_me
+    self.groups.users_in_groups_with_me
   end
 
 end

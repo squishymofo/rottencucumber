@@ -4,15 +4,13 @@
   <span class="span-3 last"> <%= link_to 'Edit group', group_path(group_partial) %> </span>
   <hr />
   <span class="span-11">
-  	<% users_groups_with_me = group_partial.users %>
-	<% users_groups_with_me.each do |usr| %>
+	<% @users_in_groups_with_me.each do |usr| %>
 		<%= usr.first_name + " " + usr.last_name + ", " %>
 	<% end %>
   </span>
   <hr />
 
   Tasks
-  <%= @tasks_assigned_to_me %>
   <% @tasks_assigned_to_me.each do |task| %>
 	<%= link_to task.name, task_path(task) %>
 	<br />

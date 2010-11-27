@@ -37775,3 +37775,571 @@ Started GET "/" for 127.0.0.1 at Fri Nov 26 22:27:56 -0800 2010
 Rendered layouts/_header.html.erb (36.7ms)
 Rendered landing/index.html.erb within layouts/application (98.3ms)
 Completed 200 OK in 582ms (Views: 112.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Nov 26 22:31:13 -0800 2010
+  Processing by LandingController#index as HTML
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-27 06:31:13.585554', '127.0.0.1', '2010-11-27 06:31:13.585554', '/')
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered layouts/_header.html.erb (6.8ms)
+Rendered landing/index.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 657ms (Views: 22.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/groups" for 127.0.0.1 at Fri Nov 26 22:31:28 -0800 2010
+  Processing by GroupsController#index as HTML
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-27 06:31:28.461528', '127.0.0.1', '2010-11-27 06:31:28.461528', '/groups')[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+Completed   in 478ms
+
+NoMethodError (undefined method `groups' for #<Class:0xb68ec428>):
+  app/models/user.rb:15:in `users_in_group_with_me'
+  app/models/user.rb:90:in `users_in_group_with_me'
+  app/controllers/groups_controller.rb:6:in `index'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.2ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (11.5ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (22.5ms)
+
+
+Started GET "/groups" for 127.0.0.1 at Fri Nov 26 22:32:16 -0800 2010
+  Processing by GroupsController#index as HTML
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-27 06:32:16.379906', '127.0.0.1', '2010-11-27 06:32:16.379906', '/groups')[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+Completed   in 359ms
+
+NoMethodError (undefined method `groups' for #<Class:0xb64fd894>):
+  app/models/user.rb:15:in `users_in_group_with_me'
+  app/models/user.rb:90:in `users_in_group_with_me'
+  app/controllers/groups_controller.rb:6:in `index'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (10.7ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (18.6ms)
+
+
+Started GET "/groups" for 127.0.0.1 at Fri Nov 26 22:32:18 -0800 2010
+  Processing by GroupsController#index as HTML
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-27 06:32:18.105367', '127.0.0.1', '2010-11-27 06:32:18.105367', '/groups')[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+Completed   in 393ms
+
+NoMethodError (undefined method `groups' for #<Class:0xb65396f0>):
+  app/models/user.rb:15:in `users_in_group_with_me'
+  app/models/user.rb:90:in `users_in_group_with_me'
+  app/controllers/groups_controller.rb:6:in `index'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (15.5ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (23.1ms)
+
+
+Started GET "/groups" for 127.0.0.1 at Fri Nov 26 22:33:07 -0800 2010
+  Processing by GroupsController#index as HTML
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-27 06:33:07.986776', '127.0.0.1', '2010-11-27 06:33:07.986776', '/groups')[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+Completed   in 515ms
+
+NoMethodError (undefined method `groups' for #<Class:0xb64b31cc>):
+  app/models/user.rb:15:in `users_in_group_with_me'
+  app/models/user.rb:90:in `users_in_group_with_me'
+  app/controllers/groups_controller.rb:6:in `index'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (13.3ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (23.5ms)
+
+
+Started GET "/groups" for 127.0.0.1 at Fri Nov 26 22:33:20 -0800 2010
+  Processing by GroupsController#index as HTML
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-27 06:33:20.629212', '127.0.0.1', '2010-11-27 06:33:20.629212', '/groups')[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed   in 340ms
+
+SystemStackError (stack level too deep):
+  app/models/user.rb:15:in `users_in_group_with_me'
+  app/models/user.rb:15:in `users_in_group_with_me'
+  app/models/user.rb:90:in `users_in_group_with_me'
+  app/controllers/groups_controller.rb:6:in `index'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (131.9ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (12.2ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (161.4ms)
+
+
+Started GET "/groups" for 127.0.0.1 at Fri Nov 26 22:33:44 -0800 2010
+  Processing by GroupsController#index as HTML
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-27 06:33:44.506148', '127.0.0.1', '2010-11-27 06:33:44.506148', '/groups')
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Completed   in 328ms
+
+SystemStackError (stack level too deep):
+  app/models/user.rb:15:in `users_in_group_with_me'
+  app/models/user.rb:15:in `users_in_group_with_me'
+  app/models/user.rb:90:in `users_in_group_with_me'
+  app/controllers/groups_controller.rb:6:in `index'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (10.1ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.5ms)
+
+
+Started GET "/groups" for 127.0.0.1 at Fri Nov 26 22:33:45 -0800 2010
+  Processing by GroupsController#index as HTML
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-27 06:33:45.925966', '127.0.0.1', '2010-11-27 06:33:45.925966', '/groups')[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed   in 332ms
+
+SystemStackError (stack level too deep):
+  app/models/user.rb:14:in `users_in_group_with_me'
+  app/models/user.rb:15:in `users_in_group_with_me'
+  app/models/user.rb:90:in `users_in_group_with_me'
+  app/controllers/groups_controller.rb:6:in `index'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (11.0ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (23.4ms)
+
+
+Started GET "/groups" for 127.0.0.1 at Fri Nov 26 22:34:14 -0800 2010
+  Processing by GroupsController#index as HTML
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-27 06:34:14.552054', '127.0.0.1', '2010-11-27 06:34:14.552054', '/groups')
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Completed   in 392ms
+
+SystemStackError (stack level too deep):
+  app/models/user.rb:90:in `users_in_group_with_me'
+  app/models/user.rb:90:in `users_in_group_with_me'
+  app/controllers/groups_controller.rb:6:in `index'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (14.6ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (22.8ms)
+
+
+Started GET "/groups" for 127.0.0.1 at Fri Nov 26 22:35:11 -0800 2010
+  Processing by GroupsController#index as HTML
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-27 06:35:11.664872', '127.0.0.1', '2010-11-27 06:35:11.664872', '/groups')[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed   in 393ms
+
+SystemStackError (stack level too deep):
+  app/models/user.rb:15:in `users_in_group_with_me'
+  app/models/user.rb:15:in `users_in_group_with_me'
+  app/models/user.rb:90:in `get_users_in_group_with_me'
+  app/controllers/groups_controller.rb:6:in `index'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (11.3ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.2ms)
+
+
+Started GET "/groups" for 127.0.0.1 at Fri Nov 26 22:35:52 -0800 2010
+  Processing by GroupsController#index as HTML
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-27 06:35:52.879894', '127.0.0.1', '2010-11-27 06:35:52.879894', '/groups')
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Completed   in 430ms
+
+SystemStackError (stack level too deep):
+  app/models/user.rb:15:in `users_in_group_with_me'
+  app/models/user.rb:15:in `users_in_group_with_me'
+  app/models/user.rb:90:in `get_users_in_group_with_me'
+  app/controllers/groups_controller.rb:6:in `index'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (14.5ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (22.1ms)
+
+
+Started GET "/groups" for 127.0.0.1 at Fri Nov 26 22:35:54 -0800 2010
+  Processing by GroupsController#index as HTML
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-27 06:35:54.525677', '127.0.0.1', '2010-11-27 06:35:54.525677', '/groups')[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed   in 351ms
+
+SystemStackError (stack level too deep):
+  app/models/user.rb:14:in `users_in_group_with_me'
+  app/models/user.rb:15:in `users_in_group_with_me'
+  app/models/user.rb:90:in `get_users_in_group_with_me'
+  app/controllers/groups_controller.rb:6:in `index'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (138.6ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (11.9ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (156.3ms)
+  [1m[36mSQL (0.3ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (197.2ms)[0m  [1mCREATE TABLE "groups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime, "organization_id" integer) [0m
+  [1m[35mSQL (0.5ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (130.7ms)[0m  [1mCREATE TABLE "organizations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "created_at" datetime, "updated_at" datetime, "creator_id" integer) [0m
+  [1m[35mSQL (0.6ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (165.2ms)[0m  [1mCREATE TABLE "projects" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" varchar(255), "organization_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (2.9ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (145.0ms)[0m  [1mCREATE TABLE "sms_sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "phone_number" varchar(255), "more" varchar(255) DEFAULT '', "task_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  PRAGMA index_list("sms_sessions")
+  [1m[36mSQL (161.0ms)[0m  [1mCREATE UNIQUE INDEX "index_sms_sessions_on_phone_number" ON "sms_sessions" ("phone_number")[0m
+  [1m[35mSQL (0.6ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (112.8ms)[0m  [1mCREATE TABLE "tasks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "due" datetime, "point" integer, "group_id" integer, "project_id" integer, "created_at" datetime, "updated_at" datetime, "status" integer DEFAULT 0, "organization_id" integer) [0m
+  [1m[35mSQL (0.8ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (128.9ms)[0m  [1mCREATE TABLE "user_actions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "ip" varchar(255), "url" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (1.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (151.4ms)[0m  [1mCREATE TABLE "user_groups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "group_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.7ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (165.4ms)[0m  [1mCREATE TABLE "user_organizations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "organization_id" integer, "user_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.8ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (141.9ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255), "crypted_password" varchar(255), "password_salt" varchar(255), "persistence_token" varchar(255), "active" boolean, "perishable_token" varchar(255), "created_at" datetime, "updated_at" datetime, "first_name" varchar(255), "last_name" varchar(255), "sms_enabled" boolean DEFAULT 'f', "phone_number" varchar(255)) [0m
+  [1m[35mSQL (0.2ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (118.3ms)[0m  [1mCREATE INDEX "index_users_on_phone_number" ON "users" ("phone_number")[0m
+  [1m[35mSQL (0.8ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (153.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36mSQL (78.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mSQL (0.8ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (127.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101123080028')
+  [1m[36mSQL (88.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101029221616')[0m
+  [1m[35mSQL (88.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101101001621')
+  [1m[36mSQL (77.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101122071736')[0m
+  [1m[35mSQL (77.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101122232107')
+  [1m[36mSQL (77.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101101093918')[0m
+  [1m[35mSQL (66.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101029194241')
+  [1m[36mSQL (77.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101101002314')[0m
+  [1m[35mSQL (77.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101031235423')
+  [1m[36mSQL (77.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101031235503')[0m
+  [1m[35mSQL (77.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101031235354')
+  [1m[36mSQL (77.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101030013352')[0m
+  [1m[35mSQL (77.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101102001912')
+  [1m[36mSQL (66.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20101101003722')[0m
+  [1m[35mSQL (66.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101101075247')
+  [1m[36mSQL (3.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (3.7ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.9ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+WARNING: Can't mass-assign protected attributes: first_name
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from /home/james/school/se/project-dir/rottencucumber/db/seeds.rb:8)
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("active", "created_at", "crypted_password", "email", "first_name", "last_name", "password_salt", "perishable_token", "persistence_token", "phone_number", "sms_enabled", "updated_at") VALUES ('t', '2010-11-27 06:36:41.303076', '39f0be4be65777675fc310a2dbcec9bfb2a8c2da67a251bb02f3f03b6564ea382448a5cc6c78f1b9199baed3edf1afa9de42eceda26634af62dc60f5f2bbb416', 'spitfire67@berkeley.edu', 'James', NULL, 'ZhaSjmYXRphKiOjzAZuz', 'ILhprI_jztQj4XlOf-R-', '48b310bb5a52f615648c287d39d3536e97565bbb812d0c87f486896a6974c5f43f12de248730c127f0f336370aa6be0a6c48be0c2f01bf4edb0899768da385cd', NULL, 'f', '2010-11-27 06:36:41.303076')
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "perishable_token" = 'oetJRjjVDaRy10mibQQb', "updated_at" = '2010-11-27 06:36:41.471153' WHERE ("users"."id" = 1)[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "users" SET "perishable_token" = 'PtcjDp0wApIBCUEjfzwl', "phone_number" = '4405548235', "sms_enabled" = 't', "updated_at" = '2010-11-27 06:36:41.569872' WHERE ("users"."id" = 1)[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "groups" ("created_at", "name", "organization_id", "updated_at") VALUES ('2010-11-27 06:36:41.776967', 'test groups', NULL, '2010-11-27 06:36:41.776967')
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."phone_number" = '4405548235') LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "user_groups" ("created_at", "group_id", "updated_at", "user_id") VALUES ('2010-11-27 06:36:41.899212', 1, '2010-11-27 06:36:41.899212', 1)
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "tasks" ("created_at", "description", "due", "group_id", "name", "organization_id", "point", "project_id", "status", "updated_at") VALUES ('2010-11-27 06:36:42.095729', 'Description of task 1', NULL, 1, 'Thing 1', NULL, NULL, NULL, 0, '2010-11-27 06:36:42.095729')[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "tasks" ("created_at", "description", "due", "group_id", "name", "organization_id", "point", "project_id", "status", "updated_at") VALUES ('2010-11-27 06:36:42.205424', 'Description of task 2', NULL, 1, 'Thing 2', NULL, NULL, NULL, 0, '2010-11-27 06:36:42.205424')
+
+
+Started GET "/groups" for 127.0.0.1 at Fri Nov 26 22:37:39 -0800 2010
+  Processing by GroupsController#index as HTML
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-27 06:37:39.216586', '127.0.0.1', '2010-11-27 06:37:39.216586', '/groups')
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Redirected to http://localhost:3000/user_sessions/new
+Completed 302 Found in 489ms
+
+
+Started GET "/user_sessions/new" for 127.0.0.1 at Fri Nov 26 22:37:39 -0800 2010
+  Processing by UserSessionsController#new as HTML
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-27 06:37:39.799037', '127.0.0.1', '2010-11-27 06:37:39.799037', '/user_sessions/new')[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered user_sessions/_signin.html.erb (6.6ms)
+Rendered layouts/_header.html.erb (7.1ms)
+Rendered user_sessions/new.html.erb within layouts/application (21.1ms)
+Completed 200 OK in 422ms (Views: 41.1ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/signin_user" for 127.0.0.1 at Fri Nov 26 22:37:45 -0800 2010
+  Processing by UserSessionsController#create as HTML
+  Parameters: {"commit"=>"Sign in", "user_session"=>{"password"=>"[FILTERED]", "email"=>"spitfire67@berkeley.edu"}, "authenticity_token"=>"L2/MkAeaNpeh0+ImeWsMnl620UdI7WsdT13SRbdzrdQ=", "utf8"=>"\342\234\223"}
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-27 06:37:45.249604', '127.0.0.1', '2010-11-27 06:37:45.249604', '/signin_user')
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE (LOWER("users".email) = 'spitfire67@berkeley.edu') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "perishable_token" = 'ZoDC20yDPFUVsBwa0IYf', "updated_at" = '2010-11-27 06:37:45.857948' WHERE ("users"."id" = 1)
+Redirected to http://localhost:3000/
+Completed 302 Found in 716ms
+
+
+Started GET "/" for 127.0.0.1 at Fri Nov 26 22:37:45 -0800 2010
+  Processing by LandingController#index as HTML
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-27 06:37:46.115804', '127.0.0.1', '2010-11-27 06:37:46.115804', '/')[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered layouts/_header.html.erb (6.4ms)
+Rendered landing/index.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 384ms (Views: 22.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/groups" for 127.0.0.1 at Fri Nov 26 22:37:50 -0800 2010
+  Processing by GroupsController#index as HTML
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-27 06:37:50.114102', '127.0.0.1', '2010-11-27 06:37:50.114102', '/groups')
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Completed   in 425ms
+
+SystemStackError (stack level too deep):
+  app/models/user.rb:14:in `users_in_group_with_me'
+  app/models/user.rb:15:in `users_in_group_with_me'
+  app/models/user.rb:90:in `get_users_in_group_with_me'
+  app/controllers/groups_controller.rb:6:in `index'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (11.7ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.8ms)
+
+
+Started GET "/groups" for 127.0.0.1 at Fri Nov 26 22:46:36 -0800 2010
+  Processing by GroupsController#index as HTML
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-27 06:46:36.894173', '127.0.0.1', '2010-11-27 06:46:36.894173', '/groups')[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed   in 453ms
+
+SystemStackError (stack level too deep):
+  app/models/user.rb:15:in `users_in_group_with_me'
+  app/models/user.rb:15:in `users_in_group_with_me'
+  app/models/user.rb:90:in `get_users_in_group_with_me'
+  app/controllers/groups_controller.rb:6:in `index'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (10.8ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (18.3ms)
+
+
+Started GET "/groups" for 127.0.0.1 at Fri Nov 26 22:46:38 -0800 2010
+  Processing by GroupsController#index as HTML
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-27 06:46:38.540757', '127.0.0.1', '2010-11-27 06:46:38.540757', '/groups')
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Completed   in 436ms
+
+SystemStackError (stack level too deep):
+  app/models/user.rb:15:in `users_in_group_with_me'
+  app/models/user.rb:15:in `users_in_group_with_me'
+  app/models/user.rb:90:in `get_users_in_group_with_me'
+  app/controllers/groups_controller.rb:6:in `index'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (14.0ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.6ms)
+
+
+Started GET "/groups" for 127.0.0.1 at Fri Nov 26 22:47:05 -0800 2010
+  Processing by GroupsController#index as HTML
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-27 06:47:06.043276', '127.0.0.1', '2010-11-27 06:47:06.043276', '/groups')[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed   in 307ms
+
+SystemStackError (stack level too deep):
+  app/models/user.rb:15:in `users_in_group_with_me'
+  app/models/user.rb:15:in `users_in_group_with_me'
+  app/models/user.rb:91:in `get_users_in_group_with_me'
+  app/controllers/groups_controller.rb:6:in `index'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (11.7ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.6ms)
+
+
+Started GET "/groups" for 127.0.0.1 at Fri Nov 26 22:47:07 -0800 2010
+  Processing by GroupsController#index as HTML
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-27 06:47:07.399164', '127.0.0.1', '2010-11-27 06:47:07.399164', '/groups')
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Completed   in 207ms
+
+SystemStackError (stack level too deep):
+  app/models/user.rb:15:in `users_in_group_with_me'
+  app/models/user.rb:15:in `users_in_group_with_me'
+  app/models/user.rb:91:in `get_users_in_group_with_me'
+  app/controllers/groups_controller.rb:6:in `index'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (164.6ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (177.6ms)
+
+
+Started GET "/groups" for 127.0.0.1 at Fri Nov 26 22:47:18 -0800 2010
+  Processing by GroupsController#index as HTML
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-27 06:47:18.865593', '127.0.0.1', '2010-11-27 06:47:18.865593', '/groups')[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed   in 215ms
+
+NoMethodError (undefined method `tasks_assigned_to_me' for #<User:0xb64673d0>):
+  app/controllers/groups_controller.rb:7:in `index'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (16.5ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (24.5ms)
+
+
+Started GET "/groups" for 127.0.0.1 at Fri Nov 26 22:47:46 -0800 2010
+  Processing by GroupsController#index as HTML
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-27 06:47:47.057336', '127.0.0.1', '2010-11-27 06:47:47.057336', '/groups')
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mGroup Load (0.3ms)[0m  [1mSELECT "groups".* FROM "groups" INNER JOIN "user_groups" ON "groups".id = "user_groups".group_id WHERE (("user_groups".user_id = 1))[0m
+  [1m[35mGroup Load (0.7ms)[0m  SELECT "groups".* FROM "groups"
+  [1m[36mTask Load (0.5ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE ("tasks"."group_id" IN (1)) AND ("tasks"."status" = 0) ORDER BY created_at ASC[0m
+Rendered groups/_group_partial.html.erb (56.8ms)
+Rendered groups/index.html.erb within layouts/application (59.8ms)
+Completed   in 395ms
+
+ActionView::Template::Error (undefined local variable or method `users_groups_with_me' for #<#<Class:0xb642c028>:0xb642b1a0>):
+    4:   <span class="span-3 last"> <%= link_to 'Edit group', group_path(group_partial) %> </span>
+    5:   <hr />
+    6:   <span class="span-11">
+    7: 	<% users_groups_with_me.each do |usr| %>
+    8: 		<%= usr.first_name + " " + usr.last_name + ", " %>
+    9: 	<% end %>
+    10:   </span>
+  app/views/groups/_group_partial.html.erb:7:in `_app_views_groups__group_partial_html_erb__514761409__618582328_2707374'
+  app/views/groups/index.html.erb:4:in `_app_views_groups_index_html_erb__735958569__618574078_0'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.3ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (14.1ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (22.7ms)
+
+
+Started GET "/groups" for 127.0.0.1 at Fri Nov 26 22:49:18 -0800 2010
+  Processing by GroupsController#index as HTML
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-27 06:49:18.955948', '127.0.0.1', '2010-11-27 06:49:18.955948', '/groups')
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Completed   in 257ms
+
+NoMethodError (undefined method `get_users_in_group_with_me' for #<User:0xb64232ac>):
+  app/controllers/groups_controller.rb:6:in `index'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (12.7ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.0ms)
+
+
+Started GET "/groups" for 127.0.0.1 at Fri Nov 26 22:49:41 -0800 2010
+  Processing by GroupsController#index as HTML
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-27 06:49:41.622149', '127.0.0.1', '2010-11-27 06:49:41.622149', '/groups')[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mGroup Load (0.3ms)[0m  SELECT "groups".* FROM "groups" INNER JOIN "user_groups" ON "groups".id = "user_groups".group_id WHERE (("user_groups".user_id = 1))
+  [1m[36mGroup Load (0.3ms)[0m  [1mSELECT "groups".* FROM "groups"[0m
+  [1m[35mTask Load (0.5ms)[0m  SELECT "tasks".* FROM "tasks" WHERE ("tasks"."group_id" IN (1)) AND ("tasks"."status" = 0) ORDER BY created_at ASC
+Rendered groups/_group_partial.html.erb (187.1ms)
+Rendered groups/index.html.erb within layouts/application (190.8ms)
+Completed   in 555ms
+
+ActionView::Template::Error (undefined local variable or method `users_groups_with_me' for #<#<Class:0xb63a11bc>:0xb639fa9c>):
+    4:   <span class="span-3 last"> <%= link_to 'Edit group', group_path(group_partial) %> </span>
+    5:   <hr />
+    6:   <span class="span-11">
+    7: 	<% users_groups_with_me.each do |usr| %>
+    8: 		<%= usr.first_name + " " + usr.last_name + ", " %>
+    9: 	<% end %>
+    10:   </span>
+  app/views/groups/_group_partial.html.erb:7:in `_app_views_groups__group_partial_html_erb__514761409__618868568_2707374'
+  app/views/groups/index.html.erb:4:in `_app_views_groups_index_html_erb__735958569__618859328_0'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (16.7ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (25.4ms)
+
+
+Started GET "/groups" for 127.0.0.1 at Fri Nov 26 22:50:01 -0800 2010
+  Processing by GroupsController#index as HTML
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-27 06:50:01.894827', '127.0.0.1', '2010-11-27 06:50:01.894827', '/groups')[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mGroup Load (0.4ms)[0m  SELECT "groups".* FROM "groups" INNER JOIN "user_groups" ON "groups".id = "user_groups".group_id WHERE (("user_groups".user_id = 1))
+  [1m[36mGroup Load (0.3ms)[0m  [1mSELECT "groups".* FROM "groups"[0m
+  [1m[35mTask Load (0.6ms)[0m  SELECT "tasks".* FROM "tasks" WHERE ("tasks"."group_id" IN (1)) AND ("tasks"."status" = 0) ORDER BY created_at ASC
+Rendered groups/_group_partial.html.erb (38.8ms)
+Rendered groups/index.html.erb within layouts/application (41.7ms)
+Completed   in 584ms
+
+ActionView::Template::Error (undefined local variable or method `tasks_assigned_to_me' for #<#<Class:0xb663fd60>:0xb663949c>):
+    12: 
+    13:   Tasks
+    14:   <%= @tasks_assigned_to_me %>
+    15:   <% tasks_assigned_to_me.each do |task| %>
+    16: 	<%= link_to task.name, task_path(task) %>
+    17: 	<br />
+    18:   <% end %>
+  app/views/groups/_group_partial.html.erb:15:in `_app_views_groups__group_partial_html_erb__514761409__617552758_2707374'
+  app/views/groups/index.html.erb:4:in `_app_views_groups_index_html_erb__735958569__617500898_0'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (17.9ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (26.2ms)
+
+
+Started GET "/groups" for 127.0.0.1 at Fri Nov 26 22:50:21 -0800 2010
+  Processing by GroupsController#index as HTML
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-27 06:50:21.651014', '127.0.0.1', '2010-11-27 06:50:21.651014', '/groups')[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mGroup Load (0.3ms)[0m  SELECT "groups".* FROM "groups" INNER JOIN "user_groups" ON "groups".id = "user_groups".group_id WHERE (("user_groups".user_id = 1))
+  [1m[36mGroup Load (0.3ms)[0m  [1mSELECT "groups".* FROM "groups"[0m
+  [1m[35mTask Load (0.5ms)[0m  SELECT "tasks".* FROM "tasks" WHERE ("tasks"."group_id" IN (1)) AND ("tasks"."status" = 0) ORDER BY created_at ASC
+Rendered groups/_group_partial.html.erb (13.0ms)
+Rendered layouts/_header.html.erb (6.9ms)
+Rendered groups/index.html.erb within layouts/application (28.6ms)
+Completed 200 OK in 591ms (Views: 36.7ms | ActiveRecord: 2.5ms)

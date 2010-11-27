@@ -3,8 +3,8 @@ class GroupsController < ApplicationController
   before_filter :require_user
   
   def index
-    @users_in_group_with_me = @current_user.users_in_group_with_me
-    @tasks_assigned_to_me = @current_user.tasks_assigned_to_me
+    @users_in_groups_with_me = @current_user.get_users_in_groups_with_me
+    @tasks_assigned_to_me = @current_user.active_tasks
     @groups = Group.find(:all)
   end
 
