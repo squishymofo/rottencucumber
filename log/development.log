@@ -38343,3 +38343,193 @@ Rendered groups/_group_partial.html.erb (13.0ms)
 Rendered layouts/_header.html.erb (6.9ms)
 Rendered groups/index.html.erb within layouts/application (28.6ms)
 Completed 200 OK in 591ms (Views: 36.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/tasks/1" for 127.0.0.1 at Fri Nov 26 22:53:25 -0800 2010
+  Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-27 06:53:25.847437', '127.0.0.1', '2010-11-27 06:53:25.847437', '/tasks/1')[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mTask Load (0.4ms)[0m  SELECT "tasks".* FROM "tasks" WHERE ("tasks"."id" = 1) LIMIT 1
+Rendered tasks/show.html.erb within layouts/application (48.2ms)
+Completed   in 308ms
+
+ActionView::Template::Error (Couldn't find Organization without an ID):
+    7: <br/><br/>
+    8: 
+    9: <b>Organization: </b><br/>
+    10: <%= Organization.find(@task.organization_id).name %><br/><br/>
+    11: 
+    12: <b>Group In Charge: </b><br/>
+    13: 
+  app/views/tasks/show.html.erb:10:in `_app_views_tasks_show_html_erb__822322466__618323098_0'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (15.8ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (164.6ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at Fri Nov 26 22:53:50 -0800 2010
+  Processing by TasksController#index as HTML
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-27 06:53:50.427318', '127.0.0.1', '2010-11-27 06:53:50.427318', '/tasks')[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered tasks/index.html.erb within layouts/application (4.3ms)
+Completed   in 324ms
+
+ActionView::Template::Error (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.empty?):
+    1: 
+    2: <%= link_to "+ Create New Task", new_task_path %>
+    3: <br/><br/><br/><br/>
+    4: <% if !@my_organizations_tasks.empty? %>
+    5: 	<h3>Tasks By Organizations</h3>
+    6: 	<% curr_id = nil%>
+    7: 	<% @my_organizations_tasks.each do |task| %>
+  app/views/tasks/index.html.erb:4:in `_app_views_tasks_index_html_erb___811166602__618512128_0'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (13.6ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (21.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Nov 26 22:58:18 -0800 2010
+  Processing by LandingController#index as HTML
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-27 06:58:19.021583', '127.0.0.1', '2010-11-27 06:58:19.021583', '/')
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered layouts/_header.html.erb (6.4ms)
+Rendered landing/index.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 504ms (Views: 18.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at Fri Nov 26 22:58:30 -0800 2010
+  Processing by TasksController#index as HTML
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-27 06:58:30.804819', '127.0.0.1', '2010-11-27 06:58:30.804819', '/tasks')[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered tasks/index.html.erb within layouts/application (2.1ms)
+Completed   in 427ms
+
+ActionView::Template::Error (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.empty?):
+    1: 
+    2: <%= link_to "+ Create New Task", new_task_path %>
+    3: <br/><br/><br/><br/>
+    4: <% if !@my_organizations_tasks.empty? %>
+    5: 	<h3>Tasks By Organizations</h3>
+    6: 	<% curr_id = nil%>
+    7: 	<% @my_organizations_tasks.each do |task| %>
+  app/views/tasks/index.html.erb:4:in `_app_views_tasks_index_html_erb___811166602__617922708_0'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (14.1ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (22.5ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at Fri Nov 26 23:00:45 -0800 2010
+  Processing by TasksController#index as HTML
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-27 07:00:45.264583', '127.0.0.1', '2010-11-27 07:00:45.264583', '/tasks')
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered tasks/index.html.erb within layouts/application (2.9ms)
+Completed   in 376ms
+
+ActionView::Template::Error (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.empty?):
+    1: 
+    2: <%= link_to "+ Create New Task", new_task_path %>
+    3: <br/><br/><br/><br/>
+    4: <% if !@my_organizations_tasks.empty? %>
+    5: 	<h3>Tasks By Organizations</h3>
+    6: 	<% curr_id = nil%>
+    7: 	<% @my_organizations_tasks.each do |task| %>
+  app/views/tasks/index.html.erb:4:in `_app_views_tasks_index_html_erb___811166602__616599098_0'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (11.8ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (20.0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at Fri Nov 26 23:06:46 -0800 2010
+  Processing by TasksController#index as HTML
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-27 07:06:46.768893', '127.0.0.1', '2010-11-27 07:06:46.768893', '/tasks')[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mGroup Load (0.4ms)[0m  SELECT "groups".* FROM "groups" INNER JOIN "user_groups" ON "groups".id = "user_groups".group_id WHERE (("user_groups".user_id = 1))
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "tasks" WHERE ("tasks"."group_id" IN (1)) AND ("tasks"."status" = 0)) AS subquery[0m
+  [1m[35mTask Load (0.5ms)[0m  SELECT "tasks".* FROM "tasks" WHERE ("tasks"."group_id" IN (1)) AND ("tasks"."status" = 0) ORDER BY created_at ASC
+Rendered tasks/index.html.erb within layouts/application (46.2ms)
+Completed   in 494ms
+
+ActionView::Template::Error (Couldn't find Organization without an ID):
+    6: 	<% curr_id = nil%>
+    7: 	<% @my_organizations_tasks.each do |task| %>
+    8: 			<% if curr_id == nil || curr_id  != task.organization_id %>
+    9: 					<strong><%= Organization.find(task.organization_id).name %></strong><br/>
+    10: 			<% end %>
+    11: 			
+    12: 			<%= link_to task.name, task_path(task)  %><br/>
+  app/views/tasks/index.html.erb:9:in `_app_views_tasks_index_html_erb___811166602__617562148_0'
+  app/views/tasks/index.html.erb:7:in `_app_views_tasks_index_html_erb___811166602__617562148_0'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (13.2ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (21.7ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at Fri Nov 26 23:08:55 -0800 2010
+  Processing by TasksController#index as HTML
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-27 07:08:55.144864', '127.0.0.1', '2010-11-27 07:08:55.144864', '/tasks')[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mGroup Load (0.3ms)[0m  SELECT "groups".* FROM "groups" INNER JOIN "user_groups" ON "groups".id = "user_groups".group_id WHERE (("user_groups".user_id = 1))
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "tasks" WHERE ("tasks"."group_id" IN (1)) AND ("tasks"."status" = 0)) AS subquery[0m
+  [1m[35mTask Load (0.5ms)[0m  SELECT "tasks".* FROM "tasks" WHERE ("tasks"."group_id" IN (1)) AND ("tasks"."status" = 0) ORDER BY created_at ASC
+Rendered layouts/_header.html.erb (6.2ms)
+Rendered tasks/index.html.erb within layouts/application (24.0ms)
+Completed 200 OK in 567ms (Views: 33.6ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at Fri Nov 26 23:09:25 -0800 2010
+  Processing by TasksController#index as HTML
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-27 07:09:25.359607', '127.0.0.1', '2010-11-27 07:09:25.359607', '/tasks')[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mGroup Load (0.4ms)[0m  SELECT "groups".* FROM "groups" INNER JOIN "user_groups" ON "groups".id = "user_groups".group_id WHERE (("user_groups".user_id = 1))
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "tasks" WHERE ("tasks"."group_id" IN (1)) AND ("tasks"."status" = 0)) AS subquery[0m
+  [1m[35mTask Load (0.5ms)[0m  SELECT "tasks".* FROM "tasks" WHERE ("tasks"."group_id" IN (1)) AND ("tasks"."status" = 0) ORDER BY created_at ASC
+Rendered tasks/index.html.erb within layouts/application (189.3ms)
+Completed   in 587ms
+
+ActionView::Template::Error (undefined local variable or method `curr_id' for #<#<Class:0xb63a445c>:0xb63a29b8>):
+    4: <% if !@my_organizations_tasks.empty? %>
+    5: 	<h3>Tasks By Organizations</h3>
+    6: 	<% @my_organizations_tasks.each do |task| %>
+    7: 			<% if curr_id == nil || curr_id  != task.organization_id %>
+    8: 			<% end %>
+    9: 			
+    10: 			<%= link_to task.name, task_path(task)  %><br/>
+  app/views/tasks/index.html.erb:7:in `_app_views_tasks_index_html_erb___811166602__618855838_0'
+  app/views/tasks/index.html.erb:6:in `_app_views_tasks_index_html_erb___811166602__618855838_0'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.5ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (13.6ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (25.2ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at Fri Nov 26 23:09:59 -0800 2010
+  Processing by TasksController#index as HTML
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "user_actions" ("created_at", "ip", "updated_at", "url") VALUES ('2010-11-27 07:09:59.611960', '127.0.0.1', '2010-11-27 07:09:59.611960', '/tasks')[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mGroup Load (0.4ms)[0m  SELECT "groups".* FROM "groups" INNER JOIN "user_groups" ON "groups".id = "user_groups".group_id WHERE (("user_groups".user_id = 1))
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "tasks" WHERE ("tasks"."group_id" IN (1)) AND ("tasks"."status" = 0)) AS subquery[0m
+  [1m[35mTask Load (0.8ms)[0m  SELECT "tasks".* FROM "tasks" WHERE ("tasks"."group_id" IN (1)) AND ("tasks"."status" = 0) ORDER BY created_at ASC
+Rendered layouts/_header.html.erb (10.0ms)
+Rendered tasks/index.html.erb within layouts/application (30.7ms)
+Completed 200 OK in 517ms (Views: 36.4ms | ActiveRecord: 2.2ms)

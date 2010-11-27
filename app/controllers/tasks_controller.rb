@@ -8,6 +8,8 @@ class TasksController < ApplicationController
     # 
     # @my_organizations_tasks = Task.where("organization_id IN (?)", @my_organizations_ids).order("organization_id DESC")
     # @joined_organizations = User.find(@current_user.id).organizations
+
+    @my_organizations_tasks = @current_user.active_tasks
     
   end
 

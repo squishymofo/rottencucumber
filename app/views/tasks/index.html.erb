@@ -3,10 +3,9 @@
 <br/><br/><br/><br/>
 <% if !@my_organizations_tasks.empty? %>
 	<h3>Tasks By Organizations</h3>
-	<% curr_id = nil%>
+        <% curr_id = @current_user.id %>
 	<% @my_organizations_tasks.each do |task| %>
 			<% if curr_id == nil || curr_id  != task.organization_id %>
-					<strong><%= Organization.find(task.organization_id).name %></strong><br/>
 			<% end %>
 			
 			<%= link_to task.name, task_path(task)  %><br/>
