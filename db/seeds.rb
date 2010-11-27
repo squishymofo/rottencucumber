@@ -11,7 +11,9 @@ u.save
 u.phone_number = "4405548235"
 u.sms_enabled = true
 u.save
-org = Organization.create(:name => "my org") # create an org
+org = Organization.create(:name => "my org", :description => "desc of my org") # create an org
+u.organizations << org # this is my org
+u.save
 g = Group.create(:name => "test groups", :organization_id => org.id) # create a group within the org
 UserGroup.create(:user_id => User.find_by_phone_number("4405548235").id, :group_id => g.id) # add the me to the group
 p = Project.create(:name => "do work", :organization_id => org.id) # create a project to add some tasks to

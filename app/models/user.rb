@@ -84,6 +84,8 @@ class User < ActiveRecord::Base
     save
   end
 
+  ## should these be scopes?
+
   def active_tasks
     groups.active_tasks
   end
@@ -93,6 +95,7 @@ class User < ActiveRecord::Base
   end
 
   def most_active_organization
+    organizations.order('organizations.updated_at DESC').first
   end
 
 end

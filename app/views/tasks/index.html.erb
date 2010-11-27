@@ -2,7 +2,7 @@
 <%= link_to "+ Create New Task", new_task_path %>
 <br/><br/><br/><br/>
 <% if !@my_organizations_tasks.empty? %>
-	<h3>Tasks By Organizations</h3>
+	<h3>Tasks By Organizations (well maybe someday..)</h3>
         <% curr_id = @current_user.id %>
 	<% @my_organizations_tasks.each do |task| %>
 			<% if curr_id == nil || curr_id  != task.organization_id %>

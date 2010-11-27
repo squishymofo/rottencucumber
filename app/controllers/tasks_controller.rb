@@ -1,6 +1,7 @@
 class TasksController < ApplicationController
+
   
-  before_filter :current_user
+  before_filter :require_user
   
   def index
     # @my_organizations = Organization.where("creator_id = ?", @current_user.id)
