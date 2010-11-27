@@ -39,7 +39,7 @@ SimpleNavigation::Configuration.run do |navigation|
     end
     if @current_user
       primary.item :logout, "Logout", logout_path, :class => 'main_nav logged-in-as'
-      primary.item :profile, "#{@current_user.first_name}", root_url, :class => 'main_nav logged-in-as'
+      primary.item :profile, "#{@current_user.first_name}", edit_user_path(@current_user), :class => 'main_nav logged-in-as'
     else
       #primary.item :login, "Login", new_user_session_path, :class => 'main_nav logged-in-as', :data_remote => true
       #primary.item :sign_up, "Sign up", new_user_path, :class => 'main_nav logged-in-as', :data_remote => true

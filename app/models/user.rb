@@ -10,6 +10,10 @@ class User < ActiveRecord::Base
     def active_tasks
       @tasks ||=Task.where(:group_id => map(&:id)).order('created_at ASC').where(:status => 0)
     end
+    def users_in_group_with_me
+      @user_in_group = []
+      User.groups.each {|group|  @user_in_group += group.users }
+    end
   end
   
   acts_as_authentic do |c|
