@@ -20,3 +20,4 @@ capybara-*.html
 **.orig
 config/*.yml
 log/development.log
+log/*

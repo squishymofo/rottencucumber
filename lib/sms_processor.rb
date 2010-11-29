@@ -60,16 +60,6 @@ class SmsProcessor
     instructions
   end
 
-  def task_context_instructions(full_response_size)
-    instructions = ""
-    if full_response_size + instructions.size > SMS_MAX_LENGTH 
-      @needs_more = true
-      instructions += " or more for more"
-      instructions = "reply with the task number for a description"
-    end
-    instructions
-  end
-
   def process_tasks_msg #populates the @response_message a numbered list of tasks assigned to the user
     full_response = ""
     @user.active_tasks.each {|task| full_response += "#{task.id}. #{task.name}\n"}
