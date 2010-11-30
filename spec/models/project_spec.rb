@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Project do
   before(:each) do
     @project_count = Project.count
-    @organization = Factory.create(:organization, :name => "Communist Party", :name => "Fooood")
+    @organization = Factory.create(:organization, :name => "Communist Party", :description => "Fooood")
     @project = Factory.create(:project, :name => "Dennis Project", :description => "Gotta finish this shit", :organization_id => @organization.id)
   end
   
@@ -22,8 +22,13 @@ describe Project do
   end
   
   describe "Association with Organization" do
+    it "should return the correct organization id" do
+      @project.organization.id.should == @organization.id      
+    end
     
-    
+    it "should return the correct organization name" do
+      @project.organization.name.should == "Communist Party"
+    end
     
   end
 end
