@@ -17,3 +17,14 @@ Factory.define :group do |f|
   f.sequence(:name) { |n| "Group#{n}"}
   f.sequence(:organization_id) {|n| n}
 end
+
+Factory.define :task do |f|
+  f.sequence(:id) {|n| n}
+  f.sequence(:name) {|n| "Task#{n}"}
+  f.sequence(:description)  {|n| "Descritpion#{n}"}
+  f.sequence(:group_id) {|n| n}
+  f.sequence(:project_id) {|n| n}
+  f.due Time.now
+  f.point (rand(3) + 1)
+  f.status (rand(1))
+end
