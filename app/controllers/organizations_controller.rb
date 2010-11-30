@@ -14,6 +14,7 @@ class OrganizationsController < ApplicationController
     @org.creator_id = @current_user.id
     
     if @org.save
+      @org.users << @current_user
       flash[:notice] = "#{params[:organization][:name]} has been created"
       redirect_to :action => :index
     else
