@@ -18,6 +18,14 @@ Factory.define :group do |f|
   f.sequence(:organization_id) {|n| n}
 end
 
+Factory.define :project do |f|
+  f.sequence(:id) {|n| n}
+  f.sequence(:name) { |n| "Project#{n}"}
+  f.sequence(:description) { |n| "Project Description#{n}"}
+  f.sequence(:organization_id) {|n| n}
+  
+end
+
 Factory.define :task do |f|
   f.sequence(:id) {|n| n}
   f.sequence(:name) {|n| "Task#{n}"}
