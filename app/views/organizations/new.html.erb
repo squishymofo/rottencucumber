@@ -1,4 +1,6 @@
-<h1>Create a New Organization</h1>
+<div class='ds-title-section'>
+	<div class="ds-section-header"> Create a New Organization </div>
+</div>
 <%= flash[:error] %>
 <% form_for :organization, @org, :url => {:action => :create } do |f| %>
 	<%= f.label "Name" %>

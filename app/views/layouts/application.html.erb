@@ -39,9 +39,12 @@
 
       </script>
     <body>
-      <div id="content" class="container move-header-down">
+      <!-- <div id="content" class="container move-header-down"> -->
+			<div id ="container">
         <%= render :partial => 'layouts/header' %>
-        <%= yield %>
+				<div id="dennis-content">
+        	<%= yield %>
+				</div>
       </div>
     </body>
 </html>

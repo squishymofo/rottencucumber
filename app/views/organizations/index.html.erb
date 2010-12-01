@@ -1,25 +1,9 @@
-<span class="section-header span-18"> Organizations </span>
-<br/>
-<span class="span-6 last"> <%= link_to "+ create new organization", new_organization_path %> </span>
-<br />
+<div class='ds-title-section'>
+	<div class="ds-section-header"> Organizations </div>
+	<div class="ds-subsection"> List of organizations that you are involved in</div>
+	<div class="ds-add"> <%= link_to "+ create new organization", new_organization_path %> </div>
+</div>
 
-<br />
-<br/><br/><br/><br/>
-
-<h3>Created:</h3>
-<% @my_orgs.each do |my_org| %>
-	<%= my_org.name %>
-	<%= link_to ">>", "projects/#{my_org.id}" %>
-	<br/>
-<% end %>
-
-<br />
-
-<h3>Joined:</h3>
-<% @joined_orgs.each do |joined_org| %>
-	<%= joined_org.name %>
-	<%= link_to ">>", "projects/#{joined_org.id}" %>
-	<br/>
-<% end %>
+ORGANIZATION CONTENT HERE
 
 

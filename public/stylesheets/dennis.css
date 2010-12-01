@@ -1,15 +1,44 @@
+#html{
+	margin:0px;
+	padding:0px;
+	background:#FFF;
+}
+
 #logo{
 	height:85px;
-	background:#030;
+	background:#699;
 }
+
+#container{
+	padding:0px;
+	margin:0px;
+}
+
+.ds-title-section{
+	margin-bottom:20px;	
+}
+
+#dennis-content{
+	background:#FFF;
+	height:400px;
+	padding-left:25px;
+	padding-top:15px;
+	padding-bottom:50px;
+}
+
+.ds-section-header{
+	font-size:35px;
+}
+.ds-subsection{
+	font-size:15px;
+	color:#888;	
+}
+
 
 #navigation{
 	padding:0px;
 	margin:0px;
-	border-top:solid 2px black;
-	border-bottom:solid 2px black;
-	margin-bottom:10px;
-	background:#6C6;
+	background:#069;
 }
 
 #navigation-list{
@@ -22,7 +51,8 @@
 #navigation-list li{
 	padding:0px;
 	margin:0px;
-	font-size: 20px;
+	font-weight:bold;
+	font-size: 15px;
 	display:inline;
 	style:none;
 	padding-left:7px;
@@ -32,6 +62,8 @@
 
 #navigation-list a{
 	padding:0px;
+	padding-top:2px;
+	padding-bottom:0px;
 	margin:0px;
 	color:#000;
 	text-decoration:none;
