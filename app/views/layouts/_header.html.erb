@@ -2,20 +2,17 @@
 		<div id='logo'> 
 			Rotten Cucumber 
 		</div>
-
+		<div id='navigation'>
+			<ul id ='navigation-list'>
 		<% if !@current_user %>
-		
-		   	<li class="main_nav logged-in-as"><%= link_to "Login", new_user_session_path, :remote => true %> </li>
-		   	<li class="main_nav logged-in-as"><%= link_to "Sign up", new_user_path, :remote => true %> </li>
+		   	<li><%= link_to "Login", new_user_session_path, :remote => true %> </li>
+		   	<li><%= link_to "Sign up", new_user_path, :remote => true %> </li>
 		 	<% else %>
-				<div id='navigation'>
-					<ul id ='navigation-list'>
-						<li><a href='/organizations'>Organizations </a></li>
-						<li><a href='/projects'>My Projects</a></li>
-						<li><a href='/groups'>My Groups</a></li>	
-						<li><a href='/tasks'>My Tasks</a></li>
-					</ul>
-				</div>
+				<li><a href='/organizations'>Organizations </a></li>
+				<li><a href='/projects'>My Projects</a></li>
+				<li><a href='/groups'>My Groups</a></li>	
+				<li><a href='/tasks'>My Tasks</a></li>
 			<% end %>
-
+				</ul>
+		</div>
 </div>
