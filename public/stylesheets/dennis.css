@@ -1,0 +1,44 @@
+#logo{
+	height:85px;
+	background:#030;
+}
+
+#navigation{
+	padding:0px;
+	margin:0px;
+	border-top:solid 2px black;
+	border-bottom:solid 2px black;
+	margin-bottom:10px;
+	background:#6C6;
+}
+
+#navigation-list{
+	padding:0px;
+	margin:0px;
+	padding-left:20px;
+		
+}
+
+#navigation-list li{
+	padding:0px;
+	margin:0px;
+	font-size: 20px;
+	display:inline;
+	style:none;
+	padding-left:7px;
+	padding-right:7px;
+	border-right:dotted 1px black;
+}
+
+#navigation-list a{
+	padding:0px;
+	margin:0px;
+	color:#000;
+	text-decoration:none;
+}
+
+#navigation-list a:hover{
+	padding:0px;
+	margin:0px;
+	text-decoration:underline;
+}

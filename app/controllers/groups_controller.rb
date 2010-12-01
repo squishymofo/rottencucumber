@@ -32,6 +32,7 @@ class GroupsController < ApplicationController
   end
 
   def show
+    
   end
 
 end

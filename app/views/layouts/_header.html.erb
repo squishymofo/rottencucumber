@@ -1,9 +1,21 @@
-<h2> LOGO </h2>
-<div class="span-20 last">
- <%= render_navigation :level => 1 %>
- <% unless @current_user %>
-   <li class="main_nav logged-in-as"><%= link_to "Login", new_user_session_path, :remote => true %> </li>
-   <li class="main_nav logged-in-as"><%= link_to "Sign up", new_user_path, :remote => true %> </li>
- <% end %>
+<div id='header'>
+		<div id='logo'> 
+			Rotten Cucumber 
+		</div>
+		<div>
+		<% if !@current_user %>
+		
+		   	<li class="main_nav logged-in-as"><%= link_to "Login", new_user_session_path, :remote => true %> </li>
+		   	<li class="main_nav logged-in-as"><%= link_to "Sign up", new_user_path, :remote => true %> </li>
+		 	<% else %>
+				<div id='navigation'>
+					<ul id ='navigation-list'>
+						<li><a href='/organizations'>Organizations </a></li>
+						<li><a href='/projects'>My Projects</a></li>
+						<li><a href='/groups'>My Groups</a></li>	
+						<li><a href='/tasks'>My Tasks</a></li>
+					</ul>
+				</div>
+			<% end %>
+	</div>
 </div>
-
