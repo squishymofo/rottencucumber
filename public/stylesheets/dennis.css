@@ -29,6 +29,29 @@
 .ds-section-header{
 	font-size:35px;
 }
+
+.ds-add{
+	vertical-align:middle;
+	margin-top:10px;
+	vertical-align:middle;	
+	
+}
+.icon{
+	float:left;	
+}
+
+.add-link a{
+	text-decoration:none;	
+}
+
+.add-link{
+	text-decoration:none;
+	font-weight:bold;
+	font-size:12px;
+	margin-left:22px;
+	
+}
+
 .ds-subsection{
 	font-size:15px;
 	color:#888;	

@@ -1,7 +1,16 @@
 <div class='ds-title-section'>
 	<div class="ds-section-header"> Organizations </div>
 	<div class="ds-subsection"> List of organizations that you are involved in</div>
-	<div class="ds-add"> <%= link_to "Create new organization", new_organization_path %> </div>
+	<div class="ds-add">
+		<div class='icon'> 
+			<a href='organizations/new'>
+			<%= image_tag "plus-sign-blue.png"%>
+			</a>
+		</div>
+		<div class='add-link'>
+			<%= link_to "Create new organization", new_organization_path %> 	
+		</div>
+	</div>
 </div>
 
 <div id='my-orgs'>

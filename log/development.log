@@ -48650,3 +48650,465 @@ Started GET "/organizations" for 127.0.0.1 at Wed Dec 01 13:40:06 -0800 2010
 Rendered layouts/_header.html.erb (0.5ms)
 Rendered organizations/index.html.erb within layouts/application (10.4ms)
 Completed 200 OK in 224ms (Views: 14.4ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/organizations" for 127.0.0.1 at Wed Dec 01 13:57:04 -0800 2010
+  Processing by OrganizationsController#index as HTML
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-12-01 21:57:04', '127.0.0.1', '2010-12-01 21:57:04', '/organizations')
+  [1m[36mSQL (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mOrganization Load (0.3ms)[0m  SELECT `organizations`.* FROM `organizations` WHERE (creator_id = 1)
+  [1m[36mOrganization Load (0.3ms)[0m  [1mSELECT `organizations`.* FROM `organizations` INNER JOIN `user_organizations` ON `organizations`.id = `user_organizations`.organization_id WHERE ((`user_organizations`.user_id = 1))[0m
+Rendered layouts/_header.html.erb (0.6ms)
+Rendered organizations/index.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 235ms (Views: 15.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/organizations" for 127.0.0.1 at Wed Dec 01 15:29:26 -0800 2010
+  Processing by OrganizationsController#index as HTML
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-12-01 23:29:26', '127.0.0.1', '2010-12-01 23:29:26', '/organizations')[0m
+  [1m[35mSQL (22.2ms)[0m  COMMIT
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mOrganization Load (0.3ms)[0m  [1mSELECT `organizations`.* FROM `organizations` WHERE (creator_id = 1)[0m
+  [1m[35mOrganization Load (0.3ms)[0m  SELECT `organizations`.* FROM `organizations` INNER JOIN `user_organizations` ON `organizations`.id = `user_organizations`.organization_id WHERE ((`user_organizations`.user_id = 1))
+Rendered layouts/_header.html.erb (0.5ms)
+Rendered organizations/index.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 272ms (Views: 15.4ms | ActiveRecord: 24.1ms)
+
+
+Started GET "/organizations" for 127.0.0.1 at Wed Dec 01 15:30:29 -0800 2010
+  Processing by OrganizationsController#index as HTML
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-12-01 23:30:29', '127.0.0.1', '2010-12-01 23:30:29', '/organizations')
+  [1m[36mSQL (26.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mOrganization Load (0.3ms)[0m  SELECT `organizations`.* FROM `organizations` WHERE (creator_id = 1)
+  [1m[36mOrganization Load (0.3ms)[0m  [1mSELECT `organizations`.* FROM `organizations` INNER JOIN `user_organizations` ON `organizations`.id = `user_organizations`.organization_id WHERE ((`user_organizations`.user_id = 1))[0m
+Rendered layouts/_header.html.erb (0.6ms)
+Rendered organizations/index.html.erb within layouts/application (121.4ms)
+Completed 200 OK in 261ms (Views: 125.5ms | ActiveRecord: 28.8ms)
+
+
+Started GET "/organizations" for 127.0.0.1 at Wed Dec 01 15:31:36 -0800 2010
+  Processing by OrganizationsController#index as HTML
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-12-01 23:31:36', '127.0.0.1', '2010-12-01 23:31:36', '/organizations')[0m
+  [1m[35mSQL (1.7ms)[0m  COMMIT
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mOrganization Load (0.3ms)[0m  [1mSELECT `organizations`.* FROM `organizations` WHERE (creator_id = 1)[0m
+  [1m[35mOrganization Load (0.3ms)[0m  SELECT `organizations`.* FROM `organizations` INNER JOIN `user_organizations` ON `organizations`.id = `user_organizations`.organization_id WHERE ((`user_organizations`.user_id = 1))
+Rendered layouts/_header.html.erb (0.5ms)
+Rendered organizations/index.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 223ms (Views: 15.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/organizations" for 127.0.0.1 at Wed Dec 01 15:31:37 -0800 2010
+  Processing by OrganizationsController#index as HTML
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-12-01 23:31:37', '127.0.0.1', '2010-12-01 23:31:37', '/organizations')
+  [1m[36mSQL (26.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mOrganization Load (0.3ms)[0m  SELECT `organizations`.* FROM `organizations` WHERE (creator_id = 1)
+  [1m[36mOrganization Load (0.3ms)[0m  [1mSELECT `organizations`.* FROM `organizations` INNER JOIN `user_organizations` ON `organizations`.id = `user_organizations`.organization_id WHERE ((`user_organizations`.user_id = 1))[0m
+Rendered layouts/_header.html.erb (0.4ms)
+Rendered organizations/index.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 244ms (Views: 14.7ms | ActiveRecord: 28.1ms)
+
+
+Started GET "/organizations" for 127.0.0.1 at Wed Dec 01 15:33:37 -0800 2010
+  Processing by OrganizationsController#index as HTML
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-12-01 23:33:37', '127.0.0.1', '2010-12-01 23:33:37', '/organizations')[0m
+  [1m[35mSQL (22.3ms)[0m  COMMIT
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mOrganization Load (0.3ms)[0m  [1mSELECT `organizations`.* FROM `organizations` WHERE (creator_id = 1)[0m
+  [1m[35mOrganization Load (0.3ms)[0m  SELECT `organizations`.* FROM `organizations` INNER JOIN `user_organizations` ON `organizations`.id = `user_organizations`.organization_id WHERE ((`user_organizations`.user_id = 1))
+Rendered layouts/_header.html.erb (0.5ms)
+Rendered organizations/index.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 263ms (Views: 15.7ms | ActiveRecord: 24.2ms)
+
+
+Started GET "/organizations" for 127.0.0.1 at Wed Dec 01 15:33:57 -0800 2010
+  Processing by OrganizationsController#index as HTML
+  [1m[36mSQL (36.5ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (41.8ms)[0m  INSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-12-01 23:33:57', '127.0.0.1', '2010-12-01 23:33:57', '/organizations')
+  [1m[36mSQL (8.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (4.8ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mOrganization Load (0.4ms)[0m  SELECT `organizations`.* FROM `organizations` WHERE (creator_id = 1)
+  [1m[36mOrganization Load (0.3ms)[0m  [1mSELECT `organizations`.* FROM `organizations` INNER JOIN `user_organizations` ON `organizations`.id = `user_organizations`.organization_id WHERE ((`user_organizations`.user_id = 1))[0m
+Rendered layouts/_header.html.erb (0.5ms)
+Rendered organizations/index.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 467ms (Views: 16.3ms | ActiveRecord: 92.1ms)
+
+
+Started GET "/organizations" for 127.0.0.1 at Wed Dec 01 15:33:58 -0800 2010
+  Processing by OrganizationsController#index as HTML
+  [1m[35mSQL (0.3ms)[0m  BEGIN
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-12-01 23:33:58', '127.0.0.1', '2010-12-01 23:33:58', '/organizations')[0m
+  [1m[35mSQL (1.8ms)[0m  COMMIT
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mOrganization Load (0.3ms)[0m  [1mSELECT `organizations`.* FROM `organizations` WHERE (creator_id = 1)[0m
+  [1m[35mOrganization Load (0.3ms)[0m  SELECT `organizations`.* FROM `organizations` INNER JOIN `user_organizations` ON `organizations`.id = `user_organizations`.organization_id WHERE ((`user_organizations`.user_id = 1))
+Rendered layouts/_header.html.erb (0.7ms)
+Rendered organizations/index.html.erb within layouts/application (17.9ms)
+Completed 200 OK in 257ms (Views: 137.8ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/organizations" for 127.0.0.1 at Wed Dec 01 15:35:03 -0800 2010
+  Processing by OrganizationsController#index as HTML
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-12-01 23:35:03', '127.0.0.1', '2010-12-01 23:35:03', '/organizations')
+  [1m[36mSQL (1.9ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mOrganization Load (0.3ms)[0m  SELECT `organizations`.* FROM `organizations` WHERE (creator_id = 1)
+  [1m[36mOrganization Load (0.3ms)[0m  [1mSELECT `organizations`.* FROM `organizations` INNER JOIN `user_organizations` ON `organizations`.id = `user_organizations`.organization_id WHERE ((`user_organizations`.user_id = 1))[0m
+Rendered layouts/_header.html.erb (0.5ms)
+Rendered organizations/index.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 268ms (Views: 28.5ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/organizations" for 127.0.0.1 at Wed Dec 01 15:35:40 -0800 2010
+  Processing by OrganizationsController#index as HTML
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (2.4ms)[0m  [1mINSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-12-01 23:35:40', '127.0.0.1', '2010-12-01 23:35:40', '/organizations')[0m
+  [1m[35mSQL (4.1ms)[0m  COMMIT
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mOrganization Load (0.3ms)[0m  [1mSELECT `organizations`.* FROM `organizations` WHERE (creator_id = 1)[0m
+  [1m[35mOrganization Load (0.4ms)[0m  SELECT `organizations`.* FROM `organizations` INNER JOIN `user_organizations` ON `organizations`.id = `user_organizations`.organization_id WHERE ((`user_organizations`.user_id = 1))
+Rendered layouts/_header.html.erb (0.5ms)
+Rendered organizations/index.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 239ms (Views: 14.7ms | ActiveRecord: 8.4ms)
+
+
+Started GET "/organizations" for 127.0.0.1 at Wed Dec 01 15:36:05 -0800 2010
+  Processing by OrganizationsController#index as HTML
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-12-01 23:36:05', '127.0.0.1', '2010-12-01 23:36:05', '/organizations')
+  [1m[36mSQL (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mOrganization Load (0.3ms)[0m  SELECT `organizations`.* FROM `organizations` WHERE (creator_id = 1)
+  [1m[36mOrganization Load (0.3ms)[0m  [1mSELECT `organizations`.* FROM `organizations` INNER JOIN `user_organizations` ON `organizations`.id = `user_organizations`.organization_id WHERE ((`user_organizations`.user_id = 1))[0m
+Rendered layouts/_header.html.erb (0.6ms)
+Rendered organizations/index.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 238ms (Views: 16.7ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/organizations" for 127.0.0.1 at Wed Dec 01 15:36:10 -0800 2010
+  Processing by OrganizationsController#index as HTML
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-12-01 23:36:10', '127.0.0.1', '2010-12-01 23:36:10', '/organizations')[0m
+  [1m[35mSQL (1.5ms)[0m  COMMIT
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mOrganization Load (0.3ms)[0m  [1mSELECT `organizations`.* FROM `organizations` WHERE (creator_id = 1)[0m
+  [1m[35mOrganization Load (0.3ms)[0m  SELECT `organizations`.* FROM `organizations` INNER JOIN `user_organizations` ON `organizations`.id = `user_organizations`.organization_id WHERE ((`user_organizations`.user_id = 1))
+Rendered layouts/_header.html.erb (0.5ms)
+Rendered organizations/index.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 219ms (Views: 15.4ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/organizations" for 127.0.0.1 at Wed Dec 01 15:36:39 -0800 2010
+  Processing by OrganizationsController#index as HTML
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-12-01 23:36:39', '127.0.0.1', '2010-12-01 23:36:39', '/organizations')
+  [1m[36mSQL (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mOrganization Load (0.3ms)[0m  SELECT `organizations`.* FROM `organizations` WHERE (creator_id = 1)
+  [1m[36mOrganization Load (0.3ms)[0m  [1mSELECT `organizations`.* FROM `organizations` INNER JOIN `user_organizations` ON `organizations`.id = `user_organizations`.organization_id WHERE ((`user_organizations`.user_id = 1))[0m
+Rendered layouts/_header.html.erb (0.5ms)
+Rendered organizations/index.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 220ms (Views: 15.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/organizations" for 127.0.0.1 at Wed Dec 01 15:37:50 -0800 2010
+  Processing by OrganizationsController#index as HTML
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-12-01 23:37:50', '127.0.0.1', '2010-12-01 23:37:50', '/organizations')[0m
+  [1m[35mSQL (0.5ms)[0m  COMMIT
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mOrganization Load (0.3ms)[0m  [1mSELECT `organizations`.* FROM `organizations` WHERE (creator_id = 1)[0m
+  [1m[35mOrganization Load (0.3ms)[0m  SELECT `organizations`.* FROM `organizations` INNER JOIN `user_organizations` ON `organizations`.id = `user_organizations`.organization_id WHERE ((`user_organizations`.user_id = 1))
+Rendered layouts/_header.html.erb (0.5ms)
+Rendered organizations/index.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 311ms (Views: 15.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/organizations" for 127.0.0.1 at Wed Dec 01 15:39:46 -0800 2010
+  Processing by OrganizationsController#index as HTML
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (2.2ms)[0m  INSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-12-01 23:39:47', '127.0.0.1', '2010-12-01 23:39:47', '/organizations')
+  [1m[36mSQL (25.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mOrganization Load (0.6ms)[0m  SELECT `organizations`.* FROM `organizations` WHERE (creator_id = 1)
+  [1m[36mOrganization Load (0.3ms)[0m  [1mSELECT `organizations`.* FROM `organizations` INNER JOIN `user_organizations` ON `organizations`.id = `user_organizations`.organization_id WHERE ((`user_organizations`.user_id = 1))[0m
+Rendered layouts/_header.html.erb (0.5ms)
+Rendered organizations/index.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 278ms (Views: 35.9ms | ActiveRecord: 28.9ms)
+
+
+Started GET "/organizations" for 127.0.0.1 at Wed Dec 01 15:40:17 -0800 2010
+  Processing by OrganizationsController#index as HTML
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-12-01 23:40:17', '127.0.0.1', '2010-12-01 23:40:17', '/organizations')[0m
+  [1m[35mSQL (0.5ms)[0m  COMMIT
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mOrganization Load (0.3ms)[0m  [1mSELECT `organizations`.* FROM `organizations` WHERE (creator_id = 1)[0m
+  [1m[35mOrganization Load (0.3ms)[0m  SELECT `organizations`.* FROM `organizations` INNER JOIN `user_organizations` ON `organizations`.id = `user_organizations`.organization_id WHERE ((`user_organizations`.user_id = 1))
+Rendered layouts/_header.html.erb (0.6ms)
+Rendered organizations/index.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 257ms (Views: 16.3ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/organizations" for 127.0.0.1 at Wed Dec 01 15:40:33 -0800 2010
+  Processing by OrganizationsController#index as HTML
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.6ms)[0m  INSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-12-01 23:40:33', '127.0.0.1', '2010-12-01 23:40:33', '/organizations')
+  [1m[36mSQL (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mOrganization Load (0.3ms)[0m  SELECT `organizations`.* FROM `organizations` WHERE (creator_id = 1)
+  [1m[36mOrganization Load (0.3ms)[0m  [1mSELECT `organizations`.* FROM `organizations` INNER JOIN `user_organizations` ON `organizations`.id = `user_organizations`.organization_id WHERE ((`user_organizations`.user_id = 1))[0m
+Rendered layouts/_header.html.erb (0.5ms)
+Rendered organizations/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 221ms (Views: 15.1ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/organizations" for 127.0.0.1 at Wed Dec 01 15:40:42 -0800 2010
+  Processing by OrganizationsController#index as HTML
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-12-01 23:40:42', '127.0.0.1', '2010-12-01 23:40:42', '/organizations')[0m
+  [1m[35mSQL (1.4ms)[0m  COMMIT
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mOrganization Load (0.3ms)[0m  [1mSELECT `organizations`.* FROM `organizations` WHERE (creator_id = 1)[0m
+  [1m[35mOrganization Load (0.3ms)[0m  SELECT `organizations`.* FROM `organizations` INNER JOIN `user_organizations` ON `organizations`.id = `user_organizations`.organization_id WHERE ((`user_organizations`.user_id = 1))
+Rendered layouts/_header.html.erb (0.5ms)
+Rendered organizations/index.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 222ms (Views: 15.6ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/organizations" for 127.0.0.1 at Wed Dec 01 15:40:44 -0800 2010
+  Processing by OrganizationsController#index as HTML
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-12-01 23:40:44', '127.0.0.1', '2010-12-01 23:40:44', '/organizations')
+  [1m[36mSQL (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mOrganization Load (0.3ms)[0m  SELECT `organizations`.* FROM `organizations` WHERE (creator_id = 1)
+  [1m[36mOrganization Load (0.3ms)[0m  [1mSELECT `organizations`.* FROM `organizations` INNER JOIN `user_organizations` ON `organizations`.id = `user_organizations`.organization_id WHERE ((`user_organizations`.user_id = 1))[0m
+Rendered layouts/_header.html.erb (0.5ms)
+Rendered organizations/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 220ms (Views: 15.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/organizations" for 127.0.0.1 at Wed Dec 01 15:40:48 -0800 2010
+  Processing by OrganizationsController#index as HTML
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-12-01 23:40:48', '127.0.0.1', '2010-12-01 23:40:48', '/organizations')[0m
+  [1m[35mSQL (0.5ms)[0m  COMMIT
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mOrganization Load (0.3ms)[0m  [1mSELECT `organizations`.* FROM `organizations` WHERE (creator_id = 1)[0m
+  [1m[35mOrganization Load (0.3ms)[0m  SELECT `organizations`.* FROM `organizations` INNER JOIN `user_organizations` ON `organizations`.id = `user_organizations`.organization_id WHERE ((`user_organizations`.user_id = 1))
+Rendered layouts/_header.html.erb (0.5ms)
+Rendered organizations/index.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 225ms (Views: 14.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/organizations" for 127.0.0.1 at Wed Dec 01 15:41:07 -0800 2010
+  Processing by OrganizationsController#index as HTML
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-12-01 23:41:07', '127.0.0.1', '2010-12-01 23:41:07', '/organizations')
+  [1m[36mSQL (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mOrganization Load (0.3ms)[0m  SELECT `organizations`.* FROM `organizations` WHERE (creator_id = 1)
+  [1m[36mOrganization Load (0.3ms)[0m  [1mSELECT `organizations`.* FROM `organizations` INNER JOIN `user_organizations` ON `organizations`.id = `user_organizations`.organization_id WHERE ((`user_organizations`.user_id = 1))[0m
+Rendered layouts/_header.html.erb (0.5ms)
+Rendered organizations/index.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 231ms (Views: 15.3ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/organizations" for 127.0.0.1 at Wed Dec 01 15:41:12 -0800 2010
+  Processing by OrganizationsController#index as HTML
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-12-01 23:41:12', '127.0.0.1', '2010-12-01 23:41:12', '/organizations')[0m
+  [1m[35mSQL (0.4ms)[0m  COMMIT
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mOrganization Load (0.3ms)[0m  [1mSELECT `organizations`.* FROM `organizations` WHERE (creator_id = 1)[0m
+  [1m[35mOrganization Load (0.3ms)[0m  SELECT `organizations`.* FROM `organizations` INNER JOIN `user_organizations` ON `organizations`.id = `user_organizations`.organization_id WHERE ((`user_organizations`.user_id = 1))
+Rendered layouts/_header.html.erb (0.5ms)
+Rendered organizations/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 228ms (Views: 15.0ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/organizations" for 127.0.0.1 at Wed Dec 01 15:41:15 -0800 2010
+  Processing by OrganizationsController#index as HTML
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-12-01 23:41:15', '127.0.0.1', '2010-12-01 23:41:15', '/organizations')
+  [1m[36mSQL (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mOrganization Load (0.3ms)[0m  SELECT `organizations`.* FROM `organizations` WHERE (creator_id = 1)
+  [1m[36mOrganization Load (0.3ms)[0m  [1mSELECT `organizations`.* FROM `organizations` INNER JOIN `user_organizations` ON `organizations`.id = `user_organizations`.organization_id WHERE ((`user_organizations`.user_id = 1))[0m
+Rendered layouts/_header.html.erb (0.5ms)
+Rendered organizations/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 106ms (Views: 15.4ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/organizations" for 127.0.0.1 at Wed Dec 01 15:41:55 -0800 2010
+  Processing by OrganizationsController#index as HTML
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-12-01 23:41:55', '127.0.0.1', '2010-12-01 23:41:55', '/organizations')[0m
+  [1m[35mSQL (0.3ms)[0m  COMMIT
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mOrganization Load (0.3ms)[0m  [1mSELECT `organizations`.* FROM `organizations` WHERE (creator_id = 1)[0m
+  [1m[35mOrganization Load (0.3ms)[0m  SELECT `organizations`.* FROM `organizations` INNER JOIN `user_organizations` ON `organizations`.id = `user_organizations`.organization_id WHERE ((`user_organizations`.user_id = 1))
+Rendered layouts/_header.html.erb (0.5ms)
+Rendered organizations/index.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 240ms (Views: 15.5ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/organizations" for 127.0.0.1 at Wed Dec 01 15:41:57 -0800 2010
+  Processing by OrganizationsController#index as HTML
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-12-01 23:41:58', '127.0.0.1', '2010-12-01 23:41:58', '/organizations')
+  [1m[36mSQL (0.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mOrganization Load (0.3ms)[0m  SELECT `organizations`.* FROM `organizations` WHERE (creator_id = 1)
+  [1m[36mOrganization Load (0.3ms)[0m  [1mSELECT `organizations`.* FROM `organizations` INNER JOIN `user_organizations` ON `organizations`.id = `user_organizations`.organization_id WHERE ((`user_organizations`.user_id = 1))[0m
+Rendered layouts/_header.html.erb (0.5ms)
+Rendered organizations/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 226ms (Views: 15.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/organizations" for 127.0.0.1 at Wed Dec 01 15:42:20 -0800 2010
+  Processing by OrganizationsController#index as HTML
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (2.1ms)[0m  [1mINSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-12-01 23:42:20', '127.0.0.1', '2010-12-01 23:42:20', '/organizations')[0m
+  [1m[35mSQL (0.5ms)[0m  COMMIT
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mOrganization Load (0.3ms)[0m  [1mSELECT `organizations`.* FROM `organizations` WHERE (creator_id = 1)[0m
+  [1m[35mOrganization Load (0.3ms)[0m  SELECT `organizations`.* FROM `organizations` INNER JOIN `user_organizations` ON `organizations`.id = `user_organizations`.organization_id WHERE ((`user_organizations`.user_id = 1))
+Rendered layouts/_header.html.erb (0.5ms)
+Rendered organizations/index.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 218ms (Views: 15.3ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/organizations" for 127.0.0.1 at Wed Dec 01 15:42:35 -0800 2010
+  Processing by OrganizationsController#index as HTML
+  [1m[36mSQL (0.7ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (3.5ms)[0m  INSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-12-01 23:42:35', '127.0.0.1', '2010-12-01 23:42:35', '/organizations')
+  [1m[36mSQL (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (1.5ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mOrganization Load (0.3ms)[0m  SELECT `organizations`.* FROM `organizations` WHERE (creator_id = 1)
+  [1m[36mOrganization Load (0.3ms)[0m  [1mSELECT `organizations`.* FROM `organizations` INNER JOIN `user_organizations` ON `organizations`.id = `user_organizations`.organization_id WHERE ((`user_organizations`.user_id = 1))[0m
+Rendered layouts/_header.html.erb (0.5ms)
+Rendered organizations/index.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 242ms (Views: 15.4ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/organizations" for 127.0.0.1 at Wed Dec 01 15:43:13 -0800 2010
+  Processing by OrganizationsController#index as HTML
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (1.9ms)[0m  [1mINSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-12-01 23:43:13', '127.0.0.1', '2010-12-01 23:43:13', '/organizations')[0m
+  [1m[35mSQL (0.5ms)[0m  COMMIT
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mOrganization Load (0.3ms)[0m  [1mSELECT `organizations`.* FROM `organizations` WHERE (creator_id = 1)[0m
+  [1m[35mOrganization Load (0.3ms)[0m  SELECT `organizations`.* FROM `organizations` INNER JOIN `user_organizations` ON `organizations`.id = `user_organizations`.organization_id WHERE ((`user_organizations`.user_id = 1))
+Rendered layouts/_header.html.erb (0.5ms)
+Rendered organizations/index.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 113ms (Views: 14.4ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/organizations" for 127.0.0.1 at Wed Dec 01 15:43:45 -0800 2010
+  Processing by OrganizationsController#index as HTML
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (2.9ms)[0m  INSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-12-01 23:43:45', '127.0.0.1', '2010-12-01 23:43:45', '/organizations')
+  [1m[36mSQL (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendered organizations/index.html.erb within layouts/application (452.3ms)
+Completed   in 662ms
+
+ActionView::Template::Error (undefined method `symbolize_keys!' for "/organizations/new":String):
+    3: 	<div class="ds-subsection"> List of organizations that you are involved in</div>
+    4: 	<div class="ds-add">
+    5: 		<div class='icon'> 
+    6: 			<%= link_to image_tag "plus-sign-blue.png", new_organization_path%>
+    7: 		</div>
+    8: 		<div class='add-link'>
+    9: 			<%= link_to "Create new organization", new_organization_path %> 	
+  app/views/organizations/index.html.erb:6:in `_app_views_organizations_index_html_erb___1602100848_2192879520_0'
+
+Rendered /Users/denniss/.rvm/gems/ruby-1.8.7-p174/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  [1m[35mOrganization Load (0.3ms)[0m  SELECT `organizations`.* FROM `organizations` WHERE (creator_id = 1)
+  [1m[36mOrganization Load (0.4ms)[0m  [1mSELECT `organizations`.* FROM `organizations` INNER JOIN `user_organizations` ON `organizations`.id = `user_organizations`.organization_id WHERE ((`user_organizations`.user_id = 1))[0m
+Rendered /Users/denniss/.rvm/gems/ruby-1.8.7-p174/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (52.5ms)
+Rendered /Users/denniss/.rvm/gems/ruby-1.8.7-p174/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (59.7ms)
+
+
+Started GET "/organizations" for 127.0.0.1 at Wed Dec 01 15:44:18 -0800 2010
+  Processing by OrganizationsController#index as HTML
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (1.8ms)[0m  [1mdescribe `user_actions`[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-12-01 23:44:18', '127.0.0.1', '2010-12-01 23:44:18', '/organizations')
+  [1m[36mSQL (0.9ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mOrganization Load (0.3ms)[0m  SELECT `organizations`.* FROM `organizations` WHERE (creator_id = 1)
+  [1m[36mOrganization Load (0.3ms)[0m  [1mSELECT `organizations`.* FROM `organizations` INNER JOIN `user_organizations` ON `organizations`.id = `user_organizations`.organization_id WHERE ((`user_organizations`.user_id = 1))[0m
+Rendered layouts/_header.html.erb (0.5ms)
+Rendered organizations/index.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 67ms (Views: 14.5ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/organizations/new" for 127.0.0.1 at Wed Dec 01 15:44:21 -0800 2010
+  Processing by OrganizationsController#new as HTML
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-12-01 23:44:21', '127.0.0.1', '2010-12-01 23:44:21', '/organizations/new')[0m
+  [1m[35mSQL (0.5ms)[0m  COMMIT
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+DEPRECATION WARNING: Using form_for(:name, @resource) is deprecated. Please use form_for(@resource, :as => :name) instead. (called from _app_views_organizations_new_html_erb___658349834_2191136580_0 at /Users/denniss/Sites/rottencucumber/app/views/organizations/new.html.erb:5)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_organizations_new_html_erb___658349834_2191136580_0 at /Users/denniss/Sites/rottencucumber/app/views/organizations/new.html.erb:5)
+Rendered layouts/_header.html.erb (0.5ms)
+Rendered organizations/new.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 227ms (Views: 16.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/organizations" for 127.0.0.1 at Wed Dec 01 15:45:14 -0800 2010
+  Processing by OrganizationsController#index as HTML
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (2.1ms)[0m  INSERT INTO `user_actions` (`created_at`, `ip`, `updated_at`, `url`) VALUES ('2010-12-01 23:45:14', '127.0.0.1', '2010-12-01 23:45:14', '/organizations')
+  [1m[36mSQL (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mOrganization Load (0.3ms)[0m  SELECT `organizations`.* FROM `organizations` WHERE (creator_id = 1)
+  [1m[36mOrganization Load (0.3ms)[0m  [1mSELECT `organizations`.* FROM `organizations` INNER JOIN `user_organizations` ON `organizations`.id = `user_organizations`.organization_id WHERE ((`user_organizations`.user_id = 1))[0m
+Rendered layouts/_header.html.erb (0.7ms)
+Rendered organizations/index.html.erb within layouts/application (121.5ms)
+Completed 200 OK in 219ms (Views: 125.6ms | ActiveRecord: 3.7ms)
