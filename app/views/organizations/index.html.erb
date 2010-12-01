@@ -1,9 +1,20 @@
 <div class='ds-title-section'>
 	<div class="ds-section-header"> Organizations </div>
 	<div class="ds-subsection"> List of organizations that you are involved in</div>
-	<div class="ds-add"> <%= link_to "+ create new organization", new_organization_path %> </div>
+	<div class="ds-add"> <%= link_to "Create new organization", new_organization_path %> </div>
 </div>
 
-ORGANIZATION CONTENT HERE
+<div id='my-orgs'>
+	<div class='ds-subtitle'>
+		Created
+	</div>
+	<%= debug(@my_orgs) %>
+</id>
+<div id='joined-orgs'>
+	<div class='ds-subtitle'>
+		Created
+	</div>
+	<%= debug(@joined_orgs)%>
+</div>
 
 

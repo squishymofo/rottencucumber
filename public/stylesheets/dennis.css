@@ -34,6 +34,10 @@
 	color:#888;	
 }
 
+.ds-subtitle{
+	font-weight:600;
+	font-size:15px;
+}
 
 #navigation{
 	padding:0px;
@@ -65,12 +69,12 @@
 	padding-top:2px;
 	padding-bottom:0px;
 	margin:0px;
-	color:#000;
+	color:#FFF;
 	text-decoration:none;
 }
 
 #navigation-list a:hover{
 	padding:0px;
 	margin:0px;
-	text-decoration:underline;
+	color:#FF9;
 }
