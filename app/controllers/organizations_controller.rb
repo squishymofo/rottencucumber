@@ -29,7 +29,9 @@ class OrganizationsController < ApplicationController
   end
 
   def show
-    @task = Task.find params[:id]
+    @org = Organization.find params[:id]
+    @creator = User.find @org.creator_id
+    @projects = @org.projects
   end
   
 end

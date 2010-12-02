@@ -1,7 +1,39 @@
-<h1>About <%= @org.name %></h1>
+<script type="text/javascript">
+	$(function() 
+	    { 
+	        $("table").tablesorter({sortList:[[0,0],[2,1]], widgets: ['zebra']}); 
+	    } 
+	); 
+</script>
 
-<p>
-	<%= @org.description %>
-</p>
+<div class='ds-title-section'>
+	<div class="ds-section-header"> <%= @org.name %> </div>
+	<div class="ds-subsection">Created by:  <%= @creator.first_name.capitalize + " " + @creator.last_name.capitalize%></div>
+	<div class='ds-add'>
+		<% if @org.creator_id == @current_user.id %>
+		<div class='icon'> 
+			<a href=<%= "/projects/new/#{@org.id}" %>>
+			<%= image_tag "plus-sign-blue.png"%>
+			</a>
+		</div>
+	
+		<div class='add-link'>
+			<%= link_to "Start a new project", "/projects/new/#{@org.id}" %> 	
+		</div>
+	</div>
+	<% end%> 
+</div>
 
-
+<div id='current-projects'>
+	<div class='ds-subtitle'>
+		Projects
+	</div>
+	<div id='projects-list'>
+		<% if @projects.empty? %>
+			No project in progress
+		<% else %>
+			<table id='projects-table' class='tablesorter'>
+			</table>
+		<% end %>
+	</div>
+</div>

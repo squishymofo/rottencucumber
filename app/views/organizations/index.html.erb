@@ -49,7 +49,7 @@
 				
 			<% @joined_orgs.each do |org| %>
 				<tr class= <%= count.even? ? 'even' : 'odd' %> >
-					<td><%= org.name %></td>
+					<td><%= link_to org.name, organization_path(org)%></td>
 					<td><%= org.description %></td>
 					<% if org.creator_id == @current_user.id %>
 							<td class='you'> <%= @current_user.first_name.capitalize + " " + @current_user.last_name.capitalize %></td>

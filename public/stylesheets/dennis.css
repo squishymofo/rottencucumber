@@ -117,9 +117,20 @@
 	background-color:#FFFFFF;
 }
 
+
 .you{
 	color:#039;
 	font-weight:bold;	
+}
+
+#organizations a{
+	text-decoration:none;
+	color:#000;	
+}
+
+#organizations a:hover{
+	text-decoration:none;
+	color:#039;	
 }
 
 #organizations-table th{
@@ -131,4 +142,15 @@
 #organizations-table{
 	border:dotted #DDD thin;
 	width:75%;
+}
+
+#new-organization-table{
+	width:50%;	
+}
+
+#organization_description{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:11px;
+	width:210px;
+	height:75px;	
 }
