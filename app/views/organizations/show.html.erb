@@ -25,15 +25,38 @@
 </div>
 
 <div id='current-projects'>
-	<div class='ds-subtitle'>
+	<div class='ds-subtitle content-subtitle'>
 		Projects
 	</div>
-	<div id='projects-list'>
+	<div id='projects-org-list'>
 		<% if @projects.empty? %>
 			No project in progress
 		<% else %>
-			<table id='projects-table' class='tablesorter'>
+			<table id='projects-org-table' class='tablesorter'>
+				<thead>
+					<tr>
+						<th>Project Name</th>
+						<th>Short Description</th>
+						<th>Progress</th>
+					</tr>
+				</thead>
+				<tbody>
+					<% @projects.each do |project| %>
+							<tr>
+								<td><%= project.name %></td>
+								<td><%= project.description %></td>
+								<td><%= "#{rand(100)}%" %></td>
+							</tr>
+					<% end %>
+				</tbody>
+
 			</table>
 		<% end %>
 	</div>
 </div>
+
+
+
+
+
+

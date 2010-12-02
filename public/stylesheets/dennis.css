@@ -68,6 +68,10 @@
 	font-size:15px;
 }
 
+.content-subtitle{
+	padding-bottom:5px;	
+}
+
 #navigation{
 	padding:0px;
 	margin:0px;
@@ -117,6 +121,15 @@
 	background-color:#FFFFFF;
 }
 
+#projects-org-table .odd{
+	background-color:#E0FFD8;	
+}
+
+#projects-org-table .even{
+	background-color:#FFFFFF;
+}
+
+
 
 .you{
 	color:#039;
@@ -133,13 +146,17 @@
 	color:#039;	
 }
 
-#organizations-table th{
+#organizations-table th, #projects-org-table th{
 	background:#DBE8FF;
 	border-bottom:thin dotted #666;
 	border-top:thin dotted #666;
 }
 
-#organizations-table{
+#projects-org-table th{
+	background:#A8FF90;
+}
+
+#organizations-table, #projects-org-table {
 	border:dotted #DDD thin;
 	width:75%;
 }
