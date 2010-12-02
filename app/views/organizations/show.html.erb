@@ -16,9 +16,18 @@
 			<%= image_tag "plus-sign-blue.png"%>
 			</a>
 		</div>
-	
 		<div class='add-link'>
 			<%= link_to "Start a new project", "/projects/new/#{@org.id}" %> 	
+		</div>
+	</div>
+	<div class="ds-add">
+		<div class='icon'> 
+			<a href='organizations/new'>
+			<%= image_tag "plus-sign-blue.png"%>
+			</a>
+		</div>
+		<div class='add-link'>
+			<%= link_to "Create a new group", new_organization_path %> 	
 		</div>
 	</div>
 	<% end%> 
@@ -54,6 +63,38 @@
 	</div>
 </div>
 
+
+<div id='groups-org'>
+	
+	<div class='ds-subtitle content-subtitle'>
+		Groups
+	</div>
+	
+	<table id='groups-org-table' class='tablesorter'>
+		<thead>
+			<tr>
+				<th>Group Name</th>
+				<th>Tasks Assigned</th>
+				<th>Progress</th>
+			</tr>
+		</thead>
+		
+		<tbody>
+			<tr>
+				<td>Sample Group 1</td>
+				<td>Task Assigned 1</td>
+				<td><%= "#{rand(100)}%" %></td>
+			</tr>
+			
+			<tr>
+				<td>Sample Group 1</td>
+				<td>Task Assigned 1</td>
+				<td><%= "#{rand(100)}%" %></td>
+			</tr>
+			
+		</tbody>
+	</table>
+</div>
 
 
 

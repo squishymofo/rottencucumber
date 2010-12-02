@@ -117,7 +117,7 @@
 	background-color:#E5ECF9;	
 }
 
-#organizations-table .even{
+#organizations-table .even, #projects-org-table .even, #groups-org-table .even{
 	background-color:#FFFFFF;
 }
 
@@ -125,8 +125,8 @@
 	background-color:#D9FFD5;	
 }
 
-#projects-org-table .even{
-	background-color:#FFFFFF;
+#groups-org-table .odd{
+	background-color:#FFEEBE;
 }
 
 
@@ -146,7 +146,7 @@
 	color:#039;	
 }
 
-#organizations-table th, #projects-org-table th{
+#organizations-table th, #projects-org-table th, #groups-org-table th{
 	background:#DBE8FF;
 	border-bottom:thin dotted #666;
 	border-top:thin dotted #666;
@@ -156,7 +156,11 @@
 	background:#ABFF8B;
 }
 
-#organizations-table, #projects-org-table {
+#groups-org-table th{
+	background:#FC6;
+}
+
+#organizations-table, #projects-org-table, #groups-org-table {
 	border:dotted #DDD thin;
 	width:75%;
 }
