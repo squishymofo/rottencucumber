@@ -148,7 +148,7 @@
 	width:50%;	
 }
 
-#organization_description{
+#organization_description, #project_description{
 	font-family:Arial, Helvetica, sans-serif;
 	font-size:11px;
 	width:210px;

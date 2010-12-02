@@ -1,13 +1,21 @@
-<h1>Create A New Project for <%= @org.name %></h1>
+<div class='ds-title-section'>
+	<div class="ds-section-header"> Create a New Project (<%= @org.name %>) </div>
+	<div class="ds-subsection-quote">"Tell me and I'll forget, show me and I may remember, involve me and I'll understand" - Chinese Proverb</div>
+</div>
 
 <%= flash[:error] %>
 <% form_for :project, @project, :url => '/projects/create' do |f| %>
-	<%= f.label "Name:" %>
-	<%= f.text_field :name %><br/> 
-	<%= f.label "Description:" %>
-	<%= f.text_area :description, :size => "60x12" %> <br/>
-	<%= hidden_field(:org, :id) %>
-	
-	<% #Ideally we should have a field that pops up everytime add task is pressed %>
-	<%= submit_tag "Create Project" %> 
+<table id='new-organization-table'>
+	<tr>
+		<td><%= f.label "Project Name:" %></td>
+		<td><%= f.text_field :name %><td/>
+	</tr>
+		<td><%= f.label "Project Description:" %></td>
+		<td><%= f.text_area :description, :size => "60x12" %></td>
+		<%= hidden_field(:org, :id) %><td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><%= submit_tag "Create Project" %> </td>
+	</tr>
 <% end %>

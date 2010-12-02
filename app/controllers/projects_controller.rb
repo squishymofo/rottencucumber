@@ -17,7 +17,7 @@ class ProjectsController < ApplicationController
     end
   end
 
-  def create
+  def create  
     @org_id = params[:org][:id]
     @project = Project.new
     @project.name = params[:project][:name]
