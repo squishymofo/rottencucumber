@@ -9,15 +9,19 @@
   <%= javascript_include_tag 'jquery.js' %>
   <%= javascript_include_tag 'jquery_hints.js' %>
   <%= javascript_include_tag 'rails' %>
+  <%= javascript_include_tag 'jquery.tablesorter.js' %>
   <%#= javascript_include_tag :defaults %>
   <%= javascript_include_tag 'jquery-ui-1.8.5.custom.min.js' %>
   <%= stylesheet_link_tag 'custom-theme/jquery-ui-1.8.5.custom.css' %>
   <%= csrf_meta_tag %>
+
+	
 </head>
       <script type="text/javascript" charset="utf-8">
 
         <%= yield :script %>
-
+				
+				
         $(document).ready ( function () {
           $('.hide-dia').click(function() {
             $('#dialog-form-new').dialog('close');

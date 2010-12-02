@@ -19,9 +19,9 @@ class ApplicationController < ActionController::Base
     @current_user_session = UserSession.find
   end
 
-    def record_actions
-      UserAction.create(:ip => request.remote_ip, :url => request.fullpath)
-    end
+  def record_actions
+    UserAction.create(:ip => request.remote_ip, :url => request.fullpath)
+  end
 
   def store_location
     #session[:return_to] = request.request_uri

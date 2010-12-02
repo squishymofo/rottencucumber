@@ -1,6 +1,8 @@
 <div class='ds-title-section'>
 	<div class="ds-section-header"> Create a New Organization </div>
+	<div class="ds-subsection-quote">"The achievements of an organization are the results of the combined effort of each individual" - Vince Lombardi</div>
 </div>
+
 <%= flash[:error] %>
 <% form_for :organization, @org, :url => {:action => :create } do |f| %>
 	<%= f.label "Name" %>

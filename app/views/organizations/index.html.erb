@@ -1,3 +1,12 @@
+
+<script type="text/javascript">
+	$(function() 
+	    { 
+	        $("table").tablesorter({sortList:[[0,0],[2,1]], widgets: ['zebra']}); 
+	    } 
+	); 
+</script>
+
 <div class='ds-title-section'>
 	<div class="ds-section-header"> Organizations </div>
 	<div class="ds-subsection"> List of organizations that you are involved in</div>
@@ -18,7 +27,8 @@
 	<% if  @my_orgs.empty? and @joined_orgs.empty? %>
 		You are not a part of any organization. Create or join one now!
 	<% else %>
-		<table id='organizations-table' width=75%>
+		<table id="organizations-table" class="tablesorter">
+			<thead>
 			<tr>
 				<th>
 					Organization Name
@@ -30,9 +40,13 @@
 					Owner
 				</th>
 			</tr>
+			</thead>
+			
 			<% 	count = 0 %>
 			
-			
+			<tbody>
+				
+				
 			<% @joined_orgs.each do |org| %>
 				<tr class= <%= count.even? ? 'even' : 'odd' %> >
 					<td><%= org.name %></td>
@@ -47,6 +61,8 @@
 			<% count += 1 %>
 			<% end %>
 			
+			
+			</tbody>
 		</table>
 	<% end %>
 	
