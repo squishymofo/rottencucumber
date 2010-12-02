@@ -13,17 +13,43 @@
 	</div>
 </div>
 
-<div id='my-orgs'>
-	<div class='ds-subtitle'>
-		Created
-	</div>
-	<%= debug(@my_orgs) %>
-</id>
-<div id='joined-orgs'>
-	<div class='ds-subtitle'>
-		Created
-	</div>
-	<%= debug(@joined_orgs)%>
+<div id='organizations'>
+	
+	<% if  @my_orgs.empty? and @joined_orgs.empty? %>
+		You are not a part of any organization. Create or join one now!
+	<% else %>
+		<table id='organizations-table' width=75%>
+			<tr>
+				<th>
+					Organization Name
+				</th>
+				<th>
+					Short Description
+				</th>
+				<th>
+					Owner
+				</th>
+			</tr>
+			<% 	count = 0 %>
+			
+			
+			<% @joined_orgs.each do |org| %>
+				<tr class= <%= count.even? ? 'even' : 'odd' %> >
+					<td><%= org.name %></td>
+					<td><%= org.description %></td>
+					<% if org.creator_id == @current_user.id %>
+							<td class='you'> <%= @current_user.first_name.capitalize + " " + @current_user.last_name.capitalize %></td>
+					<% else %>
+							<% owner = User.find(org.id) %>
+							<td><%= owner.first_name.capitalize + " " + owner.last_name.capitalize %></td>
+					<% end%>
+				</tr>
+			<% count += 1 %>
+			<% end %>
+			
+		</table>
+	<% end %>
+	
 </div>
 
 

@@ -101,3 +101,28 @@
 	margin:0px;
 	color:#FF9;
 }
+
+/* table stuff */
+.odd{
+	
+}
+
+.even{
+	background-color:#E6FFE7;	
+}
+
+.you{
+	color:#039;
+	font-weight:bold;	
+}
+
+#organizations-table th{
+	background:#DBE8FF;
+	border-bottom:thin dotted #666;
+	border-top:thin dotted #666;
+}
+
+#organizations-table{
+	border:dotted #DDD thin;
+	width:75%;
+}
