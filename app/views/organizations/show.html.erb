@@ -43,13 +43,12 @@
 				<tbody>
 					<% @projects.each do |project| %>
 							<tr>
-								<td><%= project.name %></td>
+								<td><%= link_to project.name, "/projects/#{project.id}" %></td>
 								<td><%= project.description %></td>
 								<td><%= "#{rand(100)}%" %></td>
 							</tr>
 					<% end %>
 				</tbody>
-
 			</table>
 		<% end %>
 	</div>

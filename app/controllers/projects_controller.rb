@@ -2,8 +2,7 @@ class ProjectsController < ApplicationController
   before_filter :current_user
   
   def index
-    @org_id = params[:org_id]
-    @projects = Project.where(["organization_id = ?", @org_id])
+    
   end
 
   def new
@@ -63,5 +62,4 @@ class ProjectsController < ApplicationController
       render 'projects/access_denied'
     end
   end
-
 end

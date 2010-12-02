@@ -122,7 +122,7 @@
 }
 
 #projects-org-table .odd{
-	background-color:#E0FFD8;	
+	background-color:#D9FFD5;	
 }
 
 #projects-org-table .even{
@@ -136,12 +136,12 @@
 	font-weight:bold;	
 }
 
-#organizations a{
+#organizations a, #projects-org-list a{
 	text-decoration:none;
 	color:#000;	
 }
 
-#organizations a:hover{
+#organizations a:hover, #projects-org-list a:hover{
 	text-decoration:none;
 	color:#039;	
 }
@@ -153,7 +153,7 @@
 }
 
 #projects-org-table th{
-	background:#A8FF90;
+	background:#ABFF8B;
 }
 
 #organizations-table, #projects-org-table {
