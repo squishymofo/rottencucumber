@@ -10,13 +10,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101123080028) do
+ActiveRecord::Schema.define(:version => 20101202232842) do
 
   create_table "groups", :force => true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "organization_id"
+  end
+
+  create_table "invitations", :force => true do |t|
+    t.integer  "organization_id"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "organizations", :force => true do |t|

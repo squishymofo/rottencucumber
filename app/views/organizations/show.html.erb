@@ -30,6 +30,16 @@
 			<%= link_to "Create a new group", new_organization_path %> 	
 		</div>
 	</div>
+	<div class="ds-add">
+		<div class='icon'> 
+			<a href='organizations/new'>
+			<%= image_tag "plus-sign-green.png"%>
+			</a>
+		</div>
+		<div class='add-link'>
+			<%= link_to "Send invitation", new_organization_path %> 	
+		</div>
+	</div>
 	<% end%> 
 </div>
 
@@ -69,31 +79,34 @@
 	<div class='ds-subtitle content-subtitle'>
 		Groups
 	</div>
-	
-	<table id='groups-org-table' class='tablesorter'>
-		<thead>
-			<tr>
-				<th>Group Name</th>
-				<th>Tasks Assigned</th>
-				<th>Progress</th>
-			</tr>
-		</thead>
+	<% if @groups.empty? %>
+		This organization currently has no group. Click the 'Create a group' link above to form a new group.
+	<% else %>
+		<table id='groups-org-table' class='tablesorter'>
+			<thead>
+				<tr>
+					<th>Group Name</th>
+					<th>Tasks Assigned</th>
+					<th>Progress</th>
+				</tr>
+			</thead>
 		
-		<tbody>
-			<tr>
-				<td>Sample Group 1</td>
-				<td>Task Assigned 1</td>
-				<td><%= "#{rand(100)}%" %></td>
-			</tr>
+			<tbody>
+				<tr>
+					<td>Sample Group 2</td>
+					<td>Task Assigned 2</td>
+					<td><%= "#{rand(100)}%" %></td>
+				</tr>
 			
-			<tr>
-				<td>Sample Group 1</td>
-				<td>Task Assigned 1</td>
-				<td><%= "#{rand(100)}%" %></td>
-			</tr>
+				<tr>
+					<td>Sample Group 1</td>
+					<td>Task Assigned 1</td>
+					<td><%= "#{rand(100)}%" %></td>
+				</tr>
 			
-		</tbody>
-	</table>
+			</tbody>
+		</table>
+	<% end %>
 </div>
 
 

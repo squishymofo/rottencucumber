@@ -32,6 +32,7 @@ class OrganizationsController < ApplicationController
     @org = Organization.find params[:id]
     @creator = User.find @org.creator_id
     @projects = @org.projects
+    @groups = @org.groups
   end
   
 end
