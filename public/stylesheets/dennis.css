@@ -103,12 +103,12 @@
 }
 
 /* table stuff */
-.odd{
-	
+#organizations-table .odd{
+	background-color:#E5ECF9;	
 }
 
-.even{
-	background-color:#E6FFE7;	
+#organizations-table .even{
+	background-color:#FFFFFF;
 }
 
 .you{
