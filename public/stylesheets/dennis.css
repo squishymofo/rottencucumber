@@ -155,7 +155,7 @@
 	color:#039;	
 }
 
-#organizations-table th, #projects-org-table th, #groups-org-table th{
+#organizations-table th, #projects-org-table th, #groups-org-table th, #invitations-table th{
 	background:#DBE8FF;
 	border-bottom:thin dotted #666;
 	border-top:thin dotted #666;
@@ -169,7 +169,7 @@
 	background:#FC6;
 }
 
-#organizations-table, #projects-org-table, #groups-org-table {
+#organizations-table, #projects-org-table, #groups-org-table, #invitations-table {
 	border:dotted #DDD thin;
 	width:75%;
 }

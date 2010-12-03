@@ -3,7 +3,7 @@ class InvitationsController < ApplicationController
   before_filter :require_user
   
   def index
-    
+    @received = @current_user.invitations
   end
   
   def new
@@ -18,6 +18,7 @@ class InvitationsController < ApplicationController
   
   def create
     @user = User.find_by_email(params[:email])
+    @organization = Organization.find(params[:org_id])
     
     if @user.nil?
       flash[:warning] = "User does not appear to have an account with Rotten Cucumber"
@@ -25,8 +26,11 @@ class InvitationsController < ApplicationController
     elsif @user.id == @current_user.id       
       flash[:warning] = "You cannot invite yourself"
       redirect_to :back
+    elsif @organization.users.include? @user
+      flash[:warning] = "That user is already in this organization"
+      redirect_to :controller => "organizations", :action => "show", :id => params[:org_id]
     else
-      @invitation = Invitation.create(:organization_id => pararms[:org_id], :user_id => @user.id)
+      @invitation = Invitation.create(:organization_id => params[:org_id], :user_id => @user.id)
       redirect_to :controller => "organizations", :action => "show", :id => params[:org_id]
     end
   end
