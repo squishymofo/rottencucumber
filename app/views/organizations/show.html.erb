@@ -1,9 +1,14 @@
 <script type="text/javascript">
 	$(function() 
 	    { 
-	        $("table").tablesorter({sortList:[[0,0],[2,1]], widgets: ['zebra']}); 
+	        $("table").tablesorter({sortList:[[0,0],[2,1]], widgets: ['zebra']});
+					$('#invitation_form').hide();
 	    } 
-	); 
+	);
+	
+	$('#invite_link').click(function() {
+	    $('#invitation_form').slideDown();
+	});
 </script>
 
 <div class='ds-title-section'>
@@ -37,7 +42,7 @@
 			</a>
 		</div>
 		<div class='add-link'>
-			<%= link_to "Send invitation", new_organization_path %> 	
+			<div><a href=<%= "/invitations/new/#{@org.id}" %> >Invite User</a></div>
 		</div>
 	</div>
 	<% end%> 
@@ -45,7 +50,7 @@
 
 <div id='current-projects'>
 	<div class='ds-subtitle content-subtitle'>
-		Projects
+		<a href="#?w=500" rel="pop_project">Projects</a>
 	</div>
 	<div id='projects-org-list'>
 		<% if @projects.empty? %>
@@ -75,7 +80,6 @@
 
 
 <div id='groups-org'>
-	
 	<div class='ds-subtitle content-subtitle'>
 		Groups
 	</div>

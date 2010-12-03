@@ -1,0 +1,13 @@
+<div class='ds-title-section'>
+	<div class="ds-section-header">Send an Invitation to Join <%= @organization.name.capitalize %></div>
+	<div class="ds-subsection">You can only invite someone who already has an account with us</div>
+</div>
+
+<div id ='invitation-form'>
+ <% form_tag(:action => "create", :id => @organization.id) do %>
+			<%= hidden_field_tag("org_id", @organization.id )%>
+			<%= label_tag(:email, "E-mail")%>
+			<%= text_field_tag(:email)%>
+   		<%= submit_tag "Send Invitation", :id => "submit", :name => "submit", :class => "form_submit" %>
+ <% end -%>
+</div>
