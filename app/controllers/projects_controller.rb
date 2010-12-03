@@ -25,7 +25,7 @@ class ProjectsController < ApplicationController
     
     if @project.save
       flash[:notice] = "#{params[:project][:name]} has been created"
-      redirect_to "/projects/#{@org_id}" 
+      redirect_to "/organizations/#{@org_id}" 
     else
       flash[:error] = "Failed creating a new project"
       redirect_to :action => :new
