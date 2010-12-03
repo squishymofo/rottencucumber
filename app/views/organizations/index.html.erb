@@ -55,7 +55,7 @@
 					<% if org.creator_id == @current_user.id %>
 							<td class='you'> <%= @current_user.first_name.capitalize + " " + @current_user.last_name.capitalize %></td>
 					<% else %>
-							<% owner = User.find(org.id) %>
+							<% owner = User.find(org.creator_id) %>
 							<td><%= owner.first_name.capitalize + " " + owner.last_name.capitalize %></td>
 					<% end%>
 				</tr>
