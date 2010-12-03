@@ -188,3 +188,10 @@
 .progress_bar{
 	height:1em;
 }
+
+.percentage{
+	color:#000;
+	font-size:14px;
+	line-height:15px;
+	padding-left: 10px;
+}

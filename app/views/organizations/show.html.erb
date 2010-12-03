@@ -66,12 +66,13 @@
 				</thead>
 				<tbody>
 					<% @projects.each do |project| %>
+						<% num = rand(100)%>
 							<tr>
 								<td><%= link_to project.name, "/projects/#{project.id}" %></td>
 								<td><%= project.description %></td>
 								<td>
 									<div class="ui-progressbar ui-widget ui-widget-content ui-corner-all">
-								   <div style=<%= "'width: #{rand(100)}%'" %> class="ui-progressbar-value ui-widget-header ui-corner-left"></div>
+								   <div style=<%= "'width: #{num}%'" %> class="ui-progressbar-value ui-widget-header ui-corner-left"><div class='percentage'> <%= "#{num}%" %> </div> </div>
 									</div>
 								</td>
 							</tr>
