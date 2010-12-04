@@ -53,16 +53,16 @@ class TasksController < ApplicationController
     end
   end
   
-  # def delete
-  #    @task = Task.find(params[:id])
-  #    if @task.organization.creator_id = @current_user.id
-  #      @task.destroy
-  #    else
-  #      flash[:error] = "You are not authorized to perform such action"
-  #    end
-  #    
-  #    redirect_to :back
-  #  end
+  def destroy
+    @task = Task.find(params[:id])
+    if @task.project.organization.creator_id = @current_user.id
+      @task.destroy
+    else
+      flash[:error] = "Access Denied"
+    end
+       
+    redirect_to :back
+  end
   #  
   #  def complete
   #    @id = params[:id]
