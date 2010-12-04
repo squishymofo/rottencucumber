@@ -41,13 +41,11 @@ class InvitationsController < ApplicationController
       invitation = Invitation.find(params[:inv_id])
       organization = Organization.find(invitation.organization_id)
       organization.users << User.find(@current_user.id)
-      
       invitation.destroy
       
     elsif params[:submit] == "Decline"
       invitation = Invitation.find(params[:inv_id])
       invitation.destroy
-      
     end
     
     redirect_to :back

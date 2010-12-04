@@ -34,6 +34,7 @@ class OrganizationsController < ApplicationController
     if !@org.users.include?  @current_user
       redirect_to :controller => "organizations", :action => "index"
     end
+    
     @creator = User.find @org.creator_id
     @projects = @org.projects
     @groups = @org.groups

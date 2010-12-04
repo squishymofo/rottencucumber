@@ -5,8 +5,8 @@
 }
 
 #logo{
-	height:85px;
-	background:#699;
+	height:100px;
+	background-image:url('../images/head_bg.png');
 }
 
 #container{
@@ -80,12 +80,16 @@
 #navigation{
 	padding:0px;
 	margin:0px;
-	background:#069;
+	background-color:#FFF;
+	background-repeat:repeat-x;
+	background-image:url('../images/nav_bg.png');
+	
 }
 
 #navigation-list{
 	padding:0px;
 	margin:0px;
+	padding-top:4px;
 	padding-left:20px;
 		
 }
@@ -107,7 +111,7 @@
 	padding-top:2px;
 	padding-bottom:0px;
 	margin:0px;
-	color:#FFF;
+	color:#000;
 	text-decoration:none;
 }
 
