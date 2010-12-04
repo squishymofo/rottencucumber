@@ -54,9 +54,9 @@
 			<tbody>
 				<% @tasks.each do |task| %>
 					<tr>
-						<td><%= task.name %></td>
+						<td><%= link_to task.name, task_path(task) %></td>
 						<td><%= task.description %></td>
-						<td><%= task.group.nil? ? "N/A" : task.group  %></td>
+						<td><%= task.group.nil? ? "N/A" : (link_to task.group.name, group_path(task.group))  %></td>
 						<td><%= task.due.to_date %></td>
 						<td><%= task.point %></td>
 						<td><%= translate_task_status task.status %></td>
