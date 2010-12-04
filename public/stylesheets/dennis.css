@@ -142,8 +142,6 @@
 	background-color:#FFF1D5;
 }
 
-
-
 .you{
 	color:#039;
 	font-weight:bold;	
@@ -186,7 +184,9 @@
 	width:75%;
 }
 
-
+#task-action{
+	display:-moz-box;	
+}
 
 #new-organization-table{
 	width:50%;	

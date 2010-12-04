@@ -60,7 +60,14 @@
 						<td><%= task.due.to_date %></td>
 						<td><%= task.point %></td>
 						<td><%= translate_task_status task.status %></td>
-						<td>Edit/Delete</td>
+						<td id='task-action'>
+							<% form_tag("/tasks/#{task.id}", :method => :get) do %>
+								<%= submit_tag "Edit", :id => "submit", :name => "submit" %>
+							<% end -%>
+							<% form_tag("/tasks/#{task.id}", :method => :delete) do %>
+							  <%= submit_tag "Delete", :id => "submit", :name => "submit" %>	
+							<% end -%>
+						</td>
 					</tr>
 				<% end %>
 			</tbody>

@@ -4,9 +4,7 @@ class TasksController < ApplicationController
   before_filter :require_user
   
   def index
-
     @my_organizations_tasks = @current_user.active_tasks
-    
   end
 
   def new
@@ -37,6 +35,22 @@ class TasksController < ApplicationController
 
   def show
     @task = Task.find(params[:id])
+    @project = @task.project
+  end
+  
+  def save
+    @task = Task.find(params[:task][:id].to_i)
+    @task.description = params[:task][:description]
+    @task.point = params[:point].to_i
+    @task.due = Date.civil(params[:due_date][:year].to_i, params[:due_date][:month].to_i, params[:due_date][:day].to_i)
+    
+    if @task.save
+      flash[:notice] = "Changes have been saved"
+      redirect_to :controller => "projects", :action => "show", :id => @task.project.id
+    else
+      flas[:error] = 'Failed saving changes'
+      redirect_to :action => "show", :id => params[:task][:id].to_i
+    end
   end
   
   # def delete
