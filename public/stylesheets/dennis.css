@@ -138,6 +138,10 @@
 	background-color:#FFEEBE;
 }
 
+#tasks-table .odd{
+	background-color:#FFF1D5;
+}
+
 
 
 .you{
@@ -159,7 +163,7 @@
 	color:#039;	
 }
 
-#organizations-table th, #projects-org-table th, #groups-org-table th, #invitations-table th{
+#organizations-table th, #projects-org-table th, #groups-org-table th, #invitations-table th, #tasks-table th{
 	background:#DBE8FF;
 	border-bottom:thin dotted #666;
 	border-top:thin dotted #666;
@@ -173,13 +177,23 @@
 	background:#FC6;
 }
 
-#organizations-table, #projects-org-table, #groups-org-table, #invitations-table {
+#tasks-table th{
+	background:#FED390;	
+}
+
+#organizations-table, #projects-org-table, #groups-org-table, #invitations-table, #tasks-table {
 	border:dotted #DDD thin;
 	width:75%;
 }
 
+
+
 #new-organization-table{
 	width:50%;	
+}
+
+#new-task-table{
+	width: 30%;	
 }
 
 #organization_description, #project_description{

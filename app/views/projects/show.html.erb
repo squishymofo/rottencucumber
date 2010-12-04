@@ -1,2 +1,71 @@
-<h1>Projects#show</h1>
-<p>Find me in app/views/projects/show.html.erb</p>
+<script type="text/javascript">
+	$(function() 
+	    { 
+	        $("table").tablesorter({sortList:[[0,0],[2,1]], widgets: ['zebra']});
+					$('#invitation_form').hide();
+	    } 
+	);
+	
+	$('#invite_link').click(function() {
+	    $('#invitation_form').slideDown();
+	});
+</script>
+
+<div class='ds-title-section'>
+	<div class="ds-section-header"> <%= @project.name %> </div>
+	<div class="ds-subsection">  <%= @org.name.capitalize %></div>
+	<div class='ds-add'>
+		<% if @org.creator_id == @current_user.id %>
+		<div class='icon'> 
+			<a href=<%= "/tasks/new/#{@project.id}" %>>
+			<%= image_tag "plus-sign-blue.png"%>
+			</a>
+		</div>
+		<div class='add-link'>
+			<%= link_to "Add a new task", "/tasks/new/#{@project.id}" %> 	
+		</div>
+	</div>
+	<% end%> 
+</div>
+
+
+<div id='current-projects'>
+	<div class='ds-subtitle content-subtitle'>
+		<a>Tasks</a>
+	</div>
+	
+	<div id='tasks-list'>
+		<% if @tasks.empty? %>
+			There is no task associated to this project
+		<% else %>
+		<table id='tasks-table' class='tablesorter'>
+			<thead>
+				<tr>
+					<th>Task Name</th>
+					<th>Task Description</th>
+					<th>Group Assigned</th>
+					<th>Deadline</th>
+					<th>Points</th>
+					<th>Status</th>
+					<th>Action</th>
+				</tr>
+			</thead>
+			
+			<tbody>
+				<% @tasks.each do |task| %>
+					<tr>
+						<td><%= task.name %></td>
+						<td><%= task.description %></td>
+						<td><%= task.group.nil? ? "N/A" : task.group  %></td>
+						<td><%= task.due.to_date %></td>
+						<td><%= task.point %></td>
+						<td><%= translate_task_status task.status %></td>
+						<td>Edit/Delete</td>
+					</tr>
+				<% end %>
+			</tbody>
+			
+		</table>
+		<% end %>
+	</div>
+</div>

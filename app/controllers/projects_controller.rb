@@ -33,6 +33,18 @@ class ProjectsController < ApplicationController
     
   end
   
+  def show
+    @project = Project.find(params[:id])
+    
+    if !@current_user.organizations.include? @project.organization
+      #user is not in the organization that owns this project, user should not be able to see the project
+      redirect_to :controller => "projects", :action => "index"
+    else
+      @org = @project.organization
+      @tasks = @project.tasks
+    end
+  end
+  
   def manage
     @task = Task.new
     @id = params[:id]

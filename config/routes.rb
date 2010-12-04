@@ -23,8 +23,10 @@ Rottencucumber::Application.routes.draw do
   match 'projects/manage/:id' => "projects#manage"
   get 'projects/:id' => "projects#show"
   match 'projects/new/:org_id' => "projects#new"
+  match 'tasks/new/:proj_id' => "tasks#new"
   
   match 'invitations/new/:org_id' => "invitations#new"
+  
   
   resources :tasks
   resources :groups
