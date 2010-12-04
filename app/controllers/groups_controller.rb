@@ -14,8 +14,8 @@ class GroupsController < ApplicationController
 
   def new
     @group = Group.new
-    @my_orgs = Organization.where("creator_id = ?", @current_user.id)
-    @joined_orgs = @current_user.organizations
+    @org = Organization.find(params[:id])
+    @users = @org.users
   end
 
   def create
