@@ -9,7 +9,7 @@ class TasksController < ApplicationController
 
   def new
     @task = Task.new
-    @project = Project.find(params[:proj_id])
+    @project = Project.find(params[:id])
     @org = @project.organization
     
     if @org.creator_id != @current_user.id
