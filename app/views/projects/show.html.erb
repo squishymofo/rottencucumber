@@ -56,7 +56,7 @@
 					<tr>
 						<td><%= task.name %></td>
 						<td><%= task.description %></td>
-						<td><%= task.group.nil? ? "N/A" : task.group  %></td>
+						<td><%= task.group.nil? ? "N/A" : task.group.name.capitalize  %></td>
 						<td><%= task.due.to_date %></td>
 						<td><%= task.point %></td>
 						<td><%= translate_task_status task.status %></td>
