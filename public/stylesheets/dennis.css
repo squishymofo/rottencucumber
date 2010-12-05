@@ -175,6 +175,11 @@
 	background:#FC6;
 }
 
+#groups-org-list a{
+	text-decoration:none;
+	color:#000;
+}
+
 #tasks-table th{
 	background:#FED390;	
 }
@@ -198,6 +203,10 @@
 
 #new-group-table{
 	width: 50%;	
+}
+
+#available-members-table{
+	width: 35%;
 }
 
 #create-group{

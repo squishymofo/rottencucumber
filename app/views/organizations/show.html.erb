@@ -92,34 +92,36 @@
 	<div class='ds-subtitle content-subtitle'>
 		Groups
 	</div>
-	<% if @groups.empty? %>
-		This organization currently has no group.
-	<% else %>
-		<table id='groups-org-table' class='tablesorter'>
-			<thead>
-				<tr>
-					<th>Group Name</th>
-					<th>Highest Priority Task</th>
-					<th>Progress</th>
-				</tr>
-			</thead>
+	<div id='groups-org-list'>
+		<% if @groups.empty? %>
+			This organization currently has no group.
+		<% else %>
+			<table id='groups-org-table' class='tablesorter'>
+				<thead>
+					<tr>
+						<th>Group Name</th>
+						<th>Highest Priority Task</th>
+						<th>Progress</th>
+					</tr>
+				</thead>
 		
-			<tbody>
+				<tbody>
 				
-				<% @groups.each do |group| %>
-				<tr>
-					<td><%= group.name %></td>
-					<td>
-						<% task =  Task.having('max(point)').where("group_id =#{group.id}").first %>
-						<%= task.nil? ? "None" : task.name.capitalize %>
-					</td>
-					<td><%= "#{rand(100)}%" %></td>
-				</tr>
-				<% end %>
+					<% @groups.each do |group| %>
+					<tr>
+						<td><%= link_to group.name, group_path(group) %></td>
+						<td>
+							<% task =  Task.group('point').having('max(point)').where("group_id =#{group.id}").first %>
+							<%= task.nil? ? "None" : task.name.capitalize %>
+						</td>
+						<td><%= "#{rand(100)}%" %></td>
+					</tr>
+					<% end %>
 			
-			</tbody>
-		</table>
-	<% end %>
+				</tbody>
+			</table>
+		<% end %>
+	</div>
 </div>
 
 

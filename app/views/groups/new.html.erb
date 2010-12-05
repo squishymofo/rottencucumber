@@ -43,6 +43,13 @@ function removeSelect(){
 	}
 }
 
+function removeElement(divNum) {
+  var d = document.getElementById('members-div');
+  var olddiv = document.getElementById(divNum);
+  d.removeChild(olddiv);
+
+}
+
 </script>
 <div class='ds-title-section'>
 	<div class="ds-section-header"> Create a New Group (<%= @org.name %>) </div>
@@ -57,14 +64,15 @@ function removeSelect(){
 		  	<input type="hidden" name="organization[id]" value="<%= @org.id %>">
 			<table id='new-group-table'>
 				<tr>
-				<td><%= label_tag "Group Name: " %></td>
-				<td><%= text_field_tag 'name' %></td>
-				</tr>
-			
+					<td><%= label_tag "Group Name: " %></td>
+					<td><%= text_field_tag 'name' %></td>
+				</tr>			
 				<tr >
-					<td><label for='new-members[]'>Members:</label></td>
+					<td><label for='mem'>Members to include:</label></td>
+					
 					<td>
 						<div id='members-div'>
+							<input type="hidden" value="0" id="theValue" />
 							<div id='member-div'>
 								<select name='members[]'>
 									<% @users.each do |user| %>
@@ -77,9 +85,9 @@ function removeSelect(){
 						<div id ='add-member'><a href='#' onClick='addSelect()' >Add New Member</a></div>
 						<div id ='remove-member'></div>
 					</td>
+					
 				</tr>
-			
-			
+				
 				<tr>
 					<td></td>
 					<td id='create-group'>	

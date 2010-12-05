@@ -18,11 +18,12 @@ Rottencucumber::Application.routes.draw do
 
   get "users/show"
   
-  resources :projects
+  #resources :projects
   match 'projects/create' => "projects#create"
   match 'projects/' => "projects#index"
   match 'projects/manage/:id' => "projects#manage"
   get 'projects/:id' => "projects#show"
+  match 'projects/:id' => "projects#show", :as => :project
   match 'projects/new/:org_id' => "projects#new"
   
   match 'invitations/new/:org_id' => "invitations#new"
