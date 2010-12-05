@@ -34,7 +34,7 @@ class ProjectsController < ApplicationController
       redirect_to "/organizations/#{@org_id}" 
     else
       flash[:error] = "Failed creating a new project"
-      redirect_to :action => :new, :id => @org_id
+      redirect_to :action => :new, :org_id => @org_id
     end
     
   end
