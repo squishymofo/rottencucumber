@@ -142,6 +142,10 @@
 	background-color:#FFF1D5;
 }
 
+#projects-table .odd{
+	background-color:#EDEAFF;	
+}
+
 .you{
 	color:#039;
 	font-weight:bold;	
@@ -151,17 +155,17 @@
 	padding-bottom: 10px;	
 }
 
-#organizations a, #projects-org-list a{
+#organizations a, #projects-org-list a, #projects a, #projects-tasks a{
 	text-decoration:none;
 	color:#000;	
 }
 
-#organizations a:hover, #projects-org-list a:hover{
+#organizations a:hover, #projects-org-list a:hover, #projects a:hover, #projects-tasks a:hover{
 	text-decoration:none;
 	color:#039;	
 }
 
-#organizations-table th, #projects-org-table th, #groups-org-table th, #invitations-table th, #tasks-table th{
+#organizations-table th, #projects-org-table th, #groups-org-table th, #invitations-table th, #tasks-table th, #projects-table th{
 	background:#DBE8FF;
 	border-bottom:thin dotted #666;
 	border-top:thin dotted #666;
@@ -184,7 +188,12 @@
 	background:#FED390;	
 }
 
-#organizations-table, #projects-org-table, #groups-org-table, #invitations-table, #tasks-table {
+#projects-table th{
+	background:#D0B9FF;
+	
+}
+
+#organizations-table, #projects-org-table, #groups-org-table, #invitations-table, #tasks-table, #projects-table {
 	border:dotted #DDD thin;
 	width:75%;
 }

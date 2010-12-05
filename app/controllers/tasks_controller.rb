@@ -27,7 +27,7 @@ class TasksController < ApplicationController
     @task.due = Date.civil(params[:due_date][:year].to_i, params[:due_date][:month].to_i, params[:due_date][:day].to_i)
   
     if @task.save
-      if !params[:group].empty? || params[:group] == '-1'
+      if !params[:group].empty? and params[:group] != '-1'
         @group = Group.find(params[:group])   
         @group.tasks << @task
       end
