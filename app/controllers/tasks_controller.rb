@@ -36,6 +36,14 @@ class TasksController < ApplicationController
   def show
     @task = Task.find(params[:id])
     @project = @task.project
+    @org = @project.organization
+    
+    if @org.creator_id != @current_user.id
+      flash[:error] = 'Access Denied'
+      redirect_to :controller => "projects", :action => "index"
+    end
+      
+    
   end
   
   def save
