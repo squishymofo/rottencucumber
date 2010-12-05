@@ -71,7 +71,7 @@
 							<tr>
 								<td><%= link_to project.name, "/projects/#{project.id}" %></td>
 								<td><%= project.description %></td>
-								<td><% last_task = Task.order('due DESC').where("status != 3 and project_id = #{project.id}").first %>
+								<td><% last_task = Task.order('due DESC').where("status != 3 and project_id = ?", project.id).first %>
 										<%= last_task.nil? ? "N/A" : last_task.due.to_date %>
 								</td>
 								<td>

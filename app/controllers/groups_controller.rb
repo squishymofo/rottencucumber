@@ -13,22 +13,26 @@ class GroupsController < ApplicationController
   end
 
   def new
+    
     @group = Group.new
     @org = Organization.find(params[:id])
     @users = @org.users
+    
   end
 
   def create
-    @group = Group.new
-    @group.name = params[:group_name]
-    @group.organization_id = params[:selected_org]    
-    if @group.save
-      flash[:notice] = "The group #{params[:group_name]} has been created and assigned to organization #{params[:selected_org]}"
-      redirect_to :action => :index
-    else
-      flash[:error] = "Failed creating a new group"
-      redirect_to :action => :new
-    end
+    # @group = Group.new
+    #     @group.name = params[:group_name]
+    #     @group.organization_id = params[:selected_org]    
+    #     if @group.save
+    #       flash[:notice] = "The group #{params[:group_name]} has been created and assigned to organization #{params[:selected_org]}"
+    #       redirect_to :action => :index
+    #     else
+    #       flash[:error] = "Failed creating a new group"
+    #       redirect_to :action => :new0
+    #     end
+    
+    render :text => params[:organization][:id]
   end
 
   def show

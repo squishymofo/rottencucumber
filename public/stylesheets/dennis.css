@@ -196,6 +196,26 @@
 	width: 30%;	
 }
 
+#new-group-table{
+	width: 50%;	
+}
+
+#create-group{
+	padding-top:10px;	
+}
+
+#add-member a{
+	text-decoration:none;
+	color:#090;
+	font-weight:bolder;
+}
+
+#remove-member a{
+	text-decoration:none;
+	color:#903;
+	font-weight:bolder;
+}
+
 #organization_description, #project_description{
 	font-family:Arial, Helvetica, sans-serif;
 	font-size:11px;

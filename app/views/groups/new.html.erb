@@ -1,4 +1,55 @@
+<script>
+	$(document).ready(function(){  
+	    $("#clone").dynamicForm("#plus", "#minus", {limit:5});
+	});
+</script>
 <div class='ds-title-section'>
 	<div class="ds-section-header"> Create a New Group (<%= @org.name %>) </div>
 	<div class="ds-subsection-quote">"Individual commitment to a group effort - that is what makes a team work, a company work, a society work, a civilization work. " - Vince Lombardi</div>
+</div>
+
+
+<div id='new-group-form'>
+	<table id='new-group-table'>
+		<% form_for :group, @group, :url => {:action => :create} do |f| -%>
+		  <%= hidden_field :organization, :id %>
+			<tr>
+			<td><%= f.label "Group Name: " %></td>
+			<td><%= f.text_field :name %></td>
+			</tr>
+			
+			<tr>
+			<td><%= f.label "Short Description: " %></td>
+			<td><%= f.text_field :name %></td>
+			</tr>
+			
+			<tr>
+				<td><label for='new-members[]'>Members:</label></td>
+				<td>
+					<% if !@users.empty?%>
+					<div id='clone'>
+					<select name='new-members[]'>
+						<% @users.each do |user| %>
+								<option value=<%= "'#{user.id}'" %>> <%= "#{user.first_name.capitalize} #{user.last_name.capitalize} (E-mail: #{user.email})" %></option>
+						<% end %>
+					</select>
+					</div>
+					
+					
+					<% end %><br/>
+					<div id='add-member'><a id='plus' href=''> [Add Member] </a></div>
+					<div id='remove-member'><a id='minus' href=''> [Remove Member] </a></div>
+				</td>
+			</tr>
+			
+			<tr>
+				<td></td>
+				<td id='create-group'>	
+					<%= f.submit "Create Group" %> 
+				</td>
+			</tr>
+			
+		<% end -%>
+	</table>
+	
 </div>
