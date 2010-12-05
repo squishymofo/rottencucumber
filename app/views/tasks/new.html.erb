@@ -30,6 +30,7 @@
 		<td><%= f.label "Assign To Group: "%></td>
 		<td>
 			<select name='group'>
+				<option value='-1'> None </option>
 				<% @groups.each do |group| %>
 					<option value=<%= group.id %>> <%= group.name %> </option>
 				<% end %>

@@ -27,8 +27,10 @@ class TasksController < ApplicationController
     @task.due = Date.civil(params[:due_date][:year].to_i, params[:due_date][:month].to_i, params[:due_date][:day].to_i)
   
     if @task.save
-      @group = Group.find(params[:group])   
-      @group.tasks << @task
+      if !params[:group].empty? || params[:group] == '-1'
+        @group = Group.find(params[:group])   
+        @group.tasks << @task
+      end
       redirect_to :controller => "projects", :action => "show", :id => params[:project][:id].to_i
     else
       flas[:error] = 'Failed creating a new task'

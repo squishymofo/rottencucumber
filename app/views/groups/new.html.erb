@@ -7,16 +7,39 @@
 <script type="text/javascript">
 
 var max = 6;
+var remove = false;
 var i = 0;
+
+function removeElement(id) {
+  var element = document.getElementById(id);
+  element.parentNode.removeChild(element);
+}
+
 function addSelect(){
-	
 	if( i < 6){
-		var selects = "<div id='members-div'>";
+		var selects = "<div id='member-div remove-" +  i + "'>";
 		selects += document.getElementById('member-div').innerHTML;
 		selects += "</div>";
-	
+		
 		document.getElementById('members-div').innerHTML += selects;
+		
+		if(remove == false){
+			remove = true;
+			document.getElementById('remove-member').innerHTML += "<a href='#' onClick='removeSelect()'> Remove Member</a>";
+		}
 		i++;
+	}
+}
+
+function removeSelect(){
+	if( i > 0){
+		i--;
+		removeElement('member-div remove-' + i );
+		
+		if(i == 0){
+			remove = false;
+			document.getElementById('remove-member').innerHTML = '';
+		}
 	}
 }
 
