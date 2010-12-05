@@ -5,10 +5,27 @@
 <% options += "</select>'" %>
 
 <script type="text/javascript">
+Array.prototype.indexOf = function(v) {
+	for ( var i = 0, l = this.length; i < l; i++ ) {
+  		if (this[i]===v) { return i; }
+ 	}
+ 	return -1;
+};
 
+var myNums = [2,3,1];
 var max = 6;
 var i = 0;
 function addSelect(){
+	var ni = document.getElementById('members-div');
+	var numi = document.getElementById('theValue');
+	var num = (document.getElementById('theValue').value -1) + 2;
+	numi.value = num;
+	var ind = myNums.indexOf(1);
+	var divIdName = "my"+num+"Div";
+	var newdiv = document.createElement('div');
+	newdiv.setAttribute("id", divIdName);
+	newdiv.innerHTML = "Element Number " + num + " <a href=\"javascript:;\" onclick=\"removeElement(\'"+divIdName+"\')\">Remove</a>";
+	ni.appendChild(newdiv);
 	
 	if( i < 6){
 		var selects = "<div id='members-div'>";
@@ -18,6 +35,12 @@ function addSelect(){
 		document.getElementById('members-div').innerHTML += selects;
 		i++;
 	}
+}
+
+function removeElement(divNum) {
+  var d = document.getElementById('members-div');
+  var olddiv = document.getElementById(divNum);
+  d.removeChild(olddiv);
 }
 
 </script>
@@ -34,14 +57,25 @@ function addSelect(){
 		  	<input type="hidden" name="organization[id]" value="<%= @org.id %>">
 			<table id='new-group-table'>
 				<tr>
-				<td><%= label_tag "Group Name: " %></td>
-				<td><%= text_field_tag 'name' %></td>
-				</tr>
-			
+					<td><%= label_tag "Group Name: " %></td>
+					<td><%= text_field_tag 'name' %></td>
+				</tr>			
 				<tr >
-					<td><label for='new-members[]'>Members:</label></td>
+					<td><label for='mem'>Members to include:</label></td>
+					
+					<table id='available-members-table'>
+						<% @users.each do |user| %>
+							<tr>
+								<td><%= check_box_tag user.id, user.id %></td>
+								<td><%= "#{user.first_name.capitalize} #{user.last_name.capitalize} (#{user.email})" %></td>
+							</tr>
+						<% end %>
+					</table>
+					
+					<!--
 					<td>
 						<div id='members-div'>
+							<input type="hidden" value="0" id="theValue" />
 							<div id='member-div'>
 								<select name='members[]'>
 									<% @users.each do |user| %>
@@ -53,10 +87,10 @@ function addSelect(){
 						
 						<div id ='add-member'><a href='#' onClick='addSelect()' >Add New Member</a></div>
 						<div id ='remove-member'></div>
-					</td>
+					</td>-->
+					
 				</tr>
-			
-			
+				
 				<tr>
 					<td></td>
 					<td id='create-group'>	
