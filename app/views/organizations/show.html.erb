@@ -105,17 +105,14 @@
 			</thead>
 		
 			<tbody>
+				
+				<% @groups.each do |group| %>
 				<tr>
-					<td>Sample Group 2</td>
-					<td>Task Assigned 2</td>
+					<td><%= group.name %></td>
+					<td><%= "Task" %></td>
 					<td><%= "#{rand(100)}%" %></td>
 				</tr>
-			
-				<tr>
-					<td>Sample Group 1</td>
-					<td>Task Assigned 1</td>
-					<td><%= "#{rand(100)}%" %></td>
-				</tr>
+				<% end %>
 			
 			</tbody>
 		</table>

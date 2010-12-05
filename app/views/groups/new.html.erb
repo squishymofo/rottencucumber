@@ -6,11 +6,19 @@
 
 <script type="text/javascript">
 
-var input = document.getElementById('member-div').value
-$('#add-trigger').click(function(){
-	var input = "<option value='1'>1</option>"
-	$('#members-div').append(input);
-})
+var max = 6;
+var i = 0;
+function addSelect(){
+	
+	if( i < 6){
+		var selects = "<div id='members-div'>";
+		selects += document.getElementById('member-div').innerHTML;
+		selects += "</div>";
+	
+		document.getElementById('members-div').innerHTML += selects;
+		i++;
+	}
+}
 
 </script>
 <div class='ds-title-section'>
@@ -23,19 +31,14 @@ $('#add-trigger').click(function(){
 			<form method='post' action='/groups/create' id="my-demo-form">
 
 				<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
-		  <%= hidden_field :organization, :id %>
+		  	<input type="hidden" name="organization[id]" value="<%= @org.id %>">
 			<table id='new-group-table'>
 				<tr>
 				<td><%= label_tag "Group Name: " %></td>
 				<td><%= text_field_tag 'name' %></td>
 				</tr>
 			
-				<tr>
-				<td><%= label_tag "Short Description: " %></td>
-				<td><%= text_field_tag 'description' %></td>
-				</tr>
-			
-				<tr>
+				<tr >
 					<td><label for='new-members[]'>Members:</label></td>
 					<td>
 						<div id='members-div'>
@@ -47,7 +50,9 @@ $('#add-trigger').click(function(){
 								</select>
 							</div>
 						</div>
-						<span id='add-trigger'><a href='#' onClick='addSelect()'>Add New Member</a></span>
+						
+						<div id ='add-member'><a href='#' onClick='addSelect()' >Add New Member</a></div>
+						<div id ='remove-member'></div>
 					</td>
 				</tr>
 			
