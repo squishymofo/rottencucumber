@@ -99,7 +99,7 @@
 			<thead>
 				<tr>
 					<th>Group Name</th>
-					<th>Tasks Assigned</th>
+					<th>Highest Priority Task</th>
 					<th>Progress</th>
 				</tr>
 			</thead>
@@ -109,7 +109,10 @@
 				<% @groups.each do |group| %>
 				<tr>
 					<td><%= group.name %></td>
-					<td><%= "Task" %></td>
+					<td>
+						<% task =  Task.having('max(point)').where("group_id =#{group.id}").first %>
+						<%= task.nil? ? "None" : task.name.capitalize %>
+					</td>
 					<td><%= "#{rand(100)}%" %></td>
 				</tr>
 				<% end %>
