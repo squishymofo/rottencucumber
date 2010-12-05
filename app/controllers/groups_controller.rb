@@ -32,7 +32,7 @@ class GroupsController < ApplicationController
     #       redirect_to :action => :new0
     #     end
     
-    render :text => params[:organization][:id]
+    render :xml => params
   end
 
   def show
