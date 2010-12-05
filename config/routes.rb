@@ -18,6 +18,7 @@ Rottencucumber::Application.routes.draw do
 
   get "users/show"
   
+  resources :projects
   match 'projects/create' => "projects#create"
   match 'projects/' => "projects#index"
   match 'projects/manage/:id' => "projects#manage"
@@ -29,7 +30,7 @@ Rottencucumber::Application.routes.draw do
   
   resources :tasks
   
-  
+  resources :groups
   match 'groups/show/:id' => "groups#show"
   match 'groups/new/:id' => "groups#new"
 
