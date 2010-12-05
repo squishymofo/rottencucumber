@@ -27,6 +27,17 @@
 	</tr>
 	
 	<tr>
+		<td><%= f.label "Assign To Group: "%></td>
+		<td>
+			<select name='group'>
+				<% @groups.each do |group| %>
+					<option value=<%= group.id %>> <%= group.name %> </option>
+				<% end %>
+			</select>
+		</td>
+	</tr>
+	
+	<tr>
 		<td></td>
 		<td>	<%= f.submit "Create Task" %> </td>
 	</tr>

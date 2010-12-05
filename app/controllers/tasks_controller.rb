@@ -11,6 +11,7 @@ class TasksController < ApplicationController
     @task = Task.new
     @project = Project.find(params[:id])
     @org = @project.organization
+    @groups = @org.groups
     
     if @org.creator_id != @current_user.id
       flash[:error] = 'Access Denied'
@@ -24,8 +25,10 @@ class TasksController < ApplicationController
     @task.project_id = params[:project][:id].to_i
     @task.point = params[:point].to_i
     @task.due = Date.civil(params[:due_date][:year].to_i, params[:due_date][:month].to_i, params[:due_date][:day].to_i)
-           
+  
     if @task.save
+      @group = Group.find(params[:group])   
+      @group.tasks << @task
       redirect_to :controller => "projects", :action => "show", :id => params[:project][:id].to_i
     else
       flas[:error] = 'Failed creating a new task'
