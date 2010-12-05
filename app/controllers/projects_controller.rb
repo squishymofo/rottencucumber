@@ -34,14 +34,13 @@ class ProjectsController < ApplicationController
       redirect_to "/organizations/#{@org_id}" 
     else
       flash[:error] = "Failed creating a new project"
-      redirect_to :action => :new
+      redirect_to :action => :new, :id => @org_id
     end
     
   end
   
   def show
     @project = Project.find(params[:id])
-    
     if !@current_user.organizations.include? @project.organization
       #user is not in the organization that owns this project, user should not be able to see the project
       redirect_to :controller => "projects", :action => "index"
