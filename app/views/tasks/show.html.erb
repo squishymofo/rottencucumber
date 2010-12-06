@@ -22,6 +22,11 @@
 	</tr>
 	
 	<tr>
+		<td><%= f.label "Task Status" %></td>
+		<td><%= select_tag :status, options_for_select ([['Not Yet Started',0], ['Started',1],['On Halt',2],['Finished',3]], @task.status) %> </td>
+	</tr>
+	
+	<tr>
 		<td><%= f.label "Expected Due Date: "%></td>
 		<td><%= select_date Date.today, :prefix => :due_date %></td>
 	</tr>
@@ -30,7 +35,6 @@
 		<td></td>
 		<td>	<%= f.submit "Save Changes" %> </td>
 	</tr>
-
 <% end %>
 </table>
 

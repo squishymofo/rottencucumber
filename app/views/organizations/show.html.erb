@@ -67,16 +67,43 @@
 				</thead>
 				<tbody>
 					<% @projects.each do |project| %>
-						<% num = rand(100)%>
 							<tr>
 								<td><%= link_to project.name, "/projects/#{project.id}" %></td>
 								<td><%= project.description %></td>
 								<td><% last_task = Task.order('due DESC').where("status != 3 and project_id = ?", project.id).first %>
 										<%= last_task.nil? ? "N/A" : last_task.due.to_date %>
 								</td>
-								<td>
+								<td class='precentage-td'>
 									<div class="ui-progressbar ui-widget ui-widget-content ui-corner-all">
-								   <div style=<%= "'width: #{num}%'" %> class="ui-progressbar-value ui-widget-header ui-corner-left"><div class='percentage'> <%= "#{num}%" %> </div> </div>
+										
+										<%
+											tasks = project.tasks
+											max = Float(0)
+											completed = Float(0)
+											tasks.each do | task |
+												if task.status == 3
+													completed += Float(task.point)
+												end
+												max += Float(task.point)
+											end
+											puts "Completed #{completed}"
+											puts "Max #{max}"
+											progress = 0
+											if max == 0.0 
+												progress = 0
+											else
+												progress = (completed/max) * 100
+												progress = progress.to_i
+											end
+
+										%>
+										
+								   	<div style=<%= "'width: #{progress}%'" %> class="ui-progressbar-value ui-widget-header ui-corner-left">
+											<div class='percentage'> 
+												<%= "#{progress}%" %> 
+											</div> 
+										</div>
+										
 									</div>
 								</td>
 							</tr>
@@ -101,6 +128,7 @@
 					<tr>
 						<th>Group Name</th>
 						<th>Highest Priority Task</th>
+						<th>Task With Closest Deadline</th>
 						<th>Progress Across All Tasks</th>
 					</tr>
 				</thead>
@@ -114,7 +142,39 @@
 							<% task =  Task.group('point').having('max(point)').where("group_id =#{group.id}").first %>
 							<%= task.nil? ? "None" : task.name.capitalize %>
 						</td>
-						<td><%= "#{rand(100)}%" %></td>
+						
+						<td>
+							<% task =  Task.having('min(due)').where("group_id =#{group.id}").first %>
+							<%= task.nil? ? "None" : task.name.capitalize %>
+						</td>
+						
+						<%
+							max = Float(0)
+							completed = Float(0)
+							group.tasks.each do |task|
+								if task.status == 3
+									completed += Float(task.point)
+								end
+								max += Float(task.point)
+							end
+							
+							progress = 0
+							
+							if max == 0.0 
+								progress = 0
+							else
+								progress = (completed/max) * 100
+								progress = progress.to_i
+							end
+						
+						%>
+						<td class='precentage-td'>
+							<div class="ui-progressbar ui-widget ui-widget-content ui-corner-all">
+								<div class="ui-progressbar-value ui-widget-header ui-corner-left" style=<%= "'width: #{progress}%'" %> >
+									<div class='percentage'> <%= "#{progress}%" %> </div> 
+								</div>
+							</div>
+						</td>
 					</tr>
 					<% end %>
 			
