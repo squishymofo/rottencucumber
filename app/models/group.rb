@@ -3,4 +3,6 @@ class Group < ActiveRecord::Base
   has_many :users, :through => :user_groups
   has_many :tasks
   belongs_to :organization
+  
+  validates_presence_of :name, :on => :create, :message => "can't be blank"
 end
