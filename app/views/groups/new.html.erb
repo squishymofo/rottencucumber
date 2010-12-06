@@ -75,6 +75,7 @@ function removeElement(divNum) {
 							<input type="hidden" value="0" id="theValue" />
 							<div id='member-div'>
 								<select name='members[]'>
+									<option value='-1'>--Select a member--</option>
 									<% @users.each do |user| %>
 										<option value=<%= user.id.to_i %>> <%= "#{user.first_name.capitalize} #{user.last_name.capitalize} (E-mail: #{user.email.capitalize})"%></option>
 									<% end %>

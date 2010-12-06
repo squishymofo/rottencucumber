@@ -31,9 +31,11 @@ class GroupsController < ApplicationController
     
     if @group.save
       params[:members].each do |member| 
-        @user = User.find(member)
-        if !@group.users.include? @user
-          @group.users <<  @user
+        unless member.to_i == -1
+          @user = User.find(member)
+          if !@group.users.include? @user
+            @group.users <<  @user
+          end
         end
       end  
       flash[:notice] = "The group #{params[:name]} has been created"
