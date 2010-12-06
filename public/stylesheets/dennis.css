@@ -125,7 +125,7 @@
 }
 
 /* table stuff */
-#organizations-table .odd{
+#organizations-table .odd, #groupts-taks-table .odd{
 	background-color:#E5ECF9;	
 }
 
@@ -172,7 +172,7 @@
 	color:#039;	
 }
 
-#organizations-table th, #projects-org-table th, #groups-org-table th, #invitations-table th, #tasks-table th, #projects-table th, #group-users-table th{
+#organizations-table th, #projects-org-table th, #groups-org-table th, #invitations-table th, #tasks-table th, #projects-table th, #group-users-table th, #groupts-taks-table th{
 	background:#DBE8FF;
 	border-bottom:thin dotted #666;
 	border-top:thin dotted #666;
@@ -204,7 +204,7 @@
 	
 }
 
-#organizations-table, #projects-org-table, #groups-org-table, #invitations-table, #tasks-table, #projects-table, #group-users-table {
+#organizations-table, #projects-org-table, #groups-org-table, #invitations-table, #tasks-table, #projects-table, #group-users-table, groupts-taks-table {
 	border:dotted #DDD thin;
 	width:75%;
 }
@@ -213,7 +213,7 @@
 	display:-moz-box;	
 }
 
-#new-organization-table{
+#new-organization-table, #groupts-taks-table{
 	width:50%;	
 }
 

@@ -53,7 +53,7 @@
 					<td><%= link_to org.name, organization_path(org)%></td>
 					<td><%= org.description %></td>
 					<% if org.creator_id == @current_user.id %>
-							<td class='you'> <%= @current_user.first_name.capitalize + " " + @current_user.last_name.capitalize %></td>
+							<td class='you'> You </td>
 					<% else %>
 							<% owner = User.find(org.creator_id) %>
 							<td><%= owner.first_name.capitalize + " " + owner.last_name.capitalize %></td>

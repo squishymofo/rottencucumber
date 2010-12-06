@@ -42,3 +42,35 @@
 	</table>
 	<% end %>
 </div>
+
+<div id='groups-tasks-show'>
+	<div class='ds-subtitle content-subtitle'>
+		<a href="#?w=500" rel="pop_project">Tasks</a>
+	</div>
+	<% if @tasks.nil?%>
+		This group currently has no task assigned
+	<% else %>
+	<table id='groupts-taks-table' class='tablesorter'>
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Description</th>							
+				<th>Points</th>
+				<th>Status</th>
+			</tr>
+		</thead>
+		
+		<tbody>
+			<% @tasks.each do |task| %>
+			<tr>
+				<td><%= "#{task.name}" %>				</td>
+				<td><%= task.description %>				</td>
+				<td><%= task.point %>				</td>
+				<td><%= translate_task_status task.status %></td>
+			</tr>
+			<% end %>
+		</tbody>
+	</table>
+	<% end %>
+	
+</div>
