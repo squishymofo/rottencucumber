@@ -29,6 +29,10 @@
 	font-size:35px;
 }
 
+#add-remove{
+	display:-moz-box;
+}
+
 .ds-add{
 	vertical-align:middle;
 	margin-top:10px;
