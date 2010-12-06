@@ -25,7 +25,7 @@ function addSelect(){
 		
 		if(remove == false){
 			remove = true;
-			document.getElementById('remove-member').innerHTML += "<a href='#' onClick='removeSelect()'> Remove Member</a>";
+			document.getElementById('remove-member').innerHTML += "<a href='#' onClick='removeSelect()'> [-]</a>";
 		}
 		i++;
 	}
@@ -82,7 +82,7 @@ function removeElement(divNum) {
 							</div>
 						</div>
 						
-						<div id ='add-member'><a href='#' onClick='addSelect()' >Add New Member</a></div>
+						<div id ='add-member'><a href='#' onClick='addSelect()' > [+] </a></div>
 						<div id ='remove-member'></div>
 					</td>
 					
