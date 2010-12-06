@@ -15,7 +15,7 @@ class GroupsController < ApplicationController
   def new
     @group = Group.new
     if params[:id] == nil   # should not be able to create a new group unless it's thru org
-      flash[:error] = "adsfwasdf"
+      flash[:error] = "Error creating new group"
       render "/projects/access_denied"
     else
       @org = Organization.find(params[:id])
@@ -29,23 +29,12 @@ class GroupsController < ApplicationController
     @group.organization_id = params[:organization][:id]
     
     if @group.save
-      #params[:members].each do |member| 
-      #  @user = User.find(member)
-      #  if !@group.users.include? @user
-      #    @group.users <<  @user
-      #  end  
-      #end
-      org_users = Organization.find(params[:organization][:id]).users
-      org_users.each do |usr|
-        usr_id = params[usr.id.to_s]
-        if usr_id != nil
-          user = User.find(usr_id.to_i)
-          if !@group.users.include?(user)
-            @group.users << user
-          end
+      params[:members].each do |member| 
+        @user = User.find(member)
+        if !@group.users.include? @user
+          @group.users <<  @user
         end
-      end
-      
+      end  
       flash[:notice] = "The group #{params[:name]} has been created"
       redirect_to "/organizations/show/#{params[:organization][:id]}"
     else
