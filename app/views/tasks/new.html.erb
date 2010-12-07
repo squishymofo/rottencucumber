@@ -1,21 +1,48 @@
-<span class="span-24 section-header"> Create a new task </span>
-<hr />
+<div class='ds-title-section'>
+	<div class="ds-section-header"> New Task </div>
+	<div class="ds-subsection">  <%= @project.name.capitalize %></div>
+</div>
 
+<table id='new-task-table'>
 <% form_for :task, @task, :url => {:action => :create } do |f| %>
-	<%= f.label "Task name: " %>
-	<%= f.text_field :name %><br/>
+	<%= hidden_field :project, :id %>
+	<tr>
+	<td><%= f.label "Task name: " %></td>
+	<td><%= f.text_field :name %></td>
+	</tr>
 	
-	<%= f.label "For Organization: " %>
+	<tr>
+	<td><%= f.label "Description: " %></td>
+	<td><%= f.text_field :description %></td>
+	</tr>
 	
-	<%= select_tag :organization_id, options_for_select(@orgs_array)%> <br/>
+	<tr>
+		<td><%= f.label "Task Points: " %></td>
+		<td><%= select_tag :point, options_for_select ([['1',1],['2',2],['3',3]]) %> </td>
+	</tr>
 	
-	<%= f.label "Description: " %>
-	<%= f.text_field :description %><br/>
-	<%= f.label "Task Points: " %>
-	<%= select_tag :point, options_for_select ([['1',1],['2',2],['3',3]]) %> <br/>
-	<%= f.label "Expected Due Date: "%>
-	<%= select_date Date.today, :prefix => :due_date %><br/>
-	<%= f.submit "Create Task" %> 
+	<tr>
+		<td><%= f.label "Expected Due Date: "%></td>
+		<td><%= select_date Date.today, :prefix => :due_date %></td>
+	</tr>
+	
+	<tr>
+		<td><%= f.label "Assign To Group: "%></td>
+		<td>
+			<select name='group'>
+				<option value='-1'> None </option>
+				<% @groups.each do |group| %>
+					<option value=<%= group.id %>> <%= group.name %> </option>
+				<% end %>
+			</select>
+		</td>
+	</tr>
+	
+	<tr>
+		<td></td>
+		<td>	<%= f.submit "Create Task" %> </td>
+	</tr>
+
 <% end %>
-<br />
+</table>
 

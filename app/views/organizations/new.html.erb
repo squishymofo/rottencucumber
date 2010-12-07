@@ -1,9 +1,22 @@
-<h1>Create a New Organization</h1>
+<div class='ds-title-section'>
+	<div class="ds-section-header"> Create a New Organization </div>
+	<div class="ds-subsection-quote">"The achievements of an organization are the results of the combined effort of each individual" - Vince Lombardi</div>
+</div>
+
 <%= flash[:error] %>
 <% form_for :organization, @org, :url => {:action => :create } do |f| %>
-	<%= f.label "Name" %>
-	<%= f.text_field :name %><br/> 
-	<%= f.label "Description" %>
-	<%= f.text_area :description, :size => "60x12" %> <br/>
-	<%= submit_tag "Create" %> 
+<table id='new-organization-table'>
+	<tr>
+		<td><%= f.label "Name" %></td>
+		<td><%= f.text_field :name %></td>
+	</tr>
+	<tr>
+		<td><%= f.label "Description" %></td>
+		<td><%= f.text_area :description, :size => "30x10" %></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><%= submit_tag "Create" %> </td>
+	</tr>
+</table>
 <% end %> 

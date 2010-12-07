@@ -29,7 +29,15 @@ class OrganizationsController < ApplicationController
   end
 
   def show
-    @task = Task.find params[:id]
+    @org = Organization.find params[:id]
+    
+    if !@org.users.include?  @current_user
+      redirect_to :controller => "organizations", :action => "index"
+    end
+    
+    @creator = User.find @org.creator_id
+    @projects = @org.projects
+    @groups = @org.groups
   end
   
 end

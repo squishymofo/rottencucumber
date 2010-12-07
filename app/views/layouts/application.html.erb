@@ -4,19 +4,25 @@
   <title>Rottencucumber</title>
   <%#= stylesheet_link_tag :all %>
   <%= stylesheet_link_tag 'screen.css' %>
+	<%= stylesheet_link_tag 'dennis.css' %>
   <%= stylesheet_link_tag 'style.css' %>
   <%= javascript_include_tag 'jquery.js' %>
   <%= javascript_include_tag 'jquery_hints.js' %>
   <%= javascript_include_tag 'rails' %>
+	<%= javascript_include_tag 'jquery.dynamicField-1.0.js' %>
+  <%= javascript_include_tag 'jquery.tablesorter.js' %>
   <%#= javascript_include_tag :defaults %>
   <%= javascript_include_tag 'jquery-ui-1.8.5.custom.min.js' %>
   <%= stylesheet_link_tag 'custom-theme/jquery-ui-1.8.5.custom.css' %>
   <%= csrf_meta_tag %>
+
+	
 </head>
       <script type="text/javascript" charset="utf-8">
 
         <%= yield :script %>
-
+				
+				
         $(document).ready ( function () {
           $('.hide-dia').click(function() {
             $('#dialog-form-new').dialog('close');
@@ -38,9 +44,12 @@
 
       </script>
     <body>
-      <div id="content" class="container move-header-down">
+      <!-- <div id="content" class="container move-header-down"> -->
+			<div id ="container">
         <%= render :partial => 'layouts/header' %>
-        <%= yield %>
+				<div id="dennis-content">
+        	<%= yield %>
+				</div>
       </div>
     </body>
 </html>

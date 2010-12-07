@@ -1,25 +1,40 @@
-<br/><br/><br/><br/>
-<h2>Task Detail</h2>
-<br/>
-<b>Task name:</b><br/>
-<%= @task.name %>
+<div class='ds-title-section'>
+	<div class="ds-section-header"> <%= @task.name.capitalize%></div>
+	<div class="ds-subsection">For project: <%= @project.name.capitalize %></div>
+</div>
 
-<br/><br/>
+<table id='edit-task-table'>
+<% form_for :task, @task, :url => {:action => :save } do |f| %>
+	<%= hidden_field :task, :id %>
+	<tr>
+	<td><%= f.label "Task name: " %></td>
+	<td><%= f.text_field :name %></td>
+	</tr>
+	
+	<tr>
+	<td><%= f.label "Description: " %></td>
+	<td><%= f.text_field :description %></td>
+	</tr>
+	
+	<tr>
+		<td><%= f.label "Task Points: " %></td>
+		<td><%= select_tag :point, options_for_select ([['1',1],['2',2],['3',3]], @task.point) %> </td>
+	</tr>
+	
+	<tr>
+		<td><%= f.label "Task Status" %></td>
+		<td><%= select_tag :status, options_for_select ([['Not Yet Started',0], ['Started',1],['On Halt',2],['Finished',3]], @task.status) %> </td>
+	</tr>
+	
+	<tr>
+		<td><%= f.label "Expected Due Date: "%></td>
+		<td><%= select_date Date.today, :prefix => :due_date %></td>
+	</tr>
+	
+	<tr>
+		<td></td>
+		<td>	<%= f.submit "Save Changes" %> </td>
+	</tr>
+<% end %>
+</table>
 
-<b>Organization: </b><br/>
-<%= Organization.find(@task.organization_id).name %><br/><br/>
-
-<b>Group In Charge: </b><br/>
-
-
-<% if @task.group_id.nil? %>
-	No group is in charge of this task
-	<% else %>
-	<% group = Group.find(@task.group_id) %>
-	<%= group.name %>
-<% end%>
-
-<br/><br/>
-
-<b>Description:</b><br/>
-<%= @task.description %>

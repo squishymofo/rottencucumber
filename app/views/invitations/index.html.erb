@@ -1,0 +1,40 @@
+<div class='ds-title-section'>
+	<div class="ds-section-header"> Invitations</div>
+	<div class="ds-subsection"> List of all pending invitations </div>
+</div>
+
+<div id='invitations-received'>
+	<table id='invitations-table' class='sortable'>
+	<% if !@received.empty? %>	
+		<thead>
+			<tr>
+				<th>Organization</th>
+				<th>Owner</th>
+				<th>Action</th>
+			</tr>
+		</thead>
+		
+		<tbody>
+
+				<% @received.each do |invitation| %>
+					<% organization = Organization.find(invitation.organization_id) %>
+					<% owner = User.find(organization.creator_id) %>
+					<tr>
+						<td><%= organization.name.capitalize %></td>
+						<td><%= "#{owner.first_name.capitalize} #{owner.last_name.capitalize} " %></td>
+						<td>
+								<% form_tag(:action => "proceed", :controller => :invitations) do %>
+							  	<%= hidden_field_tag("org_id", invitation.organization_id) 	%>
+							  	<%= hidden_field_tag("inv_id", invitation.id) 	%>
+									<%= submit_tag "Accept", :id => "submit", :name => "submit" %>
+									<%= submit_tag "Decline", :id => "submit", :name => "submit" %>
+								<% end 	%>		
+						</td>
+					</tr>
+				<% end %>
+			<% else %>
+				<%= "There is no pending invitation" %>
+			<% end %>
+		</tbody>
+	</table>
+</div>

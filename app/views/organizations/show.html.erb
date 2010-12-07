@@ -1,7 +1,190 @@
-<h1>About <%= @org.name %></h1>
+<script type="text/javascript">
+	$(function() 
+	    { 
+	        $("table").tablesorter({sortList:[[0,0],[2,1]], widgets: ['zebra']});
+					$('#invitation_form').hide();
+	    } 
+	);
+	
+	$('#invite_link').click(function() {
+	    $('#invitation_form').slideDown();
+	});
+</script>
 
-<p>
-	<%= @org.description %>
-</p>
+<div class='ds-title-section'>
+	<div class="ds-section-header"> <%= @org.name %> </div>
+	<div class="ds-subsection">Created by:  <%= @creator.first_name.capitalize + " " + @creator.last_name.capitalize%></div>
+	<div class='ds-add'>
+		<% if @org.creator_id == @current_user.id %>
+		<div class='icon'> 
+			<a href=<%= "/projects/new/#{@org.id}" %>>
+			<%= image_tag "plus-sign-blue.png"%>
+			</a>
+		</div>
+		<div class='add-link'>
+			<%= link_to "Start a new project", "/projects/new/#{@org.id}" %> 	
+		</div>
+	</div>
+	<div class="ds-add">
+		<div class='icon'> 
+			<a href='organizations/new'>
+			<%= image_tag "plus-sign-blue.png"%>
+			</a>
+		</div>
+		<div class='add-link'>
+			<%= link_to "Create a new group", "/groups/new/#{@org.id}" %> 	
+		</div>
+	</div>
+	<div class="ds-add">
+		<div class='icon'> 
+			<a href='organizations/new'>
+			<%= image_tag "plus-sign-green.png"%>
+			</a>
+		</div>
+		<div class='add-link'>
+			<div><a href=<%= "/invitations/new/#{@org.id}" %> >Invite User</a></div>
+		</div>
+	</div>
+	<% end%> 
+</div>
+
+<div id='current-projects'>
+	<div class='ds-subtitle content-subtitle'>
+		<a href="#?w=500" rel="pop_project">Projects</a>
+	</div>
+	<div id='projects-org-list'>
+		<% if @projects.empty? %>
+			No project in progress
+		<% else %>
+			<table id='projects-org-table' class='tablesorter'>
+				<thead>
+					<tr>
+						<th>Project Name</th>
+						<th>Short Description</th>
+						<th>Deadline</th>
+						<th>Progress</th>
+					</tr>
+				</thead>
+				<tbody>
+					<% @projects.each do |project| %>
+							<tr>
+								<td><%= link_to project.name, "/projects/#{project.id}" %></td>
+								<td><%= project.description %></td>
+								<td><% last_task = Task.order('due DESC').where("status != 3 and project_id = ?", project.id).first %>
+										<%= last_task.nil? ? "N/A" : last_task.due.to_date %>
+								</td>
+								<td class='precentage-td'>
+									<div class="ui-progressbar ui-widget ui-widget-content ui-corner-all">
+										
+										<%
+											tasks = project.tasks
+											max = Float(0)
+											completed = Float(0)
+											tasks.each do | task |
+												if task.status == 3
+													completed += Float(task.point)
+												end
+												max += Float(task.point)
+											end
+											puts "Completed #{completed}"
+											puts "Max #{max}"
+											progress = 0
+											if max == 0.0 
+												progress = 0
+											else
+												progress = (completed/max) * 100
+												progress = progress.to_i
+											end
+
+										%>
+										
+								   	<div style=<%= "'width: #{progress}%'" %> class="ui-progressbar-value ui-widget-header ui-corner-left">
+											<div class='percentage'> 
+												<%= "#{progress}%" %> 
+											</div> 
+										</div>
+										
+									</div>
+								</td>
+							</tr>
+					<% end %>
+				</tbody>
+			</table>
+		<% end %>
+	</div>
+</div>
+
+
+<div id='groups-org'>
+	<div class='ds-subtitle content-subtitle'>
+		Groups
+	</div>
+	<div id='groups-org-list'>
+		<% if @groups.empty? %>
+			This organization currently has no group.
+		<% else %>
+			<table id='groups-org-table' class='tablesorter'>
+				<thead>
+					<tr>
+						<th>Group Name</th>
+						<th>Highest Priority Task</th>
+						<th>Task With Closest Deadline</th>
+						<th>Progress Across All Tasks</th>
+					</tr>
+				</thead>
+		
+				<tbody>
+				
+					<% @groups.each do |group| %>
+					<tr>
+						<td><%= link_to group.name, group_path(group) %></td>
+						<td>
+							<% task =  Task.group('point').having('max(point)').where("group_id =#{group.id}").first %>
+							<%= task.nil? ? "None" : task.name.capitalize %>
+						</td>
+						
+						<td>
+							<% task =  Task.having('min(due)').where("group_id =#{group.id}").first %>
+							<%= task.nil? ? "None" : task.name.capitalize %>
+						</td>
+						
+						<%
+							max = Float(0)
+							completed = Float(0)
+							group.tasks.each do |task|
+								if task.status == 3
+									completed += Float(task.point)
+								end
+								max += Float(task.point)
+							end
+							
+							progress = 0
+							
+							if max == 0.0 
+								progress = 0
+							else
+								progress = (completed/max) * 100
+								progress = progress.to_i
+							end
+						
+						%>
+						<td class='precentage-td'>
+							<div class="ui-progressbar ui-widget ui-widget-content ui-corner-all">
+								<div class="ui-progressbar-value ui-widget-header ui-corner-left" style=<%= "'width: #{progress}%'" %> >
+									<div class='percentage'> <%= "#{progress}%" %> </div> 
+								</div>
+							</div>
+						</td>
+					</tr>
+					<% end %>
+			
+				</tbody>
+			</table>
+		<% end %>
+	</div>
+</div>
+
+
+
 
 

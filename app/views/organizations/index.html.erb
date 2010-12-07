@@ -1,25 +1,72 @@
-<span class="section-header span-18"> Organizations </span>
-<br/>
-<span class="span-6 last"> <%= link_to "+ create new organization", new_organization_path %> </span>
-<br />
 
-<br />
-<br/><br/><br/><br/>
+<script type="text/javascript">
+	$(function() 
+	    { 
+	        $("table").tablesorter({sortList:[[0,0],[2,1]], widgets: ['zebra']}); 
+	    } 
+	); 
+</script>
 
-<h3>Created:</h3>
-<% @my_orgs.each do |my_org| %>
-	<%= my_org.name %>
-	<%= link_to ">>", "projects/#{my_org.id}" %>
-	<br/>
-<% end %>
+<div class='ds-title-section'>
+	<div class="ds-section-header"> Organizations </div>
+	<div class="ds-subsection"> List of organizations that you are involved in</div>
+	<div class="ds-add">
+		<div class='icon'> 
+			<a href='organizations/new'>
+			<%= image_tag "plus-sign-blue.png"%>
+			</a>
+		</div>
+		<div class='add-link'>
+			<%= link_to "Create a new organization", new_organization_path %> 	
+		</div>
+	</div>
+	
+</div>
 
-<br />
+<div id='organizations'>
+	
+	<% if  @my_orgs.empty? and @joined_orgs.empty? %>
+		You are not a part of any organization. Create or join one now!
+	<% else %>
+		<table id="organizations-table" class="tablesorter">
+			<thead>
+			<tr>
+				<th>
+					Organization Name
+				</th>
+				<th>
+					Short Description
+				</th>
+				<th>
+					Owner
+				</th>
+			</tr>
+			</thead>
+			
+			<% 	count = 0 %>
+			
+			<tbody>
+				
+				
+			<% @joined_orgs.each do |org| %>
+				<tr class= <%= count.even? ? 'even' : 'odd' %> >
+					<td><%= link_to org.name, organization_path(org)%></td>
+					<td><%= org.description %></td>
+					<% if org.creator_id == @current_user.id %>
+							<td class='you'> You </td>
+					<% else %>
+							<% owner = User.find(org.creator_id) %>
+							<td><%= owner.first_name.capitalize + " " + owner.last_name.capitalize %></td>
+					<% end%>
+				</tr>
+			<% count += 1 %>
+			<% end %>
+			</tbody>
+		</table>
+	<% end %>
+	
+</div>
 
-<h3>Joined:</h3>
-<% @joined_orgs.each do |joined_org| %>
-	<%= joined_org.name %>
-	<%= link_to ">>", "projects/#{joined_org.id}" %>
-	<br/>
-<% end %>
+
 
 

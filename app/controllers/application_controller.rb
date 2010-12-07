@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
   before_filter :current_user
 
   #include SslRequirement
-  helper_method :current_user
+  helper_method :current_user, :translate_task_status
 
   private
 
@@ -19,9 +19,9 @@ class ApplicationController < ActionController::Base
     @current_user_session = UserSession.find
   end
 
-    def record_actions
-      UserAction.create(:ip => request.remote_ip, :url => request.fullpath)
-    end
+  def record_actions
+    UserAction.create(:ip => request.remote_ip, :url => request.fullpath)
+  end
 
   def store_location
     #session[:return_to] = request.request_uri
@@ -39,5 +39,22 @@ class ApplicationController < ActionController::Base
       return false
     end
   end
+  
+  def translate_task_status (num)
+    case num
+    when 0
+      "Not yet started"
+    when 1
+      "Started"
+    when 2
+      "On Halt"
+    when 3
+      "Finished"
+    else
+      raise Exception
+    end
+    
+  end
+  
 
 end

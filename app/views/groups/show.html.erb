@@ -1,22 +1,76 @@
-<div id="milestones" class= "span-24">
+<script type="text/javascript">
+	$(function() 
+	    { 
+	        $("table").tablesorter({widgets: ['zebra']});
+	    } 
+	);
+	
+	$('#invite_link').click(function() {
+	    $('#invitation_form').slideDown();
+	});
+</script>
 
-Group name: 
-<%= @group.name %>
-<br />
+<div class='ds-title-section'>
+	<div class="ds-section-header"> <%= @group.name.capitalize%></div>
+	<div class="ds-subsection">For project: <%= @group.organization.name.capitalize %></div>
+</div>
 
-Organization: 
-<% if @group.organization %>
-  <%= @group.organization.name %>
-<% else %>
-  <%= 'No organization currently assigned.' %>
-<% end %>
+<div id='group-show'>
+	
+	<div class='ds-subtitle content-subtitle'>
+		<a href="#?w=500" rel="pop_project">Members</a>
+	</div>
+	<% if @users.nil?%>
+		This group currently do not have any member
+	<% else %>
+	<table id='group-users-table' class='tablesorter'>
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>E-mail</th>
+			</tr>
+		</thead>
+		
+		<tbody>
+			<% @users.each do |user| %>
+			<tr>
+				<td><%= "#{user.first_name.capitalize} #{user.last_name.capitalize}"%>				</td>
+				<td><%= user.email %>				</td>
+			</tr>
+			<% end %>
+		</tbody>
+	</table>
+	<% end %>
+</div>
 
-<br />
-
-Members: 
-<% usrs = @group.users %>
-<% usrs.each do |usr| %>
-	<%= usr.first_name + " " + usr.last_name + " (" + usr.email + "), " %>
-<% end %>
-
+<div id='groups-tasks-show'>
+	<div class='ds-subtitle content-subtitle'>
+		<a href="#?w=500" rel="pop_project">Tasks</a>
+	</div>
+	<% if @tasks.nil?%>
+		This group currently has no task assigned
+	<% else %>
+	<table id='groupts-taks-table' class='tablesorter'>
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Description</th>							
+				<th>Points</th>
+				<th>Status</th>
+			</tr>
+		</thead>
+		
+		<tbody>
+			<% @tasks.each do |task| %>
+			<tr>
+				<td><%= "#{task.name}" %>				</td>
+				<td><%= task.description %>				</td>
+				<td><%= task.point %>				</td>
+				<td><%= translate_task_status task.status %></td>
+			</tr>
+			<% end %>
+		</tbody>
+	</table>
+	<% end %>
+	
 </div>

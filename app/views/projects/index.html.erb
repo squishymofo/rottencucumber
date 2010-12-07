@@ -1,4 +1,39 @@
+<div class='ds-title-section'>
+	<div class="ds-section-header"> Projects </div>
+	<div class="ds-subsection"> List of all projects you are involved in </div>
+	<div class="ds-add">
+	</div>
+</div>
 
-<% @projects.each do | project | %>
-	<%= link_to project.name, :action => :manage, :id => project.id %> <br/>
-<% end %>
+This shows all the projects that a user is a part of which means that the user is involved in one or more tasks of the projects on this page
+<br />
+
+<div id='projects'>
+	<table id="projects-table" class="tablesorter">
+		<thead>
+		<tr>
+			<th>
+				Project Name
+			</th>
+			<th>
+				Short Description
+			</th>
+			<th>
+				Organization
+			</th>
+		</tr>
+		</thead>		
+		<% 	count = 0 %>		
+		<tbody>
+		<% @projects.each do |p| %>
+			<tr class= <%= count.even? ? 'even' : 'odd' %> >
+				<td><%= link_to p.name, project_path(p) %></td>
+				<td><%= p.description %></td>
+				<% org = Organization.find(p.organization_id) %>
+				<td><%= link_to org.name, organization_path(org) %></td>
+			</tr>
+			<% count += 1 %>
+		<% end %>		
+		</tbody>
+	</table>
+</div>

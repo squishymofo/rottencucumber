@@ -29,6 +29,5 @@ describe Project do
     it "should return the correct organization name" do
       @project.organization.name.should == "Communist Party"
     end
-    
   end
 end

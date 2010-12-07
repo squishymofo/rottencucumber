@@ -18,14 +18,22 @@ Rottencucumber::Application.routes.draw do
 
   get "users/show"
   
+  #resources :projects
   match 'projects/create' => "projects#create"
-  match 'projects/:org_id' => "projects#index"
+  match 'projects/' => "projects#index"
   match 'projects/manage/:id' => "projects#manage"
-  match 'projects/show/:id' => "projects#show"
+  get 'projects/:id' => "projects#show"
+  match 'projects/:id' => "projects#show", :as => :project
   match 'projects/new/:org_id' => "projects#new"
   
+  match 'invitations/new/:org_id' => "invitations#new"
+  get 'tasks/:id' => 'tasks#show'
+  
   resources :tasks
+  
   resources :groups
+  match 'groups/show/:id' => "groups#show"
+  match 'groups/new/:id' => "groups#new"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -1,13 +1,9 @@
+<div class='ds-title-section'>
+	<div class="ds-section-header"> Tasks </div>
+	<div class="ds-subsection"> List of all tasks </div>
+	<div class="ds-add">
+	</div>
+</div>
 
-<%= link_to "+ Create New Task", new_task_path %>
-<br/><br/><br/><br/>
-<% if !@my_organizations_tasks.empty? %>
-	<h3>Tasks By Organizations (well maybe someday..)</h3>
-        <% curr_id = @current_user.id %>
-	<% @my_organizations_tasks.each do |task| %>
-			<% if curr_id == nil || curr_id  != task.organization_id %>
-			<% end %>
-			
-			<%= link_to task.name, task_path(task)  %><br/>
-	<% end %>
-<% end %>
+This shows all the tasks that the user is responsible for. Tasks should be categorized by group and by organization. Create a table with tasks, group, project and organization and make them sortable.
+
