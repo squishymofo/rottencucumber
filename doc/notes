@@ -19,3 +19,47 @@ specs and scenarios for positive cases only?
 demo spec - downloadable stylesheets 
 
 going to need to meet beforehand to discuss division of presenting
+
+use facebook for signup and auth, fbml for everything else.
+
+"happy path"
+
+=== GSI email
+Apologies for missing the meeting. Being handicapped and only mobile at about 10% normal speed with a full schedule yesterday was a new and interesting experience. Also, android os really doesn't like calmail. Side note: does anyone know of a good solution for forwarding calmail to gmail?
+
+I'm going to address some things that I was able to hear being discussed when I came in at the end of the meeting yesterday. In order to do my best to get this project up to speed, I have completely cleared my schedule for the next 3 days. I'll be putting in 12-14 hours / day on this exclusively starting tomorrow and through Friday. *It would be great if you guys could respond ASAP* so that we don't spend time making something that sucks/ isn't unique or relevent (which seems to be something that you guys are pushing for). I'll keep the git/ruby/rails/internet-specific questions that I had for stackoverflow or the newsgroup. 
+
+*What we're trying to solve and what makes us different* One questions is: what do you think the following should imply about our solution? We'd appreciate any help/ insight of any kind.
+
+This app targets non-technical, informal or on-the-go organizations such as student organizations who think that the barrier for entry to current team management solutions is too heavy-duty, too high of a learning curve and doesn't focus on engaging and motivating team members. I have a friend who's a chemical engineer and always laments about how she often picks up the slack for her co-workers but doesn't get any recognition beyond her immediate boss. This app is meant to make team members actually feel good about executing regardless of management-facing expectations and who is only initially or publically responsible for what. The app is designed for groups that execute their tasks in an environment where computers or smart phone are inconvient to use, unavailable or even unaffordable for team members. In terms of what's currently available online for this use case, we see ourselves as the intersection of: basecamp, stackoverflow, linkedin, [facebookgroups?], )  
+
+The overriding purpose of our app is to provide a means for team members feel to acknowledged and relevant to their organization for completing tasksk. We intend to provide the transparancy offered by pivotaltracker and also a reputation based points system like stackoverflow's that similarily compells users to try and increase their name-associated rep score. Also, leaders can optionally allow the app automate and manage delivering money to workers assigned to a task when it gets completed. This should make team leaders more naturally comfortable with the app's fremium model of existance, which incorporating sms implies anyway. 
+
+Potential future directions: It should allow team members to easily make suggestions to improve an ongoing process. Another one might be to allow the leader to recruit team members who have a history with other organizations (i.e. careers.stackoverflow.com)
+
+I'll be updating our pivotaltracker with what all of this all means in terms of tangible features that I think are deliverable by demo day as we flesh them out. Essentially, I want to implement[..
+
+	SMS STUFF that I have left to implement: comment on tasks over sms, view comments over sms, subscribe to a task (meaning that you get sms messages when comments are made), complete a task over sms. This way we can demo SMS and our app at the same time (i.e. demostrate many users via one on the laptop who is probably also going to be an org leader and one (or many) users using SMS. Might need to learn timed polling for updates to task completion in order to have gmail and facebook like ajax awesomeness. 
+
+Then I'm going to start thinking about this reputation / money reward system. I'll be updating pivotal/google docs with this info after I solve the sms stuff should be done by the end of today, the 8th at the latest.
+
+Long, I like your idea for the demo. Let's just make sure that it's a magazine such that the people who work for the mag fit the target audience. demonstrates the need for this (i.e. computer isn't hady). Maybe the presentation itself?
+
+Group: let's discuss workflow asap.
+..
+I remember hearing concern about groups and their members. The organization is kind of a mis-nomer and should actually be thought of as a team with one or more leaders (i.e. a small student group). 
+] by [date of demo day]
+
+As I mentioned in between meetings yesterday (and also during the milestone 3 checkoff),  [
+something to engage them with this?: 
+[twilio email chain]
+
+BTW we also briefly talked about how we would love it if you could find time to look at the tests, features, specs that I've written and let me know to progress so that I maximize points and demo-coolness.
+
+If when a user does everything correct is called "happy path", what's the bad case called?
+
+====
+
+NOTE: call reputation "props"
+
+Please make edits. Go to file -> see revision history for why you shouldn't be worried about overwritting.

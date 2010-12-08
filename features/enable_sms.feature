@@ -1,11 +1,10 @@
 Feature: enable SMS capabilities.
 	
 	@javascript
-	@wip
 	Scenario: a user successfully enables SMS capabilities
 		Given I am on the home page
 		Given I am a logged in user who hasn't yet enabled SMS capabilities
-		And I follow "enable SMS"
+		When I follow "enable SMS"
 		And I check "user_sms_enabled"
 		And I fill in "user_phone_number" with "440-554-8235"
 		And I press "Save"

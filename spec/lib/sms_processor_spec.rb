@@ -55,7 +55,7 @@ def make_active_user_with_sms_enabled
   u = User.new(:email => "spitfire67@berkeley.edu", :password => "password", :password_confirmation => "password", :first_name => "James")
   u.first_name = "James"
   u.active = true
-  u.save(false)
+  u.save(:validate => false)
   u.active = true
   u.save
   assert u.active
@@ -66,9 +66,9 @@ def make_active_user_with_sms_enabled
 end
 
 def make_group_for_user(user)
-  g = Group.create!
+  g = Group.create!(:name => "test_group")
   user.groups << g
-  user.save(false)
+  user.save(:validate => false)
   g
 end
 

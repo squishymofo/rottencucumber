@@ -8,7 +8,7 @@ Given /^that a user with email "([^"]*)" and password "([^"]*)" and first name "
     u = User.new(:email => email, :password => "password", :password_confirmation => "password", :first_name => first_name)
     u.first_name = first_name
     u.active = true
-    u.save(false)
+    u.save(:validate => false)
     u.active = true
     u.save
     assert u.active
