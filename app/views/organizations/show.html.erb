@@ -27,7 +27,7 @@
 	</div>
 	<div class="ds-add">
 		<div class='icon'> 
-			<a href='organizations/new'>
+			<a href=<%= "groups/new/#{@org.id}" %> >
 			<%= image_tag "plus-sign-blue.png"%>
 			</a>
 		</div>
@@ -37,7 +37,7 @@
 	</div>
 	<div class="ds-add">
 		<div class='icon'> 
-			<a href='organizations/new'>
+			<a href=<%= "/invitations/new/#{@org.id}" %>>
 			<%= image_tag "plus-sign-green.png"%>
 			</a>
 		</div>
@@ -46,6 +46,16 @@
 		</div>
 	</div>
 	<% end%> 
+	<div class="ds-add">
+		<div class='icon'> 
+			<a href='organizations/new'>
+			<%= image_tag "plus-sign-green.png"%>
+			</a>
+		</div>
+		<div class='add-link'>
+			<div><a href=<%= "/organizations/users/#{@org.id}" %> >Users List</a></div>
+		</div>
+	</div>
 </div>
 
 <div id='current-projects'>
@@ -139,12 +149,12 @@
 					<tr>
 						<td><%= link_to group.name, group_path(group) %></td>
 						<td>
-							<% task =  Task.group('point').having('max(point)').where("group_id =#{group.id}").first %>
+							<% task =  Task.where("group_id =#{group.id} and point = 3") %>
 							<%= task.nil? ? "None" : task.name.capitalize %>
 						</td>
 						
 						<td>
-							<% task =  Task.having('min(due)').where("group_id =#{group.id}").first %>
+							<% task =  Task.where("group_id =#{group.id}").order('due asc').first %>
 							<%= task.nil? ? "None" : task.name.capitalize %>
 						</td>
 						
