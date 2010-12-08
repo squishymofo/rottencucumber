@@ -1,18 +1,15 @@
 Feature: view tasks over SMS
-	** NOTE TO GSIS: this and most sms interactions are mostly tested within spec/lib
 
 	Background: 
 		Given I am a logged in user who has enabled SMS capabilities with phone number "4405548235"
 		And I have "4" active tasks assigned to me
 
-	@wip
 	@javascript
 	Scenario: User texts "tasks" to get a numbered list of active tasks assigned to the user
 		And I have no sms session
 		When I text in "tasks"
 		Then I should be texted a numbered list of names of active tasks that are assigned to me
 	
-	@wip
 	@javascript
 	Scenario: User who has previously texted "tasks" texts in a task number to get the task description
 		And I have texted in "tasks"

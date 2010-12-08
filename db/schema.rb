@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(:version => 20101208055749) do
 
   create_table "projects", :force => true do |t|
     t.string   "name"
-    t.text     "description"
+    t.text     "description",     :limit => 255
     t.integer  "organization_id"
     t.datetime "created_at"
     t.datetime "updated_at"
