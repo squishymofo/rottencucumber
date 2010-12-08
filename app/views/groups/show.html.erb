@@ -11,7 +11,7 @@
 </script>
 
 <div class='ds-title-section'>
-	<div class="ds-section-header"> <%= @group.name.capitalize%></div>
+	<div class="ds-section-header"> <%= @group.name.capitalize if @group.name %></div>
 	<div class="ds-subsection">For project: <%= @group.organization.name.capitalize %></div>
 </div>
 
@@ -34,7 +34,7 @@
 		<tbody>
 			<% @users.each do |user| %>
 			<tr>
-				<td><%= "#{user.first_name.capitalize} #{user.last_name.capitalize}"%>				</td>
+				<td><%= "#{user.first_name.capitalize} "%>				</td>
 				<td><%= user.email %>				</td>
 			</tr>
 			<% end %>

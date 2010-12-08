@@ -27,3 +27,5 @@ use facebook for signup and auth, fbml for everything else.
 NOTE: call reputation "props"
 
 org would be rotten cucumber, project would be demo, task would be jimmy talks about software
+
+TODO: find out how to (rails way) do a remote get every 3 secs to push comments to the page as they're made over sms.
