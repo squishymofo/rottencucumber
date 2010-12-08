@@ -139,12 +139,12 @@
 					<tr>
 						<td><%= link_to group.name, group_path(group) %></td>
 						<td>
-							<% task =  Task.where("group_id =#{group.id}").select('max(point) point, name').first %>
+							<% task =  Task.where("group_id =#{group.id}").maximum('point').first %>
 							<%= task.nil? ? "None" : task.name.capitalize %>
 						</td>
 						
 						<td>
-							<% task =  Task.where("group_id =#{group.id}").select('min(due) due, name').first %>
+							<% task =  Task.where("group_id =#{group.id}").minimum('due').first %>
 							<%= task.nil? ? "None" : task.name.capitalize %>
 						</td>
 						
