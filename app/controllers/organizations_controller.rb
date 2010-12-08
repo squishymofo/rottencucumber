@@ -40,4 +40,9 @@ class OrganizationsController < ApplicationController
     @groups = @org.groups
   end
   
+  def users
+    @org = Organization.find params[:id]
+    @users  = @org.users
+  end
+  
 end

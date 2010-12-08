@@ -1,0 +1,41 @@
+<script type="text/javascript">
+	$(function() 
+	    { 
+	        $("table").tablesorter({sortList:[[0,0],[2,1]], widgets: ['zebra']});
+					$('#invitation_form').hide();
+	    } 
+	);
+	
+	$('#invite_link').click(function() {
+	    $('#invitation_form').slideDown();
+	});
+</script>
+
+<div class='ds-title-section'>
+	<div class="ds-section-header"> Users List</div>
+	<div class="ds-subsection"><%= @org.name.capitalize %></div>	
+</div>
+
+<div id='users-list'>
+	<table id='users-list-table' class='tablesorter'>
+		<thead>
+			<tr>
+				<th>User</th>
+				<th>E-mail</th>
+				<th>Remove</th>
+			</tr>
+		</thead>
+		
+		<tbody>
+			<% @users.each do |user| %>
+				<tr>
+					<td><%= "#{user.first_name.capitalize}  #{user.last_name.capitalize}" %></td>
+					<td><%= "#{user.email}"%></td>
+					<% if @current_user.id == @org.creator_id %>
+						<td> Remove User </td>
+					<% end %>
+				</tr>
+			<% end %>
+		</tbody>
+	</table>
+</div>

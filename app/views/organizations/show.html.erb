@@ -27,7 +27,7 @@
 	</div>
 	<div class="ds-add">
 		<div class='icon'> 
-			<a href='organizations/new'>
+			<a href=<%= "groups/new/#{@org.id}" %> >
 			<%= image_tag "plus-sign-blue.png"%>
 			</a>
 		</div>
@@ -37,7 +37,7 @@
 	</div>
 	<div class="ds-add">
 		<div class='icon'> 
-			<a href='organizations/new'>
+			<a href=<%= "/invitations/new/#{@org.id}" %>>
 			<%= image_tag "plus-sign-green.png"%>
 			</a>
 		</div>
@@ -46,6 +46,16 @@
 		</div>
 	</div>
 	<% end%> 
+	<div class="ds-add">
+		<div class='icon'> 
+			<a href='organizations/new'>
+			<%= image_tag "plus-sign-green.png"%>
+			</a>
+		</div>
+		<div class='add-link'>
+			<div><a href=<%= "/organizations/users/#{@org.id}" %> >Users List</a></div>
+		</div>
+	</div>
 </div>
 
 <div id='current-projects'>
