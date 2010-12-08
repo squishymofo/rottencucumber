@@ -33,6 +33,7 @@ class InvitationsController < ApplicationController
       @invitation = Invitation.create(:organization_id => params[:org_id], :user_id => @user.id)
       redirect_to :controller => "organizations", :action => "show", :id => params[:org_id]
     end
+    
   end
   
   def proceed
@@ -44,8 +45,10 @@ class InvitationsController < ApplicationController
       invitation.destroy
       
     elsif params[:submit] == "Decline"
+      
       invitation = Invitation.find(params[:inv_id])
       invitation.destroy
+      
     end
     
     redirect_to :back

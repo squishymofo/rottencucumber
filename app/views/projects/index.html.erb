@@ -1,12 +1,21 @@
+<script type="text/javascript">
+	$(function() 
+	    { 
+	        $("table").tablesorter({widgets: ['zebra']});
+	    } 
+	);
+	
+	$('#invite_link').click(function() {
+	    $('#invitation_form').slideDown();
+	});
+</script>
+
 <div class='ds-title-section'>
 	<div class="ds-section-header"> Projects </div>
 	<div class="ds-subsection"> List of all projects you are involved in </div>
 	<div class="ds-add">
 	</div>
 </div>
-
-This shows all the projects that a user is a part of which means that the user is involved in one or more tasks of the projects on this page
-<br />
 
 <div id='projects'>
 	<table id="projects-table" class="tablesorter">
