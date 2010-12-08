@@ -43,10 +43,10 @@
 				<tr>
 					<th>Task Name</th>
 					<th>Task Description</th>
-					<th>Group Assigned</th>
+					<th>Group Assigned** Note: should be a list of usernames with reps </th>
 					<th>Deadline</th>
 					<th>Points</th>
-					<th>Status</th>
+					<th>Status** Note: tasks should be started once they're created </th>
 					<th>Action</th>
 				</tr>
 			</thead>
@@ -57,7 +57,7 @@
 						<td><%= link_to task.name, task_path(task) %></td>
 						<td><%= task.description %></td>
 						<td><%= task.group.nil? ? "N/A" : (link_to task.group.name, group_path(task.group))  %></td>
-						<td><%= task.due.to_date %></td>
+						<td>TODO <%#= task.due.to_date %></td>
 						<td><%= task.point %></td>
 						<td><%= translate_task_status task.status %></td>
 						<td id='task-action'>

@@ -7,11 +7,15 @@ class User < ActiveRecord::Base
   has_many :user_groups
   
   has_many :invitations
-  
+  # Task.where(:project_id => u.active_tasks.map(&:project_id))
+
   #TODO: optimize !!
   has_many :groups, :through => :user_groups do
     def active_tasks
       @tasks ||=Task.where(:group_id => map(&:id)).order('created_at ASC').where(:status => 0)
+    end
+    def tasks
+      @tasks ||=Task.where(:group_id => map(&:id)).order('created_at ASC')
     end
     def users_in_groups_with_me
       @users_in_group_with_me = []
@@ -91,6 +95,13 @@ class User < ActiveRecord::Base
   def active_tasks
     groups.active_tasks
   end
+
+  def tasks
+    groups.tasks
+  end
+
+  def active_tasks_in_projects
+  end
   
   def get_users_in_groups_with_me
     self.groups.users_in_groups_with_me
@@ -98,6 +109,10 @@ class User < ActiveRecord::Base
 
   def most_active_organization
     organizations.order('organizations.updated_at DESC').first
+  end
+
+  def tasks_from_projects_involved_in
+    Task.where(:project_id => tasks.map(&:project_id))
   end
 
 end
