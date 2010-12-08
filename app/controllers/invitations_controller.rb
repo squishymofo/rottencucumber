@@ -41,7 +41,9 @@ class InvitationsController < ApplicationController
       
       invitation = Invitation.find(params[:inv_id])
       organization = Organization.find(invitation.organization_id)
-      organization.users << User.find(@current_user.id)
+      if !organization.users.include? @current_user
+        organization.users << User.find(@current_user.id)
+      end
       invitation.destroy
       
     elsif params[:submit] == "Decline"
