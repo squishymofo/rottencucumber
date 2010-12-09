@@ -86,7 +86,6 @@ class TasksController < ApplicationController
 
   def comment
     @task = Task.find params[:id]
-    debugger
     if @current_user.tasks_from_projects_involved_in.include?(@task)
       @comment = Comment.new(:body => params[:comment_body], :user_id => @current_user.id, :task_id => @task.id)
       if @comment.save
@@ -95,7 +94,6 @@ class TasksController < ApplicationController
         #TODO errors!
         @error_comment = @comment
         @comments = @task.comments
-        debugger # if you get here, you found it
         render :show
       end
     end

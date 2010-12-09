@@ -1,8 +1,15 @@
-Given /^that I am on the show page for a task assigned to me that has comments "([^"]*)"$/ do |arg1|
+Given /^that I am on the show page for a task assigned to me that has comments "([^"]*)"$/ do |comment_body|
   u = User.first
   t = User.first.active_tasks.first
   assert t
-  t.comments.create(:body => k, :user_id => u.id, :task_id => t.id)
+  t.comments.create(:body => comment_body, :user_id => u.id, :task_id => t.id)
+  Given "I am on the show page for task with id \"#{t.id}\""
+end
+
+Given /^that I am on the show page for a task assigned to me that doesn't have any comments$/ do
+  u = User.first
+  t = User.first.active_tasks.first
+  assert t
   Given "I am on the show page for task with id \"#{t.id}\""
 end
 
@@ -60,6 +67,7 @@ end
 
 Then /^I should see my comment$/ do
   #Then "I should see \"\""
+  Then /^I should see \"hello"\$/
 end
 
 

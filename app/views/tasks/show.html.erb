@@ -8,12 +8,12 @@ Stuff about task
   <%= submit_tag "Comment!" %>
 <% end %>
 
-Comments: 
 
-<% if @comments %>
-  <% for comment in @comments do %>
+<% if @task.comments.any? %>
+  Comments: 
+  <% for comment in @task.comments do %>
     <%= render :partial => 'shared/one_comment', :locals => {:comment => comment } %>
   <% end %>
 <% else %>
-  There aren't any commnets yet
+  There aren't any comments yet
 <% end %>

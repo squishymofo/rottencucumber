@@ -28,3 +28,9 @@ NOTE: call reputation "props"
 
 TODO: find out how to (rails way) do a remote get every 3 secs to push comments to the page as they're made over sms.
 	the page should send the ID's of all the last comments for each displayed task
+
+Gmail feature for highlighting email that was read but not responded to?
+
+TODO: @ok switch
+
+TODO: look at how dennis uses rspec. Coolio!
