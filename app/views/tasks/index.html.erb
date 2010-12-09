@@ -7,3 +7,12 @@
 
 This shows all the tasks that the user is responsible for. Tasks should be categorized by group and by organization. Create a table with tasks, group, project and organization and make them sortable.
 
+<div id='projects-tasks'>
+	<div id='tasks-list'>
+		<% if @tasks.empty? %>
+        	There aren't any tasks associated with this project
+		<% else %>
+            <%= render:partial => 'shared/tasks_table' %>
+		<% end %>
+	</div>
+</div>

@@ -114,5 +114,15 @@ class User < ActiveRecord::Base
   def tasks_from_projects_involved_in
     Task.where(:project_id => tasks.map(&:project_id))
   end
+  
+  def projects
+    set_of_projs = Set.new
+    self.groups.each do |g|
+      g.tasks.each do |t|
+        set_of_projs.add(t.project)
+      end
+    end
+    set_of_projs.to_a
+  end
 
 end

@@ -4,7 +4,7 @@ class TasksController < ApplicationController
   before_filter :require_user
   
   def index
-    @my_organizations_tasks = @current_user.active_tasks
+    @tasks = @current_user.active_tasks
   end
 
   def new

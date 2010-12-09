@@ -2,13 +2,7 @@ class ProjectsController < ApplicationController
   before_filter :current_user
   
   def index
-    set_of_projs = Set.new
-    @current_user.groups.each do |g|
-      g.tasks.each do |t|
-        set_of_projs.add(t.project)
-      end
-    end
-    @projects = set_of_projs.to_a
+    @projects = @current_user.projects
   end
 
   def new
