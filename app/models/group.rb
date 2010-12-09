@@ -5,4 +5,7 @@ class Group < ActiveRecord::Base
   belongs_to :organization
   
   validates_presence_of :name, :on => :create, :message => "can't be blank"
+  def first_names_of_people
+    users.map(&:first_name)
+  end
 end

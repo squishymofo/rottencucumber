@@ -1,0 +1,46 @@
+<% content_for :script do %>
+    $(document).ready(function () {
+       $(function() 
+       { 
+         $("table").tablesorter({sortList:[[0,0],[2,1]], widgets: ['zebra']});
+       } 
+       );
+   });
+
+
+<% end %>
+
+                <table id='tasks-table' class='tablesorter'>
+                        <thead>
+                                <tr>
+                                        <th>Task Name</th>
+                                        <th>Task Description</th>
+                                        <th>Group Assigned** Note: should be a list of usernames with reps </th>
+                                        <th>Deadline</th>
+                                        <th>Points</th>
+                                        <th>Status** Note: tasks should be started once they're created </th>
+                                        <th>Action</th>
+                                </tr>
+                        </thead>
+                        
+                        <tbody>
+                                <% @tasks.each do |task| %>
+                                        <tr>
+                                                <td><%= link_to task.name, task_path(task) %></td>
+                                                <td><%= task.description %></td>
+                                                <td><%= task.group.nil? ? "N/A" : (link_to task.group.first_names_of_people.to_sentence, group_path(task.group))  %></td>
+                                                <td>TODO <%#= task.due.to_date %></td>
+                                                <td><%= task.point %></td>
+                                                <td><%= translate_task_status task.status %></td>
+                                                <td id='task-action'>
+                                                        <%= link_to "view", task_path(task) %> 
+                                                        <br />
+                                                        <%# TODO: implement complete %>
+                                                        <%= link_to "complete", "" %>
+                                                </td>
+                                        </tr>
+                                <% end %>
+                        </tbody>
+                        
+                </table>
+
