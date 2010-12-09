@@ -8,7 +8,13 @@
 		   	<li><%= link_to "Login", new_user_session_path, :remote => true %> </li>
 		   	<li><%= link_to "Sign up", new_user_path, :remote => true %> </li>
 		 	<% else %>
-				<li><a href='/organizations'>Organizations </a></li>
+                                <% if @current_user.organizations.size == 1 %>
+                                  <li><%= link_to @current_user.organizations.first.name, organization_path(@current_user.organizations.first) %></li>
+                                <% elsif @current_user.organizations.size > 1 %>
+                                  <li><a href='/organizations'>Organizations </a></li>
+                                <% else %>
+                                  <%# nothing %>
+                                <% end %>
 				<li><a href='/projects'>Projects</a></li>
                                 <%# <li><a href='/groups'>My Groups</a></li> %>
 				<li><a href='/tasks'>Tasks</a></li>

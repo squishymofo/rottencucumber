@@ -5,5 +5,6 @@ class Organization < ActiveRecord::Base
   has_many :groups, :dependent => :destroy
   #has_many :tasks
   has_many :invitations, :dependent => :destroy
+  belongs_to :creator
   validates_presence_of :name, :description
 end
