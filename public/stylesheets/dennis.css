@@ -199,6 +199,11 @@
 	background:#FED390;	
 }
 
+#tasks-by-project {
+	font-weight:bold;
+	font-size:18px;
+}
+
 #projects-table th{
 	background:#D0B9FF;
 	
