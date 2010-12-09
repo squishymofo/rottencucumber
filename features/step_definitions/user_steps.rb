@@ -11,8 +11,8 @@ Given /^I have "([^"]*)" tasks assigned to me$/ do |num_tasks|
   g = Group.create(:name => "test groups", :organization_id => org.id)
   UserGroup.create(:user_id => u.id, :group_id => g.id) # add the me to the group
   p = Project.create(:name => "do work", :organization_id => org.id, :description => "description") # create a project to add some tasks to
-  (1..num_tasks.to_i).each do |i| #now add some tasks to the project
-      Task.create(:name => "Thing #{i} assigned to me", :description => "Description of task #{i}", :group_id => g.id, :project_id => p.id, :status => 0)
+  (1..num_tasks.to_i).each do |i| #now add some active tasks to the project
+      Task.create(:name => "Thing #{i} assigned to me", :description => "Description of task #{i}", :group_id => g.id, :project_id => p.id, :status => 1)
   end
 
 end
@@ -38,6 +38,19 @@ end
 Then /^I should see the active tasks that for the project that I'm involved in but not assigned to$/ do
   Then "I should see \"someone else is responsable for\""
 end
+
+Given /^I have completed a task "([^"]*)"$/ do |task_name|
+  u = User.find_by_email("spitfire67@berkeley.edu")
+  assert u
+  t = Task.find_by_name task_name
+  assert t
+  t.status = 3
+  t.save
+end
+
+Then /^I should not the inactive tasks that are assigned to me$/ do
+end
+
 
 ## end landing page stuff
 

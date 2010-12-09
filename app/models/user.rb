@@ -12,7 +12,7 @@ class User < ActiveRecord::Base
   #TODO: optimize !!
   has_many :groups, :through => :user_groups do
     def active_tasks
-      @tasks ||=Task.where(:group_id => map(&:id)).order('created_at ASC').where(:status => 0)
+      @tasks ||=Task.where(:group_id => map(&:id)).order('created_at ASC').where(:status => 1)
     end
     def tasks
       @tasks ||=Task.where(:group_id => map(&:id)).order('created_at ASC')
@@ -109,6 +109,10 @@ class User < ActiveRecord::Base
 
   def most_active_organization
     organizations.order('organizations.updated_at DESC').first
+  end
+
+  def active_tasks_from_projects_involved_in
+    tasks_from_projects_involved_in.where(:status => 1)
   end
 
   def tasks_from_projects_involved_in

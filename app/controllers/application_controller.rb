@@ -53,7 +53,6 @@ class ApplicationController < ActionController::Base
     else
       raise Exception
     end
-    
   end
   
 

@@ -8,7 +8,7 @@ class LandingController < ApplicationController
       @unknown_user = true
     end
     if @current_user
-      @tasks = @current_user.tasks_from_projects_involved_in
+      @tasks = @current_user.active_tasks_from_projects_involved_in
     end
   end
 
