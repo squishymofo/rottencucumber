@@ -7,6 +7,9 @@ class LandingController < ApplicationController
     else
       @unknown_user = true
     end
+    if @current_user
+      @tasks = @current_user.tasks_from_projects_involved_in
+    end
   end
 
   def skip_it

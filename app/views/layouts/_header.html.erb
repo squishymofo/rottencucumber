@@ -1,6 +1,6 @@
 <div id='dennis-header'>
 		<div id='logo'> 
-			<%= image_tag "head.png", :title => "Rotten Cucumber" %>
+			<%= link_to image_tag("head.png", :title => "Rotten Cucumber"), root_url %>
 		</div>
 		<div id='navigation'>
 			<ul id ='navigation-list'>
@@ -9,12 +9,12 @@
 		   	<li><%= link_to "Sign up", new_user_path, :remote => true %> </li>
 		 	<% else %>
 				<li><a href='/organizations'>Organizations </a></li>
-				<li><a href='/projects'>My Projects</a></li>
-				<li><a href='/groups'>My Groups</a></li>	
-				<li><a href='/tasks'>My Tasks</a></li>
+				<li><a href='/projects'>Projects</a></li>
+                                <%# <li><a href='/groups'>My Groups</a></li> %>
+				<li><a href='/tasks'>Tasks</a></li>
 				<li><a href='/invitations'>Invitations</a></li>
                                 <li><%= link_to @current_user.first_name, edit_user_path(@current_user) %> </li>
-				<li><a href='/logout'>Log Out</a></li>
+				<li><a href='/logout'>Log out</a></li>
 			<% end %>
 				</ul>
 		</div>

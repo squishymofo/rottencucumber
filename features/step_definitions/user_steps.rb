@@ -89,7 +89,6 @@ Given /^I am a logged in user$/ do
     And "I fill in \"user_session_email\" with \"spitfire67@berkeley.edu\""
     And "I fill in \"user_session_password\" with \"password\""
     And "I press \"Sign in\""
-    debugger
     Then "I should see \"James\""
 end
 

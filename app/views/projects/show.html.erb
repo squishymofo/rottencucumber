@@ -36,43 +36,9 @@
 	
 	<div id='tasks-list'>
 		<% if @tasks.empty? %>
-			There is no task associated to this project
+	           There aren't any tasks associated with this project
 		<% else %>
-		<table id='tasks-table' class='tablesorter'>
-			<thead>
-				<tr>
-					<th>Task Name</th>
-					<th>Task Description</th>
-					<th>Group Assigned** Note: should be a list of usernames with reps </th>
-					<th>Deadline</th>
-					<th>Points</th>
-					<th>Status** Note: tasks should be started once they're created </th>
-					<th>Action</th>
-				</tr>
-			</thead>
-			
-			<tbody>
-				<% @tasks.each do |task| %>
-					<tr>
-						<td><%= link_to task.name, task_path(task) %></td>
-						<td><%= task.description %></td>
-						<td><%= task.group.nil? ? "N/A" : (link_to task.group.name, group_path(task.group))  %></td>
-						<td>TODO <%#= task.due.to_date %></td>
-						<td><%= task.point %></td>
-						<td><%= translate_task_status task.status %></td>
-						<td id='task-action'>
-							<% form_tag("/tasks/#{task.id}", :method => :get) do %>
-								<%= submit_tag "Edit", :id => "submit", :name => "submit" %>
-							<% end -%>
-							<% form_tag("/tasks/#{task.id}", :method => :delete) do %>
-							  <%= submit_tag "Delete", :id => "submit", :name => "submit" %>	
-							<% end -%>
-						</td>
-					</tr>
-				<% end %>
-			</tbody>
-			
-		</table>
+                  <%= render:partial => 'shared/tasks_table' %>
 		<% end %>
 	</div>
 </div>

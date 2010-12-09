@@ -3,12 +3,16 @@
 <div class="span-24">
 </div>
 <div id="dialog-form"> </div>
-<p class="span-24 last">Super simple project management for non-technical, informal organizations.</p>
 <% if @current_user %>
-  <% if @current_user.sms_enabled %>
-    <p class="span-24 last"> You have enabled SMS. Text 'help' to 510-550-5258 to get started.</p>
-  <% else %>
-    <%= link_to("enable SMS", "#{edit_user_path(@current_user)}#sms_preferences") %>
-  <% end %>
+    <% if @current_user.sms_enabled %>
+      <p class="span-24 last"> You have enabled SMS. Text 'help' to 510-550-5258 to get started.</p>
+    <% else %>
+      <%= link_to("enable SMS", "#{edit_user_path(@current_user)}#sms_preferences") %>
+    <% end %>
+    <%= render :partial => 'shared/tasks_table' %>
+
+<% else %>
+  <p class="span-24 last">Super simple project management for non-technical, informal organizations.</p>
 <% end %>
+
 <br />
