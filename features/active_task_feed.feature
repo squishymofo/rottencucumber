@@ -18,7 +18,6 @@ Feature: a feed of the active tasks from projects that you're involved in
 		When I go to the home page
 		Then I should see the active tasks that for the project that I'm involved in but not assigned to
 
-	@wip
 	@javascript
 	Scenario: User with completed tasks visits the landing page and does not see the inactive completed tasks assigned to them
 		Given I am logged in

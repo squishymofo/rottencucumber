@@ -2,6 +2,7 @@ class Task < ActiveRecord::Base
   #belongs_to :organization
   belongs_to :group
   belongs_to :project
+  has_many :comments
 
   def translate_status
     case self.status

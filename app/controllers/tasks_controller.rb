@@ -4,6 +4,7 @@ class TasksController < ApplicationController
   before_filter :require_user
   
   def index
+    # NOTE: write features first 
     @my_organizations_tasks = @current_user.active_tasks
   end
 
@@ -33,12 +34,25 @@ class TasksController < ApplicationController
       end
       redirect_to :controller => "projects", :action => "show", :id => params[:project][:id].to_i
     else
-      flas[:error] = 'Failed creating a new task'
+      flash[:error] = 'Failed creating a new task'
       redirect_to :action => "new"
     end
   end
 
   def show
+    # TODO test this
+    # Assumes you can view all of the tasks in all of your organizations
+    @task = Task.find(params[:id])
+    @project = @task.project
+    @org = @project.organization
+    can_view = @current_user.organizations.map(&:id).include?(@org.id)
+    unless can_view
+      flash[:error] = 'Access Denied'
+      redirect_to :controller => root_url
+    end
+  end
+
+  def edit
     @task = Task.find(params[:id])
     @project = @task.project
     @org = @project.organization
@@ -47,8 +61,10 @@ class TasksController < ApplicationController
       flash[:error] = 'Access Denied'
       redirect_to :controller => "projects", :action => "index"
     end
-      
-    
+  end
+
+  def update
+    #TODO
   end
   
   def save
@@ -61,8 +77,25 @@ class TasksController < ApplicationController
       flash[:notice] = "Changes have been saved"
       redirect_to :controller => "projects", :action => "show", :id => @task.project.id
     else
-      flas[:error] = 'Failed saving changes'
+      flash[:error] = 'Failed saving changes'
       redirect_to :action => "show", :id => params[:task][:id].to_i
+    end
+  end
+
+  def comment
+    @task = Task.find params[:id]
+    debugger
+    if @current_user.tasks_from_projects_involved_in.include?(@task)
+      @comment = Comment.new(:body => params[:comment_body], :user_id => @current_user.id, :task_id => @task.id)
+      if @comment.save
+        redirect_to task_path(@task)
+      else
+        #TODO errors!
+        @error_comment = @comment
+        @comments = @task.comments
+        debugger # if you get here, you found it
+        render :show
+      end
     end
   end
   
@@ -73,7 +106,6 @@ class TasksController < ApplicationController
     else
       flash[:error] = "Access Denied"
     end
-       
     redirect_to :back
   end
   #  

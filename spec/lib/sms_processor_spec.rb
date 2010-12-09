@@ -73,5 +73,5 @@ def make_group_for_user(user)
 end
 
 def make_task_for_group(group, task_name)
-  Task.create(:group_id => group.id, :name => task_name)
+  Task.create(:group_id => group.id, :name => task_name, :status => 1)
 end

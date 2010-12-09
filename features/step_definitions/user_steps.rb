@@ -3,34 +3,6 @@ Given /^that I am a registered and active user$/ do
     assert u.active?
 end
 
-Given /^I have "([^"]*)" tasks assigned to me$/ do |num_tasks|
-  u = User.first
-  org = Organization.create(:name => "my org", :description => "desc of my org") # create an org
-  u.organizations << org # this is my org
-  u.save
-  g = Group.create(:name => "test groups", :organization_id => org.id)
-  UserGroup.create(:user_id => u.id, :group_id => g.id) # add the me to the group
-  p = Project.create(:name => "do work", :organization_id => org.id, :description => "description") # create a project to add some tasks to
-  (1..num_tasks.to_i).each do |i| #now add some active tasks to the project
-      Task.create(:name => "Thing #{i} assigned to me", :description => "Description of task #{i}", :group_id => g.id, :project_id => p.id, :status => 1)
-  end
-
-end
-
-Given /^there are "([^"]*)" active tasks assigned to others in projects that I'm involved in$/ do |num_tasks|
-  me = User.first
-  # create another user
-  other = create_registered_and_active_user("someone@example.com", "password", "Jared")
-  org = Organization.first
-  g = Group.create(:name => "test groups", :organization_id => org.id)
-  UserGroup.create(:user_id => other.id, :group_id => g.id) # add the other to the group
-  # find the project of me
-  p = Project.first 
-  (1..num_tasks.to_i).each do |i| #now add some tasks to the project
-      Task.create(:name => "Thing #{i} someone else is responsable for", :description => "Description of task #{i} that I don't care about", :group_id => g.id, :project_id => p.id, :status => 0)
-  end
-end
-
 Then /^I should see the active tasks that are assigned to me$/ do
   Then "I should see \"assigned to me\""
 end

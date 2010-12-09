@@ -13,10 +13,14 @@ module NavigationHelpers
       
     when /the organization creation page/
       '/organizations/new'
-
     when /the user preferences page/
       edit_user_path(User.find_by_email("spitfire67@berkeley.edu"))
-    
+    when /the show page for task with id "(.+)"/
+      task_path(Task.find($1))
+    when /the show page for the first task assigned to me/
+      task_path(User.find_by_email("spitfire67@berkeley.edu").tasks.order("created_at desc").first)
+    when/the show page for the first task for a project that I am involved in but not assigned to/
+
     when /the project creation page/
       '/projects/new/1'
 

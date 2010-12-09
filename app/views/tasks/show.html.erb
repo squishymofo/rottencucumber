@@ -1,40 +1,19 @@
-<div class='ds-title-section'>
-	<div class="ds-section-header"> <%= @task.name.capitalize%></div>
-	<div class="ds-subsection">For project: <%= @project.name.capitalize %></div>
-</div>
+Stuff about task
 
-<table id='edit-task-table'>
-<% form_for :task, @task, :url => {:action => :save } do |f| %>
-	<%= hidden_field :task, :id %>
-	<tr>
-	<td><%= f.label "Task name: " %></td>
-	<td><%= f.text_field :name %></td>
-	</tr>
-	
-	<tr>
-	<td><%= f.label "Description: " %></td>
-	<td><%= f.text_field :description %></td>
-	</tr>
-	
-	<tr>
-		<td><%= f.label "Task Points: " %></td>
-		<td><%= select_tag :point, options_for_select ([['1',1],['2',2],['3',3]], @task.point) %> </td>
-	</tr>
-	
-	<tr>
-		<td><%= f.label "Task Status" %></td>
-		<td><%= select_tag :status, options_for_select ([['Not Yet Started',0], ['Started',1],['On Halt',2],['Finished',3]], @task.status) %> </td>
-	</tr>
-	
-	<tr>
-		<td><%= f.label "Expected Due Date: "%></td>
-		<td><%= select_date Date.today, :prefix => :due_date %></td>
-	</tr>
-	
-	<tr>
-		<td></td>
-		<td>	<%= f.submit "Save Changes" %> </td>
-	</tr>
+<% if @error_comment %>
+  <%= render :partial => 'shared/error_messages', :locals => {:target => @error_comment } %>
 <% end %>
-</table>
+<%= form_for @task, :url => new_comment_path(:id => @task.id) do %>
+  <%= text_field_tag :comment_body, nil, :title => 'Comment' %>
+  <%= submit_tag "Comment!" %>
+<% end %>
 
+Comments: 
+
+<% if @comments %>
+  <% for comment in @comments do %>
+    <%= render :partial => 'shared/one_comment', :locals => {:comment => comment } %>
+  <% end %>
+<% else %>
+  There aren't any commnets yet
+<% end %>
