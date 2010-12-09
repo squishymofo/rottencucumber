@@ -1,3 +1,13 @@
+<% content_for :script do %>
+    $(document).ready(function () {
+       $(function() 
+       { 
+         $("table").tablesorter({sortList:[[0,0],[2,1]], widgets: ['zebra']});
+       } 
+       );
+   });
+<% end %>
+
 <div class='ds-title-section'>
 	<div class="ds-section-header"> Tasks </div>
 	<div class="ds-subsection"> List of all tasks </div>
@@ -7,3 +17,46 @@
 
 This shows all the tasks that the user is responsible for. Create a table with tasks, group, project and organization and make them sortable.
 
+<!-- TODO: group by project -->
+<div id='projects-tasks'>
+	<div id='tasks-list'>
+		<% @tasks_group_by_project.each_pair do |proj,tasks| %>
+			<div id='tasks-by-project'><%= link_to proj.name, project_path(proj) %></div>
+			<table id='tasks-table' class='tablesorter'>
+            	<thead>
+                        <tr>
+                        	<th>Task Name</th>
+                            <th>Task Description</th>
+                            <th>Group Assigned** Note: should be a list of usernames with reps </th>
+                            <th>Deadline</th>
+                            <th>Points</th>
+                            <th>Status** Note: tasks should be started once they're created </th>
+                            <th>Action</th>
+                        </tr>
+                </thead>
+                
+                <tbody>
+                        
+							<% tasks.each do |task| %>
+                                <tr>
+                                        <td><%= link_to task.name, task_path(task) %></td>
+                                        <td><%= task.description %></td>
+                                        <td><%= task.group.nil? ? "N/A" : (link_to task.group.first_names_of_people.to_sentence, group_path(task.group))  %></td>
+                                        <td>TODO <%#= task.due.to_date %></td>
+                                        <td><%= task.point %></td>
+                                        <td><%= translate_task_status task.status %></td>
+                                        <td id='task-action'>
+                                                <%= link_to "view", task_path(task) %> 
+                                                <br />
+                                                <%# TODO: implement complete %>
+                                                <%= link_to "complete", "" %>
+                                        </td>
+                                </tr>
+							<% end %>
+                        
+                </tbody>
+                
+        	</table>
+		<% end %>
+	</div>
+</div>

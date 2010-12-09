@@ -6,6 +6,8 @@ class TasksController < ApplicationController
   def index
     # NOTE: write features first 
     @my_organizations_tasks = @current_user.active_tasks
+    @tasks = @current_user.active_tasks
+    @tasks_group_by_project = @current_user.tasks_group_by_project
   end
 
   def new

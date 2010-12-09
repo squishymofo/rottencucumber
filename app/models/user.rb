@@ -99,6 +99,16 @@ class User < ActiveRecord::Base
   def tasks
     groups.tasks
   end
+  
+  def tasks_group_by_project
+    h = {} # an hash mapping a project to a list of tasks
+    self.organizations.each do |org|
+      org.projects.each do |proj|
+        h[proj] = Task.find_all_by_project_id(proj.id)
+      end
+    end
+    return h
+  end
 
   def active_tasks_in_projects
   end
@@ -117,6 +127,16 @@ class User < ActiveRecord::Base
 
   def tasks_from_projects_involved_in
     Task.where(:project_id => tasks.map(&:project_id))
+  end
+  
+  def projects
+    set_of_projs = Set.new
+    self.groups.each do |g|
+      g.tasks.each do |t|
+        set_of_projs.add(t.project)
+      end
+    end
+    set_of_projs.to_a
   end
 
 end
