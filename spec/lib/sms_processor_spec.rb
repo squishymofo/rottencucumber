@@ -38,7 +38,6 @@ describe SmsProcessor do
   it "should respond with task specific help menu when texted 'help' while in a task context" do
     @sms_session.task_id = @t.id
     @sms_session.save
-    debugger
     @sms_session.should be_valid
     @sms_processor = SmsProcessor.new(@sms_session, "help")
     @sms_processor.process_message
