@@ -96,7 +96,6 @@ class SmsProcessor
   end
 
   def process_comment_msg(comment_body)
-    Rails.logger.log("here 1")
     # TODO: need to check for the different kinds of messages
     task_id = @sms_session.task_id
     if task_id

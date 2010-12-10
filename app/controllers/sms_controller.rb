@@ -5,7 +5,6 @@ class SmsController < ApplicationController
     from_phone_number = params[:From].scan(/[0-9]+/).first[1..100]
     @user = User.find_by_phone_number from_phone_number
     @sms_processor = SmsProcessor.new(SmsSession.get_sms_session(@user.phone_number), params[:Body])
-    debugger
     @sms_processor.process_message
     account = Twilio::RestAccount.new(ACCOUNT_SID, ACCOUNT_TOKEN)
     unless @sms_processor.response_message.empty?
