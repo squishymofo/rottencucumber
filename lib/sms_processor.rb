@@ -11,6 +11,7 @@ class SmsProcessor
   def process_message
     message_a = @incoming_message_body.split
     cmd = message_a.first.downcase
+    logger.info("here 5")
     case cmd
     when /tasks/
       @response_message = process_tasks_msg
@@ -24,6 +25,7 @@ class SmsProcessor
       @response_message = process_more_msg
     #when /^say [0-9]+ .*$/ # dennis: please fix, happens when user texts in 'say comment_body' while in a task context
     when /^say/
+      logger.info("here 6")
       comment_body = message_a.values_at(1..(message_a.size)).join(" ").rstrip
       @response_message = process_comment_msg(comment_body)
     #when //
@@ -95,11 +97,13 @@ class SmsProcessor
   end
 
   def process_comment_msg(comment_body)
+    logger.info("here 1")
     # TODO: need to check for the different kinds of messages
     task_id = @sms_session.task_id
     if task_id
       task = Task.find(task_id)
       if task
+        logger.info("here 2")
         comment = Comment.new(:body => comment_body, :task_id => task.id, :user_id => @user.id )
         if comment.save
           @response_message = ""
@@ -110,6 +114,7 @@ class SmsProcessor
         @response_message = general_help_menu
       end
     else
+      logger.info("here 3")
       @response_message = general_help_menu
     end
   end
