@@ -21,6 +21,9 @@ class SmsSession < ActiveRecord::Base
 
   def self.get_sms_session(phone_number)
     existing_sess = SmsSession.find_by_phone_number phone_number
+    unless existing_sess
+      existing_sess = SmsSession.create(:phone_number => phone_number)
+    end
     existing_sess
   end
 
