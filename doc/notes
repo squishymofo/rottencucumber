@@ -42,5 +42,3 @@ TODO: pushing new comments to the page like facebook chat
 NOTE: got into rspec much sooner than cucumber for the sms stuff
 
 NOTE: don't do anything with sms that could be solved by the user looking through their previous texts
-
-PROBLEM: set_task_context in sms_controller isn't setting the task context when you text in a task id assigned to you

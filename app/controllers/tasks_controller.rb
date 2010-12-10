@@ -47,7 +47,7 @@ class TasksController < ApplicationController
     @task = Task.find(params[:id])
     @project = @task.project
     @org = @project.organization
-    can_view = @task.can_user_access?(user)
+    can_view = @task.can_user_access?(@current_user)
     unless can_view
       flash[:error] = 'Access Denied'
       redirect_to :controller => root_url
