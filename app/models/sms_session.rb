@@ -11,7 +11,7 @@ class SmsSession < ActiveRecord::Base
   end
 
   def self.get_sms_session(phone_number)
-    Rails.logger.info("phone searching for sms session phone number: " + phone.to_s)
+    Rails.logger.info("phone searching for sms session phone number: " + phone_number.to_s)
     existing_sess = SmsSession.find_by_phone_number phone_number
     Rails.logger.info(existing_sess.to_yaml)
     unless existing_sess
