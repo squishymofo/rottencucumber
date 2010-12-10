@@ -10,7 +10,7 @@ class SmsProcessor
   #should get whole response, then store extra in more
   def process_message
     message_a = @incoming_message_body.split
-    cmd = message_e.first.downcase
+    cmd = message_a.first.downcase
     Rails.logger.info("here 5")
     case cmd
     when /tasks/
