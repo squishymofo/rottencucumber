@@ -129,7 +129,7 @@ class User < ActiveRecord::Base
   def tasks_from_projects_involved_in
     #NOTE: tasks don't get deleted. If you 
     # NOTE: probably horrible
-    Task.where(:project_id => tasks.map(&:project_id))
+    tasks.where(:project_id => tasks.map(&:project_id))
   end
   
   def projects

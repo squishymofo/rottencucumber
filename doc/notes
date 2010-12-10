@@ -26,7 +26,7 @@ use facebook for signup and auth, fbml for everything else.
 
 NOTE: call reputation "props"
 
-TODO: find out how to (rails way) do a remote get every 3 secs to push comments to the page as they're made over sms.
+TODO: find out how to (rails way) do a remote get every 3 secs to push comments to the page as they're made over sms. Or better way?. **make sure there's a timeout. but how to test?
 	the page should send the ID's of all the last comments for each displayed task
 
 Gmail feature for highlighting email that was read but not responded to?
@@ -34,3 +34,13 @@ Gmail feature for highlighting email that was read but not responded to?
 TODO: @ok switch
 
 TODO: look at how dennis uses rspec. Coolio!
+
+SMS JUSTIFICATION: cost forces people to be concise with comments (good thing) and only send messages when it's important so subscribers aren't spammed (good thing). It might actually be better for the UX.
+
+TODO: create cucumber feature that tests weather the message was delivered.
+
+TODO: pushing new comments to the page like facebook chat
+
+NOTE: got into rspec much sooner than cucumber for the sms stuff
+
+NOTE: don't do anything with sms that could be solved by the user looking through their previous texts

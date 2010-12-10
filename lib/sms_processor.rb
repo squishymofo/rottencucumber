@@ -18,10 +18,14 @@ class SmsProcessor
       @response_message = process_describe_msg(cmd)
       set_task_context(cmd)
     when /describe/
-      @response_message = process_describe_msg(message_a[1]) #TODO: EDIT: if no number in message_a[1], should look for context and describe that task #TODO: where should simply be an integer which is the task_id
+      @response_message = process_describe_msg(message_a[1]) #TODO: EDIT: if no number in message_a[1], should look for context and describe that task
       set_task_context(message_a[1])
-    when /more/
+    when /more/ # note: untested
       @response_message = process_more_msg
+    #when /^say [0-9]+ .*$/ # dennis: please fix, happens when user texts in 'say comment_body' while in a task context
+    when /^say/
+      comment_body = message_a.values_at(1..(message_a.size)).join(" ").rstrip
+      @response_message = process_comment_msg(comment_body)
     #when //
     #when /complete/
     #when /notes/ #get the comments (assumes a task context)
@@ -87,6 +91,26 @@ class SmsProcessor
       @response_message = description
     else
       @response_message = "This task doesn't have a description"
+    end
+  end
+
+  def process_comment_msg(comment_body)
+    # TODO: need to check for the different kinds of messages
+    task_id = @sms_session.task_id
+    if task_id
+      task = Task.find(task_id)
+      if task
+        comment = Comment.new(:body => comment_body, :task_id => task.id, :user_id => @user.id )
+        if comment.save
+          @response_message = ""
+        else
+          @response_message = general_help_menu
+        end
+      else
+        @response_message = general_help_menu
+      end
+    else
+      @response_message = general_help_menu
     end
   end
 

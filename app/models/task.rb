@@ -19,4 +19,8 @@ class Task < ActiveRecord::Base
     end
   end
 
+  def can_user_access?(user)
+    user.tasks_from_projects_involved_in.map(&:id).include?(self.id)
+  end
+
 end
