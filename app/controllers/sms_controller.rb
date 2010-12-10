@@ -4,7 +4,7 @@ class SmsController < ApplicationController
     
     from_phone_number = params[:From].scan(/[0-9]+/).first[1..100]
     @user = User.find_by_phone_number from_phone_number
-    sms_session = get_sms_session @user.phone_number, params[:body]
+    sms_session = SmsSession.get_sms_session @user.phone_number, params[:body]
     @sms_processor = SmsProcessor.new sms_session
     @sms_processor.process_message
     account = Twilio::RestAccount.new(ACCOUNT_SID, ACCOUNT_TOKEN)
