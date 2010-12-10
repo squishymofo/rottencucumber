@@ -10,7 +10,7 @@ class SmsProcessor
   #should get whole response, then store extra in more
   def process_message
     message_a = @incoming_message_body.split
-    cmd = message_a.first.downcase
+    cmd = message_e.first.downcase
     Rails.logger.info("here 5")
     case cmd
     when /tasks/
@@ -100,19 +100,23 @@ class SmsProcessor
     task_id = @sms_session.task_id
     if task_id
       task = Task.find(task_id)
+      Rails.logger.info("processing comment here's task: " + @task.to_yaml)
       if task
-        Rails.logger.info("here 2")
+        Rails.logger.info("task was found") 
         comment = Comment.new(:body => comment_body, :task_id => task.id, :user_id => @user.id )
         if comment.save
+          Rails.logger.info("made comment") 
           @response_message = ""
         else
+          Rails.logger.info("comment didn't save") 
           @response_message = general_help_menu
         end
       else
+        Rails.logger.info("task wasn;t found") 
         @response_message = general_help_menu
       end
     else
-    Rails.logger.info("here 3")
+    Rails.logger.info("user session didn't have a task id")
       @response_message = general_help_menu
     end
   end
@@ -120,6 +124,7 @@ class SmsProcessor
   def set_task_context(task_id)
     @sms_session.task_id = task_id
     @sms_session.save
+    Rails.logger.info("set task context here's user session " + @sms_session.to_yaml)
   end
 
 end
