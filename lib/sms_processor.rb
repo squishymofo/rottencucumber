@@ -11,7 +11,7 @@ class SmsProcessor
   def process_message
     message_a = @incoming_message_body.split
     cmd = message_a.first.downcase
-    Rails.logger.log("here 5")
+    Rails.logger.info("here 5")
     case cmd
     when /tasks/
       @response_message = process_tasks_msg
