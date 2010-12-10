@@ -37,8 +37,6 @@ TODO: look at how dennis uses rspec. Coolio!
 
 SMS JUSTIFICATION: cost forces people to be concise with comments (good thing) and only send messages when it's important so subscribers aren't spammed (good thing). It might actually be better for the UX.
 
-TODO: create cucumber feature that tests weather the message was delivered.
-
 TODO: pushing new comments to the page like facebook chat
 
 NOTE: got into rspec much sooner than cucumber for the sms stuff
