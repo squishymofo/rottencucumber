@@ -15,7 +15,7 @@ class SmsSession < ActiveRecord::Base
     existing_sess = SmsSession.find_by_phone_number phone_number
     Rails.logger.info(existing_sess)
     unless existing_sess
-      SmsSession.create(:phone_number => phone_number)
+      existing_sess = SmsSession.create(:phone_number => phone_number)
     end
     existing_sess
   end
