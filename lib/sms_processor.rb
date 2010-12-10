@@ -101,7 +101,7 @@ class SmsProcessor
     if task_id
       task = Task.find(task_id)
       if task
-        puts("here 2")
+        Rails.logger.info("here 2")
         comment = Comment.new(:body => comment_body, :task_id => task.id, :user_id => @user.id )
         if comment.save
           @response_message = ""
@@ -112,7 +112,7 @@ class SmsProcessor
         @response_message = general_help_menu
       end
     else
-    puts("here 3")
+    Rails.logger.info("here 3")
       @response_message = general_help_menu
     end
   end
