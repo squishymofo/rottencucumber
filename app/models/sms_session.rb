@@ -1,7 +1,7 @@
 class SmsSession < ActiveRecord::Base
   require 'lib/valid_phone_number_validator'
   require 'lib/sms_enabled_validator'
-  validates :phone_number, :valid_phone_number => true, :sms_enabled => true
+  validates :phone_number, :valid_phone_number => true, :sms_enabled => true, :on => :create
   def user
     User.find_by_phone_number phone_number
   end
@@ -11,9 +11,7 @@ class SmsSession < ActiveRecord::Base
   end
 
   def self.get_sms_session(phone_number)
-    Rails.logger.info("phone searching for sms session phone number: " + phone_number.to_s)
     existing_sess = SmsSession.find_by_phone_number phone_number
-    Rails.logger.info(existing_sess.to_yaml)
     unless existing_sess
       existing_sess = SmsSession.create(:phone_number => phone_number)
     end

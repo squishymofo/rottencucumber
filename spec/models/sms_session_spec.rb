@@ -8,6 +8,16 @@ describe SmsSession do
     end
 
     it "should not allow an sms_session without a valid phone_number" do
+      SmsSession.get_sms_session("2343").should_not be_valid
+    end
+
+    it "should allow an sms_session with a valid phone_number" do
+      SmsSession.get_sms_session("4405548235").should be_valid
+    end
+
+    it "should find an sms session that has a been made before and has a task context" do
+      prev = SmsSession.get_sms_session(:phone_number => "4405548235")
+      assert prev
       SmsSession.new( :phone_number => "2343").should_not be_valid
     end
 
@@ -40,3 +50,13 @@ def make_active_user_with_sms_disabled
     u
 end
 
+def make_group_for_user(user)
+    g = Group.create!(:name => "test_group")
+    user.groups << g
+    user.save(:validate => false)
+    g
+end
+
+def make_task_for_group(group, task_name)
+    Task.create(:group_id => group.id, :name => task_name, :status => 1)
+end
