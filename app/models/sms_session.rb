@@ -11,12 +11,13 @@ class SmsSession < ActiveRecord::Base
   end
 
   def self.get_sms_session(phone_number)
+    Rails.logger.info("phone searching for sms session phone number: " + phone.to_s)
     existing_sess = SmsSession.find_by_phone_number phone_number
-    if existing_sess
-      existing_sess
-    else
+    Rails.logger.info(existing_sess)
+    unless existing_sess
       SmsSession.create(:phone_number => phone_number)
     end
+    existing_sess
   end
 
   def self.get_sms_session(phone_number)

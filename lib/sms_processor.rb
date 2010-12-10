@@ -116,7 +116,7 @@ class SmsProcessor
         @response_message = general_help_menu
       end
     else
-    Rails.logger.info("user session didn't have a task id")
+    Rails.logger.info("sms session didn't have a task id")
       @response_message = general_help_menu
     end
   end
