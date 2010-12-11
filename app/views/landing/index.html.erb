@@ -10,7 +10,6 @@
       <%= link_to("enable SMS", "#{edit_user_path(@current_user)}#sms_preferences") %>
     <% end %>
     <%= render :partial => 'shared/tasks_table' %>
-
 <% else %>
   <p class="span-24 last">Super simple project management for non-technical, informal organizations.</p>
 <% end %>

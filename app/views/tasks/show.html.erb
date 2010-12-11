@@ -17,3 +17,12 @@ Stuff about task
 <% else %>
   There aren't any comments yet
 <% end %>
+<% if @current_user.sms_enabled %>
+  <% if @task_subscription.already_subscribed? %>
+    <%= link_to "unsubscribe", task_unsubscribe_path(:task_id => @task_subscription.id), :method => 'DELETE' %>
+  <% else %>
+    <%= link_to "subscribe to comments", task_subscription_path(:task_id => @task.id), :method => 'POST' %>
+  <% end %>
+<% else %>
+  <%= link_to "enable sms to subscribe", "#{edit_user_path(@current_user)}#sms_preferences" %>
+<% end %>

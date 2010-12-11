@@ -3,6 +3,8 @@ class Task < ActiveRecord::Base
   belongs_to :group
   belongs_to :project
   has_many :comments
+  has_many :task_subscriptions
+  has_many :subscribes_users, :through => :task_subscriptions, :class_name => "Task"
 
   def translate_status
     case self.status
@@ -22,5 +24,6 @@ class Task < ActiveRecord::Base
   def can_user_access?(user)
     user.tasks_from_projects_involved_in.map(&:id).include?(self.id)
   end
+
 
 end

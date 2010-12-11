@@ -5,6 +5,13 @@ class User < ActiveRecord::Base
   has_many :user_organizations
   has_many :organizations, :through => :user_organizations
   has_many :user_groups
+
+  has_many :task_subscriptions
+  has_many :subscribed_tasks, :through => :task_subscriptions, :class_name => "Task" # whatevs for now
+
+  def is_subscribed_to_task(task)
+    task_subscriptions.where(:user_id => self.id, :task_id => task.id).any?
+  end
   
   has_many :invitations
   # Task.where(:project_id => u.active_tasks.map(&:project_id))

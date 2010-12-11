@@ -24,6 +24,19 @@ When /^I enable sms$/ do
   assert u.errors.empty?
 end
 
+When /^I disable sms$/ do
+  u = User.find_by_email("spitfire67@berkeley.edu")
+  assert u
+  u.sms_enabled = false
+  u.save
+  assert u.errors.empty?
+end
+
+Given /^I have sms enabled$/ do
+  When "I enable sms"
+end
+
+
 Given /^I have completed a task "([^"]*)"$/ do |task_name|
   u = User.find_by_email("spitfire67@berkeley.edu")
   assert u

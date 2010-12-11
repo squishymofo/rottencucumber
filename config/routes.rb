@@ -99,6 +99,8 @@ Rottencucumber::Application.routes.draw do
   match 'sign_me_up' => 'users#create', :as => :sign_me_up
   match 'create_group' => 'groups#create', :as => :create_group
   match 'new_comment' => 'tasks#comment', :as => :new_comment
+  match 'task_unsubscribe' => 'task_subscriptions#destroy', :as => :task_unsubscribe, :via => 'DELETE'
+  match 'task_subscription' => 'task_subscriptions#create', :as => :task_subscription, :via => 'POST'
   match 'edit_user' => 'users#edit', :as => :edit_user_path
   match 'inbound_sms' => 'sms#inbound_sms', :as => :inbound_sms
   match 'signin_user' => 'user_sessions#create', :as => :signin_user

@@ -43,15 +43,20 @@ class TasksController < ApplicationController
 
   def show
     # TODO test this
-    # Assumes you can view all of the tasks in all of your organizations
     @task = Task.find(params[:id])
-    @project = @task.project
-    @org = @project.organization
     can_view = @task.can_user_access?(@current_user)
     unless can_view
       flash[:error] = 'Access Denied'
       redirect_to :controller => root_url
     end
+
+    @task = Task.find(params[:id])
+    @task_subscription = TaskSubscription.get_subscription(@current_user, @task)
+    unless @task_subscription
+      @task_subscription = TaskSubscription.new(:task_id => @task.id, :user_id => @current_user.id)
+    end
+    @project = @task.project
+    @org = @project.organization
   end
 
   def edit
@@ -99,10 +104,6 @@ class TasksController < ApplicationController
     end
   end
 
-  def subscribe
-    # make sure the user is involved in the project
-  end
-  
   def destroy
     @task = Task.find(params[:id])
     if @task.project.organization.creator_id = @current_user.id
