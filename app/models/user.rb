@@ -40,7 +40,7 @@ class User < ActiveRecord::Base
   end
   
   validates :email, :format => { :with => /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i }
-  validates :phone_number, :valid_phone_number => true, :on => :create
+  validates :phone_number, :valid_phone_number => true
   
     # !!!! willl need to change back once fb connect etc
   def has_no_credentials?

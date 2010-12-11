@@ -10,7 +10,6 @@ describe Comment do
   end
 
   it "should send comments to users who are subscribed to this task"do
-    debugger
     #need  task, org, usergroup, project .. look at comment spec for ex
     pending
   end
