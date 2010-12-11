@@ -15,15 +15,9 @@ describe SmsSession do
       SmsSession.get_sms_session("4405548235").should be_valid
     end
 
-    it "should find an sms session that has a been made before and has a task context" do
-      prev = SmsSession.get_sms_session(:phone_number => "4405548235")
-      assert prev
-      SmsSession.new( :phone_number => "2343").should_not be_valid
-    end
-
     it "should not allow an sms_session with phone_number belonging to a user with SMS disabled" do
       user = make_active_user_with_sms_disabled
-      SmsSession.new(:phone_number => user.phone_number).should_not be_valid
+      SmsSession.get_sms_session(user.phone_number).should_not be_valid
     end
 
     it "should expire after 10 hours" do

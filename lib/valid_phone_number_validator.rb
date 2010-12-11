@@ -6,8 +6,11 @@ class ValidPhoneNumberValidator < ActiveModel::EachValidator
         object.errors[attribute] << (options[:message] || "should be exactly 10 digits")
       end
       if object.class == User
-        if User.find_by_phone_number(phone_number)
-          object.errors[attribute] << (options[:message] || "phone number needs to be unique")
+        u = User.find_by_phone_number(phone_number)
+        if u
+          unless u == object
+            object.errors[attribute] << (options[:message] || "phone number needs to be unique")
+          end
         end
       elsif object.class == SmsSession
         if SmsSession.find_by_phone_number(phone_number)

@@ -98,6 +98,10 @@ class TasksController < ApplicationController
       end
     end
   end
+
+  def subscribe
+    # make sure the user is involved in the project
+  end
   
   def destroy
     @task = Task.find(params[:id])

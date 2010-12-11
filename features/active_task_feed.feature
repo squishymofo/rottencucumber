@@ -6,18 +6,21 @@ Feature: a feed of the active tasks from projects that you're involved in
 		And I have "4" tasks assigned to me
 		And there are "4" active tasks assigned to others in projects that I'm involved in
 	
+	@ok
 	@javascript
 	Scenario: User visits the landing page and sees the active tasks assigned to them
 		Given I am logged in
 		When I go to the home page
 		Then I should see the active tasks that are assigned to me
 
+	@ok
 	@javascript
 	Scenario: User visits the landing page and sees the active tasks for projects that the user is involved in, but not assigned to
 		Given I am logged in
 		When I go to the home page
 		Then I should see the active tasks that for the project that I'm involved in but not assigned to
 
+	@ok
 	@javascript
 	Scenario: User with completed tasks visits the landing page and does not see the inactive completed tasks assigned to them
 		Given I am logged in

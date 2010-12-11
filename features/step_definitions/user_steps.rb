@@ -11,6 +11,19 @@ Then /^I should see the active tasks that for the project that I'm involved in b
   Then "I should see \"someone else is responsable for\""
 end
 
+Given /^I don't have sms enabled$/ do
+  assert User.first.sms_enabled == false
+end
+
+When /^I enable sms$/ do
+  u = User.find_by_email("spitfire67@berkeley.edu")
+  assert u
+  u.phone_number = "4405548235"
+  u.sms_enabled = true
+  u.save
+  assert u.errors.empty?
+end
+
 Given /^I have completed a task "([^"]*)"$/ do |task_name|
   u = User.find_by_email("spitfire67@berkeley.edu")
   assert u

@@ -16,6 +16,11 @@ end
 When /^I don't fill the body field of the comment$/ do
 end
 
+Then /^I should be subscribed to "([^"]*)" tasks$/ do |arg1|
+  u = User.find_by_email("spitfire67@berkeley.edu")
+  u.task_scriptions.size == arg1.to_i
+end
+
 Given /^I'm looking at the show page for the first task for a project that I am involved in but not assigned to$/ do
   # id = TODO
   # need to create a task that I'm assigned to
@@ -59,9 +64,13 @@ Given /^there are "([^"]*)" active tasks assigned to others in projects that I'm
   g = Group.create(:name => "test groups", :organization_id => org.id)
   UserGroup.create(:user_id => other.id, :group_id => g.id) # add the other to the group
   # find the project of me
-  p = Project.create(:name => "do work", :organization_id => org.id, :description => "description") # create a project to add some tasks to
+  p = Project.first
+  unless p
+    p = Project.create(:name => "do work", :organization_id => org.id, :description => "description") # create a project to add some tasks to
+  end
+  
   (1..num_tasks.to_i).each do |i| #now add some tasks to the project
-      Task.create(:name => "Thing #{i} someone else is responsable for", :description => "Description of task #{i} that I don't care about", :group_id => g.id, :project_id => p.id, :status => 0)
+      Task.create(:name => "Thing #{i} someone else is responsable for", :description => "Description of task #{i} that I don't care about", :group_id => g.id, :project_id => p.id, :status => 1)
   end
 end
 

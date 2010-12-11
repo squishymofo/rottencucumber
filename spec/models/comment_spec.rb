@@ -47,7 +47,7 @@ describe Comment do
 
   it "should not allow a new instance if the user isn't involved task's project"do
     other_u = create_registered_and_active_user("someone_else@example.com", "password", "Jimmy")
-    @valid_attributes[:user_id] = other_u.user_id
+    @valid_attributes[:user_id] = other_u.id
     invalid_attributes = @valid_attributes
     comment = Comment.new(invalid_attributes)
     comment.should_not be_valid
