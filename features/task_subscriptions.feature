@@ -28,7 +28,7 @@ Feature: users can subscribe to a task so that they get sent sms messages when n
 		Then I should see "enable sms to subscribe"
 		And I should not see "subscribe to comments"
 
-	@wip
+	@ok
 	@javascript
 	Scenario: users who have sms enabled can unsubscribe from tasks that they're subscribed to
 		Given I have sms enabled

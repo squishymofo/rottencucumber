@@ -1,6 +1,16 @@
 class CommentObserver < ActiveRecord::Observer
   def after_create(comment)
     #send subscribers sms messages
-    #comment.subscribed_users.each {|u| u.send_comment_over_sms(comment.body)}
+    comment.task.subscribed_users.each {|u| send_comment_over_sms(u, comment.body)}
   end
+
+  def send_comment_over_sms(u, body)
+    account = Twilio::RestAccount.new(ACCOUNT_SID, ACCOUNT_TOKEN)
+    unless @sms_processor.response_message.empty?
+      h = {:From => PHONE_NUMBER, :To => u.phone_number, :Body => body}
+      resp = account.request("/#{API_VERSION}/Accounts/#{ACCOUNT_SID}/SMS/Messages", 'POST', h)
+    end
+    resp
+  end
+      
 end

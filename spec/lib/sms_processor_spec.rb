@@ -21,6 +21,11 @@ describe SmsProcessor do
     User.all.each {|u| u.destroy}
   end
 
+  it "be successful in sending response" do
+    pending
+    #check the body of the resp
+  end
+
   it "should respond with a numbered list of the user's active tasks when texted 'tasks'" do
     @sms_processor = SmsProcessor.new(@sms_session, "tasks")
     @sms_processor.process_message

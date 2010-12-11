@@ -114,6 +114,15 @@ class SmsProcessor
     end
   end
 
+  def send_response
+    account = Twilio::RestAccount.new(ACCOUNT_SID, ACCOUNT_TOKEN)
+    unless @response_message.empty?
+      h = {:From => PHONE_NUMBER, :To => @user.phone_number, :Body => @response_message}
+      resp = account.request("/#{API_VERSION}/Accounts/#{ACCOUNT_SID}/SMS/Messages", 'POST', h)
+      return resp
+    end
+  end
+
   def set_task_context(task_id)
     @sms_session.task_id = task_id
     @sms_session.save

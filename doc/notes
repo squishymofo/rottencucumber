@@ -43,10 +43,4 @@ NOTE: got into rspec much sooner than cucumber for the sms stuff
 
 NOTE: don't do anything with sms that could be solved by the user looking through their previous texts
 
-TODO: two observers: one for when tasks are create -> every user assigned to that task should be subscribed
-			one for when comments are created -> sends sms to each user assigned to the comment.task
-
-	task_subscription
-		validates :user, :user_involved_in_task => true
-		belongs_to :user
-		belongs_to :task
+TODO: test comment observer by feeding it and expecting the resp

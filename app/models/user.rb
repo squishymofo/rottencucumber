@@ -149,4 +149,13 @@ class User < ActiveRecord::Base
     set_of_projs.to_a
   end
 
+  def send_comment_over_sms(body)
+    account = Twilio::RestAccount.new(ACCOUNT_SID, ACCOUNT_TOKEN)
+    unless @sms_processor.response_message.empty?
+      h = {:From => PHONE_NUMBER, :To => from_phone_number, :Body => @sms_processor.response_message}
+      resp = account.request("/#{API_VERSION}/Accounts/#{ACCOUNT_SID}/SMS/Messages", 'POST', h)
+      # TODO: what if the api fails? need to inspect the resp and address this case
+    end
+  end
+
 end

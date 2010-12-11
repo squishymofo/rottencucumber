@@ -8,13 +8,8 @@ class SmsController < ApplicationController
     Rails.logger.info(sms_session.to_yaml)
     @sms_processor = SmsProcessor.new sms_session, params[:Body]
     @sms_processor.process_message
-
-    account = Twilio::RestAccount.new(ACCOUNT_SID, ACCOUNT_TOKEN)
-    unless @sms_processor.response_message.empty?
-      h = {:From => PHONE_NUMBER, :To => from_phone_number, :Body => @sms_processor.response_message}
-      resp = account.request("/#{API_VERSION}/Accounts/#{ACCOUNT_SID}/SMS/Messages", 'POST', h)
-      # TODO: what if the api fails? need to inspect the resp and address this case
-    end
+    resp = @sms_processor.send_response 
+    #resp wil be nil if no response
     render :nothing => true
   end
 
