@@ -4,7 +4,7 @@ class Task < ActiveRecord::Base
   belongs_to :project
   has_many :comments
   has_many :task_subscriptions
-  has_many :subscribes_users, :through => :task_subscriptions, :class_name => "Task"
+  has_many :subscribed_users, :through => :task_subscriptions, :source => :user
 
   def translate_status
     case self.status

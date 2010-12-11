@@ -38,7 +38,6 @@ module Rottencucumber
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
-    config.active_record.observers = :comment_observer
-    config.active_record.observers = :user_observer
+    config.active_record.observers = :comment_observer, :user_observer
   end
 end

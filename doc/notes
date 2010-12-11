@@ -44,3 +44,5 @@ NOTE: got into rspec much sooner than cucumber for the sms stuff
 NOTE: don't do anything with sms that could be solved by the user looking through their previous texts
 
 TODO: test comment observer by feeding it and expecting the resp
+
+TODO: landing page task partials should have the most recent 4 comments
