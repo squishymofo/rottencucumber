@@ -8,7 +8,7 @@ def make_active_user_with_sms_enabled
   u.active = true
   u.save(:validate => false)
   u.active = true
-  u.save
+  u.save(:validate => false)
   u.phone_number = "4405548235"
   u.sms_enabled = true
   u.save

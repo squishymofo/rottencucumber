@@ -1,4 +1,5 @@
 class TaskSubscription < ActiveRecord::Base
+  require 'lib/user_involved_in_task_project_validator'
   belongs_to :user
   belongs_to :task
   validates :user_id, :user_involved_in_task_project => true

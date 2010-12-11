@@ -7,7 +7,6 @@ class User < ActiveRecord::Base
   has_many :user_groups
 
   has_many :task_subscriptions
-  has_many :subscribed_tasks, :through => :task_subscriptions, :class_name => "Task" # whatevs for now
 
   def is_subscribed_to_task(task)
     task_subscriptions.where(:user_id => self.id, :task_id => task.id).any?
@@ -41,7 +40,7 @@ class User < ActiveRecord::Base
   end
   
   validates :email, :format => { :with => /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i }
-  validates :phone_number, :valid_phone_number => true
+  validates :phone_number, :valid_phone_number => true, :on => :create
   
     # !!!! willl need to change back once fb connect etc
   def has_no_credentials?
@@ -149,13 +148,11 @@ class User < ActiveRecord::Base
     set_of_projs.to_a
   end
 
-  def send_comment_over_sms(body)
+  def send_comment_over_sms(u, body)
     account = Twilio::RestAccount.new(ACCOUNT_SID, ACCOUNT_TOKEN)
-    unless @sms_processor.response_message.empty?
-      h = {:From => PHONE_NUMBER, :To => from_phone_number, :Body => @sms_processor.response_message}
-      resp = account.request("/#{API_VERSION}/Accounts/#{ACCOUNT_SID}/SMS/Messages", 'POST', h)
-      # TODO: what if the api fails? need to inspect the resp and address this case
-    end
+    h = {:From => PHONE_NUMBER, :To => self.phone_number, :Body => body}
+    resp = account.request("/#{API_VERSION}/Accounts/#{ACCOUNT_SID}/SMS/Messages", 'POST', h)
+    resp
   end
 
 end

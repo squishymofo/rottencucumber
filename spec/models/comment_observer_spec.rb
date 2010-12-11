@@ -9,7 +9,9 @@ describe Comment do
   after(:each) do 
   end
 
-  it "should get y response from the twilio API when x"do
+  it "should send comments to users who are subscribed to this task"do
+    debugger
+    #need  task, org, usergroup, project .. look at comment spec for ex
     pending
   end
 
