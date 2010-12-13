@@ -80,3 +80,8 @@ NOTE/DEMO: users who already have sms enabled and belong to an organization get 
 todo: put the scuscribe logic into the landing index
 
 should put send notification about being assigned to a task in the sms_spec
+
+Demo: need to make demo login url
+Demo: 
+
+Bug in the the my-projs being inside of indiv task. Inspect with firebug to fix

@@ -33,7 +33,7 @@
 <% if @current_user %>
   <div class="content-title"> Latest activity </div>
     <% if @current_user.sms_enabled %>
-      <p class="span-24 last soft-message"> You have enabled SMS. Text 'help' to 510-550-5258 to get started.</p>
+      <p class="span-24 last soft-message last"> You have enabled SMS. Text 'help' to 510-550-5258 to get started.</p>
     <% else %>
       <%= link_to("enable SMS", "#{edit_user_path(@current_user)}#sms_preferences") %>
     <% end %>

@@ -1,23 +1,22 @@
 <div id="task-feed" class="span-18">
   <% for task in @tasks do %>
     <div class="indiv-task clear">
-      <%# mock points until resolve 'point' vs 'points' %>
       <div class="task-points" class="span-5"> 
          <div class="span-2 network-counts">
-           <div class="num-points"><%= 3 %></div>
+           <div class="num-points"><%= task.point %></div>
            <br />
            <div class="says-points">points</div>
          </div>
       </div>
       <div class="span-11 task-name-group-members-wrapper">
-        <div class="span-11 task-name-index" id="task-name"> <%= link_to task.name, task_path(task)%> </div>
+        <div class="span-11 task-name-index last" id="task-name"> <%= link_to task.name, task_path(task)%> </div>
         <div class="span-11 task-group-index clear last"> 
           <% task.group.users.each do |u| %>
             <%= render :partial => 'shared/indiv_user_index', :locals => {:user => u } %>
           <% end %>
         </div>
       </div>
-      <div class="clear span-18 comments-on-task-wrapper" data-taskid="<%= task.id.to_s %>" id="comments-on-task-<%=task.id.to_s%>"> 
+      <div class="span-18 comments-on-task-wrapper" data-taskid="<%= task.id.to_s %>" id="comments-on-task-<%=task.id.to_s%>"> 
         <% for comment in task.recent_comments %>
           <%= render :partial => 'shared/indiv_comment', :locals => {:comment => comment} %>
         <% end %>
@@ -30,6 +29,6 @@
           <%= link_to 'subscribe to comments', task_subscription_path(:task_id => task.id), :method => 'POST', :class => 'normal_link' %>
         <% end %>
       </div>
+    </div>
     <% end %>
-  </div>
 </div>
