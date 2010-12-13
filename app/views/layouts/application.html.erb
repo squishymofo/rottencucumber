@@ -24,6 +24,11 @@
 				
 				
         $(document).ready ( function () {
+          //$("a.selected").css("display", "none");
+          //$("a.selected").css("color", "red");
+          //$("a.selected").removeClass("selected");
+          $("a.selected").addClass("selected");
+          //$("a.selected").removeClass("");
           $('.hide-dia').click(function() {
             $('#dialog-form-new').dialog('close');
             $('#dialog-form').dialog('close');
@@ -45,9 +50,9 @@
       </script>
     <body>
       <!-- <div id="content" class="container move-header-down"> -->
-			<div id ="container">
+				<div class="container" id="content">
+                                <%= render:partial => 'layouts/meta_nav' %>
         <%= render :partial => 'layouts/header' %>
-				<div id="dennis-content">
         	<%= yield %>
 				</div>
       </div>

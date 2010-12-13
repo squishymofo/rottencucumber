@@ -29,21 +29,18 @@ SimpleNavigation::Configuration.run do |navigation|
     # options - can be used to specify attributes that will be included in the rendered navigation item (e.g. id, class etc.)
     #
     #primary.auto_highlight = false
-    primary.item :home, 'home', root_url, :class => 'main_nav'
-    primary.item :projects, 'projects', root_url, :class => 'main_nav'
-    primary.item :groups, 'groups', groups_path, :class => 'main_nav'
-    primary.item :tasks, 'tasks', tasks_path, :class => 'main_nav' do |secondary|
-      secondary.item :all, "all", tasks_path(:show_all=>1), :class => 'secondary_nav'
-      secondary.item :in_progress, "in progress", tasks_path(:show_in_progress => 1), :class => 'secondary_nav'
-      secondary.item :completed, "completed", tasks_path(:show_completed=> 1), :class => 'secondary_nav'
-    end
     if @current_user
-      primary.item :logout, "Logout", logout_path, :class => 'main_nav logged-in-as'
-      primary.item :profile, "#{@current_user.first_name}", edit_user_path(@current_user), :class => 'main_nav logged-in-as'
-    else
+      primary.auto_highlight = false
+      primary.item :projects, 'projects', projects_path, :class => 'main_nav'
+      primary.item :groups, 'groups', groups_path, :class => 'main_nav'
+      primary.item :tasks, 'tasks' + "<span>#{@current_user.active_tasks.size}</span>", tasks_path, :id => 'tasks-nav', :class => 'main_nav' do |secondary|
+        secondary.item :all, "all", tasks_path(:show_all=>1), :class => 'secondary_nav'
+        secondary.item :in_progress, "in progress", tasks_path(:show_in_progress => 1), :class => 'secondary_nav'
+        secondary.item :completed, "completed", tasks_path(:show_completed=> 1), :class => 'secondary_nav'
+      end
+    end
       #primary.item :login, "Login", new_user_session_path, :class => 'main_nav logged-in-as', :data_remote => true
       #primary.item :sign_up, "Sign up", new_user_path, :class => 'main_nav logged-in-as', :data_remote => true
-    end
   end # end F
 
     
@@ -67,7 +64,6 @@ SimpleNavigation::Configuration.run do |navigation|
     # primary.dom_class = 'menu-class'
     
     # You can turn off auto highlighting for a specific level
-    # primary.auto_highlight = false
   
   
 end

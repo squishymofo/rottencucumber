@@ -1,0 +1,10 @@
+<div id="projs-involved-in" class="span-6 last">
+  <% unless @current_user.projects.empty? %>
+      <span id="projs-involved-in-header" class="span-6 last"> Projects </span>
+      <ul class="span-6 last" id="my-projs-list">
+        <% @current_user.projects.each do |p| %>
+          <li class="proj-name-index span-6 last"> <%= link_to p.name, project_path(p) %> </li>
+        <% end %>
+      </ul>
+  <% end %>
+</div>

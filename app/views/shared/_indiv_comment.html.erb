@@ -1,0 +1,10 @@
+<div data-time="<%= comment.created_at.to_i %>" class="indiv-comment-wrapper clear">
+  <div class="made-comment prepend-2 span-3"> 
+    <%= render :partial => 'shared/indiv_user_index', :locals => {:user => comment.user}%><b>:</b>
+    <br />
+    <span class="quiet">
+      <%= "#{concise_dist comment.created_at} ago" %>
+    </span>
+  </div>
+  <div class="comment-body span-13 last"> <%= comment.body %> </div>
+</div>

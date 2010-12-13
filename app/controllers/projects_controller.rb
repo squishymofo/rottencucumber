@@ -2,10 +2,12 @@ class ProjectsController < ApplicationController
   before_filter :current_user
   
   def index
+    current_navigation :projects
     @projects = @current_user.projects
   end
 
   def new
+    current_navigation :projects
     @org = Organization.find(params[:org_id])
     
     if @org.creator_id == @current_user.id #only allows the creator of this organization to create a new project
@@ -34,6 +36,7 @@ class ProjectsController < ApplicationController
   end
   
   def show
+    current_navigation :projects
     @project = Project.find(params[:id])
     if !@current_user.organizations.include? @project.organization
       #user is not in the organization that owns this project, user should not be able to see the project

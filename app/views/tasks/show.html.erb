@@ -1,5 +1,11 @@
 Stuff about task
 
+<% if @task.status == 1 && @current_user.can_finish_task?(@task) %>
+  <%= link_to "Finish", finish_task_path(:task_id => @task.id), :method => 'POST' %>
+<% end %>
+<% if @task.status == 2 %>
+  Finished. Waiting for leader's approval
+<% end %>
 <% if @error_comment %>
   <%= render :partial => 'shared/error_messages', :locals => {:target => @error_comment } %>
 <% end %>
@@ -9,10 +15,11 @@ Stuff about task
 <% end %>
 
 
+
 <% if @task.comments.any? %>
   Comments: 
   <% for comment in @task.comments do %>
-    <%= render :partial => 'shared/one_comment', :locals => {:comment => comment } %>
+    <%= render :partial => 'shared/indiv_comment', :locals => {:comment => comment } %>
   <% end %>
 <% else %>
   There aren't any comments yet

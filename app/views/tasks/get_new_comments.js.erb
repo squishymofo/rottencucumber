@@ -1,0 +1,9 @@
+//just prepend new comments
+<% @new_comments.each do |comment| %>
+  $("#comments-on-task-<%= comment.task_id %>").prepend("<%= escape_javascript(render :partial => 'shared/indiv_comment', :locals => {:comment => comment}) %>");
+  // add the class
+  // animate removing it
+
+  $("#comments-on-task-<%=comment.task_id %>").children(":first").children().addClass("new-comment");
+  $("#comments-on-task-<%=comment.task_id %>").children(":first").children().removeClass("new-comment", 2000);
+<% end %>

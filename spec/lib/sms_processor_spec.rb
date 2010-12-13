@@ -13,11 +13,11 @@ describe SmsProcessor do
     @p = Project.create(:name => "do work", :organization_id => @org.id, :description => "description")
     @t.project_id = @p.id
     @t.save
-    @sms_session = SmsSession.create(:phone_number => "4405548235")
+    @sms_session = SmsSession.get_sms_session("4405548235")
   end
 
   after(:each) do 
-    SmsSession.all.each {|s| s.delete}
+    SmsSession.all.each {|s| s.destroy}
     User.all.each {|u| u.destroy}
   end
 
@@ -78,6 +78,12 @@ describe SmsProcessor do
     @sms_processor.process_message
     assert Comment.all.size == 0
     assert @sms_processor.response_message == @sms_processor.general_help_menu
+  end
+
+  it "should send a new task notification over sms when asked" do
+    SmsProcessor.deliver_new_task_notification(sms_session, task) unless Rails.env == "test"
+    #assert @sms_processor.response_message == ("New task: #{task_name}. " + @sms_processor.general_help_menu)
+=end
   end
 
 end

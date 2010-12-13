@@ -1,0 +1,12 @@
+<div id="meta-nav-top-wrapper" class="span-24 last">
+  <div id="meta-nav-top">
+    <ul id="meta-nav-list">
+      <% if @current_user %>
+        <li id="logout"><%= link_to "Logout", logout_path %></li>
+        <li><%= render :partial => 'shared/indiv_user_index', :locals => {:user => @current_user} %></li>
+      <% else %>
+        <li><%= link_to "Sign in", new_user_session_path %></li>
+      <% end %>
+    </ul>
+  </div>
+</div>

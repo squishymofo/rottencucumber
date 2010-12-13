@@ -24,8 +24,6 @@ use facebook for signup and auth, fbml for everything else.
 
 "happy path"
 
-NOTE: call reputation "props"
-
 TODO: find out how to (rails way) do a remote get every 3 secs to push comments to the page as they're made over sms. Or better way?. **make sure there's a timeout. but how to test?
 	the page should send the ID's of all the last comments for each displayed task
 
@@ -37,7 +35,6 @@ TODO: look at how dennis uses rspec. Coolio!
 
 SMS JUSTIFICATION: cost forces people to be concise with comments (good thing) and only send messages when it's important so subscribers aren't spammed (good thing). It might actually be better for the UX.
 
-TODO: pushing new comments to the page like facebook chat
 
 NOTE: got into rspec much sooner than cucumber for the sms stuff
 
@@ -46,3 +43,40 @@ NOTE: don't do anything with sms that could be solved by the user looking throug
 TODO: test comment observer by feeding it and expecting the resp
 
 TODO: landing page task partials should have the most recent 4 comments
+
+TODO: fast reputation system: the user who completes the task gets 1 rep. Then you can make it look good and they'll get the idea. No assigning points to tasks.
+
+TODO: first style the shared/_task_table. Convert it to HAML. The only pages for the demo should be the landing with the feed and the show.
+
+TODO: tasks index feed: want to see task name, group assigned their rep points, most 3 recent comments. We should poll for changes via ajax every what ever seconds. Status should be indicated by color
+maybe represent the group like the tags in pivotal -- right the the beginning, then the task name and then the points to be earned on the right. Then comments underneath
+	right to left: points, group, task.name, subscribe?
+	 	change to 750 px layout
+	
+	NOTE: move the names of the people in group over the comments to frame them, they basically become the tags on SO
+		html 5 rocks on the main div in the center
+
+TODO: pushing new comments to the page like facebook chat. There's an ascii cast for that. Do this from the beginning before styling
+
+TODO: write js to find a link with class selected and change the font color
+	add/remov css attr
+
+NOTE: tasks are finished by someone, and then completed.
+
+TODO: move is_involved_in_project into a before_filter
+
+TOOD: add hr after comment in subscriptions
+
+TODO next: animate comment push, then git push, then work on show task
+
+TODO: when you roll over a project on the projects list, it should add a class that outlines the tasks for the project
+
+TODO: for the animation, just animate the background of the comment *body*
+
+TODO: put the number of active tasks into the task menu thing nav
+
+NOTE/DEMO: users who already have sms enabled and belong to an organization get new tasks push to their phone.
+
+todo: put the scuscribe logic into the landing index
+
+should put send notification about being assigned to a task in the sms_spec

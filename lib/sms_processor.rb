@@ -48,7 +48,7 @@ class SmsProcessor
   end
 
   def general_help_menu
-    return "Text 'tasks' to view active tasks assigned to you."
+    GENERAL_HELP_MENU
   end
 
   def tasks_help_menu
@@ -114,6 +114,14 @@ class SmsProcessor
     end
   end
 
+  def self.deliver_new_task_notification(sms_session, task)
+    message = "New task: #{task.name}. " + GENERAL_HELP_MENU
+    account = Twilio::RestAccount.new(ACCOUNT_SID, ACCOUNT_TOKEN)
+    h = {:From => PHONE_NUMBER, :To => sms_session.phone_number, :Body => message}
+    resp = account.request("/#{API_VERSION}/Accounts/#{ACCOUNT_SID}/SMS/Messages", 'POST', h)
+    return resp
+  end
+  
   def send_response
     account = Twilio::RestAccount.new(ACCOUNT_SID, ACCOUNT_TOKEN)
     unless @response_message.empty?

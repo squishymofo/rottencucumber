@@ -20,6 +20,7 @@ gem 'launchy'    # So you can do Then show me the page
 gem 'heroku'
 gem 'gherkin', '2.2.8'
 gem 'mysql', '2.8.1'
+gem 'haml'
 
 gem 'simple-navigation'
 gem 'compass'

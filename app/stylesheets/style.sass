@@ -1,6 +1,15 @@
+$dkblue: #4D6CA5
+$lblue: #EDF3FE
+$usernames: #5E4DA5
+$points: #A6874D
+$ondkb: #F5F8FF
+$peach: #FFFBEC
+$turk: #4ca59c
+
+
 html, body
   color: #222
-  background-color: #ddd
+  background-color: #e8eaef
   font: 14px Arial
   margin: 0
   padding: 0
@@ -24,6 +33,7 @@ html, body
   height: auto !important
   height: 100%
   margin: 4em auto -4em
+  //margin: 4em auto -4em
   background-color: white
   //width: 73.074em
   //max-width: 750px
@@ -36,13 +46,6 @@ html, body
 .move-header-down
   margin-top: 5em 
 
-.main_nav
-  list-style: none
-  display: inline
-  margin-right: 1em
-  margin-bottom: 3em
-  a
-    text-decoration: none
 
 .logged-in-as
   float: right
@@ -80,3 +83,158 @@ html, body
 
 .task_nav
   float: right
+
+.task-points
+  width: 60px
+  height: 50px
+  color: $points
+  .says-points
+    text-align: center
+    font-size: 1.1em
+    margin-top: -1.2em
+    background-color: $peach
+  .num-points
+    margin-top: 1em
+    font-size: 2.3em
+    font-weight: bold
+    text-align: center
+    background-color: $peach
+
+.task-name-index
+  margin-top: -.2em
+  font-size: 1.6em
+  a
+    text-decoration: none
+    color: #2d2d2d !important
+    &:hover
+      color: black !important
+
+.content-title
+  font-size: 2em
+  color: #2d2d2d
+  background-color: #edf3fe
+  margin-top: .5em
+  padding-left: .5em
+
+.soft-message
+  padding-left: 2em
+  margin-top: 1em
+  color: #eee
+
+.task-name-group-members-wrapper
+  margin-top: -.9em
+
+.task-group-index
+  margin-top: .5em
+
+#projs-involved-in-header
+  padding-left: .25em
+  margin-left: -.25em
+  color: #2d2d2d
+  background-color: #edf3fe
+  font-size: 1.5em
+
+#my-projs-list
+  margin-top: .4em
+  list-style: none
+  li
+    margin-left: -2.5em
+    padding-left: none
+    a
+      text-decoration: none
+      color: #2d2d2d
+      &:hover
+        color: black
+
+.main_nav
+  margin-top: 1em
+  list-style: none
+  display: inline
+  margin-right: 1em
+  margin-bottom: 3em
+  a
+    padding: .2em .2em
+    font-weight: 1.3
+    text-decoration: none
+
+.main_nav
+  float: left
+  background-color: $dkblue
+  &:hover
+    background-color: $turk
+  margin-left: .5em
+  font-size: 14pt
+  font-weight: 500
+  .selected
+    background-color: $turk
+  a
+    display: block
+    text-decoration: none
+    padding-left: .75em
+    padding-right: .75em
+    .selected
+      color: $dkblue !important
+    color: $ondkb !important
+
+.user-name-index
+  font-weight: bold
+  color: $usernames
+
+.user-rep-index
+  font-size: 1.2em
+  font-weight: bold
+  color: $points
+  margin-left: -.1em
+
+.comment-body
+  padding-top: .05em
+  margin-left: -1em
+  color: #2d2d2d
+  font-size: 1.3em
+
+.indiv-comment-wrapper
+  padding-top: .5em
+
+.new-comment
+  color: $lblue
+
+#meta-nav-top
+  li
+    float: right
+    padding-left: .5em
+    padding-right: .5em
+    a
+      text-decoration: none
+      color: #2d2d2d
+      &:hover
+        color: black
+
+#meta-nav-list
+  list-style: none
+  padding-right: 2em
+  margin-bottom: 0
+
+.normal_link
+  text-decoration: none
+  color: #2d2d2d
+  &:hover
+    color: black
+
+#logout
+  padding-top: .2em
+
+#logo
+  padding-left: 1em
+  margin-right: -1em
+
+#tasks-nav
+  span
+    background-color: $lblue
+    color: $turk
+    margin-left: .4em
+    padding-left: .2em
+    padding-right: .2em
+    -webkit-border-radius: 5px
+    -moz-border-radius: 5px
+    border-radius: 5px
+

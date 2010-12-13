@@ -1,16 +1,28 @@
 class TasksController < ApplicationController
 
   
-  before_filter :require_user
+  before_filter :require_user, :except => [:get_new_comments]
   
   def index
+    current_navigation :tasks
     # NOTE: write features first 
     @my_organizations_tasks = @current_user.active_tasks
     @tasks = @current_user.active_tasks
     @tasks_group_by_project = @current_user.tasks_group_by_project
   end
 
+  def get_new_comments
+    @new_comments = [ ]
+    # what if no comments?
+    # -> params[tnum] = "undefined"
+    
+    @new_comments = [ ]
+    params.each_pair {|k, v| @new_comments += Task.find(k).get_comments_after(v) if k =~ /^[0-9]+$/}
+
+  end
+
   def new
+    current_navigation :tasks
     @task = Task.new
     @project = Project.find(params[:id])
     @org = @project.organization
@@ -50,6 +62,7 @@ class TasksController < ApplicationController
       redirect_to :controller => root_url
     end
 
+    current_navigation :tasks
     @task = Task.find(params[:id])
     @task_subscription = TaskSubscription.get_subscription(@current_user, @task)
     unless @task_subscription
@@ -113,6 +126,31 @@ class TasksController < ApplicationController
     end
     redirect_to :back
   end
+
+  def finish
+    @task = Task.find(params[:task_id])
+    if @current_user.tasks.include?(@task)
+      @task.finish!(@current_user)
+      redirect_to task_path(@task)
+    else
+      flash[:error] = "You can't do that"
+      redirect_to root_url
+    end
+  end
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
   #  
   #  def complete
   #    @id = params[:id]
@@ -148,4 +186,3 @@ class TasksController < ApplicationController
   #    end
   #  end
 
-end

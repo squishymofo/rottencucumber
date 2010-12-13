@@ -1,3 +1,41 @@
+Given /^this task is worth "([^"]*)" point$/ do |arg1|
+  Task.all.each {|t| assert t.point == arg1.to_i}
+end
+
+Then /^I should see "Finished\. Waiting for leader approval\.$/ do
+    pending # express the regexp above with the code you wish you had
+end
+
+Given /^I have "([^"]*)" reputation$/ do |arg1|
+  u = User.find_by_email("spitfire67@berkeley.edu")
+  u.reputation = arg1.to_i
+  u.save
+end
+
+When /^someone else finishes a task assigned to me worth "([^"]*)" point$/ do |arg1|
+  Given "there are \"4\" active tasks assigned to others in projects that I'm involved in"
+  me = User.find_by_email("spitfire67@berkeley.edu")
+  assert me
+  other = User.last
+  assert other
+  assert other.email != "spitfire67@berkeley.edu"
+  task = me.tasks.first
+  task.finish!(other)
+  assert task.status == 2
+  assert task.finished_by_id == other.id
+end
+
+Then /^I should have "([^"]*)" reputation$/ do |arg1|
+    u = User.find_by_email("spitfire67@berkeley.edu")
+    assert u
+    assert u.reputation == arg1.to_i
+end
+
+Given /^this an active, unfinished task$/ do
+  Task.all.each {|t| assert t.status == 1}
+end
+
+
 Given /^I have subscriptions to all of the tasks assigned to me$/ do
   #find all tasks and create subscritions
   u = User.find_by_email("spitfire67@berkeley.edu")

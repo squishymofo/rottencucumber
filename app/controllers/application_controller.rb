@@ -20,7 +20,7 @@ class ApplicationController < ActionController::Base
   end
 
   def record_actions
-    UserAction.create(:ip => request.remote_ip, :url => request.fullpath)
+    UserAction.create(:ip => request.remote_ip, :url => request.fullpath) unless request.xhr?
   end
 
   def store_location

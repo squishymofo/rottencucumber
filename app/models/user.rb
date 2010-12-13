@@ -137,15 +137,13 @@ class User < ActiveRecord::Base
     # NOTE: probably horrible
     Task.where(:project_id => tasks.map(&:project_id))
   end
+
+  def can_finish_task?(task)
+    tasks.include?(task)
+  end
   
   def projects
-    set_of_projs = Set.new
-    self.groups.each do |g|
-      g.tasks.each do |t|
-        set_of_projs.add(t.project)
-      end
-    end
-    set_of_projs.to_a
+    Project.where(:id => tasks.map(&:project_id))
   end
 
   def send_comment_over_sms(u, body)

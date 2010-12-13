@@ -4,7 +4,7 @@ class CreateTasks < ActiveRecord::Migration
       t.string :name
       t.text  :description
       t.datetime :due
-      t.integer :point
+      t.integer :point, :default => 1
       t.integer :group_id
       t.integer :project_id
       t.timestamps

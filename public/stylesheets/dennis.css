@@ -6,7 +6,6 @@
 
 #logo{
 	height:100px;
-	background-image:url('../images/head_bg.png');
 }
 
 #container{
@@ -78,15 +77,6 @@
 
 .content-subtitle{
 	padding-bottom:5px;	
-}
-
-#navigation{
-	padding:0px;
-	margin:0px;
-	background-color:#FFF;
-	background-repeat:repeat-x;
-	background-image:url('../images/nav_bg.png');
-	
 }
 
 #navigation-list{
