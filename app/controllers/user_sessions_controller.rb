@@ -1,5 +1,5 @@
 class UserSessionsController < ApplicationController
-  before_filter :require_user, :except => [:developer_login, :create, :new]
+  before_filter :require_user, :except => [:demo_login, :create, :new]
   def new
     @user_session = UserSession.new
   end
@@ -22,9 +22,12 @@ class UserSessionsController < ApplicationController
     redirect_to root_url
   end
 
-  def developer_login
-    @user_session = UserSession.new
-    render :layout => 'developer_login_layout'
+  def demo_login
+    @user_session = UserSession.new(:email => "spitfire67@berkeley.edu", :password => "password")
+    @user_session.save
+    current_user
+    redirect_to root_url
   end
+
 
 end

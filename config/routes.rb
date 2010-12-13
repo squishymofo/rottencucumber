@@ -104,6 +104,7 @@ Rottencucumber::Application.routes.draw do
   match 'finish_task' => 'tasks#finish', :as => :finish_task, :via => 'POST'
   match 'task_subscription' => 'task_subscriptions#create', :as => :task_subscription, :via => 'POST'
   match 'edit_user' => 'users#edit', :as => :edit_user_path
+  match 'demo_login' => 'user_sessions#demo_login', :as => :demo_login
   match 'inbound_sms' => 'sms#inbound_sms', :as => :inbound_sms
   match 'signin_user' => 'user_sessions#create', :as => :signin_user
   match 'register/:activation_code', :to => 'activations#new', :as => :register
