@@ -15,6 +15,16 @@ def make_active_user_with_sms_enabled(email, first_name, phone_number)
   u
 end
 
+def make_active_user_without_sms_enabled(email, first_name)
+  u = User.new(:email => email, :password => "password", :password_confirmation => "password", :first_name => first_name)
+  u.first_name = first_name
+  u.active = true
+  u.save(:validate => false)
+  u.active = true
+  u.save(:validate => false)
+  u
+end
+
 def make_group_for_users(users_a)
   g = Group.create!(:name => "test_group")
   users_a.each do |user|
@@ -29,7 +39,7 @@ def make_task_for_group(group, task_name, proj)
 end
 
 @user = make_active_user_with_sms_enabled("spitfire67@berkeley.edu", "James", "4405548235")
-@user2 = make_active_user_with_sms_enabled("someone@example.com", "Jared", "4405335893")
+@user2 = make_active_user_without_sms_enabled("someone@example.com", "Jared")
 @org = Organization.create(:name => "my org", :description => "desc of my org") # create an org
 @user.organizations << @org # this is my org
 @user.save
