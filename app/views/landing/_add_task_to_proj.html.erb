@@ -1,15 +1,15 @@
 <div class="span-24 prepend-top">
   <%= form_tag create_task_for_project_path(:on_landing => true) do %>
     <%= hidden_field_tag :project_id, @project.id %>
-    <div class="span-10 prepend-1">
+    <div class="span-10 prepend-1 colborder">
       <%= label_tag :name, "Name", :class => 'move-label-left' %>
       <%= text_field_tag :name, nil, :class => "task-input blur", :title => "Be brief!"%>
       <%= label_tag :description, "Descrption ", :class => 'move-label-left' %>
       <%= text_area_tag :description, nil, :class => "task-input-area", :title => :description, :rows => 2 %>
     </div>
         <%= label_tag "", "Choose team members" %>
-    <div class="span-12 last prepend-1 prepend-top">
-      <div id="select-team" class="span-12 last">
+    <div class="span-11 last prepend-1 prepend-top">
+      <div id="select-team" class="span-11 last">
         <div id="select-team-checks">
           <% team_members.each do |user| %>
             <%= label_tag "user-#{user.id}", render(:partial => 'shared/indiv_user_index', :locals => {:user => user})%>

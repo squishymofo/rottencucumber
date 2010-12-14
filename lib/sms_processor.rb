@@ -58,7 +58,7 @@ class SmsProcessor
   end
 
   def list_tasks_instructions(full_response_size)
-    instructions = "reply with the task number for a description"
+    instructions = "reply with the task number for more"
     if full_response_size + instructions.size > SMS_MAX_LENGTH 
       @needs_more = true
       instructions += " or more for more"
@@ -118,10 +118,7 @@ class SmsProcessor
 
   def finish_task
     t = Task.find(@sms_session.task_id)
-    debugger
     t.finish!(@user)
-    # DEBUG status is 2 herer..
-    debugger
   end
 
   def self.deliver_new_task_notification(sms_session, task)

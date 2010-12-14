@@ -39,7 +39,7 @@ def make_task_for_group(group, task_name, proj)
   Task.create(:group_id => group.id, :name => task_name, :status => 1, :description => "the desc", :project_id => proj)
 end
 
-@user = make_active_user_with_sms_enabled("spitfire67@berkeley.edu", "James", "4405548235")
+@user = make_active_user_with_sms_enabled("spitfire67@berkeley.edu", "James", "3108183518")
 @user2 = make_active_user_without_sms_enabled("someone@example.com", "Jared")
 @user3 = make_active_user_without_sms_enabled("someone1@example.com", "Kevin")
 @user4 = make_active_user_without_sms_enabled("someone2@example.com", "Jessica")

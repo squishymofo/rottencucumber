@@ -433,14 +433,21 @@ label {
 .float-me-right {
   float: right;
   padding-right: 10em;
+  padding-top: 4em;
 }
 
-/* line 318, ../../app/stylesheets/style.sass */
+/* line 319, ../../app/stylesheets/style.sass */
 .float-me-left {
   float: left;
 }
 
-/* line 321, ../../app/stylesheets/style.sass */
+/* line 322, ../../app/stylesheets/style.sass */
 .blur {
   color: #999999 !important;
+}
+
+/* line 326, ../../app/stylesheets/style.sass */
+#select-team-checks label {
+  font-size: 0.9em !important;
+  margin-bottom: 0.5em !important;
 }
