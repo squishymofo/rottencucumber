@@ -3,7 +3,11 @@ class User < ActiveRecord::Base
   attr_accessible :username, :email, :password, :password_confirmation
   
   has_many :user_organizations
-  has_many :organizations, :through => :user_organizations
+  has_many :organizations, :through => :user_organizations do
+    def projects
+      @projects ||=Project.where(:organization_id => map(&:id)).order('created_at ASC')
+    end
+  end
   has_many :user_groups
 
   has_many :task_subscriptions

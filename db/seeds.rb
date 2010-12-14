@@ -40,18 +40,14 @@ def make_task_for_group(group, task_name, proj)
 end
 
 @user = make_active_user_with_sms_enabled("spitfire67@berkeley.edu", "James", "3108183518")
-@user2 = make_active_user_without_sms_enabled("someone@example.com", "Jared")
-@user3 = make_active_user_without_sms_enabled("someone1@example.com", "Kevin")
-@user4 = make_active_user_without_sms_enabled("someone2@example.com", "Jessica")
-@org = Organization.create(:name => "my org", :description => "desc of my org", :creator_id => @user.id) # create an org
+@user2 = make_active_user_without_sms_enabled("someone@example.com", "Long")
+@user3 = make_active_user_without_sms_enabled("someone1@example.com", "DiDi")
+@user4 = make_active_user_without_sms_enabled("someone2@example.com", "Dennis")
+@org = Organization.create(:name => "RottenCucumber", :description => "cs 169 group", :creator_id => @user.id) # create an org
 User.all.each do |u| 
   u.organizations << @org
   u.save
 end 
 @g = make_group_for_users([@user, @user2])
-@p = Project.create(:name => "do work", :organization_id => @org.id, :description => "description")
-@t = make_task_for_group(@org, "Clean up the back porch", @p)
-@t = make_task_for_group(@org, "Buy rubber tubing", @p)
-@t = make_task_for_group(@org, "Buy rubber tubing", @p)
-
-
+@p = Project.create(:name => "Taho ski trip", :organization_id => @org.id, :description => "Let's go skiiing guys")
+@p = Project.create(:name => "Cucumber cultivation", :organization_id => @org.id, :description => "It is our nature")
