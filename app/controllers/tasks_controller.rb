@@ -73,15 +73,16 @@ class TasksController < ApplicationController
     end
     if selected_users.empty?
       redirect_to root_url
+    else
+      g = Group.create!(:name => "impromptu group")
+      selected_users.each do |u| 
+        u.groups << g
+        u.save(:validate => false)
+      end
+      t = Task.new(:group_id => g.id, :name => params[:name], :status => 1, :description => params[:description], :project_id => project.id, :point => params[:num_points_field])
+      t.save
+      redirect_to root_url
     end
-    g = Group.create!(:name => "impromptu group")
-    selected_users.each do |u| 
-      u.groups << g
-      u.save(:validate => false)
-    end
-    t = Task.new(:group_id => g.id, :name => params[:name], :status => 1, :description => params[:description], :project_id => project.id, :point => params[:points])
-    t.save
-    redirect_to root_url
   end
 
   def show
