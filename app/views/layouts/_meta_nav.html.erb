@@ -3,7 +3,7 @@
     <ul id="meta-nav-list">
       <% if @current_user %>
         <li id="logout"><%= link_to "Logout", logout_path %></li>
-        <li><%= render :partial => 'shared/indiv_user_index', :locals => {:user => @current_user} %></li>
+        <li><%= link_to render(:partial => 'shared/indiv_user_index', :locals => {:user => @current_user}), edit_user_path(@current_user) %></li>
       <% else %>
         <li><%= link_to "Sign in", new_user_session_path %></li>
       <% end %>
