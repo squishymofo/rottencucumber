@@ -439,3 +439,8 @@ label {
 .float-me-left {
   float: left;
 }
+
+/* line 321, ../../app/stylesheets/style.sass */
+.blur {
+  color: #999999 !important;
+}

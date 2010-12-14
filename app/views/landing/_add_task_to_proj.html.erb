@@ -3,7 +3,7 @@
     <%= hidden_field_tag :project_id, @project.id %>
     <div class="span-10 prepend-1">
       <%= label_tag :name, "Name", :class => 'move-label-left' %>
-      <%= text_field_tag :name, nil, :class => "task-input", :title => "Be brief!"%>
+      <%= text_field_tag :name, nil, :class => "task-input blur", :title => "Be brief!"%>
       <%= label_tag :description, "Descrption ", :class => 'move-label-left' %>
       <%= text_area_tag :description, nil, :class => "task-input-area", :title => :description, :rows => 2 %>
     </div>
