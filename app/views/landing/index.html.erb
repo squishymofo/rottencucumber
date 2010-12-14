@@ -30,8 +30,9 @@
 <div class="span-24">
 </div>
 <div id="dialog-form"> </div>
+<div id="content-box"> </div>
 <% if @current_user %>
-  <div class="content-title"> Latest activity </div>
+  <div class="content-title clear"> Latest activity </div>
     <% if @current_user.sms_enabled %>
       <p class="span-24 last soft-message last"> You have enabled SMS. Text 'help' to 510-550-5258 to get started.</p>
     <% else %>

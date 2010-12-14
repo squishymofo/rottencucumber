@@ -9,7 +9,7 @@ class LandingController < ApplicationController
       @unknown_user = true
     end
     if @current_user
-      @tasks = @current_user.active_tasks_from_projects_involved_in.includes(:comments)
+      @tasks = @current_user.active_tasks_from_projects_involved_in.includes(:comments).order('created_at desc')
       @most_recent_comment_ids = @tasks.map {|t| "#{t.latest_comment.id}" if t.comments.any? }.delete_if {|i| !i}.join("-")
     end
   end

@@ -102,6 +102,8 @@ Rottencucumber::Application.routes.draw do
   match 'get_new_comments' => 'tasks#get_new_comments', :as => :get_new_comments
   match 'task_unsubscribe' => 'task_subscriptions#destroy', :as => :task_unsubscribe, :via => 'DELETE'
   match 'finish_task' => 'tasks#finish', :as => :finish_task, :via => 'POST'
+  match 'new_task_ajax' => 'tasks#new_task_ajax', :as => :new_task_ajax
+  match 'create_task_for_project' => 'tasks#create_task_for_project', :as => :create_task_for_project
   match 'task_subscription' => 'task_subscriptions#create', :as => :task_subscription, :via => 'POST'
   match 'edit_user' => 'users#edit', :as => :edit_user_path
   match 'demo_login' => 'user_sessions#demo_login', :as => :demo_login

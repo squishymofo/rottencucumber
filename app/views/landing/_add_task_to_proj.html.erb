@@ -1,0 +1,35 @@
+<div class="span-24 prepend-top">
+  <%= form_tag create_task_for_project_path(:on_landing => true) do %>
+    <%= hidden_field_tag :project_id, @project.id %>
+    <div class="span-10 prepend-1">
+      <%= label_tag :name, "Name", :class => 'move-label-left' %>
+      <%= text_field_tag :name, nil, :class => "task-input", :title => "Be brief!"%>
+      <%= label_tag :description, "Descrption ", :class => 'move-label-left' %>
+      <%= text_area_tag :description, nil, :class => "task-input", :title => :description %>
+    </div>
+        <%= label_tag "", "Choose team members" %>
+    <div class="span-12 last prepend-1 prepend-top">
+      <div id="select-team" class="span-12 last">
+        <div id="select-team-checks">
+          <% team_members.each do |user| %>
+            <%= label_tag "user-#{user.id}", render(:partial => 'shared/indiv_user_index', :locals => {:user => user})%>
+            <%= check_box_tag "user-#{user.id}", user.id, false, :class => 'team-check' %>
+          <% end %>
+        </div>
+      </div>
+      <hr />
+      <div class="span-1" id="slider"></div>
+       <div class="task-points-selecting float-me-left" class="span-3"> 
+         <div class="span-2 network-counts">
+           <div class="num-points-selecting" id="num_points_new">1</div>
+           <br />
+           <div class="says-points-selecting">points</div>
+         </div>
+       </div>
+      <div class="span-1 last float-me-right">
+        <%= hidden_field_tag :points, "1", :class => :num_points %>
+        <%= submit_tag 'Add task', :id => "submit-button" %>
+      </div>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,31 @@
+//note: need to test existance first!!
+$("#content-box").append("<%= escape_javascript(render :partial => 'landing/add_task_to_proj', :locals => {:team_members => @team_members}) %>");
+$("#loading-spinner").hide();
+
+$(function() {
+  $( ".team-check" ).button();
+  $("#submit-button").button();
+  //$( "#check" ).button();
+});
+//hints
+$(function(){ 
+// find all the input elements with title attributes
+  $('input[title!=""]').hint();
+  $('#optional_message_box').hint();
+});
+$("#proj-name-here").html(" <%= @project.name %>");
+// points slider:
+$(function() {
+  $( "#slider" ).slider({
+    value:1,
+    orientation: "vertical",
+    min: 1,
+    max: 5,
+    slide: function( event, ui ) {
+      $( "#num_points_new" ).html(ui.value);
+      $( "#num_points_field" ).val(ui.value);
+    }
+  });
+  //$( "#points" ).val(( "#slider" ).slider( "value" ));
+});
+

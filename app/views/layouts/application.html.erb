@@ -34,9 +34,6 @@
             $('#dialog-form').dialog('close');
           });
         });
-        $('#invite-friends-add').click(function() {
-          $.get("/email_invites/new");
-        });
         $(function(){ 
           // find all the input elements with title attributes
           $('input[title!=""]').hint();

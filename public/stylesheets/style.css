@@ -123,21 +123,43 @@ html, body {
 }
 
 /* line 103, ../../app/stylesheets/style.sass */
+.task-points-selecting {
+  width: 180px;
+  height: 150px;
+  color: #a6874d;
+}
+/* line 107, ../../app/stylesheets/style.sass */
+.task-points-selecting .says-points-selecting {
+  text-align: center;
+  font-size: 1.2em;
+  margin-top: -1.2em;
+  background-color: #fffbec;
+}
+/* line 112, ../../app/stylesheets/style.sass */
+.task-points-selecting .num-points-selecting {
+  margin-top: 1em;
+  font-size: 2.8em;
+  font-weight: bold;
+  text-align: center;
+  background-color: #fffbec;
+}
+
+/* line 119, ../../app/stylesheets/style.sass */
 .task-name-index {
   margin-top: -0.2em;
   font-size: 1.6em;
 }
-/* line 106, ../../app/stylesheets/style.sass */
+/* line 122, ../../app/stylesheets/style.sass */
 .task-name-index a {
   text-decoration: none;
   color: #2d2d2d !important;
 }
-/* line 109, ../../app/stylesheets/style.sass */
+/* line 125, ../../app/stylesheets/style.sass */
 .task-name-index a:hover {
   color: black !important;
 }
 
-/* line 112, ../../app/stylesheets/style.sass */
+/* line 128, ../../app/stylesheets/style.sass */
 .content-title {
   font-size: 2em;
   color: #2d2d2d;
@@ -146,24 +168,24 @@ html, body {
   padding-left: 0.5em;
 }
 
-/* line 119, ../../app/stylesheets/style.sass */
+/* line 135, ../../app/stylesheets/style.sass */
 .soft-message {
   padding-left: 2em;
   margin-top: 1em;
   color: #eeeeee;
 }
 
-/* line 124, ../../app/stylesheets/style.sass */
+/* line 140, ../../app/stylesheets/style.sass */
 .task-name-group-members-wrapper {
   margin-top: -0.9em;
 }
 
-/* line 127, ../../app/stylesheets/style.sass */
+/* line 143, ../../app/stylesheets/style.sass */
 .task-group-index {
   margin-top: 0.5em;
 }
 
-/* line 131, ../../app/stylesheets/style.sass */
+/* line 147, ../../app/stylesheets/style.sass */
 .main_nav {
   margin-top: 1em;
   list-style: none;
@@ -171,14 +193,14 @@ html, body {
   margin-right: 1em;
   margin-bottom: 3em;
 }
-/* line 137, ../../app/stylesheets/style.sass */
+/* line 153, ../../app/stylesheets/style.sass */
 .main_nav a {
   padding: 0.2em 0.2em;
   font-weight: 1.3;
   text-decoration: none;
 }
 
-/* line 142, ../../app/stylesheets/style.sass */
+/* line 158, ../../app/stylesheets/style.sass */
 .main_nav {
   float: left;
   background-color: #4d6ca5;
@@ -186,15 +208,15 @@ html, body {
   font-size: 14pt;
   font-weight: 500;
 }
-/* line 145, ../../app/stylesheets/style.sass */
+/* line 161, ../../app/stylesheets/style.sass */
 .main_nav:hover {
   background-color: #4ca59c;
 }
-/* line 150, ../../app/stylesheets/style.sass */
+/* line 166, ../../app/stylesheets/style.sass */
 .main_nav .selected {
   background-color: #4ca59c;
 }
-/* line 152, ../../app/stylesheets/style.sass */
+/* line 168, ../../app/stylesheets/style.sass */
 .main_nav a {
   display: block;
   text-decoration: none;
@@ -202,18 +224,18 @@ html, body {
   padding-right: 0.75em;
   color: #f5f8ff !important;
 }
-/* line 157, ../../app/stylesheets/style.sass */
+/* line 173, ../../app/stylesheets/style.sass */
 .main_nav a .selected {
   color: #4d6ca5 !important;
 }
 
-/* line 161, ../../app/stylesheets/style.sass */
+/* line 177, ../../app/stylesheets/style.sass */
 .user-name-index {
   font-weight: bold;
   color: #5e4da5;
 }
 
-/* line 165, ../../app/stylesheets/style.sass */
+/* line 181, ../../app/stylesheets/style.sass */
 .user-rep-index {
   font-size: 1.2em;
   font-weight: bold;
@@ -221,7 +243,7 @@ html, body {
   margin-left: -0.1em;
 }
 
-/* line 171, ../../app/stylesheets/style.sass */
+/* line 187, ../../app/stylesheets/style.sass */
 .comment-body {
   padding-top: 0.05em;
   margin-left: -1em;
@@ -229,61 +251,61 @@ html, body {
   font-size: 1.3em;
 }
 
-/* line 177, ../../app/stylesheets/style.sass */
+/* line 193, ../../app/stylesheets/style.sass */
 .indiv-comment-wrapper {
   padding-top: 0.5em;
 }
 
-/* line 180, ../../app/stylesheets/style.sass */
+/* line 196, ../../app/stylesheets/style.sass */
 .new-comment {
   color: #edf3fe;
 }
 
-/* line 184, ../../app/stylesheets/style.sass */
+/* line 200, ../../app/stylesheets/style.sass */
 #meta-nav-top li {
   float: right;
   padding-left: 0.5em;
   padding-right: 0.5em;
 }
-/* line 188, ../../app/stylesheets/style.sass */
+/* line 204, ../../app/stylesheets/style.sass */
 #meta-nav-top li a {
   text-decoration: none;
   color: #2d2d2d;
 }
-/* line 191, ../../app/stylesheets/style.sass */
+/* line 207, ../../app/stylesheets/style.sass */
 #meta-nav-top li a:hover {
   color: black;
 }
 
-/* line 194, ../../app/stylesheets/style.sass */
+/* line 210, ../../app/stylesheets/style.sass */
 #meta-nav-list {
   list-style: none;
   padding-right: 2em;
   margin-bottom: 0;
 }
 
-/* line 199, ../../app/stylesheets/style.sass */
+/* line 215, ../../app/stylesheets/style.sass */
 .normal_link {
   text-decoration: none;
   color: #2d2d2d;
 }
-/* line 202, ../../app/stylesheets/style.sass */
+/* line 218, ../../app/stylesheets/style.sass */
 .normal_link:hover {
   color: black;
 }
 
-/* line 205, ../../app/stylesheets/style.sass */
+/* line 221, ../../app/stylesheets/style.sass */
 #logout {
   padding-top: 0.2em;
 }
 
-/* line 208, ../../app/stylesheets/style.sass */
+/* line 224, ../../app/stylesheets/style.sass */
 #logo {
   padding-left: 1em;
   margin-right: -1em;
 }
 
-/* line 213, ../../app/stylesheets/style.sass */
+/* line 229, ../../app/stylesheets/style.sass */
 #tasks-nav span {
   background-color: #edf3fe;
   color: #4ca59c;
@@ -295,12 +317,12 @@ html, body {
   border-radius: 5px;
 }
 
-/* line 223, ../../app/stylesheets/style.sass */
+/* line 239, ../../app/stylesheets/style.sass */
 #task-feed {
   padding-right: -3em;
 }
 
-/* line 226, ../../app/stylesheets/style.sass */
+/* line 242, ../../app/stylesheets/style.sass */
 #projs-involved-in-header {
   padding-left: 0.25em;
   margin-left: -0.25em;
@@ -309,22 +331,105 @@ html, body {
   font-size: 1.5em;
 }
 
-/* line 233, ../../app/stylesheets/style.sass */
+/* line 249, ../../app/stylesheets/style.sass */
 #my-projs-list {
   margin-top: 0.4em;
   list-style: none;
 }
-/* line 236, ../../app/stylesheets/style.sass */
-#my-projs-list li {
-  margin-left: -2.5em;
+/* line 252, ../../app/stylesheets/style.sass */
+#my-projs-list span {
   padding-left: none;
 }
-/* line 239, ../../app/stylesheets/style.sass */
-#my-projs-list li a {
+/* line 254, ../../app/stylesheets/style.sass */
+#my-projs-list span a {
   text-decoration: none;
+}
+
+/* line 257, ../../app/stylesheets/style.sass */
+.proj-name-index {
+  margin-left: -2.5em;
+  font-weight: bold;
+}
+/* line 260, ../../app/stylesheets/style.sass */
+.proj-name-index a {
   color: #2d2d2d;
 }
-/* line 242, ../../app/stylesheets/style.sass */
-#my-projs-list li a:hover {
+/* line 262, ../../app/stylesheets/style.sass */
+.proj-name-index a:hover {
   color: black;
+}
+
+/* line 266, ../../app/stylesheets/style.sass */
+.add-task-to-proj-index a {
+  color: #4d6ca5;
+  padding: 0.1em;
+  font-weight: bold;
+}
+/* line 269, ../../app/stylesheets/style.sass */
+.add-task-to-proj-index a:hover {
+  color: #4ca59c;
+  background-color: #edf3fe;
+}
+
+/* line 274, ../../app/stylesheets/style.sass */
+#content-box {
+  display: none;
+  min-height: 500;
+  background: white;
+  position: relative;
+}
+
+/* line 280, ../../app/stylesheets/style.sass */
+.close {
+  font-size: 0.5em;
+  font-weight: bold;
+  color: #4d6ca5;
+  float: right;
+  padding-right: 0.3em;
+  padding-top: 0.5em;
+  cursor: pointer;
+}
+/* line 288, ../../app/stylesheets/style.sass */
+.close:hover {
+  color: #4ca59c;
+}
+
+/* line 291, ../../app/stylesheets/style.sass */
+#loading-spinner {
+  display: none;
+  color: #2d2d2d;
+  text-align: center;
+}
+
+/* line 296, ../../app/stylesheets/style.sass */
+.task-input {
+  width: 99%;
+  font-size: 1.5em;
+  padding: 5px;
+}
+
+/* line 301, ../../app/stylesheets/style.sass */
+#proj-name-here {
+  color: #4d6ca5;
+}
+
+/* line 304, ../../app/stylesheets/style.sass */
+.move-label-left {
+  margin-left: -1em;
+}
+
+/* line 307, ../../app/stylesheets/style.sass */
+label {
+  color: #2d2d2d;
+}
+
+/* line 310, ../../app/stylesheets/style.sass */
+.float-me-right {
+  float: right;
+  padding-right: 10em;
+}
+
+/* line 314, ../../app/stylesheets/style.sass */
+.float-me-left {
+  float: left;
 }

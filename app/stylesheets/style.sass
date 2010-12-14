@@ -100,6 +100,22 @@ html, body
     text-align: center
     background-color: $peach
 
+.task-points-selecting
+  width: 180px
+  height: 150px
+  color: $points
+  .says-points-selecting
+    text-align: center
+    font-size: 1.2em
+    margin-top: -1.2em
+    background-color: $peach
+  .num-points-selecting
+    margin-top: 1em
+    font-size: 2.8em
+    font-weight: bold
+    text-align: center
+    background-color: $peach
+
 .task-name-index
   margin-top: -.2em
   font-size: 1.6em
@@ -233,11 +249,67 @@ html, body
 #my-projs-list
   margin-top: .4em
   list-style: none
-  li
-    margin-left: -2.5em
+  span
     padding-left: none
     a
       text-decoration: none
-      color: #2d2d2d
-      &:hover
-        color: black
+
+.proj-name-index
+  margin-left: -2.5em
+  font-weight: bold
+  a
+    color: #2d2d2d
+    &:hover
+      color: black
+
+.add-task-to-proj-index
+  a
+    color: $dkblue
+    padding: .1em
+    &:hover 
+      color: $turk
+      background-color: $lblue
+    font-weight: bold
+
+#content-box
+  display: none
+  min-height: 500
+  background: #fff
+  position: relative
+
+.close
+  font-size: .5em
+  font-weight: bold
+  color: $dkblue
+  float: right
+  padding-right: .3em
+  padding-top: .5em
+  cursor: pointer
+  &:hover
+    color: $turk
+
+#loading-spinner
+  display: none
+  color: #2d2d2d
+  text-align: center
+
+.task-input
+  width: 99%
+  font-size: 1.5em
+  padding: 5px
+
+#proj-name-here
+  color: $dkblue
+
+.move-label-left
+  margin-left: -1em
+
+label
+  color: #2d2d2d
+
+.float-me-right
+  float: right
+  padding-right: 10em
+
+.float-me-left
+  float: left
