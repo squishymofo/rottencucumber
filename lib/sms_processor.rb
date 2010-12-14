@@ -59,10 +59,10 @@ class SmsProcessor
 
   def list_tasks_instructions(full_response_size)
     instructions = "  Reply with the task number for more"
-    if full_response_size + instructions.size > SMS_MAX_LENGTH 
-      @needs_more = true
-      instructions += " or more for more"
-    end
+    #if full_response_size + instructions.size > SMS_MAX_LENGTH 
+    #  @needs_more = true
+    #  instructions += " or more for more"
+    #end
     instructions
   end
 
