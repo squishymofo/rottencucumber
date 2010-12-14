@@ -58,7 +58,7 @@ class SmsProcessor
   end
 
   def list_tasks_instructions(full_response_size)
-    instructions = "reply with the task number for more"
+    instructions = "\nreply with the task number for more"
     if full_response_size + instructions.size > SMS_MAX_LENGTH 
       @needs_more = true
       instructions += " or more for more"
@@ -69,12 +69,12 @@ class SmsProcessor
   def process_tasks_msg #populates the @response_message a numbered list of tasks assigned to the user
     full_response = ""
     @user.active_tasks.each {|task| full_response += "#{task.id}. #{task.name}\n"}
-    list_tasks_instructions = list_tasks_instructions(full_response.size)
+    my_list_tasks_instructions = list_tasks_instructions(full_response.size)
     if @needs_more
-      full_response = list_tasks_instructions + full_response[0..(SMS_MAX_LENGTH - list_tasks_instructions.size - 3)] + "..."
-      @excess = full_response[(SMS_MAX_LENGTH - list_tasks_instructions.size - 3)..full_response.size]
+      full_response = my_list_tasks_instructions + full_response[0..(SMS_MAX_LENGTH - my_list_tasks_instructions.size - 3)] + "..."
+      @excess = full_response[(SMS_MAX_LENGTH - my_list_tasks_instructions.size - 3)..full_response.size]
     else
-      full_response = full_response + list_tasks_instructions
+      full_response = full_response + my_list_tasks_instructions
     end
   end
 

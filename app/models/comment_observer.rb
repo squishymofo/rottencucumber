@@ -1,7 +1,7 @@
 class CommentObserver < ActiveRecord::Observer
   def after_create(comment)
     #send subscribers sms messages
-    comment.task.subscribed_users.each {|u| send_comment_over_sms(u, comment.body)}
+    comment.task.subscribed_users.each {|u| send_comment_over_sms(u, comment.body) unless u.id == comment.user_id }
   end
 
   def send_comment_over_sms(u, body)
