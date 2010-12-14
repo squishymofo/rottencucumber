@@ -66,6 +66,15 @@ describe SmsProcessor do
     assert @sms_processor.response_message == ""
   end
 
+  it "should finish whatever task is in context when texted finish" do
+    @sms_session.task_id = @t.id
+    @sms_session.save
+    assert @sms_session.task_id == @t.id
+    @sms_processor = SmsProcessor.new(@sms_session, "finish")
+    @sms_processor.process_message
+    Task.all.each {|t| assert t.status == 2}
+  end
+
   it "should not make a comment if the user doesn't have any task context when they try to comment" do
     @sms_processor = SmsProcessor.new(@sms_session, "say what's sms?")
     @sms_processor.process_message

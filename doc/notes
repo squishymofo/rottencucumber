@@ -89,3 +89,5 @@ Bug in the the my-projs being inside of indiv task. Inspect with firebug to fix
 
 google voice number: (310) 818-3518
 https://www.google.com/voice#sms
+
+TODO: notify users subscribed to a task when it gets completed -- observer!

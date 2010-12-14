@@ -23,6 +23,8 @@ class SmsProcessor
     when /more/ # note: untested
       @response_message = process_more_msg
     #when /^say [0-9]+ .*$/ # dennis: please fix, happens when user texts in 'say comment_body' while in a task context
+    when /^finish/
+      finish_task
     when /^say/
       comment_body = message_a.values_at(1..(message_a.size)).join(" ").rstrip
       @response_message = process_comment_msg(comment_body)
@@ -112,6 +114,14 @@ class SmsProcessor
     else
       @response_message = general_help_menu
     end
+  end
+
+  def finish_task
+    t = Task.find(@sms_session.task_id)
+    debugger
+    t.finish!(@user)
+    # DEBUG status is 2 herer..
+    debugger
   end
 
   def self.deliver_new_task_notification(sms_session, task)
