@@ -409,27 +409,33 @@ html, body {
 }
 
 /* line 301, ../../app/stylesheets/style.sass */
+.task-input-area {
+  width: 99%;
+  padding: 5px;
+}
+
+/* line 305, ../../app/stylesheets/style.sass */
 #proj-name-here {
   color: #4d6ca5;
 }
 
-/* line 304, ../../app/stylesheets/style.sass */
+/* line 308, ../../app/stylesheets/style.sass */
 .move-label-left {
   margin-left: -1em;
 }
 
-/* line 307, ../../app/stylesheets/style.sass */
+/* line 311, ../../app/stylesheets/style.sass */
 label {
   color: #2d2d2d;
 }
 
-/* line 310, ../../app/stylesheets/style.sass */
+/* line 314, ../../app/stylesheets/style.sass */
 .float-me-right {
   float: right;
   padding-right: 10em;
 }
 
-/* line 314, ../../app/stylesheets/style.sass */
+/* line 318, ../../app/stylesheets/style.sass */
 .float-me-left {
   float: left;
 }

@@ -83,7 +83,6 @@ describe SmsProcessor do
   it "should send a new task notification over sms when asked" do
     SmsProcessor.deliver_new_task_notification(sms_session, task) unless Rails.env == "test"
     #assert @sms_processor.response_message == ("New task: #{task_name}. " + @sms_processor.general_help_menu)
-=end
   end
 
 end

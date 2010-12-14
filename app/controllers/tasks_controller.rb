@@ -67,7 +67,6 @@ class TasksController < ApplicationController
     project = Project.find params[:project_id]
     selected_users = [ ]
     params.each_pair do |key, value| 
-      debugger
       if key =~ /^user-/
         selected_users.push(User.find(value))
       end
