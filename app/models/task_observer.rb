@@ -15,7 +15,7 @@ class TaskObserver < ActiveRecord::Observer
       # if status was changed to finished (from any state)
       if task.status == 2
         task.group.users.each {|u| increase_user_reputation(u, task.point)}
-        task.subscribed_users.each {|u| send_sms_task_completion_notification(u, task)}
+        task.subscribed_users.each {|u| send_sms_task_completion_notification(u, task) unless u.id == task.finished_by_id}
       end
     end
   end
