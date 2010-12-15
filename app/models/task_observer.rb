@@ -26,7 +26,7 @@ class TaskObserver < ActiveRecord::Observer
 
   def send_sms_task_completion_notification(user, task)
     body = get_task_completion_notification_body(task.finished_by, task.name)
-    resp = nil
+    resp = ""
     task.subscribed_users.each do |u|
       account = Twilio::RestAccount.new(ACCOUNT_SID, ACCOUNT_TOKEN)
       h = {:From => PHONE_NUMBER, :To => u.phone_number, :Body => body}
