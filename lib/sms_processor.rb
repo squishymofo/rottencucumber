@@ -131,10 +131,12 @@ class SmsProcessor
   
   def send_response
     account = Twilio::RestAccount.new(ACCOUNT_SID, ACCOUNT_TOKEN)
-    unless @response_message.empty?
-      h = {:From => PHONE_NUMBER, :To => @user.phone_number, :Body => @response_message}
-      resp = account.request("/#{API_VERSION}/Accounts/#{ACCOUNT_SID}/SMS/Messages", 'POST', h)
-      return resp
+    if @response_message
+      unless @response_message.empty?
+        h = {:From => PHONE_NUMBER, :To => @user.phone_number, :Body => @response_message}
+        resp = account.request("/#{API_VERSION}/Accounts/#{ACCOUNT_SID}/SMS/Messages", 'POST', h)
+        return resp
+      end
     end
   end
 
