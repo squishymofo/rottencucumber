@@ -36,7 +36,7 @@ class TaskObserver < ActiveRecord::Observer
   end
 
   def get_task_completion_notification_body(completed_by, task_name)
-    return "#{task_name} was just finished by #{completed_by}"
+    return "#{task_name} was just finished by #{completed_by.first_name}"
   end
 
 
